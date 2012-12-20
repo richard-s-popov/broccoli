@@ -238,13 +238,6 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.PersonalCabinet
             return new EmptyResult();
         }
 
-        public ActionResult GenerateData()
-        {
-            _tradingSystemService.Temp();
-
-            return new EmptyResult();
-        }
-
         private string GetLinkForTradingSystem(long userId, int id)
         {
             return Url.Action("TradingSystem", "PersonalCabinet",
