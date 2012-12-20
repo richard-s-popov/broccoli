@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+    <script src="@Url.Content("~/Scripts/jquery-1.7.1.min.js")" type="text/javascript"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/Main/main.js")"></script>
+    @RenderSection("head", required:false)
+</head>
+    <body>
+        <div class="header">
+            <div class="green-line">
+                <div class="logo-container">
+                    <img class="logo-flag" src="@Url.Content("~/Content/img/logo-flag.png")" />
+                    <font class="logo-text">Broccoli<br />Trade</font>
+                </div>
+            </div>
+            <div class="gray-line">
+                <div class="menu">
+                    @RenderSection("mainMenu", required:false)
+                </div>
+            </div>
+            <div class="light-line">
+                <div class="secondary-menu">
+                    <table class="menu">
+                        <tr>
+                            <td id="indexPage" class="item" onclick="window.location = '@Url.Action("Index", "Home")'">Главная</td>
+                            <td class="item">Онлайн-консультация</td>
+                            <td id="commentsPage" class="item">Отзывы</td>
+                            @if (HttpContext.Current.User.Identity.IsAuthenticated)
+                            {
+                                <td id="personalCabinetPage" class="item" onclick=" window.location = '@Url.Action("Index", "PersonalCabinet")'">Личный кабинет</td>
+                                <td class="item" onclick="window.location = '@Url.Action("Logout", "Account")'">Выход</td>
+                            }
+                            else
+                            {
+                                <td id="loginBtn" class="item">
+                                    Вход
+                                    <div class="login-window">
+                                        <div class="triangle-top"></div>
+                                        <div class="login-window-body">
+                                            @using (Html.BeginForm("Login", "Account", FormMethod.Post, new { @id = "loginForm" }))
+                                            {
+                                                <table>
+                                                    <tr>
+                                                        <td class="labels">
+                                                            @Html.Label("Email")
+                                                        </td>
+                                                        <td>
+                                                            @Html.TextBox("login")
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="indent"></td>
+                                                        <td class="indent"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="labels">
+                                                            @Html.Label("Пароль")
+                                                        </td>
+                                                        <td>
+                                                            @Html.TextBox("pass", null, new { @type = "password" })
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <a>Забыли пароль?</a>
+                                                <div class="controls">
+                                                    @Html.Label("Запомнить меня",new { @for = "rememberMe" })
+                                                    @Html.CheckBox("rememberMe", false, new { @style = "float: right;" })
+                                                </div>
+                                                <button id="submit" class="green-button">Вход</button>
+                                            }
+                                        </div>
+                                    </div>
+                                </td>
+                                <td id="registerPage" class="item">
+                                    <button class="green-button" onclick="window.location = '@Url.Action("RegisterForm", "Account")'">Регистрация</button>
+                                </td>
+                            }
+                        </tr>
+                    </table>
+                    @RenderSection("navigationMenu", required:false)
+                </div>
+            </div>
+            <div class="white-line">
+                <div class="steps">
+                    <div style="float: right;">
+                        <span class="step first">1. Зарегистрируйтесь</span>
+                        <span class="step">2. Откройте свой счет</span>
+                        <span class="step">3. Получите свой советник</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            @RenderBody()    
+        </div>
+        <div class="footer">
+        </div>
+    </body>
+</html>

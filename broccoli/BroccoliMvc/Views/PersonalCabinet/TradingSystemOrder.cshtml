@@ -1,0 +1,56 @@
+﻿@{
+    ViewBag.Title = "Заказ";
+    Layout = "~/Views/Shared/_LayoutMin.cshtml";
+}
+@model BroccoliTrade.Web.BroccoliMvc.Models.PersonalCabinet.TradingSystemOrderPoco
+
+@section head {
+    <script type="text/javascript" src="@Url.Content("~/Scripts/PersonalCabinet/order.js")"></script>
+}
+
+<div class="banner small">
+    <div class="action">
+        <font>Личный кабинет</font>
+    </div>
+</div>
+<div class="center-content">
+    <h4 class="mrg-top-bottom20">Заказ торговой системы "@ViewBag.SystemName"</h4>
+    <table>
+        <tr>
+            @Html.Partial("CabinetMenu")
+            <td class="cabinet-main">
+                @if (ViewBag.Error)
+                {
+                    <div class="error-message">Error</div>
+                }
+                else
+                {
+                    <div class="error-message" style="display: none;"></div>
+                    using (Html.BeginForm("OrderFinish", "PersonalCabinet", FormMethod.Post, new { id = "activateForm" }))
+                    {
+                        @Html.HiddenFor(m => m.TradingSystemId)
+                        <table>
+                            <tr>
+                                <td class="labels">
+                                    <label>Торговый счет:</label>
+                                </td>
+                                <td class="inputs">
+                                    @Html.DropDownListFor(m => m.AccountId, Model.Accounts, "Выберите счет...")
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td class="inputs">
+                                    <button id="order" type="button" class="green-button">Заказать</button>
+                                </td>
+                            </tr>
+                        </table>
+                    }
+                }
+            </td>
+        </tr>
+    </table>
+</div>
+<script type="text/javascript">
+    document.deleteUrl = "@Url.Action("DeleteAccount", "PersonalCabinet")";
+</script>

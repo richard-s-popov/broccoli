@@ -1,0 +1,117 @@
+﻿@model BroccoliTrade.Web.BroccoliMvc.Models.Account.UserProfilePoco
+
+@{
+    ViewBag.Title = "Регистрация";
+    Layout = "~/Views/Shared/_LayoutMin.cshtml";
+}
+
+@section head
+{
+    <script type="text/javascript" src="@Url.Content("~/Scripts/Register/register.form.js")"></script>
+}
+
+@section navigationMenu {
+    
+}
+
+<div class="banner small">
+    <div class="action">
+        <font>Регистрация</font>
+    </div>
+</div>
+<img id="srcBtnOk" src="@Url.Content("~/Content/img/button_ok_7852.png")" style="display: none;" />
+<div class="center-content">
+    <div class="register-form">
+        <h5>Заполните поля регистрации.</h5>
+        <h6>Поля помеченные * обязательны для заполнения.</h6>
+        <br />
+        @using (Html.BeginForm("FinishRegister", "Account", FormMethod.Post, new { @id = "form" }))
+        {
+            <table>
+                <tr class="bad">
+                    <td class="labels">
+                        @Html.Label("Имя и фамилия *")
+                    </td>
+                    <td>
+                        @Html.TextBoxFor(m => m.Name, new { @id = "name" })
+                    </td>
+                </tr>
+                <tr>
+                    <td class="labels">
+                        @Html.Label("Ник")
+                    </td>
+                    <td>
+                        @Html.TextBoxFor(m => m.Nickname, new { @id = "nickname" })
+                    </td>
+                </tr>
+                <tr class="bad">
+                    <td class="labels">
+                        @Html.Label("Email *")
+                    </td>
+                    <td>
+                        @Html.TextBoxFor(m => m.Email, new { @id = "email" })
+                    </td>
+                </tr>
+                <tr>
+                    <td class="labels">
+                        @Html.Label("Номер сотового")
+                    </td>
+                    <td>
+                        @Html.TextBoxFor(m => m.Phone, new { @id = "phone" })
+                    </td>
+                </tr>
+                <tr class="bad">
+                    <td class="labels">
+                        @Html.Label("Страна")
+                    </td>
+                    <td>
+                        @Html.TextBoxFor(m => m.Country, new { @id = "country" })
+                    </td>
+                </tr>
+                <tr>
+                    <td class="labels">
+                        @Html.Label("Город")
+                    </td>
+                    <td>
+                        @Html.TextBoxFor(m => m.City, new { @id = "city" })
+                    </td>
+                </tr>
+                <tr class="bad">
+                    <td class="labels">
+                        @Html.Label("Дата рождения *")
+                    </td>
+                    <td>
+                        @Html.TextBoxFor(m => m.BirthDay, new { @id = "birthday" })
+                    </td>
+                </tr>
+                <tr>
+                    <td class="labels">
+                        @Html.Label("Пароль *")
+                    </td>
+                    <td>
+                        @Html.TextBoxFor(m => m.Password, new { @id = "password", @type = "password" })
+                    </td>
+                </tr>
+                <tr class="bad">
+                    <td class="labels">
+                        @Html.Label("Повторите пароль *")
+                    </td>
+                    <td>
+                        @Html.TextBox("confirmPassword", null, new { @type = "password" })
+                    </td>
+                </tr>
+            </table>
+        }
+        <div class="agreeement">
+            <h5>Пользовательское соглашение:</h5>
+            <textarea readonly="readonly" rows="7">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+            </textarea>
+        </div>
+        <button id="send" class="green-button register-button">Я согласен, регистрируйте!</button>
+    </div>
+</div>
+
+<script type="text/javascript">
+    document.NicknameCheckUrl = "@Url.Action("NicknameIsExist", "Account")";
+    document.EmailCheckUrl = "@Url.Action("EmailIsExist","Account")";
+</script>

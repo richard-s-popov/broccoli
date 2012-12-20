@@ -1,0 +1,38 @@
+﻿@{
+    ViewBag.Title = "LogOn";
+    Layout = "~/Views/Shared/_LayoutMin.cshtml";
+}
+
+@section head
+{
+    <script type="text/javascript" src="@Url.Content("~/Scripts/Main/main.js")"></script>
+}
+
+
+<div class="banner small">
+    <div class="action">
+        <font>Регистрация</font>
+    </div>
+</div>
+<div class="center-content">
+    @using (Html.BeginForm("Login", "Account", FormMethod.Post, new { @id = "loginForm" }))
+    {
+        <div>
+            @Html.Label("Email")
+            @Html.TextBox("login")
+        </div>
+        <div>
+            @Html.Label("Пароль")
+            @Html.TextBox("password")
+        </div>
+        <div>
+            @Html.Label("Запомнить меня")
+            @Html.CheckBox("rememberMe")
+        </div>
+        <button id="submit" class="green-button">Вход</button>
+    }
+</div>
+
+<script type="text/javascript">
+    document.LogOnUrl = "@Url.Action("Login", "Account")";
+</script>

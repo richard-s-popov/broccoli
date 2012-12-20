@@ -1,0 +1,49 @@
+﻿@{
+    ViewBag.Title = "Статус счетов";
+    Layout = "~/Views/Shared/_LayoutMin.cshtml";
+}
+@model BroccoliTrade.Web.BroccoliMvc.Models.PersonalCabinet.AccountListPoco
+
+@section head {
+    <script type="text/javascript" src="@Url.Content("~/Scripts/PersonalCabinet/cabinet.js")"></script>
+}
+
+<div class="banner small">
+    <div class="action">
+        <font>Личный кабинет</font>
+    </div>
+</div>
+<div class="center-content">
+    <h4 class="mrg-top-bottom20">Статус счета</h4>
+    <table>
+        <tr>
+            @Html.Partial("CabinetMenu")
+            <td class="cabinet-main">
+                <div class="error-message" style="display: none;"><br /><br /></div>
+                <table id="accountsTable" class="grid">
+                    <thead>
+                        <tr>
+                            <th>Номер счета</th>        
+                            <th>Брокер</th>
+                            <th>Статус</th>
+                        </tr>
+                    </thead>
+                    @foreach (var account in Model.accounts)
+                    {
+                        <tr>
+                            <td>@account.Number</td>        
+                            <td>ForexInn</td>
+                            <td style="width: 40%;">
+                                @account.Status
+                                <span style="float: right; margin-right: 30px;"><a val="@account.Number" class="delete-link" href="#">Удалить</a></span>
+                            </td>
+                        </tr>
+                    } 
+                </table>
+            </td>
+        </tr>
+    </table>
+</div>
+<script type="text/javascript">
+    document.deleteUrl = "@Url.Action("DeleteAccount","PersonalCabinet")";
+</script>

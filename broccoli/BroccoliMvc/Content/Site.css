@@ -1,0 +1,725 @@
+﻿/*reset css*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 80%;
+	font: inherit;
+	vertical-align: baseline;
+	font-family: Segoe UI Light;
+}
+@-moz-document url-prefix()
+{
+    html, body, div, span, applet, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code,
+    del, dfn, em, img, ins, kbd, q, s, samp,
+    small, strike, strong, sub, sup, tt, var,
+    b, u, i, center,
+    dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td,
+    article, aside, canvas, details, embed, 
+    figure, figcaption, footer, header, hgroup, 
+    menu, nav, output, ruby, section, summary,
+    time, mark, audio, video {
+	    margin: 0;
+	    padding: 0;
+	    border: 0;
+	    font-size: 80%;
+	    font: inherit;
+	    vertical-align: baseline;
+	    font-family: Segoe UI;
+        font-weight: lighter;
+    }
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+label[disabled="true"]{opacity:0.4;}
+/*end reset css*/
+
+h3 {
+    font-size: 30px;
+}
+
+h4 {
+    font-size: 20px;
+}
+
+h5 {
+    font-size: 18px;
+}
+
+h6 {
+    font-size: 14px;
+}
+
+body a  {color: #272727; cursor: pointer; text-decoration:underline;font-size:14px;}
+body a:link {color: #272727; cursor: pointer; text-decoration:underline;font-size:14px;}
+body a:visited{color: #272727;font-size:14px;text-decoration:underline;}
+body a:hover{color: black;text-decoration:none;font-size:14px;}
+body a:active {color: black;text-decoration:none;font-size:14px;}
+
+.header {
+    margin-left: auto;
+    margin-right: auto;
+    height: 241px;
+    position: relative;
+}
+
+.small {
+    height: 132px;
+}
+
+.header .green-line {
+    height: 8px;
+    background-color: #609949;
+}
+
+.header .green-line .logo-container {
+    width: 917px;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+}
+
+.header .green-line .logo-container .logo-text {
+    position: absolute;
+    margin-left: 30px;
+    margin-top: 50px;
+    z-index: 2;
+    font-family: 'GeoSlb712CMdBTBold'!important;
+    color: white;
+    font-size: 28px;
+    text-align: center;
+    z-index: 101;
+}
+
+.header .gray-line {
+    height: 66px;
+    background-color: #333333;
+}
+
+.header .gray-line .menu {
+    
+}
+
+.header .light-line {
+    height: 43px;
+    background-color: #F3F3F3;
+    padding-top: 19px;
+}
+
+.header .light-line .secondary-menu {
+    width: 917px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header .light-line .secondary-menu .menu {
+    float: right;
+}
+
+.header .light-line .secondary-menu .menu .item {
+    padding-left: 50px;
+    font-family: Segoe UI;
+    color: #2E2E2E;
+    font-size: 18px;
+    cursor: pointer;
+    position: relative;
+}
+
+.header .light-line .secondary-menu .menu .item:hover {
+    color: #98cb66;
+}
+
+.header .light-line .secondary-menu .menu #loginBtn {
+    display: block;
+}
+
+.header .light-line .secondary-menu .first {
+    margin-left: 200px;
+}
+
+.header .white-line {
+    height: 108px;
+    background-color: #FFFFFF;
+}
+
+.header .white-line .steps {
+    width: 917px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 45px;
+}
+
+.header .white-line .steps .step {
+    font-family: Segoe UI Light;
+    color: #2E2E2E;
+    font-size: 20px;
+    margin-left: 30px;
+    cursor: pointer;
+}
+
+.header .white-line .steps .step:hover {
+    color: #98cb66;
+}
+
+.header .white-line .steps .first {
+    margin-left: 200px;
+}
+
+.header .logo-flag {
+    position: absolute;
+    top: 0px;
+    z-index: 100;
+}
+
+.content {
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    position: relative;
+}
+
+.content .center-content {
+    width: 917px;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 600px;
+}
+
+.content .banner {
+    height: 373px;
+    background: url('img/slider-background.png') no-repeat center top;
+    position: relative;
+}
+
+.content .small {
+    height: 105px;
+    background-position: center top;
+}
+
+.content .banner .slider {
+    width: 917px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.content .banner .slider .broccoli {
+    margin-top: 30px;
+    position: absolute;
+}
+
+.content .banner .slider .text {
+    width: 430px;
+    margin-right: 50px;
+    margin-top: 100px;
+    float: right;
+}
+
+.content .banner h2 {
+    font-family: 'GeoSlb712CMdBTBold'!important;
+    color: #FFFFFF;
+    font-size: 33px;
+    margin-bottom: 10px;
+}
+
+.content .banner p {
+    font-family: Segoe UI Light;
+    color: #FFFFFF;
+    font-size: 18px;
+}
+
+.content .banner.small .action {
+    width: 917px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.content .banner.small .action font {
+    font-family: Segoe UI Light;
+    color: #FFFFFF;
+    font-size: 30px;
+    float: right;
+    margin-top: 33px;
+}
+
+.content .main {
+    width: 917px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.content .main h3 {
+    font-family: Segoe UI Light;
+    color: #2E2E2E;
+    font-size: 30px;
+}
+
+.content .main .instructions {
+    margin: 10px;
+    height: 600px;
+}
+
+.footer {
+    margin-left: auto;
+    margin-right: auto;
+    bottom: 0;
+    left: 0;
+    height: 233px;
+    background: url('img/footer.png') repeat-x;
+}
+
+.green-button {
+    background: url("img/generic-button-green-bg.png") repeat-x scroll left top transparent;
+    border: 1px solid #3AA526;
+    color: white;
+    font-family: Segoe UI;
+    font-size: 18px;
+    height: 29px;
+    width: 186px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.green-button:hover {
+    background: url("img/generic-button-green-bg.png") repeat-x scroll left bottom transparent;
+}
+
+.green-button:active {
+    background: url("img/generic-button-green-bg.png") repeat-x scroll left center transparent;
+}
+
+.register-form {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    padding: 10px 10px 10px 10px;
+}
+
+.register-form h2 {
+    font-weight: bold;
+}
+
+.register-form .labels {
+    width: 150px;
+}
+
+.register-form .labels label {
+    font-family: Segoe UI Light;
+    color: #2E2E2E;
+    font-size: 14px;    
+}
+
+.register-form input {
+    width: 200px;
+    height: 20px;
+}
+
+.register-form input:hover {
+    border: 1px solid #74ca35;
+    width: 202px;
+    height: 22px;
+}
+
+.register-form input:focus {
+    border: 1px solid #74ca35;
+    width: 202px;
+    height: 22px;
+    outline: none;
+}
+
+.register-form td {
+    padding-top: 10px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.register-form tr.bad
+{
+    background-color: #f9f9f9;
+}
+
+.register-form .agreeement {
+    margin-top: 20px;
+}
+
+.register-form .agreeement p {
+    font-family: Segoe UI Light;
+    color: #2E2E2E;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.register-form .agreeement textarea {
+    width: 378px;
+    outline: none;
+    resize: none;
+    text-align: left;
+}
+
+.register-form .agreeement textarea:hover {
+    border: 1px solid #74ca35;
+}
+
+.register-form .agreeement textarea:active {
+    border: 1px solid #74ca35;
+}
+
+
+.register-form .register-button {
+    width: 390px;
+    margin-top: 20px;
+}
+
+.login-window {
+    display: none;
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    z-index: 10;
+    top: 17px;
+    left: -75px;
+    cursor: default;
+    font-family: Segoe UI Light;
+    color: #2E2E2E;
+    font-size: 14px;
+}
+
+.login-window .triangle-top {
+    background: url('img/tiangle-top.png') no-repeat;
+    width: 56px;
+    height: 22px;
+    z-index: 7;
+    position: absolute;
+    left: 120px;
+    top: -2px;
+}
+
+.login-window .login-window-body {
+    background: white;
+    display: block;
+    border: 1px solid #E5E5E5;
+    border-top: none;
+    box-shadow: 0 0 4px 3px #E5E5E5;
+    position: relative;
+    top: 18px;
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+
+.login-window .login-window-body label {
+    font-size: 14px;
+}
+
+.login-window .login-window-body .labels {
+    width: 80px;
+    margin-top: 5px;
+}
+
+.login-window .login-window-body .indent {
+    height: 5px;
+}
+
+.login-window .login-window-body #loginForm {
+    width: 215px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.login-window .login-window-body #loginForm .controls {
+    width: 130px;
+    height: 20px;
+    float: right;
+}
+
+.login-window .login-window-body #loginForm a {
+    float: right;
+}
+
+.login-window .login-window-body #loginForm label {
+    vertical-align: middle;
+}
+
+.login-window .login-window-body #loginForm button {
+    width: 100%;
+}
+
+.cabinet-menu {
+    width: 20%;
+}
+
+.cabinet-menu h4 {
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-family: Segoe UI;
+    cursor: default;
+    color: #98cb66;
+}
+
+.cabinet-menu h5 {
+    margin-bottom: 5px;
+}
+
+.cabinet-menu h5:hover {
+    color: #98cb66;
+    cursor: pointer;
+}
+
+.cabinet-main {
+    width: 80%;
+    padding-top: 25px;
+    padding-left: 90px;
+}
+
+.cabinet-main #activateForm table tr {
+    height: 40px;
+}
+
+.cabinet-main #activateForm table .labels {
+    width: 200px;
+}
+
+.cabinet-main #activateForm table .inputs {
+    width: 215px;
+}
+
+.cabinet-main #activateForm table .inputs button {
+    width: 100%;
+}
+
+.cabinet-main #activateForm table input {
+    height: 20px;
+    width: 210px;
+    outline: none;
+}
+
+.cabinet-main #activateForm table select {
+    height: 30px;
+    padding: 5px;
+    width: 210px;
+    outline: none;
+}
+
+.cabinet-main #activateForm table input:hover {
+    border: 1px solid #74ca35;
+    width: 212px;
+    height: 22px;
+}
+
+.cabinet-main #activateForm table input:focus {
+    border: 1px solid #74ca35;
+    outline: none;
+    width: 212px;
+    height: 22px;
+}
+
+.cabinet-main #accountsTable {
+    *border-collapse: collapse; /* Для IE7 и старше */
+    border-spacing: 0;
+    width: 100%;
+}
+
+.grid {
+    border: solid #ccc 1px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-box-shadow: 0 1px 1px #ccc; 
+    -moz-box-shadow: 0 1px 1px #ccc; 
+    box-shadow: 0 1px 1px #ccc;         
+}
+
+.grid tr:hover {
+    background: #fbf8e9;
+    -o-transition: all 0.1s ease-in-out;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -ms-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;     
+}    
+    
+.grid td, .grid th {
+    border-left: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;    
+}
+
+.grid th {
+    background-color: #74ca35;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#ebf3fc), to(#74ca35));
+    background-image: -webkit-linear-gradient(top, #ebf3fc, #74ca35);
+    background-image:    -moz-linear-gradient(top, #ebf3fc, #74ca35);
+    background-image:     -ms-linear-gradient(top, #ebf3fc, #74ca35);
+    background-image:      -o-linear-gradient(top, #ebf3fc, #74ca35);
+    background-image:         linear-gradient(top, #ebf3fc, #74ca35);
+    -webkit-box-shadow: 0 1px 0 rgba(255,255,255,.8) inset; 
+    -moz-box-shadow:0 1px 0 rgba(255,255,255,.8) inset;  
+    box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;        
+    border-top: none;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5); 
+}
+
+.grid td:first-child, .grid th:first-child {
+    border-left: none;
+}
+
+.grid th:first-child {
+    -moz-border-radius: 6px 0 0 0;
+    -webkit-border-radius: 6px 0 0 0;
+    border-radius: 6px 0 0 0;
+}
+
+.grid th:last-child {
+    -moz-border-radius: 0 6px 0 0;
+    -webkit-border-radius: 0 6px 0 0;
+    border-radius: 0 6px 0 0;
+}
+.grid tr:last-child td:first-child {
+    -moz-border-radius: 0 0 0 6px;
+    -webkit-border-radius: 0 0 0 6px;
+    border-radius: 0 0 0 6px;
+}
+
+.grid tr:last-child td:last-child {
+    -moz-border-radius: 0 0 6px 0;
+    -webkit-border-radius: 0 0 6px 0;
+    border-radius: 0 0 6px 0;
+}
+
+.cabinet-main .error-message {
+    color: #900;
+}
+
+/* FF чтоб его! */
+@-moz-document url-prefix()
+{
+    .content .banner p {
+        font-family: Segoe UI;
+        font-weight: lighter;
+        color: #FFFFFF;
+        font-size: 18px;
+    }
+
+    .content .main h3 {
+        font-family: Segoe UI;
+        font-weight: lighter;
+        color: #2E2E2E;
+        font-size: 30px;
+    }
+
+    .header .white-line .steps .step {
+        font-family: Segoe UI;
+        font-weight: lighter;
+        color: #2E2E2E;
+        font-size: 20px;
+        margin-left: 30px;
+        cursor: pointer;
+    }
+
+    .content .banner.small .action font {
+        font-family: Segoe UI;
+        font-weight: lighter;
+        color: #FFFFFF;
+        font-size: 30px;
+        float: right;
+        margin-top: 33px;
+    }
+
+    .register-form .agreeement p {
+        font-family: Segoe UI;
+        font-weight: lighter;
+        color: #2E2E2E;
+        font-size: 18px;
+    }
+
+    .register-form .labels label {
+        font-family: Segoe UI;
+        font-weight: lighter;
+        color: #2E2E2E;
+        font-size: 14px;    
+    }
+}
+
+@font-face {
+    font-family: 'GeoSlb712CMdBTBold';
+    src: url('fonts/geoslabinch-bold-webfont.eot');
+    src: url('fonts/geoslabinch-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/geoslabinch-bold-webfont.woff') format('woff'),
+         url('fonts/geoslabinch-bold-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+.info {
+    text-align: left;
+    padding: 5px;
+    font-size: 11px;
+    color: #fff;
+    position: absolute;
+    display: none;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    font-family: Verdana;
+}
+.error {
+        background: #f60000;
+        border: 3px solid #d50000;
+}
+.correct {
+        background: #56d800;
+        border: 3px solid #008000;
+}
+.wrong {
+        color: #e90000;
+}
+.normal {
+        font-weight: normal;
+        color: #222;
+}
+
+
+.mrg-top-bottom20 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

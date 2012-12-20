@@ -1,0 +1,15 @@
+﻿<td class="cabinet-menu">
+    <h4>Счета</h4>
+        <h5 onclick="window.location = '@Url.Action("AccountStatus", "PersonalCabinet")'">Статус счетов</h5>
+        <h5>Открыть счет</h5>
+        <h5 onclick="window.location = '@Url.Action("ActivateAccount", "PersonalCabinet")'">Активировать счет</h5>
+    <h4>Торговые системы</h4>
+        <h5 onclick="window.location = '@Url.Action("TradingSystemOrder", "PersonalCabinet", new { id = 1 })'">Советник 1.0</h5>
+        <h5 onclick="window.location = '@Url.Action("TradingSystemOrder", "PersonalCabinet", new { id = 2 })'">Советник 2.0</h5>
+        <h5 onclick="window.location = '@Url.Action("TradingSystemOrder", "PersonalCabinet", new { id = 3 })'">Советник 3.0</h5>
+        <h5 onclick="window.location = '@Url.Action("OrderStatus", "PersonalCabinet")'">Статус заказов</h5>
+    <h4>Служба поддержки</h4>
+        <h5>Мои письма</h5>
+        <h5>Написть</h5>
+        <h5>Рекомендации</h5>
+</td>
