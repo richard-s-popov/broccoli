@@ -1,1 +1,17 @@
 C:\work\broccoli\broccoli\WebsiteEmailQueueProcessor\bin\Debug\WebsiteEmailQueueProcessor.exe.config
+C:\work\broccoli\broccoli\WebsiteEmailQueueProcessor\bin\Debug\WebsiteEmailQueueProcessor.exe
+C:\work\broccoli\broccoli\WebsiteEmailQueueProcessor\bin\Debug\WebsiteEmailQueueProcessor.pdb
+C:\work\broccoli\broccoli\WebsiteEmailQueueProcessor\bin\Debug\BroccoliTrade.Logics.dll
+C:\work\broccoli\broccoli\WebsiteEmailQueueProcessor\bin\Debug\BroccoliTrade.Domain.dll
+C:\work\broccoli\broccoli\WebsiteEmailQueueProcessor\bin\Debug\EntityFramework.dll
+C:\work\broccoli\broccoli\WebsiteEmailQueueProcessor\bin\Debug\Newtonsoft.Json.dll
+C:\work\broccoli\broccoli\WebsiteEmailQueueProcessor\bin\Debug\BroccoliTrade.Logics.pdb
+C:\work\broccoli\broccoli\WebsiteEmailQueueProcessor\bin\Debug\BroccoliTrade.Domain.pdb
+C:\work\broccoli\broccoli\WebsiteEmailQueueProcessor\bin\Debug\EntityFramework.xml
+C:\work\broccoli\broccoli\WebsiteEmailQueueProcessor\bin\Debug\Newtonsoft.Json.xml
+C:\work\broccoli\broccoli\WebsiteEmailQueueProcessor\obj\x86\Debug\WebsiteEmailQueueProcessor.csprojResolveAssemblyReference.cache
+C:\work\broccoli\broccoli\WebsiteEmailQueueProcessor\obj\x86\Debug\WebsiteEmailQueueProcessor.ProjectInstaller.resources
+C:\work\broccoli\broccoli\WebsiteEmailQueueProcessor\obj\x86\Debug\WebsiteEmailQueueProcessor.WebsiteEmailQueueProcessor.resources
+C:\work\broccoli\broccoli\WebsiteEmailQueueProcessor\obj\x86\Debug\WebsiteEmailQueueProcessor.csproj.GenerateResource.Cache
+C:\work\broccoli\broccoli\WebsiteEmailQueueProcessor\obj\x86\Debug\WebsiteEmailQueueProcessor.exe
+C:\work\broccoli\broccoli\WebsiteEmailQueueProcessor\obj\x86\Debug\WebsiteEmailQueueProcessor.pdb

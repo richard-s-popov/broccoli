@@ -83,32 +83,5 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="AccreditationProgram">
-      <EntityTypeMapping TypeName="BroccoliModel.AccreditationProgram">
-        <MappingFragment StoreEntitySet="AccreditationProgram">
-          <ScalarProperty Name="Code" ColumnName="Code" />
-          <ScalarProperty Name="Comment" ColumnName="Comment" />
-          <ScalarProperty Name="Typedic" ColumnName="Typedic" />
-          <ScalarProperty Name="AccreditationFrom" ColumnName="AccreditationFrom" />
-          <ScalarProperty Name="Kind" ColumnName="Kind" />
-          <ScalarProperty Name="Qualificationname" ColumnName="Qualificationname" />
-          <ScalarProperty Name="QualificationCode" ColumnName="QualificationCode" />
-          <ScalarProperty Name="Level" ColumnName="Level" />
-          <ScalarProperty Name="Name" ColumnName="Name" />
-          <ScalarProperty Name="idAccreditationDetails" ColumnName="idAccreditationDetails" />
-          <ScalarProperty Name="id" ColumnName="id" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="AccreditationSupplements">
-      <EntityTypeMapping TypeName="BroccoliModel.AccreditationSupplements">
-        <MappingFragment StoreEntitySet="AccreditationSupplements">
-          <ScalarProperty Name="Accreditationfk" ColumnName="Accreditationfk" />
-          <ScalarProperty Name="Command" ColumnName="Command" />
-          <ScalarProperty Name="Number" ColumnName="Number" />
-          <ScalarProperty Name="id" ColumnName="id" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>
