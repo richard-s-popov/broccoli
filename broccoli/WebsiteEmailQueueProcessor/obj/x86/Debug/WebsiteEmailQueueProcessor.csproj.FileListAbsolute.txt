@@ -1,0 +1,1 @@
+C:\work\broccoli\broccoli\WebsiteEmailQueueProcessor\bin\Debug\WebsiteEmailQueueProcessor.exe.config

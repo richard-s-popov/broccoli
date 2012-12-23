@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BroccoliModelStoreContainer" CdmEntityContainer="BroccoliEntities">
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="BroccoliModel.Users">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Nickname" ColumnName="Nickname" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="BirthDay" ColumnName="BirthDay" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="RegisterDate" ColumnName="RegisterDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Accounts">
+      <EntityTypeMapping TypeName="BroccoliModel.Accounts">
+        <MappingFragment StoreEntitySet="Accounts">
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="StatusId" ColumnName="StatusId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="AccountNumber" ColumnName="AccountNumber" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Status">
+      <EntityTypeMapping TypeName="BroccoliModel.Status">
+        <MappingFragment StoreEntitySet="Status">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AccountPool">
+      <EntityTypeMapping TypeName="BroccoliModel.AccountPool">
+        <MappingFragment StoreEntitySet="AccountPool">
+          <ScalarProperty Name="AccountId" ColumnName="AccountId" />
+          <ScalarProperty Name="AccountNumber" ColumnName="AccountNumber" />
+          <ScalarProperty Name="ApplicationDate" ColumnName="ApplicationDate" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Systems">
+      <EntityTypeMapping TypeName="BroccoliModel.Systems">
+        <MappingFragment StoreEntitySet="Systems">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TradingSystemPool">
+      <EntityTypeMapping TypeName="BroccoliModel.TradingSystemPool">
+        <MappingFragment StoreEntitySet="TradingSystemPool">
+          <ScalarProperty Name="TradingSystemId" ColumnName="TradingSystemId" />
+          <ScalarProperty Name="AccountId" ColumnName="AccountId" />
+          <ScalarProperty Name="ApplicationDate" ColumnName="ApplicationDate" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TradingSystems">
+      <EntityTypeMapping TypeName="BroccoliModel.TradingSystems">
+        <MappingFragment StoreEntitySet="TradingSystems">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="ModificationDate" ColumnName="ModificationDate" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="AccountId" ColumnName="AccountId" />
+          <ScalarProperty Name="StatusId" ColumnName="StatusId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="SystemId" ColumnName="SystemId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AccreditationProgram">
+      <EntityTypeMapping TypeName="BroccoliModel.AccreditationProgram">
+        <MappingFragment StoreEntitySet="AccreditationProgram">
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="Typedic" ColumnName="Typedic" />
+          <ScalarProperty Name="AccreditationFrom" ColumnName="AccreditationFrom" />
+          <ScalarProperty Name="Kind" ColumnName="Kind" />
+          <ScalarProperty Name="Qualificationname" ColumnName="Qualificationname" />
+          <ScalarProperty Name="QualificationCode" ColumnName="QualificationCode" />
+          <ScalarProperty Name="Level" ColumnName="Level" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="idAccreditationDetails" ColumnName="idAccreditationDetails" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AccreditationSupplements">
+      <EntityTypeMapping TypeName="BroccoliModel.AccreditationSupplements">
+        <MappingFragment StoreEntitySet="AccreditationSupplements">
+          <ScalarProperty Name="Accreditationfk" ColumnName="Accreditationfk" />
+          <ScalarProperty Name="Command" ColumnName="Command" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
