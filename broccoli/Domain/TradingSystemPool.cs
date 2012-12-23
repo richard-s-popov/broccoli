@@ -7,21 +7,18 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BroccoliTrade.Domain
+using System;
+using System.Collections.Generic;
+
+public partial class TradingSystemPool
 {
-    using System;
-    using System.Collections.Generic;
-    
-    public partial class TradingSystemPool
-    {
-        public int Id { get; set; }
-        public long UserId { get; set; }
-        public System.DateTime ApplicationDate { get; set; }
-        public int AccountId { get; set; }
-        public int TradingSystemId { get; set; }
-    
-        public virtual Accounts Accounts { get; set; }
-        public virtual Users Users { get; set; }
-        public virtual TradingSystems TradingSystems { get; set; }
-    }
+    public int Id { get; set; }
+    public long UserId { get; set; }
+    public System.DateTime ApplicationDate { get; set; }
+    public int AccountId { get; set; }
+    public int TradingSystemId { get; set; }
+
+    public virtual Accounts Accounts { get; set; }
+    public virtual Users Users { get; set; }
+    public virtual TradingSystems TradingSystems { get; set; }
 }

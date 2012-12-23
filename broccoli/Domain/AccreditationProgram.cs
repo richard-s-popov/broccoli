@@ -7,23 +7,20 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BroccoliTrade.Domain
+using System;
+using System.Collections.Generic;
+
+public partial class AccreditationProgram
 {
-    using System;
-    using System.Collections.Generic;
-    
-    public partial class AccreditationProgram
-    {
-        public int id { get; set; }
-        public Nullable<int> idAccreditationDetails { get; set; }
-        public string Name { get; set; }
-        public string Level { get; set; }
-        public string QualificationCode { get; set; }
-        public string Qualificationname { get; set; }
-        public string Kind { get; set; }
-        public Nullable<System.DateTime> AccreditationFrom { get; set; }
-        public string Typedic { get; set; }
-        public string Comment { get; set; }
-        public string Code { get; set; }
-    }
+    public int id { get; set; }
+    public Nullable<int> idAccreditationDetails { get; set; }
+    public string Name { get; set; }
+    public string Level { get; set; }
+    public string QualificationCode { get; set; }
+    public string Qualificationname { get; set; }
+    public string Kind { get; set; }
+    public Nullable<System.DateTime> AccreditationFrom { get; set; }
+    public string Typedic { get; set; }
+    public string Comment { get; set; }
+    public string Code { get; set; }
 }

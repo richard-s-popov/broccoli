@@ -7,36 +7,33 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BroccoliTrade.Domain
+using System;
+using System.Collections.Generic;
+
+public partial class Users
 {
-    using System;
-    using System.Collections.Generic;
-    
-    public partial class Users
+    public Users()
     {
-        public Users()
-        {
-            this.Accounts = new HashSet<Accounts>();
-            this.AccountPool = new HashSet<AccountPool>();
-            this.TradingSystemPool = new HashSet<TradingSystemPool>();
-            this.TradingSystems = new HashSet<TradingSystems>();
-        }
-    
-        public long Id { get; set; }
-        public string Name { get; set; }
-        public string Nickname { get; set; }
-        public string Email { get; set; }
-        public string Phone { get; set; }
-        public string Country { get; set; }
-        public string City { get; set; }
-        public System.DateTime BirthDay { get; set; }
-        public string Password { get; set; }
-        public bool IsDeleted { get; set; }
-        public System.DateTime RegisterDate { get; set; }
-    
-        public virtual ICollection<Accounts> Accounts { get; set; }
-        public virtual ICollection<AccountPool> AccountPool { get; set; }
-        public virtual ICollection<TradingSystemPool> TradingSystemPool { get; set; }
-        public virtual ICollection<TradingSystems> TradingSystems { get; set; }
+        this.Accounts = new HashSet<Accounts>();
+        this.AccountPool = new HashSet<AccountPool>();
+        this.TradingSystemPool = new HashSet<TradingSystemPool>();
+        this.TradingSystems = new HashSet<TradingSystems>();
     }
+
+    public long Id { get; set; }
+    public string Name { get; set; }
+    public string Nickname { get; set; }
+    public string Email { get; set; }
+    public string Phone { get; set; }
+    public string Country { get; set; }
+    public string City { get; set; }
+    public System.DateTime BirthDay { get; set; }
+    public string Password { get; set; }
+    public bool IsDeleted { get; set; }
+    public System.DateTime RegisterDate { get; set; }
+
+    public virtual ICollection<Accounts> Accounts { get; set; }
+    public virtual ICollection<AccountPool> AccountPool { get; set; }
+    public virtual ICollection<TradingSystemPool> TradingSystemPool { get; set; }
+    public virtual ICollection<TradingSystems> TradingSystems { get; set; }
 }

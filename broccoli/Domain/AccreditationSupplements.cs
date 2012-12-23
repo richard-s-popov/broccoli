@@ -7,16 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BroccoliTrade.Domain
+using System;
+using System.Collections.Generic;
+
+public partial class AccreditationSupplements
 {
-    using System;
-    using System.Collections.Generic;
-    
-    public partial class AccreditationSupplements
-    {
-        public string id { get; set; }
-        public string Number { get; set; }
-        public string Command { get; set; }
-        public string Accreditationfk { get; set; }
-    }
+    public string id { get; set; }
+    public string Number { get; set; }
+    public string Command { get; set; }
+    public string Accreditationfk { get; set; }
 }
