@@ -7,20 +7,23 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using System;
-using System.Collections.Generic;
-
-public partial class Status
+namespace BroccoliTrade.Domain
 {
-    public Status()
+    using System;
+    using System.Collections.Generic;
+    
+    public partial class Status
     {
-        this.Accounts = new HashSet<Accounts>();
-        this.TradingSystems = new HashSet<TradingSystems>();
+        public Status()
+        {
+            this.Accounts = new HashSet<Accounts>();
+            this.TradingSystems = new HashSet<TradingSystems>();
+        }
+    
+        public int Id { get; set; }
+        public string Name { get; set; }
+    
+        public virtual ICollection<Accounts> Accounts { get; set; }
+        public virtual ICollection<TradingSystems> TradingSystems { get; set; }
     }
-
-    public int Id { get; set; }
-    public string Name { get; set; }
-
-    public virtual ICollection<Accounts> Accounts { get; set; }
-    public virtual ICollection<TradingSystems> TradingSystems { get; set; }
 }

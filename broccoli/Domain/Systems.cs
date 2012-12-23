@@ -7,18 +7,21 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using System;
-using System.Collections.Generic;
-
-public partial class Systems
+namespace BroccoliTrade.Domain
 {
-    public Systems()
+    using System;
+    using System.Collections.Generic;
+    
+    public partial class Systems
     {
-        this.TradingSystems = new HashSet<TradingSystems>();
+        public Systems()
+        {
+            this.TradingSystems = new HashSet<TradingSystems>();
+        }
+    
+        public int Id { get; set; }
+        public string Name { get; set; }
+    
+        public virtual ICollection<TradingSystems> TradingSystems { get; set; }
     }
-
-    public int Id { get; set; }
-    public string Name { get; set; }
-
-    public virtual ICollection<TradingSystems> TradingSystems { get; set; }
 }

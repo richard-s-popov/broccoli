@@ -231,7 +231,9 @@
     <Content Include="Scripts\PersonalCabinet\cabinet.js" />
     <Content Include="Scripts\PersonalCabinet\order.js" />
     <Content Include="Scripts\Register\register.form.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>

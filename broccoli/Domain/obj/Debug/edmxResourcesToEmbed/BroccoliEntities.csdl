@@ -52,8 +52,6 @@
       <End Role="TradingSystems" EntitySet="TradingSystems" />
       <End Role="TradingSystemPool" EntitySet="TradingSystemPool" />
     </AssociationSet>
-    <EntitySet Name="AccreditationProgram" EntityType="BroccoliModel.AccreditationProgram" />
-    <EntitySet Name="AccreditationSupplements" EntityType="BroccoliModel.AccreditationSupplements" />
   </EntityContainer>
   <EntityType Name="Users">
     <Key>
@@ -284,29 +282,4 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityType Name="AccreditationProgram">
-    <Key>
-      <PropertyRef Name="id" />
-    </Key>
-    <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Type="Int32" Name="idAccreditationDetails" />
-    <Property Type="String" Name="Name" MaxLength="3000" FixedLength="false" Unicode="true" />
-    <Property Type="String" Name="Level" MaxLength="250" FixedLength="false" Unicode="true" />
-    <Property Type="String" Name="QualificationCode" MaxLength="250" FixedLength="false" Unicode="true" />
-    <Property Type="String" Name="Qualificationname" MaxLength="250" FixedLength="false" Unicode="true" />
-    <Property Type="String" Name="Kind" MaxLength="250" FixedLength="false" Unicode="true" />
-    <Property Type="DateTime" Name="AccreditationFrom" Precision="3" />
-    <Property Type="String" Name="Typedic" MaxLength="250" FixedLength="false" Unicode="true" />
-    <Property Type="String" Name="Comment" MaxLength="500" FixedLength="false" Unicode="true" />
-    <Property Type="String" Name="Code" MaxLength="250" FixedLength="false" Unicode="true" />
-  </EntityType>
-  <EntityType Name="AccreditationSupplements">
-    <Key>
-      <PropertyRef Name="id" />
-    </Key>
-    <Property Type="String" Name="id" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="Number" MaxLength="8" FixedLength="false" Unicode="true" />
-    <Property Type="String" Name="Command" MaxLength="250" FixedLength="false" Unicode="true" />
-    <Property Type="String" Name="Accreditationfk" MaxLength="50" FixedLength="false" Unicode="true" />
-  </EntityType>
 </Schema>

@@ -7,28 +7,31 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using System;
-using System.Collections.Generic;
-
-public partial class TradingSystems
+namespace BroccoliTrade.Domain
 {
-    public TradingSystems()
+    using System;
+    using System.Collections.Generic;
+    
+    public partial class TradingSystems
     {
-        this.TradingSystemPool = new HashSet<TradingSystemPool>();
+        public TradingSystems()
+        {
+            this.TradingSystemPool = new HashSet<TradingSystemPool>();
+        }
+    
+        public int Id { get; set; }
+        public int SystemId { get; set; }
+        public long UserId { get; set; }
+        public int StatusId { get; set; }
+        public int AccountId { get; set; }
+        public System.DateTime CreateDate { get; set; }
+        public Nullable<System.DateTime> ModificationDate { get; set; }
+        public bool IsDeleted { get; set; }
+    
+        public virtual Accounts Accounts { get; set; }
+        public virtual Status Status { get; set; }
+        public virtual Systems Systems { get; set; }
+        public virtual Users Users { get; set; }
+        public virtual ICollection<TradingSystemPool> TradingSystemPool { get; set; }
     }
-
-    public int Id { get; set; }
-    public int SystemId { get; set; }
-    public long UserId { get; set; }
-    public int StatusId { get; set; }
-    public int AccountId { get; set; }
-    public System.DateTime CreateDate { get; set; }
-    public Nullable<System.DateTime> ModificationDate { get; set; }
-    public bool IsDeleted { get; set; }
-
-    public virtual Accounts Accounts { get; set; }
-    public virtual Status Status { get; set; }
-    public virtual Systems Systems { get; set; }
-    public virtual Users Users { get; set; }
-    public virtual ICollection<TradingSystemPool> TradingSystemPool { get; set; }
 }

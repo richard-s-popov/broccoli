@@ -32,7 +32,5 @@ namespace BroccoliTrade.Domain
         public DbSet<Systems> Systems { get; set; }
         public DbSet<TradingSystemPool> TradingSystemPool { get; set; }
         public DbSet<TradingSystems> TradingSystems { get; set; }
-        public DbSet<AccreditationProgram> AccreditationProgram { get; set; }
-        public DbSet<AccreditationSupplements> AccreditationSupplements { get; set; }
     }
 }

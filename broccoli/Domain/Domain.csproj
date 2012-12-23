@@ -52,12 +52,6 @@
     <Compile Include="Accounts.cs">
       <DependentUpon>BroccoliEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="AccreditationProgram.cs">
-      <DependentUpon>BroccoliEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="AccreditationSupplements.cs">
-      <DependentUpon>BroccoliEntities.tt</DependentUpon>
-    </Compile>
     <Compile Include="BroccoliEntities.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
