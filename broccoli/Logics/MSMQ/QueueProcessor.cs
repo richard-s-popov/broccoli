@@ -18,28 +18,29 @@ namespace BroccoliTrade.Logics.MSMQ
             msgQ = new MessageQueue(queuePath);
             msgQ.Formatter = new BinaryMessageFormatter();
             msgQ.MessageReadPropertyFilter.SetAll();
-            msgQ.ReceiveCompleted += msgQ_ReceiveCompleted;
-            msgQ.BeginReceive();
+            var messages = msgQ.GetAllMessages();
+
+            foreach (var message in messages)
+            {
+                var msg = (EmailMessage) message.Body;
+                msgQ_Send(msg);
+            }
+
+            msgQ.Close();
         }
 
-        static void msgQ_ReceiveCompleted(object sender, ReceiveCompletedEventArgs e)
+        static void msgQ_Send(EmailMessage message)
         {
-           lock (lockObject)
-           {
+            lock (lockObject)
+            {
                 // The message is plain text.
-                var msg = (EmailMessage)e.Message.Body;
-                new EmailService().SendMessage(msg, 
-                    "richard.s.popov@gmail.com", 
-                    "hbxfhl91", 
-                    "smtp.gmail.com", 
-                    587, 
+                new EmailService().SendMessage(message,
+                    "support@broccoli-trade.ru",
+                    "g<qTS4Zu",
+                    "smtp.gmail.com",
+                    465,
                     true);
-
-                Console.WriteLine("Message received: " + msg.Message);
-           }
-
-           // Listen for the next message.
-           msgQ.BeginReceive();
+            }
         }
 
         public static void StopProcessing()

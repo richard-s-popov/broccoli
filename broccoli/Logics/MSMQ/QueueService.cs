@@ -7,12 +7,12 @@ namespace BroccoliTrade.Logics.MSMQ
     {
         public void QueueMessage(EmailMessage message)
         {
-            Message msg = new Message();
+            var msg = new Message();
             msg.Body = message;
             msg.Recoverable = true;
             msg.Formatter = new BinaryMessageFormatter();
 
-            string queuePath = @".\private$\BroccoliEmails";
+            const string queuePath = @".\private$\BroccoliEmails";
             
             MessageQueue msgQ;
 

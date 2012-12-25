@@ -9,16 +9,12 @@ namespace BroccoliTrade.Logics.MSMQ
     {
         public void SendMessage(EmailMessage message, string username, string password, string host, int port, bool enableSsl)
         {
-            string serializedMessage = Serializer.SerializeMessage(message);
-
-            //var mm = new MailMessage(message.From, message.To, message.Subject, message.Message);
-
-            var from = new MailAddress(message.From, "Broccoli Trade");
+            var from = new MailAddress(username, message.From);
 			var to = new MailAddress(message.To);
 
             var mm = new MailMessage(from, to);
             mm.Subject = message.Subject;
-            mm.Body = "fdsfasdfafadsf";
+            mm.Body = message.Message;
 
             var credentials = new NetworkCredential(username, password);
             var sc = new SmtpClient(host, port)

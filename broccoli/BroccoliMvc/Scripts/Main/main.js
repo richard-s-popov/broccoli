@@ -1,35 +1,31 @@
 ﻿$(document).ready(function () {
-    $('input').attr('autocomplete', 'off');
-
     $('#loginBtn').click(function () {
         setTimeout(function () {
             if ($('#loginBtn').is(':hover') === true) {
-                $('.login-window').fadeIn(100);
+                $('.login-window').fadeIn(400);
+                $('#login').focus();
+                $('.opacity').fadeIn(300);
             }
         }, 200);
     });
     
-    $('#loginBtn').mouseleave(function () {
+    $('.opacity').click(function () {
         setTimeout(function () {
             if ($('#loginBtn').is(':hover') !== true) {
-                $('.login-window').fadeOut(200);
+                $('.login-window').fadeOut(300);
+                $('.opacity').fadeOut(300);
             }
         }, 100);
     });
-
-
-    $('#logOn').click(function() {
-        $.ajax({
-            url: document.LogOnUrl,
-            data:
-            {
-                login: "rick_box@mail.ru",
-                password: "hbxfhl91",
-                rememberMe: false
-            },
-            success: function(data) {
-                console.log(data);
-            }
-        });
+    
+    $("body").keydown(function (e) {
+        if (e.keyCode == 27) {
+            setTimeout(function () {
+                if ($('#loginBtn').is(':hover') !== true) {
+                    $('.login-window').fadeOut(300);
+                    $('.opacity').fadeOut(300);
+                }
+            }, 100);
+        }
     });
 });
