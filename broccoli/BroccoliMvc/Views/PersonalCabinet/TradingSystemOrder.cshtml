@@ -14,11 +14,11 @@
     </div>
 </div>
 <div class="center-content">
-    <h4 class="mrg-top-bottom20">Заказ торговой системы "@ViewBag.SystemName"</h4>
     <table>
         <tr>
             @Html.Partial("CabinetMenu")
             <td class="cabinet-main">
+                <h3 class="mrg-top-bottom20">Заказ торговой системы "@ViewBag.SystemName"</h3>
                 @if (ViewBag.Error)
                 {
                     <div class="error-message">Error</div>
@@ -47,6 +47,9 @@
                         </table>
                     }
                 }
+                <br/>
+                <br/>
+                @Html.Partial("AlternativeWay")
             </td>
         </tr>
     </table>

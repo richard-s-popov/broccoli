@@ -35,8 +35,8 @@ namespace BroccoliTrade.Logics.MSMQ
             {
                 // The message is plain text.
                 new EmailService().SendMessage(message,
-                    "support@broccoli-trade.ru",
-                    "g<qTS4Zu",
+                    "support@fxinn.ru",
+                    "g<qTS4Zn",
                     "smtp.gmail.com",
                     465,
                     true);

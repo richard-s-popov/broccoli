@@ -9,12 +9,12 @@
         <font>Личный кабинет</font>
     </div>
 </div>
-<div class="center-content">
-    <h4 class="mrg-top-bottom20">Статус заказов</h4>
+<div class="center-content">    
     <table>
         <tr>
             @Html.Partial("CabinetMenu")
             <td class="cabinet-main">
+                <h3 class="mrg-top-bottom20">Статус заказов</h3>
                 <div class="error-message" style="display: none;"><br /><br /></div>
                 @if (!ViewBag.NoData)
                 {

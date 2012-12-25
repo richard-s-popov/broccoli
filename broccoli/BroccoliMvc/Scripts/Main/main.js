@@ -1,31 +1,21 @@
 ﻿$(document).ready(function () {
-    $('#loginBtn').click(function () {
-        setTimeout(function () {
-            if ($('#loginBtn').is(':hover') === true) {
-                $('.login-window').fadeIn(400);
-                $('#login').focus();
-                $('.opacity').fadeIn(300);
-            }
-        }, 200);
+    $('#signInBtn').click(function () {
+        $('.login-window').delay(200).fadeIn(400);
+        setTimeout(function() {
+            $('#login').focus();
+        }, 300);
+        $('.opacity').fadeTo(300, 0.4);
     });
     
     $('.opacity').click(function () {
-        setTimeout(function () {
-            if ($('#loginBtn').is(':hover') !== true) {
-                $('.login-window').fadeOut(300);
-                $('.opacity').fadeOut(300);
-            }
-        }, 100);
+        $('.login-window').fadeOut(300);
+        $('.opacity').fadeOut(300);
     });
     
     $("body").keydown(function (e) {
         if (e.keyCode == 27) {
-            setTimeout(function () {
-                if ($('#loginBtn').is(':hover') !== true) {
-                    $('.login-window').fadeOut(300);
-                    $('.opacity').fadeOut(300);
-                }
-            }, 100);
+            $('.login-window').fadeOut(300);
+            $('.opacity').fadeOut(300);
         }
     });
 });

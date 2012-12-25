@@ -1,0 +1,31 @@
+﻿<script type="text/javascript" src="@Url.Content("~/Scripts/PersonalCabinet/alternative.way.js")"></script>
+
+<h3>Другой способ получения</h3>
+<br>
+<h5 id="showAltWayContainer">Показать...</h5>
+
+<div class="container">
+    <div class="alt-way-container">
+        <img id="srcCross" src="@Url.Content("~/Content/img/cross_2615.png")" style="display: none;" />
+        <table id="assignedUsers" class="invite-list">
+            <tr>
+                <th></th>
+                <th>Имя друга</th>
+                <th>E-mail</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td class="inputs">
+                    @Html.TextBox("firstUserName")
+                </td>
+                <td class="inputs">
+                    @Html.TextBox("firstUserEmail")
+                </td>
+                <td class="inputs">
+                    <img class="clearAssignedUserBtn" src="@Url.Content("~/Content/img/cross_2615.png")" />
+                </td>
+            </tr>
+        </table>
+        <button id="addUser" type="button" class="green-button">Добавить</button>
+    </div>
+</div>

@@ -228,6 +228,7 @@
     <Content Include="Scripts\MicrosoftMvcValidation.debug.js" />
     <Content Include="Scripts\MicrosoftMvcValidation.js" />
     <Content Include="Scripts\modernizr-2.5.3.js" />
+    <Content Include="Scripts\PersonalCabinet\alternative.way.js" />
     <Content Include="Scripts\PersonalCabinet\cabinet.js" />
     <Content Include="Scripts\PersonalCabinet\order.js" />
     <Content Include="Scripts\Register\register.form.js" />
@@ -254,6 +255,7 @@
     <Content Include="Views\PersonalCabinet\AccountStatus.cshtml" />
     <Content Include="Views\PersonalCabinet\OrderStatus.cshtml" />
     <Content Include="Views\PersonalCabinet\TradingSystemOrder.cshtml" />
+    <Content Include="Views\PersonalCabinet\AlternativeWay.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

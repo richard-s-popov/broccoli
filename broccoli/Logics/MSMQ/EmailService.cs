@@ -9,7 +9,7 @@ namespace BroccoliTrade.Logics.MSMQ
     {
         public void SendMessage(EmailMessage message, string username, string password, string host, int port, bool enableSsl)
         {
-            var from = new MailAddress(username, message.From);
+            var from = new MailAddress(message.From, message.DisplayNameFrom);
 			var to = new MailAddress(message.To);
 
             var mm = new MailMessage(from, to);
