@@ -661,37 +661,43 @@ body a:active {color: black;text-decoration:none;font-size:14px;}
 .invite-list .inputs {
     padding-left: 10px;
     padding-right: 18px;
+}
+
+.invite-list .inputs .for-img {
     position: relative;
+    width: 25px;
+    height: 25px;
+    float: left;
 }
 
 .invite-list .deleteAssignedUserBtn {
     position: absolute;
-    top: 12px;
-    right: 10px;
+    top: 10px;
+    right: 20px;
     cursor: pointer;
 }
 
 .invite-list .clearAssignedUserBtn {
     position: absolute;
-    top: 12px;
-    right: 10px;
+    top: 10px;
+    right: 20px;
     cursor: pointer;
 }
 
 .invite-list input {
-    width: 250px;
+    width: 240px;
     height: 20px;
 }
 
 .invite-list input:hover {
     border: 1px solid #74ca35;
-    width: 252px;
+    width: 242px;
     height: 22px;
 }
 
 .invite-list input:focus {
     border: 1px solid #74ca35;
-    width: 252px;
+    width: 242px;
     height: 22px;
     outline: none;
 }
@@ -716,7 +722,7 @@ body a:active {color: black;text-decoration:none;font-size:14px;}
 
 .alt-way-container  #addUser {
     float: right;
-    margin-right: 45px;
+    margin-right: 70px;
 }
 
 #showAltWayContainer {

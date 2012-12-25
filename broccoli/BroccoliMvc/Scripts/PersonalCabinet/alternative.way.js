@@ -2,7 +2,7 @@
     var src = $('#srcCross').attr('src');
     
     $('#addUser').click(function () {
-        $('#assignedUsers tr:last').after('<tr><td></td><td class="inputs"><input class="nameAssignedUser" type="text"></td><td class="inputs"><input class="emailAssignedUser" type="text"></td><td class="inputs"><img class="deleteAssignedUserBtn" src="' + src + '"/></td></tr>');
+        $('#assignedUsers tr:last').after('<tr><td></td><td class="inputs"><input class="nameAssignedUser" type="text"></td><td class="inputs"><input class="emailAssignedUser" type="text"></td><td class="inputs"><div class="for-img"><img class="deleteAssignedUserBtn" src="' + src + '"/></div></td></tr>');
 
         redrawRows();
     });
