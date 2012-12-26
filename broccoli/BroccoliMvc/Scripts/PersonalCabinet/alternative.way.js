@@ -8,7 +8,7 @@
     });
 
     $('.deleteAssignedUserBtn').live('click', function() {
-        $(this).parent().parent().remove();
+        $(this).parent().parent().parent().remove();
 
         redrawRows();
     });
