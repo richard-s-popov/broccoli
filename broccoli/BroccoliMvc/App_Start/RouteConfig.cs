@@ -16,12 +16,6 @@ namespace BroccoliTrade.Web.BroccoliMvc.App_Start
             );
 
             routes.MapRoute(
-                "PersonalCabinet", // Route name
-                "cabinet", // URL with parameters
-                new { controller = "PersonalCabinet", action = "Index" } // Parameter defaults
-            );
-
-            routes.MapRoute(
                 "ActivateAccount", // Route name
                 "activate", // URL with parameters
                 new { controller = "PersonalCabinet", action = "ActivateAccount" } // Parameter defaults

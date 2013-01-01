@@ -18,7 +18,45 @@
             @Html.Partial("CabinetMenu", ViewData)
             <td class="cabinet-main">
                 <h3 class="mrg-top-bottom20">Добро пожаловать, @ViewBag.User.Name, в Ваш персональный кабинет компании Broccoli Trade!</h3>
-                Личный кабинет в разработке...
+                <table class="systems-table">
+                    <tr>
+                        <td>
+                            <img src="@Url.Content("~/Content/img/dep_5856564-Green-Profit-Icon.jpg")"/>
+                        </td>
+                        <td class="labels">
+                            <h4 onclick="window.location = '@Url.Action("TradingSystemOrder", "PersonalCabinet", new { id = 1 })'">Советник 1.0</h4>
+                        </td>
+                        <td>
+                            
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="@Url.Content("~/Content/img/dep_5856564-Green-Profit-Icon.jpg")"/>
+                        </td>
+                        <td class="labels">
+                            <h4 onclick="window.location = '@Url.Action("TradingSystemOrder", "PersonalCabinet", new { id = 2 })'">Советник 2.0</h4>
+                        </td>
+                        <td>
+                            
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="@Url.Content("~/Content/img/dep_5856564-Green-Profit-Icon.jpg")"/>
+                        </td>
+                        <td class="labels">
+                            <h4 onclick="window.location = '@Url.Action("TradingSystemOrder", "PersonalCabinet", new { id = 3 })'">Советник 3.0</h4>
+                        </td>
+                        <td>
+                            
+                        </td>
+                    </tr>
+                </table>
+                <br/>
+                <br/>
+                <hr/>
+                @Html.Partial("AlternativeWay")
             </td>
         </tr>
     </table>

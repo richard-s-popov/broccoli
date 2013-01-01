@@ -770,6 +770,15 @@ hr {
 }
 
 .social-networks .buttons {
+    width: 60px;
+}
+
+.social-networks .name-network {
+    vertical-align: middle;
+    padding-left: 12px;
+}
+
+.social-networks .buttons {
 }
 
 #showAltWayContainer {
@@ -778,6 +787,60 @@ hr {
 
 #showAltWayContainer:hover {
     color: #98cb66;
+}
+
+.systems-table .labels {
+    vertical-align: middle;
+}
+
+.systems-table td {
+    padding-bottom: 20px;
+}
+
+.systems-table h4 {
+    cursor: pointer;
+}
+
+.systems-table h4:hover {
+    color: #98cb66;
+}
+
+.login-page {
+    width: 600px;
+    border: 1px solid black;
+    margin: 100px auto;
+}
+
+.login-page .first {
+    width: 300px;
+    border-right: 1px solid black;
+}
+
+.login-page .second {
+    width: 300px;
+}
+
+.login-page #loginForm input[type="text"], .login-page #loginForm input[type="password"] {
+    
+}
+
+.login-page #loginForm input {
+    width: 250px;
+}
+
+.gal {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.gal img {
+    margin: 10px;
+}
+
+.gal img:hover {
+    box-shadow: 0px 0px 5px #333;
+    -webkit-box-shadow: 0px 0px 5px #333;
+    -moz-box-shadow: 0px 0px 5px #333;
 }
 
 /* FF чтоб его! */

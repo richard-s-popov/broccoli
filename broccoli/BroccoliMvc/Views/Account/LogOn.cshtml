@@ -15,22 +15,31 @@
     </div>
 </div>
 <div class="center-content">
-    @using (Html.BeginForm("Login", "Account", FormMethod.Post, new { @id = "loginForm" }))
-    {
-        <div>
-            @Html.Label("Email")
-            @Html.TextBox("login")
-        </div>
-        <div>
-            @Html.Label("Пароль")
-            @Html.TextBox("password")
-        </div>
-        <div>
-            @Html.Label("Запомнить меня")
-            @Html.CheckBox("rememberMe")
-        </div>
-        <button id="submit" class="green-button">Вход</button>
-    }
+    <table class="login-page">
+        <tr>
+            <td class="first">
+                @using (Html.BeginForm("Login", "Account", FormMethod.Post, new { @id = "loginForm" }))
+                {
+                    <div>
+                        @Html.Label("Email")
+                    </div>
+                        @Html.TextBox("login")
+                    <div>
+                        @Html.Label("Пароль")
+                    </div>
+                        @Html.TextBox("password")
+                    <div>
+                        @Html.Label("Запомнить меня")
+                    </div>
+                        @Html.CheckBox("rememberMe")
+                    <button id="submit" class="green-button">Вход</button>
+                }
+            </td>
+            <td class="second">
+                
+            </td>
+        </tr>
+    </table>
 </div>
 
 <script type="text/javascript">

@@ -1,5 +1,8 @@
 ﻿<td class="cabinet-menu">
+    <h5 onclick="window.location = '@Url.Action("Index", "PersonalCabinet")'">Личный кабинет</h5>
     <h4>Счета</h4>
+        <h5>Открыть счет</h5>
+        <h5 onclick="window.location = '@Url.Action("ActivateAccount", "PersonalCabinet")'">Активировать счет</h5>
         <h5 onclick="window.location = '@Url.Action("AccountStatus", "PersonalCabinet")'">
             Статус счетов 
             @if (ViewData["AccountNotificationsCount"] != null && ViewData["AccountNotificationsCount"] as int? > 0)
@@ -8,8 +11,6 @@
                 <div class="notifications-count">@count</div>
             }
         </h5>
-        <h5>Открыть счет</h5>
-        <h5 onclick="window.location = '@Url.Action("ActivateAccount", "PersonalCabinet")'">Активировать счет</h5>
     <h4>Торговые системы</h4>
         <h5 onclick="window.location = '@Url.Action("TradingSystemOrder", "PersonalCabinet", new { id = 1 })'">Советник 1.0</h5>
         <h5 onclick="window.location = '@Url.Action("TradingSystemOrder", "PersonalCabinet", new { id = 2 })'">Советник 2.0</h5>

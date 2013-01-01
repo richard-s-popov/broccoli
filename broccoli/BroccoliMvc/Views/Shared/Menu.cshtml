@@ -5,7 +5,7 @@
         <td id="commentsPage" class="item">Отзывы</td>
         @if (HttpContext.Current.User.Identity.IsAuthenticated)
         {
-            <td id="personalCabinetPage" class="item" onclick=" window.location = '@Url.Action("Index", "PersonalCabinet")'">Личный кабинет</td>
+            <td id="personalCabinetPage" class="item" onclick="window.location = '@Url.Action("Index", "PersonalCabinet")'">Личный кабинет</td>
             <td class="item" onclick="window.location = '@Url.Action("Logout", "Account")'">Выход</td>
         }
         else
