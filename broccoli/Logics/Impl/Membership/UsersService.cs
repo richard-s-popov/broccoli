@@ -25,9 +25,14 @@ namespace BroccoliTrade.Logics.Impl.Membership
             db.SaveChanges();
         }
 
+        public Users GetById(long userId)
+        {
+            return db.Users.FirstOrDefault(x => x.Id == userId);
+        }
+
         public Users GetUserByLogin(string login)
         {
-            return db.Users.FirstOrDefault(x => x.Email == login);
+            return db.Users.FirstOrDefault(x => x.Email == login && !x.IsDeleted);
         }
 
         public bool EmailIsExist(string email)
@@ -48,6 +53,11 @@ namespace BroccoliTrade.Logics.Impl.Membership
         public void Dispose()
         {
             db.Dispose();
+        }
+
+        public void SaveChanges()
+        {
+            db.SaveChanges();
         }
     }
 }

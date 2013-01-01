@@ -79,6 +79,7 @@
           <Property Name="IsDeleted" Type="bit" Nullable="false" />
           <Property Name="ModifiedDate" Type="datetime" />
           <Property Name="CreateDate" Type="datetime" Nullable="false" />
+          <Property Name="IsNew" Type="bit" Nullable="false" />
         </EntityType>
         <EntityType Name="Status">
           <Key>
@@ -116,6 +117,7 @@
           <Property Name="CreateDate" Type="datetime" Nullable="false" />
           <Property Name="ModificationDate" Type="datetime" />
           <Property Name="IsDeleted" Type="bit" Nullable="false" />
+          <Property Name="IsNew" Type="bit" Nullable="false" />
         </EntityType>
         <EntityType Name="Users">
           <Key>
@@ -132,6 +134,9 @@
           <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="255" />
           <Property Name="IsDeleted" Type="bit" Nullable="false" />
           <Property Name="RegisterDate" Type="datetime" Nullable="false" />
+          <Property Name="GuestsNumber" Type="int" />
+          <Property Name="RegisteredGuests" Type="int" />
+          <Property Name="OwnerId" Type="bigint" />
         </EntityType>
         <Association Name="FK_AccountApplication_Accounts">
           <End Role="Accounts" Type="BroccoliModel.Store.Accounts" Multiplicity="1" />
@@ -341,6 +346,9 @@
           <NavigationProperty Name="AccountPool" Relationship="BroccoliModel.FK_AccountApplication_Users" FromRole="Users" ToRole="AccountPool" />
           <NavigationProperty Name="TradingSystemPool" Relationship="BroccoliModel.FK_TradingSystemPool_Users" FromRole="Users" ToRole="TradingSystemPool" />
           <NavigationProperty Name="TradingSystems" Relationship="BroccoliModel.FK_TradingSystems_Users" FromRole="Users" ToRole="TradingSystems" />
+          <Property Type="Int32" Name="GuestsNumber" />
+          <Property Type="Int32" Name="RegisteredGuests" />
+          <Property Type="Int64" Name="OwnerId" />
         </EntityType>
         <EntityType Name="Accounts">
           <Key>
@@ -358,6 +366,7 @@
           <NavigationProperty Name="AccountPool" Relationship="BroccoliModel.FK_AccountApplication_Accounts" FromRole="Accounts" ToRole="AccountPool" />
           <NavigationProperty Name="TradingSystemPool" Relationship="BroccoliModel.FK_TradingSystemPool_Accounts" FromRole="Accounts" ToRole="TradingSystemPool" />
           <NavigationProperty Name="TradingSystems" Relationship="BroccoliModel.FK_TradingSystems_Accounts" FromRole="Accounts" ToRole="TradingSystems" />
+          <Property Type="Boolean" Name="IsNew" Nullable="false" />
         </EntityType>
         <Association Name="FK_Accounts_Users">
           <End Type="BroccoliModel.Users" Role="Users" Multiplicity="1" />
@@ -466,6 +475,7 @@
           <NavigationProperty Name="Systems" Relationship="BroccoliModel.FK_TradingSystems_Systems" FromRole="TradingSystems" ToRole="Systems" />
           <NavigationProperty Name="Users" Relationship="BroccoliModel.FK_TradingSystems_Users" FromRole="TradingSystems" ToRole="Users" />
           <NavigationProperty Name="TradingSystemPool" Relationship="BroccoliModel.FK_TradingSystemPool_TradingSystems" FromRole="TradingSystems" ToRole="TradingSystemPool" />
+          <Property Type="Boolean" Name="IsNew" Nullable="false" />
         </EntityType>
         <Association Name="FK_TradingSystemPool_Accounts">
           <End Type="BroccoliModel.Accounts" Role="Accounts" Multiplicity="1" />
@@ -560,6 +570,9 @@
           <EntitySetMapping Name="Users">
             <EntityTypeMapping TypeName="BroccoliModel.Users">
               <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+                <ScalarProperty Name="RegisteredGuests" ColumnName="RegisteredGuests" />
+                <ScalarProperty Name="GuestsNumber" ColumnName="GuestsNumber" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="Nickname" ColumnName="Nickname" />
@@ -577,6 +590,7 @@
           <EntitySetMapping Name="Accounts">
             <EntityTypeMapping TypeName="BroccoliModel.Accounts">
               <MappingFragment StoreEntitySet="Accounts">
+                <ScalarProperty Name="IsNew" ColumnName="IsNew" />
                 <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
                 <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
                 <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
@@ -628,6 +642,7 @@
           <EntitySetMapping Name="TradingSystems">
             <EntityTypeMapping TypeName="BroccoliModel.TradingSystems">
               <MappingFragment StoreEntitySet="TradingSystems">
+                <ScalarProperty Name="IsNew" ColumnName="IsNew" />
                 <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
                 <ScalarProperty Name="ModificationDate" ColumnName="ModificationDate" />
                 <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />

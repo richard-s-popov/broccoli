@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
+using System.Web.Script.Serialization;
 using BroccoliTrade.Domain;
 using BroccoliTrade.Domain.Models;
 using BroccoliTrade.Logics.Infrastructure.Extensions;
@@ -35,8 +37,9 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.PersonalCabinet
         public ActionResult Index()
         {
             var currentUser = _usersService.GetUserByLogin(HttpContext.User.Identity.Name);
+            ViewBag.User = currentUser;
 
-            this.ViewBag.User = currentUser;
+            this.PrepareNotificationsForView();
 
             return View("PersonalCabinet");
         }
@@ -44,6 +47,8 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.PersonalCabinet
         [Secure]
         public ActionResult ActivateAccount()
         {
+            this.PrepareNotificationsForView();
+
             return this.View();
         }
 
@@ -58,7 +63,8 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.PersonalCabinet
                     CreateDate = DateTime.Now,
                     StatusId = 1,
                     UserId = currentUser.Id,
-                    IsDeleted = false
+                    IsDeleted = false,
+                    IsNew = false
                 };
 
             _accountsService.CreateAccount(accountEntity);
@@ -82,16 +88,24 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.PersonalCabinet
             var currentUser = _usersService.GetUserByLogin(HttpContext.User.Identity.Name);
             var accounts = _accountsService.GetAccountsByUserId(currentUser.Id).ToList();
 
+            foreach (var account in accounts)
+            {
+                account.IsNew = false;
+            }
+            _accountsService.Save();
+
             var model = new AccountListPoco
                 {
                     accounts = accounts.Select(entity => new AccountRowModel
                         {
                             Number = entity.AccountNumber,
-                            Status = entity.Status.Name
+                            Status = entity.Status.Name,
+                            StatusId = entity.StatusId
                         })
                 };
 
             ViewBag.NoData = !accounts.Any();
+            this.PrepareNotificationsForView();
 
             return this.View(model);
         }
@@ -104,7 +118,7 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.PersonalCabinet
             
             if (currentAccount.UserId == currentUser.Id)
             {
-                _accountsService.DeleteAccount(account);
+                _accountsService.DeleteAccount(currentAccount);
 
                 return Json(new { result = true }, JsonRequestBehavior.AllowGet);
             }
@@ -119,6 +133,13 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.PersonalCabinet
             var currentUser = _usersService.GetUserByLogin(HttpContext.User.Identity.Name);
             var tSystemsEntities = _tradingSystemService.GetTradingSystemsByUserId(currentUser.Id).ToList();
 
+            // Обнуляем сущности как просмотренные
+            foreach (var tSystemsEntity in tSystemsEntities)
+            {
+                tSystemsEntity.IsNew = false;
+            }
+            _tradingSystemService.Save();
+
             var model = new TradingSystemListPoco
                 {
                     TradingSystems = tSystemsEntities.Select(entity => new TradingSystemRowModel
@@ -132,6 +153,7 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.PersonalCabinet
                 };
 
             ViewBag.NoData = !tSystemsEntities.Any();
+            this.PrepareNotificationsForView();
 
             return this.View(model);
         }
@@ -157,6 +179,7 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.PersonalCabinet
             }
 
             ViewBag.SystemName = tSystem.Name;
+            this.PrepareNotificationsForView();
 
             var model = new TradingSystemOrderPoco
                 {
@@ -187,7 +210,8 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.PersonalCabinet
                         CreateDate = DateTime.Now,
                         StatusId = 1,
                         SystemId = model.TradingSystemId,
-                        IsDeleted = false
+                        IsDeleted = false,
+                        IsNew = false
                     };
                 _tradingSystemService.Add(tradingSystemEntity);
 
@@ -221,8 +245,57 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.PersonalCabinet
                     return File("~/Files/TradingSystems/kmplayer_downloader.exe", "application/pdf", "first.exe");
                 }
             }
+            if (string.Format("{0}{1}", currentUser.Id, 2).Md5() == token)
+            {
+                var file = Server.MapPath("~/Files/TradingSystems/mvc4vs2010.3f.3f.3fnew.exe");
+
+                if (System.IO.File.Exists(file))
+                {
+                    return File("~/Files/TradingSystems/mvc4vs2010.3f.3f.3fnew.exe", "application/pdf", "second.exe");
+                }
+            }
+            if (string.Format("{0}{1}", currentUser.Id, 3).Md5() == token)
+            {
+                var file = Server.MapPath("~/Files/TradingSystems/MVC4VS2010_Loc.exe");
+
+                if (System.IO.File.Exists(file))
+                {
+                    return File("~/Files/TradingSystems/MVC4VS2010_Loc.exe", "application/pdf", "third.exe");
+                }
+            }
 
             return new EmptyResult();
+        }
+
+        [Secure]
+        [HttpPost]
+        public JsonResult SendInvites(string inviteList, string message)
+        {
+            // Дисериализуем строку с массивом точек
+            var js = new JavaScriptSerializer();
+            var deserializedInvites = (object[])js.DeserializeObject(inviteList);
+            var myInviteList = new List<SJSonModel>();
+
+            if (deserializedInvites != null)
+            {
+                // получаем массив точек
+                foreach (Dictionary<string, object> newFeature in deserializedInvites)
+                {
+                    myInviteList.Add(new SJSonModel(newFeature));
+                }
+            }
+
+            foreach (var invite in myInviteList)
+            {
+                var em = new EmailMessage();
+                em.Subject = "test message";
+                em.Message = "OLOLO";
+                em.From = "support@broccoli-trade.ru";
+                em.DisplayNameFrom = "Broccoli Trade";
+                em.To = "rick_box@mail.ru";
+            }
+
+            return new JsonResult();
         }
 
         public ActionResult Test()
@@ -250,6 +323,16 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.PersonalCabinet
         {
             return Url.Action("TradingSystem", "PersonalCabinet",
                               new {token = string.Format("{0}{1}", userId, id).Md5()});
+        }
+
+        private void PrepareNotificationsForView()
+        {
+            var currentUser = _usersService.GetUserByLogin(HttpContext.User.Identity.Name);
+            var accountNotifications = _accountsService.GetNewNotoficationsCountByUserId(currentUser.Id);
+            var tradingSystemNotifications = _tradingSystemService.GetNewNotoficationsCountByUserId(currentUser.Id);
+
+            this.ViewData["AccountNotificationsCount"] = accountNotifications;
+            this.ViewData["TradingSystemNotificationsCount"] = tradingSystemNotifications;
         }
 
         protected override void Dispose(bool disposing)

@@ -2,6 +2,7 @@
     ViewBag.Title = "Статус счетов";
     Layout = "~/Views/Shared/_LayoutMin.cshtml";
 }
+@using BroccoliTrade.Domain
 @model BroccoliTrade.Web.BroccoliMvc.Models.PersonalCabinet.AccountListPoco
 
 @section head {
@@ -32,9 +33,14 @@
                     {
                         <tr>
                             <td>@account.Number</td>        
-                            <td>ForexInn</td>
+                            <td class="broker">
+                                <div class="logo-container">
+                                    <img class="broker-logo" src="@Url.Content("~/Content/img/forexinn_logo.jpg")"/>
+                                </div>
+                                ForexInn
+                            </td>
                             <td style="width: 40%;">
-                                @account.Status
+                                <span class="status">@account.Status</span>
                                 <span style="float: right; margin-right: 30px;"><a val="@account.Number" class="delete-link" href="#">Удалить</a></span>
                             </td>
                         </tr>

@@ -68,6 +68,7 @@
       <DependentUpon>BroccoliEntities.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\EmailMessage.cs" />
+    <Compile Include="Models\Status.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Status.cs">
       <DependentUpon>BroccoliEntities.tt</DependentUpon>

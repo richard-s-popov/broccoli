@@ -50,10 +50,20 @@ namespace BroccoliTrade.Logics.Impl.TradingSystem
                 .Where(x => x.UserId == id && !x.IsDeleted);
         }
 
+        public int GetNewNotoficationsCountByUserId(long userId)
+        {
+            return db.TradingSystems.Count(x => x.IsNew && x.UserId == userId && !x.IsDeleted);
+        }
+
         public void Add(TradingSystems entity)
         {
             db.TradingSystems.Add(entity);
             db.SaveChanges();
+        }
+
+        public void AddWithoutSaving(TradingSystems entity)
+        {
+            db.TradingSystems.Add(entity);
         }
 
         public void AddToPool(TradingSystemPool entity)
@@ -103,6 +113,7 @@ namespace BroccoliTrade.Logics.Impl.TradingSystem
                 if ((bool)json["result"] && this.CanTakeTradingSystem(tradingSystem.Systems.Id, (int)json["count"]))
                 {
                     tradingSystem.StatusId = 2;
+                    tradingSystem.IsNew = true;
 
                     var em = new EmailMessage
                     {
@@ -117,6 +128,7 @@ namespace BroccoliTrade.Logics.Impl.TradingSystem
                 else
                 {
                     tradingSystem.StatusId = 3;
+                    tradingSystem.IsNew = true;
 
                     var em = new EmailMessage
                     {

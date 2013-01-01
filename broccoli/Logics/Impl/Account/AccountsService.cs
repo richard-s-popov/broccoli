@@ -66,7 +66,20 @@ namespace BroccoliTrade.Logics.Impl.Account
 
         public void UpdateAccount(Accounts entity)
         {
-            throw new NotImplementedException();
+            var acc = db.Accounts.First(x => x.Id == entity.Id);
+
+            acc.IsNew = entity.IsNew;
+            acc.ModifiedDate = DateTime.Now;
+            acc.StatusId = entity.StatusId;
+            acc.UserId = entity.UserId;
+            acc.CreateDate = entity.CreateDate;
+            acc.AccountNumber = entity.AccountNumber;
+            acc.IsDeleted = entity.IsDeleted;
+        }
+
+        public void Save()
+        {
+            db.SaveChanges();
         }
 
         public void AddAccountToApplicationsPool(AccountPool entity)
@@ -98,6 +111,7 @@ namespace BroccoliTrade.Logics.Impl.Account
                 {
                     var account = this.GetById(AccountPool.AccountId);
                     account.StatusId = 2;
+                    account.IsNew = true;
 
                     var em = new EmailMessage
                         {
@@ -113,6 +127,7 @@ namespace BroccoliTrade.Logics.Impl.Account
                 {
                     var account = this.GetById(AccountPool.AccountId);
                     account.StatusId = 3;
+                    account.IsNew = true;
 
                     var em = new EmailMessage
                     {
@@ -131,11 +146,16 @@ namespace BroccoliTrade.Logics.Impl.Account
             db.SaveChanges();
         }
 
-        public void DeleteAccount(string account)
+        public void DeleteAccount(Accounts account)
         {
-            var acc = db.Accounts.FirstOrDefault(x => x.AccountNumber == account && !x.IsDeleted);
+            var acc = db.Accounts.First(x => x.Id == account.Id);
             acc.IsDeleted = true;
             db.SaveChanges();
+        }
+
+        public int GetNewNotoficationsCountByUserId(long userId)
+        {
+            return db.Accounts.Count(x => x.IsNew && x.UserId == userId && !x.IsDeleted);
         }
 
         private int GetRandomMinutes(int range)

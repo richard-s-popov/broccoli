@@ -33,6 +33,9 @@ namespace BroccoliTrade.Domain
         public string Password { get; set; }
         public bool IsDeleted { get; set; }
         public System.DateTime RegisterDate { get; set; }
+        public Nullable<int> GuestsNumber { get; set; }
+        public Nullable<int> RegisteredGuests { get; set; }
+        public Nullable<long> OwnerId { get; set; }
     
         public virtual ICollection<Accounts> Accounts { get; set; }
         public virtual ICollection<AccountPool> AccountPool { get; set; }

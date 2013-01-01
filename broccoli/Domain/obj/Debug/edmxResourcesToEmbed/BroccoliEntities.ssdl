@@ -74,6 +74,7 @@
     <Property Name="IsDeleted" Type="bit" Nullable="false" />
     <Property Name="ModifiedDate" Type="datetime" />
     <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="IsNew" Type="bit" Nullable="false" />
   </EntityType>
   <EntityType Name="Status">
     <Key>
@@ -111,6 +112,7 @@
     <Property Name="CreateDate" Type="datetime" Nullable="false" />
     <Property Name="ModificationDate" Type="datetime" />
     <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="IsNew" Type="bit" Nullable="false" />
   </EntityType>
   <EntityType Name="Users">
     <Key>
@@ -127,6 +129,9 @@
     <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="255" />
     <Property Name="IsDeleted" Type="bit" Nullable="false" />
     <Property Name="RegisterDate" Type="datetime" Nullable="false" />
+    <Property Name="GuestsNumber" Type="int" />
+    <Property Name="RegisteredGuests" Type="int" />
+    <Property Name="OwnerId" Type="bigint" />
   </EntityType>
   <Association Name="FK_AccountApplication_Accounts">
     <End Role="Accounts" Type="BroccoliModel.Store.Accounts" Multiplicity="1" />

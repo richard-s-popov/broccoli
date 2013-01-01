@@ -28,6 +28,12 @@ namespace BroccoliTrade.Web.BroccoliMvc.App_Start
             );
 
             routes.MapRoute(
+                "Login", // Route name
+                "login", // URL with parameters
+                new { controller = "Account", action = "LogOn" } // Parameter defaults
+            );
+
+            routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }

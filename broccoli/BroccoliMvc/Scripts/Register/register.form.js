@@ -1,6 +1,6 @@
 ﻿$(document).ready(function () {
     var src = $('#srcBtnOk').attr('src');
-
+    $('input').attr('autocomplete', 'off');
     $('#registerPage').hide();
     
     var jVal = {

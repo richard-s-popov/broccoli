@@ -59,6 +59,11 @@ namespace BroccoliTrade.Logics.Interfaces.Account
         void UpdateAccount(Accounts entity);
 
         /// <summary>
+        /// Сохранение контекста в БД
+        /// </summary>
+        void Save();
+
+        /// <summary>
         /// Добавление счета в пулл заявок
         /// </summary>
         /// <param name="entity"></param>
@@ -74,6 +79,13 @@ namespace BroccoliTrade.Logics.Interfaces.Account
         /// </summary>
         /// <param name="account"></param>
         /// <returns></returns>
-        void DeleteAccount(string account);
+        void DeleteAccount(Accounts account);
+
+        /// <summary>
+        /// Возвращает количество новых уведомлений по пользователю
+        /// </summary>
+        /// <param name="userId"></param>
+        /// <returns></returns>
+        int GetNewNotoficationsCountByUserId(long userId);
     }
 }

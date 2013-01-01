@@ -33,10 +33,23 @@ namespace BroccoliTrade.Logics.Interfaces.TradingSystem
         IEnumerable<TradingSystems> GetTradingSystemsByUserId(long id);
 
         /// <summary>
+        /// Возвращает количество новых событий
+        /// </summary>
+        /// <param name="userId"></param>
+        /// <returns></returns>
+        int GetNewNotoficationsCountByUserId(long userId);
+
+        /// <summary>
         /// Добавляет новую торговую систему для пользователя
         /// </summary>
         /// <param name="entity"></param>
         void Add(TradingSystems entity);
+
+        /// <summary>
+        /// Добавляет сущность к контексту без сохранения
+        /// </summary>
+        /// <param name="entity"></param>
+        void AddWithoutSaving(TradingSystems entity);
 
         /// <summary>
         /// Добавляет заявку в пул (очередь обработки)

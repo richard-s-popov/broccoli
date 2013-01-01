@@ -42,16 +42,11 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.Account
                 {
                     _membershipService.LoginUser(null, login, pass, rememberMe);
 
-                    if (!String.IsNullOrEmpty(returnUrl))
-                    {
-                        return Redirect(returnUrl);
-                    }
-
-                    return Redirect(HttpContext.Request.UrlReferrer.AbsolutePath);
+                    return Redirect(!String.IsNullOrEmpty(returnUrl) ? returnUrl : HttpContext.Request.UrlReferrer.AbsolutePath);
                 }
             }
 
-            return Json(new { authorize = false }, JsonRequestBehavior.AllowGet);
+            return RedirectToAction("LogOn");
         }
 
         public ActionResult Logout()
@@ -77,6 +72,27 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.Account
                         BirthDay = model.BirthDay,
                         Password = model.Password
                     };
+
+                if (ControllerContext.HttpContext.Request.Cookies.AllKeys.Contains("owner"))
+                {
+                    var cookie = Request.Cookies["owner"];
+
+                    if (cookie != null)
+                    {
+                        user.OwnerId = Convert.ToInt64(cookie.Value);
+
+                        var owner = _usersService.GetById((long)user.OwnerId);
+                        if (owner.RegisteredGuests == null)
+                        {
+                            owner.RegisteredGuests = 1;
+                        }
+                        else
+                        {
+                            owner.RegisteredGuests++;
+                        }
+                        _usersService.SaveChanges();
+                    }
+                }
 
                 _usersService.Insert(user);
 

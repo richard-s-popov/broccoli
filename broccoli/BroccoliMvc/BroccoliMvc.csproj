@@ -131,6 +131,7 @@
     <Compile Include="Models\Account\UserProfilePoco.cs" />
     <Compile Include="Models\PersonalCabinet\AccountListPoco.cs" />
     <Compile Include="Models\PersonalCabinet\AccountRowModel.cs" />
+    <Compile Include="Models\PersonalCabinet\InviteListModelPoco.cs" />
     <Compile Include="Models\PersonalCabinet\TradingSystemListPoco.cs" />
     <Compile Include="Models\PersonalCabinet\TradingSystemOrderPoco.cs" />
     <Compile Include="Models\PersonalCabinet\TradingSystemRowModel.cs" />
@@ -144,10 +145,12 @@
     <Content Include="Content\img\button_ok_7852.png" />
     <Content Include="Content\img\cross_2615.png" />
     <Content Include="Content\img\footer.png" />
+    <Content Include="Content\img\forexinn_logo.jpg" />
     <Content Include="Content\img\generic-button-green-bg.png" />
     <Content Include="Content\img\logo-flag.png" />
     <Content Include="Content\img\slider-background.png" />
     <Content Include="Content\img\tiangle-top.png" />
+    <Content Include="Content\img\vk_logo.png" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
@@ -256,6 +259,7 @@
     <Content Include="Views\PersonalCabinet\OrderStatus.cshtml" />
     <Content Include="Views\PersonalCabinet\TradingSystemOrder.cshtml" />
     <Content Include="Views\PersonalCabinet\AlternativeWay.cshtml" />
+    <Content Include="Views\Shared\Menu.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

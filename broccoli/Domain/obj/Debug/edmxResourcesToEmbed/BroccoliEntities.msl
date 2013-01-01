@@ -4,6 +4,9 @@
     <EntitySetMapping Name="Users">
       <EntityTypeMapping TypeName="BroccoliModel.Users">
         <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="RegisteredGuests" ColumnName="RegisteredGuests" />
+          <ScalarProperty Name="GuestsNumber" ColumnName="GuestsNumber" />
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="Nickname" ColumnName="Nickname" />
@@ -21,6 +24,7 @@
     <EntitySetMapping Name="Accounts">
       <EntityTypeMapping TypeName="BroccoliModel.Accounts">
         <MappingFragment StoreEntitySet="Accounts">
+          <ScalarProperty Name="IsNew" ColumnName="IsNew" />
           <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
           <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
           <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
@@ -72,6 +76,7 @@
     <EntitySetMapping Name="TradingSystems">
       <EntityTypeMapping TypeName="BroccoliModel.TradingSystems">
         <MappingFragment StoreEntitySet="TradingSystems">
+          <ScalarProperty Name="IsNew" ColumnName="IsNew" />
           <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
           <ScalarProperty Name="ModificationDate" ColumnName="ModificationDate" />
           <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />

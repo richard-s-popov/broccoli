@@ -15,6 +15,13 @@ namespace BroccoliTrade.Logics.Interfaces.Membership
         void Insert(Users entity);
 
         /// <summary>
+        /// Возвращает пользователя по id
+        /// </summary>
+        /// <param name="userId"></param>
+        /// <returns></returns>
+        Users GetById(long userId);
+
+        /// <summary>
         /// Get entity user by email
         /// </summary>
         /// <param name="email"></param>
@@ -41,5 +48,10 @@ namespace BroccoliTrade.Logics.Interfaces.Membership
         /// <param name="phone"></param>
         /// <returns></returns>
         bool PhoneIsExist(string phone);
+
+        /// <summary>
+        /// Save
+        /// </summary>
+        void SaveChanges();
     }
 }

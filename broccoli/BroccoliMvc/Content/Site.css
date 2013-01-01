@@ -68,6 +68,25 @@ table {
 	border-spacing: 0;
 }
 label[disabled="true"]{opacity:0.4;}
+input[type="text"], input[type="password"], textarea, select {
+    border: inset 0;
+    border: 1px solid darkGray;
+    border-radius: 3px; 
+    -moz-border-radius: 3px; /* Firefox */ 
+    -webkit-border-radius: 3px; /* Safari, Chrome */ 
+    -khtml-border-radius: 3px; /* KHTML */ 
+    behavior: url(ie-css3.htc);
+    outline: none;
+}
+input[type="text"], input[type="password"] {
+    height: 22px;
+}
+input[type="text"]:hover, input[type="password"]:hover, textarea:hover {
+    border: 1px solid #74ca35;
+}
+input[type="text"]:focus, input[type="password"]:hover, textarea:focus {
+    border: 1px solid #74ca35;
+}
 /*end reset css*/
 
 h3 {
@@ -91,6 +110,21 @@ body a:link {color: #272727; cursor: pointer; text-decoration:underline;font-siz
 body a:visited{color: #272727;font-size:14px;text-decoration:underline;}
 body a:hover{color: black;text-decoration:none;font-size:14px;}
 body a:active {color: black;text-decoration:none;font-size:14px;}
+
+hr {
+    margin: 0 -2em 2.5em -2em;
+    clear: both;
+    background: #bcbcbc; /* Old browsers */
+    background: -moz-linear-gradient(left, #ffffff 0%, #bcbcbc 10%, #bcbcbc 90%, #ffffff 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#ffffff), color-stop(10%,#bcbcbc), color-stop(90%,#bcbcbc), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left, #ffffff 0%,#bcbcbc 10%,#bcbcbc 90%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left, #ffffff 0%,#bcbcbc 10%,#bcbcbc 90%,#ffffff 100%); /* Opera11.10+ */
+    background: -ms-linear-gradient(left, #ffffff 0%,#bcbcbc 10%,#bcbcbc 90%,#ffffff 100%); /* IE10+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bcbcbc', endColorstr='#bcbcbc',GradientType=1 ); /* IE6-9 */
+    background: linear-gradient(left, #ffffff 0%,#bcbcbc 10%,#bcbcbc 90%,#ffffff 100%); /* W3C */
+    border: none;
+    height: 1px;
+}
 
 .opacity {
     position: absolute;
@@ -358,20 +392,6 @@ body a:active {color: black;text-decoration:none;font-size:14px;}
 
 .register-form input {
     width: 200px;
-    height: 20px;
-}
-
-.register-form input:hover {
-    border: 1px solid #74ca35;
-    width: 202px;
-    height: 22px;
-}
-
-.register-form input:focus {
-    border: 1px solid #74ca35;
-    width: 202px;
-    height: 22px;
-    outline: none;
 }
 
 .register-form td {
@@ -383,7 +403,7 @@ body a:active {color: black;text-decoration:none;font-size:14px;}
 
 .bad
 {
-    background-color: #f9f9f9;
+    background-color: #FBF8E9;
 }
 
 .register-form .agreeement {
@@ -513,6 +533,12 @@ body a:active {color: black;text-decoration:none;font-size:14px;}
     cursor: pointer;
 }
 
+.cabinet-menu .notifications-count {
+    color: #98cb66;
+    font-family: Segoe UI;
+    display: inline;
+}
+
 .cabinet-main {
     width: 80%;
     padding-top: 25px;
@@ -536,9 +562,7 @@ body a:active {color: black;text-decoration:none;font-size:14px;}
 }
 
 .cabinet-main #activateForm table input {
-    height: 20px;
     width: 210px;
-    outline: none;
 }
 
 .cabinet-main #activateForm table select {
@@ -548,19 +572,6 @@ body a:active {color: black;text-decoration:none;font-size:14px;}
     outline: none;
 }
 
-.cabinet-main #activateForm table input:hover {
-    border: 1px solid #74ca35;
-    width: 212px;
-    height: 22px;
-}
-
-.cabinet-main #activateForm table input:focus {
-    border: 1px solid #74ca35;
-    outline: none;
-    width: 212px;
-    height: 22px;
-}
-
 .cabinet-main #accountsTable {
     *border-collapse: collapse; /* Для IE7 и старше */
     border-spacing: 0;
@@ -568,7 +579,6 @@ body a:active {color: black;text-decoration:none;font-size:14px;}
 }
 
 .grid {
-    border: solid #ccc 1px;
     -moz-border-radius: 6px;
     -webkit-border-radius: 6px;
     border-radius: 6px;
@@ -594,18 +604,18 @@ body a:active {color: black;text-decoration:none;font-size:14px;}
 }
 
 .grid th {
-    background-color: #74ca35;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#ebf3fc), to(#74ca35));
-    background-image: -webkit-linear-gradient(top, #ebf3fc, #74ca35);
-    background-image:    -moz-linear-gradient(top, #ebf3fc, #74ca35);
-    background-image:     -ms-linear-gradient(top, #ebf3fc, #74ca35);
-    background-image:      -o-linear-gradient(top, #ebf3fc, #74ca35);
-    background-image:         linear-gradient(top, #ebf3fc, #74ca35);
+    background-color: #2c6223;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#a2d26b), to(#2c6223));
+    background-image: -webkit-linear-gradient(top, #a2d26b, #2c6223);
+    background-image:    -moz-linear-gradient(top, #a2d26b, #2c6223);
+    background-image:     -ms-linear-gradient(top, #a2d26b, #2c6223);
+    background-image:      -o-linear-gradient(top, #a2d26b, #2c6223);
+    background-image:         linear-gradient(top, #a2d26b, #2c6223);
     -webkit-box-shadow: 0 1px 0 rgba(255,255,255,.8) inset; 
     -moz-box-shadow:0 1px 0 rgba(255,255,255,.8) inset;  
     box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;        
     border-top: none;
-    text-shadow: 0 1px 0 rgba(255,255,255,.5); 
+    color: white;
 }
 
 .grid td:first-child, .grid th:first-child {
@@ -635,12 +645,32 @@ body a:active {color: black;text-decoration:none;font-size:14px;}
     border-radius: 0 0 6px 0;
 }
 
+.grid .broker {
+    padding-left: 40px;
+}
+
+/* Custom styles */
+.grid .broker .logo-container {
+    position: relative;
+    width: 30px;
+}
+
+.grid .broker .logo-container .broker-logo {
+    position: absolute;
+    top: -7px;
+    left: -35px;
+}
+
+.grid .status {
+    
+}
+
 .cabinet-main .error-message {
     color: #900;
 }
 
 .invite-list {
-    width: 100%;
+    width: 630px;
     margin: 10px 0 10px 0;
 }
 
@@ -655,63 +685,53 @@ body a:active {color: black;text-decoration:none;font-size:14px;}
 }
 
 .invite-list td:first-child {
-    text-align: center;   
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 10px;  
 }
 
 .invite-list .inputs {
     padding-left: 10px;
-    padding-right: 18px;
+    padding-right: 10px;
 }
 
-.invite-list .inputs .for-img {
+.invite-list .for-img {
     position: relative;
-    width: 25px;
-    height: 25px;
+    height: 18px;
     float: left;
 }
 
 .invite-list .deleteAssignedUserBtn {
     position: absolute;
-    top: 10px;
-    right: 20px;
+    top: 2px;
+    right: 3px;
     cursor: pointer;
 }
 
 .invite-list .clearAssignedUserBtn {
     position: absolute;
-    top: 10px;
-    right: 20px;
+    top: 2px;
+    right: 3px;
     cursor: pointer;
 }
 
 .invite-list input {
     width: 240px;
-    height: 20px;
-}
-
-.invite-list input:hover {
-    border: 1px solid #74ca35;
-    width: 242px;
-    height: 22px;
-}
-
-.invite-list input:focus {
-    border: 1px solid #74ca35;
-    width: 242px;
-    height: 22px;
-    outline: none;
 }
 
 .container {
     overflow: hidden;
-    height: 500px;
+    min-height: 500px;
+    -webkit-min-height: 500px;
     position: relative;
+    width: 630px;
 }
 
 .alt-way-container {
+    width: 630px;
     margin: 0;
     position: absolute;
-    top: -300px;
+    top: -550px;
     -webkit-transition: all 500ms cubic-bezier(0.680, 0, 0.265, 1); /* older webkit */
     -webkit-transition: all 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550); 
     -moz-transition: all 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550); 
@@ -720,13 +740,44 @@ body a:active {color: black;text-decoration:none;font-size:14px;}
     transition: all 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550); /* easeInOutBack */
 }
 
-.alt-way-container  #addUser {
+.alt-way-container  #sendInvites {
     float: right;
-    margin-right: 70px;
+    margin-top: 20px;
+}
+
+.alt-way-container .subject {
+    width: 628px;
+    margin-bottom: 10px;
+}
+
+.alt-way-container textarea {
+    width: 624px;
+    resize: none;
+}
+
+.alt-way-container #addUser {
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.alt-way-container #addUser:hover {
+    color: #98cb66;
+}
+
+.social-networks {
+    width: 100%;
+    display: inline-block;
+}
+
+.social-networks .buttons {
 }
 
 #showAltWayContainer {
     cursor: pointer;
+}
+
+#showAltWayContainer:hover {
+    color: #98cb66;
 }
 
 /* FF чтоб его! */
@@ -776,6 +827,11 @@ body a:active {color: black;text-decoration:none;font-size:14px;}
         font-weight: lighter;
         color: #2E2E2E;
         font-size: 14px;    
+    }
+
+    .alt-way-container textarea {
+        width: 628px;
+        resize: none;
     }
 }
 
