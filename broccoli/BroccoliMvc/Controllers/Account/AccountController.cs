@@ -34,13 +34,18 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.Account
             return this.View();
         }
 
-        public ActionResult Login(string login, string pass, bool rememberMe, string returnUrl)
+        public ActionResult Login(string login, string pass, bool rememberMe, bool? isLoginPage, string returnUrl)
         {
             if (!string.IsNullOrEmpty(login) && !string.IsNullOrEmpty(pass))
             {
                 if (_membershipService.AuthorizeUser(login, pass))
                 {
                     _membershipService.LoginUser(null, login, pass, rememberMe);
+
+                    if (isLoginPage != null && isLoginPage.Value)
+                    {
+                        return RedirectToAction("Index", "PersonalCabinet");
+                    }
 
                     return Redirect(!String.IsNullOrEmpty(returnUrl) ? returnUrl : HttpContext.Request.UrlReferrer.AbsolutePath);
                 }

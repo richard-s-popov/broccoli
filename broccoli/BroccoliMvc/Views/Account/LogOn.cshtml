@@ -1,5 +1,5 @@
 ﻿@{
-    ViewBag.Title = "LogOn";
+    ViewBag.Title = "Вход";
     Layout = "~/Views/Shared/_LayoutMin.cshtml";
 }
 
@@ -15,31 +15,22 @@
     </div>
 </div>
 <div class="center-content">
-    <table class="login-page">
-        <tr>
-            <td class="first">
-                @using (Html.BeginForm("Login", "Account", FormMethod.Post, new { @id = "loginForm" }))
-                {
-                    <div>
-                        @Html.Label("Email")
-                    </div>
-                        @Html.TextBox("login")
-                    <div>
-                        @Html.Label("Пароль")
-                    </div>
-                        @Html.TextBox("password")
-                    <div>
-                        @Html.Label("Запомнить меня")
-                    </div>
-                        @Html.CheckBox("rememberMe")
-                    <button id="submit" class="green-button">Вход</button>
-                }
-            </td>
-            <td class="second">
-                
-            </td>
-        </tr>
-    </table>
+    <div>
+        @using (Html.BeginForm("Login", "Account", FormMethod.Post, new { @id = "loginForm", @class = "box login" }))
+            {
+                <fieldset class="boxBody">
+	                <label>Логин</label>
+	                <input id="login" name="login" type="text" placeholder="Ваш email">
+	                <label><a href="#" class="rLink">Забыли пароль?</a>Пароль</label>
+	                <input id="pass" name="pass" type="password">
+                    @Html.Hidden("isLoginPage", true)
+	            </fieldset>
+	            <footer>
+	                <label>@Html.CheckBox("rememberMe", false)Запомнить меня</label>
+	                <button class="green-button btnLogin">Вход</button>
+	            </footer>
+            }
+    </div>
 </div>
 
 <script type="text/javascript">
