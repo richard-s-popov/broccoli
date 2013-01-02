@@ -13,7 +13,7 @@
 	<script src="@Url.Content("~/Scripts/fancybox/jquery.fancybox-buttons.js")"></script>
 	<script src="@Url.Content("~/Scripts/fancybox/jquery.fancybox-thumbs.js")"></script>
     <script src="@Url.Content("~/Scripts/fancybox/jquery.easing-1.3.pack.js")"></script>
-	<script src="@Url.Content("~/Scripts/fancybox/m")"></script>
+	<script src="@Url.Content("~/Scripts/fancybox/jquery.mousewheel-3.0.6.pack.js")"></script>
 
     @RenderSection("head", required:false)
 </head>
@@ -21,28 +21,14 @@
         <div class="header">
             <div class="green-line">
                 <div class="logo-container">
-                    <img class="logo-flag" src="@Url.Content("~/Content/img/logo-flag.png")" />
-                    <font class="logo-text">Broccoli<br />Trade</font>
-                </div>
-            </div>
-            <div class="gray-line">
-                <div class="menu">
-                    @RenderSection("mainMenu", required:false)
+                    <img src="@Url.Content("~/Content/img/temp_logo.png")"/>
+                    <a href="@Url.Action("Index", "Home")" class="logo-text">Broccoli<br />Trade</a>
                 </div>
             </div>
             <div class="light-line">
                 <div class="secondary-menu">
                     @Html.Partial("Menu")
                     @RenderSection("navigationMenu", required:false)
-                </div>
-            </div>
-            <div class="white-line">
-                <div class="steps">
-                    <div style="float: right;">
-                        <span class="step first">1. Зарегистрируйтесь</span>
-                        <span class="step">2. Откройте свой счет</span>
-                        <span class="step">3. Получите свой советник</span>
-                    </div>
                 </div>
             </div>
         </div>
@@ -53,19 +39,7 @@
         </div>
         <div class="opacity"></div>
         <script type="text/javascript">
-        	$(document).ready(function() {
-				$(".various").fancybox({
-					maxWidth	: 800,
-					maxHeight	: 600,
-					fitToView	: false,
-					width		: '70%',
-					height		: '70%',
-					autoSize	: false,
-					closeClick	: false,
-					openEffect	: 'elastic',
-					closeEffect	: 'none'
-				});
-			});
+        	
 		</script>
     </body>
 </html>

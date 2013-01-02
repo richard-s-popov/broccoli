@@ -6,31 +6,65 @@
 
 @section head {
     <script type="text/javascript" src="@Url.Content("~/Scripts/Main/index.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/slider/coda-slider.1.1.1.pack.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/slider/jquery-easing-compatibility.1.2.pack.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/slider/jquery-easing.1.2.pack.js")"></script>
 }
 
 <div class="banner">
     <div class="slider">
-        <img class="broccoli" src="@Url.Content("~/Content/img/broccoli.png")"/>
-        <div class="text">
-            <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
-            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <div class="slide-1">
+            <img class="broccoli" src="@Url.Content("~/Content/img/broccoli.png")"/>
+            <div class="text">
+                <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
         </div>
     </div>
 </div>
 <div class="main">
     <div class="center-content">
-        <div class="instructions">
-            <h3>Схема работы. Видео инструкция:</h3>
-            <div class="gal">
-                <a class="various fancybox.iframe" title="The Falltape" href="http://www.youtube.com/v/ZeStnz5c2GI?fs=1&amp;autoplay=1"><img src="@Url.Content("~/Content/img/img2s.jpg")"></a>
-                <a class="various fancybox.iframe" title="The Falltape" href="http://www.youtube.com/v/ZeStnz5c2GI?fs=1&amp;autoplay=1"><img src="@Url.Content("~/Content/img/img2s.jpg")"></a>
-                <a class="various fancybox.iframe" title="The Falltape" href="http://www.youtube.com/v/ZeStnz5c2GI?fs=1&amp;autoplay=1"><img src="@Url.Content("~/Content/img/img2s.jpg")"></a>
-                <a class="various fancybox.iframe" title="The Falltape" href="http://www.youtube.com/v/ZeStnz5c2GI?fs=1&amp;autoplay=1"><img src="@Url.Content("~/Content/img/img2s.jpg")"></a>
-                <a class="various fancybox.iframe" title="The Falltape" href="http://www.youtube.com/v/ZeStnz5c2GI?fs=1&amp;autoplay=1"><img src="@Url.Content("~/Content/img/img2s.jpg")"></a>
-                <a class="various fancybox.iframe" title="The Falltape" href="http://www.youtube.com/v/ZeStnz5c2GI?fs=1&amp;autoplay=1"><img src="@Url.Content("~/Content/img/img2s.jpg")"></a>
-                <a class="various fancybox.iframe" title="The Falltape" href="http://www.youtube.com/v/ZeStnz5c2GI?fs=1&amp;autoplay=1"><img src="@Url.Content("~/Content/img/img2s.jpg")"></a>
-                <a class="various fancybox.iframe" title="The Falltape" href="http://www.youtube.com/v/ZeStnz5c2GI?fs=1&amp;autoplay=1"><img src="@Url.Content("~/Content/img/img2s.jpg")"></a>
-                <a class="various fancybox.iframe" title="The Falltape" href="http://www.youtube.com/v/ZeStnz5c2GI?fs=1&amp;autoplay=1"><img src="@Url.Content("~/Content/img/img2s.jpg")"></a>
+        <div class="steps">
+            <span id="tab1" class="step">1. Зарегистрируйтесь</span>
+            <span id="tab2" class="step">2. Откройте свой счет</span>
+            <span id="tab3" class="step">3. Получите свой советник</span>
+        </div>
+        <div class="slider-wrap">
+            <div id="slider1" class="csw">
+                <div class="panelContainer">
+                    <div class="panel" title="Первая панель">
+                        <div class="instructions">
+                            <h3>Схема работы. Видео инструкция:</h3>
+                            <div class="gal">
+                                <a class="various fancybox.iframe" title="The Falltape" href="http://www.youtube.com/v/ZeStnz5c2GI?fs=1&amp;autoplay=1"><img src="@Url.Content("~/Content/img/img2s.jpg")"></a>
+                                <a class="various fancybox.iframe" title="The Falltape" href="http://www.youtube.com/v/ZeStnz5c2GI?fs=1&amp;autoplay=1"><img src="@Url.Content("~/Content/img/img2s.jpg")"></a>
+                                <a class="various fancybox.iframe" title="The Falltape" href="http://www.youtube.com/v/ZeStnz5c2GI?fs=1&amp;autoplay=1"><img src="@Url.Content("~/Content/img/img2s.jpg")"></a>
+                                <a class="various fancybox.iframe" title="The Falltape" href="http://www.youtube.com/v/ZeStnz5c2GI?fs=1&amp;autoplay=1"><img src="@Url.Content("~/Content/img/img2s.jpg")"></a>
+                                <a class="various fancybox.iframe" title="The Falltape" href="http://www.youtube.com/v/ZeStnz5c2GI?fs=1&amp;autoplay=1"><img src="@Url.Content("~/Content/img/img2s.jpg")"></a>
+                                <a class="various fancybox.iframe" title="The Falltape" href="http://www.youtube.com/v/ZeStnz5c2GI?fs=1&amp;autoplay=1"><img src="@Url.Content("~/Content/img/img2s.jpg")"></a>
+                                <a class="various fancybox.iframe" title="The Falltape" href="http://www.youtube.com/v/ZeStnz5c2GI?fs=1&amp;autoplay=1"><img src="@Url.Content("~/Content/img/img2s.jpg")"></a>
+                                <a class="various fancybox.iframe" title="The Falltape" href="http://www.youtube.com/v/ZeStnz5c2GI?fs=1&amp;autoplay=1"><img src="@Url.Content("~/Content/img/img2s.jpg")"></a>
+                                <a class="various fancybox.iframe" title="The Falltape" href="http://www.youtube.com/v/ZeStnz5c2GI?fs=1&amp;autoplay=1"><img src="@Url.Content("~/Content/img/img2s.jpg")"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel" title="Вторая панель">
+                        <div class="instructions">
+                            <h3>Схема работы. Видео инструкция:</h3>
+                            <div class="gal">
+                                <a class="various fancybox.iframe" title="The Falltape" href="http://www.youtube.com/v/ZeStnz5c2GI?fs=1&amp;autoplay=1"><img src="@Url.Content("~/Content/img/img2s.jpg")"></a>
+                                <a class="various fancybox.iframe" title="The Falltape" href="http://www.youtube.com/v/ZeStnz5c2GI?fs=1&amp;autoplay=1"><img src="@Url.Content("~/Content/img/img2s.jpg")"></a>
+                                <a class="various fancybox.iframe" title="The Falltape" href="http://www.youtube.com/v/ZeStnz5c2GI?fs=1&amp;autoplay=1"><img src="@Url.Content("~/Content/img/img2s.jpg")"></a>
+                                <a class="various fancybox.iframe" title="The Falltape" href="http://www.youtube.com/v/ZeStnz5c2GI?fs=1&amp;autoplay=1"><img src="@Url.Content("~/Content/img/img2s.jpg")"></a>
+                                <a class="various fancybox.iframe" title="The Falltape" href="http://www.youtube.com/v/ZeStnz5c2GI?fs=1&amp;autoplay=1"><img src="@Url.Content("~/Content/img/img2s.jpg")"></a>
+                                <a class="various fancybox.iframe" title="The Falltape" href="http://www.youtube.com/v/ZeStnz5c2GI?fs=1&amp;autoplay=1"><img src="@Url.Content("~/Content/img/img2s.jpg")"></a>
+                                <a class="various fancybox.iframe" title="The Falltape" href="http://www.youtube.com/v/ZeStnz5c2GI?fs=1&amp;autoplay=1"><img src="@Url.Content("~/Content/img/img2s.jpg")"></a>
+                                <a class="various fancybox.iframe" title="The Falltape" href="http://www.youtube.com/v/ZeStnz5c2GI?fs=1&amp;autoplay=1"><img src="@Url.Content("~/Content/img/img2s.jpg")"></a>
+                                <a class="various fancybox.iframe" title="The Falltape" href="http://www.youtube.com/v/ZeStnz5c2GI?fs=1&amp;autoplay=1"><img src="@Url.Content("~/Content/img/img2s.jpg")"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

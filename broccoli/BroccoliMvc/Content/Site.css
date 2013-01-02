@@ -140,12 +140,12 @@ hr {
 .header {
     margin-left: auto;
     margin-right: auto;
-    height: 241px;
+    height: 120px;
     position: relative;
 }
 
 .small {
-    height: 132px;
+    height: 120px;
 }
 
 .header .green-line {
@@ -157,19 +157,27 @@ hr {
     width: 917px;
     margin-left: auto;
     margin-right: auto;
-    cursor: pointer;
+    position: relative;
+}
+
+.header .green-line .logo-container img {
+    position: absolute;
+    top: 25px;
+    left: -25px;
 }
 
 .header .green-line .logo-container .logo-text {
     position: absolute;
-    margin-left: 30px;
-    margin-top: 50px;
+    margin-left: 72px;
+    margin-top: 32px;
     z-index: 2;
     font-family: 'GeoSlb712CMdBTBold'!important;
-    color: white;
+    color: #363636;
     font-size: 28px;
     text-align: center;
     z-index: 101;
+    text-align: left;
+    text-decoration: none;
 }
 
 .header .gray-line {
@@ -183,8 +191,8 @@ hr {
 
 .header .light-line {
     height: 43px;
-    background-color: #F3F3F3;
-    padding-top: 19px;
+    background-color: white;
+    padding-top: 71px;
 }
 
 .header .light-line .secondary-menu {
@@ -199,7 +207,6 @@ hr {
 
 .header .light-line .secondary-menu .menu .item {
     padding-left: 50px;
-    font-family: Segoe UI;
     color: #2E2E2E;
     font-size: 18px;
     cursor: pointer;
@@ -223,27 +230,37 @@ hr {
     background-color: #FFFFFF;
 }
 
-.header .white-line .steps {
-    width: 917px;
+.main .center-content .steps {
+    width: 812px;
+    height: 50px;
     margin-right: auto;
     margin-left: auto;
-    padding-top: 45px;
+    padding-top: 30px;
 }
 
-.header .white-line .steps .step {
-    font-family: Segoe UI Light;
-    color: #2E2E2E;
-    font-size: 20px;
-    margin-left: 30px;
+.main .center-content .steps .step {
+    display: block;
+    float: left;
+    padding: 15px 25px;
+    margin-right: 10px;
+    margin-left: 10px;
+    text-align: center;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    background-color: #F8F8F8;
+    width: 200px;
     cursor: pointer;
 }
 
-.header .white-line .steps .step:hover {
-    color: #98cb66;
+.main .center-content .steps .step:hover {
+    text-decoration: none;
+    background-color: #CCC !important;
+    color: white;
 }
 
-.header .white-line .steps .first {
-    margin-left: 200px;
+.main .center-content .steps .active {
+    color: #98cb66;
 }
 
 .header .logo-flag {
@@ -279,8 +296,31 @@ hr {
 
 .content .banner .slider {
     width: 917px;
+    height: 371px;
+    overflow: hidden;
+    position: relative;
     margin-left: auto;
     margin-right: auto;
+}
+
+.content .banner .slider .slide-1 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.content .banner .slider .slide-2 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 1000px;
+}
+
+.content .banner .slider .slide-3 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 2000px;
 }
 
 .content .banner .slider .broccoli {
@@ -935,6 +975,7 @@ hr {
 {
     text-shadow:rgba(0,0,0,0.3) 0 -1px 0px; 
 }
+
 footer#main{
 	position:fixed;
 	left:0;
@@ -943,6 +984,120 @@ footer#main{
 	font:normal 11px/16px Arial, Helvetica, sans-serif;
 	width:100%;
 }
+
+/* Слайдер */
+.stripViewer .panelContainer .panel ul {
+	text-align: left;
+	margin: 0 15px 0 30px;
+}
+		
+.slider-wrap { 
+	margin: 20px 0;
+	position: relative;
+	width: 100%;
+}
+
+/* These 2 lines specify style applied while slider is loading */
+.csw {width: 100%; height: 460px; background: #fff; overflow: scroll}
+.csw .loading {margin: 200px 0 300px 0; text-align: center}
+
+.stripViewer { 
+	position: relative;
+	overflow: hidden;
+	margin: auto;
+	width: 917px; 
+	height: 700px;
+	clear: both;
+	background: #fff;
+}
+		
+.stripViewer .panelContainer {
+	position: relative;
+	left: 0; top: 0;
+	width: 100%;
+	list-style-type: none;
+}
+		
+.stripViewer .panelContainer .panel { 
+	float:left;
+	height: 100%;
+	position: relative;
+	width: 917px; 
+}
+		
+.stripViewer .panelContainer .panel .wrapper { 
+	padding: 10px;
+}
+		
+.stripNav { 
+	margin: auto;
+    display: none;
+}
+		
+.stripNav ul { 
+	list-style: none;
+}
+		
+.stripNav ul li {
+	float: left;
+	margin-right: 2px; 
+}
+		
+.stripNav a { 
+	font-size: 10px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 32px;
+	background: #c6e3ff;
+	color: #fff;
+	text-decoration: none;
+	display: block;
+	padding: 0 15px;
+}
+		
+.stripNav li.tab1 a { background: #60f }
+.stripNav li.tab2 a { background: #60c }
+.stripNav li.tab3 a { background: #63f }
+.stripNav li.tab4 a { background: #63c }
+.stripNav li.tab5 a { background: #00e }
+		
+.stripNav li a:hover {
+	background: #333;
+}
+		
+.stripNav li a.current {
+	background: #000;
+	color: #fff;
+}
+		
+.stripNavL, .stripNavR { 
+	position: absolute;
+	top: 230px;
+	text-indent: -9000em;
+}
+		
+.stripNavL a, .stripNavR a {
+	display: block;
+	height: 40px;
+	width: 40px;
+}
+		
+.stripNavL {
+	left: 0;
+}
+		
+.stripNavR {
+	right: 0;
+}
+		
+.stripNavL {
+	background: url("images/arrow-left.gif") no-repeat center;
+}
+		
+.stripNavR {
+	background: url("images/arrow-right.gif") no-repeat center;
+}
+
 
 /* FF чтоб его! */
 @-moz-document url-prefix()

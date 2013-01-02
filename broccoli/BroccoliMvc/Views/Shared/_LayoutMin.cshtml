@@ -10,16 +10,9 @@
     <body>
         <div class="header small">
             <div class="green-line">
-                <a href="@Url.Action("Index", "Home")">
-                    <div class="logo-container">
-                        <img class="logo-flag" src="@Url.Content("~/Content/img/logo-flag.png")" />
-                        <font class="logo-text">Broccoli<br />Trade</font>
-                    </div>
-                </a>
-            </div>
-            <div class="gray-line">
-                <div class="menu">
-                    @RenderSection("mainMenu", required:false)
+                <div class="logo-container">
+                    <img src="@Url.Content("~/Content/img/temp_logo.png")"/>
+                    <a href="@Url.Action("Index", "Home")" class="logo-text">Broccoli<br />Trade</a>
                 </div>
             </div>
             <div class="light-line">
