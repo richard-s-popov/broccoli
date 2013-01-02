@@ -137,6 +137,31 @@ hr {
     z-index: 150;
 }
 
+#top-link{
+	cursor:pointer;
+	display:none;
+	position:fixed;
+	left:0px;
+	top:0px;
+	padding:0;
+    background-color: rgba(51, 51, 51, 0.1);
+    width: 100px;
+}
+
+#top-link:hover {
+    background-color: rgba(51, 51, 51, 0.2);
+}
+
+#top-link a{
+	display:block;
+    color: black;
+    margin-top: 20px;
+    margin-left: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+}
+
 .header {
     margin-left: auto;
     margin-right: auto;
@@ -163,12 +188,12 @@ hr {
 .header .green-line .logo-container img {
     position: absolute;
     top: 25px;
-    left: -25px;
+    left: -5px;
 }
 
 .header .green-line .logo-container .logo-text {
     position: absolute;
-    margin-left: 72px;
+    margin-left: 92px;
     margin-top: 32px;
     z-index: 2;
     font-family: 'GeoSlb712CMdBTBold'!important;
