@@ -148,6 +148,15 @@ hr {
     width: 100px;
 }
 
+#top-link-full {
+    cursor:pointer;
+	display:none;
+	position:fixed;
+	left:0px;
+	top:0px;
+	padding:0;
+}
+
 #top-link:hover {
     background-color: rgba(51, 51, 51, 0.2);
 }
