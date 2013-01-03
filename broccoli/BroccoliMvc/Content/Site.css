@@ -353,6 +353,12 @@ hr {
     min-height: 600px;
 }
 
+#regLink {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+}
+
 .content .banner {
     height: 373px;
     background: url('img/slider-background.png') no-repeat center top;
@@ -450,6 +456,111 @@ hr {
 .content .main .instructions {
     margin: 10px;
     height: 600px;
+}
+
+.hr-shadow {
+    clear: both;
+    padding: 0 0 2px 0;
+    background: url(img/hr-shadow.jpg) 0 0 no-repeat;
+}
+
+.content .main .open-account-instructions {
+    margin-top: 20px;
+}
+
+.content .main .open-account-instructions .description {
+    width: 50%;
+    padding: 30px 20px;
+    text-align: justify;
+}
+
+.content .main .open-account-instructions .description h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.content .main .open-account-instructions .broker {
+    width: 50%;
+    padding-top: 30px;
+}
+
+.content .main .open-account-instructions .broker img {
+    position: absolute;
+    margin-top: 70px;
+    margin-left: 100px;
+}
+
+.content .main .open-account-instructions .broker div span {
+    position: absolute;
+    margin-top: 165px;
+    margin-left: 120px;
+}
+
+.button a {
+    text-decoration: none !important;
+}
+
+.button input { /* Standard black button */
+	font-size: 14px;
+	/*font-family: 'lucida sans',arial,helvetica,sans-serif;*/
+	line-height: 18px;
+	color: #fff !important;
+		
+	text-decoration: none;
+		
+	padding: 5px 14px 6px 13px;
+	display: block;
+	width: auto;
+	position: relative;
+	z-index: 2;
+   
+	border: none;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	cursor: pointer;
+	
+	background: #313131; /* Old browsers */
+	background: -moz-linear-gradient(top, #313131 0%, #222222 100%); /* FF3.6+ */
+	background: -webkit-linear-gradient(top, #313131 0%,#222222 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #313131 0%,#222222 100%); /* Opera11.10+ */
+	background: -ms-linear-gradient(top, #313131 0%,#222222 100%); /* IE10+ */
+	background: linear-gradient(top, #313131 0%,#222222 100%); /* W3C */
+
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all  0.3s ease;
+}
+
+.button a:hover,
+.button input:hover,
+.button button:hover,
+.button a:focus,
+.button input:focus,
+.button button:focus
+{
+	background: #464646; /* Old browsers */
+	background: -moz-linear-gradient(top, #464646 0%, #393939 100%); /* FF3.6+ */
+	background: -webkit-linear-gradient(top, #464646 0%,#393939 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #464646 0%,#393939 100%); /* Opera11.10+ */
+	background: -ms-linear-gradient(top, #464646 0%,#393939 100%); /* IE10+ */
+	background: linear-gradient(top, #464646 0%,#393939 100%); /* W3C */
+}
+
+.button .large {
+    width: 230px;
+    margin-left: 4px;
+    padding: 12px;
+    font: 400 18px 'Lucida Sans', 'Lucida Grande', Arial, Helvetica, sans-serif;
+}
+
+.button a:focus, 
+.button input:focus, 
+.button a:active, 
+.button input:active {
+     -webkit-box-shadow:0 0 5px 2px #aaa; 
+     -moz-box-shadow:0 0 5px 2px #aaa; 
+     box-shadow:0 0 5px 2px #aaa;
 }
 
 .footer {
