@@ -18,7 +18,7 @@ time, mark, audio, video {
 	font-size: 80%;
 	font: inherit;
 	vertical-align: baseline;
-	font-family: Segoe UI Light;
+	font-family: Segoe UI Light, Lucida Sans, Tahoma, Arial, Sans-serif;
 }
 @-moz-document url-prefix()
 {
@@ -41,7 +41,7 @@ time, mark, audio, video {
 	    font-size: 80%;
 	    font: inherit;
 	    vertical-align: baseline;
-	    font-family: Segoe UI;
+	    font-family: Segoe UI, Lucida Sans, Tahoma, Arial, Sans-serif;
         font-weight: lighter;
     }
 }
@@ -210,14 +210,43 @@ hr {
     background-color: #333333;
 }
 
-.header .gray-line .menu {
-    
+.header .white-line .main-menu {
+    width: 917px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header .white-line .main-menu .menu {
+    float: right;
+}
+
+.header .white-line .main-menu .menu div {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.header .white-line .main-menu .menu div a:hover {
+    color: #98cb66;
+}
+
+.header .white-line .main-menu .menu div a {
+    text-decoration: none;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    font: 13px/1.5 arial, sans-serif;
+    color: #737373;
+}
+
+.header .white-line .main-menu .menu .last {
+    margin-right: 25px;
 }
 
 .header .light-line {
     height: 43px;
     background-color: white;
-    padding-top: 71px;
+    padding-top: 21px;
 }
 
 .header .light-line .secondary-menu {
@@ -231,14 +260,29 @@ hr {
 }
 
 .header .light-line .secondary-menu .menu .item {
-    padding-left: 50px;
+    padding: 0 25px;
     color: #2E2E2E;
     font-size: 18px;
+    font-family: Tahoma;
     cursor: pointer;
     position: relative;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    transition: all 0.2s ease;
 }
 
-.header .light-line .secondary-menu .menu .item:hover {
+.header .light-line .secondary-menu .menu #signInBtn {
+    color: #2E2E2E;
+    font-size: 18px;
+    font-family: Tahoma;
+    cursor: pointer;
+    position: relative;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+.header .light-line .secondary-menu .menu .item:hover, .header .light-line .secondary-menu .menu #signInBtn:hover {
     color: #98cb66;
 }
 
@@ -251,7 +295,8 @@ hr {
 }
 
 .header .white-line {
-    height: 108px;
+    height: 30px;
+    margin-top: 20px;
     background-color: #FFFFFF;
 }
 
@@ -312,6 +357,9 @@ hr {
     height: 373px;
     background: url('img/slider-background.png') no-repeat center top;
     position: relative;
+    -webkit-box-shadow: inset 0px 10px 8px -10px rgba(0, 0, 0, 0.5), inset 0px -10px 8px -10px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: inset 0px 10px 8px -10px rgba(0,0,0,0.5), inset 0px -10px 8px -10px rgba(0,0,0,0.4);
+    box-shadow: inset 0px 10px 8px -10px rgba(0, 0, 0, 0.5), inset 0px -10px 8px -10px rgba(0, 0, 0, 0.4);
 }
 
 .content .small {
