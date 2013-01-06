@@ -141,8 +141,8 @@ hr {
     z-index: 150;
 }
 
-#top-link{
-	cursor:pointer;
+#top-link {
+    cursor:pointer;
 	display:none;
 	position:fixed;
 	left:0px;
@@ -1301,6 +1301,15 @@ footer#main{
 		
 .stripNavR {
 	background: url("images/arrow-right.gif") no-repeat center;
+}
+
+.theader:hover {
+    -moz-opacity: 0.8;
+    -webkit-opacity: 0.8;
+    -ms-filter: alpha(opacity=80);
+    filter:alpha(opacity=80); 
+    opacity: 0.8;
+    cursor: pointer;
 }
 
 

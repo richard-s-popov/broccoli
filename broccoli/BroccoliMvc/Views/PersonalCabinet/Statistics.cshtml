@@ -5,7 +5,8 @@
 @model BroccoliTrade.Web.BroccoliMvc.Models.PersonalCabinet.StatisticsListPoco
 
 @section head {
-    <script type="text/javascript" src="@Url.Content("~/Scripts/PersonalCabinet/cabinet.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/tablesorter/jquery.tablesorter.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/PersonalCabinet/statistics.js")"></script>
 }
 
 <div class="banner small">
@@ -27,6 +28,13 @@
                             <th>Зарегистрировались</th>
                         </tr>
                     </thead>
+                    <tfoot>
+                        <tr class="bold">
+                            <td>Всего</td>
+                            <td>@Model.TotalGuests</td>
+                            <td>@Model.TotatlRegistered</td>
+                        </tr>
+                    </tfoot>
                     @foreach (var referrer in Model.Statistics)
                     {
                         <tr>
@@ -36,14 +44,9 @@
                         </tr>
                     }
                     <tr>
-                        <td>Прочие*</td>
+                        <td>прочие*</td>
                         <td>@Model.FromOtherHostGuestsCount</td>
                         <td>@Model.FromOtherHostsRegisteredCount</td>
-                    </tr>
-                    <tr class="bold">
-                        <td>Всего</td>
-                        <td>@Model.TotalGuests</td>
-                        <td>@Model.TotatlRegistered</td>
                     </tr>
                 </table>
                 <br/>
