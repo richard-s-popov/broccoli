@@ -88,5 +88,17 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="Referrer">
+      <EntityTypeMapping TypeName="BroccoliModel.Referrer">
+        <MappingFragment StoreEntitySet="Referrer">
+          <ScalarProperty Name="RegisteredCount" ColumnName="RegisteredCount" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="Count" ColumnName="Count" />
+          <ScalarProperty Name="Host" ColumnName="Host" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

@@ -3,6 +3,7 @@
   <EntityContainer Name="BroccoliModelStoreContainer">
     <EntitySet Name="AccountPool" EntityType="BroccoliModel.Store.AccountPool" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Accounts" EntityType="BroccoliModel.Store.Accounts" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Referrer" EntityType="BroccoliModel.Store.Referrer" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Status" EntityType="BroccoliModel.Store.Status" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Systems" EntityType="BroccoliModel.Store.Systems" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="TradingSystemPool" EntityType="BroccoliModel.Store.TradingSystemPool" store:Type="Tables" Schema="dbo" />
@@ -23,6 +24,10 @@
     <AssociationSet Name="FK_Accounts_Users" Association="BroccoliModel.Store.FK_Accounts_Users">
       <End Role="Users" EntitySet="Users" />
       <End Role="Accounts" EntitySet="Accounts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Referrer_Users" Association="BroccoliModel.Store.FK_Referrer_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Referrer" EntitySet="Referrer" />
     </AssociationSet>
     <AssociationSet Name="FK_TradingSystemPool_Accounts" Association="BroccoliModel.Store.FK_TradingSystemPool_Accounts">
       <End Role="Accounts" EntitySet="Accounts" />
@@ -75,6 +80,17 @@
     <Property Name="ModifiedDate" Type="datetime" />
     <Property Name="CreateDate" Type="datetime" Nullable="false" />
     <Property Name="IsNew" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Referrer">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Host" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="Count" Type="int" Nullable="false" />
+    <Property Name="OwnerId" Type="bigint" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="RegisteredCount" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Status">
     <Key>
@@ -129,8 +145,8 @@
     <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="255" />
     <Property Name="IsDeleted" Type="bit" Nullable="false" />
     <Property Name="RegisterDate" Type="datetime" Nullable="false" />
-    <Property Name="GuestsNumber" Type="int" />
-    <Property Name="RegisteredGuests" Type="int" />
+    <Property Name="GuestsNumber" Type="int" Nullable="false" />
+    <Property Name="RegisteredGuests" Type="int" Nullable="false" />
     <Property Name="OwnerId" Type="bigint" />
   </EntityType>
   <Association Name="FK_AccountApplication_Accounts">
@@ -178,6 +194,18 @@
       </Principal>
       <Dependent Role="Accounts">
         <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Referrer_Users">
+    <End Role="Users" Type="BroccoliModel.Store.Users" Multiplicity="1" />
+    <End Role="Referrer" Type="BroccoliModel.Store.Referrer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Referrer">
+        <PropertyRef Name="OwnerId" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

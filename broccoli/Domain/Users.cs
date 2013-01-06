@@ -20,6 +20,7 @@ namespace BroccoliTrade.Domain
             this.AccountPool = new HashSet<AccountPool>();
             this.TradingSystemPool = new HashSet<TradingSystemPool>();
             this.TradingSystems = new HashSet<TradingSystems>();
+            this.Referrer = new HashSet<Referrer>();
         }
     
         public long Id { get; set; }
@@ -33,13 +34,14 @@ namespace BroccoliTrade.Domain
         public string Password { get; set; }
         public bool IsDeleted { get; set; }
         public System.DateTime RegisterDate { get; set; }
-        public Nullable<int> GuestsNumber { get; set; }
-        public Nullable<int> RegisteredGuests { get; set; }
+        public int GuestsNumber { get; set; }
+        public int RegisteredGuests { get; set; }
         public Nullable<long> OwnerId { get; set; }
     
         public virtual ICollection<Accounts> Accounts { get; set; }
         public virtual ICollection<AccountPool> AccountPool { get; set; }
         public virtual ICollection<TradingSystemPool> TradingSystemPool { get; set; }
         public virtual ICollection<TradingSystems> TradingSystems { get; set; }
+        public virtual ICollection<Referrer> Referrer { get; set; }
     }
 }

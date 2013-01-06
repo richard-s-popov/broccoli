@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Web.Mvc;
 using System.Web.Script.Serialization;
@@ -8,6 +9,7 @@ using BroccoliTrade.Domain.Models;
 using BroccoliTrade.Logics.Infrastructure.Extensions;
 using BroccoliTrade.Logics.Interfaces.Account;
 using BroccoliTrade.Logics.Interfaces.Membership;
+using BroccoliTrade.Logics.Interfaces.Statistics;
 using BroccoliTrade.Logics.Interfaces.TradingSystem;
 using BroccoliTrade.Logics.MSMQ;
 using BroccoliTrade.Web.BroccoliMvc.Infrastructure.Attributes;
@@ -23,14 +25,18 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.PersonalCabinet
 
         private readonly ITradingSystemService _tradingSystemService;
 
+        private readonly IStatService _statService;
+
         public PersonalCabinetController(
             IUsersService usersService,
             IAccountsService accountsService,
-            ITradingSystemService tradingSystemService)
+            ITradingSystemService tradingSystemService,
+            IStatService statService)
         {
             _usersService = usersService;
             _accountsService = accountsService;
             _tradingSystemService = tradingSystemService;
+            _statService = statService;
         }
 
         [Secure]
@@ -296,6 +302,29 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.PersonalCabinet
             }
 
             return new JsonResult();
+        }
+
+        [Secure]
+        public ActionResult Statistics()
+        {
+            var currentUser = _usersService.GetUserByLogin(HttpContext.User.Identity.Name);
+            var statistics = _statService.GetReferrersByUserId(currentUser.Id).ToList();
+
+            var model = new StatisticsListPoco
+                {
+                    Statistics = statistics.Select(entity => new StatisticsRowModel
+                        {
+                            HostName = entity.Host,
+                            GuestsCount = entity.Count.ToString(CultureInfo.InvariantCulture),
+                            RegisteredCount = entity.RegisteredCount.ToString(CultureInfo.InvariantCulture)
+                        }),
+                    TotalGuests = currentUser.GuestsNumber.ToString(CultureInfo.InvariantCulture),
+                    TotatlRegistered = currentUser.RegisteredGuests.ToString(CultureInfo.InvariantCulture),
+                    FromOtherHostGuestsCount = (currentUser.GuestsNumber - statistics.Sum(x => x.Count)).ToString(CultureInfo.InvariantCulture),
+                    FromOtherHostsRegisteredCount = (currentUser.RegisteredGuests - statistics.Sum(x => x.RegisteredCount)).ToString(CultureInfo.InvariantCulture)
+                };
+
+            return View(model);
         }
 
         public ActionResult Test()

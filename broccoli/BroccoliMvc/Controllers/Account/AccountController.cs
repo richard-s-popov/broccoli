@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using BroccoliTrade.Domain;
 using BroccoliTrade.Logics.Interfaces.Membership;
+using BroccoliTrade.Logics.Interfaces.Statistics;
 using BroccoliTrade.Web.BroccoliMvc.Infrastructure.Attributes;
 using BroccoliTrade.Web.BroccoliMvc.Models.Account;
 
@@ -13,15 +14,17 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.Account
     public class AccountController : Controller
     {
         private readonly IUsersService _usersService;
-
+        private readonly IStatService _statService;
         private readonly IMembershipService _membershipService;
 
         public AccountController(
             IUsersService usersService,
-            IMembershipService membershipService)
+            IMembershipService membershipService,
+            IStatService statService)
         {
             _usersService = usersService;
             _membershipService = membershipService;
+            _statService = statService;
         }
 
         public ActionResult RegisterForm()
@@ -78,7 +81,7 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.Account
                         Password = model.Password
                     };
 
-                if (ControllerContext.HttpContext.Request.Cookies.AllKeys.Contains("owner"))
+                if (Request.Cookies["owner"] == null)
                 {
                     var cookie = Request.Cookies["owner"];
 
@@ -87,14 +90,21 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.Account
                         user.OwnerId = Convert.ToInt64(cookie.Value);
 
                         var owner = _usersService.GetById((long)user.OwnerId);
-                        if (owner.RegisteredGuests == null)
+                        owner.RegisteredGuests++;
+
+                        // Если в куках есть информация о реферальном url, то добавляем эту информацию в статистику
+                        var refHostCookie = Request.Cookies["refHost"];
+
+                        if (refHostCookie != null)
                         {
-                            owner.RegisteredGuests = 1;
+                            var referrer = _statService.GetReferrerByUserAndHost(owner.Id, refHostCookie.Value);
+                            if (referrer != null)
+                            {
+                                referrer.RegisteredCount++;
+                                _statService.Save();
+                            }
                         }
-                        else
-                        {
-                            owner.RegisteredGuests++;
-                        }
+
                         _usersService.SaveChanges();
                     }
                 }
@@ -125,6 +135,7 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.Account
         {
             _usersService.Dispose();
             _membershipService.Dispose();
+            _statService.Dispose();
             base.Dispose(disposing);
         }
     }

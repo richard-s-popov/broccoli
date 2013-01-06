@@ -126,6 +126,10 @@ hr {
     height: 1px;
 }
 
+.bold {
+    font-weight: bold;
+}
+
 .opacity {
     position: absolute;
     background-color: #222222;

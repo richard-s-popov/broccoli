@@ -132,6 +132,8 @@
     <Compile Include="Models\PersonalCabinet\AccountListPoco.cs" />
     <Compile Include="Models\PersonalCabinet\AccountRowModel.cs" />
     <Compile Include="Models\PersonalCabinet\InviteListModelPoco.cs" />
+    <Compile Include="Models\PersonalCabinet\StatisticsListPoco.cs" />
+    <Compile Include="Models\PersonalCabinet\StatisticsRowModel.cs" />
     <Compile Include="Models\PersonalCabinet\TradingSystemListPoco.cs" />
     <Compile Include="Models\PersonalCabinet\TradingSystemOrderPoco.cs" />
     <Compile Include="Models\PersonalCabinet\TradingSystemRowModel.cs" />
@@ -142,6 +144,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Content Include="Content\img\broccoli.png" />
+    <Content Include="Content\img\broker-logo.png" />
     <Content Include="Content\img\button_ok_7852.png" />
     <Content Include="Content\img\cross_2615.png" />
     <Content Include="Content\img\dep_5856564-Green-Profit-Icon.jpg" />
@@ -152,6 +155,7 @@
     <Content Include="Content\img\footer.png" />
     <Content Include="Content\img\forexinn_logo.jpg" />
     <Content Include="Content\img\generic-button-green-bg.png" />
+    <Content Include="Content\img\hr-shadow.jpg" />
     <Content Include="Content\img\img1s.jpg" />
     <Content Include="Content\img\img2s.jpg" />
     <Content Include="Content\img\logo-flag.png" />
@@ -304,6 +308,8 @@
   <ItemGroup>
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Views\Shared\MainMenu.cshtml" />
+    <Content Include="Views\PersonalCabinet\Statistics.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

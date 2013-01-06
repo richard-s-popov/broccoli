@@ -1,0 +1,57 @@
+﻿@{
+    ViewBag.Title = "Статистика";
+    Layout = "~/Views/Shared/_LayoutMin.cshtml";
+}
+@model BroccoliTrade.Web.BroccoliMvc.Models.PersonalCabinet.StatisticsListPoco
+
+@section head {
+    <script type="text/javascript" src="@Url.Content("~/Scripts/PersonalCabinet/cabinet.js")"></script>
+}
+
+<div class="banner small">
+    <div class="action">
+        <font>Личный кабинет</font>
+    </div>
+</div>
+<div class="center-content">    
+    <table>
+        <tr>
+            @Html.Partial("CabinetMenu")
+            <td class="cabinet-main">
+                <h3 class="mrg-top-bottom20">Статистика приглашений</h3>
+                <table id="accountsTable" class="grid">
+                    <thead>
+                        <tr>
+                            <th>Откуда</th>        
+                            <th>Гостей</th>
+                            <th>Зарегистрировались</th>
+                        </tr>
+                    </thead>
+                    @foreach (var referrer in Model.Statistics)
+                    {
+                        <tr>
+                            <td>@referrer.HostName</td>        
+                            <td>@referrer.GuestsCount</td>
+                            <td>@referrer.RegisteredCount</td>
+                        </tr>
+                    }
+                    <tr>
+                        <td>Прочие*</td>
+                        <td>@Model.FromOtherHostGuestsCount</td>
+                        <td>@Model.FromOtherHostsRegisteredCount</td>
+                    </tr>
+                    <tr class="bold">
+                        <td>Всего</td>
+                        <td>@Model.TotalGuests</td>
+                        <td>@Model.TotatlRegistered</td>
+                    </tr>
+                </table>
+                <br/>
+                <p>*Переходы с защищенным соединением, прочие переходы по ссылкам не с сайтов.</p>
+            </td>
+        </tr>
+    </table>
+</div>
+<script type="text/javascript">
+    document.deleteUrl = "@Url.Action("DeleteAccount", "PersonalCabinet")";
+</script>

@@ -67,6 +67,7 @@
     <Compile Include="Impl\Account\AccountsService.cs" />
     <Compile Include="Impl\Membership\MembershipService.cs" />
     <Compile Include="Impl\Membership\UsersService.cs" />
+    <Compile Include="Impl\Statistics\StatService.cs" />
     <Compile Include="Impl\TradingSystem\TradingSystemService.cs" />
     <Compile Include="Infrastructure\Certificates\TrustAllCertificatePolicy.cs" />
     <Compile Include="Infrastructure\Extensions\StringExtensions.cs" />
@@ -74,6 +75,7 @@
     <Compile Include="Interfaces\ICrudService.cs" />
     <Compile Include="Interfaces\Membership\IMembershipService.cs" />
     <Compile Include="Interfaces\Membership\IUsersService.cs" />
+    <Compile Include="Interfaces\Statistics\IStatService.cs" />
     <Compile Include="Interfaces\TradingSystem\ITradingSystemService.cs" />
     <Compile Include="MSMQ\EmailService.cs" />
     <Compile Include="MSMQ\QueueProcessor.cs" />
