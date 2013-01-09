@@ -254,11 +254,13 @@
     <Content Include="Scripts\PersonalCabinet\alternative.way.js" />
     <Content Include="Scripts\PersonalCabinet\cabinet.js" />
     <Content Include="Scripts\PersonalCabinet\order.js" />
+    <Content Include="Scripts\PersonalCabinet\statistics.js" />
     <Content Include="Scripts\Register\register.form.js" />
     <Content Include="Scripts\slider\coda-slider.1.1.1.pack.js" />
     <Content Include="Scripts\slider\jquery-1.2.1.pack.js" />
     <Content Include="Scripts\slider\jquery-easing-compatibility.1.2.pack.js" />
     <Content Include="Scripts\slider\jquery-easing.1.2.pack.js" />
+    <Content Include="Scripts\tablesorter\jquery.tablesorter.min.js" />
     <Content Include="Scripts\vk_up_button\button.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>

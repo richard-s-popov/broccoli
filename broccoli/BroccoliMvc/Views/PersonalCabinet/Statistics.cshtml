@@ -7,6 +7,7 @@
 @section head {
     <script type="text/javascript" src="@Url.Content("~/Scripts/tablesorter/jquery.tablesorter.min.js")"></script>
     <script type="text/javascript" src="@Url.Content("~/Scripts/PersonalCabinet/statistics.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/amcharts/amcharts.js")"></script>
 }
 
 <div class="banner small">
@@ -51,6 +52,10 @@
                 </table>
                 <br/>
                 <p>*Переходы с защищенным соединением, прочие переходы по ссылкам не с сайтов.</p>
+                <br/>
+                <div id="chartdiv" style="width:640px; height:400px;"></div>
+                <br/>
+                <div id="chartdiv2" style="width:640px; height:400px;"></div>
             </td>
         </tr>
     </table>
