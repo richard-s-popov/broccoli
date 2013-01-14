@@ -87,10 +87,11 @@
     </Key>
     <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="Host" Type="nvarchar" Nullable="false" MaxLength="255" />
-    <Property Name="Count" Type="int" Nullable="false" />
+    <Property Name="FullReferrerUrl" Type="nvarchar" Nullable="false" MaxLength="2047" />
+    <Property Name="Date" Type="datetime" Nullable="false" />
     <Property Name="OwnerId" Type="bigint" Nullable="false" />
     <Property Name="IsDeleted" Type="bit" Nullable="false" />
-    <Property Name="RegisteredCount" Type="int" Nullable="false" />
+    <Property Name="Registered" Type="bit" Nullable="false" />
   </EntityType>
   <EntityType Name="Status">
     <Key>
@@ -138,6 +139,7 @@
     <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="255" />
     <Property Name="Nickname" Type="nvarchar" MaxLength="255" />
     <Property Name="Email" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="EmailHash" Type="nvarchar" MaxLength="255" />
     <Property Name="Phone" Type="nvarchar" MaxLength="50" />
     <Property Name="Country" Type="nvarchar" MaxLength="50" />
     <Property Name="City" Type="nvarchar" MaxLength="50" />
@@ -145,8 +147,6 @@
     <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="255" />
     <Property Name="IsDeleted" Type="bit" Nullable="false" />
     <Property Name="RegisterDate" Type="datetime" Nullable="false" />
-    <Property Name="GuestsNumber" Type="int" Nullable="false" />
-    <Property Name="RegisteredGuests" Type="int" Nullable="false" />
     <Property Name="OwnerId" Type="bigint" />
   </EntityType>
   <Association Name="FK_AccountApplication_Accounts">

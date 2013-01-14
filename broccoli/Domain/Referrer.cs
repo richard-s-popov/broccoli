@@ -16,10 +16,11 @@ namespace BroccoliTrade.Domain
     {
         public int Id { get; set; }
         public string Host { get; set; }
-        public int Count { get; set; }
         public long OwnerId { get; set; }
         public bool IsDeleted { get; set; }
-        public int RegisteredCount { get; set; }
+        public string FullReferrerUrl { get; set; }
+        public System.DateTime Date { get; set; }
+        public bool Registered { get; set; }
     
         public virtual Users Users { get; set; }
     }

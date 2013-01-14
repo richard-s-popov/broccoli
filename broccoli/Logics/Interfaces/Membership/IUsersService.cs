@@ -29,6 +29,13 @@ namespace BroccoliTrade.Logics.Interfaces.Membership
         Users GetUserByLogin(string email);
 
         /// <summary>
+        /// Get entity user by email hash
+        /// </summary>
+        /// <param name="hash"></param>
+        /// <returns></returns>
+        Users GetUserByEmailHash(string hash);
+
+        /// <summary>
         /// Check email in db
         /// </summary>
         /// <param name="email"></param>

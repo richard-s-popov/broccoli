@@ -26,6 +26,11 @@ namespace BroccoliTrade.Logics.Impl.Statistics
             return db.Referrer.Where(x => x.OwnerId == userId && !x.IsDeleted);
         }
 
+        public IEnumerable<Referrer> GetReferrersByUserIdAndPeriod(long userId, DateTime? start, DateTime? end)
+        {
+            return db.Referrer.Where(x => x.OwnerId == userId && x.Date >= start && x.Date <= end && !x.IsDeleted);
+        }
+
         public Referrer GetReferrerByUserAndHost(long userId, string host)
         {
             return db.Referrer.FirstOrDefault(x => x.OwnerId == userId && x.Host == host);

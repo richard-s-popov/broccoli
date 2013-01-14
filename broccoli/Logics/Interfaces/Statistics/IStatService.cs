@@ -16,6 +16,15 @@ namespace BroccoliTrade.Logics.Interfaces.Statistics
         IEnumerable<Referrer> GetReferrersByUserId(long userId);
 
         /// <summary>
+        /// Возвращает список реферальных хостов за период
+        /// </summary>
+        /// <param name="userId"></param>
+        /// <param name="start"></param>
+        /// <param name="end"></param>
+        /// <returns></returns>
+        IEnumerable<Referrer> GetReferrersByUserIdAndPeriod(long userId, DateTime? start, DateTime? end);
+            
+        /// <summary>
         /// Возвращает реферальный хост по пользователю и имени хоста
         /// </summary>
         /// <param name="userId"></param>

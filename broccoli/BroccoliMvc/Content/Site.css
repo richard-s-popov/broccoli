@@ -832,6 +832,21 @@ hr {
     box-shadow: 0 1px 1px #ccc;         
 }
 
+.grid table {
+    width: 100%;
+}
+    
+.grid td, .grid th {
+    border-left: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+.grid tr {
+    background: white;    
+}
+
 .grid tr:hover {
     background: #fbf8e9;
     -o-transition: all 0.1s ease-in-out;
@@ -839,13 +854,14 @@ hr {
     -moz-transition: all 0.1s ease-in-out;
     -ms-transition: all 0.1s ease-in-out;
     transition: all 0.1s ease-in-out;     
-}    
-    
-.grid td, .grid th {
-    border-left: 1px solid #ccc;
-    border-top: 1px solid #ccc;
-    padding: 10px;
-    text-align: left;    
+}
+
+.grid .non-hovered:hover {
+    background-color: #dbdbcb !important;
+}
+
+.grid .non-hovered {
+    background-color: #dbdbcb !important;
 }
 
 .grid th {
@@ -1310,6 +1326,47 @@ footer#main{
     filter:alpha(opacity=80); 
     opacity: 0.8;
     cursor: pointer;
+}
+
+.grid .guests {
+    width: 150px;
+}
+
+.grid .registered {
+    width: 150px;
+}
+
+.grid .hosts:hover {
+    cursor: pointer;
+}
+
+.period-radio {
+    margin: 5px auto 20px auto;
+    width: 380px;
+}
+
+.period-radio .period-date {
+    font-family: Arial;
+    font-size: 13px;
+    width: 380px;
+    margin-top: 10px;
+    display: block;
+}
+
+.period-radio .period-date span {
+    margin-right: 5px;
+    margin-left: 2px;
+}
+
+.period-radio .period-date input {
+    height: 18px;
+    width: 100px;
+    margin-right: 10px;
+}
+
+.type-user-radio {
+    width: 230px;
+    margin: 0 auto 50px;
 }
 
 

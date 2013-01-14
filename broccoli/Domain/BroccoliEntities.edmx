@@ -92,10 +92,11 @@
           </Key>
           <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="Host" Type="nvarchar" Nullable="false" MaxLength="255" />
-          <Property Name="Count" Type="int" Nullable="false" />
+          <Property Name="FullReferrerUrl" Type="nvarchar" Nullable="false" MaxLength="2047" />
+          <Property Name="Date" Type="datetime" Nullable="false" />
           <Property Name="OwnerId" Type="bigint" Nullable="false" />
           <Property Name="IsDeleted" Type="bit" Nullable="false" />
-          <Property Name="RegisteredCount" Type="int" Nullable="false" />
+          <Property Name="Registered" Type="bit" Nullable="false" />
         </EntityType>
         <EntityType Name="Status">
           <Key>
@@ -143,6 +144,7 @@
           <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="255" />
           <Property Name="Nickname" Type="nvarchar" MaxLength="255" />
           <Property Name="Email" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="EmailHash" Type="nvarchar" MaxLength="255" />
           <Property Name="Phone" Type="nvarchar" MaxLength="50" />
           <Property Name="Country" Type="nvarchar" MaxLength="50" />
           <Property Name="City" Type="nvarchar" MaxLength="50" />
@@ -150,8 +152,6 @@
           <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="255" />
           <Property Name="IsDeleted" Type="bit" Nullable="false" />
           <Property Name="RegisterDate" Type="datetime" Nullable="false" />
-          <Property Name="GuestsNumber" Type="int" Nullable="false" />
-          <Property Name="RegisteredGuests" Type="int" Nullable="false" />
           <Property Name="OwnerId" Type="bigint" />
         </EntityType>
         <Association Name="FK_AccountApplication_Accounts">
@@ -379,10 +379,9 @@
           <NavigationProperty Name="AccountPool" Relationship="BroccoliModel.FK_AccountApplication_Users" FromRole="Users" ToRole="AccountPool" />
           <NavigationProperty Name="TradingSystemPool" Relationship="BroccoliModel.FK_TradingSystemPool_Users" FromRole="Users" ToRole="TradingSystemPool" />
           <NavigationProperty Name="TradingSystems" Relationship="BroccoliModel.FK_TradingSystems_Users" FromRole="Users" ToRole="TradingSystems" />
-          <Property Type="Int32" Name="GuestsNumber" Nullable="false" />
-          <Property Type="Int32" Name="RegisteredGuests" Nullable="false" />
           <Property Type="Int64" Name="OwnerId" />
           <NavigationProperty Name="Referrer" Relationship="BroccoliModel.FK_Referrer_Users" FromRole="Users" ToRole="Referrer" />
+          <Property Type="String" Name="EmailHash" MaxLength="255" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="Accounts">
           <Key>
@@ -601,11 +600,12 @@
           </Key>
           <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Type="String" Name="Host" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
-          <Property Type="Int32" Name="Count" Nullable="false" />
           <Property Type="Int64" Name="OwnerId" Nullable="false" />
           <Property Type="Boolean" Name="IsDeleted" Nullable="false" />
           <NavigationProperty Name="Users" Relationship="BroccoliModel.FK_Referrer_Users" FromRole="Referrer" ToRole="Users" />
-          <Property Type="Int32" Name="RegisteredCount" Nullable="false" />
+          <Property Type="String" Name="FullReferrerUrl" Nullable="false" MaxLength="2047" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="Date" Nullable="false" Precision="3" />
+          <Property Type="Boolean" Name="Registered" Nullable="false" />
         </EntityType>
         <Association Name="FK_Referrer_Users">
           <End Type="BroccoliModel.Users" Role="Users" Multiplicity="1" />
@@ -628,9 +628,8 @@
           <EntitySetMapping Name="Users">
             <EntityTypeMapping TypeName="BroccoliModel.Users">
               <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="EmailHash" ColumnName="EmailHash" />
                 <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
-                <ScalarProperty Name="RegisteredGuests" ColumnName="RegisteredGuests" />
-                <ScalarProperty Name="GuestsNumber" ColumnName="GuestsNumber" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="Nickname" ColumnName="Nickname" />
@@ -715,10 +714,11 @@
           <EntitySetMapping Name="Referrer">
             <EntityTypeMapping TypeName="BroccoliModel.Referrer">
               <MappingFragment StoreEntitySet="Referrer">
-                <ScalarProperty Name="RegisteredCount" ColumnName="RegisteredCount" />
+                <ScalarProperty Name="Registered" ColumnName="Registered" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="FullReferrerUrl" ColumnName="FullReferrerUrl" />
                 <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
                 <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
-                <ScalarProperty Name="Count" ColumnName="Count" />
                 <ScalarProperty Name="Host" ColumnName="Host" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>

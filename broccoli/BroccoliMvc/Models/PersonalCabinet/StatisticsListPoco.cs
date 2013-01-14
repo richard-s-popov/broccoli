@@ -7,7 +7,7 @@ namespace BroccoliTrade.Web.BroccoliMvc.Models.PersonalCabinet
 {
     public class StatisticsListPoco
     {
-        public IEnumerable<StatisticsRowModel> Statistics { get; set; }
+        public IList<HostRowModel> Statistics { get; set; }
 
         public string FromOtherHostGuestsCount { get; set; }
 

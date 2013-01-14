@@ -4,9 +4,8 @@
     <EntitySetMapping Name="Users">
       <EntityTypeMapping TypeName="BroccoliModel.Users">
         <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="EmailHash" ColumnName="EmailHash" />
           <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
-          <ScalarProperty Name="RegisteredGuests" ColumnName="RegisteredGuests" />
-          <ScalarProperty Name="GuestsNumber" ColumnName="GuestsNumber" />
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="Nickname" ColumnName="Nickname" />
@@ -91,10 +90,11 @@
     <EntitySetMapping Name="Referrer">
       <EntityTypeMapping TypeName="BroccoliModel.Referrer">
         <MappingFragment StoreEntitySet="Referrer">
-          <ScalarProperty Name="RegisteredCount" ColumnName="RegisteredCount" />
+          <ScalarProperty Name="Registered" ColumnName="Registered" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="FullReferrerUrl" ColumnName="FullReferrerUrl" />
           <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
           <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
-          <ScalarProperty Name="Count" ColumnName="Count" />
           <ScalarProperty Name="Host" ColumnName="Host" />
           <ScalarProperty Name="Id" ColumnName="Id" />
         </MappingFragment>

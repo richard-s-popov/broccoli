@@ -1,62 +1,72 @@
 ﻿$(document).ready(function () {
     $('#personalCabinetPage').hide();
     
-    $("#accountsTable").tablesorter();
+    $("#radio").buttonset();
+    $('#radioPieChart').buttonset();
     
-    var chart;
+    $("#accountsTable").stupidtable();
+    $('#dateFrom').datepicker();
+    $('#dateTo').datepicker();
+    $('#showByDate').button('destroy');
+    $('#showByDate').button();
 
-    var chartData = [{
-        country: "United States",
-        visits: 9252
-    }, {
-        country: "China",
-        visits: 1882
-    }, {
-        country: "Japan",
-        visits: 1809
-    }, {
-        country: "Germany",
-        visits: 1322
-    }, {
-        country: "United Kingdom",
-        visits: 1122
-    }, {
-        country: "France",
-        visits: 1114
-    }, {
-        country: "India",
-        visits: 984
-    }, {
-        country: "Spain",
-        visits: 711
-    }];
+    $("input[name='radio-period']").change(function () {
+        var selectedRadio = $("input[name='radio-period']:checked").val();
 
-
-    AmCharts.ready(function () {
-        // PIE CHART
-        chart = new AmCharts.AmPieChart();
-
-        // title of the chart
-        chart.addTitle("Visitors countries", 16);
-
-        chart.dataProvider = chartData;
-        chart.titleField = "country";
-        chart.valueField = "visits";
-        chart.sequencedAnimation = true;
-        chart.startEffect = "elastic";
-        chart.innerRadius = "30%";
-        chart.startDuration = 2;
-        chart.labelRadius = 25;
-        chart.radius = 120;
-
-        // the following two lines makes the chart 3D
-        chart.depth3D = 20;
-        chart.angle = 25;
-
-        // WRITE                                 
-        chart.write("chartdiv");
+        switch (selectedRadio) {
+            case 'today':
+                window.location = document.statisticsToday;
+                break;
+            case 'yesterday':
+                window.location = document.statisticsYesterday;
+                break;
+            case 'week':
+                window.location = document.statisticsWeek;
+                break;
+            case 'month':
+                window.location = document.statisticsMonth;
+                break;
+            default:
+                window.location = document.statisticsAllTime;
+        }
     });
+
+    // открытие саб-грида (группы)
+    $('.group').click(function () {
+        var group = $(this).attr('group');
+        $(this).parent().after($('.' + group));
+        
+        $('.' + group).show();
+        $('.' + group).find('.grid').stupidtable();
+        
+        // событие для скрытия саб-грида
+        $(this).one('click', hideSubGrid);
+
+        $(this).children('.plus-minus').html('-&nbsp;');
+    });
+
+    // скрытие саб-грида
+    var hideSubGrid = function() {
+        $(this).parent().next().hide();
+        $(this).children('.plus-minus').html('+&nbsp;');
+    };
     
+    // скрытие всех саб-гридов
+    var hideAllSubGrid = function () {
+        $('.subgrid').hide();
+        $('#accountsTable').find('.plus-minus').each(function () {
+            $(this).html('+&nbsp;');
+        });
+    };
+    
+    // событие сортировки главного грида с группами
+    $('#sort').find('th').click(hideAllSubGrid);
+    
+    drawPieChart();
+    
+    $("input[name='radio-pie-chart']").change(function () {
+        drawPieChart();
+    });
 
     var chart2;
 
@@ -187,5 +197,37 @@
 
         // WRITE
         chart2.write("chartdiv2");
+        $('tspan:contains("chart by amcharts.com")').parent().parent().hide();
     });
 });
+
+function drawPieChart() {
+    var chart;
+    
+    $('#chartdiv').empty();
+
+    // PIE CHART
+    chart = new AmCharts.AmPieChart();
+
+    // title of the chart
+    chart.addTitle("Посетители с источников", 16);
+
+    chart.dataProvider = chartData;
+    chart.titleField = "HostName";
+    chart.valueField = $("input[name='radio-pie-chart']:checked").val();;
+    chart.sequencedAnimation = true;
+    chart.startEffect = "elastic";
+    chart.innerRadius = "30%";
+    chart.startDuration = 2;
+    chart.labelRadius = 25;
+    chart.radius = 120;
+
+    // the following two lines makes the chart 3D
+    chart.depth3D = 20;
+    chart.angle = 25;
+
+    // WRITE                                 
+    chart.write("chartdiv");
+    $('tspan:contains("chart by amcharts.com")').hide();
+}
+

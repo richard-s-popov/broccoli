@@ -81,28 +81,31 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.Account
                         Password = model.Password
                     };
 
-                if (Request.Cookies["owner"] == null)
+                if (Request.Cookies["owner"] != null)
                 {
-                    var cookie = Request.Cookies["owner"];
+                    user.OwnerId = Convert.ToInt64(Request.Cookies["owner"].Value);
 
-                    if (cookie != null)
+                    var owner = _usersService.GetById((long)user.OwnerId);
+                    if (owner != null)
                     {
-                        user.OwnerId = Convert.ToInt64(cookie.Value);
-
-                        var owner = _usersService.GetById((long)user.OwnerId);
-                        owner.RegisteredGuests++;
-
                         // Если в куках есть информация о реферальном url, то добавляем эту информацию в статистику
-                        var refHostCookie = Request.Cookies["refHost"];
-
-                        if (refHostCookie != null)
+                        var hostCookie = Request.Cookies["Host"];
+                        if (hostCookie != null)
                         {
-                            var referrer = _statService.GetReferrerByUserAndHost(owner.Id, refHostCookie.Value);
-                            if (referrer != null)
-                            {
-                                referrer.RegisteredCount++;
-                                _statService.Save();
-                            }
+                            var host = Response.Cookies["Host"]["shortHost"];
+                            var fullHostUrl = Response.Cookies["Host"]["fullHostUrl"];
+
+                            var entity = new Referrer
+                                {
+                                    Host = host,
+                                    FullReferrerUrl = fullHostUrl,
+                                    Date = DateTime.Now,
+                                    IsDeleted = false,
+                                    OwnerId = owner.Id,
+                                    Registered = true
+                                };
+
+                            _statService.AddReferrer(entity);
                         }
 
                         _usersService.SaveChanges();

@@ -1,4 +1,5 @@
-﻿<script type="text/javascript" src="@Url.Content("~/Scripts/PersonalCabinet/alternative.way.js")"></script>
+﻿@using BroccoliTrade.Logics.Infrastructure.Extensions
+<script type="text/javascript" src="@Url.Content("~/Scripts/PersonalCabinet/alternative.way.js")"></script>
 
 <h3>Другой способ получения</h3>
 <br>
@@ -44,7 +45,7 @@
 
                             <!-- Put this script tag to the place, where the Share button will be -->
                             <script type="text/javascript">
-                                document.write(VK.Share.button({ url: "http://broccoli-trade.ru?token=@HttpContext.Current.User.Identity.Name" }, { type: "custom", text: "<img src=\"@Url.Content("~/Content/img/vk_logo.png")\" />" }));
+                                document.write(VK.Share.button({ url: "http://broccoli-trade.ru?token=@HttpContext.Current.User.Identity.Name.Md5()" }, { type: "custom", text: "<img src=\"@Url.Content("~/Content/img/vk_logo.png")\" />" }));
                             </script>
                         </td>
                         <td class="name-network">
@@ -53,7 +54,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <a target="_blank" class="mrc__plugin_uber_like_button" href="http://broccoli-trade.ru?token=@HttpContext.Current.User.Identity.Name" data-mrc-config="{'nc' : '1', 'nt' : '1', 'cm' : '2', 'ck' : '2', 'sz' : '45', 'st' : '2', 'tp' : 'ok'}">Нравится</a>
+                            <a target="_blank" class="mrc__plugin_uber_like_button" href="http://broccoli-trade.ru?token=@HttpContext.Current.User.Identity.Name.Md5()" data-mrc-config="{'nc' : '1', 'nt' : '1', 'cm' : '2', 'ck' : '2', 'sz' : '45', 'st' : '2', 'tp' : 'ok'}">Нравится</a>
                         </td>
                         <td class="name-network">
                             <h4>Одноклассники</h4>
@@ -61,7 +62,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <a target="_blank" class="mrc__plugin_uber_like_button" href="http://broccoli-trade.ru?token=@HttpContext.Current.User.Identity.Name" data-mrc-config="{'nc' : '1', 'nt' : '1', 'cm' : '2', 'ck' : '2', 'sz' : '45', 'st' : '2', 'tp' : 'mm'}">Нравится</a>
+                            <a target="_blank" class="mrc__plugin_uber_like_button" href="http://broccoli-trade.ru?token=@HttpContext.Current.User.Identity.Name.Md5()" data-mrc-config="{'nc' : '1', 'nt' : '1', 'cm' : '2', 'ck' : '2', 'sz' : '45', 'st' : '2', 'tp' : 'mm'}">Нравится</a>
                             <script src="http://cdn.connect.mail.ru/js/loader.js" type="text/javascript" charset="UTF-8"></script>
                         </td>
                         <td class="name-network">

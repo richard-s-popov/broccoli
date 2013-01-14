@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
@@ -305,24 +306,76 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.PersonalCabinet
         }
 
         [Secure]
-        public ActionResult Statistics()
+        public ActionResult Statistics(string period, DateTime? start, DateTime? end)
         {
             var currentUser = _usersService.GetUserByLogin(HttpContext.User.Identity.Name);
-            var statistics = _statService.GetReferrersByUserId(currentUser.Id).ToList();
+            IEnumerable<Referrer> statistics;
 
-            var model = new StatisticsListPoco
+            if (start == null && end == null)
+            {
+                switch (period)
                 {
-                    Statistics = statistics.Select(entity => new StatisticsRowModel
-                        {
-                            HostName = entity.Host,
-                            GuestsCount = entity.Count.ToString(CultureInfo.InvariantCulture),
-                            RegisteredCount = entity.RegisteredCount.ToString(CultureInfo.InvariantCulture)
-                        }),
-                    TotalGuests = currentUser.GuestsNumber.ToString(CultureInfo.InvariantCulture),
-                    TotatlRegistered = currentUser.RegisteredGuests.ToString(CultureInfo.InvariantCulture),
-                    FromOtherHostGuestsCount = (currentUser.GuestsNumber - statistics.Sum(x => x.Count)).ToString(CultureInfo.InvariantCulture),
-                    FromOtherHostsRegisteredCount = (currentUser.RegisteredGuests - statistics.Sum(x => x.RegisteredCount)).ToString(CultureInfo.InvariantCulture)
-                };
+                    case "today":
+                        statistics = _statService.GetReferrersByUserIdAndPeriod(
+                            currentUser.Id, 
+                            DateTime.Today, 
+                            DateTime.Now).ToList();
+                        ViewBag.Period = "today";
+                        break;
+                    case "yesterday":
+                        statistics = _statService.GetReferrersByUserIdAndPeriod(
+                            currentUser.Id, 
+                            DateTime.Today.AddDays(-1), 
+                            DateTime.Today).ToList();
+                        ViewBag.Period = "yesterday";
+                        break;
+                    case "week":
+                        statistics = _statService.GetReferrersByUserIdAndPeriod(
+                            currentUser.Id, 
+                            DateTime.Now.AddDays(-7), 
+                            DateTime.Now).ToList();
+                        ViewBag.Period = "week";
+                        break;
+                    case "month":
+                        statistics = _statService.GetReferrersByUserIdAndPeriod(
+                            currentUser.Id, 
+                            DateTime.Now.AddMonths(-1), 
+                            DateTime.Now).ToList();
+                        ViewBag.Period = "month";
+                        break;
+                    default:
+                        ViewBag.Period = "allTime";
+                        statistics = _statService.GetReferrersByUserId(currentUser.Id).ToList();
+                        break;
+                }
+            }
+            else
+            {
+                statistics = _statService.GetReferrersByUserIdAndPeriod(currentUser.Id, start, end).ToList();
+                ViewBag.Period = "datePeriod";
+            }
+            
+            var groupubleStatistics = statistics.GroupBy(x => x.Host);
+            var model = new StatisticsListPoco { Statistics = new List<HostRowModel>() };
+
+            foreach (var group in groupubleStatistics)
+            {
+                model.Statistics.Add(new HostRowModel
+                    {
+                        HostName = group.Key == "undefined" ? "прочие*" : group.Key,
+                        GuestsCount = group.Count(x => !x.Registered).ToString(),
+                        RegisteredCount = group.Count(x => x.Registered).ToString(),
+                        DetailsHosts = group.Key == "undefined" ? new List<DetailsHostRowModel>() : group.GroupBy(x => x.FullReferrerUrl).Select(x => new DetailsHostRowModel
+                            {
+                                FullReferrerUrl = x.Key,
+                                GuestsCount = x.Count(r => !r.Registered).ToString(),
+                                RegisteredCount = x.Count(r => r.Registered).ToString()
+                            }).OrderByDescending(s => s.GuestsCount).ToList()
+                    });
+            }
+
+            model.TotalGuests = statistics.Count(x => !x.Registered).ToString();
+            model.TotatlRegistered = statistics.Count(x => x.Registered).ToString();
 
             return View(model);
         }

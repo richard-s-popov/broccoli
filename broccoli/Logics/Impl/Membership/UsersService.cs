@@ -18,6 +18,7 @@ namespace BroccoliTrade.Logics.Impl.Membership
         public void Insert(Users entity)
         {
             entity.Password = entity.Password.Md5();
+            entity.EmailHash = entity.Email.Md5();
             entity.RegisterDate = DateTime.Now;
             entity.IsDeleted = false;
 
@@ -33,6 +34,11 @@ namespace BroccoliTrade.Logics.Impl.Membership
         public Users GetUserByLogin(string login)
         {
             return db.Users.FirstOrDefault(x => x.Email == login && !x.IsDeleted);
+        }
+
+        public Users GetUserByEmailHash(string hash)
+        {
+            return db.Users.FirstOrDefault(x => x.EmailHash == hash && !x.IsDeleted);
         }
 
         public bool EmailIsExist(string email)

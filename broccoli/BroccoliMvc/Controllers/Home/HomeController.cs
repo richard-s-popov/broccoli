@@ -24,7 +24,7 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.Home
 
         public ActionResult Index(string token)
         {
-            var ownerUser = _usersService.GetUserByLogin(token);
+            var ownerUser = _usersService.GetUserByEmailHash(token);
             
             if (ownerUser != null)
             {
@@ -33,10 +33,7 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.Home
                     var cookie = new HttpCookie("owner");
                     cookie.Value = ownerUser.Id.ToString(CultureInfo.InvariantCulture);
                     cookie.Expires = DateTime.Now.AddHours(1);
-                    this.ControllerContext.HttpContext.Response.Cookies.Add(cookie);
-
-                    ownerUser.GuestsNumber++;
-                    _usersService.SaveChanges();
+                    ControllerContext.HttpContext.Response.Cookies.Add(cookie);
 
                     // Если есть реферальный url, то сохраняем в статистику
                     if (HttpContext.Request.UrlReferrer != null)
@@ -44,37 +41,50 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.Home
                         var urlReferrer = HttpContext.Request.UrlReferrer;
 
                         // Создаем новые cookie
-                        if (Request.Cookies["refHost"] == null)
+                        if (Request.Cookies["Host"] == null)
                         {
-                            var refHostCookie = new HttpCookie("refHost");
-                            refHostCookie.Value = urlReferrer.Host.ToString(CultureInfo.InvariantCulture);
-                            refHostCookie.Expires = DateTime.Now.AddHours(1);
-                            this.ControllerContext.HttpContext.Response.Cookies.Add(refHostCookie);
+                            var hostCookie = new HttpCookie("Host");
+                            hostCookie.Values["shortHost"] = urlReferrer.Host;
+                            hostCookie.Values["fullHostUrl"] = urlReferrer.OriginalString;
+                            hostCookie.Expires = DateTime.Now.AddHours(1);
+                            ControllerContext.HttpContext.Response.Cookies.Add(hostCookie);
                         }
                         else // или обновляем имеющиеся
                         {
-                            Response.Cookies["refHost"].Value = urlReferrer.Host;
+                            Response.Cookies["Host"]["shortHost"] = urlReferrer.Host;
+                            Response.Cookies["Host"]["fullHostUrl"] = urlReferrer.OriginalString;
+                            Response.Cookies["Host"].Expires = DateTime.Now.AddHours(1);
                         }
 
-                        var referrer = _statService.GetReferrerByUserAndHost(ownerUser.Id, urlReferrer.Host);
-                        
-                        if (referrer == null)
+                        var entity = new Referrer
                         {
-                            var entity = new Referrer
-                                {
-                                    Host = urlReferrer.Host,
-                                    Count = 1,
-                                    IsDeleted = false,
-                                    OwnerId = ownerUser.Id
-                                };
+                            Host = urlReferrer.Host,
+                            FullReferrerUrl = urlReferrer.OriginalString,
+                            Date = DateTime.Now,
+                            IsDeleted = false,
+                            OwnerId = ownerUser.Id,
+                            Registered = false
+                        };
 
-                            _statService.AddReferrer(entity);
-                        }
-                        else
+                        _statService.AddReferrer(entity);
+                    }
+                    else
+                    {
+                        Response.Cookies["Host"]["shortHost"] = "undefined";
+                        Response.Cookies["Host"]["fullHostUrl"] = "undefined";
+                        Response.Cookies["Host"].Expires = DateTime.Now.AddHours(1);
+
+                        var entity = new Referrer
                         {
-                            referrer.Count++;
-                            _statService.Save();
-                        }
+                            Host = "undefined",
+                            FullReferrerUrl = "",
+                            Date = DateTime.Now,
+                            IsDeleted = false,
+                            OwnerId = ownerUser.Id,
+                            Registered = false
+                        };
+
+                        _statService.AddReferrer(entity);
                     }
                 }
                 else
