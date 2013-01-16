@@ -31,6 +31,35 @@
         }
     });
 
+    $('#showByDate').unbind().click(function() {
+        var startDate = $('#dateFrom').datepicker('getDate');
+        var endDate = $('#dateTo').datepicker('getDate');
+        
+        if (startDate == null) {
+            alert('Дата начала периода не выбрана');
+            return;
+        }
+        
+        if (endDate == null) {
+            alert('Дата окончания периода не выбрана');
+            return;
+        }
+        
+        if (startDate > endDate) {
+            alert('Дата начала не может быть больше даты окончания периода');
+            return;
+        }
+        
+        window.location = document.statisticsByDatePeriod + '?start=' + dateToString(startDate) + '&end=' + dateToString(endDate);
+    });
+
+    function dateToString(date) {
+        var day = date.getDate();
+        var month = date.getMonth() + 1;
+        var year = date.getFullYear();
+        return month + "." + day + "." + year;
+    }
+
     // открытие саб-грида (группы)
     $('.group').click(function () {
         var group = $(this).attr('group');

@@ -311,7 +311,7 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.PersonalCabinet
             var currentUser = _usersService.GetUserByLogin(HttpContext.User.Identity.Name);
             IEnumerable<Referrer> statistics;
 
-            if (start == null && end == null)
+            if (start == null && end == null || start > end)
             {
                 switch (period)
                 {
@@ -348,11 +348,16 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.PersonalCabinet
                         statistics = _statService.GetReferrersByUserId(currentUser.Id).ToList();
                         break;
                 }
+
+                ViewBag.DateFrom = string.Empty;
+                ViewBag.DateTo = string.Empty;
             }
             else
             {
                 statistics = _statService.GetReferrersByUserIdAndPeriod(currentUser.Id, start, end).ToList();
                 ViewBag.Period = "datePeriod";
+                ViewBag.DateFrom = start.GetValueOrDefault().ToShortDateString();
+                ViewBag.DateTo = end.GetValueOrDefault().ToShortDateString();
             }
             
             var groupubleStatistics = statistics.GroupBy(x => x.Host);

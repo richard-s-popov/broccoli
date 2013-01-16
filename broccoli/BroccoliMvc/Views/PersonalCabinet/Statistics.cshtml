@@ -81,8 +81,8 @@
                         }
                     </div>
                     <span class="period-date">
-                        <span>С:</span><input id="dateFrom" type="text"/>
-                        <span>По:</span><input id="dateTo" type="text"/>
+                        <span>С:</span><input id="dateFrom" type="text" value="@ViewBag.DateFrom"/>
+                        <span>По:</span><input id="dateTo" type="text" value="@ViewBag.DateTo"/>
                         <button id="showByDate">Показать</button>
                     </span>
                 </div>
@@ -175,4 +175,5 @@
     document.statisticsWeek = "@Url.Action("Statistics", "PersonalCabinet", new { period = "week" })";
     document.statisticsMonth = "@Url.Action("Statistics", "PersonalCabinet", new { period = "month" })";
     document.statisticsAllTime = "@Url.Action("Statistics", "PersonalCabinet")";
+    document.statisticsByDatePeriod = "@Url.Action("Statistics", "PersonalCabinet")";
 </script>
