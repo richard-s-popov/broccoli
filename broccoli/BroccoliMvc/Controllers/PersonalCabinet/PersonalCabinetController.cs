@@ -385,13 +385,11 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.PersonalCabinet
 
             foreach (var statistic in statistics.Where(r => !r.Registered).GroupBy(x => x.Date.Date))
             {
-                var dic = new Dictionary<string, string>();
-
-                dic.Add("Date", statistic.First().Date.Date.ToString("d"));
+                var dic = new Dictionary<string, string> {{"Date", statistic.First().Date.Date.ToString("d")}};
 
                 foreach (var referrer in statistic.GroupBy(x => x.Host))
                 {
-                    dic.Add(referrer.Key, referrer.Count().ToString());
+                    dic.Add(referrer.Key == "undefined" ? "прочие*" : referrer.Key, referrer.Count().ToString());
                 }
 
                 model.StatisticsGuestsByDate.Add(dic);
@@ -399,13 +397,11 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.PersonalCabinet
 
             foreach (var statistic in statistics.Where(r => r.Registered).GroupBy(x => x.Date.Date))
             {
-                var dic = new Dictionary<string, string>();
-
-                dic.Add("Date", statistic.First().Date.Date.ToString("d"));
+                var dic = new Dictionary<string, string> {{"Date", statistic.First().Date.Date.ToString("d")}};
 
                 foreach (var referrer in statistic.GroupBy(x => x.Host))
                 {
-                    dic.Add(referrer.Key, referrer.Count().ToString());
+                    dic.Add(referrer.Key == "undefined" ? "прочие*" : referrer.Key, referrer.Count().ToString());
                 }
 
                 model.StatisticsRegisteredByDate.Add(dic);
