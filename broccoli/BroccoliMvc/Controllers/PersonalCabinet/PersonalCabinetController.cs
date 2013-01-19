@@ -359,28 +359,57 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.PersonalCabinet
                 ViewBag.DateFrom = start.GetValueOrDefault().ToShortDateString();
                 ViewBag.DateTo = end.GetValueOrDefault().ToShortDateString();
             }
-            
-            var groupubleStatistics = statistics.GroupBy(x => x.Host);
-            var model = new StatisticsListPoco { Statistics = new List<HostRowModel>() };
 
-            foreach (var group in groupubleStatistics)
+            var model = new StatisticsListPoco
+                {
+                    StatisticsByHost = statistics.GroupBy(x => x.Host).Select(group => new HostRowModel
+                        {
+                            HostName = @group.Key == "undefined" ? "прочие*" : @group.Key,
+                            GuestsCount = @group.Count(x => !x.Registered).ToString(),
+                            RegisteredCount = @group.Count(x => x.Registered).ToString(),
+                            DetailsHosts =
+                                @group.Key == "undefined"
+                                    ? new List<DetailsHostRowModel>()
+                                    : @group.GroupBy(x => x.FullReferrerUrl).Select(x => new DetailsHostRowModel
+                                        {
+                                            FullReferrerUrl = x.Key,
+                                            GuestsCount = x.Count(r => !r.Registered).ToString(),
+                                            RegisteredCount = x.Count(r => r.Registered).ToString()
+                                        }).OrderByDescending(s => s.GuestsCount).ToList()
+                        }),
+                    TotalGuests = statistics.Count(x => !x.Registered).ToString(),
+                    TotatlRegistered = statistics.Count(x => x.Registered).ToString(),
+                    StatisticsGuestsByDate = new List<IDictionary<string,string>>(),
+                    StatisticsRegisteredByDate = new List<IDictionary<string, string>>()
+                };
+
+            foreach (var statistic in statistics.Where(r => !r.Registered).GroupBy(x => x.Date.Date))
             {
-                model.Statistics.Add(new HostRowModel
-                    {
-                        HostName = group.Key == "undefined" ? "прочие*" : group.Key,
-                        GuestsCount = group.Count(x => !x.Registered).ToString(),
-                        RegisteredCount = group.Count(x => x.Registered).ToString(),
-                        DetailsHosts = group.Key == "undefined" ? new List<DetailsHostRowModel>() : group.GroupBy(x => x.FullReferrerUrl).Select(x => new DetailsHostRowModel
-                            {
-                                FullReferrerUrl = x.Key,
-                                GuestsCount = x.Count(r => !r.Registered).ToString(),
-                                RegisteredCount = x.Count(r => r.Registered).ToString()
-                            }).OrderByDescending(s => s.GuestsCount).ToList()
-                    });
+                var dic = new Dictionary<string, string>();
+
+                dic.Add("Date", statistic.First().Date.Date.ToString("d"));
+
+                foreach (var referrer in statistic.GroupBy(x => x.Host))
+                {
+                    dic.Add(referrer.Key, referrer.Count().ToString());
+                }
+
+                model.StatisticsGuestsByDate.Add(dic);
             }
 
-            model.TotalGuests = statistics.Count(x => !x.Registered).ToString();
-            model.TotatlRegistered = statistics.Count(x => x.Registered).ToString();
+            foreach (var statistic in statistics.Where(r => r.Registered).GroupBy(x => x.Date.Date))
+            {
+                var dic = new Dictionary<string, string>();
+
+                dic.Add("Date", statistic.First().Date.Date.ToString("d"));
+
+                foreach (var referrer in statistic.GroupBy(x => x.Host))
+                {
+                    dic.Add(referrer.Key, referrer.Count().ToString());
+                }
+
+                model.StatisticsRegisteredByDate.Add(dic);
+            }
 
             return View(model);
         }

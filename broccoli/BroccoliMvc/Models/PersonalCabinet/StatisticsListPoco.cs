@@ -7,7 +7,11 @@ namespace BroccoliTrade.Web.BroccoliMvc.Models.PersonalCabinet
 {
     public class StatisticsListPoco
     {
-        public IList<HostRowModel> Statistics { get; set; }
+        public IEnumerable<HostRowModel> StatisticsByHost { get; set; }
+
+        public IList<IDictionary<string,string>> StatisticsGuestsByDate { get; set; }
+
+        public IList<IDictionary<string, string>> StatisticsRegisteredByDate { get; set; }
 
         public string FromOtherHostGuestsCount { get; set; }
 

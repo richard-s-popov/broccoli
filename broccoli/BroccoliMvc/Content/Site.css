@@ -835,6 +835,11 @@ hr {
 .grid table {
     width: 100%;
 }
+
+.grid td, .grid th, .grid span, .grid a {
+    font-family: Arial !important;
+    font-size: 13px !important;
+}
     
 .grid td, .grid th {
     border-left: 1px solid #ccc;
@@ -918,7 +923,7 @@ hr {
 
 .grid .broker .logo-container .broker-logo {
     position: absolute;
-    top: -7px;
+    top: -9px;
     left: -35px;
 }
 

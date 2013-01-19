@@ -102,7 +102,7 @@
                         </tr>
                     </tfoot>
                     <tbody>
-                        @foreach (var group in Model.Statistics)
+                        @foreach (var group in Model.StatisticsByHost)
                         {
                             <tr>
                                 
@@ -159,14 +159,90 @@
                     <input type="radio" id="radio7" name="radio-pie-chart" value="RegisteredCount" /><label for="radio7">Зарегиситрировались</label>
                 </div>
                 <br/>
-                <div id="chartdiv2" style="width:640px; height:400px;"></div>
+                <br/>
+                <div id="chartdiv2" style="width:680px; height:400px;"></div>
+                <div id="radioLineChart" class="type-user-radio">
+                    <input type="radio" id="radio8" name="radio-line-chart" value="GuestsCount" checked="checked" /><label for="radio8">Гости</label>
+                    <input type="radio" id="radio9" name="radio-line-chart" value="RegisteredCount" /><label for="radio9">Зарегиситрировались</label>
+                </div>
             </td>
         </tr>
     </table>
 </div>
+@* ReSharper disable ReturnValueOfPureMethodIsNotUsed *@
 <script>
-    var chartData = @(new HtmlString(Json.Encode(Model.Statistics)));
+    var chartData = @(new HtmlString(Json.Encode(Model.StatisticsByHost)));
     
+    var chartDataGuests = @(new HtmlString(Json.Encode(Model.StatisticsGuestsByDate)));
+    
+    var chartDataRegistered = @(new HtmlString(Json.Encode(Model.StatisticsRegisteredByDate)));
+
+    drawLineChart();
+
+    $("input[name='radio-line-chart']").change(function () {
+        drawLineChart();
+    });
+    
+    function drawLineChart() {
+        $('#chartdiv2').empty();
+
+        // SERIAL CHART
+        chart2 = new AmCharts.AmSerialChart();
+        chart2.addTitle("Статистика по времени", 16);
+        chart2.dataProvider = $("input[name='radio-line-chart']:checked").val() == "GuestsCount" ? chartDataGuests : chartDataRegistered;
+        chart2.categoryField = "Date";
+        chart2.startDuration = 0.5;
+        chart2.balloon.color = "#000000";
+
+        // AXES
+        // category
+        var categoryAxis = chart2.categoryAxis;
+        categoryAxis.fillAlpha = 1;
+        categoryAxis.fillColor = "#FAFAFA";
+        categoryAxis.gridAlpha = 0;
+        categoryAxis.axisAlpha = 0;
+        categoryAxis.gridPosition = "start";
+        categoryAxis.position = "top";
+
+        // value
+        var valueAxis = new AmCharts.ValueAxis();
+        valueAxis.title = $("input[name='radio-line-chart']:checked").val() == "GuestsCount" ? "Количество гостей" : "Количество зарег.";
+        valueAxis.dashLength = 5;
+        valueAxis.axisAlpha = 0;
+        valueAxis.minimum = 0;
+        //valueAxis.maximum = 6;
+        valueAxis.integersOnly = true;
+        valueAxis.gridCount = 10;
+        valueAxis.reversed = false; // this line makes the value axis reversed
+        chart2.addValueAxis(valueAxis);
+
+        // GRAPHS
+        @foreach (var host in Model.StatisticsByHost)
+        {
+            <text>
+                var graph = new AmCharts.AmGraph();
+                graph.title = "@host.HostName";
+                graph.valueField = "@host.HostName";
+                graph.balloonText = "[[title]]: [[value]]";
+                graph.bullet = "round";
+                chart2.addGraph(graph);
+            </text>
+        }
+
+        // LEGEND
+        var legend = new AmCharts.AmLegend();
+        legend.markerType = "circle";
+        chart2.addLegend(legend);
+        
+        // CURSOR
+        var chartCursor = new AmCharts.ChartCursor();
+        chartCursor.cursorPosition = "mouse";
+        chart2.addChartCursor(chartCursor);
+
+        // WRITE
+        chart2.write("chartdiv2");
+        $('tspan:contains("chart by amcharts.com")').parent().parent().hide();
+    }
 </script>
 <script type="text/javascript">
     document.deleteUrl = "@Url.Action("DeleteAccount", "PersonalCabinet")";
