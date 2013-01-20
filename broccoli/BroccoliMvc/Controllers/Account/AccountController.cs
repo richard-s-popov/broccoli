@@ -97,8 +97,8 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.Account
                         var hostCookie = Request.Cookies["Host"];
                         if (hostCookie != null)
                         {
-                            var host = Response.Cookies["Host"]["shortHost"];
-                            var fullHostUrl = Response.Cookies["Host"]["fullHostUrl"];
+                            var host = Request.Cookies["Host"]["shortHost"];
+                            var fullHostUrl = Request.Cookies["Host"]["fullHostUrl"];
 
                             var entity = new Referrer
                                 {
