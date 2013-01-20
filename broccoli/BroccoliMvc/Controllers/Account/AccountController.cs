@@ -117,7 +117,7 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.Account
 
                 _usersService.Insert(user);
 
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("LogOn", "Account");
             }
 
             return this.View("RegisterForm");
