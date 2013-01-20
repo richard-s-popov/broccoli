@@ -418,11 +418,11 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.PersonalCabinet
                 {
                     if (!dicGuests.ContainsKey(byHost.Key))
                     {
-                        dicGuests.Add(byHost.Key, "0");
+                        dicGuests.Add(byHost.Key == "undefined" ? "прочие*" : byHost.Key, "0");
                     }
                     if (!dicReg.ContainsKey(byHost.Key))
                     {
-                        dicReg.Add(byHost.Key, "0");
+                        dicReg.Add(byHost.Key == "undefined" ? "прочие*" : byHost.Key, "0");
                     }
                 }
 
