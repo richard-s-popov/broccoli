@@ -1,12 +1,11 @@
 ﻿<table class="menu">
     <tr>
         <td id="indexPage" class="item" onclick="window.location = '@Url.Action("Index", "Home")'">Главная</td>
-        <td class="item">Онлайн-консультация</td>
         <td id="commentsPage" class="item">Отзывы</td>
         @if (HttpContext.Current.User.Identity.IsAuthenticated)
         {
             <td id="personalCabinetPage" class="item" onclick="window.location = '@Url.Action("Index", "PersonalCabinet")'">Личный кабинет</td>
-            <td class="item" onclick="window.location = '@Url.Action("Logout", "Account")'">Выход</td>
+            <td class="item last" onclick="window.location = '@Url.Action("Logout", "Account")'">Выход</td>
         }
         else
         {
@@ -23,7 +22,7 @@
                                         @Html.Label("Email")
                                     </td>
                                     <td>
-                                        @Html.TextBox("login")
+                                        @Html.TextBox("login", null, new { @class = "inputs" })
                                     </td>
                                 </tr>
                                 <tr>
@@ -35,21 +34,21 @@
                                         @Html.Label("Пароль")
                                     </td>
                                     <td>
-                                        @Html.TextBox("pass", null, new { @type = "password" })
+                                        @Html.TextBox("pass", null, new { @type = "password", @class = "inputs" })
                                     </td>
                                 </tr>
                             </table>
                             <a>Забыли пароль?</a>
+                            <button id="submit" class="green-button">Вход</button>
                             <div class="controls">
                                 @Html.Label("Запомнить меня",new { @for = "rememberMe" })
                                 @Html.CheckBox("rememberMe", false, new { @style = "float: right;" })
                             </div>
-                            <button id="submit" class="green-button">Вход</button>
                         }
                     </div>
                 </div>
             </td>
-            <td id="registerPage" class="item">
+            <td id="registerPage" class="item last">
                 <button class="green-button" onclick="window.location = '@Url.Action("RegisterForm", "Account")'">Регистрация</button>
             </td>
         }

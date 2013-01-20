@@ -8,8 +8,7 @@
     $("#accountsTable").stupidtable();
     $('#dateFrom').datepicker();
     $('#dateTo').datepicker();
-    $('#showByDate').button('destroy');
-    $('#showByDate').button();
+    $('.period-date button').button();
 
     $("input[name='radio-period']").change(function () {
         var selectedRadio = $("input[name='radio-period']:checked").val();
@@ -32,7 +31,7 @@
         }
     });
 
-    $('#showByDate').unbind().click(function() {
+    $('.period-date button').click(function() {
         var startDate = $('#dateFrom').datepicker('getDate');
         var endDate = $('#dateTo').datepicker('getDate');
         

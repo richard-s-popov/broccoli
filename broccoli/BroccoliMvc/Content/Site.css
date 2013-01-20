@@ -18,29 +18,15 @@ time, mark, audio, video {
 	font-size: 80%;
 	font: inherit;
 	vertical-align: baseline;
-	font-family: Segoe UI Light, Lucida Sans, Tahoma, Arial, Sans-serif;
+	font-family: Arial, Tahoma, Sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Segoe UI Light;
 }
 @-moz-document url-prefix()
 {
-    html, body, div, span, applet, object, iframe,
-    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-    a, abbr, acronym, address, big, cite, code,
-    del, dfn, em, img, ins, kbd, q, s, samp,
-    small, strike, strong, sub, sup, tt, var,
-    b, u, i, center,
-    dl, dt, dd, ol, ul, li,
-    fieldset, form, label, legend,
-    table, caption, tbody, tfoot, thead, tr, th, td,
-    article, aside, canvas, details, embed, 
-    figure, figcaption, footer, header, hgroup, 
-    menu, nav, output, ruby, section, summary,
-    time, mark, audio, video {
-	    margin: 0;
-	    padding: 0;
-	    border: 0;
-	    font-size: 80%;
-	    font: inherit;
-	    vertical-align: baseline;
+    h1, h2, h3, h4, h5, h6 {
 	    font-family: Segoe UI, Lucida Sans, Tahoma, Arial, Sans-serif;
         font-weight: lighter;
     }
@@ -105,11 +91,15 @@ h6 {
     font-size: 14px;
 }
 
-body a  {color: #272727; cursor: pointer; text-decoration:underline;font-size:14px;}
-body a:link {color: #272727; cursor: pointer; text-decoration:underline;font-size:14px;}
-body a:visited{color: #272727;font-size:14px;text-decoration:underline;}
-body a:hover{color: black;text-decoration:none;font-size:14px;}
-body a:active {color: black;text-decoration:none;font-size:14px;}
+p {
+    font-size: 13px;
+}
+
+body a  {color: #272727; cursor: pointer; text-decoration:underline;font-size:13px;}
+body a:link {color: #272727; cursor: pointer; text-decoration:underline;font-size:13px;}
+body a:visited{color: #272727;font-size:13px;text-decoration:underline;}
+body a:hover{color: black;text-decoration:none;font-size:13px;}
+body a:active {color: black;text-decoration:none;font-size:13px;}
 
 hr {
     margin: 0 -2em 2.5em -2em;
@@ -201,12 +191,12 @@ hr {
 .header .green-line .logo-container img {
     position: absolute;
     top: 25px;
-    left: -5px;
+    left: 35px;
 }
 
 .header .green-line .logo-container .logo-text {
     position: absolute;
-    margin-left: 92px;
+    margin-left: 132px;
     margin-top: 32px;
     z-index: 2;
     font-family: 'GeoSlb712CMdBTBold'!important;
@@ -253,7 +243,7 @@ hr {
 }
 
 .header .white-line .main-menu .menu .last {
-    margin-right: 25px;
+    margin-right: 0;
 }
 
 .header .light-line {
@@ -282,6 +272,10 @@ hr {
     -webkit-transition: all 0.2s ease;
     -moz-transition: all 0.2s ease;
     transition: all 0.2s ease;
+}
+
+.header .light-line .secondary-menu .menu .last {
+    padding-right: 0;
 }
 
 .header .light-line .secondary-menu .menu #signInBtn {
@@ -324,7 +318,7 @@ hr {
 .main .center-content .steps .step {
     display: block;
     float: left;
-    padding: 15px 25px;
+    padding: 15px 10px;
     margin-right: 10px;
     margin-left: 10px;
     text-align: center;
@@ -332,7 +326,7 @@ hr {
     -webkit-border-radius: 3px;
     border-radius: 3px;
     background-color: #F8F8F8;
-    width: 200px;
+    width: 230px;
     cursor: pointer;
 }
 
@@ -344,6 +338,7 @@ hr {
 
 .main .center-content .steps .active {
     color: #98cb66;
+    font-weight: bold;
 }
 
 .header .logo-flag {
@@ -507,6 +502,12 @@ hr {
     position: absolute;
     margin-top: 165px;
     margin-left: 120px;
+}
+
+.content .main .open-account-instructions .take-your-system {
+    width: 917px;
+    margin-top: 50px;
+    text-align: center;
 }
 
 .button a {
@@ -712,12 +713,16 @@ hr {
 }
 
 .login-window .login-window-body label {
-    font-size: 14px;
+    font-size: 13px;
 }
 
 .login-window .login-window-body .labels {
     width: 80px;
     margin-top: 5px;
+}
+
+.login-window .login-window-body .inputs {
+    width: 151px;
 }
 
 .login-window .login-window-body .indent {
@@ -732,13 +737,15 @@ hr {
 }
 
 .login-window .login-window-body #loginForm .controls {
-    width: 130px;
+    width: 125px;
     height: 20px;
     float: right;
+    margin-top: 5px;
 }
 
 .login-window .login-window-body #loginForm a {
     float: right;
+    margin: 3px 5px 10px 0;
 }
 
 .login-window .login-window-body #loginForm label {
@@ -751,6 +758,7 @@ hr {
 
 .cabinet-menu {
     width: 20%;
+    padding-left: 44px;
 }
 
 .cabinet-menu h4 {
@@ -787,7 +795,7 @@ hr {
 .cabinet-main {
     width: 80%;
     padding-top: 25px;
-    padding-left: 90px;
+    padding-left: 40px;
 }
 
 .cabinet-main #activateForm table tr {
@@ -937,7 +945,7 @@ hr {
 
 .invite-list {
     width: 630px;
-    margin: 10px 0 10px 0;
+    margin: 10px 0 0 0;
 }
 
 .invite-list th {
@@ -1014,6 +1022,7 @@ hr {
 .alt-way-container .subject {
     width: 628px;
     margin-bottom: 10px;
+    margin-top: 20px;
 }
 
 .alt-way-container textarea {

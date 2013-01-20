@@ -2,6 +2,7 @@
     ViewBag.Title = "Статистика";
     Layout = "~/Views/Shared/_LayoutMin.cshtml";
 }
+@using System.Text.RegularExpressions
 @model BroccoliTrade.Web.BroccoliMvc.Models.PersonalCabinet.StatisticsListPoco
 
 @section head {
@@ -83,7 +84,7 @@
                     <span class="period-date">
                         <span>С:</span><input id="dateFrom" type="text" value="@ViewBag.DateFrom"/>
                         <span>По:</span><input id="dateTo" type="text" value="@ViewBag.DateTo"/>
-                        <button id="showByDate">Показать</button>
+                        <button>Показать</button>
                     </span>
                 </div>
                 <table id="accountsTable" class="grid">
@@ -169,13 +170,12 @@
         </tr>
     </table>
 </div>
-@* ReSharper disable ReturnValueOfPureMethodIsNotUsed *@
 <script>
     var chartData = @(new HtmlString(Json.Encode(Model.StatisticsByHost)));
     
-    var chartDataGuests = @(new HtmlString(Json.Encode(Model.StatisticsGuestsByDate)));
-    
-    var chartDataRegistered = @(new HtmlString(Json.Encode(Model.StatisticsRegisteredByDate)));
+    var chartDataGuests = @(new HtmlString(Json.Encode(Model.StatisticsGuestsByDate).Replace("\"new", "new").Replace(")\"", ")")));
+
+    var chartDataRegistered = @(new HtmlString(Json.Encode(Model.StatisticsRegisteredByDate).Replace("\"new", "new").Replace(")\"", ")")));
 
     drawLineChart();
 
@@ -201,8 +201,15 @@
         categoryAxis.fillColor = "#FAFAFA";
         categoryAxis.gridAlpha = 0;
         categoryAxis.axisAlpha = 0;
+        categoryAxis.parseDates = true;
+        categoryAxis.minPeriod = "DD";
         categoryAxis.gridPosition = "start";
         categoryAxis.position = "top";
+        
+        AmCharts.dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+        AmCharts.shortDayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+        AmCharts.monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+        AmCharts.shortMonthNames = ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн', 'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек'];
 
         // value
         var valueAxis = new AmCharts.ValueAxis();

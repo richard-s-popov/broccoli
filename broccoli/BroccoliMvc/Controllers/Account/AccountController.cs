@@ -34,6 +34,11 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.Account
 
         public ActionResult LogOn()
         {
+            if (HttpContext.Request.IsAuthenticated)
+            {
+                return RedirectToAction("Index", "PersonalCabinet");
+            }
+
             return this.View();
         }
 

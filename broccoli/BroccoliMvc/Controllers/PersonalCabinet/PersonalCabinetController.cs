@@ -310,6 +310,8 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.PersonalCabinet
         {
             var currentUser = _usersService.GetUserByLogin(HttpContext.User.Identity.Name);
             IEnumerable<Referrer> statistics;
+            DateTime dateFrom;
+            DateTime dateTo;
 
             if (start == null && end == null || start > end)
             {
@@ -321,31 +323,45 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.PersonalCabinet
                             DateTime.Today, 
                             DateTime.Now).ToList();
                         ViewBag.Period = "today";
+                        dateFrom = DateTime.Today;
+                        dateTo = DateTime.Now;
                         break;
+
                     case "yesterday":
                         statistics = _statService.GetReferrersByUserIdAndPeriod(
                             currentUser.Id, 
                             DateTime.Today.AddDays(-1), 
                             DateTime.Today).ToList();
                         ViewBag.Period = "yesterday";
+                        dateFrom = DateTime.Today.AddDays(-1);
+                        dateTo = DateTime.Today;
                         break;
+
                     case "week":
                         statistics = _statService.GetReferrersByUserIdAndPeriod(
                             currentUser.Id, 
                             DateTime.Now.AddDays(-7), 
                             DateTime.Now).ToList();
                         ViewBag.Period = "week";
+                        dateFrom = DateTime.Now.AddDays(-7);
+                        dateTo = DateTime.Now;
                         break;
+
                     case "month":
                         statistics = _statService.GetReferrersByUserIdAndPeriod(
                             currentUser.Id, 
                             DateTime.Now.AddMonths(-1), 
                             DateTime.Now).ToList();
                         ViewBag.Period = "month";
+                        dateFrom = DateTime.Now.AddMonths(-1);
+                        dateTo = DateTime.Now;
                         break;
+
                     default:
                         ViewBag.Period = "allTime";
                         statistics = _statService.GetReferrersByUserId(currentUser.Id).ToList();
+                        dateFrom = statistics.Min(x => x.Date);
+                        dateTo = statistics.Max(x => x.Date);
                         break;
                 }
 
@@ -355,9 +371,13 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.PersonalCabinet
             else
             {
                 statistics = _statService.GetReferrersByUserIdAndPeriod(currentUser.Id, start, end).ToList();
+                
                 ViewBag.Period = "datePeriod";
                 ViewBag.DateFrom = start.GetValueOrDefault().ToShortDateString();
                 ViewBag.DateTo = end.GetValueOrDefault().ToShortDateString();
+
+                dateFrom = (DateTime) start;
+                dateTo = (DateTime) end;
             }
 
             var model = new StatisticsListPoco
@@ -383,28 +403,31 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.PersonalCabinet
                     StatisticsRegisteredByDate = new List<IDictionary<string, string>>()
                 };
 
-            foreach (var statistic in statistics.Where(r => !r.Registered).GroupBy(x => x.Date.Date))
+            for (var date = dateFrom.Subtract(dateFrom.TimeOfDay); date <= dateTo; date = date.AddDays(1))
             {
-                var dic = new Dictionary<string, string> {{"Date", statistic.First().Date.Date.ToString("d")}};
+                var dicGuests = new Dictionary<string, string> { { "Date", ToJSGenDate(date) } };
+                var dicReg = new Dictionary<string, string> { { "Date", ToJSGenDate(date) } };
 
-                foreach (var referrer in statistic.GroupBy(x => x.Host))
+                foreach (var byHost in statistics.Where(x => x.Date.Date == date).GroupBy(group => group.Host))
                 {
-                    dic.Add(referrer.Key == "undefined" ? "прочие*" : referrer.Key, referrer.Count().ToString());
+                    dicGuests.Add(byHost.Key == "undefined" ? "прочие*" : byHost.Key, byHost.Count(x => !x.Registered).ToString());
+                    dicReg.Add(byHost.Key == "undefined" ? "прочие*" : byHost.Key, byHost.Count(x => x.Registered).ToString());
                 }
 
-                model.StatisticsGuestsByDate.Add(dic);
-            }
-
-            foreach (var statistic in statistics.Where(r => r.Registered).GroupBy(x => x.Date.Date))
-            {
-                var dic = new Dictionary<string, string> {{"Date", statistic.First().Date.Date.ToString("d")}};
-
-                foreach (var referrer in statistic.GroupBy(x => x.Host))
+                foreach (var byHost in statistics.GroupBy(group => group.Host))
                 {
-                    dic.Add(referrer.Key == "undefined" ? "прочие*" : referrer.Key, referrer.Count().ToString());
+                    if (!dicGuests.ContainsKey(byHost.Key))
+                    {
+                        dicGuests.Add(byHost.Key, "0");
+                    }
+                    if (!dicReg.ContainsKey(byHost.Key))
+                    {
+                        dicReg.Add(byHost.Key, "0");
+                    }
                 }
 
-                model.StatisticsRegisteredByDate.Add(dic);
+                model.StatisticsGuestsByDate.Add(dicGuests);
+                model.StatisticsRegisteredByDate.Add(dicReg);
             }
 
             return View(model);
@@ -445,6 +468,11 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.PersonalCabinet
 
             this.ViewData["AccountNotificationsCount"] = accountNotifications;
             this.ViewData["TradingSystemNotificationsCount"] = tradingSystemNotifications;
+        }
+
+        private string ToJSGenDate(DateTime date)
+        {
+            return string.Format("new Date({0}, {1}, {2})", date.Year, date.Month - 1, date.Day);
         }
 
         protected override void Dispose(bool disposing)

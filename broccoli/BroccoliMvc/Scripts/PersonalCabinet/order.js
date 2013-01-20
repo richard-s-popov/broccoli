@@ -14,7 +14,7 @@
             left: pos.left + ele.width() + 20
         });
 
-        var patt = /^[0-9]$/i;
+        var patt = /^[0-9]*$/i;
 
         if (!patt.test(ele.val())) {
             error = true;
