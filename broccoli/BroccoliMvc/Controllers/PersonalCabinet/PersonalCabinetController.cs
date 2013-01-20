@@ -416,11 +416,11 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.PersonalCabinet
 
                 foreach (var byHost in statistics.GroupBy(group => group.Host))
                 {
-                    if (!dicGuests.ContainsKey(byHost.Key))
+                    if (!dicGuests.ContainsKey(byHost.Key == "undefined" ? "прочие*" : byHost.Key))
                     {
                         dicGuests.Add(byHost.Key == "undefined" ? "прочие*" : byHost.Key, "0");
                     }
-                    if (!dicReg.ContainsKey(byHost.Key))
+                    if (!dicReg.ContainsKey(byHost.Key == "undefined" ? "прочие*" : byHost.Key))
                     {
                         dicReg.Add(byHost.Key == "undefined" ? "прочие*" : byHost.Key, "0");
                     }
