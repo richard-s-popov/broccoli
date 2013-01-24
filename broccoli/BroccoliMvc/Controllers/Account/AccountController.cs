@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -29,6 +30,59 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.Account
 
         public ActionResult RegisterForm()
         {
+            var days = new List<SelectListItem>
+                {
+                    new SelectListItem {Text = "-", Value = "0"}
+                };
+            days.AddRange(Enumerable.Range(1, 31).Select(x => new SelectListItem
+                {
+                    Text = x.ToString(),
+                    Value = x.ToString()
+                }));
+
+            var months = new List<SelectListItem>
+                {
+                    new SelectListItem {Text = "-", Value = "0"}
+                };
+            if (DateTimeFormatInfo.CurrentInfo != null)
+            {
+                months.AddRange(DateTimeFormatInfo
+                                    .CurrentInfo
+                                    .MonthNames
+                                    .Select((monthName, index) => new SelectListItem
+                                        {
+                                            Value = (index + 1).ToString(),
+                                            Text = monthName
+                                        }));
+            }
+            else
+            {
+                months.AddRange(DateTimeFormatInfo
+                                    .InvariantInfo
+                                    .MonthNames
+                                    .Select((monthName, index) => new SelectListItem
+                                    {
+                                        Value = (index + 1).ToString(),
+                                        Text = monthName
+                                    }));
+            }
+            months.Remove(months.Last());
+
+            var years = new List<SelectListItem>
+                {
+                    new SelectListItem {Text = "-", Value = "0"}
+                };
+            years.AddRange(Enumerable.Range(DateTime.Now.Year - 60, 42)
+                .Select(x => new SelectListItem
+                    {
+                        Text = x.ToString(),
+                        Value = x.ToString()
+                    }));
+
+            ViewBag.Days = new SelectList(days, "Value", "Text");
+            ViewBag.Month = new SelectList(months, "Value", "Text");
+            ViewBag.Years = new SelectList(years, "Value", "Text");
+
             return this.View();
         }
 

@@ -425,7 +425,7 @@ hr {
 .content .banner h2 {
     font-family: 'GeoSlb712CMdBTBold'!important;
     color: #FFFFFF;
-    font-size: 33px;
+    font-size: 37px;
     margin-bottom: 10px;
 }
 
@@ -433,6 +433,12 @@ hr {
     font-family: Segoe UI Light;
     color: #FFFFFF;
     font-size: 18px;
+}
+
+.content .banner a {
+    color: #FFFFFF;
+    margin-top: 10px;
+    display: block;
 }
 
 .content .banner.small .action {

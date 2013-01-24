@@ -81,7 +81,10 @@
                         @Html.Label("Дата рождения *")
                     </td>
                     <td>
-                        @Html.TextBoxFor(m => m.BirthDay, new { @id = "birthday" })
+                        @*@Html.TextBoxFor(m => m.BirthDay, new { @id = "birthday" })*@
+                        @Html.DropDownList("Day", (IEnumerable<SelectListItem>)ViewBag.Days)
+                        @Html.DropDownList("Month", (IEnumerable<SelectListItem>)ViewBag.Months)
+                        @Html.DropDownList("Year", (IEnumerable<SelectListItem>)ViewBag.Years)
                     </td>
                 </tr>
                 <tr>
