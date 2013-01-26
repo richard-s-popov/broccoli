@@ -17,7 +17,7 @@
             <img class="broccoli" src="@Url.Content("~/Content/img/broccoli.png")"/>
             <div class="text">
                 <h2>Здоровые инвестиции от 5 до 100% в месяц!</h2>
-                <p>От недельных до многолетних инвестиций. Для дерзких и умеренных инвесторов!</p>
+                <p>От недельных до многолетних инвестиций. Для дерзких и консервативных инвесторов!</p>
                 <a>Подробнее</a>
             </div>
         </div>
@@ -33,7 +33,7 @@
         <div class="slider-wrap">
             <div id="slider1" class="csw">
                 <div class="panelContainer">
-                    <div class="panel" title="Первая панель">
+                    <div class="panel">
                         <h3>Схема работы. Видео инструкция:</h3>
                         <div class="gal">
                             <a class="various fancybox.iframe" title="The Falltape" href="http://www.youtube.com/embed/ZeStnz5c2GI?fs=1&amp;autoplay=1"><img src="@Url.Content("~/Content/img/img2s.jpg")"></a>
@@ -50,7 +50,7 @@
                             <a href="@Url.Action("RegisterForm", "Account")" target="_blank"><input id="regLink" class="large" type="button" value="Регистрация" /></a>
                         </span>
                     </div>
-                    <div class="panel" title="Вторая панель">
+                    <div class="panel">
                         <table class="open-account-instructions hr-shadow">
                             <tr>
                                 <td class="description">
@@ -69,16 +69,45 @@
                             </tr>
                         </table>
                     </div>
-                    <div class="panel" title="Третья панель">
-                        <table class="open-account-instructions hr-shadow">
-                            <tr>
-                                <td>
-                                    <div class="take-your-system">
-                                        Получите свой советник что ли...
-                                    </div>
-                                </td>
-                            </tr>
-                        </table>
+                    <div class="panel">
+                        <div id="pricing-table">
+                            <div class="plan plan1">
+                                <div class="price-header">Money +</div>
+                                <div class="price">0</div>  
+                                <div class="monthly">Бесплатный</div>      
+                                <ul>
+                                    <li><b>10GB</b> пространства на диске</li>
+                                    <li><b>100GB</b> месячный трафик</li>
+                                    <li><b>20</b> почтовых ящиков</li>
+			                        <li><b>Сколько хочешь</b> поддоменов</li>			
+                                </ul>
+                                <a class="signup" href="@Url.Action("TradingSystemOrder", "PersonalCabinet", new { id = 1 })">Получить</a>         
+                            </div >
+                            <div class="plan plan2">
+                                <div class="price-header">Garanted</div>
+                                <div class="price">$100</div>
+                                <div class="monthly">в месяц</div>  
+                                <ul>
+                                    <li><b>5GB</b> пространства на диске</li>
+                                    <li><b>50GB</b> месячный трафик</li>
+                                    <li><b>10</b> почтовых ящиков</li>
+			                        <li><b>Сколько хочешь</b> поддоменов</li>			
+                                </ul>
+                                <a class="signup" href="@Url.Action("TradingSystemOrder", "PersonalCabinet", new { id = 2 })">Получить</a>            
+                            </div>
+                            <div class="plan plan3 popular-plan">
+                                <div class="price-header">Max trade</div>
+                                <div class="price">$1000</div>
+                                <div class="monthly">в месяц</div>
+                                <ul>
+                                    <li><b>3GB</b> пространства на диске</li>
+                                    <li><b>25GB</b> месячный трафик</li>
+                                    <li><b>5</b> почтовых ящиков</li>
+			                        <li><b>Сколько хочешь</b> поддоменов</li>			
+                                </ul>
+                                <a class="signup" href="@Url.Action("TradingSystemOrder", "PersonalCabinet", new { id = 3 })">Получить</a>        
+                            </div>	
+                        </div>
                     </div>
                 </div>
             </div>

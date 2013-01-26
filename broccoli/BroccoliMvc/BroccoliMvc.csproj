@@ -336,6 +336,7 @@
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Views\Shared\MainMenu.cshtml" />
     <Content Include="Views\PersonalCabinet\Statistics.cshtml" />
+    <Content Include="Views\Home\BrokerInfo.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
