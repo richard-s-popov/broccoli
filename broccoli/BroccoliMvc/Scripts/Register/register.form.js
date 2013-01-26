@@ -28,7 +28,28 @@
             }
         },
         'birthday': function () {
-            
+            $('body').append('<div id="birthdayInfo" class="info"></div>');
+            var birthday = $('#birthdayInfo');
+            var ele = $('#birthday');
+            var pos = ele.parent().offset();
+            ele.val($('#Day :selected').val() + '.' + $('#Month :selected').val() + '.' + $('#Year :selected').val());
+
+            birthday.css({
+                top: pos.top + 7,
+                left: pos.left + ele.width() + 25
+            });
+            if ($('#Day :selected').val() == '0' || $('#Month :selected').val() == '0' || $('#Year :selected').val() == '0') {
+                jVal.errors = true;
+                birthday.addClass('error').html('Выберите дату рождения').show();
+                ele.removeClass('normal').addClass('wrong');
+            } else if (!DateIsValid(ele.val())) {
+                jVal.errors = true;
+                birthday.addClass('error').html('Такая дата не существует').show();
+                ele.removeClass('normal').addClass('wrong').css({ 'font-weight': 'normal' });
+            } else {
+                birthday.removeClass('error').html('<img src="' + src + '" />').show();
+                ele.removeClass('wrong').addClass('normal');
+            }
         },
         'email': function () {
             $('body').append('<div id="emailInfo" class="info"></div>');
@@ -288,3 +309,16 @@
         }
     });
 });
+
+function DateIsValid(text) {
+    var comp = text.split('.');
+    var m = parseInt(comp[0], 10);
+    var d = parseInt(comp[1], 10);
+    var y = parseInt(comp[2], 10);
+    var date = new Date(y,m-1,d);
+    if (date.getFullYear() == y && date.getMonth() + 1 == m && date.getDate() == d) {
+        return true;
+    } else {
+        return false;
+    }
+}

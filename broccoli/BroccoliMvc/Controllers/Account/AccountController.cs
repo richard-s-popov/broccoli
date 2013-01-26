@@ -72,7 +72,7 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.Account
                 {
                     new SelectListItem {Text = "-", Value = "0"}
                 };
-            years.AddRange(Enumerable.Range(DateTime.Now.Year - 60, 42)
+            years.AddRange(Enumerable.Range(DateTime.Now.Year - 60, 42).OrderByDescending(x => x)
                 .Select(x => new SelectListItem
                     {
                         Text = x.ToString(),

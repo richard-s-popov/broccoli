@@ -10,10 +10,6 @@
     <script type="text/javascript" src="@Url.Content("~/Scripts/Register/register.form.js")"></script>
 }
 
-@section navigationMenu {
-    
-}
-
 <div class="banner small">
     <div class="action">
         <font>Регистрация</font>
@@ -81,10 +77,10 @@
                         @Html.Label("Дата рождения *")
                     </td>
                     <td>
-                        @*@Html.TextBoxFor(m => m.BirthDay, new { @id = "birthday" })*@
                         @Html.DropDownList("Day", (IEnumerable<SelectListItem>)ViewBag.Days)
                         @Html.DropDownList("Month", (IEnumerable<SelectListItem>)ViewBag.Months)
                         @Html.DropDownList("Year", (IEnumerable<SelectListItem>)ViewBag.Years)
+                        @Html.HiddenFor(m => m.BirthDay, new { @id = "birthday" })
                     </td>
                 </tr>
                 <tr>
