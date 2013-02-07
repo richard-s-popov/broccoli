@@ -1,0 +1,16 @@
+C:\work\broccoli\broccoli\Domain\bin\Debug\BroccoliTrade.Domain.dll.config
+C:\work\broccoli\broccoli\Domain\bin\Debug\BroccoliTrade.Domain.dll
+C:\work\broccoli\broccoli\Domain\bin\Debug\BroccoliTrade.Domain.pdb
+C:\work\broccoli\broccoli\Domain\bin\Debug\EntityFramework.dll
+C:\work\broccoli\broccoli\Domain\bin\Debug\EntityFramework.xml
+C:\work\broccoli\broccoli\Domain\obj\Debug\BroccoliTrade.Domain.dll
+C:\work\broccoli\broccoli\Domain\obj\Debug\BroccoliTrade.Domain.pdb
+C:\work\broccoli\broccoli\Domain\obj\Debug\Domain.csprojResolveAssemblyReference.cache
+C:\work\broccoli\broccoli.partner\Domain\bin\Debug\BroccoliTrade.Domain.dll.config
+C:\work\broccoli\broccoli.partner\Domain\bin\Debug\BroccoliTrade.Domain.dll
+C:\work\broccoli\broccoli.partner\Domain\bin\Debug\BroccoliTrade.Domain.pdb
+C:\work\broccoli\broccoli.partner\Domain\bin\Debug\EntityFramework.dll
+C:\work\broccoli\broccoli.partner\Domain\bin\Debug\EntityFramework.xml
+C:\work\broccoli\broccoli.partner\Domain\obj\Debug\Domain.csprojResolveAssemblyReference.cache
+C:\work\broccoli\broccoli.partner\Domain\obj\Debug\BroccoliTrade.Domain.dll
+C:\work\broccoli\broccoli.partner\Domain\obj\Debug\BroccoliTrade.Domain.pdb

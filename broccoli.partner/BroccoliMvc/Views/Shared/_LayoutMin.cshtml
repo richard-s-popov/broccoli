@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/themes/jquery-ui/jquery-ui-1.9.2.custom.css")" rel="stylesheet" />
+    <script src="@Url.Content("~/Scripts/jquery-1.7.1.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/jquery-ui-1.8.20.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/Main/main.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/vk_up_button/button.js")"></script>
+    @RenderSection("head", required:false)
+</head>
+    <body>
+        <div class="header small">
+            <div class="green-line">
+                <div class="logo-container">
+                    <img src="@Url.Content("~/Content/img/temp_logo.png")"/>
+                    <a href="@Url.Action("Index", "Home")" class="logo-text">Broccoli<br />Trade</a>
+                </div>
+            </div>
+            <div class="white-line">
+                @Html.Partial("MainMenu")
+            </div>
+            <div class="light-line">
+                <div class="secondary-menu">
+                    @Html.Partial("Menu")
+                    @RenderSection("navigationMenu", required:false)
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            @RenderBody()    
+        </div>
+        <div class="footer">
+        </div>
+        <div class="opacity"></div>
+        <div id="top-link-full">
+            <div id="top-link">
+                <a href="#top">Наверх</a>
+            </div>
+        </div>
+    </body>
+</html>

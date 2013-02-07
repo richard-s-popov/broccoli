@@ -1,0 +1,90 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logics", "Logics\Logics.csproj", "{E15039AB-22FD-4747-B326-208B0967492F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{B2CF6DF9-AAF6-4AB3-9830-9F428EDD9D73}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{2476127A-8147-4D9B-8A7B-0E890E8BBC8A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BroccoliMvc", "BroccoliMvc\BroccoliMvc.csproj", "{389D565B-72CB-4F52-AEB6-8D9FE26A0BB7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MSMQ", "MSMQ", "{11213FC6-C45C-48B8-83F2-D60F844A2987}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebsiteEmailProcessor", "WebsiteEmailProcessor\WebsiteEmailProcessor.csproj", "{C3BB1027-FC3D-47FD-B07A-8712DE2F84CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebsiteEmailQueueProcessor", "WebsiteEmailQueueProcessor\WebsiteEmailQueueProcessor.csproj", "{CF429460-E603-4069-8DA9-2EB5488E0F79}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E15039AB-22FD-4747-B326-208B0967492F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E15039AB-22FD-4747-B326-208B0967492F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E15039AB-22FD-4747-B326-208B0967492F}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{E15039AB-22FD-4747-B326-208B0967492F}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{E15039AB-22FD-4747-B326-208B0967492F}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{E15039AB-22FD-4747-B326-208B0967492F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E15039AB-22FD-4747-B326-208B0967492F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E15039AB-22FD-4747-B326-208B0967492F}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{E15039AB-22FD-4747-B326-208B0967492F}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{E15039AB-22FD-4747-B326-208B0967492F}.Release|x86.ActiveCfg = Release|Any CPU
+		{2476127A-8147-4D9B-8A7B-0E890E8BBC8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2476127A-8147-4D9B-8A7B-0E890E8BBC8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2476127A-8147-4D9B-8A7B-0E890E8BBC8A}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{2476127A-8147-4D9B-8A7B-0E890E8BBC8A}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{2476127A-8147-4D9B-8A7B-0E890E8BBC8A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{2476127A-8147-4D9B-8A7B-0E890E8BBC8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2476127A-8147-4D9B-8A7B-0E890E8BBC8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2476127A-8147-4D9B-8A7B-0E890E8BBC8A}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{2476127A-8147-4D9B-8A7B-0E890E8BBC8A}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{2476127A-8147-4D9B-8A7B-0E890E8BBC8A}.Release|x86.ActiveCfg = Release|Any CPU
+		{389D565B-72CB-4F52-AEB6-8D9FE26A0BB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{389D565B-72CB-4F52-AEB6-8D9FE26A0BB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{389D565B-72CB-4F52-AEB6-8D9FE26A0BB7}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{389D565B-72CB-4F52-AEB6-8D9FE26A0BB7}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{389D565B-72CB-4F52-AEB6-8D9FE26A0BB7}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{389D565B-72CB-4F52-AEB6-8D9FE26A0BB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{389D565B-72CB-4F52-AEB6-8D9FE26A0BB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{389D565B-72CB-4F52-AEB6-8D9FE26A0BB7}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{389D565B-72CB-4F52-AEB6-8D9FE26A0BB7}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{389D565B-72CB-4F52-AEB6-8D9FE26A0BB7}.Release|x86.ActiveCfg = Release|Any CPU
+		{C3BB1027-FC3D-47FD-B07A-8712DE2F84CE}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{C3BB1027-FC3D-47FD-B07A-8712DE2F84CE}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{C3BB1027-FC3D-47FD-B07A-8712DE2F84CE}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{C3BB1027-FC3D-47FD-B07A-8712DE2F84CE}.Debug|x86.ActiveCfg = Debug|x86
+		{C3BB1027-FC3D-47FD-B07A-8712DE2F84CE}.Debug|x86.Build.0 = Debug|x86
+		{C3BB1027-FC3D-47FD-B07A-8712DE2F84CE}.Release|Any CPU.ActiveCfg = Release|x86
+		{C3BB1027-FC3D-47FD-B07A-8712DE2F84CE}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{C3BB1027-FC3D-47FD-B07A-8712DE2F84CE}.Release|Mixed Platforms.Build.0 = Release|x86
+		{C3BB1027-FC3D-47FD-B07A-8712DE2F84CE}.Release|x86.ActiveCfg = Release|x86
+		{C3BB1027-FC3D-47FD-B07A-8712DE2F84CE}.Release|x86.Build.0 = Release|x86
+		{CF429460-E603-4069-8DA9-2EB5488E0F79}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{CF429460-E603-4069-8DA9-2EB5488E0F79}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{CF429460-E603-4069-8DA9-2EB5488E0F79}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{CF429460-E603-4069-8DA9-2EB5488E0F79}.Debug|x86.ActiveCfg = Debug|x86
+		{CF429460-E603-4069-8DA9-2EB5488E0F79}.Debug|x86.Build.0 = Debug|x86
+		{CF429460-E603-4069-8DA9-2EB5488E0F79}.Release|Any CPU.ActiveCfg = Release|x86
+		{CF429460-E603-4069-8DA9-2EB5488E0F79}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{CF429460-E603-4069-8DA9-2EB5488E0F79}.Release|Mixed Platforms.Build.0 = Release|x86
+		{CF429460-E603-4069-8DA9-2EB5488E0F79}.Release|x86.ActiveCfg = Release|x86
+		{CF429460-E603-4069-8DA9-2EB5488E0F79}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{389D565B-72CB-4F52-AEB6-8D9FE26A0BB7} = {B2CF6DF9-AAF6-4AB3-9830-9F428EDD9D73}
+		{C3BB1027-FC3D-47FD-B07A-8712DE2F84CE} = {11213FC6-C45C-48B8-83F2-D60F844A2987}
+		{CF429460-E603-4069-8DA9-2EB5488E0F79} = {11213FC6-C45C-48B8-83F2-D60F844A2987}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		EnterpriseLibraryConfigurationToolBinariesPath = packages\Unity.2.1.505.2\lib\NET35
+	EndGlobalSection
+EndGlobal

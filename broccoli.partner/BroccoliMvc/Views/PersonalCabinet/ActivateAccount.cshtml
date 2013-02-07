@@ -1,0 +1,45 @@
+﻿@{
+    ViewBag.Title = "Активация счета";
+    Layout = "~/Views/Shared/_LayoutMin.cshtml";
+}
+
+
+@section head {
+    <script type="text/javascript" src="@Url.Content("~/Scripts/PersonalCabinet/cabinet.js")"></script>
+}
+
+<div class="banner small">
+    <div class="action">
+        <font>Личный кабинет</font>
+    </div>
+</div>
+<img id="srcBtnOk" src="@Url.Content("~/Content/img/button_ok_7852.png")" style="display: none;" />
+<div class="center-content">    
+    <table>
+        <tr>
+            @Html.Partial("CabinetMenu")
+            <td class="cabinet-main">
+                <h3 class="mrg-top-bottom20">Активация нового счета</h3>
+                @using (Html.BeginForm("ActivateAccountFinish", "PersonalCabinet", FormMethod.Post, new { @id = "activateForm" }))
+                {
+                    <table>
+                        <tr>
+                            <td class="labels">
+                                <label>Номер торгового счета:</label>
+                            </td>
+                            <td class="inputs">
+                                @Html.TextBox("account")
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td class="inputs">
+                                <button id="activate" type="button" class="green-button">Отправить заявку</button>
+                            </td>
+                        </tr>
+                    </table>
+                }
+            </td>
+        </tr>
+    </table>
+</div>

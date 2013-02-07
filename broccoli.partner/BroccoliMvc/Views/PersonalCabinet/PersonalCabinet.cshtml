@@ -1,0 +1,64 @@
+﻿@{
+    ViewBag.Title = "Личный кабинет";
+    Layout = "~/Views/Shared/_LayoutMin.cshtml";
+}
+
+@section head {
+    <script type="text/javascript" src="@Url.Content("~/Scripts/PersonalCabinet/cabinet.js")"></script>
+}
+
+<div class="banner small">
+    <div class="action">
+        <font>Личный кабинет</font>
+    </div>
+</div>
+<div class="center-content">
+    <table>
+        <tr>
+            @Html.Partial("CabinetMenu", ViewData)
+            <td class="cabinet-main">
+                <h3 class="mrg-top-bottom20">Добро пожаловать, @ViewBag.User.Name, в Ваш персональный кабинет компании Broccoli Trade!</h3>
+                <div id="pricing-table">
+                    <div class="plan plan1">
+                        <div class="price-header">Money +</div>
+                        <div class="price">0</div>  
+                        <div class="monthly">Бесплатный</div>      
+                        <ul>
+                            <li><b>Некоторая</b> информация</li>
+                            <li><b>100GB</b> месячный трафик</li>
+                            <li><b>20</b> почтовых ящиков</li>
+			                <li><b>Сколько хочешь</b> поддоменов</li>			
+                        </ul>
+                        <a class="signup" href="@Url.Action("TradingSystemOrder", "PersonalCabinet", new { id = 1 })">Получить</a>         
+                    </div >
+                    <div class="plan plan2">
+                        <div class="price-header">Garanted</div>
+                        <div class="price">$100</div>
+                        <div class="monthly">в месяц</div>  
+                        <ul>
+                            <li><b>5GB</b> пространства на диске</li>
+                            <li><b>50GB</b> месячный трафик</li>
+                            <li><b>10</b> почтовых ящиков</li>
+			                <li><b>Сколько хочешь</b> поддоменов</li>			
+                        </ul>
+                        <a class="signup" href="@Url.Action("TradingSystemOrder", "PersonalCabinet", new { id = 2 })">Получить</a>            
+                    </div>
+                    <div class="plan plan3 popular-plan">
+                        <div class="price-header">Max trade</div>
+                        <div class="price">$1000</div>
+                        <div class="monthly">в месяц</div>
+                        <ul>
+                            <li><b>3GB</b> пространства на диске</li>
+                            <li><b>25GB</b> месячный трафик</li>
+                            <li><b>5</b> почтовых ящиков</li>
+			                <li><b>Сколько хочешь</b> поддоменов</li>			
+                        </ul>
+                        <a class="signup" href="@Url.Action("TradingSystemOrder", "PersonalCabinet", new { id = 3 })">Получить</a>        
+                    </div>	
+                </div>
+                <br/>
+                <br/>
+            </td>
+        </tr>
+    </table>
+</div>

@@ -1,4 +1,30 @@
-﻿<td class="cabinet-menu">
+﻿<div id="container">
+    <ul id="menu">
+        <li><a href="@Url.Action("Index", "PersonalCabinet")">Кабинет</a>
+        </li>
+        <li><a href="#">Счета</a>
+            <ul>
+                <li><a href="http://www.forexinn.ru/register/a/broccoli">Открыть счет</a></li>
+                <li><a href="@Url.Action("ActivateAccount", "PersonalCabinet")">Активировать счет</a></li>
+                <li><a href="@Url.Action("AccountStatus", "PersonalCabinet")">Статус счетов</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Торговые системы</a>
+            <ul>
+                <li><a href="@Url.Action("TradingSystemOrder", "PersonalCabinet", new { id = 1 })">Money+</a></li>
+                <li><a href="@Url.Action("TradingSystemOrder", "PersonalCabinet", new { id = 2 })">Garanted</a></li>
+                <li><a href="@Url.Action("TradingSystemOrder", "PersonalCabinet", new { id = 3 })">Max trade</a></li>
+                <li><a href="@Url.Action("OrderStatus", "PersonalCabinet")">Статус заказов</a></li>
+            </ul>
+        </li>
+        <li><a href="@Url.Action("Statistics", "PersonalCabinet")">Статистика</a>
+        </li>
+        <li><a href="#">Служба поддержки</a></li>
+    </ul>
+</div>
+
+
+@*<td class="cabinet-menu">
     <h5 onclick="window.location = '@Url.Action("Index", "PersonalCabinet")'">Личный кабинет</h5>
     <h5 onclick="window.location = '@Url.Action("Statistics", "PersonalCabinet")'">Статистика</h5>
     <h4>Счета</h4>
@@ -28,4 +54,4 @@
         <h5>Мои письма</h5>
         <h5>Написать</h5>
         <h5>Рекомендации</h5>
-</td>
+</td>*@

@@ -1,0 +1,56 @@
+﻿<table class="menu">
+    <tr>
+        <td id="indexPage" class="item" onclick="window.location = '@Url.Action("Index", "Home")'">Главная</td>
+        <td id="commentsPage" class="item">Отзывы</td>
+        @if (HttpContext.Current.User.Identity.IsAuthenticated)
+        {
+            <td id="personalCabinetPage" class="item" onclick="window.location = '@Url.Action("Index", "PersonalCabinet")'">Личный кабинет</td>
+            <td class="item last" onclick="window.location = '@Url.Action("Logout", "Account")'">Выход</td>
+        }
+        else
+        {
+            <td id="loginBtn" class="item">
+                <div id="signInBtn">Вход</div>
+                <div class="login-window">
+                    <div class="triangle-top"></div>
+                    <div class="login-window-body">
+                        @using (Html.BeginForm("Login", "Account", FormMethod.Post, new { @id = "loginForm" }))
+                        {
+                            <table>
+                                <tr>
+                                    <td class="labels">
+                                        @Html.Label("Email")
+                                    </td>
+                                    <td>
+                                        @Html.TextBox("login", null, new { @class = "inputs" })
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="indent"></td>
+                                    <td class="indent"></td>
+                                </tr>
+                                <tr>
+                                    <td class="labels">
+                                        @Html.Label("Пароль")
+                                    </td>
+                                    <td>
+                                        @Html.TextBox("pass", null, new { @type = "password", @class = "inputs" })
+                                    </td>
+                                </tr>
+                            </table>
+                            <a>Забыли пароль?</a>
+                            <button id="submit" class="green-button">Вход</button>
+                            <div class="controls">
+                                @Html.Label("Запомнить меня",new { @for = "rememberMe" })
+                                @Html.CheckBox("rememberMe", false, new { @style = "float: right;" })
+                            </div>
+                        }
+                    </div>
+                </div>
+            </td>
+            <td id="registerPage" class="item last">
+                <button class="green-button" onclick="window.location = '@Url.Action("RegisterForm", "Account")'">Регистрация</button>
+            </td>
+        }
+    </tr>
+</table>

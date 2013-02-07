@@ -19,156 +19,152 @@
     </div>
 </div>
 <div class="center-content">    
-    <table>
-        <tr>
-            @Html.Partial("CabinetMenu")
-            <td class="cabinet-main">
-                <h3 class="mrg-top-bottom20">Статистика приглашений</h3>
-                <div class="period-radio">
-                    <div id="radio">
-                        @if (ViewBag.Period == "today")
-                        {
-                            <input type="radio" id="radio1" name="radio-period" value="today" checked="checked" />
-                            <label for="radio1">Сегодня</label>
-                        }
-                        else
-                        {
-                            <input type="radio" id="radio1" name="radio-period" value="today" />
-                            <label for="radio1">Сегодня</label>
-                        }
+    @Html.Partial("CabinetMenu")
+    <div class="cabinet-main">
+        <h3 class="mrg-top-bottom20">Статистика приглашений</h3>
+        <div class="period-radio">
+            <div id="radio">
+                @if (ViewBag.Period == "today")
+                {
+                    <input type="radio" id="radio1" name="radio-period" value="today" checked="checked" />
+                    <label for="radio1">Сегодня</label>
+                }
+                else
+                {
+                    <input type="radio" id="radio1" name="radio-period" value="today" />
+                    <label for="radio1">Сегодня</label>
+                }
 
-                        @if (ViewBag.Period == "yesterday")
-                        {
-                            <input type="radio" id="radio2" name="radio-period" value="yesterday" checked="checked" />
-                            <label for="radio2">Вчера</label>
-                        }
-                        else
-                        {
-                            <input type="radio" id="radio2" name="radio-period" value="yesterday" />
-                            <label for="radio2">Вчера</label>
-                        }
+                @if (ViewBag.Period == "yesterday")
+                {
+                    <input type="radio" id="radio2" name="radio-period" value="yesterday" checked="checked" />
+                    <label for="radio2">Вчера</label>
+                }
+                else
+                {
+                    <input type="radio" id="radio2" name="radio-period" value="yesterday" />
+                    <label for="radio2">Вчера</label>
+                }
 
-                        @if (ViewBag.Period == "week")
-                        {
-                            <input type="radio" id="radio3" name="radio-period" value="week" checked="checked" />
-                            <label for="radio3">Неделя</label>
-                        }
-                        else
-                        {
-                            <input type="radio" id="radio3" name="radio-period" value="week" />
-                            <label for="radio3">Неделя</label>
-                        }
+                @if (ViewBag.Period == "week")
+                {
+                    <input type="radio" id="radio3" name="radio-period" value="week" checked="checked" />
+                    <label for="radio3">Неделя</label>
+                }
+                else
+                {
+                    <input type="radio" id="radio3" name="radio-period" value="week" />
+                    <label for="radio3">Неделя</label>
+                }
 
-                        @if (ViewBag.Period == "month")
-                        {
-                            <input type="radio" id="radio4" name="radio-period" value="month" checked="checked" />
-                            <label for="radio4">Месяц</label>
-                        }
-                        else
-                        {
-                            <input type="radio" id="radio4" name="radio-period" value="month" />
-                            <label for="radio4">Месяц</label>
-                        }
+                @if (ViewBag.Period == "month")
+                {
+                    <input type="radio" id="radio4" name="radio-period" value="month" checked="checked" />
+                    <label for="radio4">Месяц</label>
+                }
+                else
+                {
+                    <input type="radio" id="radio4" name="radio-period" value="month" />
+                    <label for="radio4">Месяц</label>
+                }
 
-                        @if (ViewBag.Period == "allTime")
-                        {
-                            <input type="radio" id="radio5" name="radio-period" checked="checked" />
-                            <label for="radio5">Все время</label>
-                        }
-                        else
-                        {
-                            <input type="radio" id="radio5" name="radio-period" />
-                            <label for="radio5">Все время</label>
-                        }
-                    </div>
-                    <span class="period-date">
-                        <span>С:</span><input id="dateFrom" type="text" value="@ViewBag.DateFrom"/>
-                        <span>По:</span><input id="dateTo" type="text" value="@ViewBag.DateTo"/>
-                        <button>Показать</button>
-                    </span>
-                </div>
-                <table id="accountsTable" class="grid">
-                    <thead>
-                        <tr id="sort">
-                            <th data-sort="string" class="theader">Откуда</th>        
-                            <th data-sort="int" class="guests theader">Гостей</th>
-                            <th data-sort="int" class="registered theader">Зарегистрировались</th>
-                        </tr>
-                    </thead>
-                    <tfoot>
-                        <tr class="bold">
-                            <td class="hosts">Всего</td>
-                            <td class="guests">@Model.TotalGuests</td>
-                            <td class="registered">@Model.TotatlRegistered</td>
-                        </tr>
-                    </tfoot>
-                    <tbody>
-                        @foreach (var group in Model.StatisticsByHost)
-                        {
-                            <tr>
+                @if (ViewBag.Period == "allTime")
+                {
+                    <input type="radio" id="radio5" name="radio-period" checked="checked" />
+                    <label for="radio5">Все время</label>
+                }
+                else
+                {
+                    <input type="radio" id="radio5" name="radio-period" />
+                    <label for="radio5">Все время</label>
+                }
+            </div>
+            <span class="period-date">
+                <span>С:</span><input id="dateFrom" type="text" value="@ViewBag.DateFrom"/>
+                <span>По:</span><input id="dateTo" type="text" value="@ViewBag.DateTo"/>
+                <button>Показать</button>
+            </span>
+        </div>
+        <table id="accountsTable" class="grid">
+            <thead>
+                <tr id="sort">
+                    <th data-sort="string" class="theader">Откуда</th>        
+                    <th data-sort="int" class="guests theader">Гостей</th>
+                    <th data-sort="int" class="registered theader">Зарегистрировались</th>
+                </tr>
+            </thead>
+            <tfoot>
+                <tr class="bold">
+                    <td class="hosts">Всего</td>
+                    <td class="guests">@Model.TotalGuests</td>
+                    <td class="registered">@Model.TotatlRegistered</td>
+                </tr>
+            </tfoot>
+            <tbody>
+                @foreach (var group in Model.StatisticsByHost)
+                {
+                    <tr>
                                 
-                                    @if (group.HostName == "прочие*")
-                                    {
-                                        <td class="hosts" group="@group.HostName.Replace(".", string.Empty)">
-                                            <span>&nbsp;&nbsp;&nbsp;</span>
-                                            @group.HostName
-                                        </td>
-                                    }
-                                    else
-                                    {
-                                        <td class="group hosts" group="@group.HostName.Replace(".", string.Empty)">
-                                            <span class="plus-minus">+&nbsp;</span>
-                                            <a>@group.HostName</a>
-                                        </td> 
-                                    }
-                                        
-                                <td class="guests">@group.GuestsCount</td>
-                                <td class="registered">@group.RegisteredCount</td>
-                            </tr>
-                            <tr class="@group.HostName.Replace(".", string.Empty) non-hovered subgrid" style="display: none;">
-                                <td colspan="3">
-                                    <table class="grid">
-                                        <thead>
-                                            <tr>
-                                                <th data-sort="string" class="theader">Ссылка</th>
-                                                <th data-sort="int" class="guests theader">Гостей</th>
-                                                <th data-sort="int" class="registered theader">Зарегистрировались</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            @foreach (var referrer in group.DetailsHosts)
-                                            {
-                                                <tr>
-                                                    <td class="hosts"><a href="@referrer.FullReferrerUrl" target="_blank">@referrer.FullReferrerUrl</a></td>
-                                                    <td class="guests">@referrer.GuestsCount</td>
-                                                    <td class="registered">@referrer.RegisteredCount</td>
-                                                </tr>
-                                            }
-                                        </tbody>
-                                    </table>
+                            @if (group.HostName == "прочие*")
+                            {
+                                <td class="hosts" group="@group.HostName.Replace(".", string.Empty)">
+                                    <span>&nbsp;&nbsp;&nbsp;</span>
+                                    @group.HostName
                                 </td>
-                            </tr>
-                        }
-                    </tbody>
-                </table>
-                <br/>
-                <p>*Переходы с защищенным соединением, прочие переходы по ссылкам не с сайтов.</p>
-                <br/>
-                <div id="chartdiv" style="width:640px; height:400px;"><span></span></div>
-                <div id="radioPieChart" class="type-user-radio">
-                    <input type="radio" id="radio6" name="radio-pie-chart" value="GuestsCount" checked="checked" /><label for="radio6">Гости</label>
-                    <input type="radio" id="radio7" name="radio-pie-chart" value="RegisteredCount" /><label for="radio7">Зарегиситрировались</label>
-                </div>
-                <br/>
-                <br/>
-                <div id="chartdiv2" style="width:680px; height:400px;"></div>
-                <div id="radioLineChart" class="type-user-radio">
-                    <input type="radio" id="radio8" name="radio-line-chart" value="GuestsCount" checked="checked" /><label for="radio8">Гости</label>
-                    <input type="radio" id="radio9" name="radio-line-chart" value="RegisteredCount" /><label for="radio9">Зарегиситрировались</label>
-                </div>
-            </td>
-        </tr>
-    </table>
+                            }
+                            else
+                            {
+                                <td class="group hosts" group="@group.HostName.Replace(".", string.Empty)">
+                                    <span class="plus-minus">+&nbsp;</span>
+                                    <a>@group.HostName</a>
+                                </td> 
+                            }
+                                        
+                        <td class="guests">@group.GuestsCount</td>
+                        <td class="registered">@group.RegisteredCount</td>
+                    </tr>
+                    <tr class="@group.HostName.Replace(".", string.Empty) non-hovered subgrid" style="display: none;">
+                        <td colspan="3">
+                            <table class="grid">
+                                <thead>
+                                    <tr>
+                                        <th data-sort="string" class="theader">Ссылка</th>
+                                        <th data-sort="int" class="guests theader">Гостей</th>
+                                        <th data-sort="int" class="registered theader">Зарегистрировались</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var referrer in group.DetailsHosts)
+                                    {
+                                        <tr>
+                                            <td class="hosts"><a href="@referrer.FullReferrerUrl" target="_blank">@referrer.FullReferrerUrl</a></td>
+                                            <td class="guests">@referrer.GuestsCount</td>
+                                            <td class="registered">@referrer.RegisteredCount</td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <br/>
+        <p>*Переходы с защищенным соединением, прочие переходы по ссылкам не с сайтов.</p>
+        <br/>
+        <div id="chartdiv" style="width:640px; height:400px;margin: 0 auto;"><span></span></div>
+        <div id="radioPieChart" class="type-user-radio">
+            <input type="radio" id="radio6" name="radio-pie-chart" value="GuestsCount" checked="checked" /><label for="radio6">Гости</label>
+            <input type="radio" id="radio7" name="radio-pie-chart" value="RegisteredCount" /><label for="radio7">Зарегиситрировались</label>
+        </div>
+        <br/>
+        <br/>
+        <div id="chartdiv2" style="width:680px; height:400px;margin: 0 auto;"></div>
+        <div id="radioLineChart" class="type-user-radio">
+            <input type="radio" id="radio8" name="radio-line-chart" value="GuestsCount" checked="checked" /><label for="radio8">Гости</label>
+            <input type="radio" id="radio9" name="radio-line-chart" value="RegisteredCount" /><label for="radio9">Зарегиситрировались</label>
+        </div>
+    </div>
 </div>
 <script>
     var chartData = @(new HtmlString(Json.Encode(Model.StatisticsByHost)));

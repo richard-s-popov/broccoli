@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="91b83a2b4e7f4c758a18ec02a9de6334" Name="Diagram1" ZoomLevel="97">
+        <EntityTypeShape EntityType="BroccoliModel.Users" Width="1.5" PointX="5.375" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BroccoliModel.Accounts" Width="1.5" PointX="1.75" PointY="7.125" />
+        <AssociationConnector Association="BroccoliModel.FK_Accounts_Users" ManuallyRouted="false" >
+        </AssociationConnector>
+        <EntityTypeShape EntityType="BroccoliModel.Status" Width="1.5" PointX="4.75" PointY="9.875" />
+        <AssociationConnector Association="BroccoliModel.FK_Accounts_Status" />
+        <EntityTypeShape EntityType="BroccoliModel.AccountPool" Width="1.5" PointX="1.875" PointY="0.5" />
+        <AssociationConnector Association="BroccoliModel.FK_AccountApplication_Accounts" />
+        <AssociationConnector Association="BroccoliModel.FK_AccountApplication_Users" />
+        <EntityTypeShape EntityType="BroccoliModel.Systems" Width="1.5" PointX="9.5" PointY="3.875" />
+        <EntityTypeShape EntityType="BroccoliModel.TradingSystemPool" Width="1.875" PointX="5" PointY="6.75" />
+        <EntityTypeShape EntityType="BroccoliModel.TradingSystems" Width="1.5" PointX="9.25" PointY="6.625" />
+        <AssociationConnector Association="BroccoliModel.FK_TradingSystemPool_Accounts" />
+        <AssociationConnector Association="BroccoliModel.FK_TradingSystems_Accounts" />
+        <AssociationConnector Association="BroccoliModel.FK_TradingSystems_Status" />
+        <AssociationConnector Association="BroccoliModel.FK_TradingSystems_Systems" />
+        <AssociationConnector Association="BroccoliModel.FK_TradingSystemPool_Users" />
+        <AssociationConnector Association="BroccoliModel.FK_TradingSystems_Users" />
+        <AssociationConnector Association="BroccoliModel.FK_TradingSystemPool_TradingSystems" />
+        <EntityTypeShape EntityType="BroccoliModel.Referrer" Width="1.5" PointX="8.5" PointY="0.5" />
+        <AssociationConnector Association="BroccoliModel.FK_Referrer_Users" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

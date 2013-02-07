@@ -1,0 +1,255 @@
+﻿@{
+    ViewBag.Title = "Статистика";
+    Layout = "~/Views/Shared/_LayoutMin.cshtml";
+}
+@using System.Text.RegularExpressions
+@model BroccoliTrade.Web.BroccoliMvc.Models.PersonalCabinet.StatisticsListPoco
+
+@section head {
+    <link rel="stylesheet" href="@Url.Content("~/Content/themes/jquery-ui/jquery-ui-1.9.2.custom.css")" />
+    <script type="text/javascript" src="@Url.Content("~/Scripts/jquery-ui-1.8.20.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/tablesorter/stupidtable.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/PersonalCabinet/statistics.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/amcharts/amcharts.js")"></script>
+}
+
+<div class="banner small">
+    <div class="action">
+        <font>Личный кабинет</font>
+    </div>
+</div>
+<div class="center-content">
+    <h3 class="mrg-top-bottom20">Статистика приглашений</h3>
+    <div class="period-radio">
+        <div id="radio">
+            @if (ViewBag.Period == "today")
+            {
+                <input type="radio" id="radio1" name="radio-period" value="today" checked="checked" />
+                <label for="radio1">Сегодня</label>
+            }
+            else
+            {
+                <input type="radio" id="radio1" name="radio-period" value="today" />
+                <label for="radio1">Сегодня</label>
+            }
+
+            @if (ViewBag.Period == "yesterday")
+            {
+                <input type="radio" id="radio2" name="radio-period" value="yesterday" checked="checked" />
+                <label for="radio2">Вчера</label>
+            }
+            else
+            {
+                <input type="radio" id="radio2" name="radio-period" value="yesterday" />
+                <label for="radio2">Вчера</label>
+            }
+
+            @if (ViewBag.Period == "week")
+            {
+                <input type="radio" id="radio3" name="radio-period" value="week" checked="checked" />
+                <label for="radio3">Неделя</label>
+            }
+            else
+            {
+                <input type="radio" id="radio3" name="radio-period" value="week" />
+                <label for="radio3">Неделя</label>
+            }
+
+            @if (ViewBag.Period == "month")
+            {
+                <input type="radio" id="radio4" name="radio-period" value="month" checked="checked" />
+                <label for="radio4">Месяц</label>
+            }
+            else
+            {
+                <input type="radio" id="radio4" name="radio-period" value="month" />
+                <label for="radio4">Месяц</label>
+            }
+
+            @if (ViewBag.Period == "allTime")
+            {
+                <input type="radio" id="radio5" name="radio-period" checked="checked" />
+                <label for="radio5">Все время</label>
+            }
+            else
+            {
+                <input type="radio" id="radio5" name="radio-period" />
+                <label for="radio5">Все время</label>
+            }
+        </div>
+        <span class="period-date">
+            <span>С:</span><input id="dateFrom" type="text" value="@ViewBag.DateFrom"/>
+            <span>По:</span><input id="dateTo" type="text" value="@ViewBag.DateTo"/>
+            <button>Показать</button>
+        </span>
+    </div>
+    <table id="accountsTable" class="grid">
+        <thead>
+            <tr id="sort">
+                <th data-sort="string" class="theader">Откуда</th>        
+                <th data-sort="int" class="guests theader">Гостей</th>
+                <th data-sort="int" class="registered theader">Зарегистрировались</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr class="bold">
+                <td class="hosts">Всего</td>
+                <td class="guests">@Model.TotalGuests</td>
+                <td class="registered">@Model.TotatlRegistered</td>
+            </tr>
+        </tfoot>
+        <tbody>
+            @foreach (var group in Model.StatisticsByHost)
+            {
+                <tr>
+                                
+                        @if (group.HostName == "прочие*")
+                        {
+                            <td class="hosts" group="@group.HostName.Replace(".", string.Empty)">
+                                <span>&nbsp;&nbsp;&nbsp;</span>
+                                @group.HostName
+                            </td>
+                        }
+                        else
+                        {
+                            <td class="group hosts" group="@group.HostName.Replace(".", string.Empty)">
+                                <span class="plus-minus">+&nbsp;</span>
+                                <a>@group.HostName</a>
+                            </td> 
+                        }
+                                        
+                    <td class="guests">@group.GuestsCount</td>
+                    <td class="registered">@group.RegisteredCount</td>
+                </tr>
+                <tr class="@group.HostName.Replace(".", string.Empty) non-hovered subgrid" style="display: none;">
+                    <td colspan="3">
+                        <table class="grid">
+                            <thead>
+                                <tr>
+                                    <th data-sort="string" class="theader">Ссылка</th>
+                                    <th data-sort="int" class="guests theader">Гостей</th>
+                                    <th data-sort="int" class="registered theader">Зарегистрировались</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var referrer in group.DetailsHosts)
+                                {
+                                    <tr>
+                                        <td class="hosts"><a href="@referrer.FullReferrerUrl" target="_blank">@referrer.FullReferrerUrl</a></td>
+                                        <td class="guests">@referrer.GuestsCount</td>
+                                        <td class="registered">@referrer.RegisteredCount</td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <br/>
+    <p>*Переходы с защищенным соединением, прочие переходы по ссылкам не с сайтов.</p>
+    <br/>
+    <div id="chartdiv" style="width:640px; height:400px;"><span></span></div>
+    <div id="radioPieChart" class="type-user-radio">
+        <input type="radio" id="radio6" name="radio-pie-chart" value="GuestsCount" checked="checked" /><label for="radio6">Гости</label>
+        <input type="radio" id="radio7" name="radio-pie-chart" value="RegisteredCount" /><label for="radio7">Зарегиситрировались</label>
+    </div>
+    <br/>
+    <br/>
+    <div id="chartdiv2" style="width:680px; height:400px;"></div>
+    <div id="radioLineChart" class="type-user-radio">
+        <input type="radio" id="radio8" name="radio-line-chart" value="GuestsCount" checked="checked" /><label for="radio8">Гости</label>
+        <input type="radio" id="radio9" name="radio-line-chart" value="RegisteredCount" /><label for="radio9">Зарегиситрировались</label>
+    </div>
+</div>
+<script>
+    var chartData = @(new HtmlString(Json.Encode(Model.StatisticsByHost)));
+    
+    var chartDataGuests = @(new HtmlString(Json.Encode(Model.StatisticsGuestsByDate).Replace("\"new", "new").Replace(")\"", ")")));
+
+    var chartDataRegistered = @(new HtmlString(Json.Encode(Model.StatisticsRegisteredByDate).Replace("\"new", "new").Replace(")\"", ")")));
+
+    drawLineChart();
+
+    $("input[name='radio-line-chart']").change(function () {
+        drawLineChart();
+    });
+    
+    function drawLineChart() {
+        $('#chartdiv2').empty();
+
+        // SERIAL CHART
+        chart2 = new AmCharts.AmSerialChart();
+        chart2.addTitle("Статистика по времени", 16);
+        chart2.dataProvider = $("input[name='radio-line-chart']:checked").val() == "GuestsCount" ? chartDataGuests : chartDataRegistered;
+        chart2.categoryField = "Date";
+        chart2.startDuration = 0.5;
+        chart2.balloon.color = "#000000";
+
+        // AXES
+        // category
+        var categoryAxis = chart2.categoryAxis;
+        categoryAxis.fillAlpha = 1;
+        categoryAxis.fillColor = "#FAFAFA";
+        categoryAxis.gridAlpha = 0;
+        categoryAxis.axisAlpha = 0;
+        categoryAxis.parseDates = true;
+        categoryAxis.minPeriod = "DD";
+        categoryAxis.gridPosition = "start";
+        categoryAxis.position = "top";
+        
+        AmCharts.dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+        AmCharts.shortDayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+        AmCharts.monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+        AmCharts.shortMonthNames = ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн', 'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек'];
+
+        // value
+        var valueAxis = new AmCharts.ValueAxis();
+        valueAxis.title = $("input[name='radio-line-chart']:checked").val() == "GuestsCount" ? "Количество гостей" : "Количество зарег.";
+        valueAxis.dashLength = 5;
+        valueAxis.axisAlpha = 0;
+        valueAxis.minimum = 0;
+        //valueAxis.maximum = 6;
+        valueAxis.integersOnly = true;
+        valueAxis.gridCount = 10;
+        valueAxis.reversed = false; // this line makes the value axis reversed
+        chart2.addValueAxis(valueAxis);
+
+        // GRAPHS
+        @foreach (var host in Model.StatisticsByHost)
+        {
+            <text>
+                var graph = new AmCharts.AmGraph();
+                graph.title = "@host.HostName";
+                graph.valueField = "@host.HostName";
+                graph.balloonText = "[[title]]: [[value]]";
+                graph.bullet = "round";
+                chart2.addGraph(graph);
+            </text>
+        }
+
+        // LEGEND
+        var legend = new AmCharts.AmLegend();
+        legend.markerType = "circle";
+        chart2.addLegend(legend);
+        
+        // CURSOR
+        var chartCursor = new AmCharts.ChartCursor();
+        chartCursor.cursorPosition = "mouse";
+        chart2.addChartCursor(chartCursor);
+
+        // WRITE
+        chart2.write("chartdiv2");
+        $('tspan:contains("chart by amcharts.com")').parent().parent().hide();
+    }
+</script>
+<script type="text/javascript">
+    document.deleteUrl = "@Url.Action("DeleteAccount", "PersonalCabinet")";
+    document.statisticsToday = "@Url.Action("Statistics", "PersonalCabinet", new { period = "today" })";
+    document.statisticsYesterday = "@Url.Action("Statistics", "PersonalCabinet", new { period = "yesterday" })";
+    document.statisticsWeek = "@Url.Action("Statistics", "PersonalCabinet", new { period = "week" })";
+    document.statisticsMonth = "@Url.Action("Statistics", "PersonalCabinet", new { period = "month" })";
+    document.statisticsAllTime = "@Url.Action("Statistics", "PersonalCabinet")";
+    document.statisticsByDatePeriod = "@Url.Action("Statistics", "PersonalCabinet")";
+</script>

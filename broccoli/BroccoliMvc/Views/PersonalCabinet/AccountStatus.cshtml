@@ -15,40 +15,36 @@
     </div>
 </div>
 <div class="center-content">
-    <table>
-        <tr>
-            @Html.Partial("CabinetMenu")
-            <td class="cabinet-main">
-                <h3 class="mrg-top-bottom20">Статус счета</h3>
-                <div class="error-message" style="display: none;"><br /><br /></div>
-                <table id="accountsTable" class="grid">
-                    <thead>
-                        <tr>
-                            <th>Номер счета</th>        
-                            <th>Брокер</th>
-                            <th>Статус</th>
-                        </tr>
-                    </thead>
-                    @foreach (var account in Model.accounts)
-                    {
-                        <tr>
-                            <td>@account.Number</td>        
-                            <td class="broker">
-                                <div class="logo-container">
-                                    <img class="broker-logo" src="@Url.Content("~/Content/img/forexinn_logo.jpg")"/>
-                                </div>
-                                ForexInn
-                            </td>
-                            <td style="width: 40%;">
-                                <span class="status">@account.Status</span>
-                                <span style="float: right; margin-right: 30px;"><a val="@account.Number" class="delete-link" href="#">Удалить</a></span>
-                            </td>
-                        </tr>
-                    } 
-                </table>
-            </td>
-        </tr>
-    </table>
+    @Html.Partial("CabinetMenu")
+    <div class="cabinet-main">
+        <h3 class="mrg-top-bottom20">Статус счета</h3>
+        <div class="error-message" style="display: none;"><br /><br /></div>
+        <table id="accountsTable" class="grid">
+            <thead>
+                <tr>
+                    <th>Номер счета</th>        
+                    <th>Брокер</th>
+                    <th>Статус</th>
+                </tr>
+            </thead>
+            @foreach (var account in Model.accounts)
+            {
+                <tr>
+                    <td>@account.Number</td>        
+                    <td class="broker">
+                        <div class="logo-container">
+                            <img class="broker-logo" src="@Url.Content("~/Content/img/forexinn_logo.jpg")"/>
+                        </div>
+                        ForexInn
+                    </td>
+                    <td style="width: 40%;">
+                        <span class="status">@account.Status</span>
+                        <span style="float: right; margin-right: 30px;"><a val="@account.Number" class="delete-link" href="#">Удалить</a></span>
+                    </td>
+                </tr>
+            } 
+        </table>
+    </div>
 </div>
 <script type="text/javascript">
     document.deleteUrl = "@Url.Action("DeleteAccount","PersonalCabinet")";

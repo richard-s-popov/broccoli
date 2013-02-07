@@ -14,41 +14,37 @@
     </div>
 </div>
 <div class="center-content">    
-    <table>
-        <tr>
-            @Html.Partial("CabinetMenu")
-            <td class="cabinet-main">
-                <h3 class="mrg-top-bottom20">Статус заказов</h3>
-                <div class="error-message" style="display: none;"><br /><br /></div>
-                @if (!ViewBag.NoData)
+    @Html.Partial("CabinetMenu")
+    <div class="cabinet-main">
+        <h3 class="mrg-top-bottom20">Статус заказов</h3>
+        <div class="error-message" style="display: none;"><br /><br /></div>
+        @if (!ViewBag.NoData)
+        {
+            <table id="accountsTable" class="grid">
+                <thead>
+                    <tr>
+                        <th>Торговая система</th>        
+                        <th>Счет привязки</th>
+                        <th>Статус</th>
+                        <th>Ссылка</th>
+                    </tr>
+                </thead>
+                @foreach (var tsystem in Model.TradingSystems)
                 {
-                    <table id="accountsTable" class="grid">
-                        <thead>
-                            <tr>
-                                <th>Торговая система</th>        
-                                <th>Счет привязки</th>
-                                <th>Статус</th>
-                                <th>Ссылка</th>
-                            </tr>
-                        </thead>
-                        @foreach (var tsystem in Model.TradingSystems)
-                        {
-                            <tr>
-                                <td>@tsystem.System</td>        
-                                <td>@tsystem.AccountNumber</td>
-                                <td><span class="status">@tsystem.Status</span></td>
-                                <td><a href="@tsystem.Link">@tsystem.LinkText</a></td>
-                            </tr>
-                        } 
-                    </table>
-                }
-                else
-                {
-                    <span>Нет данных для отображения</span>
-                }
-            </td>
-        </tr>
-    </table>
+                    <tr>
+                        <td>@tsystem.System</td>        
+                        <td>@tsystem.AccountNumber</td>
+                        <td><span class="status">@tsystem.Status</span></td>
+                        <td><a href="@tsystem.Link">@tsystem.LinkText</a></td>
+                    </tr>
+                } 
+            </table>
+        }
+        else
+        {
+            <span>Нет данных для отображения</span>
+        }
+    </div>
 </div>
 <script type="text/javascript">
     document.deleteUrl = "@Url.Action("DeleteAccount", "PersonalCabinet")";

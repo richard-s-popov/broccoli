@@ -1,0 +1,80 @@
+﻿@using BroccoliTrade.Logics.Infrastructure.Extensions
+<script type="text/javascript" src="@Url.Content("~/Scripts/PersonalCabinet/alternative.way.js")"></script>
+
+<h3>Другой способ получения</h3>
+<br>
+<a href="javascript:void(0)" id="showAltWayContainer">Показать...</a>
+
+<div class="container">
+    <div class="alt-way-container">
+        <img id="srcCross" src="@Url.Content("~/Content/img/cross_2615.png")" style="display: none;" />
+        <table id="assignedUsers" class="invite-list">
+            <tr>
+                <th></th>
+                <th>Имя друга</th>
+                <th>E-mail</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td class="inputs">
+                    @Html.TextBox("nameAssignedUser", null, new { @class = "nameAssignedUser" })
+                </td>
+                <td class="inputs">
+                    @Html.TextBox("emailAssignedUser", null, new { @class = "emailAssignedUser" })
+                </td>
+                <td class="inputs">
+                    <div class="for-img">
+                        <img class="clearAssignedUserBtn" src="@Url.Content("~/Content/img/cross_2615.png")" />
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <a href="javascript:void(0)" id="addUser">Добавить еще...</a>
+        @Html.TextBox("subject", null, new { @class = "subject" })
+        <textarea id="message" rows="7">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+        </textarea>
+        <div id="lessSymbols"></div>
+        <button id="sendInvites" type="button" class="green-button">Сделать рассылку</button>
+        <div class="social-networks">
+            <div class="buttons">
+                <table>
+                    <tr>
+                        <td class="buttons">
+                            <!-- Put this script tag to the <head> of your page -->
+                            <script type="text/javascript" src="http://vk.com/js/api/share.js?11" charset="windows-1251"></script>
+
+                            <!-- Put this script tag to the place, where the Share button will be -->
+                            <script type="text/javascript">
+                                document.write(VK.Share.button({ url: "http://broccoli-trade.ru?token=@HttpContext.Current.User.Identity.Name.Md5()" }, { type: "custom", text: "<img src=\"@Url.Content("~/Content/img/vk_logo.png")\" />" }));
+                            </script>
+                        </td>
+                        <td class="name-network">
+                            <h4>Вконтакте</h4>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a target="_blank" class="mrc__plugin_uber_like_button" href="http://broccoli-trade.ru?token=@HttpContext.Current.User.Identity.Name.Md5()" data-mrc-config="{'nc' : '1', 'nt' : '1', 'cm' : '2', 'ck' : '2', 'sz' : '45', 'st' : '2', 'tp' : 'ok'}">Нравится</a>
+                        </td>
+                        <td class="name-network">
+                            <h4>Одноклассники</h4>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a target="_blank" class="mrc__plugin_uber_like_button" href="http://broccoli-trade.ru?token=@HttpContext.Current.User.Identity.Name.Md5()" data-mrc-config="{'nc' : '1', 'nt' : '1', 'cm' : '2', 'ck' : '2', 'sz' : '45', 'st' : '2', 'tp' : 'mm'}">Нравится</a>
+                            <script src="http://cdn.connect.mail.ru/js/loader.js" type="text/javascript" charset="UTF-8"></script>
+                        </td>
+                        <td class="name-network">
+                            <h4>Мой мир</h4>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    document.SendInvitesList = "@Url.Action("SendInvites","PersonalCabinet")";
+</script>
