@@ -360,8 +360,18 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.PersonalCabinet
                     default:
                         ViewBag.Period = "allTime";
                         statistics = _statService.GetReferrersByUserId(currentUser.Id).ToList();
-                        dateFrom = statistics.Min(x => x.Date);
-                        dateTo = statistics.Max(x => x.Date);
+
+                        if (statistics.Any())
+                        {
+                            dateFrom = statistics.Min(x => x.Date);
+                            dateTo = statistics.Max(x => x.Date);
+                        }
+                        else
+                        {
+                            dateFrom = DateTime.Now;
+                            dateTo = DateTime.Now;
+                        }
+
                         break;
                 }
 
@@ -403,31 +413,36 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.PersonalCabinet
                     StatisticsRegisteredByDate = new List<IDictionary<string, string>>()
                 };
 
-            for (var date = dateFrom.Subtract(dateFrom.TimeOfDay); date <= dateTo; date = date.AddDays(1))
+            if (statistics.Any())
             {
-                var dicGuests = new Dictionary<string, string> { { "Date", ToJSGenDate(date) } };
-                var dicReg = new Dictionary<string, string> { { "Date", ToJSGenDate(date) } };
-
-                foreach (var byHost in statistics.Where(x => x.Date.Date == date).GroupBy(group => group.Host))
+                for (var date = dateFrom.Subtract(dateFrom.TimeOfDay); date <= dateTo; date = date.AddDays(1))
                 {
-                    dicGuests.Add(byHost.Key == "undefined" ? "прочие*" : byHost.Key, byHost.Count(x => !x.Registered).ToString());
-                    dicReg.Add(byHost.Key == "undefined" ? "прочие*" : byHost.Key, byHost.Count(x => x.Registered).ToString());
-                }
+                    var dicGuests = new Dictionary<string, string> {{"Date", ToJSGenDate(date)}};
+                    var dicReg = new Dictionary<string, string> {{"Date", ToJSGenDate(date)}};
 
-                foreach (var byHost in statistics.GroupBy(group => group.Host))
-                {
-                    if (!dicGuests.ContainsKey(byHost.Key == "undefined" ? "прочие*" : byHost.Key))
+                    foreach (var byHost in statistics.Where(x => x.Date.Date == date).GroupBy(group => group.Host))
                     {
-                        dicGuests.Add(byHost.Key == "undefined" ? "прочие*" : byHost.Key, "0");
+                        dicGuests.Add(byHost.Key == "undefined" ? "прочие*" : byHost.Key,
+                                      byHost.Count(x => !x.Registered).ToString());
+                        dicReg.Add(byHost.Key == "undefined" ? "прочие*" : byHost.Key,
+                                   byHost.Count(x => x.Registered).ToString());
                     }
-                    if (!dicReg.ContainsKey(byHost.Key == "undefined" ? "прочие*" : byHost.Key))
-                    {
-                        dicReg.Add(byHost.Key == "undefined" ? "прочие*" : byHost.Key, "0");
-                    }
-                }
 
-                model.StatisticsGuestsByDate.Add(dicGuests);
-                model.StatisticsRegisteredByDate.Add(dicReg);
+                    foreach (var byHost in statistics.GroupBy(group => group.Host))
+                    {
+                        if (!dicGuests.ContainsKey(byHost.Key == "undefined" ? "прочие*" : byHost.Key))
+                        {
+                            dicGuests.Add(byHost.Key == "undefined" ? "прочие*" : byHost.Key, "0");
+                        }
+                        if (!dicReg.ContainsKey(byHost.Key == "undefined" ? "прочие*" : byHost.Key))
+                        {
+                            dicReg.Add(byHost.Key == "undefined" ? "прочие*" : byHost.Key, "0");
+                        }
+                    }
+
+                    model.StatisticsGuestsByDate.Add(dicGuests);
+                    model.StatisticsRegisteredByDate.Add(dicReg);
+                }
             }
 
             return View(model);
