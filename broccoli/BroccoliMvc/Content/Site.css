@@ -861,7 +861,7 @@ hr {
     visibility: visible;
     -webkit-box-shadow: 1px 1px 7px rgba(0,0,0,.5);
     box-shadow: 1px 1px 7px rgba(0,0,0,.5);
-    /*-moz-animation-name: swingdown;
+    -moz-animation-name: swingdown;
     -o-animation-name: swingdown;
     -webkit-animation-name: swingdown;
     animation-name: swingdown;
@@ -872,7 +872,7 @@ hr {
     -moz-animation-timing-function: ease;
     -o-animation-timing-function: ease;
     -webkit-animation-timing-function: ease;
-    animation-timing-function: ease;*/
+    animation-timing-function: ease;
 }
 
 @-moz-keyframes swingdown {
@@ -882,12 +882,12 @@ hr {
 	}
 
 	30% {			
-		transform: rotateX(-20deg) rotateY(5deg);
+		transform: rotateX(-20deg) rotateY(0deg);
 		animation-timing-function: ease-in-out;
 	}
 
 	65% {
-		transform: rotateX(20deg) rotateY(-3deg);
+		transform: rotateX(20deg) rotateY(0deg);
 		animation-timing-function: ease-in-out;
 	}
 
@@ -908,11 +908,11 @@ hr {
     }
 
     30% {
-        -moz-transform: rotateX(-20deg) rotateY(5deg);
-        -ms-transform: rotateX(-20deg) rotateY(5deg);
-        -o-transform: rotateX(-20deg) rotateY(5deg);
-        -webkit-transform: rotateX(-20deg) rotateY(5deg);
-        transform: rotateX(-20deg) rotateY(5deg);
+        -moz-transform: rotateX(-20deg) rotateY(0deg);
+        -ms-transform: rotateX(-20deg) rotateY(0deg);
+        -o-transform: rotateX(-20deg) rotateY(0deg);
+        -webkit-transform: rotateX(-20deg) rotateY(0deg);
+        transform: rotateX(-20deg) rotateY(0deg);
         -moz-animation-timing-function: ease-in-out;
         -o-animation-timing-function: ease-in-out;
         -webkit-animation-timing-function: ease-in-out;
@@ -920,11 +920,11 @@ hr {
     }
 
     65% {
-        -moz-transform: rotateX(20deg) rotateY(-3deg);
-        -ms-transform: rotateX(20deg) rotateY(-3deg);
-        -o-transform: rotateX(20deg) rotateY(-3deg);
-        -webkit-transform: rotateX(20deg) rotateY(-3deg);
-        transform: rotateX(20deg) rotateY(-3deg);
+        -moz-transform: rotateX(20deg) rotateY(0deg);
+        -ms-transform: rotateX(20deg) rotateY(0deg);
+        -o-transform: rotateX(20deg) rotateY(0deg);
+        -webkit-transform: rotateX(20deg) rotateY(0deg);
+        transform: rotateX(20deg) rotateY(0deg);
         -moz-animation-timing-function: ease-in-out;
         -o-animation-timing-function: ease-in-out;
         -webkit-animation-timing-function: ease-in-out;
@@ -955,11 +955,11 @@ hr {
     }
 
     30% {
-        -moz-transform: rotateX(-20deg) rotateY(5deg);
-        -ms-transform: rotateX(-20deg) rotateY(5deg);
-        -o-transform: rotateX(-20deg) rotateY(5deg);
-        -webkit-transform: rotateX(-20deg) rotateY(5deg);
-        transform: rotateX(-20deg) rotateY(5deg);
+        -moz-transform: rotateX(-20deg) rotateY(0deg);
+        -ms-transform: rotateX(-20deg) rotateY(0deg);
+        -o-transform: rotateX(-20deg) rotateY(0deg);
+        -webkit-transform: rotateX(-20deg) rotateY(0deg);
+        transform: rotateX(-20deg) rotateY(0deg);
         -moz-animation-timing-function: ease-in-out;
         -o-animation-timing-function: ease-in-out;
         -webkit-animation-timing-function: ease-in-out;
@@ -967,11 +967,11 @@ hr {
     }
 
     65% {
-        -moz-transform: rotateX(20deg) rotateY(-3deg);
-        -ms-transform: rotateX(20deg) rotateY(-3deg);
-        -o-transform: rotateX(20deg) rotateY(-3deg);
-        -webkit-transform: rotateX(20deg) rotateY(-3deg);
-        transform: rotateX(20deg) rotateY(-3deg);
+        -moz-transform: rotateX(20deg) rotateY(0deg);
+        -ms-transform: rotateX(20deg) rotateY(0deg);
+        -o-transform: rotateX(20deg) rotateY(0deg);
+        -webkit-transform: rotateX(20deg) rotateY(0deg);
+        transform: rotateX(20deg) rotateY(0deg);
         -moz-animation-timing-function: ease-in-out;
         -o-animation-timing-function: ease-in-out;
         -webkit-animation-timing-function: ease-in-out;
