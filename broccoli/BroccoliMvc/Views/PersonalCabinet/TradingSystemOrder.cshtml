@@ -19,11 +19,11 @@
         <h3 class="mrg-top-bottom20">Заказ торговой системы "@ViewBag.SystemName"</h3>
         @if (ViewBag.Error)
         {
-            <div class="error-message">Error</div>
+            <div class="error-message order">@ViewBag.ErrorMessage</div>
         }
         else
         {
-            <div class="error-message" style="display: none;"></div>
+            <div class="error-message order">@ViewBag.ErrorMessage</div>
             using (Html.BeginForm("OrderFinish", "PersonalCabinet", FormMethod.Post, new { id = "activateForm" }))
             {
                 @Html.HiddenFor(m => m.TradingSystemId)

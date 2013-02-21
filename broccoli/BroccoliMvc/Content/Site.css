@@ -861,7 +861,7 @@ hr {
     visibility: visible;
     -webkit-box-shadow: 1px 1px 7px rgba(0,0,0,.5);
     box-shadow: 1px 1px 7px rgba(0,0,0,.5);
-    -moz-animation-name: swingdown;
+    /*-moz-animation-name: swingdown;
     -o-animation-name: swingdown;
     -webkit-animation-name: swingdown;
     animation-name: swingdown;
@@ -872,7 +872,7 @@ hr {
     -moz-animation-timing-function: ease;
     -o-animation-timing-function: ease;
     -webkit-animation-timing-function: ease;
-    animation-timing-function: ease;
+    animation-timing-function: ease;*/
 }
 
 @-moz-keyframes swingdown {
@@ -1194,6 +1194,10 @@ hr {
 
 .cabinet-main .error-message {
     color: #900;
+}
+
+.cabinet-main .order {
+    margin: 0 0 10px 200px;
 }
 
 .invite-list {
@@ -1681,6 +1685,17 @@ footer#main{
 }
 
 .broker-info .about-broker li {
+    margin-bottom: 10px;
+}
+
+.broker-info .trading-terms {
+    font-size: 16px;
+    margin: 0 auto 80px;
+    width: 260px;
+    list-style: square outside;
+}
+
+.broker-info .trading-terms li {
     margin-bottom: 10px;
 }
 

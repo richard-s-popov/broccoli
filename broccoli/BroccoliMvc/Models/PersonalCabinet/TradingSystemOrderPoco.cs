@@ -11,8 +11,7 @@ namespace BroccoliTrade.Web.BroccoliMvc.Models.PersonalCabinet
     {
         public IEnumerable<SelectListItem> Accounts { get; set; }
 
-        [Required]
-        public int AccountId { get; set; }
+        public int? AccountId { get; set; }
 
         [Required]
         public int TradingSystemId { get; set; }

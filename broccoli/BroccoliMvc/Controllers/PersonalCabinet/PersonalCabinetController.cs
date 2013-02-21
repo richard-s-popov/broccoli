@@ -166,12 +166,12 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.PersonalCabinet
         }
 
         [Secure]
-        public ActionResult TradingSystemOrder(int id)
+        public ActionResult TradingSystemOrder(int id, string errorMessage)
         {
             var currentUser = _usersService.GetUserByLogin(HttpContext.User.Identity.Name);
             var tSystem = _tradingSystemService.GetSystemById(id);
             var activatedAccounts = _accountsService.GetAccountsByUserId(currentUser.Id).Where(x => x.Status.Id == 2).ToList();
-
+            
             ViewBag.Error = false;
 
             if (tSystem == null)
@@ -180,12 +180,13 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.PersonalCabinet
                 return this.View();
             }
 
+            ViewBag.SystemName = tSystem.Name;
+
             if (!activatedAccounts.Any())
             {
                 ViewBag.NoActivatedAccounts = true;
             }
 
-            ViewBag.SystemName = tSystem.Name;
             this.PrepareNotificationsForView();
 
             var model = new TradingSystemOrderPoco
@@ -193,6 +194,12 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.PersonalCabinet
                     TradingSystemId = id,
                     Accounts = new SelectList(activatedAccounts, "Id", "AccountNumber")
                 };
+
+            if (!string.IsNullOrEmpty(errorMessage))
+            {
+                ViewBag.ErrorMessage = errorMessage;
+                return View(model);
+            }
 
             return this.View(model);
         }
@@ -203,7 +210,13 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.PersonalCabinet
             if (ModelState.IsValid)
             {
                 var currentUser = _usersService.GetUserByLogin(HttpContext.User.Identity.Name);
-                var account = _accountsService.GetById(model.AccountId);
+
+                if (model.AccountId == null)
+                {
+                    return RedirectToAction("TradingSystemOrder", new {@id = model.TradingSystemId, @errorMessage = "Выберите счет"});
+                }
+
+                var account = _accountsService.GetById(model.AccountId.Value);
                 
                 if (account.UserId != currentUser.Id)
                 {
@@ -212,7 +225,7 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.PersonalCabinet
 
                 var tradingSystemEntity = new TradingSystems
                     {
-                        AccountId = model.AccountId,
+                        AccountId = model.AccountId.Value,
                         UserId = currentUser.Id,
                         CreateDate = DateTime.Now,
                         StatusId = 1,
@@ -225,7 +238,7 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.PersonalCabinet
                 // Заявка
                 var applicationEntity = new TradingSystemPool
                     {
-                        AccountId = model.AccountId,
+                        AccountId = model.AccountId.Value,
                         UserId = currentUser.Id,
                         ApplicationDate = DateTime.Now,
                         TradingSystemId = tradingSystemEntity.Id
