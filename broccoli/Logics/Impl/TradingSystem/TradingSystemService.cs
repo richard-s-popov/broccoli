@@ -153,11 +153,11 @@ namespace BroccoliTrade.Logics.Impl.TradingSystem
             {
                 return true;
             }
-            if (systemId == 2 && count > 750)
+            if (systemId == 2 && count > 100)
             {
                 return true;
             }
-            if (systemId == 1 && count > 500)
+            if (systemId == 1)
             {
                 return true;
             }
