@@ -36,6 +36,7 @@ namespace BroccoliTrade.Domain
         public System.DateTime RegisterDate { get; set; }
         public Nullable<long> OwnerId { get; set; }
         public string EmailHash { get; set; }
+        public int UsedPoints { get; set; }
     
         public virtual ICollection<Accounts> Accounts { get; set; }
         public virtual ICollection<AccountPool> AccountPool { get; set; }

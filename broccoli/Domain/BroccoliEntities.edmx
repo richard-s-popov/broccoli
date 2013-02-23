@@ -121,6 +121,7 @@
           <Property Name="ApplicationDate" Type="datetime" Nullable="false" />
           <Property Name="AccountId" Type="int" Nullable="false" />
           <Property Name="TradingSystemId" Type="int" Nullable="false" />
+          <Property Name="ByInvite" Type="bit" Nullable="false" />
         </EntityType>
         <EntityType Name="TradingSystems">
           <Key>
@@ -153,6 +154,7 @@
           <Property Name="IsDeleted" Type="bit" Nullable="false" />
           <Property Name="RegisterDate" Type="datetime" Nullable="false" />
           <Property Name="OwnerId" Type="bigint" />
+          <Property Name="UsedPoints" Type="int" Nullable="false" />
         </EntityType>
         <Association Name="FK_AccountApplication_Accounts">
           <End Role="Accounts" Type="BroccoliModel.Store.Accounts" Multiplicity="1" />
@@ -298,6 +300,9 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Function Name="MD5" ReturnType="varchar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="value" Type="varchar" Mode="In" />
+        </Function>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
@@ -382,6 +387,7 @@
           <Property Type="Int64" Name="OwnerId" />
           <NavigationProperty Name="Referrer" Relationship="BroccoliModel.FK_Referrer_Users" FromRole="Users" ToRole="Referrer" />
           <Property Type="String" Name="EmailHash" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="UsedPoints" Nullable="false" />
         </EntityType>
         <EntityType Name="Accounts">
           <Key>
@@ -490,6 +496,7 @@
           <NavigationProperty Name="Users" Relationship="BroccoliModel.FK_TradingSystemPool_Users" FromRole="TradingSystemPool" ToRole="Users" />
           <Property Type="Int32" Name="TradingSystemId" Nullable="false" />
           <NavigationProperty Name="TradingSystems" Relationship="BroccoliModel.FK_TradingSystemPool_TradingSystems" FromRole="TradingSystemPool" ToRole="TradingSystems" />
+          <Property Type="Boolean" Name="ByInvite" Nullable="false" />
         </EntityType>
         <EntityType Name="TradingSystems">
           <Key>
@@ -628,6 +635,7 @@
           <EntitySetMapping Name="Users">
             <EntityTypeMapping TypeName="BroccoliModel.Users">
               <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="UsedPoints" ColumnName="UsedPoints" />
                 <ScalarProperty Name="EmailHash" ColumnName="EmailHash" />
                 <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
@@ -688,6 +696,7 @@
           <EntitySetMapping Name="TradingSystemPool">
             <EntityTypeMapping TypeName="BroccoliModel.TradingSystemPool">
               <MappingFragment StoreEntitySet="TradingSystemPool">
+                <ScalarProperty Name="ByInvite" ColumnName="ByInvite" />
                 <ScalarProperty Name="TradingSystemId" ColumnName="TradingSystemId" />
                 <ScalarProperty Name="AccountId" ColumnName="AccountId" />
                 <ScalarProperty Name="ApplicationDate" ColumnName="ApplicationDate" />

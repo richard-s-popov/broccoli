@@ -20,5 +20,14 @@ namespace BroccoliTrade.Web.BroccoliMvc.Models.PersonalCabinet
         public string TotalGuests { get; set; }
 
         public string TotatlRegistered { get; set; }
+
+        public List<TradingSystem> SuccessSystem { get; set; } 
+    }
+
+    public class TradingSystem
+    {
+        public int Id { get; set; }
+
+        public string Name { get; set; }
     }
 }

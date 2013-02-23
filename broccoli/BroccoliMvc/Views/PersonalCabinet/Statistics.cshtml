@@ -2,7 +2,6 @@
     ViewBag.Title = "Статистика";
     Layout = "~/Views/Shared/_LayoutMin.cshtml";
 }
-@using System.Text.RegularExpressions
 @model BroccoliTrade.Web.BroccoliMvc.Models.PersonalCabinet.StatisticsListPoco
 
 @section head {
@@ -22,6 +21,15 @@
     @Html.Partial("CabinetMenu")
     <div class="cabinet-main">
         <h3 class="mrg-top-bottom20">Статистика приглашений</h3>
+        @if (ViewBag.SystemSuccess)
+        {
+            <div class="message">
+                Вам доступны системы: @foreach (var system in Model.SuccessSystem)
+                                      {
+                                          <a href="@Url.Action("TradingSystemOrder", "PersonalCabinet", new { @id = system.Id })">@system.Name</a>
+                                      }
+            </div>
+        }
         <div class="period-radio">
             <div id="radio">
                 @if (ViewBag.Period == "today")

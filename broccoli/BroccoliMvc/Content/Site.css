@@ -878,7 +878,7 @@ hr {
 @-moz-keyframes swingdown {
 	0% {
 		opacity: .99999;
-		transform: rotateX(90deg);
+		transform: rotateX(40deg);
 	}
 
 	30% {			
@@ -900,11 +900,11 @@ hr {
 @-webkit-keyframes swingdown {
     0% {
         opacity: .99999;
-        -moz-transform: rotateX(90deg);
-        -ms-transform: rotateX(90deg);
-        -o-transform: rotateX(90deg);
-        -webkit-transform: rotateX(90deg);
-        transform: rotateX(90deg);
+        -moz-transform: rotateX(40deg);
+        -ms-transform: rotateX(40deg);
+        -o-transform: rotateX(40deg);
+        -webkit-transform: rotateX(40deg);
+        transform: rotateX(40deg);
     }
 
     30% {
@@ -947,11 +947,11 @@ hr {
 @keyframes swingdown {
     0% {
         opacity: .99999;
-        -moz-transform: rotateX(90deg);
-        -ms-transform: rotateX(90deg);
-        -o-transform: rotateX(90deg);
-        -webkit-transform: rotateX(90deg);
-        transform: rotateX(90deg);
+        -moz-transform: rotateX(40deg);
+        -ms-transform: rotateX(40deg);
+        -o-transform: rotateX(40deg);
+        -webkit-transform: rotateX(40deg);
+        transform: rotateX(40deg);
     }
 
     30% {
@@ -1047,7 +1047,11 @@ hr {
 .cabinet-main {
     width: 100%;
     padding-top: 25px;
-    padding-left: 40px;
+    padding-left: 25px;
+}
+
+.cabinet-main .wellcome strong {
+    font-weight: bold;
 }
 
 .cabinet-main #activateForm table tr {
@@ -1894,6 +1898,13 @@ footer#main{
 	
 #about a {
 	color: #777;
+}
+
+.message {
+    font-size: 13px;
+    padding: 10px;
+    background-color: rgb(248, 255, 165);
+    border: 2px solid rgb(226, 211, 100);   
 }
 
 /* FF чтоб его! */

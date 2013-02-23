@@ -5,6 +5,7 @@ using System.Globalization;
 using System.Linq;
 using System.Web.Mvc;
 using System.Web.Script.Serialization;
+using System.Configuration;
 using BroccoliTrade.Domain;
 using BroccoliTrade.Domain.Models;
 using BroccoliTrade.Logics.Infrastructure.Extensions;
@@ -217,6 +218,23 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.PersonalCabinet
                 }
 
                 var account = _accountsService.GetById(model.AccountId.Value);
+                var statistics = _statService.GetReferrersByUserId(currentUser.Id);
+                var tradingSystemKey = string.Empty;
+
+                switch (model.TradingSystemId)
+                {
+                    case 2:
+                        tradingSystemKey = "FirstSystem";
+                        break;
+                    case 3:
+                        tradingSystemKey = "SecondSystem";
+                        break;
+                    default:
+                        tradingSystemKey = "OtherSystem";
+                        break;
+                }
+
+                var countForFirst = Convert.ToInt32(ConfigurationManager.AppSettings[tradingSystemKey]);
                 
                 if (account.UserId != currentUser.Id)
                 {
@@ -241,7 +259,8 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.PersonalCabinet
                         AccountId = model.AccountId.Value,
                         UserId = currentUser.Id,
                         ApplicationDate = DateTime.Now,
-                        TradingSystemId = tradingSystemEntity.Id
+                        TradingSystemId = tradingSystemEntity.Id,
+                        ByInvite = statistics.Count(x => x.Registered) >= countForFirst
                     };
                 _tradingSystemService.AddToPool(applicationEntity);
 
@@ -458,6 +477,38 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.PersonalCabinet
                 }
             }
 
+            if (statistics.Count(x => x.Registered) > Convert.ToInt32(ConfigurationManager.AppSettings["FirstSystem"]))
+            {
+                ViewBag.SystemSuccess = true;
+                model.SuccessSystem = new List<TradingSystem>();
+
+                if (statistics.Count(x => x.Registered) > Convert.ToInt32(ConfigurationManager.AppSettings["SecondSystem"]))
+                {
+                    model.SuccessSystem.Add(new TradingSystem
+                        {
+                            Id = 2,
+                            Name = _tradingSystemService.GetSystemById(2).Name
+                        });
+                    model.SuccessSystem.Add(new TradingSystem
+                        {
+                            Id = 3,
+                            Name = _tradingSystemService.GetSystemById(3).Name
+                        });
+                }
+                else
+                {
+                    model.SuccessSystem.Add(new TradingSystem
+                        {
+                            Id = 2,
+                            Name = _tradingSystemService.GetSystemById(2).Name
+                        });
+                }
+            }
+            else
+            {
+                ViewBag.SystemSuccess = false;
+            }
+
             return View(model);
         }
 
@@ -470,7 +521,7 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.PersonalCabinet
             em.DisplayNameFrom = "Broccoli Trade";
             em.To = "rick_box@mail.ru";
 
-            new QueueService().QueueMessage(em);
+            //new QueueService().QueueMessage(em);
 
             new EmailService().SendMessage(em,
                     "support@fxinn.ru",

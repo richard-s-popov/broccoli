@@ -80,6 +80,7 @@
     <Property Type="Int64" Name="OwnerId" />
     <NavigationProperty Name="Referrer" Relationship="BroccoliModel.FK_Referrer_Users" FromRole="Users" ToRole="Referrer" />
     <Property Type="String" Name="EmailHash" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="UsedPoints" Nullable="false" />
   </EntityType>
   <EntityType Name="Accounts">
     <Key>
@@ -188,6 +189,7 @@
     <NavigationProperty Name="Users" Relationship="BroccoliModel.FK_TradingSystemPool_Users" FromRole="TradingSystemPool" ToRole="Users" />
     <Property Type="Int32" Name="TradingSystemId" Nullable="false" />
     <NavigationProperty Name="TradingSystems" Relationship="BroccoliModel.FK_TradingSystemPool_TradingSystems" FromRole="TradingSystemPool" ToRole="TradingSystems" />
+    <Property Type="Boolean" Name="ByInvite" Nullable="false" />
   </EntityType>
   <EntityType Name="TradingSystems">
     <Key>

@@ -19,6 +19,7 @@ namespace BroccoliTrade.Domain
         public System.DateTime ApplicationDate { get; set; }
         public int AccountId { get; set; }
         public int TradingSystemId { get; set; }
+        public bool ByInvite { get; set; }
     
         public virtual Accounts Accounts { get; set; }
         public virtual Users Users { get; set; }

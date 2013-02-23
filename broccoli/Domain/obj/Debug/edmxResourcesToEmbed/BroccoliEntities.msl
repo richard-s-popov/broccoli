@@ -4,6 +4,7 @@
     <EntitySetMapping Name="Users">
       <EntityTypeMapping TypeName="BroccoliModel.Users">
         <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="UsedPoints" ColumnName="UsedPoints" />
           <ScalarProperty Name="EmailHash" ColumnName="EmailHash" />
           <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
           <ScalarProperty Name="Id" ColumnName="Id" />
@@ -64,6 +65,7 @@
     <EntitySetMapping Name="TradingSystemPool">
       <EntityTypeMapping TypeName="BroccoliModel.TradingSystemPool">
         <MappingFragment StoreEntitySet="TradingSystemPool">
+          <ScalarProperty Name="ByInvite" ColumnName="ByInvite" />
           <ScalarProperty Name="TradingSystemId" ColumnName="TradingSystemId" />
           <ScalarProperty Name="AccountId" ColumnName="AccountId" />
           <ScalarProperty Name="ApplicationDate" ColumnName="ApplicationDate" />

@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="91b83a2b4e7f4c758a18ec02a9de6334" Name="Diagram1" ZoomLevel="97">
+      <Diagram DiagramId="91b83a2b4e7f4c758a18ec02a9de6334" Name="Diagram1" ZoomLevel="88">
         <EntityTypeShape EntityType="BroccoliModel.Users" Width="1.5" PointX="5.375" PointY="0.5" IsExpanded="true" />
         <EntityTypeShape EntityType="BroccoliModel.Accounts" Width="1.5" PointX="1.75" PointY="7.125" />
         <AssociationConnector Association="BroccoliModel.FK_Accounts_Users" ManuallyRouted="false" >

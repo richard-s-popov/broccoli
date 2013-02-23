@@ -116,6 +116,7 @@
     <Property Name="ApplicationDate" Type="datetime" Nullable="false" />
     <Property Name="AccountId" Type="int" Nullable="false" />
     <Property Name="TradingSystemId" Type="int" Nullable="false" />
+    <Property Name="ByInvite" Type="bit" Nullable="false" />
   </EntityType>
   <EntityType Name="TradingSystems">
     <Key>
@@ -148,6 +149,7 @@
     <Property Name="IsDeleted" Type="bit" Nullable="false" />
     <Property Name="RegisterDate" Type="datetime" Nullable="false" />
     <Property Name="OwnerId" Type="bigint" />
+    <Property Name="UsedPoints" Type="int" Nullable="false" />
   </EntityType>
   <Association Name="FK_AccountApplication_Accounts">
     <End Role="Accounts" Type="BroccoliModel.Store.Accounts" Multiplicity="1" />
@@ -293,4 +295,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Function Name="MD5" ReturnType="varchar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="value" Type="varchar" Mode="In" />
+  </Function>
 </Schema>

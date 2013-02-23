@@ -110,7 +110,7 @@ namespace BroccoliTrade.Logics.Impl.TradingSystem
 
                 var tradingSystem = this.GetById(tradingSystemPool.TradingSystemId);
 
-                if ((bool)json["result"] && this.CanTakeTradingSystem(tradingSystem.Systems.Id, (int)json["count"]))
+                if (((bool)json["result"] && this.CanTakeTradingSystem(tradingSystem.Systems.Id, (int)json["count"])) || tradingSystemPool.ByInvite)
                 {
                     tradingSystem.StatusId = 2;
                     tradingSystem.IsNew = true;
