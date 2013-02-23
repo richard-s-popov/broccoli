@@ -1675,31 +1675,54 @@ footer#main{
     font-weight: bold;
 }
 
+.broker-info .about-broker-container {
+    position: relative;
+}
+
+.broker-info .about-broker-container img {
+    position: absolute;
+    right: 0;
+    top: 60px;
+    width: 400px;
+}
+
 .broker-info h4 {
-    text-align: center;
-    margin-top: 80px;
     margin-bottom: 20px;
-    font-size: 26px;
+    font: 400 42px/1.2 "Segoe UI Light", Tahoma, arial, sans-serif
 }
 
 .broker-info .about-broker {
     font-size: 16px;
-    margin: 0 auto 80px;
-    width: 850px;
+    width: 450px;
 }
 
 .broker-info .about-broker li {
-    margin-bottom: 10px;
+    font: 14px/22px 'Lucida Sans', 'Lucida Sans Unicode', sans,sans-serif;
+    color: #565656;
+}
+
+.broker-info .trading-terms-container {
+    position: relative;
+    margin-top: 80px;
+    padding-top: 30px;
+}
+
+.broker-info .trading-terms-container img {
+    position: absolute;
+    width: 230px;
+    top: 100px;
 }
 
 .broker-info .trading-terms {
     font-size: 16px;
-    margin: 0 auto 80px;
-    width: 260px;
+    margin-left: 450px;
+    margin-top: 50px;
     list-style: square outside;
 }
 
 .broker-info .trading-terms li {
+    font: 14px/22px 'Lucida Sans', 'Lucida Sans Unicode', sans,sans-serif;
+    color: #565656;
     margin-bottom: 10px;
 }
 
