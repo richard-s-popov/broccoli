@@ -19,10 +19,6 @@
         }
     });
 
-    setTimeout(function() {
-        $('#sh_button').css('top', 150)
-    }, 2000);
-
     DatepickerRussification();
 });
 

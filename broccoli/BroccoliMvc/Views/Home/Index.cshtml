@@ -12,13 +12,23 @@
 }
 
 <div class="banner">
-    <div class="slider">
-        <div class="slide-1">
-            <img class="broccoli" src="@Url.Content("~/Content/img/broccoli.png")"/>
-            <div class="text">
-                <h2>Здоровые инвестиции от 5 до 100% в месяц!</h2>
-                <p>От недельных до многолетних инвестиций. Для дерзких и консервативных инвесторов!</p>
-                <a>Подробнее</a>
+    <div id="mainBanner" class="slider">
+        <div class="panelContainer">
+            <div class="first panel">
+                <img class="broccoli" src="@Url.Content("~/Content/img/broccoli.png")"/>
+                <div class="text">
+                    <h2>Здоровые инвестиции от 5 до 100% в месяц!</h2>
+                    <p>От недельных до многолетних инвестиций. Для дерзких и консервативных инвесторов!</p>
+                    <a href="@Url.Action("BroccoliOffer")">Подробнее</a>
+                </div>
+            </div>
+            <div class="second panel">
+                <img class="broccoli" src="@Url.Content("~/Content/img/broccoli.png")"/>
+                <div class="text">
+                    <h2>Здоровые инвестиции от 5 до 100% в месяц!</h2>
+                    <p>От недельных до многолетних инвестиций. Для дерзких и консервативных инвесторов!</p>
+                    <a href="@Url.Action("BroccoliOffer")">Подробнее</a>
+                </div>
             </div>
         </div>
     </div>
@@ -31,7 +41,7 @@
             <span id="tab3" class="step">3. Получите свой советник</span>
         </div>
         <div class="slider-wrap">
-            <div id="slider1" class="csw">
+            <div id="slider1" class="csw" style="display: none;">
                 <div class="panelContainer">
                     <div class="panel">
                         <h3>Схема работы. Видео инструкция:</h3>

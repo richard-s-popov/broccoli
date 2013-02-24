@@ -116,6 +116,10 @@ hr {
     height: 1px;
 }
 
+.segoe-ui-light {
+    font-family: Segoe UI Light;
+}
+
 .bold {
     font-weight: bold;
 }
@@ -390,24 +394,19 @@ hr {
     margin-right: auto;
 }
 
-.content .banner .slider .slide-1 {
-    position: absolute;
-    width: 100%;
+.content .banner .slider .first {
+    width: 917px;
     height: 100%;
 }
 
-.content .banner .slider .slide-2 {
-    position: absolute;
-    width: 100%;
+.content .banner .slider .second {
+    width: 917px;
     height: 100%;
-    left: 1000px;
 }
 
-.content .banner .slider .slide-3 {
-    position: absolute;
-    width: 100%;
+.content .banner .slider .third {
+    width: 917px;
     height: 100%;
-    left: 2000px;
 }
 
 .content .banner .slider .broccoli {
@@ -586,10 +585,61 @@ hr {
 .footer {
     margin-left: auto;
     margin-right: auto;
+    padding-top: 10px;
     bottom: 0;
     left: 0;
-    height: 233px;
+    height: 210px;
+    position: relative;
     background: url('img/footer.png') repeat-x;
+}
+
+.footer .footer-content {
+    width: 917px;
+    margin: 30px auto;
+}
+
+.footer .footer-content .links-container li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.footer .footer-content .links-container a {
+    color: white;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    text-decoration: none;
+}
+
+.footer .footer-content .links-container a:hover {
+    color: #98cb66;
+}
+
+.footer .footer-content .footer-text {
+    color: rgb(114, 114, 114);
+    display: block;
+    font-family: 'Lucida Sans', 'Lucida Sans Unicode', 'Lucida Grande', Arial, sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    height: 72px;
+    margin: 20px 10px;
+}
+
+.footer .footer-content .copyright {
+    color: rgb(114, 114, 114);
+    display: block;
+    font-size: 12px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    margin: 20px 10px;
+}
+
+.footer .footer-content .copyright a {
+    color: rgb(114, 114, 114);
 }
 
 .green-button {
@@ -1505,7 +1555,6 @@ footer#main{
 	width: 917px; 
 	height: 700px;
 	clear: both;
-	background: #fff;
 }
 		
 .stripViewer .panelContainer {
@@ -1688,7 +1737,7 @@ footer#main{
 
 .broker-info h4 {
     margin-bottom: 20px;
-    font: 400 42px/1.2 "Segoe UI Light", Tahoma, arial, sans-serif
+    font-size: 42px;
 }
 
 .broker-info .about-broker {
@@ -1738,7 +1787,7 @@ footer#main{
 }
 
 .broccoli-offer .offer-discribe .offer-title {
-    font: 400 24px/1.2 "Segoe UI Light", Tahoma, arial, sans-serif;
+    font-size: 24px;
     text-align: center;
     margin-bottom: 26px;
 }
@@ -1759,6 +1808,7 @@ footer#main{
 .broccoli-offer .calculator-container {
     margin-top: 50px;
     padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 .broccoli-offer .calculator-container .calculator {
@@ -1793,7 +1843,7 @@ footer#main{
 
 .broccoli-offer .calculator-container h4 {
     margin-bottom: 20px;
-    font: 400 42px/1.2 "Segoe UI Light", Tahoma, arial, sans-serif
+    font-size: 42px;
 }
 
 .panel #pricing-table {
@@ -2015,6 +2065,11 @@ footer#main{
         font-weight: lighter;
         color: #2E2E2E;
         font-size: 30px;
+    }
+
+    .segoe-ui-light {
+        font-family: Segoe UI;
+        font-weight: lighter;
     }
 
     .header .white-line .steps .step {
