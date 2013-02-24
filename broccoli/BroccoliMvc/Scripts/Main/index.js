@@ -6,17 +6,18 @@
     
     jQuery(window).bind("load", function () {
         jQuery("div#mainBanner").codaSlider();
+        jQuery("div#mainBanner").show();
     });
     
     $('#indexPage').hide();
     
     $(".various").fancybox({
-        maxWidth: 800,
-        maxHeight: 600,
+        maxWidth: 1000,
+        maxHeight: 900,
         fitToView: false,
-        width: '70%',
-        height: '70%',
-        autoSize: false,
+        width: '100%',
+        height: '80%',
+        autoSize: true,
         closeClick: false,
         openEffect: 'elastic',
         closeEffect: 'none'
