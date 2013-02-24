@@ -102,6 +102,11 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.Home
             return View();
         }
 
+        public ActionResult BroccoliOffer()
+        {
+            return View();
+        }
+
         protected override void Dispose(bool disposing)
         {
             _usersService.Dispose();

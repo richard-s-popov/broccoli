@@ -1118,12 +1118,12 @@ hr {
 }
 
 .grid tr:hover {
-    background: #fbf8e9;
-    -o-transition: all 0.1s ease-in-out;
+    background: #fbf8e9 !important;
+    /*-o-transition: all 0.1s ease-in-out;
     -webkit-transition: all 0.1s ease-in-out;
     -moz-transition: all 0.1s ease-in-out;
     -ms-transition: all 0.1s ease-in-out;
-    transition: all 0.1s ease-in-out;     
+    transition: all 0.1s ease-in-out;*/     
 }
 
 .grid .non-hovered:hover {
@@ -1724,6 +1724,76 @@ footer#main{
     font: 14px/22px 'Lucida Sans', 'Lucida Sans Unicode', sans,sans-serif;
     color: #565656;
     margin-bottom: 10px;
+}
+
+.broccoli-offer .offer-discribe {
+    display: inline-block;
+    width: 300px;
+    vertical-align: top;
+    margin-top: 30px;
+}
+
+.broccoli-offer .offer-discribe img {
+    margin: 10px 100px;
+}
+
+.broccoli-offer .offer-discribe .offer-title {
+    font: 400 24px/1.2 "Segoe UI Light", Tahoma, arial, sans-serif;
+    text-align: center;
+    margin-bottom: 26px;
+}
+
+.broccoli-offer .offer-discribe .offer-text {
+    color: rgb(68, 68, 68);
+    display: block;
+    font-family: 'Lucida Sans', 'Lucida Sans Unicode', 'Lucida Grande', Arial, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    padding: 0 30px;
+    line-height: 21px;
+    text-align: justify;
+}
+
+.broccoli-offer .calculator-container {
+    margin-top: 50px;
+    padding-top: 50px;
+}
+
+.broccoli-offer .calculator-container .calculator {
+    margin-bottom: 50px;
+}
+
+.broccoli-offer .calculator-container .calculator .money {
+    border: none;
+    width: 100px;
+}
+
+.broccoli-offer .calculator-container .calculator .percent {
+    border: none;
+    width: 60px;
+}
+
+.broccoli-offer .calculator-container .calculator th {
+    vertical-align: middle;
+}
+
+.broccoli-offer .calculator-container .calculator td {
+    text-align: center;
+}
+
+.broccoli-offer .calculator-container .calculator .dark {
+    background-color: rgb(228, 228, 228)
+}
+
+.broccoli-offer .calculator-container .calculator .bold {
+    font-weight: bold;
+}
+
+.broccoli-offer .calculator-container h4 {
+    margin-bottom: 20px;
+    font: 400 42px/1.2 "Segoe UI Light", Tahoma, arial, sans-serif
 }
 
 .panel #pricing-table {

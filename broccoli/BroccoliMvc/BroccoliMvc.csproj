@@ -148,6 +148,8 @@
     <Content Include="Content\img\broker-logo.png" />
     <Content Include="Content\img\button_ok_7852.png" />
     <Content Include="Content\img\cross_2615.png" />
+    <Content Include="Content\img\depositphotos_1374386-A-vegetarian-construction-isolated.jpg" />
+    <Content Include="Content\img\depositphotos_1950636-Various-vegetables-isolated.jpg" />
     <Content Include="Content\img\dep_5856564-Green-Profit-Icon.jpg" />
     <Content Include="Content\img\fancybox\blank.gif" />
     <Content Include="Content\img\fancybox\fancybox_buttons.png" />
@@ -335,6 +337,7 @@
     <Content Include="Views\Shared\MainMenu.cshtml" />
     <Content Include="Views\PersonalCabinet\Statistics.cshtml" />
     <Content Include="Views\Home\BrokerInfo.cshtml" />
+    <Content Include="Views\Home\BroccoliOffer.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

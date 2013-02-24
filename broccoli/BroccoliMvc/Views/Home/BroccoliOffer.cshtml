@@ -1,0 +1,236 @@
+﻿@{
+    ViewBag.Title = "Предложение Брокколи";
+    Layout = "~/Views/Shared/_LayoutMin.cshtml";
+}
+
+<div class="banner small">
+    <div class="action">
+        <font>Предложение Брокколи</font>
+    </div>
+</div>
+
+<div class="center-content broccoli-offer">
+    <div class="offer-discribe">
+        <img style="height: 200px;" src="@Url.Content("~/Content/img/depositphotos_1066825-Pineapple.jpg")"/>
+        <div class="offer-title">Зарабатывайте</div>
+        <div class="offer-text">Возможность зарабатывать от 5% до 100% от депозита в месяц.</div>
+    </div>
+    <div class="offer-discribe">
+        <img style="height: 200px;" src="@Url.Content("~/Content/img/depositphotos_15565199-Lime-stack (1).jpg")"/>
+        <div class="offer-title">Управление</div>
+        <div class="offer-text">Пошаговые инструкции для настройки советников  и торговой платформы помогут Вам без труда ориентироваться в управлении Вашими финансами.</div>
+    </div>
+    <div class="offer-discribe">
+        <img style="height: 200px;margin-left: 60px;" src="@Url.Content("~/Content/img/depositphotos_1158059-Young-sunflower-sprout.jpg")"/>
+        <div class="offer-title">Риск</div>
+        <div class="offer-text">Торгуйте при помощи наших советников с возможностью выставления риска.</div>
+    </div>
+    <div class="hr-shadow calculator-container">
+        <h4>Калькулятор</h4>
+        <table id="calculator" class="calculator grid">
+            <thead>
+                <th>Введите сумму начальной инвестиции, $</th>
+                <th style="border-left: none;"><input id="startSum" class="money" value="1000" type="text"/></th>
+                <th>Предполагаемый процент в месяц, %</th>
+                <th style="border-left: none;"><input id="percent" class="percent" value="15" type="text"/></th>
+                <th>Сумма ежемесячного пополнения, $</th>
+                <th style="border-left: none;"><input id="transfer" class="money" value="100" type="text"/></th>
+            </thead>
+            <tbody>
+                <tr id="month-1" class="month">
+                    <td class="month-name"></td>
+                    <td class="month-sum"></td>
+                    <td></td>
+                    <td class="month-percent"></td>
+                    <td></td>
+                    <td class="month-transfer"></td>
+                </tr>
+                <tr id="month-2" class="month">
+                    <td class="month-name"></td>
+                    <td class="month-sum"></td>
+                    <td></td>
+                    <td class="month-percent"></td>
+                    <td></td>
+                    <td class="month-transfer"></td>
+                </tr>
+                <tr id="month-3" class="month">
+                    <td class="month-name"></td>
+                    <td class="month-sum"></td>
+                    <td></td>
+                    <td class="month-percent"></td>
+                    <td></td>
+                    <td class="month-transfer"></td>
+                </tr>
+                <tr id="month-4" class="month">
+                    <td class="month-name"></td>
+                    <td class="month-sum"></td>
+                    <td></td>
+                    <td class="month-percent"></td>
+                    <td></td>
+                    <td class="month-transfer"></td>
+                </tr>
+                <tr id="month-5" class="month">
+                    <td class="month-name"></td>
+                    <td class="month-sum"></td>
+                    <td></td>
+                    <td class="month-percent"></td>
+                    <td></td>
+                    <td class="month-transfer"></td>
+                </tr>
+                <tr id="month-6" class="month">
+                    <td class="month-name"></td>
+                    <td class="month-sum"></td>
+                    <td></td>
+                    <td class="month-percent"></td>
+                    <td></td>
+                    <td class="month-transfer"></td>
+                </tr>
+                <tr id="month-7" class="month">
+                    <td class="month-name"></td>
+                    <td class="month-sum"></td>
+                    <td></td>
+                    <td class="month-percent"></td>
+                    <td></td>
+                    <td class="month-transfer"></td>
+                </tr>
+                <tr id="month-8" class="month">
+                    <td class="month-name"></td>
+                    <td class="month-sum"></td>
+                    <td></td>
+                    <td class="month-percent"></td>
+                    <td></td>
+                    <td class="month-transfer"></td>
+                </tr>
+                <tr id="month-9" class="month">
+                    <td class="month-name"></td>
+                    <td class="month-sum"></td>
+                    <td></td>
+                    <td class="month-percent"></td>
+                    <td></td>
+                    <td class="month-transfer"></td>
+                </tr>
+                <tr id="month-10" class="month">
+                    <td class="month-name"></td>
+                    <td class="month-sum"></td>
+                    <td></td>
+                    <td class="month-percent"></td>
+                    <td></td>
+                    <td class="month-transfer"></td>
+                </tr>
+                <tr id="month-11" class="month">
+                    <td class="month-name"></td>
+                    <td class="month-sum"></td>
+                    <td></td>
+                    <td class="month-percent"></td>
+                    <td></td>
+                    <td class="month-transfer"></td>
+                </tr>
+                <tr id="month-12" class="month">
+                    <td class="month-name"></td>
+                    <td class="month-sum"></td>
+                    <td></td>
+                    <td class="month-percent"></td>
+                    <td></td>
+                    <td class="month-transfer"></td>
+                </tr>
+                <tr id="month-13" class="month">
+                    <td class="month-name"></td>
+                    <td class="month-sum"></td>
+                    <td></td>
+                    <td class="month-percent"></td>
+                    <td></td>
+                    <td class="month-transfer"></td>
+                </tr>
+                <tr id="month-14" class="month">
+                    <td class="month-name"></td>
+                    <td class="month-sum"></td>
+                    <td></td>
+                    <td class="month-percent"></td>
+                    <td></td>
+                    <td class="month-transfer"></td>
+                </tr>
+                <tr id="month-15" class="month">
+                    <td class="month-name"></td>
+                    <td class="month-sum"></td>
+                    <td></td>
+                    <td class="month-percent"></td>
+                    <td></td>
+                    <td class="month-transfer"></td>
+                </tr>
+                <tr id="month-16" class="month">
+                    <td class="month-name"></td>
+                    <td class="month-sum"></td>
+                    <td></td>
+                    <td class="month-percent"></td>
+                    <td></td>
+                    <td class="month-transfer"></td>
+                </tr>
+                <tr id="month-17" class="month">
+                    <td class="month-name"></td>
+                    <td class="month-sum"></td>
+                    <td></td>
+                    <td class="month-percent"></td>
+                    <td></td>
+                    <td class="month-transfer"></td>
+                </tr>
+                <tr id="month-18" class="month">
+                    <td class="month-name"></td>
+                    <td class="month-sum"></td>
+                    <td></td>
+                    <td class="month-percent"></td>
+                    <td></td>
+                    <td class="month-transfer"></td>
+                </tr>
+                <tr id="month-19" class="month">
+                    <td class="month-name"></td>
+                    <td class="month-sum"></td>
+                    <td></td>
+                    <td class="month-percent"></td>
+                    <td></td>
+                    <td class="month-transfer"></td>
+                </tr>
+                <tr id="month-20" class="month">
+                    <td class="month-name"></td>
+                    <td class="month-sum"></td>
+                    <td></td>
+                    <td class="month-percent"></td>
+                    <td></td>
+                    <td class="month-transfer"></td>
+                </tr>
+                <tr id="month-21" class="month">
+                    <td class="month-name"></td>
+                    <td class="month-sum"></td>
+                    <td></td>
+                    <td class="month-percent"></td>
+                    <td></td>
+                    <td class="month-transfer"></td>
+                </tr>
+                <tr id="month-22" class="month">
+                    <td class="month-name"></td>
+                    <td class="month-sum"></td>
+                    <td></td>
+                    <td class="month-percent"></td>
+                    <td></td>
+                    <td class="month-transfer"></td>
+                </tr>
+                <tr id="month-23" class="month">
+                    <td class="month-name"></td>
+                    <td class="month-sum"></td>
+                    <td></td>
+                    <td class="month-percent"></td>
+                    <td></td>
+                    <td class="month-transfer"></td>
+                </tr>
+                <tr id="month-24" class="month">
+                    <td class="month-name"></td>
+                    <td class="month-sum"></td>
+                    <td></td>
+                    <td class="month-percent"></td>
+                    <td></td>
+                    <td class="month-transfer"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<script type="text/javascript" src="@Url.Content("~/Scripts/Main/broccoli.offer.js")"></script>
