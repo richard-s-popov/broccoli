@@ -4,8 +4,10 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using BroccoliTrade.Domain;
+using BroccoliTrade.Logics.Interfaces.Communications;
 using BroccoliTrade.Logics.Interfaces.Membership;
 using BroccoliTrade.Logics.Interfaces.Statistics;
+using BroccoliTrade.Web.BroccoliMvc.Models.Communications;
 
 namespace BroccoliTrade.Web.BroccoliMvc.Controllers.Home
 {
@@ -13,13 +15,16 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.Home
     {
         private readonly IUsersService _usersService;
         private readonly IStatService _statService;
+        private readonly ICommunicationService _communicationService;
 
         public HomeController(
             IUsersService usersService,
-            IStatService statService)
+            IStatService statService,
+            ICommunicationService communicationService)
         {
             _usersService = usersService;
             _statService = statService;
+            _communicationService = communicationService;
         }
 
         public ActionResult Index(string token)
@@ -97,6 +102,43 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.Home
             return View();
         }
 
+        public ActionResult Comments()
+        {
+            var comments = _communicationService.GetAllConfirmedComments();
+            var model = new CommentsListModel
+                {
+                    CommentList = comments.Select(x => new CommentModel
+                        {
+                            UserName = x.Users.Name,
+                            Body = x.Body
+                        })
+                };
+
+            return View(model);
+        }
+
+        [ValidateInput(false)]
+        public JsonResult AddComment(string comment)
+        {
+            var currentUser = _usersService.GetUserByLogin(HttpContext.User.Identity.Name);
+
+            if (currentUser == null)
+            {
+                return Json(new {result = false}, JsonRequestBehavior.AllowGet);
+            }
+
+            _communicationService.AddComment(new Comment
+                {
+                    UserId = currentUser.Id,
+                    Body = comment,
+                    Date = DateTime.Now,
+                    IsConfirmed = true,
+                    IsDeleted = false
+                });
+
+            return Json(new {result = true}, JsonRequestBehavior.AllowGet);
+        }
+
         public ActionResult BrokerInfo()
         {
             return View();
@@ -111,6 +153,7 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.Home
         {
             _usersService.Dispose();
             _statService.Dispose();
+            _communicationService.Dispose();
             base.Dispose(disposing);
         }
     }

@@ -1,7 +1,7 @@
 ﻿<table class="menu">
     <tr>
         <td id="indexPage" class="item" onclick="window.location = '@Url.Action("Index", "Home")'">Главная</td>
-        <td id="commentsPage" class="item">Отзывы</td>
+        <td id="commentsPage" class="item" onclick="window.location = '@Url.Action("Comments", "Home")'">Отзывы</td>
         @if (HttpContext.Current.User.Identity.IsAuthenticated)
         {
             <td id="personalCabinetPage" class="item" onclick="window.location = '@Url.Action("Index", "PersonalCabinet")'">Личный кабинет</td>

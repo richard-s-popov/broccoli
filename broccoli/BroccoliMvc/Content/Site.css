@@ -41,6 +41,12 @@ body {
 ol, ul {
 	list-style: none;
 }
+strong {
+    font-weight: bold;
+}
+em {
+    font-style: italic;
+}
 blockquote, q {
 	quotes: none;
 }
@@ -2030,6 +2036,43 @@ footer#main{
 #pricing-table .plan4 .signup{
 	background: #45D0DA;
 }	
+
+.comments {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.comments .comment {
+    margin: 10px 0;
+    border: 1px solid rgb(235, 235, 235);
+    padding: 10px;
+    border-radius: 3px;
+    font-size: 13px;
+    -webkit-box-shadow: 1px 1px 5px 0px #aaa;
+    box-shadow: 1px 1px 5px 0px #aaa;
+}
+
+.comments .comment .user-name {
+    font-weight: bold;
+    color: rgb(0, 199, 0);
+}
+
+.comments .comment .body {
+    margin-top: 10px;
+}
+
+.comments .send-comment {
+    margin-top: 10px;
+    display: block;
+    float: right;   
+}
+
+.comments .add-comment-title {
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
 	
 /* --------------- */
 

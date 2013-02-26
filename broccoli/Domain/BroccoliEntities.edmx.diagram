@@ -26,6 +26,8 @@
         <AssociationConnector Association="BroccoliModel.FK_TradingSystemPool_TradingSystems" />
         <EntityTypeShape EntityType="BroccoliModel.Referrer" Width="1.5" PointX="8.5" PointY="0.5" />
         <AssociationConnector Association="BroccoliModel.FK_Referrer_Users" />
+        <EntityTypeShape EntityType="BroccoliModel.Comment" Width="1.5" PointX="8.9608033024523426" PointY="22.471095557543958" />
+        <AssociationConnector Association="BroccoliModel.FK_Comment_Users" />
         </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -67,6 +67,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BroccoliEntities.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Comment.cs">
+      <DependentUpon>BroccoliEntities.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\EmailMessage.cs" />
     <Compile Include="Models\Status.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -1,0 +1,53 @@
+﻿@{
+    ViewBag.Title = "Отзывы";
+    Layout = "~/Views/Shared/_LayoutMin.cshtml";
+}
+@model BroccoliTrade.Web.BroccoliMvc.Models.Communications.CommentsListModel
+
+<script  type="text/javascript" src="@Url.Content("~/Scripts/ckeditor/ckeditor.js")"></script>
+
+<div class="banner small">
+    <div class="action">
+        <font>Отзывы</font>
+    </div>
+</div>
+
+<div class="center-content comments">
+    @foreach (var comment in Model.CommentList)
+    {
+        <div class="comment">
+            <div class="user-name">@comment.UserName</div>
+            <div class="body">@Html.Raw(comment.Body)</div>
+        </div>
+    }
+    @if (HttpContext.Current.User.Identity.IsAuthenticated)
+    {
+        <div class="add-comment-title">Добавить отзыв:</div>
+        <textarea class="ckeditor" name="ckeditor"></textarea>    
+        <span id="sendComment" class="button send-comment">
+            <a href="#"><input class="large" type="button" value="Отправить" /></a>
+        </span>
+    }
+</div>
+
+<script type="text/javascript"> document.SendCommentUrl = '@Url.Action("AddComment", "Home")'</script>
+<script type="text/javascript"> document.CommentsUrl = '@Url.Action("Comments", "Home")'</script>
+<script type="text/javascript">
+    jQuery(document).ready(function ($) {
+        CKEDITOR.replace('ckeditor', {});
+
+        $('#sendComment').click(function() {
+            $.ajax({
+                url: document.SendCommentUrl,
+                data: {
+                    comment: CKEDITOR.instances.ckeditor.getData()
+                },
+                success: function(data) {
+                    if (data.result == true) {
+                        window.location = document.CommentsUrl;
+                    }
+                }
+            });
+        });
+    });
+</script>

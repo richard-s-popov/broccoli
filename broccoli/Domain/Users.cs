@@ -21,6 +21,7 @@ namespace BroccoliTrade.Domain
             this.TradingSystemPool = new HashSet<TradingSystemPool>();
             this.TradingSystems = new HashSet<TradingSystems>();
             this.Referrer = new HashSet<Referrer>();
+            this.Comment = new HashSet<Comment>();
         }
     
         public long Id { get; set; }
@@ -43,5 +44,6 @@ namespace BroccoliTrade.Domain
         public virtual ICollection<TradingSystemPool> TradingSystemPool { get; set; }
         public virtual ICollection<TradingSystems> TradingSystems { get; set; }
         public virtual ICollection<Referrer> Referrer { get; set; }
+        public virtual ICollection<Comment> Comment { get; set; }
     }
 }

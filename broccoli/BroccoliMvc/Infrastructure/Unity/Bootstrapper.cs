@@ -1,9 +1,11 @@
 using System.Web.Mvc;
 using BroccoliTrade.Logics.Impl.Account;
+using BroccoliTrade.Logics.Impl.Communications;
 using BroccoliTrade.Logics.Impl.Membership;
 using BroccoliTrade.Logics.Impl.Statistics;
 using BroccoliTrade.Logics.Impl.TradingSystem;
 using BroccoliTrade.Logics.Interfaces.Account;
+using BroccoliTrade.Logics.Interfaces.Communications;
 using BroccoliTrade.Logics.Interfaces.Membership;
 using BroccoliTrade.Logics.Interfaces.Statistics;
 using BroccoliTrade.Logics.Interfaces.TradingSystem;
@@ -33,6 +35,7 @@ namespace BroccoliTrade.Web.BroccoliMvc.Infrastructure.Unity
             container.RegisterType<IAccountsService, AccountsService>();
             container.RegisterType<ITradingSystemService, TradingSystemService>();
             container.RegisterType<IStatService, StatService>();
+            container.RegisterType<ICommunicationService, CommunicationService>();
 
             return container;
         }

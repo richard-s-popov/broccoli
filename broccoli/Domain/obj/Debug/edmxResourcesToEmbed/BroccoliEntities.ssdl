@@ -3,6 +3,7 @@
   <EntityContainer Name="BroccoliModelStoreContainer">
     <EntitySet Name="AccountPool" EntityType="BroccoliModel.Store.AccountPool" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Accounts" EntityType="BroccoliModel.Store.Accounts" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Comment" EntityType="BroccoliModel.Store.Comment" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Referrer" EntityType="BroccoliModel.Store.Referrer" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Status" EntityType="BroccoliModel.Store.Status" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Systems" EntityType="BroccoliModel.Store.Systems" store:Type="Tables" Schema="dbo" />
@@ -24,6 +25,10 @@
     <AssociationSet Name="FK_Accounts_Users" Association="BroccoliModel.Store.FK_Accounts_Users">
       <End Role="Users" EntitySet="Users" />
       <End Role="Accounts" EntitySet="Accounts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Comment_Users" Association="BroccoliModel.Store.FK_Comment_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Comment" EntitySet="Comment" />
     </AssociationSet>
     <AssociationSet Name="FK_Referrer_Users" Association="BroccoliModel.Store.FK_Referrer_Users">
       <End Role="Users" EntitySet="Users" />
@@ -80,6 +85,17 @@
     <Property Name="ModifiedDate" Type="datetime" />
     <Property Name="CreateDate" Type="datetime" Nullable="false" />
     <Property Name="IsNew" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Comment">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Body" Type="nvarchar" Nullable="false" MaxLength="2000" />
+    <Property Name="IsConfirmed" Type="bit" Nullable="false" />
+    <Property Name="Date" Type="datetime" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="UserId" Type="bigint" Nullable="false" />
   </EntityType>
   <EntityType Name="Referrer">
     <Key>
@@ -195,6 +211,18 @@
         <PropertyRef Name="Id" />
       </Principal>
       <Dependent Role="Accounts">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Comment_Users">
+    <End Role="Users" Type="BroccoliModel.Store.Users" Multiplicity="1" />
+    <End Role="Comment" Type="BroccoliModel.Store.Comment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Comment">
         <PropertyRef Name="UserId" />
       </Dependent>
     </ReferentialConstraint>

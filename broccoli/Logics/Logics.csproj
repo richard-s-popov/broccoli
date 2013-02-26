@@ -65,6 +65,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Impl\Account\AccountsService.cs" />
+    <Compile Include="Impl\Communications\CommunicationService.cs" />
     <Compile Include="Impl\Membership\MembershipService.cs" />
     <Compile Include="Impl\Membership\UsersService.cs" />
     <Compile Include="Impl\Statistics\StatService.cs" />
@@ -72,6 +73,7 @@
     <Compile Include="Infrastructure\Certificates\TrustAllCertificatePolicy.cs" />
     <Compile Include="Infrastructure\Extensions\StringExtensions.cs" />
     <Compile Include="Interfaces\Account\IAccountsService.cs" />
+    <Compile Include="Interfaces\Communications\ICommunicationService.cs" />
     <Compile Include="Interfaces\ICrudService.cs" />
     <Compile Include="Interfaces\Membership\IMembershipService.cs" />
     <Compile Include="Interfaces\Membership\IUsersService.cs" />
