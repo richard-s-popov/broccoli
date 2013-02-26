@@ -119,7 +119,8 @@ namespace BroccoliTrade.Logics.Impl.TradingSystem
                     {
                         Subject = string.Format("{0} активирован", tradingSystem.Systems.Name),
                         Message = string.Format("Здравствуйте, {0}. {1} активирован.", tradingSystem.Users.Name, tradingSystem.Systems.Name),
-                        From = "richard.s.popov@gmail.com",
+                        From = "support@broccoli-trade.ru",
+                        DisplayNameFrom = "Broccoli Trade",
                         To = tradingSystem.Users.Email
                     };
 
@@ -134,7 +135,8 @@ namespace BroccoliTrade.Logics.Impl.TradingSystem
                     {
                         Subject = string.Format("Заявка на {0} отклонена", tradingSystem.Systems.Name),
                         Message = string.Format("Здравствуйте, {0}. Заявка на {1} отклонена.", tradingSystem.Users.Name, tradingSystem.Systems.Name),
-                        From = "richard.s.popov@gmail.com",
+                        From = "support@broccoli-trade.ru",
+                        DisplayNameFrom = "Broccoli Trade",
                         To = tradingSystem.Users.Email
                     };
 

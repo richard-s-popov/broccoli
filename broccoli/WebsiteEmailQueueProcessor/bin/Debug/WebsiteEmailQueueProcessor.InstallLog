@@ -24,3 +24,16 @@
    logtoconsole = 
    logfile = C:\work\broccoli\broccoli\WebsiteEmailQueueProcessor\bin\Debug\WebsiteEmailQueueProcessor.InstallLog
    assemblypath = C:\work\broccoli\broccoli\WebsiteEmailQueueProcessor\bin\Debug\WebsiteEmailQueueProcessor.exe
+Выполняется установка сборки 'C:\work\broccoli\broccoli\WebsiteEmailQueueProcessor\bin\Debug\WebsiteEmailQueueProcessor.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\work\broccoli\broccoli\WebsiteEmailQueueProcessor\bin\Debug\WebsiteEmailQueueProcessor.InstallLog
+   assemblypath = C:\work\broccoli\broccoli\WebsiteEmailQueueProcessor\bin\Debug\WebsiteEmailQueueProcessor.exe
+Устанавливается служба WebsiteEmailQueueProcessor...
+Служба WebsiteEmailQueueProcessor успешно установлена.
+Создается исходный EventLog WebsiteEmailQueueProcessor в журнале Application...
+Выполняется фиксация сборки 'C:\work\broccoli\broccoli\WebsiteEmailQueueProcessor\bin\Debug\WebsiteEmailQueueProcessor.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = C:\work\broccoli\broccoli\WebsiteEmailQueueProcessor\bin\Debug\WebsiteEmailQueueProcessor.InstallLog
+   assemblypath = C:\work\broccoli\broccoli\WebsiteEmailQueueProcessor\bin\Debug\WebsiteEmailQueueProcessor.exe

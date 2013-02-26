@@ -521,13 +521,13 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.PersonalCabinet
             em.DisplayNameFrom = "Broccoli Trade";
             em.To = "rick_box@mail.ru";
 
-            //new QueueService().QueueMessage(em);
+            new QueueService().QueueMessage(em);
 
             new EmailService().SendMessage(em,
-                    "support@fxinn.ru",
-                    "g<qTS4Zn",
-                    "smtp.gmail.com",
-                    465,
+                    "support@broccoli-trade.ru",
+                    "gqTS4Zne",
+                    "smtp.yandex.ru",
+                    587,
                     true);
 
             return new EmptyResult();

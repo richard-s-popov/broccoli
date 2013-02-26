@@ -147,8 +147,15 @@
     <Content Include="Content\img\broccoli.png" />
     <Content Include="Content\img\broker-logo.png" />
     <Content Include="Content\img\button_ok_7852.png" />
+    <Content Include="Content\img\calc1.png" />
     <Content Include="Content\img\cross_2615.png" />
+    <Content Include="Content\img\depositphotos_1066825-Pineapple.jpg" />
+    <Content Include="Content\img\depositphotos_1158059-Young-sunflower-sprout.jpg" />
     <Content Include="Content\img\depositphotos_1374386-A-vegetarian-construction-isolated.jpg" />
+    <Content Include="Content\img\depositphotos_15565199-Lime-stack %281%29.jpg" />
+    <Content Include="Content\img\depositphotos_15705219-Brassica-Oleracea--Romanesco-broccoli--Roman-cauliflower.jpg" />
+    <Content Include="Content\img\depositphotos_15705219-Brassica-Oleracea--Romanesco-broccoli--Roman-cauliflower.png" />
+    <Content Include="Content\img\depositphotos_15705219-Brassica-Oleracea--Romanesco-broccoli--Roman-cauliflower1.png" />
     <Content Include="Content\img\depositphotos_1950636-Various-vegetables-isolated.jpg" />
     <Content Include="Content\img\dep_5856564-Green-Profit-Icon.jpg" />
     <Content Include="Content\img\fancybox\blank.gif" />
@@ -264,6 +271,7 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\Main\broccoli.offer.js" />
     <Content Include="Scripts\Main\index.js" />
     <Content Include="Scripts\Main\main.js" />
     <Content Include="Scripts\MicrosoftAjax.debug.js" />
@@ -338,6 +346,7 @@
     <Content Include="Views\PersonalCabinet\Statistics.cshtml" />
     <Content Include="Views\Home\BrokerInfo.cshtml" />
     <Content Include="Views\Home\BroccoliOffer.cshtml" />
+    <Content Include="Views\Shared\Footer.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

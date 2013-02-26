@@ -19,6 +19,7 @@ namespace BroccoliTrade.Logics.MSMQ
             msgQ.Formatter = new BinaryMessageFormatter();
             msgQ.MessageReadPropertyFilter.SetAll();
             var messages = msgQ.GetAllMessages();
+            msgQ.Purge();
 
             foreach (var message in messages)
             {
@@ -35,10 +36,10 @@ namespace BroccoliTrade.Logics.MSMQ
             {
                 // The message is plain text.
                 new EmailService().SendMessage(message,
-                    "support@fxinn.ru",
-                    "g<qTS4Zn",
-                    "smtp.gmail.com",
-                    465,
+                    "support@broccoli-trade.ru",
+                    "gqTS4Zne",
+                    "smtp.yandex.ru",
+                    587,
                     true);
             }
         }
