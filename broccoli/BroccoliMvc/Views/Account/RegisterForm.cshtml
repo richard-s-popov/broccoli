@@ -78,7 +78,7 @@
                     </td>
                     <td>
                         @Html.DropDownList("Day", (IEnumerable<SelectListItem>)ViewBag.Days)
-                        @Html.DropDownList("Month", (IEnumerable<SelectListItem>)ViewBag.Months)
+                        @Html.DropDownList("Month", (IEnumerable<SelectListItem>)ViewBag.Months, new { @style = "width: 74px;" })
                         @Html.DropDownList("Year", (IEnumerable<SelectListItem>)ViewBag.Years)
                         @Html.HiddenFor(m => m.BirthDay, new { @id = "birthday" })
                     </td>

@@ -1,4 +1,5 @@
 ﻿@using BroccoliTrade.Logics.Infrastructure.Extensions
+<script type="text/javascript" src="@Url.Content("~/Scripts/ckeditor/ckeditor.js")"></script>
 <script type="text/javascript" src="@Url.Content("~/Scripts/PersonalCabinet/alternative.way.js")"></script>
 
 <h3>Другой способ получения</h3>
@@ -30,9 +31,8 @@
             </tr>
         </table>
         <a href="javascript:void(0)" id="addUser">Добавить еще...</a>
-        @Html.TextBox("subject", null, new { @class = "subject" })
-        <textarea id="message" rows="7">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
-        </textarea>
+        @Html.TextBox("subject", null, new { @class = "subject", @placeholder = "Заголовок" })
+        <textarea id="inviteMessage" class="inviteMessage" name="inviteMessage">Ююхуу, <%name%>! приглашаю тебя на сайт <a href="www.broccoli-trade.ru">www.broccoli-trade.ru</a>!</textarea>
         <div id="lessSymbols"></div>
         <button id="sendInvites" type="button" class="green-button">Сделать рассылку</button>
         <div class="social-networks">

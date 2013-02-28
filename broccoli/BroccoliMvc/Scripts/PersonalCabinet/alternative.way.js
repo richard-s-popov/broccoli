@@ -2,6 +2,8 @@
     var inviteList = [];
     var src = $('#srcCross').attr('src');
     
+    CKEDITOR.replace('inviteMessage', {});
+    
     // Обработчик добавления полей для ввода нового пользователя
     $('#addUser').click(function () {
         $('#assignedUsers tr:last').after('<tr><td></td><td class="inputs"><input class="nameAssignedUser" type="text"></td><td class="inputs"><input class="emailAssignedUser" type="text"></td><td class="inputs"><div class="for-img"><img class="deleteAssignedUserBtn" src="' + src + '"/></div></td></tr>');
