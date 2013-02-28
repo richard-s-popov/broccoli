@@ -1336,6 +1336,11 @@ hr {
     margin-top: 20px;
 }
 
+.alt-way-container .placeholder-description {
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
 .alt-way-container textarea {
     width: 624px;
     resize: none;
@@ -1910,7 +1915,8 @@ footer#main{
 	
 #pricing-table .popular-plan {
 	top: -20px;
-	padding: 40px 20px;   
+	padding: 40px 20px;
+    padding-bottom: 30px;
 }
 	
 /* --------------- */	
@@ -1964,7 +1970,7 @@ footer#main{
 /* --------------- */
 
 #pricing-table .price{
-	font-size: 45px;
+	font-size: 29px;
 }
 
 #pricing-table .monthly{
@@ -1983,7 +1989,8 @@ footer#main{
 }
 
 #pricing-table li {
-	padding: 10px 0;
+	padding: 5px 0;
+    text-align: center;
 }
 	
 /* --------------- */
@@ -2077,6 +2084,58 @@ footer#main{
 .comments .comment .decline {
     margin-left: 20px;
     vertical-align: text-top;
+}
+
+.instructions li {
+    margin: 10px 5px;
+}
+
+.vps {
+}
+
+.vps h4 {
+    margin-bottom: 20px;
+    font-size: 42px;
+    margin-top: 50px;
+    margin-left: 100px;
+}
+
+.vps #pricing-table {
+    text-align: center;
+    margin-left: 110px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.vps .free-vps {
+    padding-top: 5px;
+}
+
+.vps .free-vps .tariff {
+    margin: 30px 190px;
+}
+
+.vps .vps-info {
+    position: relative;
+}
+
+.vps .vps-info p {
+    width: 600px;
+    margin-left: 90px;
+    margin-top: 30px;
+    font: 14px/22px 'Lucida Sans', 'Lucida Sans Unicode', sans,sans-serif;
+    color: #565656;
+}
+
+.vps .vps-info .more input {
+    margin: 25px auto;
+}
+
+.vps .vps-info img {
+    position: absolute;
+    height: 200px;
+    top: -20px;
+    right: 40px;
 }
 	
 /* --------------- */

@@ -139,6 +139,11 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.Home
             return Json(new {result = true}, JsonRequestBehavior.AllowGet);
         }
 
+        public ActionResult VPS()
+        {
+            return View();
+        }
+
         public ActionResult BrokerInfo()
         {
             return View();

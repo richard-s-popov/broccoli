@@ -306,6 +306,39 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.PersonalCabinet
             return new EmptyResult();
         }
 
+        public ActionResult GetInstruction(string tradingSystem)
+        {
+            if (tradingSystem == "Money+")
+            {
+                var file = Server.MapPath("~/Files/TradingSystems/Instructions/Money+.docx");
+
+                if (System.IO.File.Exists(file))
+                {
+                    return File("~/Files/TradingSystems/Instructions/Money+.docx", "application/pdf", "Money+.docx");
+                }
+            }
+            if (tradingSystem == "Garanted")
+            {
+                var file = Server.MapPath("~/Files/TradingSystems/Instructions/GarantedProfit.docx");
+
+                if (System.IO.File.Exists(file))
+                {
+                    return File("~/Files/TradingSystems/Instructions/GarantedProfit.docx", "application/pdf", "GarantedProfit.docx");
+                }
+            }
+            if (tradingSystem == "MaxTrade")
+            {
+                var file = Server.MapPath("~/Files/TradingSystems/Instructions/Max Trade.docx");
+
+                if (System.IO.File.Exists(file))
+                {
+                    return File("~/Files/TradingSystems/Instructions/Max Trade.docx", "application/pdf", "Max Trade.docx");
+                }
+            }
+
+            return new EmptyResult();
+        }
+
         [Secure]
         [HttpPost]
         public JsonResult SendInvites(string inviteList, string message)

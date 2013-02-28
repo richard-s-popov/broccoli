@@ -412,6 +412,9 @@
     <Content Include="Scripts\ckeditor\samples\assets\posteddata.php" />
     <Content Include="Scripts\ckeditor\samples\sample_posteddata.php" />
     <Content Include="Scripts\ckeditor\skins\moono\readme.md" />
+    <Content Include="Files\TradingSystems\Instructions\GarantedProfit.docx" />
+    <Content Include="Files\TradingSystems\Instructions\Max Trade.docx" />
+    <Content Include="Files\TradingSystems\Instructions\Money+.docx" />
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Views\Shared\MainMenu.cshtml" />
@@ -422,6 +425,7 @@
     <Content Include="Views\Home\Comments.cshtml" />
     <Content Include="Views\Home\ContactAs.cshtml" />
     <Content Include="Views\Admin\CommentsPanel.cshtml" />
+    <Content Include="Views\Home\VPS.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
