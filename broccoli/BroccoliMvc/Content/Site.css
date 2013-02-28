@@ -1103,6 +1103,7 @@ hr {
 
 .cabinet-main {
     width: 100%;
+    margin-bottom: 50px;
     padding-top: 25px;
     padding-left: 25px;
 }
