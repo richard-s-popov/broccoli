@@ -104,14 +104,13 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.Account
                 if (_membershipService.AuthorizeUser(login, pass))
                 {
                     _membershipService.LoginUser(null, login, pass, rememberMe);
-                    HttpContext.User = new GenericPrincipal(User.Identity, new[] { "Admin" });
 
                     if (isLoginPage != null && isLoginPage.Value)
                     {
                         return RedirectToAction("Index", "PersonalCabinet");
                     }
 
-                    return Redirect(!String.IsNullOrEmpty(returnUrl) ? returnUrl : HttpContext.Request.UrlReferrer.AbsolutePath);
+                    return RedirectToAction("Index", "PersonalCabinet");
                 }
             }
 
@@ -172,8 +171,9 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.Account
                 }
 
                 _usersService.Insert(user);
+                _membershipService.LoginUser(null, user.Email, model.Password, false);
 
-                return RedirectToAction("LogOn", "Account");
+                return RedirectToAction("Index", "PersonalCabinet");
             }
 
             return this.View("RegisterForm");

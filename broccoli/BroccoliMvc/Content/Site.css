@@ -1288,14 +1288,14 @@ hr {
 .invite-list .deleteAssignedUserBtn {
     position: absolute;
     top: 2px;
-    right: 3px;
+    right: 0;
     cursor: pointer;
 }
 
 .invite-list .clearAssignedUserBtn {
     position: absolute;
     top: 2px;
-    right: 3px;
+    right: 0;
     cursor: pointer;
 }
 
