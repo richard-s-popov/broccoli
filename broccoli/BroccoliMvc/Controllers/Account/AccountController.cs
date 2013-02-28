@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
+using System.Security.Principal;
 using System.Web;
 using System.Web.Mvc;
 using BroccoliTrade.Domain;
@@ -103,6 +104,7 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.Account
                 if (_membershipService.AuthorizeUser(login, pass))
                 {
                     _membershipService.LoginUser(null, login, pass, rememberMe);
+                    HttpContext.User = new GenericPrincipal(User.Identity, new[] { "Admin" });
 
                     if (isLoginPage != null && isLoginPage.Value)
                     {

@@ -5,6 +5,7 @@
     <EntitySet Name="Accounts" EntityType="BroccoliModel.Store.Accounts" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Comment" EntityType="BroccoliModel.Store.Comment" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Referrer" EntityType="BroccoliModel.Store.Referrer" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Roles" EntityType="BroccoliModel.Store.Roles" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Status" EntityType="BroccoliModel.Store.Status" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Systems" EntityType="BroccoliModel.Store.Systems" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="TradingSystemPool" EntityType="BroccoliModel.Store.TradingSystemPool" store:Type="Tables" Schema="dbo" />
@@ -62,6 +63,10 @@
       <End Role="Users" EntitySet="Users" />
       <End Role="TradingSystems" EntitySet="TradingSystems" />
     </AssociationSet>
+    <AssociationSet Name="FK_Users_Roles" Association="BroccoliModel.Store.FK_Users_Roles">
+      <End Role="Roles" EntitySet="Roles" />
+      <End Role="Users" EntitySet="Users" />
+    </AssociationSet>
   </EntityContainer>
   <EntityType Name="AccountPool">
     <Key>
@@ -108,6 +113,13 @@
     <Property Name="OwnerId" Type="bigint" Nullable="false" />
     <Property Name="IsDeleted" Type="bit" Nullable="false" />
     <Property Name="Registered" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Roles">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RoleName" Type="nvarchar" Nullable="false" MaxLength="50" />
   </EntityType>
   <EntityType Name="Status">
     <Key>
@@ -166,6 +178,7 @@
     <Property Name="RegisterDate" Type="datetime" Nullable="false" />
     <Property Name="OwnerId" Type="bigint" />
     <Property Name="UsedPoints" Type="int" Nullable="false" />
+    <Property Name="RoleId" Type="int" Nullable="false" />
   </EntityType>
   <Association Name="FK_AccountApplication_Accounts">
     <End Role="Accounts" Type="BroccoliModel.Store.Accounts" Multiplicity="1" />
@@ -320,6 +333,18 @@
       </Principal>
       <Dependent Role="TradingSystems">
         <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Users_Roles">
+    <End Role="Roles" Type="BroccoliModel.Store.Roles" Multiplicity="1" />
+    <End Role="Users" Type="BroccoliModel.Store.Users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Roles">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Users">
+        <PropertyRef Name="RoleId" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

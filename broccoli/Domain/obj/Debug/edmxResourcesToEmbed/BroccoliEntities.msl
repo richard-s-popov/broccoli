@@ -4,6 +4,7 @@
     <EntitySetMapping Name="Users">
       <EntityTypeMapping TypeName="BroccoliModel.Users">
         <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
           <ScalarProperty Name="UsedPoints" ColumnName="UsedPoints" />
           <ScalarProperty Name="EmailHash" ColumnName="EmailHash" />
           <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
@@ -110,6 +111,14 @@
           <ScalarProperty Name="Date" ColumnName="Date" />
           <ScalarProperty Name="IsConfirmed" ColumnName="IsConfirmed" />
           <ScalarProperty Name="Body" ColumnName="Body" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Roles">
+      <EntityTypeMapping TypeName="BroccoliModel.Roles">
+        <MappingFragment StoreEntitySet="Roles">
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
           <ScalarProperty Name="Id" ColumnName="Id" />
         </MappingFragment>
       </EntityTypeMapping>

@@ -39,6 +39,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=4.4.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Practices.ServiceLocation">
       <HintPath>..\packages\CommonServiceLocator.1.0\lib\NET35\Microsoft.Practices.ServiceLocation.dll</HintPath>
@@ -121,12 +125,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\Account\AccountController.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\PersonalCabinet\PersonalCabinetController.cs" />
     <Compile Include="Controllers\Home\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Infrastructure\Attributes\RoleAttribute.cs" />
     <Compile Include="Infrastructure\Attributes\SecureAttribute.cs" />
+    <Compile Include="Infrastructure\ControllerHelper\ControllerHelper.cs" />
+    <Compile Include="Infrastructure\RolesHelper\RolesHelper.cs" />
     <Compile Include="Infrastructure\Unity\Bootstrapper.cs" />
     <Compile Include="Models\Account\UserProfilePoco.cs" />
     <Compile Include="Models\Communications\CommentModel.cs" />
@@ -253,6 +261,7 @@
     <Content Include="Files\TradingSystems\mvc4vs2010.3f.3f.3fnew.exe" />
     <Content Include="Files\TradingSystems\MVC4VS2010_Loc.exe" />
     <Content Include="Global.asax" />
+    <Content Include="Scripts\Admin\comments.js" />
     <Content Include="Scripts\amcharts\amcharts.js" />
     <Content Include="Scripts\amcharts\images\dragIcon.gif" />
     <Content Include="Scripts\amcharts\images\dragIconH.gif" />
@@ -411,6 +420,8 @@
     <Content Include="Views\Home\BroccoliOffer.cshtml" />
     <Content Include="Views\Shared\Footer.cshtml" />
     <Content Include="Views\Home\Comments.cshtml" />
+    <Content Include="Views\Home\ContactAs.cshtml" />
+    <Content Include="Views\Admin\CommentsPanel.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -38,6 +38,7 @@ namespace BroccoliTrade.Domain
         public Nullable<long> OwnerId { get; set; }
         public string EmailHash { get; set; }
         public int UsedPoints { get; set; }
+        public int RoleId { get; set; }
     
         public virtual ICollection<Accounts> Accounts { get; set; }
         public virtual ICollection<AccountPool> AccountPool { get; set; }
@@ -45,5 +46,6 @@ namespace BroccoliTrade.Domain
         public virtual ICollection<TradingSystems> TradingSystems { get; set; }
         public virtual ICollection<Referrer> Referrer { get; set; }
         public virtual ICollection<Comment> Comment { get; set; }
+        public virtual Roles Roles { get; set; }
     }
 }

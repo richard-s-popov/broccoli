@@ -76,6 +76,9 @@
     <Compile Include="Referrer.cs">
       <DependentUpon>BroccoliEntities.tt</DependentUpon>
     </Compile>
+    <Compile Include="Roles.cs">
+      <DependentUpon>BroccoliEntities.tt</DependentUpon>
+    </Compile>
     <Compile Include="Status.cs">
       <DependentUpon>BroccoliEntities.tt</DependentUpon>
     </Compile>

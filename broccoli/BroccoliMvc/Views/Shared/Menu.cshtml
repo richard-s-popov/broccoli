@@ -1,5 +1,10 @@
-﻿<table class="menu">
+﻿@using BroccoliTrade.Web.BroccoliMvc.Infrastructure.RolesHelper
+<table class="menu">
     <tr>
+        @if (HttpContext.Current.User.IsUserInRole("Admin"))
+        {
+            <td id="adminPage" class="item" onclick="window.location = '@Url.Action("CommentsPanel", "Admin")'">Администрирование</td>
+        }
         <td id="indexPage" class="item" onclick="window.location = '@Url.Action("Index", "Home")'">Главная</td>
         <td id="commentsPage" class="item" onclick="window.location = '@Url.Action("Comments", "Home")'">Отзывы</td>
         @if (HttpContext.Current.User.Identity.IsAuthenticated)

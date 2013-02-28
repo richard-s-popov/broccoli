@@ -13,7 +13,7 @@ namespace BroccoliTrade.Web.BroccoliMvc.Infrastructure.Attributes
             }
             else
             {
-                RedirectResult rres = new RedirectResult("~/login");
+                var rres = new RedirectResult("~/login");
                 filterContext.Result = rres;
             }
         }

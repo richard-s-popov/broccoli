@@ -62,6 +62,11 @@
       <End Role="Users" EntitySet="Users" />
       <End Role="Comment" EntitySet="Comment" />
     </AssociationSet>
+    <EntitySet Name="Roles" EntityType="BroccoliModel.Roles" />
+    <AssociationSet Name="FK_Users_Roles" Association="BroccoliModel.FK_Users_Roles">
+      <End Role="Roles" EntitySet="Roles" />
+      <End Role="Users" EntitySet="Users" />
+    </AssociationSet>
   </EntityContainer>
   <EntityType Name="Users">
     <Key>
@@ -87,6 +92,8 @@
     <Property Type="String" Name="EmailHash" MaxLength="255" FixedLength="false" Unicode="true" />
     <Property Type="Int32" Name="UsedPoints" Nullable="false" />
     <NavigationProperty Name="Comment" Relationship="BroccoliModel.FK_Comment_Users" FromRole="Users" ToRole="Comment" />
+    <Property Type="Int32" Name="RoleId" Nullable="false" />
+    <NavigationProperty Name="Roles" Relationship="BroccoliModel.FK_Users_Roles" FromRole="Users" ToRole="Roles" />
   </EntityType>
   <EntityType Name="Accounts">
     <Key>
@@ -346,6 +353,26 @@
       </Principal>
       <Dependent Role="Comment">
         <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Roles">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="RoleName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Users" Relationship="BroccoliModel.FK_Users_Roles" FromRole="Roles" ToRole="Users" />
+  </EntityType>
+  <Association Name="FK_Users_Roles">
+    <End Type="BroccoliModel.Roles" Role="Roles" Multiplicity="1" />
+    <End Type="BroccoliModel.Users" Role="Users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Roles">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Users">
+        <PropertyRef Name="RoleId" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

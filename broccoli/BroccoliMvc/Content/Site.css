@@ -589,6 +589,7 @@ hr {
 }
 
 .footer {
+    clear: both;
     margin-left: auto;
     margin-right: auto;
     padding-top: 10px;
@@ -2059,12 +2060,14 @@ footer#main{
 
 .comments .comment .body {
     margin-top: 10px;
+    margin-bottom: 20px;
 }
 
 .comments .send-comment {
     margin-top: 10px;
+    margin-bottom: 30px;
     display: block;
-    float: right;   
+    float: right;
 }
 
 .comments .add-comment-title {
@@ -2072,6 +2075,16 @@ footer#main{
     margin-bottom: 10px;
     font-size: 14px;
     font-weight: bold;
+}
+
+.comments .comment .approve-comment {
+    margin-left: 600px;
+    font-size: 14px;
+}
+
+.comments .comment .decline {
+    margin-left: 20px;
+    vertical-align: text-top;
 }
 	
 /* --------------- */

@@ -132,7 +132,7 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.Home
                     UserId = currentUser.Id,
                     Body = comment,
                     Date = DateTime.Now,
-                    IsConfirmed = true,
+                    IsConfirmed = currentUser.RoleId == 1,
                     IsDeleted = false
                 });
 

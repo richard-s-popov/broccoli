@@ -21,14 +21,29 @@ namespace BroccoliTrade.Logics.Impl.Communications
             db.Dispose();
         }
 
+        public Comment GetById(int id)
+        {
+            return db.Comment.FirstOrDefault(x => x.Id == id);
+        }
+
         public IEnumerable<Comment> GetAllConfirmedComments()
         {
-            return db.Comment.Where(x => x.IsConfirmed);
+            return db.Comment.Where(x => x.IsConfirmed && !x.IsDeleted);
+        }
+
+        public IEnumerable<Comment> GetAllNewComments()
+        {
+            return db.Comment.Where(x => !x.IsConfirmed && !x.IsDeleted);
         }
 
         public void AddComment(Comment entity)
         {
             db.Comment.Add(entity);
+            db.SaveChanges();
+        }
+
+        public void SaveChanges()
+        {
             db.SaveChanges();
         }
     }

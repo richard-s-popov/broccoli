@@ -10,6 +10,7 @@
           <EntitySet Name="Accounts" EntityType="BroccoliModel.Store.Accounts" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Comment" EntityType="BroccoliModel.Store.Comment" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Referrer" EntityType="BroccoliModel.Store.Referrer" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Roles" EntityType="BroccoliModel.Store.Roles" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Status" EntityType="BroccoliModel.Store.Status" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Systems" EntityType="BroccoliModel.Store.Systems" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="TradingSystemPool" EntityType="BroccoliModel.Store.TradingSystemPool" store:Type="Tables" Schema="dbo" />
@@ -67,6 +68,10 @@
             <End Role="Users" EntitySet="Users" />
             <End Role="TradingSystems" EntitySet="TradingSystems" />
           </AssociationSet>
+          <AssociationSet Name="FK_Users_Roles" Association="BroccoliModel.Store.FK_Users_Roles">
+            <End Role="Roles" EntitySet="Roles" />
+            <End Role="Users" EntitySet="Users" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="AccountPool">
           <Key>
@@ -113,6 +118,13 @@
           <Property Name="OwnerId" Type="bigint" Nullable="false" />
           <Property Name="IsDeleted" Type="bit" Nullable="false" />
           <Property Name="Registered" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Roles">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="RoleName" Type="nvarchar" Nullable="false" MaxLength="50" />
         </EntityType>
         <EntityType Name="Status">
           <Key>
@@ -171,6 +183,7 @@
           <Property Name="RegisterDate" Type="datetime" Nullable="false" />
           <Property Name="OwnerId" Type="bigint" />
           <Property Name="UsedPoints" Type="int" Nullable="false" />
+          <Property Name="RoleId" Type="int" Nullable="false" />
         </EntityType>
         <Association Name="FK_AccountApplication_Accounts">
           <End Role="Accounts" Type="BroccoliModel.Store.Accounts" Multiplicity="1" />
@@ -328,6 +341,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_Users_Roles">
+          <End Role="Roles" Type="BroccoliModel.Store.Roles" Multiplicity="1" />
+          <End Role="Users" Type="BroccoliModel.Store.Users" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Roles">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Users">
+              <PropertyRef Name="RoleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Function Name="MD5" ReturnType="varchar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="value" Type="varchar" Mode="In" />
         </Function>
@@ -397,6 +422,11 @@
             <End Role="Users" EntitySet="Users" />
             <End Role="Comment" EntitySet="Comment" />
           </AssociationSet>
+          <EntitySet Name="Roles" EntityType="BroccoliModel.Roles" />
+          <AssociationSet Name="FK_Users_Roles" Association="BroccoliModel.FK_Users_Roles">
+            <End Role="Roles" EntitySet="Roles" />
+            <End Role="Users" EntitySet="Users" />
+          </AssociationSet>
           </EntityContainer>
         <EntityType Name="Users">
           <Key>
@@ -422,6 +452,8 @@
           <Property Type="String" Name="EmailHash" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Type="Int32" Name="UsedPoints" Nullable="false" />
           <NavigationProperty Name="Comment" Relationship="BroccoliModel.FK_Comment_Users" FromRole="Users" ToRole="Comment" />
+          <Property Type="Int32" Name="RoleId" Nullable="false" />
+          <NavigationProperty Name="Roles" Relationship="BroccoliModel.FK_Users_Roles" FromRole="Users" ToRole="Roles" />
         </EntityType>
         <EntityType Name="Accounts">
           <Key>
@@ -684,6 +716,26 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="Roles">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="RoleName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Users" Relationship="BroccoliModel.FK_Users_Roles" FromRole="Roles" ToRole="Users" />
+        </EntityType>
+        <Association Name="FK_Users_Roles">
+          <End Type="BroccoliModel.Roles" Role="Roles" Multiplicity="1" />
+          <End Type="BroccoliModel.Users" Role="Users" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Roles">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Users">
+              <PropertyRef Name="RoleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -693,6 +745,7 @@
           <EntitySetMapping Name="Users">
             <EntityTypeMapping TypeName="BroccoliModel.Users">
               <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="RoleId" ColumnName="RoleId" />
                 <ScalarProperty Name="UsedPoints" ColumnName="UsedPoints" />
                 <ScalarProperty Name="EmailHash" ColumnName="EmailHash" />
                 <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
@@ -799,6 +852,14 @@
                 <ScalarProperty Name="Date" ColumnName="Date" />
                 <ScalarProperty Name="IsConfirmed" ColumnName="IsConfirmed" />
                 <ScalarProperty Name="Body" ColumnName="Body" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Roles">
+            <EntityTypeMapping TypeName="BroccoliModel.Roles">
+              <MappingFragment StoreEntitySet="Roles">
+                <ScalarProperty Name="RoleName" ColumnName="RoleName" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
