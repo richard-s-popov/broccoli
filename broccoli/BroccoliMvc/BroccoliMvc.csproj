@@ -424,7 +424,7 @@
     <Content Include="Views\Home\BroccoliOffer.cshtml" />
     <Content Include="Views\Shared\Footer.cshtml" />
     <Content Include="Views\Home\Comments.cshtml" />
-    <Content Include="Views\Home\ContactAs.cshtml" />
+    <Content Include="Views\Home\ContactUs.cshtml" />
     <Content Include="Views\Admin\CommentsPanel.cshtml" />
     <Content Include="Views\Home\VPS.cshtml" />
   </ItemGroup>

@@ -11,8 +11,8 @@
             var pos = ele.offset();
             
             nameInfo.css({
-                top: pos.top - 3,
-                left: pos.left + ele.width() + 15
+                top: pos.top + 4,
+                left: pos.left + ele.width() + 25
             });
             if ($.trim(ele.val()).length < 6) {
                 jVal.errors = true;
@@ -35,8 +35,8 @@
             ele.val($('#Day :selected').val() + '.' + $('#Month :selected').val() + '.' + $('#Year :selected').val());
 
             birthday.css({
-                top: pos.top + 7,
-                left: pos.left + ele.width() + 25
+                top: pos.top + 13,
+                left: pos.left + ele.width() + 35
             });
             if ($('#Day :selected').val() == '0' || $('#Month :selected').val() == '0' || $('#Year :selected').val() == '0') {
                 jVal.errors = true;
@@ -57,8 +57,8 @@
             var ele = $('#email');
             var pos = ele.offset();
             emailInfo.css({
-                top: pos.top - 3,
-                left: pos.left + ele.width() + 15
+                top: pos.top + 4,
+                left: pos.left + ele.width() + 25
             });
 
             var patt = /^.+@.+[.].{2,}$/i;
@@ -78,8 +78,8 @@
                         var el = $('#email');
                         var pos1 = ele.offset();
                         emailInfo1.css({
-                            top: pos1.top - 3,
-                            left: pos1.left + ele.width() + 15
+                            top: pos1.top + 4,
+                            left: pos1.left + ele.width() + 25
                         });
                             
                         if (data.result == true) {
@@ -108,8 +108,8 @@
                     var ele = $('#nickname');
                     var pos = ele.offset();
                     nicknameInfo.css({
-                        top: pos.top - 3,
-                        left: pos.left + ele.width() + 15
+                        top: pos.top + 4,
+                        left: pos.left + ele.width() + 25
                     });
                     
                     if (data.result == true) {
@@ -136,8 +136,8 @@
             var ele = $('#country');
             var pos = ele.offset();
             countryInfo.css({
-                top: pos.top - 3,
-                left: pos.left + ele.width() + 15
+                top: pos.top + 4,
+                left: pos.left + ele.width() + 25
             });
 
             var patt = /^[a-zA-Zа-яА-Я\s]*$/i;
@@ -164,8 +164,8 @@
             var ele = $('#city');
             var pos = ele.offset();
             cityInfo.css({
-                top: pos.top - 3,
-                left: pos.left + ele.width() + 15
+                top: pos.top + 4,
+                left: pos.left + ele.width() + 25
             });
             
             var patt = /^[a-zA-Zа-яА-Я\s]*$/i;
@@ -192,8 +192,8 @@
             var ele = $('#phone');
             var pos = ele.offset();
             phoneInfo.css({
-                top: pos.top - 3,
-                left: pos.left + ele.width() + 15
+                top: pos.top + 4,
+                left: pos.left + ele.width() + 25
             });
             
             var patt = /^([\+]{1})?[0-9\-]*$/i;
@@ -216,8 +216,8 @@
             var ele = $('#password');
             var pos = ele.offset();
             passwordInfo.css({
-                top: pos.top - 3,
-                left: pos.left + ele.width() + 15
+                top: pos.top + 4,
+                left: pos.left + ele.width() + 25
             });
             
             if (ele.val().length == 0) {
@@ -243,8 +243,8 @@
             var ele = $('#confirmPassword');
             var pos = ele.offset();
             confirmPasswordInfo.css({
-                top: pos.top - 3,
-                left: pos.left + ele.width() + 15
+                top: pos.top + 4,
+                left: pos.left + ele.width() + 25
             });
             
             if (ele.val().length == 0) {

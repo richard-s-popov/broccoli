@@ -144,6 +144,11 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.Home
             return View();
         }
 
+        public ActionResult ContactUs()
+        {
+            return View();
+        }
+
         public ActionResult BrokerInfo()
         {
             return View();

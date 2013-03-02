@@ -453,7 +453,7 @@ hr {
 }
 
 .content .banner.small .action font {
-    font-family: Segoe UI Light;
+    font: 400 32px/1.2 "Segoe UI", Tahoma, arial, sans-serif;
     color: #FFFFFF;
     font-size: 30px;
     float: right;
@@ -496,6 +496,12 @@ hr {
 .content .main .open-account-instructions .description h3 {
     text-align: center;
     margin-bottom: 20px;
+    margin-top: 70px;
+}
+
+.content .main .open-account-instructions .description p {
+    line-height: 21px;
+    font-size: 14px;
 }
 
 .content .main .open-account-instructions .broker {
@@ -513,6 +519,15 @@ hr {
     position: absolute;
     margin-top: 165px;
     margin-left: 120px;
+}
+
+.content .main .open-account-instructions .broker .partner-code {
+    margin-top: 220px;
+    margin-left: 145px;
+}
+
+.content .main .open-account-instructions .broker span font {
+    font-weight: bold;
 }
 
 .content .main .open-account-instructions .take-your-system {
@@ -686,9 +701,8 @@ hr {
 }
 
 .register-form .labels label {
-    font-family: Segoe UI Light;
     color: #2E2E2E;
-    font-size: 14px;    
+    font-size: 13px;    
 }
 
 .register-form input {
@@ -759,11 +773,13 @@ hr {
     display: block;
     border: 1px solid #E5E5E5;
     border-top: none;
-    box-shadow: 0 0 9px 2px #E5E5FA;
+    -webkit-box-shadow: 0 0 40px 5px rgb(0, 0, 0);
+    box-shadow: 0 0 40px 5px rgb(0, 0, 0);
     position: relative;
     top: 18px;
     padding-top: 30px;
     padding-bottom: 65px;
+    border-radius: 3px;
 }
 
 .login-window .login-window-body label {
@@ -1700,7 +1716,8 @@ footer#main{
 
 .broker-info .broker {
     width: 50%;
-    padding-top: 30px;
+    padding-top: 50px;
+    padding-bottom: 50px;
     height: 170px;
     display: block;
     margin-left: auto;
@@ -2186,15 +2203,6 @@ footer#main{
         font-size: 20px;
         margin-left: 30px;
         cursor: pointer;
-    }
-
-    .content .banner.small .action font {
-        font-family: Segoe UI;
-        font-weight: lighter;
-        color: #FFFFFF;
-        font-size: 30px;
-        float: right;
-        margin-top: 33px;
     }
 
     .register-form .agreeement p {
