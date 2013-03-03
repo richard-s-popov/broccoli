@@ -13,43 +13,46 @@
 <div class="center-content broker-info">
     <div class="contact-container">
         <div class="contact-form">
-            <div class="row">
-                <span class="labels">
-                    @Html.Label("ФИО")
-                </span>
-                <span>
-                    @Html.TextBoxFor(m => m.Name, new { @id = "name" })
-                </span>
-            </div>
-            <div class="row">
-                <span class="labels">
-                    @Html.Label("Email")
-                </span>
-                <span>
-                    @Html.TextBoxFor(m => m.Email, new { @id = "email" })
-                </span>
-            </div>
-            <div class="row">
-                <span class="labels">
-                    @Html.Label("Заголовок")
-                </span>
-                <span>
-                    @Html.TextBoxFor(m => m.Subject, new { @id = "subject" })
-                </span>
-            </div>
-            <div class="row">
-                <span class="labels for-mes">
-                    @Html.Label("Сообщение")
-                </span>
-                <span>
-                    @Html.TextAreaFor(m => m.Message, 5, 1, new { @class = "mes" })
-                </span>
-            </div>
-            <div class="row">
-                <span class="button">
-                    <a href="http://www.forexinn.ru/register/a/broccoli" target="_blank"><input class="large" type="button" value="Отправить" /></a>
-                </span>
-            </div>
+            @using (Html.BeginForm("SendContact", "Home", FormMethod.Post, new {@id = "contactForm"}))
+            {
+                <div class="row">
+                    <span class="labels">
+                        @Html.Label("ФИО")
+                    </span>
+                    <span>
+                        @Html.TextBoxFor(m => m.Name, new {@id = "name"})
+                    </span>
+                </div>
+                <div class="row">
+                    <span class="labels">
+                        @Html.Label("Email")
+                    </span>
+                    <span>
+                        @Html.TextBoxFor(m => m.Email, new {@id = "email"})
+                    </span>
+                </div>
+                <div class="row">
+                    <span class="labels">
+                        @Html.Label("Заголовок")
+                    </span>
+                    <span>
+                        @Html.TextBoxFor(m => m.Subject, new {@id = "subject"})
+                    </span>
+                </div>
+                <div class="row">
+                    <span class="labels for-mes">
+                        @Html.Label("Сообщение")
+                    </span>
+                    <span>
+                        @Html.TextAreaFor(m => m.Message, 5, 1, new {@class = "mes"})
+                    </span>
+                </div>
+                <div class="row">
+                    <span class="button">
+                        <a href="#"><input class="large" type="button" value="Отправить" onclick="$('#contactForm').submit()" /></a>
+                    </span>
+                </div>
+            }
         </div>
         <div class="contact-description">
             

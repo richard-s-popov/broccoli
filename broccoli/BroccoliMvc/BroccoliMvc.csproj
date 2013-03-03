@@ -175,6 +175,16 @@
     <Content Include="Content\img\fancybox\fancybox_loading.gif" />
     <Content Include="Content\img\fancybox\fancybox_sprite.png" />
     <Content Include="Content\img\footer.png" />
+    <Content Include="Content\img\for-video\1.jpg" />
+    <Content Include="Content\img\for-video\10.jpg" />
+    <Content Include="Content\img\for-video\2.jpg" />
+    <Content Include="Content\img\for-video\3.jpg" />
+    <Content Include="Content\img\for-video\4.jpg" />
+    <Content Include="Content\img\for-video\5.jpg" />
+    <Content Include="Content\img\for-video\6.jpg" />
+    <Content Include="Content\img\for-video\7.jpg" />
+    <Content Include="Content\img\for-video\8.jpg" />
+    <Content Include="Content\img\for-video\9.jpg" />
     <Content Include="Content\img\forexinn_logo.jpg" />
     <Content Include="Content\img\generic-button-green-bg.png" />
     <Content Include="Content\img\hr-shadow.jpg" />

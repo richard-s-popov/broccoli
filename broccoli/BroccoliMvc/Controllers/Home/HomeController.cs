@@ -4,9 +4,11 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using BroccoliTrade.Domain;
+using BroccoliTrade.Domain.Models;
 using BroccoliTrade.Logics.Interfaces.Communications;
 using BroccoliTrade.Logics.Interfaces.Membership;
 using BroccoliTrade.Logics.Interfaces.Statistics;
+using BroccoliTrade.Logics.MSMQ;
 using BroccoliTrade.Web.BroccoliMvc.Models.Communications;
 
 namespace BroccoliTrade.Web.BroccoliMvc.Controllers.Home
@@ -147,6 +149,25 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.Home
         public ActionResult ContactUs()
         {
             return View();
+        }
+
+        public ActionResult SendContact(ContactModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                var em = new EmailMessage
+                {
+                    Subject = model.Subject,
+                    Message = string.Format("{0}\n{1}\n{2}", model.Message, model.Name, model.Email),
+                    From = "support@broccoli-trade.ru",
+                    DisplayNameFrom = "Обратная связь",
+                    To = "support@broccoli-trade.ru"
+                };
+
+                new QueueService().QueueMessage(em);   
+            }
+
+            return View("ContactUs");
         }
 
         public ActionResult BrokerInfo()
