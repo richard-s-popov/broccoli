@@ -1419,6 +1419,7 @@ hr {
 
 .gal img {
     margin: 10px;
+    width: 250px;
 }
 
 .gal img:hover {
@@ -1573,7 +1574,7 @@ footer#main{
 	overflow: hidden;
 	margin: auto;
 	width: 917px; 
-	height: 700px;
+	height: 800px;
 	clear: both;
 }
 		
@@ -2172,6 +2173,45 @@ footer#main{
     padding: 10px;
     background-color: rgb(248, 255, 165);
     border: 2px solid rgb(226, 211, 100);   
+}
+
+.contact-container {
+    padding: 30px;
+}
+
+.contact-form .row {
+    margin-top: 5px;
+}
+
+.contact-form .row input {
+    width: 210px;
+}
+
+.contact-form .row .labels {
+    width: 100px;
+    display: inline-block;
+}
+
+.contact-form .row .labels label {
+    font-size: 14px;
+    text-align: left;
+    width: 90px;
+    padding-right: 6px;
+    color: #4e4e4e;
+    font-family: 'Lucida Sans', 'Lucida Sans Unicode', 'Lucida Grande', Arial, sans-serif;
+}
+
+.contact-form .row .mes {
+    width: 210px;
+}
+
+.contact-form .row .for-mes {
+    vertical-align: top;
+}
+
+.contact-form .row .button {
+    margin-left: 109px;
+    display: block;
 }
 
 /* FF чтоб его! */

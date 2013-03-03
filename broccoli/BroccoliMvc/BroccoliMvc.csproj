@@ -139,6 +139,7 @@
     <Compile Include="Models\Account\UserProfilePoco.cs" />
     <Compile Include="Models\Communications\CommentModel.cs" />
     <Compile Include="Models\Communications\CommentsListModel.cs" />
+    <Compile Include="Models\Communications\ContactModel.cs" />
     <Compile Include="Models\PersonalCabinet\AccountListPoco.cs" />
     <Compile Include="Models\PersonalCabinet\AccountRowModel.cs" />
     <Compile Include="Models\PersonalCabinet\DetailsHostRowModel.cs" />
