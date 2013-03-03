@@ -28,6 +28,36 @@ namespace BroccoliTrade.Web.BroccoliMvc.App_Start
             );
 
             routes.MapRoute(
+                "Contact", // Route name
+                "contact", // URL with parameters
+                new { controller = "Home", action = "ContactUs" } // Parameter defaults
+            );
+
+            routes.MapRoute(
+                "BroccoliOffer", // Route name
+                "offer", // URL with parameters
+                new { controller = "Home", action = "BroccoliOffer" } // Parameter defaults
+            );
+
+            routes.MapRoute(
+                "BrokerInfo", // Route name
+                "forexinn", // URL with parameters
+                new { controller = "Home", action = "BrokerInfo" } // Parameter defaults
+            );
+
+            routes.MapRoute(
+                "VPS", // Route name
+                "vps", // URL with parameters
+                new { controller = "Home", action = "VPS" } // Parameter defaults
+            );
+
+            routes.MapRoute(
+                "Comments", // Route name
+                "comments", // URL with parameters
+                new { controller = "Home", action = "Comments" } // Parameter defaults
+            );
+
+            routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
