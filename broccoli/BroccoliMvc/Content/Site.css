@@ -1878,7 +1878,7 @@ footer#main{
 .cabinet-main #pricing-table {
 	margin: 45px auto;
 	text-align: center;
-	width: 680px; /* total computed width */
+	width: 700px; /* total computed width */
 	zoom: 1;
 }
 
@@ -1907,10 +1907,6 @@ footer#main{
 	-moz-box-shadow: 0 2px 2px -1px rgba(0,0,0,.3);
 	-webkit-box-shadow: 0 2px 2px -1px rgba(0,0,0,.3);
 	box-shadow: 0 2px 2px -1px rgba(0,0,0,.3);		
-}
-
-.cabinet-main #pricing-table .plan {
-    width: 170px !important;
 }
 
 #pricing-table .plan:after {
