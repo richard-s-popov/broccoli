@@ -54,7 +54,12 @@ namespace BroccoliTrade.Logics.Interfaces.Membership
         /// </summary>
         /// <param name="phone"></param>
         /// <returns></returns>
-        bool PhoneIsExist(string phone); 
+        bool PhoneIsExist(string phone);
+
+        /// <summary>
+        /// Change password
+        /// </summary>
+        void Update(Users user);
 
         /// <summary>
         /// Save

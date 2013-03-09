@@ -56,6 +56,13 @@ namespace BroccoliTrade.Logics.Impl.Membership
             throw new NotImplementedException();
         }
 
+        public void Update(Users user)
+        {
+            var entity = db.Users.First(x => x.Id == user.Id);
+
+            entity.Password = user.Password;
+        }
+
         public void Dispose()
         {
             db.Dispose();

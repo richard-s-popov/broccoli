@@ -6,8 +6,11 @@ using System.Security.Principal;
 using System.Web;
 using System.Web.Mvc;
 using BroccoliTrade.Domain;
+using BroccoliTrade.Domain.Models;
+using BroccoliTrade.Logics.Infrastructure.Extensions;
 using BroccoliTrade.Logics.Interfaces.Membership;
 using BroccoliTrade.Logics.Interfaces.Statistics;
+using BroccoliTrade.Logics.MSMQ;
 using BroccoliTrade.Web.BroccoliMvc.Infrastructure.Attributes;
 using BroccoliTrade.Web.BroccoliMvc.Models.Account;
 
@@ -192,6 +195,65 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.Account
             var isExist = _usersService.EmailIsExist(email);
 
             return Json(new { result = isExist }, JsonRequestBehavior.AllowGet);
+        }
+
+        public ActionResult ForgotPassword(string error)
+        {
+            if (!string.IsNullOrEmpty(error))
+            {
+                ViewBag.Error = error;
+            }
+
+            return View();
+        }
+
+        public ActionResult PasswordRecovery(string email)
+        {
+            var user = _usersService.GetUserByLogin(email);
+
+            if (user != null)
+            {
+                var pass = GeneratePassword(6);
+
+                user.Password = pass.Md5();
+                _usersService.Update(user);
+                _usersService.SaveChanges();
+
+                var em = new EmailMessage
+                    {
+                        Subject = "Восстановление пароля",
+                        Message = string.Format("Ваш новый пароль: {0}", pass),
+                        From = "support@broccoli-trade.ru",
+                        DisplayNameFrom = "Broccoli Trade",
+                        To = email
+                    };
+
+                new QueueService().QueueMessage(em);
+
+                return View("PasswordSent");
+            }
+
+            return RedirectToAction("ForgotPassword", "Account", new { @error = "Не найден указанный email" });
+        }
+
+        public ActionResult PasswordSent()
+        {
+            return View();
+        }
+
+        private string GeneratePassword(int count)
+        {
+            var random = new Random(); //Random для генерирования пароля
+            var password = string.Empty; //Строка для пароля
+
+            //Генерируем пароль
+            for (var i = 0; i < count; i++)
+            {
+                var ch = Convert.ToChar(random.Next(97, 122));
+                password += ch;
+            }
+
+            return password;
         }
 
         protected override void Dispose(bool disposing)

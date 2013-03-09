@@ -21,7 +21,7 @@
                 <fieldset class="boxBody">
 	                <label>Логин</label>
 	                <input id="login" name="login" type="text" placeholder="Ваш email">
-	                <label><a href="#" class="rLink">Забыли пароль?</a>Пароль</label>
+	                <label><a href="@Url.Action("ForgotPassword", "Account")" class="rLink">Забыли пароль?</a>Пароль</label>
 	                <input id="pass" name="pass" type="password">
                     @Html.Hidden("isLoginPage", true)
 	            </fieldset>
