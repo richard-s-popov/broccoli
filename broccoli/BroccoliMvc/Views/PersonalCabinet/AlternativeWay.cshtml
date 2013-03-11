@@ -11,6 +11,9 @@
     <div class="alt-way-container">
         <div>Ваша партнерская ссылка:</div>
         <div><strong>http://broccoli-trade.ru?token=@HttpContext.Current.User.Identity.Name.Md5()</strong></div>
+        <p>Вы можете отправлять данную ссылку любым удобным для Вас способом.</p>
+        <p>Внимание, не пытайтесь отправлять письма на свои электронные ящики и регистрироваться с них на нашем сайте — сервис учитывает только настоящих людей. Нарушители будут заблокированы.</p>
+        <p>Введите имя и email друга или друзей, чтобы отправить им следующее сообщение.</p>
         <img id="srcCross" src="@Url.Content("~/Content/img/cross_2615.png")" style="display: none;" />
         <table id="assignedUsers" class="invite-list">
             <tr>
@@ -39,6 +42,7 @@
         <textarea id="inviteMessage" class="inviteMessage" name="inviteMessage">Приветствую %ИМЯ%, это @UserHelper.GetUserName(), узнал про систему торговую Брокколи Трейд, позволяющую с выставлением риска инвестировать на рынок форекс. Если тебе в принципе интересны инструменты инвестиций, позволяющие зарабатывать от 5 до 100 % за месяц, пройди по ссылке <a href="http://broccoli-trade.ru?token=@HttpContext.Current.User.Identity.Name.Md5()">www.broccoli-trade.ru</a>!</textarea>
         <div id="lessSymbols"></div>
         <button id="sendInvites" type="button" class="green-button">Сделать рассылку</button>
+        <p>После отправки писем, Вы можете посмотреть статистику зарегистрировавшихся и перешедших по ссылке людей во вкладке "Статистика".</p>
         <div class="social-networks">
             <div style="margin-bottom: 10px;">Рассказать в соц. сетях</div>
             <div class="buttons">
