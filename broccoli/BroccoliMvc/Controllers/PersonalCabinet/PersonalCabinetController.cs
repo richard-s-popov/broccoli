@@ -181,6 +181,12 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.PersonalCabinet
                 return this.View();
             }
 
+            if (!_accountsService.GetAccountsByUserId(currentUser.Id).Any())
+            {
+                ViewBag.ErrorMessage =
+                    "У вас еще нет активированных счетов. Пожалуйста, активируйте сначала счет, следуя инструкциям на главной странице.";
+            }
+
             ViewBag.SystemName = tSystem.Name;
 
             if (!activatedAccounts.Any())
@@ -214,7 +220,7 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.PersonalCabinet
 
                 if (!_accountsService.GetAccountsByUserId(currentUser.Id).Any())
                 {
-                    return RedirectToAction("TradingSystemOrder", new { @id = model.TradingSystemId, @errorMessage = "У вас еще нет активированных счетов. Пожалуйста, активируйте снача счет, следуя инструкциям на главной странице." });
+                    return RedirectToAction("TradingSystemOrder", new { @id = model.TradingSystemId, @errorMessage = "У вас еще нет активированных счетов. Пожалуйста, активируйте сначала счет, следуя инструкциям на главной странице." });
                 }
 
                 if (model.AccountId == null)
