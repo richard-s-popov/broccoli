@@ -288,29 +288,29 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.PersonalCabinet
 
             if (string.Format("{0}{1}", currentUser.Id, 1).Md5() == token)
             {
-                var file = Server.MapPath("~/Files/TradingSystems/kmplayer_downloader.exe");
+                var file = Server.MapPath("~/Files/TradingSystems/Money+.rar");
 
                 if (System.IO.File.Exists(file))
                 {
-                    return File("~/Files/TradingSystems/kmplayer_downloader.exe", "application/pdf", "first.exe");
+                    return File("~/Files/TradingSystems/Money+.rar", "application/pdf", "Money+.rar");
                 }
             }
             if (string.Format("{0}{1}", currentUser.Id, 2).Md5() == token)
             {
-                var file = Server.MapPath("~/Files/TradingSystems/mvc4vs2010.3f.3f.3fnew.exe");
+                var file = Server.MapPath("~/Files/TradingSystems/GarantedProfit.rar");
 
                 if (System.IO.File.Exists(file))
                 {
-                    return File("~/Files/TradingSystems/mvc4vs2010.3f.3f.3fnew.exe", "application/pdf", "second.exe");
+                    return File("~/Files/TradingSystems/GarantedProfit.rar", "application/pdf", "GarantedProfit.rar");
                 }
             }
             if (string.Format("{0}{1}", currentUser.Id, 3).Md5() == token)
             {
-                var file = Server.MapPath("~/Files/TradingSystems/MVC4VS2010_Loc.exe");
+                var file = Server.MapPath("~/Files/TradingSystems/Max Trade.rar");
 
                 if (System.IO.File.Exists(file))
                 {
-                    return File("~/Files/TradingSystems/MVC4VS2010_Loc.exe", "application/pdf", "third.exe");
+                    return File("~/Files/TradingSystems/Max Trade.rar", "application/pdf", "Max Trade.rar");
                 }
             }
 
