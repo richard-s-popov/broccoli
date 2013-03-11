@@ -76,7 +76,8 @@
             url: document.SendInvitesList,
             data: {
                 inviteList: JSON.stringify(inviteList),
-                message: $('#message').val()
+                message: CKEDITOR.instances.inviteMessage.getData(),
+                subject: $('#subject').val()
             },
             dataType: "json",
             traditional: true

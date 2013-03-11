@@ -1,7 +1,5 @@
 ﻿$(document).ready(function() {
     $('#adminPage').hide();
-    
-
 });
 
 function ApproveComment(id) {

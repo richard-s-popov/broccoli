@@ -341,8 +341,11 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.PersonalCabinet
 
         [Secure]
         [HttpPost]
-        public JsonResult SendInvites(string inviteList, string message)
+        [ValidateInput(false)]
+        public JsonResult SendInvites(string inviteList, string message, string subject)
         {
+            var currentUser = _usersService.GetUserByLogin(HttpContext.User.Identity.Name);
+
             // Дисериализуем строку с массивом точек
             var js = new JavaScriptSerializer();
             var deserializedInvites = (object[])js.DeserializeObject(inviteList);
@@ -351,20 +354,21 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.PersonalCabinet
             if (deserializedInvites != null)
             {
                 // получаем массив точек
-                foreach (Dictionary<string, object> newFeature in deserializedInvites)
-                {
-                    myInviteList.Add(new SJSonModel(newFeature));
-                }
+                myInviteList.AddRange(from Dictionary<string, object> newFeature in deserializedInvites select new SJSonModel(newFeature));
             }
 
             foreach (var invite in myInviteList)
             {
-                var em = new EmailMessage();
-                em.Subject = "test message";
-                em.Message = "OLOLO";
-                em.From = "support@broccoli-trade.ru";
-                em.DisplayNameFrom = "Broccoli Trade";
-                em.To = "rick_box@mail.ru";
+                var em = new EmailMessage
+                    {
+                        Subject = subject,
+                        Message = message.Replace("%ИМЯ%", invite.Name),
+                        From = "support@broccoli-trade.ru",
+                        DisplayNameFrom = currentUser.Name,
+                        To = invite.Email
+                    };
+
+                new QueueService().QueueMessage(em);
             }
 
             return new JsonResult();

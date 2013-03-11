@@ -1,4 +1,5 @@
 ﻿@using BroccoliTrade.Logics.Infrastructure.Extensions
+@using BroccoliTrade.Web.BroccoliMvc.Infrastructure.UserHelper
 <script type="text/javascript" src="@Url.Content("~/Scripts/ckeditor/ckeditor.js")"></script>
 <script type="text/javascript" src="@Url.Content("~/Scripts/PersonalCabinet/alternative.way.js")"></script>
 
@@ -8,6 +9,8 @@
 
 <div class="container">
     <div class="alt-way-container">
+        <div>Ваша партнерская ссылка:</div>
+        <div><strong>http://broccoli-trade.ru?token=@HttpContext.Current.User.Identity.Name.Md5()</strong></div>
         <img id="srcCross" src="@Url.Content("~/Content/img/cross_2615.png")" style="display: none;" />
         <table id="assignedUsers" class="invite-list">
             <tr>
@@ -33,7 +36,7 @@
         <a href="javascript:void(0)" id="addUser">Добавить еще...</a>
         @Html.TextBox("subject", null, new { @class = "subject", @placeholder = "Заголовок" })
         <div class="placeholder-description"><strong>%ИМЯ%</strong> - сюда будет подставлено имя вашего друга, которое вы указали с email-ом</div>
-        <textarea id="inviteMessage" class="inviteMessage" name="inviteMessage">Приветствую %ИМЯ%, это <Ваше имя>, узнал про систему торговую Брокколи Трейд, позволяющую с выставлением риска инвестировать на рынок форекс. Если тебе в принципе интересны инструменты инвестиций, позволяющие зарабатывать от 5 до 100 % за месяц, пройди по ссылке <a href="www.broccoli-trade.ru">www.broccoli-trade.ru</a>!</textarea>
+        <textarea id="inviteMessage" class="inviteMessage" name="inviteMessage">Приветствую %ИМЯ%, это @UserHelper.GetUserName(), узнал про систему торговую Брокколи Трейд, позволяющую с выставлением риска инвестировать на рынок форекс. Если тебе в принципе интересны инструменты инвестиций, позволяющие зарабатывать от 5 до 100 % за месяц, пройди по ссылке <a href="http://broccoli-trade.ru?token=@HttpContext.Current.User.Identity.Name.Md5()">www.broccoli-trade.ru</a>!</textarea>
         <div id="lessSymbols"></div>
         <button id="sendInvites" type="button" class="green-button">Сделать рассылку</button>
         <div class="social-networks">

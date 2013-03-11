@@ -136,6 +136,7 @@
     <Compile Include="Infrastructure\ControllerHelper\ControllerHelper.cs" />
     <Compile Include="Infrastructure\RolesHelper\RolesHelper.cs" />
     <Compile Include="Infrastructure\Unity\Bootstrapper.cs" />
+    <Compile Include="Infrastructure\UserHelper\UserHelper.cs" />
     <Compile Include="Models\Account\UserProfilePoco.cs" />
     <Compile Include="Models\Communications\CommentModel.cs" />
     <Compile Include="Models\Communications\CommentsListModel.cs" />
@@ -174,6 +175,7 @@
     <Content Include="Content\img\fancybox\fancybox_buttons.png" />
     <Content Include="Content\img\fancybox\fancybox_loading.gif" />
     <Content Include="Content\img\fancybox\fancybox_sprite.png" />
+    <Content Include="Content\img\favicon.ico" />
     <Content Include="Content\img\footer.png" />
     <Content Include="Content\img\for-video\1.jpg" />
     <Content Include="Content\img\for-video\10.jpg" />
