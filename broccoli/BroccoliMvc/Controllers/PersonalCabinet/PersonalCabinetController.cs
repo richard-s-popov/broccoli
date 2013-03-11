@@ -212,7 +212,7 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.PersonalCabinet
             {
                 var currentUser = _usersService.GetUserByLogin(HttpContext.User.Identity.Name);
 
-                if (_accountsService.GetAccountsByUserId(currentUser.Id).Any())
+                if (!_accountsService.GetAccountsByUserId(currentUser.Id).Any())
                 {
                     return RedirectToAction("TradingSystemOrder", new { @id = model.TradingSystemId, @errorMessage = "У вас еще нет активированных счетов. Пожалуйста, активируйте снача счет, следуя инструкциям на главной странице." });
                 }
