@@ -1261,12 +1261,8 @@ hr {
     
 }
 
-.cabinet-main .error-message {
-    color: #900;
-}
-
 .cabinet-main .order {
-    margin: 0 0 10px 200px;
+    margin: 0 0 20px 0;
 }
 
 .invite-list {

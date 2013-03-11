@@ -16,34 +16,30 @@
 <div class="center-content">
     @Html.Partial("CabinetMenu")
     <div class="cabinet-main">
-        <h3 class="mrg-top-bottom20">Заказ торговой системы "@ViewBag.SystemName"</h3>
-        @if (ViewBag.Error)
+        @if (ViewBag.ErrorMessage != null)
         {
             <div class="error-message order">@ViewBag.ErrorMessage</div>
         }
-        else
+        <h3 class="mrg-top-bottom20">Заказ торговой системы "@ViewBag.SystemName"</h3>
+        @using (Html.BeginForm("OrderFinish", "PersonalCabinet", FormMethod.Post, new { id = "activateForm" }))
         {
-            <div class="error-message order">@ViewBag.ErrorMessage</div>
-            using (Html.BeginForm("OrderFinish", "PersonalCabinet", FormMethod.Post, new { id = "activateForm" }))
-            {
-                @Html.HiddenFor(m => m.TradingSystemId)
-                <table>
-                    <tr>
-                        <td class="labels">
-                            <label>Торговый счет:</label>
-                        </td>
-                        <td class="inputs">
-                            @Html.DropDownListFor(m => m.AccountId, Model.Accounts, "Выберите счет...")
-                        </td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td class="inputs">
-                            <button id="order" type="button" class="green-button">Заказать</button>
-                        </td>
-                    </tr>
-                </table>
-            }
+            @Html.HiddenFor(m => m.TradingSystemId)
+            <table>
+                <tr>
+                    <td class="labels">
+                        <label>Торговый счет:</label>
+                    </td>
+                    <td class="inputs">
+                        @Html.DropDownListFor(m => m.AccountId, Model.Accounts, "Выберите счет...")
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="inputs">
+                        <button id="order" type="button" class="green-button">Заказать</button>
+                    </td>
+                </tr>
+            </table>
         }
         <br/>
         <br/>
