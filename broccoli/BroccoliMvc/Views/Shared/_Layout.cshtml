@@ -4,6 +4,8 @@
     <title>@ViewBag.Title</title>
     <link href="@Url.Content("~/Content/img/favicon.ico")" rel="shortcut icon" type="image/x-icon" />
     <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/support/index.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/support/green.css")" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="@Url.Content("~/Content/themes/fancybox/jquery.fancybox-buttons.css")">
     <link rel="stylesheet" href="@Url.Content("~/Content/themes/fancybox/jquery.fancybox-thumbs.css")">
     <link rel="stylesheet" href="@Url.Content("~/Content/themes/fancybox/jquery.fancybox.css")">
@@ -52,7 +54,10 @@
                 <a href="#top">Наверх</a>
             </div>
         </div>
+        <span id="sh_button" class="sh_help_button_bottom" onclick="popupwindow('@Url.Content("~/Content/support/support.html")', 'Поддержка', 600, 500)">
+            <a href="http://siteheart.com/" target="_blank" class="sh_help_button_chat"></a>
+            <div class="sh_help_button_line"></div>Онлайн консультация<!--<div _tmplitem="1"  class="sh_ic_chat_up"></div>-->
+        </span>
         <script type="text/javascript">(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter20452048 = new Ya.Metrika({id:20452048, webvisor:true, clickmap:true, trackLinks:true, accurateTrackBounce:true, trackHash:true}); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="//mc.yandex.ru/watch/20452048" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-        <script type="text/javascript"> _shcp = []; _shcp.push({ widget_id: 565983, widget: "Chat" }); (function () { var hcc = document.createElement("script"); hcc.type = "text/javascript"; hcc.async = true; hcc.src = ("https:" == document.location.protocol ? "https" : "http") + "://widget.siteheart.com/apps/js/sh.js"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(hcc, s.nextSibling); })();</script>
     </body>
 </html>

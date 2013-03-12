@@ -199,6 +199,11 @@
     <Content Include="Content\img\vk_logo.png" />
     <Content Include="Content\img\vk_up_back.gif" />
     <Content Include="Content\Site.css" />
+    <Content Include="Content\support\green.css" />
+    <Content Include="Content\support\index.css" />
+    <Content Include="Content\support\logo.png" />
+    <Content Include="Content\support\support.html" />
+    <Content Include="Content\support\support.swf" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -271,9 +276,6 @@
     <Content Include="Content\themes\jquery-ui\images\ui-icons_cd0a0a_256x240.png" />
     <Content Include="Content\themes\jquery-ui\jquery-ui-1.9.2.custom.css" />
     <Content Include="Content\themes\jquery-ui\jquery-ui-1.9.2.custom.min.css" />
-    <Content Include="Files\TradingSystems\kmplayer_downloader.exe" />
-    <Content Include="Files\TradingSystems\mvc4vs2010.3f.3f.3fnew.exe" />
-    <Content Include="Files\TradingSystems\MVC4VS2010_Loc.exe" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\Admin\comments.js" />
     <Content Include="Scripts\amcharts\amcharts.js" />
@@ -442,6 +444,7 @@
     <Content Include="Views\Home\VPS.cshtml" />
     <Content Include="Views\Account\ForgotPassword.cshtml" />
     <Content Include="Views\Account\PasswordSent.cshtml" />
+    <Content Include="Views\PersonalCabinet\Support.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

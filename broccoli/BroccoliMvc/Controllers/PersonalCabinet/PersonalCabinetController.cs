@@ -560,6 +560,11 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.PersonalCabinet
             return View(model);
         }
 
+        public ActionResult Support()
+        {
+            return View();
+        }
+
         public ActionResult Test()
         {
             var em = new EmailMessage();
