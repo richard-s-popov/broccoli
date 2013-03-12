@@ -174,6 +174,11 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.Account
                     }
                 }
 
+                if (Request.Cookies["banner"] != null)
+                {
+                    user.FromBanner = Convert.ToInt32(Request.Cookies["banner"].Value);
+                }
+
                 _usersService.Insert(user);
                 _membershipService.LoginUser(null, user.Email, model.Password, false);
 

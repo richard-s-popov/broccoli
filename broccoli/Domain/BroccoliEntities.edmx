@@ -184,6 +184,7 @@
           <Property Name="OwnerId" Type="bigint" />
           <Property Name="UsedPoints" Type="int" Nullable="false" />
           <Property Name="RoleId" Type="int" Nullable="false" />
+          <Property Name="FromBanner" Type="int" />
         </EntityType>
         <Association Name="FK_AccountApplication_Accounts">
           <End Role="Accounts" Type="BroccoliModel.Store.Accounts" Multiplicity="1" />
@@ -454,6 +455,7 @@
           <NavigationProperty Name="Comment" Relationship="BroccoliModel.FK_Comment_Users" FromRole="Users" ToRole="Comment" />
           <Property Type="Int32" Name="RoleId" Nullable="false" />
           <NavigationProperty Name="Roles" Relationship="BroccoliModel.FK_Users_Roles" FromRole="Users" ToRole="Roles" />
+          <Property Type="Int32" Name="FromBanner" />
         </EntityType>
         <EntityType Name="Accounts">
           <Key>
@@ -745,6 +747,7 @@
           <EntitySetMapping Name="Users">
             <EntityTypeMapping TypeName="BroccoliModel.Users">
               <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="FromBanner" ColumnName="FromBanner" />
                 <ScalarProperty Name="RoleId" ColumnName="RoleId" />
                 <ScalarProperty Name="UsedPoints" ColumnName="UsedPoints" />
                 <ScalarProperty Name="EmailHash" ColumnName="EmailHash" />

@@ -29,6 +29,16 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.Home
             _communicationService = communicationService;
         }
 
+        public ActionResult FromBanner(string id)
+        {
+            var cookie = new HttpCookie("banner");
+            cookie.Value = id;
+            cookie.Expires = DateTime.Now.AddHours(24);
+            ControllerContext.HttpContext.Response.Cookies.Add(cookie);
+
+            return RedirectToAction("Index");
+        }
+
         public ActionResult Index(string token)
         {
             var ownerUser = _usersService.GetUserByEmailHash(token);

@@ -94,6 +94,7 @@
     <NavigationProperty Name="Comment" Relationship="BroccoliModel.FK_Comment_Users" FromRole="Users" ToRole="Comment" />
     <Property Type="Int32" Name="RoleId" Nullable="false" />
     <NavigationProperty Name="Roles" Relationship="BroccoliModel.FK_Users_Roles" FromRole="Users" ToRole="Roles" />
+    <Property Type="Int32" Name="FromBanner" />
   </EntityType>
   <EntityType Name="Accounts">
     <Key>

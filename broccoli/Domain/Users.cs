@@ -39,6 +39,7 @@ namespace BroccoliTrade.Domain
         public string EmailHash { get; set; }
         public int UsedPoints { get; set; }
         public int RoleId { get; set; }
+        public Nullable<int> FromBanner { get; set; }
     
         public virtual ICollection<Accounts> Accounts { get; set; }
         public virtual ICollection<AccountPool> AccountPool { get; set; }

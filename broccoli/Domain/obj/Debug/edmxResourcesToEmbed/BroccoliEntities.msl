@@ -4,6 +4,7 @@
     <EntitySetMapping Name="Users">
       <EntityTypeMapping TypeName="BroccoliModel.Users">
         <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="FromBanner" ColumnName="FromBanner" />
           <ScalarProperty Name="RoleId" ColumnName="RoleId" />
           <ScalarProperty Name="UsedPoints" ColumnName="UsedPoints" />
           <ScalarProperty Name="EmailHash" ColumnName="EmailHash" />
