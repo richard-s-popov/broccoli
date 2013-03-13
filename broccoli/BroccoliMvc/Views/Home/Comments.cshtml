@@ -16,7 +16,7 @@
     @foreach (var comment in Model.CommentList)
     {
         <div class="comment">
-            <div class="user-name">@comment.UserName</div>
+            <div class="user-name">@comment.UserName.Split(' ').First()&nbsp;@comment.UserName.Split(' ').Last()[0].</div>
             <div class="body">@Html.Raw(comment.Body)</div>
         </div>
     }
