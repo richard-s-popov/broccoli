@@ -116,7 +116,7 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.Home
 
         public ActionResult Comments()
         {
-            var comments = _communicationService.GetAllConfirmedComments();
+            var comments = _communicationService.GetAllConfirmedComments().OrderByDescending(x => x.Date);
             var model = new CommentsListModel
                 {
                     CommentList = comments.Select(x => new CommentModel
