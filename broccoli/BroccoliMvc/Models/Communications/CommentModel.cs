@@ -12,5 +12,7 @@ namespace BroccoliTrade.Web.BroccoliMvc.Models.Communications
         public string UserName { get; set; }
 
         public string Body { get; set; }
+
+        public DateTime Date { get; set; }
     }
 }

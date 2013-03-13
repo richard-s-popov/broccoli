@@ -2090,6 +2090,11 @@ footer#main{
 .comments .comment .user-name {
     font-weight: bold;
     color: rgb(0, 199, 0);
+    width: 200px;
+}
+
+.comments .comment .date {
+    color: rgb(162, 162, 162);
 }
 
 .comments .comment .body {
