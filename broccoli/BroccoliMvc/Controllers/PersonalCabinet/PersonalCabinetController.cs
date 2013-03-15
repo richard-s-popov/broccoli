@@ -567,12 +567,14 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.PersonalCabinet
 
         public ActionResult Test()
         {
-            var em = new EmailMessage();
-            em.Subject = "test message";
-            em.Message = "OLOLO";
-            em.From = "support@broccoli-trade.ru";
-            em.DisplayNameFrom = "Broccoli Trade";
-            em.To = "rick_box@mail.ru";
+            var em = new EmailMessage
+                {
+                    Subject = "test message",
+                    Message = "OLOLO",
+                    From = "support@broccoli-trade.ru",
+                    DisplayNameFrom = "Broccoli Trade",
+                    To = "rick_box@mail.ru"
+                };
 
             new QueueService().QueueMessage(em);
 

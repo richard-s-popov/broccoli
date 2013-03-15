@@ -117,7 +117,8 @@ namespace BroccoliTrade.Logics.Impl.Account
                         {
                             Subject = string.Format("Счет {0} активирован", account.AccountNumber),
                             Message = string.Format("Здравствуйте, {0}. Счет {1} активирован.", account.Users.Name, account.AccountNumber),
-                            From = "richard.s.popov@gmail.com",
+                            From = "support@broccoli-trade.ru",
+                            DisplayNameFrom = "Broccoli Trade",
                             To = account.Users.Email
                         };
 
@@ -133,7 +134,8 @@ namespace BroccoliTrade.Logics.Impl.Account
                     {
                         Subject = string.Format("Счет {0} отклонен", account.AccountNumber),
                         Message = string.Format("Здравствуйте, {0}. Счет {1} отклонен.", account.Users.Name, account.AccountNumber),
-                        From = "richard.s.popov@gmail.com",
+                        From = "support@broccoli-trade.ru",
+                        DisplayNameFrom = "Broccoli Trade",
                         To = account.Users.Email
                     };
 
