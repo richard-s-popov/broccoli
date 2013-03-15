@@ -45,7 +45,7 @@
         if (!$('.banner').is(':hover')) {
             $('.banner .stripNavR a').click();
         }
-    }, 5000);
+    }, 10000);
     
     $('#tab1').click();
 });
