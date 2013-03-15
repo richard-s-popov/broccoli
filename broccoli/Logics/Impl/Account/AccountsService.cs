@@ -90,30 +90,32 @@ namespace BroccoliTrade.Logics.Impl.Account
 
         public void CheckAccountsInPool()
         {
-            var time = DateTime.Now.AddMinutes(-1 * GetRandomMinutes(5));
-            var accounts = db.AccountPool.Where(x => x.ApplicationDate < time);
-
-            ServicePointManager.CertificatePolicy = new TrustAllCertificatePolicy();
-
-            foreach (var AccountPool in accounts)
+            try
             {
-                var myHttpWebRequest = (HttpWebRequest)WebRequest
-                    .Create(string.Format("https://my.forexinn.ru/agent-api/check-involved-account/broccoli/jcmbogje9b5uxs/{0}", AccountPool.AccountNumber));
+                var time = DateTime.Now.AddMinutes(-1 * GetRandomMinutes(5));
+                var accounts = db.AccountPool.Where(x => x.ApplicationDate < time);
 
-                var myHttpWebResponse = (HttpWebResponse)myHttpWebRequest.GetResponse();
+                ServicePointManager.CertificatePolicy = new TrustAllCertificatePolicy();
 
-                var myStreamReader = new StreamReader(myHttpWebResponse.GetResponseStream(), Encoding.UTF8);
-
-                var response = myStreamReader.ReadToEnd();
-                dynamic json = JToken.Parse(response);
-
-                if ((bool)json["result"])
+                foreach (var AccountPool in accounts)
                 {
-                    var account = this.GetById(AccountPool.AccountId);
-                    account.StatusId = 2;
-                    account.IsNew = true;
+                    var myHttpWebRequest = (HttpWebRequest)WebRequest
+                        .Create(string.Format("https://my.forexinn.ru/agent-api/check-involved-account/broccoli/jcmbogje9b5uxs/{0}", AccountPool.AccountNumber));
 
-                    var em = new EmailMessage
+                    var myHttpWebResponse = (HttpWebResponse)myHttpWebRequest.GetResponse();
+
+                    var myStreamReader = new StreamReader(myHttpWebResponse.GetResponseStream(), Encoding.UTF8);
+
+                    var response = myStreamReader.ReadToEnd();
+                    dynamic json = JToken.Parse(response);
+
+                    if ((bool)json["result"])
+                    {
+                        var account = this.GetById(AccountPool.AccountId);
+                        account.StatusId = 2;
+                        account.IsNew = true;
+
+                        var em = new EmailMessage
                         {
                             Subject = string.Format("Счет {0} активирован", account.AccountNumber),
                             Message = string.Format("Здравствуйте, {0}. Счет {1} активирован.", account.Users.Name, account.AccountNumber),
@@ -122,30 +124,35 @@ namespace BroccoliTrade.Logics.Impl.Account
                             To = account.Users.Email
                         };
 
-                    new QueueService().QueueMessage(em);
-                }
-                else
-                {
-                    var account = this.GetById(AccountPool.AccountId);
-                    account.StatusId = 3;
-                    account.IsNew = true;
-
-                    var em = new EmailMessage
+                        new QueueService().QueueMessage(em);
+                    }
+                    else
                     {
-                        Subject = string.Format("Счет {0} отклонен", account.AccountNumber),
-                        Message = string.Format("Здравствуйте, {0}. Счет {1} отклонен.", account.Users.Name, account.AccountNumber),
-                        From = "support@broccoli-trade.ru",
-                        DisplayNameFrom = "Broccoli Trade",
-                        To = account.Users.Email
-                    };
+                        var account = this.GetById(AccountPool.AccountId);
+                        account.StatusId = 3;
+                        account.IsNew = true;
 
-                    new QueueService().QueueMessage(em);
+                        var em = new EmailMessage
+                        {
+                            Subject = string.Format("Счет {0} отклонен", account.AccountNumber),
+                            Message = string.Format("Здравствуйте, {0}. Счет {1} отклонен.", account.Users.Name, account.AccountNumber),
+                            From = "support@broccoli-trade.ru",
+                            DisplayNameFrom = "Broccoli Trade",
+                            To = account.Users.Email
+                        };
+
+                        new QueueService().QueueMessage(em);
+                    }
+
+                    db.AccountPool.Remove(AccountPool);
                 }
 
-                db.AccountPool.Remove(AccountPool);
+                db.SaveChanges();
             }
-
-            db.SaveChanges();
+            catch (Exception ex)
+            {
+                Log(ex.Message);
+            }
         }
 
         public void DeleteAccount(Accounts account)
@@ -165,6 +172,11 @@ namespace BroccoliTrade.Logics.Impl.Account
             var random = new Random();
 
             return random.Next(range);
+        }
+
+        private void Log(string msg)
+        {
+            File.AppendAllText(@"C:\broccoli_log.txt", DateTime.Now + " " + msg + Environment.NewLine);
         }
     }
 }
