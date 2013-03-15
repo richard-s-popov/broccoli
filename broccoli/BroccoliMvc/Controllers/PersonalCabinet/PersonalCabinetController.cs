@@ -321,29 +321,29 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.PersonalCabinet
         {
             if (tradingSystem == "Money+")
             {
-                var file = Server.MapPath("~/Files/TradingSystems/Instructions/Money+.docx");
+                var file = Server.MapPath("~/Files/TradingSystems/Instructions/Money+.pdf");
 
                 if (System.IO.File.Exists(file))
                 {
-                    return File("~/Files/TradingSystems/Instructions/Money+.docx", "application/pdf", "Money+.docx");
+                    return File("~/Files/TradingSystems/Instructions/Money+.pdf", "application/pdf", "Money+.pdf");
                 }
             }
             if (tradingSystem == "Garanted")
             {
-                var file = Server.MapPath("~/Files/TradingSystems/Instructions/GarantedProfit.docx");
+                var file = Server.MapPath("~/Files/TradingSystems/Instructions/GarantedProfit.pdf");
 
                 if (System.IO.File.Exists(file))
                 {
-                    return File("~/Files/TradingSystems/Instructions/GarantedProfit.docx", "application/pdf", "GarantedProfit.docx");
+                    return File("~/Files/TradingSystems/Instructions/GarantedProfit.pdf", "application/pdf", "GarantedProfit.pdf");
                 }
             }
             if (tradingSystem == "MaxTrade")
             {
-                var file = Server.MapPath("~/Files/TradingSystems/Instructions/Max Trade.docx");
+                var file = Server.MapPath("~/Files/TradingSystems/Instructions/Max Trade.pdf");
 
                 if (System.IO.File.Exists(file))
                 {
-                    return File("~/Files/TradingSystems/Instructions/Max Trade.docx", "application/pdf", "Max Trade.docx");
+                    return File("~/Files/TradingSystems/Instructions/Max Trade.pdf", "application/pdf", "Max Trade.pdf");
                 }
             }
 
