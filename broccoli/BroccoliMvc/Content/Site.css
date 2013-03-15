@@ -496,7 +496,7 @@ hr {
 .content .main .open-account-instructions .description h3 {
     text-align: center;
     margin-bottom: 20px;
-    margin-top: 70px;
+    margin-top: 20px;
 }
 
 .content .main .open-account-instructions .description p {
@@ -511,18 +511,18 @@ hr {
 
 .content .main .open-account-instructions .broker img {
     position: absolute;
-    margin-top: 70px;
+    margin-top: 20px;
     margin-left: 100px;
 }
 
 .content .main .open-account-instructions .broker div span {
     position: absolute;
-    margin-top: 165px;
+    margin-top: 100px;
     margin-left: 120px;
 }
 
 .content .main .open-account-instructions .broker .partner-code {
-    margin-top: 220px;
+    margin-top: 160px;
     margin-left: 145px;
 }
 
