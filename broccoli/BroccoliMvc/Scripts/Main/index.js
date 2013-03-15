@@ -40,6 +40,12 @@
         $('.step').removeClass('active');
         $(this).addClass('active');
     });
+
+    setInterval(function () {
+        if (!$('.banner').is(':hover')) {
+            $('.banner .stripNavR a').click();
+        }
+    }, 5000);
     
     $('#tab1').click();
 });

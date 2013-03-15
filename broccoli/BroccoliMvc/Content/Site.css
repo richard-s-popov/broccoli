@@ -410,9 +410,28 @@ hr {
     height: 100%;
 }
 
+.content .banner .slider .second img {
+    width: 350px;
+    margin-top: 85px;
+    margin-left: 40px;
+}
+
+.content .banner .slider .second img:hover {
+    box-shadow: 0px 0px 5px rgb(133, 133, 133);
+    -webkit-box-shadow: 0px 0px 5px rgb(133, 133, 133);
+    -moz-box-shadow: 0px 0px 5px rgb(133, 133, 133);
+    cursor: pointer;
+}
+
 .content .banner .slider .third {
     width: 917px;
     height: 100%;
+}
+
+.content .banner .slider .third img {
+    width: 260px;
+    margin-top: 95px;
+    margin-left: 80px;
 }
 
 .content .banner .slider .broccoli {
@@ -1611,6 +1630,17 @@ footer#main{
 	width: 100%;
 	list-style-type: none;
 }
+
+.stripViewer .panelContainer .next {
+    text-indent: -9999px;
+    position: absolute;
+    top: 50%;
+    margin-top: -19px;
+    z-index: 999;
+    opacity: .5;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
 		
 .stripViewer .panelContainer .panel { 
 	float:left;
@@ -1669,27 +1699,53 @@ footer#main{
 	top: 230px;
 	text-indent: -9000em;
 }
+
+.stripNavL:hover, .stripNavR:hover {
+    opacity: 1;
+}
 		
 .stripNavL a, .stripNavR a {
 	display: block;
 	height: 40px;
 	width: 40px;
 }
-		
+
 .stripNavL {
-	left: 0;
+	background: url("img/ui-s1085f21318.png") no-repeat;
 }
 		
 .stripNavR {
-	right: 0;
+	background: url("img/ui-s1085f21318.png") no-repeat;
 }
 		
 .stripNavL {
-	background: url("images/arrow-left.gif") no-repeat center;
+	left: 40px;
+    text-indent: -9999px;
+    position: absolute;
+    top: 50%;
+    margin-top: -19px;
+    z-index: 999;
+    opacity: .5;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+    background-position: -138px -82px;
+    height: 38px;
+    width: 38px;
 }
 		
 .stripNavR {
-	background: url("images/arrow-right.gif") no-repeat center;
+	right: 40px;
+    text-indent: -9999px;
+    position: absolute;
+    top: 50%;
+    margin-top: -19px;
+    z-index: 999;
+    opacity: .5;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+    background-position: -100px -82px;
+    height: 38px;
+    width: 38px;
 }
 
 .theader:hover {
