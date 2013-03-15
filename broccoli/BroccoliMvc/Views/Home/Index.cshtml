@@ -35,7 +35,87 @@
 </div>
 <div class="main">
     <div class="center-content">
-        <div class="steps">
+        <div class="panel">
+            <div id="pricing-table">
+                <div class="plan plan1">
+                    <div class="price-header">Money +</div>
+                    <div class="price">200 - 300%</div>  
+                    <div class="monthly">за 5 лет</div>      
+                    <ul>
+                        <li>Выставление риска <strong>Нет</strong></li>
+                        <li>Минимальный депозит<br/><strong>Нет требований</strong></li>
+                        <li>Рекомендуемый депозит<br/><strong>Нет рекомендаций</strong></li>
+                        <li><strong>ТФ-H1</strong></li>
+                        <li>Рекомендуемые<br/> валютные пары<br/><strong>EURUSD, GBPUSD</strong></li>
+                    </ul>
+                    <a class="signup" href="@Url.Action("TradingSystemOrder", "PersonalCabinet", new { id = 1 })">Получить</a>         
+                </div >
+                <div class="plan plan2">
+                    <div class="price-header">Garanted</div>
+                    <div class="price">200 - 300%</div>
+                    <div class="monthly">За 5 лет</div>  
+                    <ul>
+                        <li>Выставление риска <strong>Есть</strong></li>
+                        <li>Минимальный депозит<br/><strong>100$</strong></li>
+                        <li>Рекомендуемый депозит<br/><strong>10.000$</strong></li>
+                        <li><strong>ТФ-М15</strong></li>
+                        <li>Рекомендуемые<br/> валютные пары<br/><strong>EURUSD, GBPUSD</strong></li>
+                    </ul>
+                    <a class="signup" href="@Url.Action("TradingSystemOrder", "PersonalCabinet", new { id = 2 })">Получить</a>            
+                </div>
+                <div class="plan plan3 popular-plan">
+                    <div class="price-header">Max trade</div>
+                    <div class="price">6000 - 9000%</div>
+                    <div class="monthly">За 5 лет</div>
+                    <ul>
+                        <li>Выставление риска <strong>Есть</strong></li>
+                        <li>Минимальный депозит<br/><strong>1000$</strong></li>
+                        <li>Рекомендуемый депозит<br/><strong>10.000$</strong></li>
+                        <li><strong>ТФ-М15</strong></li>
+                        <li>Рекомендуемые<br/> валютные пары<br/><strong>EURUSD, GBPUSD, AUDUSD, USDCAD, USDCHF</strong></li>
+                    </ul>
+                    <a class="signup" href="@Url.Action("TradingSystemOrder", "PersonalCabinet", new { id = 3 })">Получить</a>        
+                </div>	
+            </div>
+        </div>
+        <div class="panel">
+            <table class="open-account-instructions hr-shadow">
+                <tr>
+                    <td class="description">
+                        <h3>Откройте свой счет!</h3>
+                        <p>Не уверены в своих силах? — Откройте демо счёт и отточите навыки работы с советниками. <br />Хотите зарабатывать уже сейчас? — Откройте реальный торговый счёт. Впереди много прибыльных сделок!</p>
+                    </td>
+                    <td class="broker">
+                        <div>
+                            <img src="@Url.Content("~/Content/img/broker-logo.png")"/>
+                            <span class="button">
+                                <a href="http://www.forexinn.ru/register/a/broccoli" target="_blank"><input class="large" type="button" value="Открыть счет у Брокера" /></a>
+                            </span>
+                            <span class="partner-code">Партнерский код: <font>broccoli</font></span>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="panel hr-shadow video">
+            <h3>Схема работы. Видео инструкция:</h3>
+            <div class="gal">
+                <a class="various fancybox.iframe" title="Шаг №1. Регистрация на Broccoli-Trade" href="http://www.youtube.com/embed/bivoKhBFAs0?fs=1&amp;vq=hd720;autoplay=1;rel=0"><img src="@Url.Content("~/Content/img/for-video/1.jpg")"></a>
+                <a class="various fancybox.iframe" title="Шаг №2. Открытие счета на ForexInn" href="http://www.youtube.com/embed/G956oyXPvTw?fs=1&amp;vq=hd720;autoplay=1;rel=0"><img src="@Url.Content("~/Content/img/for-video/2.jpg")"></a>
+                <a class="various fancybox.iframe" title="Шаг №3. Активация счета на Broccoli-Trade" href="http://www.youtube.com/embed/9vaRA195G-o?fs=1&amp;vq=hd720;autoplay=1;rel=0"><img src="@Url.Content("~/Content/img/for-video/3.jpg")"></a>
+                <a class="various fancybox.iframe" title="Шан №4. Заказ советника для торгового счета" href="http://www.youtube.com/embed/_KAU61fomhs?fs=1&amp;vq=hd720;autoplay=1;rel=0"><img src="@Url.Content("~/Content/img/for-video/4.jpg")"></a>
+                <a class="various fancybox.iframe" title="Шаг №5. Установка терминала MetaTrader" href="http://www.youtube.com/embed/y0s_AXZlXQg?fs=1&amp;vq=hd720;autoplay=1;rel=0"><img src="@Url.Content("~/Content/img/for-video/5.jpg")"></a>
+                <a class="various fancybox.iframe" title="Шаг №6. Установка и запуск советника" href="http://www.youtube.com/embed/v4i2j1WcsNo?fs=1&amp;vq=hd720;autoplay=1;rel=0"><img src="@Url.Content("~/Content/img/for-video/6.jpg")"></a>
+                <a class="various fancybox.iframe" title="Шаг №7. Открытие демо-счета" href="http://www.youtube.com/embed/StVH_JTqi7k?fs=1&amp;vq=hd720;autoplay=1;rel=0"><img src="@Url.Content("~/Content/img/for-video/7.jpg")"></a>
+                <a class="various fancybox.iframe" title="Шаг №8. Заказ советника для демо-счета" href="http://www.youtube.com/embed/xy-VBXeMW-w?fs=1&amp;vq=hd720;autoplay=1;rel=0"><img src="@Url.Content("~/Content/img/for-video/8.jpg")"></a>
+                <a class="various fancybox.iframe" title="Шаг №9. Заказ и использование VPS сервера" href="http://www.youtube.com/embed/J75OLtizYag?fs=1&amp;vq=hd720;autoplay=1;rel=0"><img src="@Url.Content("~/Content/img/for-video/10.jpg")"></a>
+                @*<a class="various fancybox.iframe" title="The Falltape" href="http://www.youtube.com/embed/4tS88S6em8Y?fs=1&amp;vq=hd720;autoplay=1;rel=0"><img src="@Url.Content("~/Content/img/for-video/10.jpg")"></a>*@
+            </div>
+            <span class="button">
+                <a href="@Url.Action("RegisterForm", "Account")" target="_blank"><input id="regLink" class="large" type="button" value="Регистрация" /></a>
+            </span>
+        </div>
+        @*<div class="steps">
             <span id="tab1" class="step">1. Зарегистрируйтесь</span>
             <span id="tab2" class="step">2. Откройте свой счет</span>
             <span id="tab3" class="step">3. Получите свой советник</span>
@@ -43,89 +123,8 @@
         <div class="slider-wrap">
             <div id="slider1" class="csw" style="display: none;">
                 <div class="panelContainer">
-                    <div class="panel">
-                        <h3>Схема работы. Видео инструкция:</h3>
-                        <div class="gal">
-                            <a class="various fancybox.iframe" title="Шаг №1. Регистрация на Broccoli-Trade" href="http://www.youtube.com/embed/bivoKhBFAs0?fs=1&amp;vq=hd720;autoplay=1;rel=0"><img src="@Url.Content("~/Content/img/for-video/1.jpg")"></a>
-                            <a class="various fancybox.iframe" title="Шаг №2. Открытие счета на ForexInn" href="http://www.youtube.com/embed/G956oyXPvTw?fs=1&amp;vq=hd720;autoplay=1;rel=0"><img src="@Url.Content("~/Content/img/for-video/2.jpg")"></a>
-                            <a class="various fancybox.iframe" title="Шаг №3. Активация счета на Broccoli-Trade" href="http://www.youtube.com/embed/9vaRA195G-o?fs=1&amp;vq=hd720;autoplay=1;rel=0"><img src="@Url.Content("~/Content/img/for-video/3.jpg")"></a>
-                            <a class="various fancybox.iframe" title="Шан №4. Заказ советника для торгового счета" href="http://www.youtube.com/embed/_KAU61fomhs?fs=1&amp;vq=hd720;autoplay=1;rel=0"><img src="@Url.Content("~/Content/img/for-video/4.jpg")"></a>
-                            <a class="various fancybox.iframe" title="Шаг №5. Установка терминала MetaTrader" href="http://www.youtube.com/embed/y0s_AXZlXQg?fs=1&amp;vq=hd720;autoplay=1;rel=0"><img src="@Url.Content("~/Content/img/for-video/5.jpg")"></a>
-                            <a class="various fancybox.iframe" title="Шаг №6. Установка и запуск советника" href="http://www.youtube.com/embed/v4i2j1WcsNo?fs=1&amp;vq=hd720;autoplay=1;rel=0"><img src="@Url.Content("~/Content/img/for-video/6.jpg")"></a>
-                            <a class="various fancybox.iframe" title="Шаг №7. Открытие демо-счета" href="http://www.youtube.com/embed/StVH_JTqi7k?fs=1&amp;vq=hd720;autoplay=1;rel=0"><img src="@Url.Content("~/Content/img/for-video/7.jpg")"></a>
-                            <a class="various fancybox.iframe" title="Шаг №8. Заказ советника для демо-счета" href="http://www.youtube.com/embed/xy-VBXeMW-w?fs=1&amp;vq=hd720;autoplay=1;rel=0"><img src="@Url.Content("~/Content/img/for-video/8.jpg")"></a>
-                            <a class="various fancybox.iframe" title="Шаг №9. Заказ и использование VPS сервера" href="http://www.youtube.com/embed/J75OLtizYag?fs=1&amp;vq=hd720;autoplay=1;rel=0"><img src="@Url.Content("~/Content/img/for-video/9.jpg")"></a>
-                            @*<a class="various fancybox.iframe" title="The Falltape" href="http://www.youtube.com/embed/4tS88S6em8Y?fs=1&amp;vq=hd720;autoplay=1;rel=0"><img src="@Url.Content("~/Content/img/for-video/10.jpg")"></a>*@
-                        </div>
-                        <span class="button">
-                            <a href="@Url.Action("RegisterForm", "Account")" target="_blank"><input id="regLink" class="large" type="button" value="Регистрация" /></a>
-                        </span>
-                    </div>
-                    <div class="panel">
-                        <table class="open-account-instructions hr-shadow">
-                            <tr>
-                                <td class="description">
-                                    <h3>Откройте свой счет!</h3>
-                                    <p>Не уверены в своих силах? — Откройте демо счёт и отточите навыки работы с советниками. <br />Хотите зарабатывать уже сейчас? — Откройте реальный торговый счёт. Впереди много прибыльных сделок!</p>
-                                </td>
-                                <td class="broker">
-                                    <div>
-                                        <img src="@Url.Content("~/Content/img/broker-logo.png")"/>
-                                        <span class="button">
-                                            <a href="http://www.forexinn.ru/register/a/broccoli" target="_blank"><input class="large" type="button" value="Открыть счет у Брокера" /></a>
-                                        </span>
-                                        <span class="partner-code">Партнерский код: <font>broccoli</font></span>
-                                    </div>
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
-                    <div class="panel">
-                        <div id="pricing-table">
-                            <div class="plan plan1">
-                                <div class="price-header">Money +</div>
-                                <div class="price">200 - 300%</div>  
-                                <div class="monthly">за 5 лет</div>      
-                                <ul>
-                                    <li>Выставление риска <strong>Нет</strong></li>
-                                    <li>Минимальный депозит<br/><strong>Нет требований</strong></li>
-                                    <li>Рекомендуемый депозит<br/><strong>Нет рекомендаций</strong></li>
-                                    <li><strong>ТФ-H1</strong></li>
-                                    <li>Рекомендуемые<br/> валютные пары<br/><strong>EURUSD, GBPUSD</strong></li>
-                                </ul>
-                                <a class="signup" href="@Url.Action("TradingSystemOrder", "PersonalCabinet", new { id = 1 })">Получить</a>         
-                            </div >
-                            <div class="plan plan2">
-                                <div class="price-header">Garanted</div>
-                                <div class="price">200 - 300%</div>
-                                <div class="monthly">За 5 лет</div>  
-                                <ul>
-                                    <li>Выставление риска <strong>Есть</strong></li>
-                                    <li>Минимальный депозит<br/><strong>100$</strong></li>
-                                    <li>Рекомендуемый депозит<br/><strong>10.000$</strong></li>
-                                    <li><strong>ТФ-М15</strong></li>
-			                        <li>Рекомендуемые<br/> валютные пары<br/><strong>EURUSD, GBPUSD</strong></li>
-                                </ul>
-                                <a class="signup" href="@Url.Action("TradingSystemOrder", "PersonalCabinet", new { id = 2 })">Получить</a>            
-                            </div>
-                            <div class="plan plan3 popular-plan">
-                                <div class="price-header">Max trade</div>
-                                <div class="price">6000 - 9000%</div>
-                                <div class="monthly">За 5 лет</div>
-                                <ul>
-                                    <li>Выставление риска <strong>Есть</strong></li>
-                                    <li>Минимальный депозит<br/><strong>1000$</strong></li>
-                                    <li>Рекомендуемый депозит<br/><strong>10.000$</strong></li>
-                                    <li><strong>ТФ-М15</strong></li>
-			                        <li>Рекомендуемые<br/> валютные пары<br/><strong>EURUSD, GBPUSD, AUDUSD, USDCAD, USDCHF</strong></li>
-                                </ul>
-                                <a class="signup" href="@Url.Action("TradingSystemOrder", "PersonalCabinet", new { id = 3 })">Получить</a>        
-                            </div>	
-                        </div>
-                        </div>
-                    </div>
                 </div>
             </div>
-        </div>
+        </div>*@
     </div>
 </div>

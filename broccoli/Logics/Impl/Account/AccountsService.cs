@@ -31,7 +31,7 @@ namespace BroccoliTrade.Logics.Impl.Account
         {
             return db.Accounts
                 .Include("Users")
-                .FirstOrDefault(x => x.Id == id && !x.IsDeleted);
+                .FirstOrDefault(x => x.Id == id);
         }
 
         public Accounts GetByAccountNumber(string account)

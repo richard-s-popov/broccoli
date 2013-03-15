@@ -1574,6 +1574,12 @@ footer#main{
 	width:100%;
 }
 
+.center-content .video {
+    margin-top: 50px;
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+
 /* Слайдер */
 .stripViewer .panelContainer .panel ul {
 	text-align: left;
