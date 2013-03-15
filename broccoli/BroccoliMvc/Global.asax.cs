@@ -35,7 +35,7 @@ namespace BroccoliTrade.Web.BroccoliMvc
         {
             var timer = new System.Timers.Timer();
             timer.Elapsed += TimerEvent;
-            timer.Interval = 30000; // 5 минут
+            timer.Interval = 60000; // 5 минут
             timer.Enabled = true;
             timer.AutoReset = true;
             timer.Start();
