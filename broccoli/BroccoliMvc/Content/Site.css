@@ -1599,6 +1599,91 @@ footer#main{
     padding-bottom: 50px;
 }
 
+.center-content .panel h3 {
+    font-size: 42px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+}
+
+.center-content .about-forex {
+    padding-top: 30px;
+    padding-bottom: 50px;
+    position: relative;
+}
+
+.center-content .about-forex .about-forex-text {
+    margin-top: 20px;
+    line-height: 23px;
+    width: 590px;
+    text-align: justify;
+    color: rgb(77, 77, 77);
+}
+
+.center-content .about-forex .about-forex-text a {
+    color: green;
+}
+
+.center-content .about-forex  .first-img {
+    width: 266px;
+    position: absolute;
+    right: 10px;
+    top: 53px;
+}
+
+.center-content .advisor {
+    padding-top: 30px;
+    position: relative;
+}
+
+.center-content .advisor h3 {
+    text-align: right;
+}
+
+.center-content .advisor .advisor-text {
+    margin-top: 45px;
+    margin-bottom: 80px;
+    line-height: 23px;
+    width: 590px;
+    text-align: justify;
+    color: rgb(77, 77, 77);
+    margin-left: 325px;
+}
+
+.center-content .advisor .first-img {
+    width: 280px;
+    position: absolute;
+    top: 105px;
+    left: 0;
+}
+
+.center-content .advisor .for-trader-title {
+    text-align: left;
+}
+
+.center-content .advisor .for-trader-list {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    list-style-type: square;
+}
+
+.center-content .advisor .for-trader-list li {
+    line-height: 25px;
+    font-family: Arial, Tahoma, sans-serif;
+    font-size: 13px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+}
+
+.center-content .advisor .advisor-def {
+    margin-top: 45px;
+    margin-bottom: 30px;
+    line-height: 23px;
+    text-align: justify;
+    color: rgb(77, 77, 77);
+}
+
 /* Слайдер */
 .stripViewer .panelContainer .panel ul {
 	text-align: left;
