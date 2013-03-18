@@ -158,12 +158,15 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Content Include="Content\img\broccoli.png" />
     <Content Include="Content\img\broker-logo.png" />
+    <Content Include="Content\img\btn2-new.png" />
     <Content Include="Content\img\button_ok_7852.png" />
     <Content Include="Content\img\calc1.png" />
     <Content Include="Content\img\cross_2615.png" />
     <Content Include="Content\img\demo.png" />
     <Content Include="Content\img\depositphotos_1066825-Pineapple.jpg" />
     <Content Include="Content\img\depositphotos_1158059-Young-sunflower-sprout.jpg" />
+    <Content Include="Content\img\depositphotos_13564193-Stock-market-and-mobile-banking-on-digital-devices.png" />
+    <Content Include="Content\img\depositphotos_13564193-Stock-market-and-mobile-banking-on-digital-devices1.png" />
     <Content Include="Content\img\depositphotos_1374386-A-vegetarian-construction-isolated.jpg" />
     <Content Include="Content\img\depositphotos_15565199-Lime-stack %281%29.jpg" />
     <Content Include="Content\img\depositphotos_15705219-Brassica-Oleracea--Romanesco-broccoli--Roman-cauliflower.jpg" />
@@ -175,6 +178,7 @@
     <Content Include="Content\img\depositphotos_1950636-Various-vegetables-isolated.png" />
     <Content Include="Content\img\depositphotos_5140805-Black-screen.jpg" />
     <Content Include="Content\img\dep_5856564-Green-Profit-Icon.jpg" />
+    <Content Include="Content\img\dep_6188998-Printed-forex-chart-with-pen---uncertainty-of-future.jpg" />
     <Content Include="Content\img\fancybox\blank.gif" />
     <Content Include="Content\img\fancybox\fancybox_buttons.png" />
     <Content Include="Content\img\fancybox\fancybox_loading.gif" />
@@ -205,6 +209,7 @@
     <Content Include="Content\img\ui-s1085f21318.png" />
     <Content Include="Content\img\vk_logo.png" />
     <Content Include="Content\img\vk_up_back.gif" />
+    <Content Include="Content\img\_slider-background.png" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\support\green.css" />
     <Content Include="Content\support\index.css" />
@@ -382,6 +387,9 @@
     <Content Include="Scripts\slider\jquery-1.2.1.pack.js" />
     <Content Include="Scripts\slider\jquery-easing-compatibility.1.2.pack.js" />
     <Content Include="Scripts\slider\jquery-easing.1.2.pack.js" />
+    <Content Include="Scripts\slider\jquery.cslider.js" />
+    <Content Include="Scripts\slider\modernizr.custom.28468.js" />
+    <Content Include="Scripts\slider\parallax.css" />
     <Content Include="Scripts\tablesorter\jquery.tablesorter.min.js" />
     <Content Include="Scripts\tablesorter\stupidtable.js" />
     <Content Include="Scripts\tablesorter\stupidtable.min.js" />

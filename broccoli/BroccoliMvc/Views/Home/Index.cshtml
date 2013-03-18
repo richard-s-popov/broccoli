@@ -5,13 +5,16 @@
 }
 
 @section head {
+    <link href="@Url.Content("~/Scripts/slider/parallax.css")" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="@Url.Content("~/Scripts/slider/modernizr.custom.28468.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/slider/jquery.cslider.js")"></script>
     <script type="text/javascript" src="@Url.Content("~/Scripts/Main/index.js")"></script>
     <script type="text/javascript" src="@Url.Content("~/Scripts/slider/coda-slider.1.1.1.pack.js")"></script>
     <script type="text/javascript" src="@Url.Content("~/Scripts/slider/jquery-easing-compatibility.1.2.pack.js")"></script>
     <script type="text/javascript" src="@Url.Content("~/Scripts/slider/jquery-easing.1.2.pack.js")"></script>
 }
 
-<div class="banner">
+@*<div class="banner">
     <div id="mainBanner" class="slider" style="display: none;">
         <div class="panelContainer">
             <div class="first panel">
@@ -39,6 +42,57 @@
             </div>
         </div>
     </div>
+</div>*@
+<div id="da-slider" class="da-slider slider">
+    <div class="da-slide">
+        <div class="da-img">
+            <img class="broccoli" src="@Url.Content("~/Content/img/broccoli.png")"/>
+        </div>
+        <div class="text">
+            <h2>Здоровые инвестиции от 5 до 100% в месяц!</h2>
+            <p>
+                Выберите риск. Подходит для консервативных, уменеренных и дерзких инвесторов.
+                <br/><br/>
+                <a class="various fancybox.iframe btn" title="The Falltape" href="http://www.youtube.com/embed/J75OLtizYag?fs=1&amp;vq=hd720;autoplay=1">
+                    <span>Подробнее</span>
+                </a>
+            </p>
+        </div>
+    </div>
+	<div class="da-slide second">
+		<div class="da-img">
+            <img class="broccoli" src="@Url.Content("~/Content/img/for-video/10.jpg")"/>
+        </div>
+        <div class="text">
+            <h2>Автоматизированные торговые системы для рынка форекс.</h2>
+            <p>
+                Уже через год успешной торговли все ваши мечты исполнятся!
+                <br/>
+                <a class="various fancybox.iframe btn" title="The Falltape" href="http://www.youtube.com/embed/J75OLtizYag?fs=1&amp;vq=hd720;autoplay=1">
+                    <span>Подробнее</span>
+                </a>
+            </p>
+        </div>
+	</div>
+	<div class="da-slide third">
+		<div class="da-img">
+            <img class="broccoli" src="@Url.Content("~/Content/img/demo.png")"/>
+        </div>
+        <div class="text">
+            <h2>Демо-счет.</h2>
+            <p>
+                Воспользуйтесь нашим предложением, и попробуйте свои силы на демо счете не рискуая своим капиталом.
+                <br/>
+                <a class="btn" title="Открыть демо-счет" href="https://my.forexinn.ru/register-demo">
+                    <span>Открыть демо-счет</span>
+                </a>
+            </p>
+        </div>
+	</div>
+	<nav class="da-arrows">
+		<span class="da-arrows-prev"></span>
+		<span class="da-arrows-next"></span>
+	</nav>
 </div>
 <div class="main">
     <div class="center-content">
