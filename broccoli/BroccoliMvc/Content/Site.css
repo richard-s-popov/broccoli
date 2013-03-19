@@ -2038,14 +2038,14 @@ footer#main{
 .panel #pricing-table {
 	margin: 45px auto;
 	text-align: center;
-	width: 700px; /* total computed width */
+	width: 835px; /* total computed width */
 	zoom: 1;
 }
 
 .cabinet-main #pricing-table {
 	margin: 45px auto;
 	text-align: center;
-	width: 700px; /* total computed width */
+	width: 835px; /* total computed width */
 	zoom: 1;
 }
 
@@ -2066,7 +2066,7 @@ footer#main{
 	border: 1px solid #ddd;
 	color: #333;
 	padding: 20px;
-	width: 180px;
+	width: 225px;
 	float: left;
 	_display: inline; /* Для IE6 */
 	position: relative;

@@ -210,7 +210,7 @@
     position: absolute;
     left: 40px;
     text-indent: -9999px;
-    top: 50%;
+    top: 49%;
     margin-top: -19px;
     opacity: .5;
     height: 38px;
@@ -220,7 +220,7 @@
 .da-arrows span.da-arrows-next{
     right: 40px;
     text-indent: -9999px;
-    top: 50%;
+    top: 49%;
     margin-top: -19px;
     opacity: .5;
     height: 38px;
