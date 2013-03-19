@@ -58,6 +58,18 @@ namespace BroccoliTrade.Web.BroccoliMvc.App_Start
             );
 
             routes.MapRoute(
+                "Partners", // Route name
+                "partners", // URL with parameters
+                new { controller = "Home", action = "Partners" } // Parameter defaults
+            );
+
+            routes.MapRoute(
+                "Partner", // Route name
+                "partner/{id}", // URL with parameters
+                new { controller = "Home", action = "Partner", id = UrlParameter.Optional } // Parameter defaults
+            );
+
+            routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }

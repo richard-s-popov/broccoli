@@ -196,6 +196,11 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.Home
             return View();
         }
 
+        public ActionResult Partner(int id)
+        {
+            return RedirectToAction("Index");
+        }
+
         protected override void Dispose(bool disposing)
         {
             _usersService.Dispose();
