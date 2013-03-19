@@ -2298,6 +2298,10 @@ footer#main{
     margin-bottom: 50px;
 }
 
+.vps .plan .long {
+    padding-left: 22px !important;
+}
+
 .vps .free-vps {
     padding-top: 5px;
 }
