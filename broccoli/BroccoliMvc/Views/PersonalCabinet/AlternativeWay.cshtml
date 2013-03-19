@@ -10,7 +10,7 @@
 <div class="container">
     <div class="alt-way-container">
         <div>Ваша партнерская ссылка:</div>
-        <div><strong>http://broccoli-trade.ru?token=@HttpContext.Current.User.Identity.Name.Md5()</strong></div>
+        <div><strong>http://broccoli-trade.ru/?token=@HttpContext.Current.User.Identity.Name.Md5()</strong></div>
         <p>Вы можете отправлять данную ссылку любым удобным для Вас способом.</p>
         <p>Внимание, не пытайтесь отправлять письма на свои электронные ящики и регистрироваться с них на нашем сайте — сервис учитывает только настоящих людей. Нарушители будут заблокированы.</p>
         <p>Введите имя и email друга или друзей, чтобы отправить им следующее сообщение.</p>
@@ -39,7 +39,7 @@
         <a href="javascript:void(0)" id="addUser">Добавить еще...</a>
         @Html.TextBox("subject", null, new { @class = "subject", @placeholder = "Заголовок" })
         <div class="placeholder-description"><strong>%ИМЯ%</strong> - сюда будет подставлено имя вашего друга, которое вы указали с email-ом</div>
-        <textarea id="inviteMessage" class="inviteMessage" name="inviteMessage">Приветствую %ИМЯ%, это @UserHelper.GetUserName(), узнал про систему торговую Брокколи Трейд, позволяющую с выставлением риска инвестировать на рынок форекс. Если тебе в принципе интересны инструменты инвестиций, позволяющие зарабатывать от 5 до 100 % за месяц, пройди по ссылке <a href="http://broccoli-trade.ru?token=@HttpContext.Current.User.Identity.Name.Md5()">www.broccoli-trade.ru</a>!</textarea>
+        <textarea id="inviteMessage" class="inviteMessage" name="inviteMessage">Приветствую %ИМЯ%, это @UserHelper.GetUserName(), узнал про систему торговую Брокколи Трейд, позволяющую с выставлением риска инвестировать на рынок форекс. Если тебе в принципе интересны инструменты инвестиций, позволяющие зарабатывать от 5 до 100 % за месяц, пройди по ссылке <a href="http://broccoli-trade.ru/?token=@HttpContext.Current.User.Identity.Name.Md5()">www.broccoli-trade.ru</a>!</textarea>
         <div id="lessSymbols"></div>
         <button id="sendInvites" type="button" class="green-button">Сделать рассылку</button>
         <p>После отправки писем, Вы можете посмотреть статистику зарегистрировавшихся и перешедших по ссылке людей во вкладке <a href="@Url.Action("Statistics", "PersonalCabinet")">"Статистика"</a>.</p>
@@ -54,7 +54,7 @@
 
                             <!-- Put this script tag to the place, where the Share button will be -->
                             <script type="text/javascript">
-                                document.write(VK.Share.button({ url: "http://broccoli-trade.ru?token=@HttpContext.Current.User.Identity.Name.Md5()" }, { type: "custom", text: "<img src=\"@Url.Content("~/Content/img/vk_logo.png")\" />" }));
+                                document.write(VK.Share.button({ url: "http://broccoli-trade.ru/?token=@HttpContext.Current.User.Identity.Name.Md5()" }, { type: "custom", text: "<img src=\"@Url.Content("~/Content/img/vk_logo.png")\" />" }));
                             </script>
                         </td>
                         <td class="name-network">
@@ -63,7 +63,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <a target="_blank" class="mrc__plugin_uber_like_button" href="http://broccoli-trade.ru?token=@HttpContext.Current.User.Identity.Name.Md5()" data-mrc-config="{'nc' : '1', 'nt' : '1', 'cm' : '2', 'ck' : '2', 'sz' : '45', 'st' : '2', 'tp' : 'ok'}">Нравится</a>
+                            <a target="_blank" class="mrc__plugin_uber_like_button" href="http://broccoli-trade.ru/?token=@HttpContext.Current.User.Identity.Name.Md5()" data-mrc-config="{'nc' : '1', 'nt' : '1', 'cm' : '2', 'ck' : '2', 'sz' : '45', 'st' : '2', 'tp' : 'ok'}">Нравится</a>
                         </td>
                         <td class="name-network">
                             <h4>Одноклассники</h4>
@@ -71,7 +71,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <a target="_blank" class="mrc__plugin_uber_like_button" href="http://broccoli-trade.ru?token=@HttpContext.Current.User.Identity.Name.Md5()" data-mrc-config="{'nc' : '1', 'nt' : '1', 'cm' : '2', 'ck' : '2', 'sz' : '45', 'st' : '2', 'tp' : 'mm'}">Нравится</a>
+                            <a target="_blank" class="mrc__plugin_uber_like_button" href="http://broccoli-trade.ru/?token=@HttpContext.Current.User.Identity.Name.Md5()" data-mrc-config="{'nc' : '1', 'nt' : '1', 'cm' : '2', 'ck' : '2', 'sz' : '45', 'st' : '2', 'tp' : 'mm'}">Нравится</a>
                             <script src="http://cdn.connect.mail.ru/js/loader.js" type="text/javascript" charset="UTF-8"></script>
                         </td>
                         <td class="name-network">
