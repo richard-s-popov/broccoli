@@ -2119,6 +2119,11 @@ footer#main{
 	background-image: linear-gradient(#fff, #eee);
 }
 
+#pricing-table .two-line {
+    padding-top: 30px;
+    padding-bottom: 27px;
+}
+
 #pricing-table .price-header:after {
 	position: absolute;
 	bottom: -8px; left: 0;
@@ -2288,7 +2293,7 @@ footer#main{
 
 .vps #pricing-table {
     text-align: center;
-    margin-left: 110px;
+    margin-left: 75px;
     margin-top: 50px;
     margin-bottom: 50px;
 }
