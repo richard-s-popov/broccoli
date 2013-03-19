@@ -463,6 +463,7 @@
     <Content Include="Views\Account\ForgotPassword.cshtml" />
     <Content Include="Views\Account\PasswordSent.cshtml" />
     <Content Include="Views\PersonalCabinet\Support.cshtml" />
+    <Content Include="Views\Home\Partners.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

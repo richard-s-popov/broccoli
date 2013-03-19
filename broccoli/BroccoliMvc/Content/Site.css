@@ -676,6 +676,22 @@ hr {
     font-variant: normal;
     font-weight: normal;
     margin: 20px 10px;
+    width: 200px;
+    display: inline-block;
+}
+
+.footer .footer-content .partner-link {
+    margin-left: 169px;
+    color: white;
+    text-decoration: none;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+.footer .footer-content .partner-link:hover {
+    color: #98cb66;
 }
 
 .footer .footer-content .copyright a {
@@ -1681,6 +1697,11 @@ footer#main{
     line-height: 23px;
     text-align: justify;
     color: rgb(77, 77, 77);
+}
+
+.partners {
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 /* Слайдер */
