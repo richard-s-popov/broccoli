@@ -198,7 +198,7 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.Home
 
         public ActionResult Partner(int id)
         {
-            return RedirectToAction("Index");
+            return RedirectToAction("FromBanner", new { @id = 1024 });
         }
 
         protected override void Dispose(bool disposing)
