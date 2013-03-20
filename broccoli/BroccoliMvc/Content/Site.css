@@ -783,7 +783,7 @@ hr {
     position: absolute;
     width: 300px;
     height: 200px;
-    z-index: 200;
+    z-index: 9999;
     top: 17px;
     left: -100px;
     cursor: default;
