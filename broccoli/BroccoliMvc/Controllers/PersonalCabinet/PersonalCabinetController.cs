@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
+using System.Net;
 using System.Web.Mvc;
 using System.Web.Script.Serialization;
 using System.Configuration;
@@ -317,37 +318,38 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.PersonalCabinet
             return new EmptyResult();
         }
 
-        public ActionResult GetInstruction(string tradingSystem)
+        public void GetInstruction(string tradingSystem)
         {
             if (tradingSystem == "Money+")
             {
-                var file = Server.MapPath("~/Files/TradingSystems/Instructions/Money+.pdf");
+                string path = Server.MapPath("~/Files/TradingSystems/Instructions/Money+.pdf");
+                WebClient client = new WebClient();
+                Byte[] buffer = client.DownloadData(path);
 
-                if (System.IO.File.Exists(file))
-                {
-                    return File("~/Files/TradingSystems/Instructions/Money+.pdf", "application/pdf", "Money+.pdf");
-                }
+                Response.ContentType = "application/pdf";
+                Response.AddHeader("content-length", buffer.Length.ToString());
+                Response.BinaryWrite(buffer);
             }
             if (tradingSystem == "Garanted")
             {
-                var file = Server.MapPath("~/Files/TradingSystems/Instructions/GarantedProfit.pdf");
+                string path = Server.MapPath("~/Files/TradingSystems/Instructions/GarantedProfit.pdf");
+                WebClient client = new WebClient();
+                Byte[] buffer = client.DownloadData(path);
 
-                if (System.IO.File.Exists(file))
-                {
-                    return File("~/Files/TradingSystems/Instructions/GarantedProfit.pdf", "application/pdf", "GarantedProfit.pdf");
-                }
+                Response.ContentType = "application/pdf";
+                Response.AddHeader("content-length", buffer.Length.ToString());
+                Response.BinaryWrite(buffer);
             }
             if (tradingSystem == "MaxTrade")
             {
-                var file = Server.MapPath("~/Files/TradingSystems/Instructions/Max Trade.pdf");
+                string path = Server.MapPath("~/Files/TradingSystems/Instructions/Max Trade.pdf");
+                WebClient client = new WebClient();
+                Byte[] buffer = client.DownloadData(path);
 
-                if (System.IO.File.Exists(file))
-                {
-                    return File("~/Files/TradingSystems/Instructions/Max Trade.pdf", "application/pdf", "Max Trade.pdf");
-                }
+                Response.ContentType = "application/pdf";
+                Response.AddHeader("content-length", buffer.Length.ToString());
+                Response.BinaryWrite(buffer);
             }
-
-            return new EmptyResult();
         }
 
         [Secure]
