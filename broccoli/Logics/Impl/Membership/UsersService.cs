@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using BroccoliTrade.Logics.Infrastructure.Extensions;
 using BroccoliTrade.Logics.Interfaces.Membership;
@@ -24,6 +25,11 @@ namespace BroccoliTrade.Logics.Impl.Membership
 
             db.Users.Add(entity);
             db.SaveChanges();
+        }
+
+        public IEnumerable<Users> GetAllUsers()
+        {
+            return db.Users.Where(x => !x.IsDeleted);
         }
 
         public Users GetById(long userId)

@@ -4,7 +4,7 @@
         <td id="indexPage" class="item" onclick="window.location = '@Url.Action("Index", "Home")'">Главная</td>
         @if (HttpContext.Current.User.IsUserInRole("Admin"))
         {
-            <td id="adminPage" class="item" onclick="window.location = '@Url.Action("CommentsPanel", "Admin")'">Администрирование</td>
+            <td id="adminPage" class="item" onclick="window.location = '@Url.Action("Index", "Admin")'">Администрирование</td>
         }
         <td id="commentsPage" class="item" onclick="window.location = '@Url.Action("Comments", "Home")'">Отзывы</td>
         @if (HttpContext.Current.User.Identity.IsAuthenticated)

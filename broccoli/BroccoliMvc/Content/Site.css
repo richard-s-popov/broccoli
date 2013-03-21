@@ -1299,20 +1299,20 @@ hr {
     margin: 0 0 20px 0;
 }
 
-.cabinet-main .how-to {
+.how-to {
     margin: 30px 0;
 }
 
-.cabinet-main .how-to .steps-for-advisor {
+.how-to .steps-for-advisor {
     margin-top: 20px;
     line-height: 26px;
 }
 
-.cabinet-main .how-to .steps-for-advisor p {
+.how-to .steps-for-advisor p {
     font-size: 16px;
 }
 
-.cabinet-main .how-to .steps-for-advisor .description {
+.how-to .steps-for-advisor .description {
     line-height: 18px;
     font-size: 13px;
     margin-left: 21px;
@@ -1320,11 +1320,11 @@ hr {
     color: rgb(112, 112, 112);
 }
 
-.cabinet-main .how-to .steps-for-advisor .description a {
+.how-to .steps-for-advisor .description a {
     font-size: 13px;
 }
 
-.cabinet-main .how-to a {
+.how-to a {
     color: green;
     font-size: 16px;
 }
@@ -1931,6 +1931,41 @@ footer#main{
 .type-user-radio {
     width: 230px;
     margin: 0 auto 50px;
+}
+
+.admin {
+    padding-top: 30px;
+}
+
+.admin a {
+    margin-left: 50px;
+}
+
+.users {
+    
+}
+
+.users .user-list {
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.users .user-list th {
+    font-weight: bold;
+}
+
+.users .user-list tbody tr:hover {
+    background-color: rgb(243, 243, 243);
+}
+
+.users .user-list tr {
+    border-bottom: 1px solid black;
+}
+
+.users .user-list td, .users .user-list th {
+    font-size: 13px;
+    padding: 10px;
 }
 
 .broker-info .broker {

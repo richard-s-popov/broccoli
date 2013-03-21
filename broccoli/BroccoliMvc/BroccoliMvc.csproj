@@ -138,6 +138,7 @@
     <Compile Include="Infrastructure\Unity\Bootstrapper.cs" />
     <Compile Include="Infrastructure\UserHelper\UserHelper.cs" />
     <Compile Include="Models\Account\UserProfilePoco.cs" />
+    <Compile Include="Models\Admin\UsersListModel.cs" />
     <Compile Include="Models\Communications\CommentModel.cs" />
     <Compile Include="Models\Communications\CommentsListModel.cs" />
     <Compile Include="Models\Communications\ContactModel.cs" />
@@ -464,6 +465,8 @@
     <Content Include="Views\Account\PasswordSent.cshtml" />
     <Content Include="Views\PersonalCabinet\Support.cshtml" />
     <Content Include="Views\Home\Partners.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\Admin\Users.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

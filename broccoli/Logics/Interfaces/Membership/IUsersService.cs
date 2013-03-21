@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using BroccoliTrade.Domain;
 
 namespace BroccoliTrade.Logics.Interfaces.Membership
@@ -14,6 +15,12 @@ namespace BroccoliTrade.Logics.Interfaces.Membership
         /// <param name="entity"></param>
         void Insert(Users entity);
 
+        /// <summary>
+        /// Все пользователи
+        /// </summary>
+        /// <returns></returns>
+        IEnumerable<Users> GetAllUsers(); 
+            
         /// <summary>
         /// Возвращает пользователя по id
         /// </summary>

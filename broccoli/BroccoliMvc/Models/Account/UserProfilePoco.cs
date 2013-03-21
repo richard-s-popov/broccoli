@@ -8,6 +8,8 @@ namespace BroccoliTrade.Web.BroccoliMvc.Models.Account
 {
     public class UserProfilePoco
     {
+        public long Id { get; set; }
+
         [Required]
         [RegularExpression("^[a-zA-Zа-яА-Я\\s]+$")]
         public string Name { get; set; }
@@ -34,5 +36,7 @@ namespace BroccoliTrade.Web.BroccoliMvc.Models.Account
         public string Password { get; set; }
 
         public DateTime RegisterDate { get; set; }
+
+        public int From { get; set; }
     }
 }

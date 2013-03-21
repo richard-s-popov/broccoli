@@ -6,6 +6,8 @@ using System.Web.Mvc;
 using BroccoliTrade.Logics.Interfaces.Communications;
 using BroccoliTrade.Logics.Interfaces.Membership;
 using BroccoliTrade.Web.BroccoliMvc.Infrastructure.Attributes;
+using BroccoliTrade.Web.BroccoliMvc.Models.Account;
+using BroccoliTrade.Web.BroccoliMvc.Models.Admin;
 using BroccoliTrade.Web.BroccoliMvc.Models.Communications;
 
 namespace BroccoliTrade.Web.BroccoliMvc.Controllers
@@ -21,6 +23,13 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers
         {
             _usersService = usersService;
             _communicationService = communicationService;
+        }
+
+        [Secure]
+        [Role(Role = "Admin")]
+        public ActionResult Index()
+        {
+            return View();
         }
 
         [Secure]
@@ -73,6 +82,30 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers
             _communicationService.SaveChanges(); ;
 
             return Json(new { result = true }, JsonRequestBehavior.AllowGet);
+        }
+
+        [Secure]
+        [Role(Role = "Admin")]
+        public ActionResult Users()
+        {
+            var users = _usersService.GetAllUsers().OrderByDescending(x => x.RegisterDate);
+            var model = new UsersListModel
+                {
+                    users = users.Select(entity => new UserProfilePoco
+                        {
+                            Id = entity.Id,
+                            Email = entity.Email,
+                            RegisterDate = entity.RegisterDate,
+                            Name = entity.Name,
+                            BirthDay = entity.BirthDay,
+                            City = entity.City,
+                            Nickname = entity.Nickname,
+                            Phone = entity.Phone,
+                            From = entity.FromBanner != null ? entity.FromBanner.Value : 0
+                        })
+                };
+
+            return View(model);
         }
 
         protected override void Dispose(bool disposing)
