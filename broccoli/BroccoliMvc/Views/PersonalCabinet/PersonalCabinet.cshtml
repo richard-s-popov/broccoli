@@ -61,9 +61,9 @@
         <br/>
         <div class="instructions">
             <ul>
-                <li>1. Инструкция к установке и настройке <strong>Money+</strong>. <a href="@Url.Content("~/Files/TradingSystems/Instructions/Money+.pdf")" target="_blank">Открыть</a></li>
-                <li>2. Инструкция к установке и настройке <strong>Garanted</strong>. <a href="@Url.Content("~/Files/TradingSystems/Instructions/GarantedProfit.pdf")" target="_blank">Открыть</a></li>
-                <li>3. Инструкция к установке и настройке <strong>Max Trade</strong>. <a href="@Url.Content("~/Files/TradingSystems/Instructions/Max Trade.pdf")" target="_blank">Открыть</a></li>
+                <li>1. Инструкция к установке и настройке <strong>Money+</strong>. <a href="@Url.Action("GetInstruction", "PersonalCabinet", new { tradingSystem = "Money+" })" target="_blank">Открыть</a></li>
+                <li>2. Инструкция к установке и настройке <strong>Garanted</strong>. <a href="@Url.Action("GetInstruction", "PersonalCabinet", new { tradingSystem = "Garanted" })" target="_blank">Открыть</a></li>
+                <li>3. Инструкция к установке и настройке <strong>Max Trade</strong>. <a href="@Url.Action("GetInstruction", "PersonalCabinet", new { tradingSystem = "MaxTrade" })" target="_blank">Открыть</a></li>
             </ul>
         </div>
         <br/>
