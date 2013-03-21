@@ -41,6 +41,38 @@
                 </tr>
             </table>
         }
+        <div class="how-to">
+            <h3>Чтобы получить советник и начать торговать:</h3>
+            <ul class="steps-for-advisor">
+                <li>
+                    <p>1.&nbsp;&nbsp;<a href="http://www.forexinn.ru/register/a/broccoli" target="_blank">Откройте счет</a> у брокера <strong>ForexInn</strong>.</p>
+                    @if (Model.TradingSystemId == 3)
+                    {
+                        <p class="description">Для того чтобы получить советник необходимо иметь на счете у брокера не менее $1000.<br/>Это необходимо для торговли на рынке Форекс.<br/>Также Вы можете воспользоваться советником <a href="@Url.Action("TradingSystemOrder", "PersonalCabinet", new { id = 1 })">Money+</a> и, не рискуя своим капиталом, опробовать свои силы на <a href="https://my.forexinn.ru/register-demo" target="_blank">демо-счете</a>.</p>
+                    }
+                    @if (Model.TradingSystemId == 2)
+                    {
+                        <p class="description">Для того чтобы получить советник необходимо иметь на счете у брокера не менее $100.<br/>Это необходимо для торговли на рынке Форекс.<br/>Также Вы можете воспользоваться советником <a href="@Url.Action("TradingSystemOrder", "PersonalCabinet", new { id = 1 })">Money+</a> и, не рискуя своим капиталом, опробовать свои силы на <a href="https://my.forexinn.ru/register-demo" target="_blank">демо-счете</a>.</p>
+                    }
+                    @if (Model.TradingSystemId == 1)
+                    {
+                        <p class="description">Вы можете проверить работу советника на <a href="https://my.forexinn.ru/register-demo" target="_blank">демо-счете</a>.</p>
+                    }
+                </li>
+                <li>2.&nbsp;&nbsp;Затем <a href="@Url.Action("ActivateAccount", "PersonalCabinet")">активируйте этот счет</a> на нашем сайте у себя в личном кабинете.</li>
+                <li>3.&nbsp;&nbsp;Выберите на этой странице счет и нажмите кнопку <strong>заказать</strong>.</li>
+                <li></li>
+            </ul>
+        </div>
+        <div class="broker-info">
+            <div class="broker">
+                <img src="@Url.Content("~/Content/img/broker-logo.png")"/>
+                <span class="button">
+                    <a href="http://www.forexinn.ru/register/a/broccoli" target="_blank"><input class="large" type="button" value="Открыть счет у Брокера" /></a>
+                </span>
+                <span>Партнерский код: <font>broccoli</font></span>
+            </div>
+        </div>
         <br/>
         <br/>
         <hr/>

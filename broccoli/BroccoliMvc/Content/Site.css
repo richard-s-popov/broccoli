@@ -1299,6 +1299,36 @@ hr {
     margin: 0 0 20px 0;
 }
 
+.cabinet-main .how-to {
+    margin: 30px 0;
+}
+
+.cabinet-main .how-to .steps-for-advisor {
+    margin-top: 20px;
+    line-height: 26px;
+}
+
+.cabinet-main .how-to .steps-for-advisor p {
+    font-size: 16px;
+}
+
+.cabinet-main .how-to .steps-for-advisor .description {
+    line-height: 18px;
+    font-size: 13px;
+    margin-left: 21px;
+    margin-bottom: 10px;
+    color: rgb(112, 112, 112);
+}
+
+.cabinet-main .how-to .steps-for-advisor .description a {
+    font-size: 13px;
+}
+
+.cabinet-main .how-to a {
+    color: green;
+    font-size: 16px;
+}
+
 .invite-list {
     width: 630px;
     margin: 10px 0 0 0;
