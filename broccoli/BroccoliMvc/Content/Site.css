@@ -1321,12 +1321,12 @@ hr {
 }
 
 .how-to .steps-for-advisor .description a {
-    font-size: 13px;
+    font-size: 13px !important;
 }
 
 .how-to a {
-    color: green;
-    font-size: 16px;
+    color: green !important;
+    font-size: 16px !important;
 }
 
 .invite-list {
@@ -1674,6 +1674,93 @@ footer#main{
     position: absolute;
     right: 10px;
     top: 53px;
+}
+
+.advisor-page {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.advisor-page p {
+    color: rgb(77, 77, 77);
+    line-height: 23px;
+}
+
+.advisor-page h3 {
+    font-size: 40px;
+}
+
+.advisor-page .intro {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-right: 30px;
+    position: relative;
+    height: 370px;
+}
+
+.advisor-page .intro img {
+    position: absolute;
+    top: 30px;
+    left: 0;
+}
+
+.advisor-page .intro p {
+    width: 470px;
+    float: right;
+    padding-top: 10px;
+}
+
+.advisor-page .intro ul {
+    width: 455px;
+    float: right;
+    list-style-type: square;
+    color: rgb(77, 77, 77);
+    line-height: 23px;
+    font-size: 13px;
+    margin-top: 20px;
+}
+
+.advisor-page .intro .btn {
+    float: right;
+    display: block;
+    margin-right: 300px;
+    margin-top: -5px;
+    text-decoration: none;
+    color: white;
+}
+
+.how-get-it {
+    margin-top: 50px;
+    padding-top: 40px;
+    padding-bottom: 30px;
+}
+
+.btn {
+    padding: 11px 24px 0 0;
+    font: 16px/16px PFDinDisplayProRegular, Arial, Helvetica, Tahoma, Verdana;
+    color: #fff;
+    background: url(../Content/img/btn2-new.png) no-repeat 100% -50px;
+    margin-top: 12px;
+    margin-left: -4px;
+    cursor: pointer;
+    display: -moz-inline-stack;
+    display: inline-block;
+    vertical-align: top;
+    text-decoration: none;
+    height: 34px;
+}
+.btn:hover {
+    background-position: 100% -150px;
+}
+.btn:hover span {
+    background-position: 0 -100px;
+}
+.btn span {
+    padding: 10px 15px 8px 15px;
+    background: url(../Content/img/btn2-new.png) no-repeat 0 0;
+    white-space: nowrap;
+    vertical-align: top;
+    font-size: 15px;
 }
 
 .center-content .advisor {
@@ -2284,7 +2371,8 @@ footer#main{
 }
 
 #pricing-table .signup:hover {
-	opacity: 1;       
+	opacity: 1;
+    box-shadow: 0 1px 10px rgba(0,0,0,.3);
 }
 
 #pricing-table .signup:active {

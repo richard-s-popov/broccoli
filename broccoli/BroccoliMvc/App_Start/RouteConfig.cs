@@ -70,6 +70,18 @@ namespace BroccoliTrade.Web.BroccoliMvc.App_Start
             );
 
             routes.MapRoute(
+                "MaxTrade", // Route name
+                "MaxTrade", // URL with parameters
+                new { controller = "Home", action = "MaxTrade" } // Parameter defaults
+            );
+
+            routes.MapRoute(
+                "GarantedProfit", // Route name
+                "GarantedProfit", // URL with parameters
+                new { controller = "Home", action = "GarantedProfit" } // Parameter defaults
+            );
+
+            routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }

@@ -157,12 +157,20 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Content Include="Content\advisors\GarantedProfit\GP_AutoRisk_1-5percent.gif" />
+    <Content Include="Content\advisors\GarantedProfit\GP_AutoRisk_1-5percent.htm" />
+    <Content Include="Content\advisors\GarantedProfit\GP_fixed_lot_0.1.gif" />
+    <Content Include="Content\advisors\GarantedProfit\GP_fixed_lot_0.1.htm" />
+    <Content Include="Content\advisors\MaxTrade\Max-Trade 5 лет 3%25.gif" />
+    <Content Include="Content\advisors\MaxTrade\Max-Trade_5_лет_3percent.htm" />
+    <Content Include="Content\advisors\MaxTrade\temp.htm" />
     <Content Include="Content\img\broccoli.png" />
     <Content Include="Content\img\broker-logo.png" />
     <Content Include="Content\img\btn2-new.png" />
     <Content Include="Content\img\button_ok_7852.png" />
     <Content Include="Content\img\calc1.png" />
     <Content Include="Content\img\cross_2615.png" />
+    <Content Include="Content\img\dataviz-homepage-headbanner.png" />
     <Content Include="Content\img\demo.png" />
     <Content Include="Content\img\depositphotos_1066825-Pineapple.jpg" />
     <Content Include="Content\img\depositphotos_1158059-Young-sunflower-sprout.jpg" />
@@ -450,6 +458,8 @@
     <Content Include="Files\TradingSystems\Instructions\Money+.pdf" />
     <Content Include="Files\TradingSystems\Max Trade.rar" />
     <Content Include="Files\TradingSystems\Money+.rar" />
+    <Content Include="Content\advisors\MaxTrade\5years.json" />
+    <Content Include="Content\advisors\GarantedProfit\5years.json" />
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Views\Shared\MainMenu.cshtml" />
@@ -467,6 +477,8 @@
     <Content Include="Views\Home\Partners.cshtml" />
     <Content Include="Views\Admin\Index.cshtml" />
     <Content Include="Views\Admin\Users.cshtml" />
+    <Content Include="Views\Home\Advisors\MaxTrade.cshtml" />
+    <Content Include="Views\Home\Advisors\GarantedProfit.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

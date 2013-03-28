@@ -201,6 +201,16 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.Home
             return RedirectToAction("FromBanner", new { @id = 1024 });
         }
 
+        public ActionResult MaxTrade()
+        {
+            return View("Advisors/MaxTrade");
+        }
+
+        public ActionResult GarantedProfit()
+        {
+            return View("Advisors/GarantedProfit");
+        }
+
         protected override void Dispose(bool disposing)
         {
             _usersService.Dispose();
