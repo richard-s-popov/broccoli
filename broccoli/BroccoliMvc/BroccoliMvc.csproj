@@ -161,8 +161,8 @@
     <Content Include="Content\advisors\GarantedProfit\GP_AutoRisk_1-5percent.htm" />
     <Content Include="Content\advisors\GarantedProfit\GP_fixed_lot_0.1.gif" />
     <Content Include="Content\advisors\GarantedProfit\GP_fixed_lot_0.1.htm" />
-    <Content Include="Content\advisors\MaxTrade\Max-Trade 5 лет 3%25.gif" />
-    <Content Include="Content\advisors\MaxTrade\Max-Trade_5_лет_3percent.htm" />
+    <Content Include="Content\advisors\MaxTrade\Max-Trade_5years_3percent.gif" />
+    <Content Include="Content\advisors\MaxTrade\Max-Trade_5years_3percent.htm" />
     <Content Include="Content\advisors\MaxTrade\temp.htm" />
     <Content Include="Content\img\broccoli.png" />
     <Content Include="Content\img\broker-logo.png" />

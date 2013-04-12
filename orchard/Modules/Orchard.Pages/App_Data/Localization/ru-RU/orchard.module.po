@@ -1,0 +1,53 @@
+# Orchard resource strings - ru-RU
+# Copyright (c) 2010 Outercurve Foundation
+# All rights reserved
+# This file is distributed under the BSD license
+
+#: ~/Modules/Orchard.Pages/Module.txt
+#| msgid "Author"
+msgctxt "~/Modules/Orchard.Pages/Module.txt"
+msgid "The Orchard Team"
+msgstr "Команда Orchard"
+
+#: ~/Modules/Orchard.Pages/Module.txt
+#| msgid "Website"
+msgctxt "~/Modules/Orchard.Pages/Module.txt"
+msgid "http://orchardproject.net"
+msgstr "http://orchardproject.net"
+
+#: ~/Modules/Orchard.Pages/Module.txt
+#| msgid "Description"
+msgctxt "~/Modules/Orchard.Pages/Module.txt"
+msgid "Introduces a preconfigured page content type."
+msgstr "Предопределение типа контента страница."
+
+#: ~/Modules/Orchard.Pages/Module.txt
+#| msgid "Orchard.Pages.Name"
+msgctxt "~/Modules/Orchard.Pages/Module.txt"
+msgid "Pages"
+msgstr "Страницы"
+
+#: ~/Modules/Orchard.Pages/Module.txt
+#| msgid "Orchard.Pages.Description"
+msgctxt "~/Modules/Orchard.Pages/Module.txt"
+msgid "A basic page content type."
+msgstr "Базовый тип содержимого страницы."
+
+#: ~/Modules/Orchard.Pages/Module.txt
+#| msgid "Orchard.Pages.Category"
+msgctxt "~/Modules/Orchard.Pages/Module.txt"
+msgid "Content"
+msgstr "Содержимое"
+
+#: Orchard.Pages.Commands.PageCommands
+#| msgid "Page created successfully."
+msgctxt "Orchard.Pages.Commands.PageCommands"
+msgid "Page created successfully."
+msgstr "Страница создана успешно."
+
+#: ~/Modules/Orchard.Pages/Module.txt
+#| msgid "Name"
+msgctxt "~/Modules/Orchard.Pages/Module.txt"
+msgid "Pages"
+msgstr "Страницы"
+

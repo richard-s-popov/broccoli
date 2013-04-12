@@ -1,0 +1,1121 @@
+# Orchard resource strings - ru-RU
+# Copyright (c) 2010 Outercurve Foundation
+# All rights reserved
+# This file is distributed under the BSD license
+
+#: Orchard.Fields.Drivers.MediaPickerFieldDriver
+#| msgid "The field {0} must have one of these extensions: {1}"
+msgctxt "Orchard.Fields.Drivers.MediaPickerFieldDriver"
+msgid "The field {0} must have one of these extensions: {1}"
+msgstr "Поле {0} должно иметь одно из следующих расширений: {1}"
+
+#: Orchard.Fields.Drivers.NumericFieldDriver
+#| msgid "{0} is an invalid number"
+msgctxt "Orchard.Fields.Drivers.NumericFieldDriver"
+msgid "{0} is an invalid number"
+msgstr "{0} неверное число"
+
+#: Orchard.Fields.Tokens.FieldTokens
+#| msgid "Date Time"
+msgctxt "Orchard.Fields.Tokens.FieldTokens"
+msgid "Date Time"
+msgstr "Дата и время"
+
+#: Orchard.Fields.Tokens.FieldTokens
+#| msgid "The date and time."
+msgctxt "Orchard.Fields.Tokens.FieldTokens"
+msgid "The date and time."
+msgstr "Дата и время."
+
+#: Orchard.Fields.Tokens.FieldTokens
+#| msgid "Link Field"
+msgctxt "Orchard.Fields.Tokens.FieldTokens"
+msgid "Link Field"
+msgstr "Полк ссылки"
+
+#: Orchard.Fields.Tokens.FieldTokens
+#| msgid "Tokens for Link Fields"
+msgctxt "Orchard.Fields.Tokens.FieldTokens"
+msgid "Tokens for Link Fields"
+msgstr "Метки для полей ссылок"
+
+#: Orchard.Fields.Tokens.FieldTokens
+#| msgid "Text"
+msgctxt "Orchard.Fields.Tokens.FieldTokens"
+msgid "Text"
+msgstr "Текст"
+
+#: Orchard.Fields.Tokens.FieldTokens
+#| msgid "The text of the link."
+msgctxt "Orchard.Fields.Tokens.FieldTokens"
+msgid "The text of the link."
+msgstr "Текст ссылки."
+
+#: Orchard.Fields.Tokens.FieldTokens
+#| msgid "Url"
+msgctxt "Orchard.Fields.Tokens.FieldTokens"
+msgid "Url"
+msgstr "Адрес Url"
+
+#: Orchard.Fields.Tokens.FieldTokens
+#| msgid "The url of the link."
+msgctxt "Orchard.Fields.Tokens.FieldTokens"
+msgid "The url of the link."
+msgstr "Адрес url ссылки."
+
+#: Orchard.Fields.Tokens.FieldTokens
+#| msgid "Target"
+msgctxt "Orchard.Fields.Tokens.FieldTokens"
+msgid "Target"
+msgstr "Цель"
+
+#: Orchard.Fields.Tokens.FieldTokens
+#| msgid "The target of the link."
+msgctxt "Orchard.Fields.Tokens.FieldTokens"
+msgid "The target of the link."
+msgstr "Окно (цель), в котором будет открываться ссылки."
+
+#: Orchard.Fields.Tokens.FieldTokens
+#| msgid "Date Time Field"
+msgctxt "Orchard.Fields.Tokens.FieldTokens"
+msgid "Date Time Field"
+msgstr "Поле даты и времени"
+
+#: Orchard.Fields.Tokens.FieldTokens
+#| msgid "Tokens for Date Time Fields"
+msgctxt "Orchard.Fields.Tokens.FieldTokens"
+msgid "Tokens for Date Time Fields"
+msgstr "Метки для полей даты и времени"
+
+#: Orchard.Fields.Tokens.FieldTokens
+#| msgid "Date"
+msgctxt "Orchard.Fields.Tokens.FieldTokens"
+msgid "Date"
+msgstr "Дата"
+
+#: Orchard.Fields.Tokens.FieldTokens
+#| msgid "The date only."
+msgctxt "Orchard.Fields.Tokens.FieldTokens"
+msgid "The date only."
+msgstr "Только дата."
+
+#: Orchard.Fields.Tokens.FieldTokens
+#| msgid "Time"
+msgctxt "Orchard.Fields.Tokens.FieldTokens"
+msgid "Time"
+msgstr "Время"
+
+#: Orchard.Fields.Tokens.FieldTokens
+#| msgid "The time only."
+msgctxt "Orchard.Fields.Tokens.FieldTokens"
+msgid "The time only."
+msgstr "Только время."
+
+#: Orchard.Fields.Tokens.FieldTokens
+#| msgid "Media Picker Field"
+msgctxt "Orchard.Fields.Tokens.FieldTokens"
+msgid "Media Picker Field"
+msgstr "Поле указателя источника"
+
+#: Orchard.Fields.Tokens.FieldTokens
+#| msgid "Tokens for Media Picker Fields"
+msgctxt "Orchard.Fields.Tokens.FieldTokens"
+msgid "Tokens for Media Picker Fields"
+msgstr "Метки для полей указателя источника"
+
+#: Orchard.Fields.Tokens.FieldTokens
+#| msgid "The url of the media."
+msgctxt "Orchard.Fields.Tokens.FieldTokens"
+msgid "The url of the media."
+msgstr "Адрес url источника."
+
+#: Orchard.Fields.Tokens.FieldTokens
+#| msgid "Alternate Text"
+msgctxt "Orchard.Fields.Tokens.FieldTokens"
+msgid "Alternate Text"
+msgstr "Альтернативный текст."
+
+#: Orchard.Fields.Tokens.FieldTokens
+#| msgid "The alternate text of the media."
+msgctxt "Orchard.Fields.Tokens.FieldTokens"
+msgid "The alternate text of the media."
+msgstr "Альтернативный текст источника."
+
+#: Orchard.Fields.Tokens.FieldTokens
+#| msgid "Class"
+msgctxt "Orchard.Fields.Tokens.FieldTokens"
+msgid "Class"
+msgstr "Класс"
+
+#: Orchard.Fields.Tokens.FieldTokens
+#| msgid "The class of the media."
+msgctxt "Orchard.Fields.Tokens.FieldTokens"
+msgid "The class of the media."
+msgstr "Класс источника."
+
+#: Orchard.Fields.Tokens.FieldTokens
+#| msgid "Style"
+msgctxt "Orchard.Fields.Tokens.FieldTokens"
+msgid "Style"
+msgstr "Стиль"
+
+#: Orchard.Fields.Tokens.FieldTokens
+#| msgid "The style of the media."
+msgctxt "Orchard.Fields.Tokens.FieldTokens"
+msgid "The style of the media."
+msgstr "Стиль источника."
+
+#: Orchard.Fields.Tokens.FieldTokens
+#| msgid "Alignment"
+msgctxt "Orchard.Fields.Tokens.FieldTokens"
+msgid "Alignment"
+msgstr "Выравнивание"
+
+#: Orchard.Fields.Tokens.FieldTokens
+#| msgid "The alignment of the media."
+msgctxt "Orchard.Fields.Tokens.FieldTokens"
+msgid "The alignment of the media."
+msgstr "Выравнивание источника."
+
+#: Orchard.Fields.Tokens.FieldTokens
+#| msgid "Width"
+msgctxt "Orchard.Fields.Tokens.FieldTokens"
+msgid "Width"
+msgstr "Ширина"
+
+#: Orchard.Fields.Tokens.FieldTokens
+#| msgid "The width of the media."
+msgctxt "Orchard.Fields.Tokens.FieldTokens"
+msgid "The width of the media."
+msgstr "Ширина источника."
+
+#: Orchard.Fields.Tokens.FieldTokens
+#| msgid "Height"
+msgctxt "Orchard.Fields.Tokens.FieldTokens"
+msgid "Height"
+msgstr "Высота"
+
+#: Orchard.Fields.Tokens.FieldTokens
+#| msgid "The height of the media."
+msgctxt "Orchard.Fields.Tokens.FieldTokens"
+msgid "The height of the media."
+msgstr "Высота источника."
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/MediaPickerFieldSettings.cshtml
+#| msgid "Check to ensure the user is providing a valid media for this field."
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/MediaPickerFieldSettings.cshtml"
+msgid "Check to ensure the user is providing a valid media for this field."
+msgstr "Отметить, чтобы обеспечить пользователю доступ к допустимому источнику в этом поле."
+
+#: ~/Modules/Orchard.Fields/Views/EditorTemplates/Fields/MediaPicker.Edit.cshtml
+#| msgid "Clear"
+msgctxt "~/Modules/Orchard.Fields/Views/EditorTemplates/Fields/MediaPicker.Edit.cshtml"
+msgid "Clear"
+msgstr "Очистить"
+
+#: ~/Modules/Orchard.Fields/Module.txt
+#| msgid "Name"
+msgctxt "~/Modules/Orchard.Fields/Module.txt"
+msgid "Fields"
+msgstr "Поля"
+
+#: ~/Modules/Orchard.Fields/Module.txt
+#| msgid "Author"
+msgctxt "~/Modules/Orchard.Fields/Module.txt"
+msgid "Antoine Griffard, S�bastien Ros"
+msgstr "Antoine Griffard, Sebastien Ros"
+
+#: ~/Modules/Orchard.Fields/Module.txt
+#| msgid "Website"
+msgctxt "~/Modules/Orchard.Fields/Module.txt"
+msgid "http://orchardfields.codeplex.com"
+msgstr "http://orchardfields.codeplex.com"
+
+#: ~/Modules/Orchard.Fields/Module.txt
+#| msgid "Description"
+msgctxt "~/Modules/Orchard.Fields/Module.txt"
+msgid "Some content fields"
+msgstr "Некоторые поля содержимого"
+
+#: ~/Modules/Orchard.Fields/Module.txt
+#| msgid "Orchard.Fields.Description"
+msgctxt "~/Modules/Orchard.Fields/Module.txt"
+msgid "Contains the following fields: Input, Boolean, DateTime, Numeric, Link, Enumeration, Media Picker"
+msgstr "Содержит следующие поля: Input, Boolean, DateTime, Numeric, Link, Enumeration, Media Picker"
+
+#: ~/Modules/Orchard.Fields/Module.txt
+#| msgid "Orchard.Fields.Category"
+msgctxt "~/Modules/Orchard.Fields/Module.txt"
+msgid "Fields"
+msgstr "Поля"
+
+#: Orchard.Fields.Drivers.BooleanFieldDriver
+#| msgid "The field {0} is mandatory."
+msgctxt "Orchard.Fields.Drivers.BooleanFieldDriver"
+msgid "The field {0} is mandatory."
+msgstr "Поле {0} обязательно для заполнения."
+
+#: Orchard.Fields.Drivers.BooleanFieldDriver
+#| msgid "Value"
+msgctxt "Orchard.Fields.Drivers.BooleanFieldDriver"
+msgid "Value"
+msgstr "Значение"
+
+#: Orchard.Fields.Drivers.BooleanFieldDriver
+#| msgid "The boolean value of the field."
+msgctxt "Orchard.Fields.Drivers.BooleanFieldDriver"
+msgid "The boolean value of the field."
+msgstr "Логическое значение поля."
+
+#: Orchard.Fields.Drivers.DateTimeFieldDriver
+#| msgid "{0} is required"
+msgctxt "Orchard.Fields.Drivers.DateTimeFieldDriver"
+msgid "{0} is required"
+msgstr "{0} обязательно"
+
+#: Orchard.Fields.Drivers.DateTimeFieldDriver
+#| msgid "{0} is an invalid date and time"
+msgctxt "Orchard.Fields.Drivers.DateTimeFieldDriver"
+msgid "{0} is an invalid date and time"
+msgstr "{0} недопустимые дата и время"
+
+#: Orchard.Fields.Drivers.DateTimeFieldDriver
+#| msgid "Value"
+msgctxt "Orchard.Fields.Drivers.DateTimeFieldDriver"
+msgid "Value"
+msgstr "Значение"
+
+#: Orchard.Fields.Drivers.DateTimeFieldDriver
+#| msgid "The date time value of the field."
+msgctxt "Orchard.Fields.Drivers.DateTimeFieldDriver"
+msgid "The date time value of the field."
+msgstr "Значение даты и времени поля."
+
+#: Orchard.Fields.Drivers.EnumerationFieldDriver
+#| msgid "The field {0} is mandatory"
+msgctxt "Orchard.Fields.Drivers.EnumerationFieldDriver"
+msgid "The field {0} is mandatory"
+msgstr "Поле {0} обязательно для заполнения."
+
+#: Orchard.Fields.Drivers.EnumerationFieldDriver
+#| msgid "Value"
+msgctxt "Orchard.Fields.Drivers.EnumerationFieldDriver"
+msgid "Value"
+msgstr "Значение"
+
+#: Orchard.Fields.Drivers.EnumerationFieldDriver
+#| msgid "The selected values of the field."
+msgctxt "Orchard.Fields.Drivers.EnumerationFieldDriver"
+msgid "The selected values of the field."
+msgstr "Выьранные значения поля."
+
+#: Orchard.Fields.Drivers.InputFieldDriver
+#| msgid "The field {0} is mandatory."
+msgctxt "Orchard.Fields.Drivers.InputFieldDriver"
+msgid "The field {0} is mandatory."
+msgstr "Поле {0} обязательно для заполнения."
+
+#: Orchard.Fields.Drivers.InputFieldDriver
+#| msgid "Value"
+msgctxt "Orchard.Fields.Drivers.InputFieldDriver"
+msgid "Value"
+msgstr "Значение"
+
+#: Orchard.Fields.Drivers.InputFieldDriver
+#| msgid "The value of the field."
+msgctxt "Orchard.Fields.Drivers.InputFieldDriver"
+msgid "The value of the field."
+msgstr "Значение поля."
+
+#: Orchard.Fields.Drivers.LinkFieldDriver
+#| msgid "Url is required for {0}"
+msgctxt "Orchard.Fields.Drivers.LinkFieldDriver"
+msgid "Url is required for {0}"
+msgstr "Адрес Url обязателен для {0}"
+
+#: Orchard.Fields.Drivers.LinkFieldDriver
+#| msgid "{0} is an invalid url."
+msgctxt "Orchard.Fields.Drivers.LinkFieldDriver"
+msgid "{0} is an invalid url."
+msgstr "{0} неправильный адрес url."
+
+#: Orchard.Fields.Drivers.LinkFieldDriver
+#| msgid "Text is required for {0}."
+msgctxt "Orchard.Fields.Drivers.LinkFieldDriver"
+msgid "Text is required for {0}."
+msgstr "Текст обязателен для {0}."
+
+#: Orchard.Fields.Drivers.LinkFieldDriver
+#| msgid "Text"
+msgctxt "Orchard.Fields.Drivers.LinkFieldDriver"
+msgid "Text"
+msgstr "Текст"
+
+#: Orchard.Fields.Drivers.LinkFieldDriver
+#| msgid "The text of the link."
+msgctxt "Orchard.Fields.Drivers.LinkFieldDriver"
+msgid "The text of the link."
+msgstr "Текст ссылки."
+
+#: Orchard.Fields.Drivers.LinkFieldDriver
+#| msgid "Url"
+msgctxt "Orchard.Fields.Drivers.LinkFieldDriver"
+msgid "Url"
+msgstr "Адрес url"
+
+#: Orchard.Fields.Drivers.LinkFieldDriver
+#| msgid "The url of the link."
+msgctxt "Orchard.Fields.Drivers.LinkFieldDriver"
+msgid "The url of the link."
+msgstr "Url адрес ссылки."
+
+#: Orchard.Fields.Drivers.MediaPickerFieldDriver
+#| msgid "The field {0} must be have one of these extensions: {1}"
+msgctxt "Orchard.Fields.Drivers.MediaPickerFieldDriver"
+msgid "The field {0} must be have one of these extensions: {1}"
+msgstr "Поле {0} должно иметь одно из следующих расширений: {1}"
+
+#: Orchard.Fields.Drivers.MediaPickerFieldDriver
+#| msgid "The field {0} is mandatory"
+msgctxt "Orchard.Fields.Drivers.MediaPickerFieldDriver"
+msgid "The field {0} is mandatory"
+msgstr "Поле {0} обязательно для заполнения"
+
+#: Orchard.Fields.Drivers.MediaPickerFieldDriver
+#| msgid "The media in {0} could not be found"
+msgctxt "Orchard.Fields.Drivers.MediaPickerFieldDriver"
+msgid "The media in {0} could not be found"
+msgstr "Источник в {0} не найден"
+
+#: Orchard.Fields.Drivers.MediaPickerFieldDriver
+#| msgid "Url"
+msgctxt "Orchard.Fields.Drivers.MediaPickerFieldDriver"
+msgid "Url"
+msgstr "Адрес url"
+
+#: Orchard.Fields.Drivers.MediaPickerFieldDriver
+#| msgid "The url of the media."
+msgctxt "Orchard.Fields.Drivers.MediaPickerFieldDriver"
+msgid "The url of the media."
+msgstr "Адрес url источника."
+
+#: Orchard.Fields.Drivers.NumericFieldDriver
+#| msgid "The field {0} is mandatory."
+msgctxt "Orchard.Fields.Drivers.NumericFieldDriver"
+msgid "The field {0} is mandatory."
+msgstr "Поле {0} обязательно для заполнения"
+
+#: Orchard.Fields.Drivers.NumericFieldDriver
+#| msgid "The value must be greater than {0}"
+msgctxt "Orchard.Fields.Drivers.NumericFieldDriver"
+msgid "The value must be greater than {0}"
+msgstr "Значение должно быть больше чем {0}"
+
+#: Orchard.Fields.Drivers.NumericFieldDriver
+#| msgid "The value must be less than {0}"
+msgctxt "Orchard.Fields.Drivers.NumericFieldDriver"
+msgid "The value must be less than {0}"
+msgstr "Значение должно быть меньше чем {0}"
+
+#: Orchard.Fields.Drivers.NumericFieldDriver
+#| msgid "The field {0} must be an integer"
+msgctxt "Orchard.Fields.Drivers.NumericFieldDriver"
+msgid "The field {0} must be an integer"
+msgstr "Поле {0} должно быть челым числом"
+
+#: Orchard.Fields.Drivers.NumericFieldDriver
+#| msgid "Invalid number of digits for {0}, max allowed: {1}"
+msgctxt "Orchard.Fields.Drivers.NumericFieldDriver"
+msgid "Invalid number of digits for {0}, max allowed: {1}"
+msgstr "Недопустимое число знаков для {0}, максимально допустимо: {1}"
+
+#: Orchard.Fields.Drivers.NumericFieldDriver
+#| msgid "Value"
+msgctxt "Orchard.Fields.Drivers.NumericFieldDriver"
+msgid "Value"
+msgstr "Значение"
+
+#: Orchard.Fields.Drivers.NumericFieldDriver
+#| msgid "The value of the field."
+msgctxt "Orchard.Fields.Drivers.NumericFieldDriver"
+msgid "The value of the field."
+msgstr "Значение поля."
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/BooleanFieldSettings.cshtml
+#| msgid "Help text"
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/BooleanFieldSettings.cshtml"
+msgid "Help text"
+msgstr "Такст помощи"
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/BooleanFieldSettings.cshtml
+#| msgid "The help text is written under the field when the user is selecting a value."
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/BooleanFieldSettings.cshtml"
+msgid "The help text is written under the field when the user is selecting a value."
+msgstr "Такст помощи пишется под полем, если пользователь выбирает значение."
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/BooleanFieldSettings.cshtml
+#| msgid "Add a neutral option"
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/BooleanFieldSettings.cshtml"
+msgid "Add a neutral option"
+msgstr "Добавить нейтральный вариант"
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/BooleanFieldSettings.cshtml
+#| msgid "Check to allow the user to enter a neutral value, like 'Maybe'."
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/BooleanFieldSettings.cshtml"
+msgid "Check to allow the user to enter a neutral value, like 'Maybe'."
+msgstr "Отметить, если пользователь может вводить нейтральное значение типа 'может быть'."
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/BooleanFieldSettings.cshtml
+#| msgid "Neutral option text"
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/BooleanFieldSettings.cshtml"
+msgid "Neutral option text"
+msgstr "Параметр нейтрального варианта"
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/BooleanFieldSettings.cshtml
+#| msgid "The text displayed when the field is not selected."
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/BooleanFieldSettings.cshtml"
+msgid "The text displayed when the field is not selected."
+msgstr "Текст, показываемый, если поле не выбрано."
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/BooleanFieldSettings.cshtml
+#| msgid "On Label"
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/BooleanFieldSettings.cshtml"
+msgid "On Label"
+msgstr "Этикетка включено"
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/BooleanFieldSettings.cshtml
+#| msgid "The text displayed when the field is selected."
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/BooleanFieldSettings.cshtml"
+msgid "The text displayed when the field is selected."
+msgstr "Текст, показываемый при выборе поля."
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/BooleanFieldSettings.cshtml
+#| msgid "Off Label"
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/BooleanFieldSettings.cshtml"
+msgid "Off Label"
+msgstr "Этикетка выключено"
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/BooleanFieldSettings.cshtml
+#| msgid "The text displayed when the field is unselected."
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/BooleanFieldSettings.cshtml"
+msgid "The text displayed when the field is unselected."
+msgstr "Текст, показываемый, если поле не выбрано."
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/BooleanFieldSettings.cshtml
+#| msgid "Selection mode"
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/BooleanFieldSettings.cshtml"
+msgid "Selection mode"
+msgstr "Режим выбора"
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/BooleanFieldSettings.cshtml
+#| msgid "Checkbox"
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/BooleanFieldSettings.cshtml"
+msgid "Checkbox"
+msgstr "Флажок"
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/BooleanFieldSettings.cshtml
+#| msgid "Radio buttons"
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/BooleanFieldSettings.cshtml"
+msgid "Radio buttons"
+msgstr "Переключатели"
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/BooleanFieldSettings.cshtml
+#| msgid "Dropdown list"
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/BooleanFieldSettings.cshtml"
+msgid "Dropdown list"
+msgstr "Выпадающий список"
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/BooleanFieldSettings.cshtml
+#| msgid "When Checkbox is selected, the label for 'on' will be used."
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/BooleanFieldSettings.cshtml"
+msgid "When Checkbox is selected, the label for 'on' will be used."
+msgstr "Если флажок выбран, будет использоваться этикетка 'включено'"
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/BooleanFieldSettings.cshtml
+#| msgid "Default value"
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/BooleanFieldSettings.cshtml"
+msgid "Default value"
+msgstr "Значение по-умолчанию"
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/BooleanFieldSettings.cshtml
+#| msgid "Neutral"
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/BooleanFieldSettings.cshtml"
+msgid "Neutral"
+msgstr "Нейтральный"
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/BooleanFieldSettings.cshtml
+#| msgid "True"
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/BooleanFieldSettings.cshtml"
+msgid "True"
+msgstr "Истина"
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/BooleanFieldSettings.cshtml
+#| msgid "False"
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/BooleanFieldSettings.cshtml"
+msgid "False"
+msgstr "Ложь"
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/DateTimeFieldSettings.cshtml
+#| msgid "Help text"
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/DateTimeFieldSettings.cshtml"
+msgid "Help text"
+msgstr "Такст помощи"
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/DateTimeFieldSettings.cshtml
+#| msgid "The help text is written under the field when the user is entering a value."
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/DateTimeFieldSettings.cshtml"
+msgid "The help text is written under the field when the user is entering a value."
+msgstr "Текст помощи пишется под полем, когда пользователь вводит значение."
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/DateTimeFieldSettings.cshtml
+#| msgid "Display options"
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/DateTimeFieldSettings.cshtml"
+msgid "Display options"
+msgstr "Варианты показа"
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/DateTimeFieldSettings.cshtml
+#| msgid "Date and time"
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/DateTimeFieldSettings.cshtml"
+msgid "Date and time"
+msgstr "Дата и время"
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/DateTimeFieldSettings.cshtml
+#| msgid "Date only"
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/DateTimeFieldSettings.cshtml"
+msgid "Date only"
+msgstr "Только дата"
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/DateTimeFieldSettings.cshtml
+#| msgid "Time only"
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/DateTimeFieldSettings.cshtml"
+msgid "Time only"
+msgstr "Только время"
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/DateTimeFieldSettings.cshtml
+#| msgid "Required"
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/DateTimeFieldSettings.cshtml"
+msgid "Required"
+msgstr "Обязательный"
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/DateTimeFieldSettings.cshtml
+#| msgid "Check if the field is required."
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/DateTimeFieldSettings.cshtml"
+msgid "Check if the field is required."
+msgstr "Отметить, если поле обязательное."
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/EnumerationFieldSettings.cshtml
+#| msgid "Help text"
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/EnumerationFieldSettings.cshtml"
+msgid "Help text"
+msgstr "Текст помощи"
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/EnumerationFieldSettings.cshtml
+#| msgid "The help text is written under the field when users are selecting an option."
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/EnumerationFieldSettings.cshtml"
+msgid "The help text is written under the field when users are selecting an option."
+msgstr "Текст помощи пишется под полем, когда пользователь выбирает вариант."
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/EnumerationFieldSettings.cshtml
+#| msgid "An option is required"
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/EnumerationFieldSettings.cshtml"
+msgid "An option is required"
+msgstr "Вариант обязательный"
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/EnumerationFieldSettings.cshtml
+#| msgid "Check to ensure the user is providing an option for this field."
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/EnumerationFieldSettings.cshtml"
+msgid "Check to ensure the user is providing an option for this field."
+msgstr "Отметить, чтобы обеспечить пользователю доступ к варианту для этого поля."
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/EnumerationFieldSettings.cshtml
+#| msgid "Options"
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/EnumerationFieldSettings.cshtml"
+msgid "Options"
+msgstr "Опции"
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/EnumerationFieldSettings.cshtml
+#| msgid "Enter an option per line."
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/EnumerationFieldSettings.cshtml"
+msgid "Enter an option per line."
+msgstr "Введите вариант на отдельной строке."
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/EnumerationFieldSettings.cshtml
+#| msgid "List mode"
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/EnumerationFieldSettings.cshtml"
+msgid "List mode"
+msgstr "Режим списка"
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/EnumerationFieldSettings.cshtml
+#| msgid "Dropdown list"
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/EnumerationFieldSettings.cshtml"
+msgid "Dropdown list"
+msgstr "Выпадающий список"
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/EnumerationFieldSettings.cshtml
+#| msgid "Radio button list"
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/EnumerationFieldSettings.cshtml"
+msgid "Radio button list"
+msgstr "Список переключателей"
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/EnumerationFieldSettings.cshtml
+#| msgid "Listbox"
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/EnumerationFieldSettings.cshtml"
+msgid "Listbox"
+msgstr "Поле списка"
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/EnumerationFieldSettings.cshtml
+#| msgid "Checkbox"
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/EnumerationFieldSettings.cshtml"
+msgid "Checkbox"
+msgstr "Флажок"
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/InputFieldSettings.cshtml
+#| msgid "Help text"
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/InputFieldSettings.cshtml"
+msgid "Help text"
+msgstr "Текст помощи"
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/InputFieldSettings.cshtml
+#| msgid "The help text is written under the field when the user is entering a value."
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/InputFieldSettings.cshtml"
+msgid "The help text is written under the field when the user is entering a value."
+msgstr "Текст помощи пишется под полем, когда пользователь вводит значение."
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/InputFieldSettings.cshtml
+#| msgid "Input type"
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/InputFieldSettings.cshtml"
+msgid "Input type"
+msgstr "Вводимый тип"
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/InputFieldSettings.cshtml
+#| msgid "Text"
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/InputFieldSettings.cshtml"
+msgid "Text"
+msgstr "Текст"
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/InputFieldSettings.cshtml
+#| msgid "Url"
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/InputFieldSettings.cshtml"
+msgid "Url"
+msgstr "Адрес url"
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/InputFieldSettings.cshtml
+#| msgid "Tel"
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/InputFieldSettings.cshtml"
+msgid "Tel"
+msgstr "Телефон"
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/InputFieldSettings.cshtml
+#| msgid "Email"
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/InputFieldSettings.cshtml"
+msgid "Email"
+msgstr "Адрес электронной почты"
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/InputFieldSettings.cshtml
+#| msgid "Defines what format should be applied to the text."
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/InputFieldSettings.cshtml"
+msgid "Defines what format should be applied to the text."
+msgstr "Определяет формат, применяемый к тексту."
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/InputFieldSettings.cshtml
+#| msgid "Pattern"
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/InputFieldSettings.cshtml"
+msgid "Pattern"
+msgstr "Шаблон"
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/InputFieldSettings.cshtml
+#| msgid "Declaring what pattern should be used for validating a field’s value, in the form of a regular expression. (optional)"
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/InputFieldSettings.cshtml"
+msgid "Declaring what pattern should be used for validating a field’s value, in the form of a regular expression. (optional)"
+msgstr "Определение, какой шаблон должен использоваться для проверки допустимости значения поля, в виде регулярного выражения (необязательный)"
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/InputFieldSettings.cshtml
+#| msgid "Title"
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/InputFieldSettings.cshtml"
+msgid "Title"
+msgstr "Заголовок"
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/InputFieldSettings.cshtml
+#| msgid "The title attribute of the field. (optional)"
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/InputFieldSettings.cshtml"
+msgid "The title attribute of the field. (optional)"
+msgstr "Заголовок атрибута поля (необязательный)."
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/InputFieldSettings.cshtml
+#| msgid "Required"
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/InputFieldSettings.cshtml"
+msgid "Required"
+msgstr "Обязательный"
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/InputFieldSettings.cshtml
+#| msgid "Check if the field is required."
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/InputFieldSettings.cshtml"
+msgid "Check if the field is required."
+msgstr "Отметить, если поле обязательное."
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/InputFieldSettings.cshtml
+#| msgid "Autofocus"
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/InputFieldSettings.cshtml"
+msgid "Autofocus"
+msgstr "Автофокус"
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/InputFieldSettings.cshtml
+#| msgid "Whether focus should be set to this field as soon as it has loaded."
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/InputFieldSettings.cshtml"
+msgid "Whether focus should be set to this field as soon as it has loaded."
+msgstr "Должен ли фокус быть установлен в поле, как только оно загрузилось."
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/InputFieldSettings.cshtml
+#| msgid "Automatic completion"
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/InputFieldSettings.cshtml"
+msgid "Automatic completion"
+msgstr "Автоматическое заполнение"
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/InputFieldSettings.cshtml
+#| msgid "An option to turn off automatic form completion of values. Leave unchecked to disable automatic completion."
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/InputFieldSettings.cshtml"
+msgid "An option to turn off automatic form completion of values. Leave unchecked to disable automatic completion."
+msgstr "Вариант для выключения автомтического заполнения значений формы. Оставьте неотмеченным для выключения автоматического заполнения."
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/InputFieldSettings.cshtml
+#| msgid "Watermark"
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/InputFieldSettings.cshtml"
+msgid "Watermark"
+msgstr "Водяной знак"
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/InputFieldSettings.cshtml
+#| msgid "A hint to display when the input is empty. (optional)"
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/InputFieldSettings.cshtml"
+msgid "A hint to display when the input is empty. (optional)"
+msgstr "Подсказка для показа, пока ввод пуст (необязательная)."
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/InputFieldSettings.cshtml
+#| msgid "Editor css class"
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/InputFieldSettings.cshtml"
+msgid "Editor css class"
+msgstr "Редактор css класса"
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/InputFieldSettings.cshtml
+#| msgid "The css class to use for the editor. (optional)"
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/InputFieldSettings.cshtml"
+msgid "The css class to use for the editor. (optional)"
+msgstr "Css класс для использования редактором (необязательный)."
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/InputFieldSettings.cshtml
+#| msgid "Maximum length"
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/InputFieldSettings.cshtml"
+msgid "Maximum length"
+msgstr "Максимальная длина"
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/InputFieldSettings.cshtml
+#| msgid "The maximum number of chars allowed. (optional)"
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/InputFieldSettings.cshtml"
+msgid "The maximum number of chars allowed. (optional)"
+msgstr "Максимальное допустимое число символов (необязательно)."
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/LinkFieldSettings.cshtml
+#| msgid "Help text"
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/LinkFieldSettings.cshtml"
+msgid "Help text"
+msgstr "Текст помощи"
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/LinkFieldSettings.cshtml
+#| msgid "The help text is written under the field."
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/LinkFieldSettings.cshtml"
+msgid "The help text is written under the field."
+msgstr "Текст помощи, выводимый под полем."
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/LinkFieldSettings.cshtml
+#| msgid "Target"
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/LinkFieldSettings.cshtml"
+msgid "Target"
+msgstr "Цель"
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/LinkFieldSettings.cshtml
+#| msgid "No target"
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/LinkFieldSettings.cshtml"
+msgid "No target"
+msgstr "Нет цели"
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/LinkFieldSettings.cshtml
+#| msgid "Open link in new window"
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/LinkFieldSettings.cshtml"
+msgid "Open link in new window"
+msgstr "Открывать ссылку в новом окне"
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/LinkFieldSettings.cshtml
+#| msgid "Open link in the parent frameset"
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/LinkFieldSettings.cshtml"
+msgid "Open link in the parent frameset"
+msgstr "Открывать ссылку в родительском фрейме"
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/LinkFieldSettings.cshtml
+#| msgid "Open link in the full body of the window"
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/LinkFieldSettings.cshtml"
+msgid "Open link in the full body of the window"
+msgstr "Открывать ссылку в полном теле окна"
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/LinkFieldSettings.cshtml
+#| msgid "Allow the user to choose"
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/LinkFieldSettings.cshtml"
+msgid "Allow the user to choose"
+msgstr "Разрешить пользователю выбор"
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/LinkFieldSettings.cshtml
+#| msgid "Required"
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/LinkFieldSettings.cshtml"
+msgid "Required"
+msgstr "Требуется"
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/LinkFieldSettings.cshtml
+#| msgid "Whether the url is required."
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/LinkFieldSettings.cshtml"
+msgid "Whether the url is required."
+msgstr "Является ли адрес url обязательным."
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/LinkFieldSettings.cshtml
+#| msgid "Link text"
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/LinkFieldSettings.cshtml"
+msgid "Link text"
+msgstr "Текст ссылки"
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/LinkFieldSettings.cshtml
+#| msgid "Optional"
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/LinkFieldSettings.cshtml"
+msgid "Optional"
+msgstr "Необязательный"
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/LinkFieldSettings.cshtml
+#| msgid "Static"
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/LinkFieldSettings.cshtml"
+msgid "Static"
+msgstr "Статический"
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/LinkFieldSettings.cshtml
+#| msgid "Url"
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/LinkFieldSettings.cshtml"
+msgid "Url"
+msgstr "Адрес Url"
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/LinkFieldSettings.cshtml
+#| msgid "Define how the title field should behave in the editor."
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/LinkFieldSettings.cshtml"
+msgid "Define how the title field should behave in the editor."
+msgstr "Определить поведение поля заголовка в редакторе."
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/LinkFieldSettings.cshtml
+#| msgid "The title to display for the link"
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/LinkFieldSettings.cshtml"
+msgid "The title to display for the link"
+msgstr "Заголовок ссылки"
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/MediaPickerFieldSettings.cshtml
+#| msgid "Help text"
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/MediaPickerFieldSettings.cshtml"
+msgid "Help text"
+msgstr "Текст помощи"
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/MediaPickerFieldSettings.cshtml
+#| msgid "The help text is written under the field when authors are selecting a media."
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/MediaPickerFieldSettings.cshtml"
+msgid "The help text is written under the field when authors are selecting a media."
+msgstr "Текст помощи, показываемый под полем, когда автор выбирает источник."
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/MediaPickerFieldSettings.cshtml
+#| msgid "The media is required"
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/MediaPickerFieldSettings.cshtml"
+msgid "The media is required"
+msgstr "Источник обязательный"
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/MediaPickerFieldSettings.cshtml
+#| msgid "Check to ensure the user if providing a valid media for this field."
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/MediaPickerFieldSettings.cshtml"
+msgid "Check to ensure the user if providing a valid media for this field."
+msgstr "Отметить, чтобы обеспечить пользователю допустимый источник для поля."
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/MediaPickerFieldSettings.cshtml
+#| msgid "Allow only specific extensions"
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/MediaPickerFieldSettings.cshtml"
+msgid "Allow only specific extensions"
+msgstr "Допускает только спефицированные расширения"
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/MediaPickerFieldSettings.cshtml
+#| msgid "You can define a set of extensions the user will be able to pick, separated by spaces, e.g. jpg png gif"
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/MediaPickerFieldSettings.cshtml"
+msgid "You can define a set of extensions the user will be able to pick, separated by spaces, e.g. jpg png gif"
+msgstr "Вы можете определить набор расширений, который пользоваатель может указывать, разделенные пробелом, например, jpg png gif"
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/MediaPickerFieldSettings.cshtml
+#| msgid "Leave it empty if you don't want to apply any restriction."
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/MediaPickerFieldSettings.cshtml"
+msgid "Leave it empty if you don't want to apply any restriction."
+msgstr "Остасьте пустым, если не хотите применять это ограничение."
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/MediaPickerFieldSettings.cshtml
+#| msgid "Provide custom parameters"
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/MediaPickerFieldSettings.cshtml"
+msgid "Provide custom parameters"
+msgstr "Обеспечение пользовательских параметров"
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/MediaPickerFieldSettings.cshtml
+#| msgid "Custom parameters can be used if your own views."
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/MediaPickerFieldSettings.cshtml"
+msgid "Custom parameters can be used if your own views."
+msgstr "Пользовательские параметры могут быть использоваться в своих собственных представлениях"
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/MediaPickerFieldSettings.cshtml
+#| msgid "Custom1"
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/MediaPickerFieldSettings.cshtml"
+msgid "Custom1"
+msgstr "Пользовательский1"
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/MediaPickerFieldSettings.cshtml
+#| msgid "Custom2"
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/MediaPickerFieldSettings.cshtml"
+msgid "Custom2"
+msgstr "Пользовательский2"
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/MediaPickerFieldSettings.cshtml
+#| msgid "Custom3"
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/MediaPickerFieldSettings.cshtml"
+msgid "Custom3"
+msgstr "Пользовательский3"
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/NumericFieldSettings.cshtml
+#| msgid "Help text"
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/NumericFieldSettings.cshtml"
+msgid "Help text"
+msgstr "Текст помощи"
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/NumericFieldSettings.cshtml
+#| msgid "The help text is written under the field when the user is entering a value."
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/NumericFieldSettings.cshtml"
+msgid "The help text is written under the field when the user is entering a value."
+msgstr "Текст помощи пишется под полем, когда пользователь вводит значение."
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/NumericFieldSettings.cshtml
+#| msgid "Required"
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/NumericFieldSettings.cshtml"
+msgid "Required"
+msgstr "Обязательно"
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/NumericFieldSettings.cshtml
+#| msgid "Check if the field is required."
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/NumericFieldSettings.cshtml"
+msgid "Check if the field is required."
+msgstr "Отметить, если поле обязательное."
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/NumericFieldSettings.cshtml
+#| msgid "Scale"
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/NumericFieldSettings.cshtml"
+msgid "Scale"
+msgstr "Шкала"
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/NumericFieldSettings.cshtml
+#| msgid "The number of digits to the right of the decimal. Put 0 for integers."
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/NumericFieldSettings.cshtml"
+msgid "The number of digits to the right of the decimal. Put 0 for integers."
+msgstr "Количество знаков справа от десятичной точки. Введите 0 для целых."
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/NumericFieldSettings.cshtml
+#| msgid "Minimum"
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/NumericFieldSettings.cshtml"
+msgid "Minimum"
+msgstr "Минимум"
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/NumericFieldSettings.cshtml
+#| msgid "The minimum value allowed. (optional)"
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/NumericFieldSettings.cshtml"
+msgid "The minimum value allowed. (optional)"
+msgstr "Минимальное допустимое значение (необязательное)."
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/NumericFieldSettings.cshtml
+#| msgid "Maximum"
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/NumericFieldSettings.cshtml"
+msgid "Maximum"
+msgstr "Максимум"
+
+#: ~/Modules/Orchard.Fields/Views/DefinitionTemplates/NumericFieldSettings.cshtml
+#| msgid "The maximum value allowed. (optional)"
+msgctxt "~/Modules/Orchard.Fields/Views/DefinitionTemplates/NumericFieldSettings.cshtml"
+msgid "The maximum value allowed. (optional)"
+msgstr "Максимальное допустимое значение (необязательное)."
+
+#: ~/Modules/Orchard.Fields/Views/EditorTemplates/Fields/DateTime.Edit.cshtml
+#| msgid "Date"
+msgctxt "~/Modules/Orchard.Fields/Views/EditorTemplates/Fields/DateTime.Edit.cshtml"
+msgid "Date"
+msgstr "Дата"
+
+#: ~/Modules/Orchard.Fields/Views/EditorTemplates/Fields/DateTime.Edit.cshtml
+#| msgid "Time"
+msgctxt "~/Modules/Orchard.Fields/Views/EditorTemplates/Fields/DateTime.Edit.cshtml"
+msgid "Time"
+msgstr "Время"
+
+#: ~/Modules/Orchard.Fields/Views/EditorTemplates/Fields/Enumeration.Edit.cshtml
+#| msgid "Select an option"
+msgctxt "~/Modules/Orchard.Fields/Views/EditorTemplates/Fields/Enumeration.Edit.cshtml"
+msgid "Select an option"
+msgstr "Выбор варианта"
+
+#: ~/Modules/Orchard.Fields/Views/EditorTemplates/Fields/Enumeration.Edit.cshtml
+#| msgid "unset"
+msgctxt "~/Modules/Orchard.Fields/Views/EditorTemplates/Fields/Enumeration.Edit.cshtml"
+msgid "unset"
+msgstr "сброс"
+
+#: ~/Modules/Orchard.Fields/Views/EditorTemplates/Fields/Link.Edit.cshtml
+#| msgid "Url"
+msgctxt "~/Modules/Orchard.Fields/Views/EditorTemplates/Fields/Link.Edit.cshtml"
+msgid "Url"
+msgstr "Адрес url"
+
+#: ~/Modules/Orchard.Fields/Views/EditorTemplates/Fields/Link.Edit.cshtml
+#| msgid "A valid url, i.e. http://orchardproject.net, /content/file.pdf, ..."
+msgctxt "~/Modules/Orchard.Fields/Views/EditorTemplates/Fields/Link.Edit.cshtml"
+msgid "A valid url, i.e. http://orchardproject.net, /content/file.pdf, ..."
+msgstr "Корректный адрес url, например, http://orchardproject.net, /content/file.pdf, ..."
+
+#: ~/Modules/Orchard.Fields/Views/EditorTemplates/Fields/Link.Edit.cshtml
+#| msgid "Text"
+msgctxt "~/Modules/Orchard.Fields/Views/EditorTemplates/Fields/Link.Edit.cshtml"
+msgid "Text"
+msgstr "Текст"
+
+#: ~/Modules/Orchard.Fields/Views/EditorTemplates/Fields/Link.Edit.cshtml
+#| msgid "The text of the link. If left empty, the url will be used instead."
+msgctxt "~/Modules/Orchard.Fields/Views/EditorTemplates/Fields/Link.Edit.cshtml"
+msgid "The text of the link. If left empty, the url will be used instead."
+msgstr "Текст ссылки. Если оставлен пустым, то вместо него будет использоваться адрес url."
+
+#: ~/Modules/Orchard.Fields/Views/EditorTemplates/Fields/Link.Edit.cshtml
+#| msgid "Target"
+msgctxt "~/Modules/Orchard.Fields/Views/EditorTemplates/Fields/Link.Edit.cshtml"
+msgid "Target"
+msgstr "Цель"
+
+#: ~/Modules/Orchard.Fields/Views/EditorTemplates/Fields/Link.Edit.cshtml
+#| msgid "A valid HTML target attribute value. e.g., _blank, _parent, _top, or an anchor. "
+msgctxt "~/Modules/Orchard.Fields/Views/EditorTemplates/Fields/Link.Edit.cshtml"
+msgid "A valid HTML target attribute value. e.g., _blank, _parent, _top, or an anchor. "
+msgstr "Корректное значение атрибута цели, например, _blank, _parent, _top, _self."
+
+#: ~/Modules/Orchard.Fields/Views/EditorTemplates/Fields/MediaPicker.Edit.cshtml
+#| msgid "Browse"
+msgctxt "~/Modules/Orchard.Fields/Views/EditorTemplates/Fields/MediaPicker.Edit.cshtml"
+msgid "Browse"
+msgstr "Просмотр"
+
+#: ~/Modules/Orchard.Fields/Views/Fields/Enumeration.cshtml
+#| msgid "{0}"
+msgctxt "~/Modules/Orchard.Fields/Views/Fields/Enumeration.cshtml"
+msgid "{0}"
+msgstr "{0}"
+
+#: ~/Modules/Orchard.Fields/Views/Fields/Enumeration.cshtml
+#| msgid ", "
+msgctxt "~/Modules/Orchard.Fields/Views/Fields/Enumeration.cshtml"
+msgid ", "
+msgstr ", "
+

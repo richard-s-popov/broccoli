@@ -1,0 +1,317 @@
+# Orchard resource strings - ru-RU
+# Copyright (c) 2010 Outercurve Foundation
+# All rights reserved
+# This file is distributed under the BSD license
+
+#: Orchard.Setup.Controllers.SetupController
+#| msgid "Setup failed: {0}"
+msgctxt "Orchard.Setup.Controllers.SetupController"
+msgid "Setup failed: {0}"
+msgstr "Установка провалилась: {0}"
+
+#: ~/Modules/Orchard.Setup/Module.txt
+#| msgid "Author"
+msgctxt "~/Modules/Orchard.Setup/Module.txt"
+msgid "The Orchard Team"
+msgstr "Команда Orchard"
+
+#: ~/Modules/Orchard.Setup/Module.txt
+#| msgid "Website"
+msgctxt "~/Modules/Orchard.Setup/Module.txt"
+msgid "http://orchardproject.net"
+msgstr "http://orchardproject.net"
+
+#: ~/Modules/Orchard.Setup/Module.txt
+#| msgid "Description"
+msgctxt "~/Modules/Orchard.Setup/Module.txt"
+msgid "The setup module is creating the application's setup experience."
+msgstr "Модуль установки создает мастера установки приложения."
+
+#: ~/Modules/Orchard.Setup/Module.txt
+#| msgid "Orchard.Setup.Name"
+msgctxt "~/Modules/Orchard.Setup/Module.txt"
+msgid "Setup"
+msgstr "Установка"
+
+#: ~/Modules/Orchard.Setup/Module.txt
+#| msgid "Orchard.Setup.Description"
+msgctxt "~/Modules/Orchard.Setup/Module.txt"
+msgid "Standard site setup. This feature is disabled automatically once setup is over."
+msgstr "Обычная установка на сайт. Эта возможность автоматически отключится при завершении установки."
+
+#: ~/Modules/Orchard.Setup/Module.txt
+#| msgid "Orchard.Setup.Category"
+msgctxt "~/Modules/Orchard.Setup/Module.txt"
+msgid "Core"
+msgstr "Ядро"
+
+#: Orchard.Setup.Annotations.SiteNameValidAttribute
+#| msgid "Site name is required."
+msgctxt "Orchard.Setup.Annotations.SiteNameValidAttribute"
+msgid "Site name is required."
+msgstr "Требуется название сайта."
+
+#: Orchard.Setup.Annotations.SiteNameValidAttribute
+#| msgid "Site name can be no longer than {0} characters."
+msgctxt "Orchard.Setup.Annotations.SiteNameValidAttribute"
+msgid "Site name can be no longer than {0} characters."
+msgstr "Название сайта не может быть больше {0} символов."
+
+#: Orchard.Setup.Annotations.SiteNameValidAttribute
+#| msgid "User name is required."
+msgctxt "Orchard.Setup.Annotations.SiteNameValidAttribute"
+msgid "User name is required."
+msgstr "Требуется имя пользователя."
+
+#: Orchard.Setup.Annotations.SiteNameValidAttribute
+#| msgid "User name must be longer than {0} characters."
+msgctxt "Orchard.Setup.Annotations.SiteNameValidAttribute"
+msgid "User name must be longer than {0} characters."
+msgstr "Имя пользователя должно быть больше {0} символов."
+
+#: Orchard.Setup.Annotations.SiteNameValidAttribute
+#| msgid "User name can be no longer than {0} characters."
+msgctxt "Orchard.Setup.Annotations.SiteNameValidAttribute"
+msgid "User name can be no longer than {0} characters."
+msgstr "Имя пользователя не может быть более {0} символов."
+
+#: Orchard.Setup.Annotations.SiteNameValidAttribute
+#| msgid "Password is required."
+msgctxt "Orchard.Setup.Annotations.SiteNameValidAttribute"
+msgid "Password is required."
+msgstr "Требуется пароль."
+
+#: Orchard.Setup.Annotations.SiteNameValidAttribute
+#| msgid "Password must be longer than {0} characters."
+msgctxt "Orchard.Setup.Annotations.SiteNameValidAttribute"
+msgid "Password must be longer than {0} characters."
+msgstr "Пароль должен быть больше {0} символов."
+
+#: Orchard.Setup.Annotations.SiteNameValidAttribute
+#| msgid "Password can be no longer than {0} characters."
+msgctxt "Orchard.Setup.Annotations.SiteNameValidAttribute"
+msgid "Password can be no longer than {0} characters."
+msgstr "Пароль не может быть больше {0} символов."
+
+#: Orchard.Setup.Annotations.SiteNameValidAttribute
+#| msgid "Password confirmation is required."
+msgctxt "Orchard.Setup.Annotations.SiteNameValidAttribute"
+msgid "Password confirmation is required."
+msgstr "Требуется подтверждение пароля."
+
+#: Orchard.Setup.Commands.SetupCommand
+#| msgid "Site \"{0}\" sucessfully setup to run data provider \"{1}\" (with table prefix \"{2}\")."
+msgctxt "Orchard.Setup.Commands.SetupCommand"
+msgid "Site \"{0}\" sucessfully setup to run data provider \"{1}\" (with table prefix \"{2}\")."
+msgstr "Сайт \"{0}\" успешно установлен для запуска провайдера \"{1}\" (с префиксом таблицы \"{2}\")."
+
+#: Orchard.Setup.Controllers.SetupController
+#| msgid "A SQL connection string is required"
+msgctxt "Orchard.Setup.Controllers.SetupController"
+msgid "A SQL connection string is required"
+msgstr "Требуется строка подключения к SQL серверу"
+
+#: Orchard.Setup.Controllers.SetupController
+#| msgid "Password confirmation must match"
+msgctxt "Orchard.Setup.Controllers.SetupController"
+msgid "Password confirmation must match"
+msgstr "Подтверждение пароля должно совпадать"
+
+#: Orchard.Setup.Controllers.SetupController
+#| msgid "The table prefix must begin with a letter"
+msgctxt "Orchard.Setup.Controllers.SetupController"
+msgid "The table prefix must begin with a letter"
+msgstr "Префикс таблицы должен начинаться с буквы"
+
+#: Orchard.Setup.Controllers.SetupController
+#| msgid "Setup failed:"
+msgctxt "Orchard.Setup.Controllers.SetupController"
+msgid "Setup failed:"
+msgstr "Не удалось установить:"
+
+#: Orchard.Setup.Services.SetupService
+#| msgid "First Leader Aside"
+msgctxt "Orchard.Setup.Services.SetupService"
+msgid "First Leader Aside"
+msgstr "Первый руководитель"
+
+#: Orchard.Setup.Services.SetupService
+#| msgid "Second Leader Aside"
+msgctxt "Orchard.Setup.Services.SetupService"
+msgid "Second Leader Aside"
+msgstr "Второй руководитель"
+
+#: Orchard.Setup.Services.SetupService
+#| msgid "Third Leader Aside"
+msgctxt "Orchard.Setup.Services.SetupService"
+msgid "Third Leader Aside"
+msgstr "Третий руководитель"
+
+#: Orchard.Setup.Services.SetupService
+#| msgid "Welcome to Orchard!"
+msgctxt "Orchard.Setup.Services.SetupService"
+msgid "Welcome to Orchard!"
+msgstr "Добро пожаловать в Orchard!"
+
+#: Orchard.Setup.Services.SetupService
+#| msgid "Home"
+msgctxt "Orchard.Setup.Services.SetupService"
+msgid "Home"
+msgstr "Домой"
+
+#: ~/Modules/Orchard.Setup/Views/Setup/Index.cshtml
+#| msgid "Get Started"
+msgctxt "~/Modules/Orchard.Setup/Views/Setup/Index.cshtml"
+msgid "Get Started"
+msgstr "Начало"
+
+#: ~/Modules/Orchard.Setup/Views/Setup/Index.cshtml
+#| msgid "Please answer a few questions to configure your site."
+msgctxt "~/Modules/Orchard.Setup/Views/Setup/Index.cshtml"
+msgid "Please answer a few questions to configure your site."
+msgstr "Пожалуйста, ответьте на несколько вопросов, чтобы настроить ваш сайт."
+
+#: ~/Modules/Orchard.Setup/Views/Setup/Index.cshtml
+#| msgid "What is the name of your site?"
+msgctxt "~/Modules/Orchard.Setup/Views/Setup/Index.cshtml"
+msgid "What is the name of your site?"
+msgstr "Имя вашего сайта?"
+
+#: ~/Modules/Orchard.Setup/Views/Setup/Index.cshtml
+#| msgid "Choose a user name:"
+msgctxt "~/Modules/Orchard.Setup/Views/Setup/Index.cshtml"
+msgid "Choose a user name:"
+msgstr "Выберите имя пользователя:"
+
+#: ~/Modules/Orchard.Setup/Views/Setup/Index.cshtml
+#| msgid "Choose a password:"
+msgctxt "~/Modules/Orchard.Setup/Views/Setup/Index.cshtml"
+msgid "Choose a password:"
+msgstr "Выберите пароль:"
+
+#: ~/Modules/Orchard.Setup/Views/Setup/Index.cshtml
+#| msgid "Confirm the password:"
+msgctxt "~/Modules/Orchard.Setup/Views/Setup/Index.cshtml"
+msgid "Confirm the password:"
+msgstr "Подтвердите пароль:"
+
+#: ~/Modules/Orchard.Setup/Views/Setup/Index.cshtml
+#| msgid "How would you like to store your data?"
+msgctxt "~/Modules/Orchard.Setup/Views/Setup/Index.cshtml"
+msgid "How would you like to store your data?"
+msgstr "Как бы вы хотели хранить ваши данные?"
+
+#: ~/Modules/Orchard.Setup/Views/Setup/Index.cshtml
+#| msgid "Use built-in data storage (SQL Server Compact)"
+msgctxt "~/Modules/Orchard.Setup/Views/Setup/Index.cshtml"
+msgid "Use built-in data storage (SQL Server Compact)"
+msgstr "Использовать встроенное хранилище данных (SQL Server Compact)"
+
+#: ~/Modules/Orchard.Setup/Views/Setup/Index.cshtml
+#| msgid "Use an existing SQL Server (or SQL Express) database"
+msgctxt "~/Modules/Orchard.Setup/Views/Setup/Index.cshtml"
+msgid "Use an existing SQL Server (or SQL Express) database"
+msgstr "Использовать существующую базу данных SQL Server (или SQL Express)"
+
+#: ~/Modules/Orchard.Setup/Views/Setup/Index.cshtml
+#| msgid "Connection string"
+msgctxt "~/Modules/Orchard.Setup/Views/Setup/Index.cshtml"
+msgid "Connection string"
+msgstr "Строка подключения"
+
+#: ~/Modules/Orchard.Setup/Views/Setup/Index.cshtml
+#| msgid "Example:"
+msgctxt "~/Modules/Orchard.Setup/Views/Setup/Index.cshtml"
+msgid "Example:"
+msgstr "Пример:"
+
+#: ~/Modules/Orchard.Setup/Views/Setup/Index.cshtml
+#| msgid "Data Source=sqlServerName;Initial Catalog=dbName;Persist Security Info=True;User ID=userName;Password=password"
+msgctxt "~/Modules/Orchard.Setup/Views/Setup/Index.cshtml"
+msgid "Data Source=sqlServerName;Initial Catalog=dbName;Persist Security Info=True;User ID=userName;Password=password"
+msgstr "Data Source=sqlServerName;Initial Catalog=dbName;Persist Security Info=True;User ID=userName;Password=password"
+
+#: ~/Modules/Orchard.Setup/Views/Setup/Index.cshtml
+#| msgid "Database Table Prefix"
+msgctxt "~/Modules/Orchard.Setup/Views/Setup/Index.cshtml"
+msgid "Database Table Prefix"
+msgstr "Префикс имени таблиц"
+
+#: ~/Modules/Orchard.Setup/Views/Setup/Index.cshtml
+#| msgid "Configuring Orchard..."
+msgctxt "~/Modules/Orchard.Setup/Views/Setup/Index.cshtml"
+msgid "Configuring Orchard..."
+msgstr "Настройка Orchard..."
+
+#: ~/Modules/Orchard.Setup/Views/Setup/Index.cshtml
+#| msgid "Finish Setup"
+msgctxt "~/Modules/Orchard.Setup/Views/Setup/Index.cshtml"
+msgid "Finish Setup"
+msgstr "Установка завершена"
+
+#: Orchard.Setup.Controllers.SetupController
+#| msgid "The table prefix must contain letters or digits"
+msgctxt "Orchard.Setup.Controllers.SetupController"
+msgid "The table prefix must contain letters or digits"
+msgstr "Префикс таблицы должен содержать буквы или цифры"
+
+#: Orchard.Setup.Controllers.SetupController
+#| msgid "A connection string is required"
+msgctxt "Orchard.Setup.Controllers.SetupController"
+msgid "A connection string is required"
+msgstr "Требуется строка подключения"
+
+#: ~/Modules/Orchard.Setup/Views/Setup/Index.cshtml
+#| msgid "Use an existing SQL Server, SQL Express database"
+msgctxt "~/Modules/Orchard.Setup/Views/Setup/Index.cshtml"
+msgid "Use an existing SQL Server, SQL Express database"
+msgstr "Использовать существующую базу данных SQL Server, SQL Express"
+
+#: ~/Modules/Orchard.Setup/Views/Setup/Index.cshtml
+#| msgid "Use an existing MySql database"
+msgctxt "~/Modules/Orchard.Setup/Views/Setup/Index.cshtml"
+msgid "Use an existing MySql database"
+msgstr "Использовать существующую базу MySql"
+
+#: ~/Modules/Orchard.Setup/Views/Setup/Index.cshtml
+#| msgid "Data Source=serverName;Database=dbName;User Id=userName;Password=password"
+msgctxt "~/Modules/Orchard.Setup/Views/Setup/Index.cshtml"
+msgid "Data Source=serverName;Database=dbName;User Id=userName;Password=password"
+msgstr "Data Source=serverName;Database=dbName;User Id=userName;Password=password"
+
+#: Orchard.Setup.Commands.SetupCommand
+#| msgid "Site \"{0}\" successfully setup to run data provider \"{1}\" (with table prefix \"{2}\") and configured by recipe \"{3}\""
+msgctxt "Orchard.Setup.Commands.SetupCommand"
+msgid "Site \"{0}\" successfully setup to run data provider \"{1}\" (with table prefix \"{2}\") and configured by recipe \"{3}\""
+msgstr "Сайт «{0}» успешно установлен для запуска с провайдером данных «{1}» (префикс таблиц «{2}») и настроен по рецепту «{3}»"
+
+#: Orchard.Setup.Controllers.SetupController
+#| msgid "No recipes were found in the Setup module"
+msgctxt "Orchard.Setup.Controllers.SetupController"
+msgid "No recipes were found in the Setup module"
+msgstr "Не найдено рецептов в модуле установки"
+
+#: ~/Modules/Orchard.Setup/Views/Setup/Index.cshtml
+#| msgid "Choose an Orchard Recipe"
+msgctxt "~/Modules/Orchard.Setup/Views/Setup/Index.cshtml"
+msgid "Choose an Orchard Recipe"
+msgstr "Выберите рецепт Orchard"
+
+#: ~/Modules/Orchard.Setup/Views/Setup/Index.cshtml
+#| msgid "Orchard Recipes allow you to setup your site with additional pre-configured options, features and settings out of the box"
+msgctxt "~/Modules/Orchard.Setup/Views/Setup/Index.cshtml"
+msgid "Orchard Recipes allow you to setup your site with additional pre-configured options, features and settings out of the box"
+msgstr "Рецепты Orchard позволяют вам установить ваш сайт с дополнительными преднастроенными опциями, возможностями и установками из коробки."
+
+#: ~/Modules/Orchard.Setup/Views/Setup/Index.cshtml
+#| msgid "Cooking Orchard Recipe ..."
+msgctxt "~/Modules/Orchard.Setup/Views/Setup/Index.cshtml"
+msgid "Cooking Orchard Recipe ..."
+msgstr "Рецепт Orchard готовится ..."
+
+#: ~/Modules/Orchard.Setup/Module.txt
+#| msgid "Name"
+msgctxt "~/Modules/Orchard.Setup/Module.txt"
+msgid "Setup"
+msgstr "Установка"
+

@@ -1,0 +1,125 @@
+# Orchard resource strings - ru-RU
+# Copyright (c) 2010 Outercurve Foundation
+# All rights reserved
+# This file is distributed under the BSD license
+
+#: ~/Modules/Orchard.jQuery/Module.txt
+#| msgid "Author"
+msgctxt "~/Modules/Orchard.jQuery/Module.txt"
+msgid "The Orchard Team"
+msgstr "Команда Orchard"
+
+#: ~/Modules/Orchard.jQuery/Module.txt
+#| msgid "Website"
+msgctxt "~/Modules/Orchard.jQuery/Module.txt"
+msgid "http://orchardproject.net"
+msgstr "http://orchardproject.net"
+
+#: ~/Modules/Orchard.jQuery/Module.txt
+#| msgid "Description"
+msgctxt "~/Modules/Orchard.jQuery/Module.txt"
+msgid "The jQuery module contains the jQuery and related script libraries."
+msgstr "Модуль jQuery содержит jQuery и связанные скриптовые библиотеки."
+
+#: ~/Modules/Orchard.jQuery/Module.txt
+#| msgid "Orchard.jQuery.Name"
+msgctxt "~/Modules/Orchard.jQuery/Module.txt"
+msgid "jQuery"
+msgstr "jQuery"
+
+#: ~/Modules/Orchard.jQuery/Module.txt
+#| msgid "Orchard.jQuery.Description"
+msgctxt "~/Modules/Orchard.jQuery/Module.txt"
+msgid "A common location for jQuery and related script libraries."
+msgstr "Общее местоположение для jQuery и связанных скриптовых библиотек."
+
+#: ~/Modules/Orchard.jQuery/Module.txt
+#| msgid "Orchard.jQuery.Category"
+msgctxt "~/Modules/Orchard.jQuery/Module.txt"
+msgid "Core"
+msgstr "Ядро"
+
+#: ~/Modules/Orchard.jQuery/Views/DatePickerLocalization.cshtml
+#| msgid "Done"
+msgctxt "~/Modules/Orchard.jQuery/Views/DatePickerLocalization.cshtml"
+msgid "Done"
+msgstr "Выполнено"
+
+#: ~/Modules/Orchard.jQuery/Views/DatePickerLocalization.cshtml
+#| msgid "Prev"
+msgctxt "~/Modules/Orchard.jQuery/Views/DatePickerLocalization.cshtml"
+msgid "Prev"
+msgstr "Пред"
+
+#: ~/Modules/Orchard.jQuery/Views/DatePickerLocalization.cshtml
+#| msgid "Next"
+msgctxt "~/Modules/Orchard.jQuery/Views/DatePickerLocalization.cshtml"
+msgid "Next"
+msgstr "След"
+
+#: ~/Modules/Orchard.jQuery/Views/DatePickerLocalization.cshtml
+#| msgid "Today"
+msgctxt "~/Modules/Orchard.jQuery/Views/DatePickerLocalization.cshtml"
+msgid "Today"
+msgstr "Сегодня"
+
+#: ~/Modules/Orchard.jQuery/Views/DatePickerLocalization.cshtml
+#| msgid "Wk"
+msgctxt "~/Modules/Orchard.jQuery/Views/DatePickerLocalization.cshtml"
+msgid "Wk"
+msgstr "Wk"
+
+#: ~/Modules/Orchard.jQuery/Module.txt
+#| msgid "Name"
+msgctxt "~/Modules/Orchard.jQuery/Module.txt"
+msgid "Orchard.jQuery"
+msgstr "Orchard.jQuery"
+
+#: ~/Modules/Orchard.jQuery/Module.txt
+#| msgid "Orchard.jQuery Description"
+msgctxt "~/Modules/Orchard.jQuery/Module.txt"
+msgid "A common location for jQuery and related script libraries."
+msgstr "Общее местоположение для jQuery и связанных скриптовых библиотек."
+
+#: ~/Modules/Orchard.jQuery/Module.txt
+#| msgid "Orchard.jQuery Category"
+msgctxt "~/Modules/Orchard.jQuery/Module.txt"
+msgid "Resources"
+msgstr "Ресурсы"
+
+#: ~/Modules/Orchard.jQuery/Views/TimePickerLocalization.cshtml
+#| msgid "Choose time"
+msgctxt "~/Modules/Orchard.jQuery/Views/TimePickerLocalization.cshtml"
+msgid "Choose time"
+msgstr "Выбор времени"
+
+#: ~/Modules/Orchard.jQuery/Views/TimePickerLocalization.cshtml
+#| msgid "Time"
+msgctxt "~/Modules/Orchard.jQuery/Views/TimePickerLocalization.cshtml"
+msgid "Time"
+msgstr "Время"
+
+#: ~/Modules/Orchard.jQuery/Views/TimePickerLocalization.cshtml
+#| msgid "Hour"
+msgctxt "~/Modules/Orchard.jQuery/Views/TimePickerLocalization.cshtml"
+msgid "Hour"
+msgstr "Часы"
+
+#: ~/Modules/Orchard.jQuery/Views/TimePickerLocalization.cshtml
+#| msgid "Minute"
+msgctxt "~/Modules/Orchard.jQuery/Views/TimePickerLocalization.cshtml"
+msgid "Minute"
+msgstr "Минуты"
+
+#: ~/Modules/Orchard.jQuery/Views/TimePickerLocalization.cshtml
+#| msgid "Now"
+msgctxt "~/Modules/Orchard.jQuery/Views/TimePickerLocalization.cshtml"
+msgid "Now"
+msgstr "Сейчас"
+
+#: ~/Modules/Orchard.jQuery/Views/TimePickerLocalization.cshtml
+#| msgid "Done"
+msgctxt "~/Modules/Orchard.jQuery/Views/TimePickerLocalization.cshtml"
+msgid "Done"
+msgstr "Выполнено"
+

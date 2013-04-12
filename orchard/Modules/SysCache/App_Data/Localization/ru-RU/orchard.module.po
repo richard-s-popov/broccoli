@@ -1,0 +1,41 @@
+# Orchard resource strings - ru-RU
+# Copyright (c) 2010 Outercurve Foundation
+# All rights reserved
+# This file is distributed under the BSD license
+
+#: ~/Modules/SysCache/Module.txt
+#| msgid "Name"
+msgctxt "~/Modules/SysCache/Module.txt"
+msgid "SysCache"
+msgstr "SysCache"
+
+#: ~/Modules/SysCache/Module.txt
+#| msgid "Author"
+msgctxt "~/Modules/SysCache/Module.txt"
+msgid "The Orchard Team"
+msgstr "Команда Orchard"
+
+#: ~/Modules/SysCache/Module.txt
+#| msgid "Website"
+msgctxt "~/Modules/SysCache/Module.txt"
+msgid "http://orchardproject.net"
+msgstr "http://orchardproject.net"
+
+#: ~/Modules/SysCache/Module.txt
+#| msgid "Description"
+msgctxt "~/Modules/SysCache/Module.txt"
+msgid "Enables database caching using the SysCache provider."
+msgstr "Включает кэширование базы данных, используя провайдер SysCache."
+
+#: ~/Modules/SysCache/Module.txt
+#| msgid "SysCache.Description"
+msgctxt "~/Modules/SysCache/Module.txt"
+msgid "Enables database caching using the SysCache provider."
+msgstr "Включает кэширование базы данных, используя провайдер SysCache."
+
+#: ~/Modules/SysCache/Module.txt
+#| msgid "SysCache.Category"
+msgctxt "~/Modules/SysCache/Module.txt"
+msgid "Performance"
+msgstr "Эффективность"
+

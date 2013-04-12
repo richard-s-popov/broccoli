@@ -1,0 +1,3215 @@
+# Orchard resource strings - ru-RU
+# Copyright (c) 2010 Outercurve Foundation
+# All rights reserved
+# This file is distributed under the BSD license
+
+#: Orchard.Core.Routable.Drivers.RoutePartDriver
+#| msgid ""
+msgctxt "Orchard.Core.Routable.Drivers.RoutePartDriver"
+msgid "Slugs in conflict. \"{0}\" is already set for a previously created {2} so now it has the slug \"{1}\""
+msgstr "Конфликт ярлыков. \"{0}\" уже установлен для ранее созданного {2}, так ято он имеет ярлык \"{1}\""
+
+#: ~/Core/Common/Views/CommonMetadataOwner.cshtml
+#| msgid "unknown"
+msgctxt "~/Core/Common/Views/CommonMetadataOwner.cshtml"
+msgid "unknown"
+msgstr "неизвестно"
+
+#: ~/Core/Dashboard/Views/Admin/Index.cshtml
+#| msgid "Are you ready to go deeper and become an Orchard expert? Take a look at the <a href=""http://docs.orchardproject.net"">Orchard Documentation</a> to learn about how everything connects together and what makes Orchard tick."
+msgctxt "~/Core/Dashboard/Views/Admin/Index.cshtml"
+msgid "Are you ready to go deeper and become an Orchard expert? Take a look at the <a href=""http://docs.orchardproject.net"">Orchard Documentation</a> to learn about how everything connects together and what makes Orchard tick."
+msgstr "Вы готовы углубленно изучить и стать экспертом по Orchard? Взгляните на <a href=""http://orchardproject.net/docs/"">Документация Wiki Orchard</a>, чтобы узнать, как все связать вместе и почему Orchard работает, как часы."
+
+#: ~/Core/Navigation/Views/Admin/Index.cshtml
+#| msgid "Some items where not saved."
+msgctxt "~/Core/Navigation/Views/Admin/Index.cshtml"
+msgid "Some items where not saved."
+msgstr "Некоторые элементы не сохранены."
+
+#: ~/Core/Dashboard/Views/Admin/Index.cshtml
+#| msgid "This is the place where you can manage your web site, its appearance and its contents. Please take a moment to explore the different menu items on the left of the screen to familiarize yourself with the features of the application. For example, try to change the theme through the âManage Themesâ menu entry. You can also create new pages and manage existing ones through the âManage Pagesâ menu entry or create blogs through âManage Blogsâ."
+msgctxt "~/Core/Dashboard/Views/Admin/Index.cshtml"
+msgid "This is the place where you can manage your web site, its appearance and its contents. Please take a moment to explore the different menu items on the left of the screen to familiarize yourself with the features of the application. For example, try to change the theme through the âManage Themesâ menu entry. You can also create new pages and manage existing ones through the âManage Pagesâ menu entry or create blogs through âManage Blogsâ."
+msgstr "Это место, где вы можете управлять вашим веб сайтом, его внешним видом и содержимым. Пожалуйста, уделите внимание ознакомлению с различными пунктами меню в левой части экрана для того, чтобы быть в курсе возможностей данного приложения. Например, попробуйте изменить тему через пункт 'Управление Темами'. Вы также можете создавать новые страницы, и управлять существующими через пункт 'Управление Страницами', или создавать блоги, используя пункт 'Управление Блогами'."
+
+#: ~/Core/Navigation/Views/Admin/Index.cshtml
+#| msgid "Default Position"
+msgctxt "~/Core/Navigation/Views/Admin/Index.cshtml"
+msgid "Default Position"
+msgstr "Положение по умолчанию"
+
+#: Orchard.Core.Contents.Controllers.ItemController
+#| msgid "Cannot view content"
+msgctxt "Orchard.Core.Contents.Controllers.ItemController"
+msgid "Cannot view content"
+msgstr "Невозможно просмотреть содержимое"
+
+#: Orchard.Core.Navigation.Commands.MenuCommands
+#| msgid "Menu not found."
+msgctxt "Orchard.Core.Navigation.Commands.MenuCommands"
+msgid "Menu not found."
+msgstr "Меню не найдено."
+
+#: Orchard.Core.Navigation.Commands.MenuCommands
+#| msgid "Menu name can't be empty."
+msgctxt "Orchard.Core.Navigation.Commands.MenuCommands"
+msgid "Menu name can't be empty."
+msgstr "Имя меню не может быть пустым."
+
+#: Orchard.Core.Navigation.Commands.MenuCommands
+#| msgid "Menu created successfully."
+msgctxt "Orchard.Core.Navigation.Commands.MenuCommands"
+msgid "Menu created successfully."
+msgstr "Меню успешно создано."
+
+#: Orchard.Core.Navigation.Controllers.AdminController
+#| msgid "Menu not found: {0}"
+msgctxt "Orchard.Core.Navigation.Controllers.AdminController"
+msgid "Menu not found: {0}"
+msgstr "Меню не найдено: {0}"
+
+#: Orchard.Core.Navigation.Controllers.AdminController
+#| msgid "Creating menu item failed: {0}"
+msgctxt "Orchard.Core.Navigation.Controllers.AdminController"
+msgid "Creating menu item failed: {0}"
+msgstr "Создание пункта меню прервано: {0}"
+
+#: Orchard.Core.Navigation.Controllers.AdminController
+#| msgid "Your {0} has been added."
+msgctxt "Orchard.Core.Navigation.Controllers.AdminController"
+msgid "Your {0} has been added."
+msgstr "Ваш {0} добавлен."
+
+#: Orchard.Core.Navigation.Drivers.ContentMenuItemPartDriver
+#| msgid "You must select a Content Item"
+msgctxt "Orchard.Core.Navigation.Drivers.ContentMenuItemPartDriver"
+msgid "You must select a Content Item"
+msgstr "Вы должны выбрать элемент содержимого"
+
+#: Orchard.Core.Navigation.Drivers.MenuWidgetPartDriver
+#| msgid "Home"
+msgctxt "Orchard.Core.Navigation.Drivers.MenuWidgetPartDriver"
+msgid "Home"
+msgstr "Начало"
+
+#: Orchard.Core.Navigation.Drivers.NavigationPartDriver
+#| msgid "The MenuText field is required"
+msgctxt "Orchard.Core.Navigation.Drivers.NavigationPartDriver"
+msgid "The MenuText field is required"
+msgstr "Поле текст меню обязательно"
+
+#: ~/Core/Navigation/Views/Menu.DeleteButton.cshtml
+#| msgid "Delete"
+msgctxt "~/Core/Navigation/Views/Menu.DeleteButton.cshtml"
+msgid "Delete"
+msgstr "Удалить"
+
+#: ~/Core/Navigation/Views/Admin/CreateMenuItem.cshtml
+#| msgid "Create Menu Item"
+msgctxt "~/Core/Navigation/Views/Admin/CreateMenuItem.cshtml"
+msgid "Create Menu Item"
+msgstr "Создать пункт меню"
+
+#: ~/Core/Navigation/Views/Admin/Index.cshtml
+#| msgid "You need to hit \"Save All\" in order to save your changes."
+msgctxt "~/Core/Navigation/Views/Admin/Index.cshtml"
+msgid "You need to hit \"Save All\" in order to save your changes."
+msgstr "Для сохранения изменений необходимо нажать \"Сохранить все\" "
+
+#: ~/Core/Navigation/Views/Admin/Index.cshtml
+#| msgid "Current Menu:"
+msgctxt "~/Core/Navigation/Views/Admin/Index.cshtml"
+msgid "Current Menu:"
+msgstr "Текущее меню:"
+
+#: ~/Core/Navigation/Views/Admin/Index.cshtml
+#| msgid "Show"
+msgctxt "~/Core/Navigation/Views/Admin/Index.cshtml"
+msgid "Show"
+msgstr "Показ"
+
+#: ~/Core/Navigation/Views/Admin/Index.cshtml
+#| msgid "Edit"
+msgctxt "~/Core/Navigation/Views/Admin/Index.cshtml"
+msgid "Edit"
+msgstr "Редактирование"
+
+#: ~/Core/Navigation/Views/Admin/Index.cshtml
+#| msgid "Add a new menu..."
+msgctxt "~/Core/Navigation/Views/Admin/Index.cshtml"
+msgid "Add a new menu..."
+msgstr "Добавить новое меню..."
+
+#: ~/Core/Navigation/Views/Admin/Index.cshtml
+#| msgid "The menu is empty"
+msgctxt "~/Core/Navigation/Views/Admin/Index.cshtml"
+msgid "The menu is empty"
+msgstr "Меню пустое"
+
+#: ~/Core/Navigation/Views/Admin/Index.cshtml
+#| msgid "Save All"
+msgctxt "~/Core/Navigation/Views/Admin/Index.cshtml"
+msgid "Save All"
+msgstr "Сохранить все"
+
+#: ~/Core/Navigation/Views/Admin/Index.cshtml
+#| msgid " | "
+msgctxt "~/Core/Navigation/Views/Admin/Index.cshtml"
+msgid " | "
+msgstr " | "
+
+#: ~/Core/Navigation/Views/EditorTemplates/Parts.ContentMenuItem.Edit.cshtml
+#| msgid "Empty"
+msgctxt "~/Core/Navigation/Views/EditorTemplates/Parts.ContentMenuItem.Edit.cshtml"
+msgid "Empty"
+msgstr "Пусто"
+
+#: ~/Core/Navigation/Views/EditorTemplates/Parts.ContentMenuItem.Edit.cshtml
+#| msgid "Content Item"
+msgctxt "~/Core/Navigation/Views/EditorTemplates/Parts.ContentMenuItem.Edit.cshtml"
+msgid "Content Item"
+msgstr "Элемент содержимого"
+
+#: ~/Core/Navigation/Views/EditorTemplates/Parts.ContentMenuItem.Edit.cshtml
+#| msgid "Browse"
+msgctxt "~/Core/Navigation/Views/EditorTemplates/Parts.ContentMenuItem.Edit.cshtml"
+msgid "Browse"
+msgstr "Просмотр"
+
+#: ~/Core/Navigation/Views/EditorTemplates/Parts.ContentMenuItem.Edit.cshtml
+#| msgid "Select the Content Item to display in the menu."
+msgctxt "~/Core/Navigation/Views/EditorTemplates/Parts.ContentMenuItem.Edit.cshtml"
+msgid "Select the Content Item to display in the menu."
+msgstr "Выберать элемент содержимого для показа в меню."
+
+#: ~/Core/Navigation/Views/EditorTemplates/Parts.MenuItem.Edit.cshtml
+#| msgid "Url"
+msgctxt "~/Core/Navigation/Views/EditorTemplates/Parts.MenuItem.Edit.cshtml"
+msgid "Url"
+msgstr "Адрес Url"
+
+#: ~/Core/Navigation/Views/EditorTemplates/Parts.MenuItem.Edit.cshtml
+#| msgid "A valid url, i.e. ~/my-page, http://orchardproject.net, /content/file.pdf, ..."
+msgctxt "~/Core/Navigation/Views/EditorTemplates/Parts.MenuItem.Edit.cshtml"
+msgid "A valid url, i.e. ~/my-page, http://orchardproject.net, /content/file.pdf, ..."
+msgstr "Допустимый адрес url, т.е. ~/my-page, http://orchardproject.net, /content/file.pdf, ..."
+
+#: ~/Core/Navigation/Views/EditorTemplates/Parts.MenuWidget.Edit.cshtml
+#| msgid "For Menu"
+msgctxt "~/Core/Navigation/Views/EditorTemplates/Parts.MenuWidget.Edit.cshtml"
+msgid "For Menu"
+msgstr "Для меню"
+
+#: ~/Core/Navigation/Views/EditorTemplates/Parts.MenuWidget.Edit.cshtml
+#| msgid "Select which menu you want to display"
+msgctxt "~/Core/Navigation/Views/EditorTemplates/Parts.MenuWidget.Edit.cshtml"
+msgid "Select which menu you want to display"
+msgstr "Выберите меню для отображения"
+
+#: ~/Core/Navigation/Views/EditorTemplates/Parts.MenuWidget.Edit.cshtml
+#| msgid "Start Level"
+msgctxt "~/Core/Navigation/Views/EditorTemplates/Parts.MenuWidget.Edit.cshtml"
+msgid "Start Level"
+msgstr "Начальный уровень"
+
+#: ~/Core/Navigation/Views/EditorTemplates/Parts.MenuWidget.Edit.cshtml
+#| msgid "The level the menu should start at."
+msgctxt "~/Core/Navigation/Views/EditorTemplates/Parts.MenuWidget.Edit.cshtml"
+msgid "The level the menu should start at."
+msgstr "Начальный уровень меню."
+
+#: ~/Core/Navigation/Views/EditorTemplates/Parts.MenuWidget.Edit.cshtml
+#| msgid "Levels to display"
+msgctxt "~/Core/Navigation/Views/EditorTemplates/Parts.MenuWidget.Edit.cshtml"
+msgid "Levels to display"
+msgstr "Уровни для отображения"
+
+#: ~/Core/Navigation/Views/EditorTemplates/Parts.MenuWidget.Edit.cshtml
+#| msgid "The number of levels to display, \"0\" meaning all levels."
+msgctxt "~/Core/Navigation/Views/EditorTemplates/Parts.MenuWidget.Edit.cshtml"
+msgid "The number of levels to display, \"0\" meaning all levels."
+msgstr "Количество отображаемых уровней, \"0\" означает все уровни."
+
+#: ~/Core/Navigation/Views/EditorTemplates/Parts.MenuWidget.Edit.cshtml
+#| msgid "Display as Breadcrumb"
+msgctxt "~/Core/Navigation/Views/EditorTemplates/Parts.MenuWidget.Edit.cshtml"
+msgid "Display as Breadcrumb"
+msgstr "Отображать в навигационной цепочке"
+
+#: ~/Core/Navigation/Views/EditorTemplates/Parts.MenuWidget.Edit.cshtml
+#| msgid "Check to render the path to the current content item."
+msgctxt "~/Core/Navigation/Views/EditorTemplates/Parts.MenuWidget.Edit.cshtml"
+msgid "Check to render the path to the current content item."
+msgstr "Проверить путь к текущему эдементу содержимого."
+
+#: ~/Core/Navigation/Views/EditorTemplates/Parts.MenuWidget.Edit.cshtml
+#| msgid "Add the home page as the first element"
+msgctxt "~/Core/Navigation/Views/EditorTemplates/Parts.MenuWidget.Edit.cshtml"
+msgid "Add the home page as the first element"
+msgstr "Добавить домашнюю страницу в качестве первого элемента"
+
+#: ~/Core/Navigation/Views/EditorTemplates/Parts.MenuWidget.Edit.cshtml
+#| msgid "Check to render the home page as the first element of the breadcrumb."
+msgctxt "~/Core/Navigation/Views/EditorTemplates/Parts.MenuWidget.Edit.cshtml"
+msgid "Check to render the home page as the first element of the breadcrumb."
+msgstr "Проверить домашнюю страницу в качестве первого элемента навигационной цепочки."
+
+#: ~/Core/Navigation/Views/EditorTemplates/Parts.MenuWidget.Edit.cshtml
+#| msgid "Add the current content item as the last element"
+msgctxt "~/Core/Navigation/Views/EditorTemplates/Parts.MenuWidget.Edit.cshtml"
+msgid "Add the current content item as the last element"
+msgstr "Добавить текущий элемент содержимого в качестве последнего элемента"
+
+#: ~/Core/Navigation/Views/EditorTemplates/Parts.MenuWidget.Edit.cshtml
+#| msgid "Check to render the current content item as the last element."
+msgctxt "~/Core/Navigation/Views/EditorTemplates/Parts.MenuWidget.Edit.cshtml"
+msgid "Check to render the current content item as the last element."
+msgstr "Проверить текущий элемент содержимого в качестве последнего элемента"
+
+#: ~/Core/Navigation/Views/EditorTemplates/Parts.Navigation.Edit.cshtml
+#| msgid "Menu Items"
+msgctxt "~/Core/Navigation/Views/EditorTemplates/Parts.Navigation.Edit.cshtml"
+msgid "Menu Items"
+msgstr "Пункты меню"
+
+#: ~/Core/Navigation/Views/EditorTemplates/Parts.Navigation.Edit.cshtml
+#| msgid "The menu items linking to this content item."
+msgctxt "~/Core/Navigation/Views/EditorTemplates/Parts.Navigation.Edit.cshtml"
+msgid "The menu items linking to this content item."
+msgstr "Пункты меню, связанные с этим элементом содержимого"
+
+#: ~/Core/Navigation/Views/EditorTemplates/Parts.Navigation.Edit.cshtml
+#| msgid "on"
+msgctxt "~/Core/Navigation/Views/EditorTemplates/Parts.Navigation.Edit.cshtml"
+msgid "on"
+msgstr "в"
+
+#: ~/Core/Navigation/Views/EditorTemplates/Parts.Navigation.Edit.cshtml
+#| msgid "Not displayed in any menu."
+msgctxt "~/Core/Navigation/Views/EditorTemplates/Parts.Navigation.Edit.cshtml"
+msgid "Not displayed in any menu."
+msgstr "Не отображать ни в одном меню"
+
+#: ~/Core/Navigation/Views/EditorTemplates/Parts.Navigation.Edit.cshtml
+#| msgid "Add on a menu"
+msgctxt "~/Core/Navigation/Views/EditorTemplates/Parts.Navigation.Edit.cshtml"
+msgid "Add on a menu"
+msgstr "Добавить в меню"
+
+#: ~/Core/Navigation/Views/EditorTemplates/Parts.Navigation.Edit.cshtml
+#| msgid "Select which menu you want the content item to be added on."
+msgctxt "~/Core/Navigation/Views/EditorTemplates/Parts.Navigation.Edit.cshtml"
+msgid "Select which menu you want the content item to be added on."
+msgstr "Выберите меню, к которому будет добавлен элемент содержимого."
+
+#: ~/Core/Navigation/Views/EditorTemplates/Parts.Navigation.Edit.cshtml
+#| msgid "Menu text"
+msgctxt "~/Core/Navigation/Views/EditorTemplates/Parts.Navigation.Edit.cshtml"
+msgid "Menu text"
+msgstr "Текст меню"
+
+#: ~/Core/Navigation/Views/EditorTemplates/Parts.Navigation.Edit.cshtml
+#| msgid "The text that should appear in the menu."
+msgctxt "~/Core/Navigation/Views/EditorTemplates/Parts.Navigation.Edit.cshtml"
+msgid "The text that should appear in the menu."
+msgstr "Текст, который должен отображаться в меню."
+
+#: ~/Core/Navigation/Views/EditorTemplates/Parts.Navigation.Menu.Edit.cshtml
+#| msgid "Show on a menu"
+msgctxt "~/Core/Navigation/Views/EditorTemplates/Parts.Navigation.Menu.Edit.cshtml"
+msgid "Show on a menu"
+msgstr "Показывать в меню"
+
+#: ~/Core/Navigation/Views/EditorTemplates/Parts.Navigation.Menu.Edit.cshtml
+#| msgid "Select which menu you want the content item to be displayed on."
+msgctxt "~/Core/Navigation/Views/EditorTemplates/Parts.Navigation.Menu.Edit.cshtml"
+msgid "Select which menu you want the content item to be displayed on."
+msgstr "Выберите меню, в котором будет показан элемент содержимого."
+
+#: ~/Core/Navigation/Views/EditorTemplates/Parts.Navigation.Menu.Edit.cshtml
+#| msgid "The text that should appear in the menu."
+msgctxt "~/Core/Navigation/Views/EditorTemplates/Parts.Navigation.Menu.Edit.cshtml"
+msgid "The text that should appear in the menu."
+msgstr "Текст, который должен отображаться в меню."
+
+#: Orchard.Core.Settings.Tokens.SettingsTokens
+#| msgid "Site Settings"
+msgctxt "Orchard.Core.Settings.Tokens.SettingsTokens"
+msgid "Site Settings"
+msgstr "Настройки страницы"
+
+#: Orchard.Core.Settings.Tokens.SettingsTokens
+#| msgid "Tokens for Site Settings"
+msgctxt "Orchard.Core.Settings.Tokens.SettingsTokens"
+msgid "Tokens for Site Settings"
+msgstr "Знаки для настроек страницы"
+
+#: Orchard.Core.Settings.Tokens.SettingsTokens
+#| msgid "Site Name"
+msgctxt "Orchard.Core.Settings.Tokens.SettingsTokens"
+msgid "Site Name"
+msgstr "Название страницы"
+
+#: Orchard.Core.Settings.Tokens.SettingsTokens
+#| msgid "The name of the site."
+msgctxt "Orchard.Core.Settings.Tokens.SettingsTokens"
+msgid "The name of the site."
+msgstr "Название страницы."
+
+#: Orchard.Core.Settings.Tokens.SettingsTokens
+#| msgid "Super User"
+msgctxt "Orchard.Core.Settings.Tokens.SettingsTokens"
+msgid "Super User"
+msgstr "Супер пользователь"
+
+#: Orchard.Core.Settings.Tokens.SettingsTokens
+#| msgid "The name of the super user."
+msgctxt "Orchard.Core.Settings.Tokens.SettingsTokens"
+msgid "The name of the super user."
+msgstr "Имя супер пользователя."
+
+#: Orchard.Core.Settings.Tokens.SettingsTokens
+#| msgid "Site Culture"
+msgctxt "Orchard.Core.Settings.Tokens.SettingsTokens"
+msgid "Site Culture"
+msgstr "Культура страницы"
+
+#: Orchard.Core.Settings.Tokens.SettingsTokens
+#| msgid "The current culture of the site."
+msgctxt "Orchard.Core.Settings.Tokens.SettingsTokens"
+msgid "The current culture of the site."
+msgstr "Текущая культура страницы."
+
+#: Orchard.Core.Settings.Tokens.SettingsTokens
+#| msgid "Base Url"
+msgctxt "Orchard.Core.Settings.Tokens.SettingsTokens"
+msgid "Base Url"
+msgstr "Базовый адрес Url"
+
+#: Orchard.Core.Settings.Tokens.SettingsTokens
+#| msgid "The base url the site."
+msgctxt "Orchard.Core.Settings.Tokens.SettingsTokens"
+msgid "The base url the site."
+msgstr "Базовый адрес url страницы."
+
+#: Orchard.Core.Settings.Tokens.SettingsTokens
+#| msgid "Time Zone"
+msgctxt "Orchard.Core.Settings.Tokens.SettingsTokens"
+msgid "Time Zone"
+msgstr "Часовой пояс"
+
+#: Orchard.Core.Settings.Tokens.SettingsTokens
+#| msgid "The current time zone of the site."
+msgctxt "Orchard.Core.Settings.Tokens.SettingsTokens"
+msgid "The current time zone of the site."
+msgstr "Текущий часовой пояс страницы."
+
+#: Orchard.Core.Settings.Tokens.SettingsTokens
+#| msgid "{0}"
+msgctxt "Orchard.Core.Settings.Tokens.SettingsTokens"
+msgid "{0}"
+msgstr "{0}"
+
+#: Orchard.Core.Settings.Tokens.SettingsTokens
+#| msgid "The setting named {0}."
+msgctxt "Orchard.Core.Settings.Tokens.SettingsTokens"
+msgid "The setting named {0}."
+msgstr "Настройка с названием {0}."
+
+#: Orchard.Core.Shapes.DateTimeShapes
+#| msgid "in a moment"
+msgctxt "Orchard.Core.Shapes.DateTimeShapes"
+msgid "in a moment"
+msgstr "немедленно"
+
+#: Orchard.Core.Shapes.DateTimeShapes
+#| msgid "in 1 day"
+msgctxt "Orchard.Core.Shapes.DateTimeShapes"
+msgid "in 1 day"
+msgstr "через 1 день"
+
+#: Orchard.Core.Shapes.DateTimeShapes
+#| msgid "in {0} days"
+msgctxt "Orchard.Core.Shapes.DateTimeShapes"
+msgid "in {0} days"
+msgstr "через {0} дня/-ей"
+
+#: Orchard.Core.Shapes.DateTimeShapes
+#| msgid "in 1 hour"
+msgctxt "Orchard.Core.Shapes.DateTimeShapes"
+msgid "in 1 hour"
+msgstr "через 1 час"
+
+#: Orchard.Core.Shapes.DateTimeShapes
+#| msgid "in {0} hours"
+msgctxt "Orchard.Core.Shapes.DateTimeShapes"
+msgid "in {0} hours"
+msgstr "через {0} часа/-ов"
+
+#: Orchard.Core.Shapes.DateTimeShapes
+#| msgid "in 1 minute"
+msgctxt "Orchard.Core.Shapes.DateTimeShapes"
+msgid "in 1 minute"
+msgstr "через 1 минуту"
+
+#: Orchard.Core.Shapes.DateTimeShapes
+#| msgid "in {0} minutes"
+msgctxt "Orchard.Core.Shapes.DateTimeShapes"
+msgid "in {0} minutes"
+msgstr "через {0} минут/-ы"
+
+#: Orchard.Core.Shapes.DateTimeShapes
+#| msgid "in 1 second"
+msgctxt "Orchard.Core.Shapes.DateTimeShapes"
+msgid "in 1 second"
+msgstr "через 1 секунду"
+
+#: Orchard.Core.Shapes.DateTimeShapes
+#| msgid "in {0} seconds"
+msgctxt "Orchard.Core.Shapes.DateTimeShapes"
+msgid "in {0} seconds"
+msgstr "через {0} секунд/-ы"
+
+#: Orchard.Core.Routable.Drivers.RoutePartDriver
+#| msgid "Please do not use any of the following characters in your permalink: \":\", \"?\", \"#\", \"[\", \"]\", \"@\", \"!\", \"$\", \"&\", \"'\", \"(\", \")\", \"*\", \"+\", \",\", \";\", \"=\", \", \"<\", \">\", \"\\". No spaces are allowed (please use dashes or underscores instead)."
+msgctxt "Orchard.Core.Routable.Drivers.RoutePartDriver"
+msgid "Please do not use any of the following characters in your permalink: \":\", \"?\", \"#\", \"[\", \"]\", \"@\", \"!\", \"$\", \"&\", \"'\", \"(\", \")\", \"*\", \"+\", \",\", \";\", \"=\", \", \"<\", \">\", \"\\". No spaces are allowed (please use dashes or underscores instead)."
+msgstr "Пожалуйста, не используйте следующие символы в прямой ссылке: «:», «?», «#», «[», «]», «@», «!», «$», «&», «'», «(», «)», «*», «+», «,», «;», «=», «<», «>», «». Пробелы недопустимы (пожалуйста, используйте тире или нижнюю черту взамен)."
+
+#: ~/Core/Dashboard/Views/Admin/Index.cshtml
+#| msgid "This is the place where you can manage your web site, its appearance and its contents. Please take a moment to explore the different menu items on the left of the screen to familiarize yourself with the features of the application. For example, try to change the theme through the Ã¢ÂÂManage ThemesÃ¢ÂÂ menu entry. You can also create new pages and manage existing ones through the Ã¢ÂÂManage PagesÃ¢ÂÂ menu entry or create blogs through Ã¢ÂÂManage BlogsÃ¢ÂÂ."
+msgctxt "~/Core/Dashboard/Views/Admin/Index.cshtml"
+msgid "This is the place where you can manage your web site, its appearance and its contents. Please take a moment to explore the different menu items on the left of the screen to familiarize yourself with the features of the application. For example, try to change the theme through the Ã¢ÂÂManage ThemesÃ¢ÂÂ menu entry. You can also create new pages and manage existing ones through the Ã¢ÂÂManage PagesÃ¢ÂÂ menu entry or create blogs through Ã¢ÂÂManage BlogsÃ¢ÂÂ."
+msgstr "Это место, где вы можете управлять вашим веб сайтом, его внешним видом и содержимым. Пожалуйста, уделите внимание ознакомлению с различными пунктами меню в левой части экрана для того, чтобы быть в курсе возможностей данного приложения. Например, попробуйте изменить тему через пункт 'Управление Темами'. Вы также можете создавать новые страницы, и управлять существующими через пункт 'Управление Страницами', или создавать блоги, используя пункт 'Управление Блогами'."
+
+#: Orchard.Core.Common.DateEditor.DateEditorDriver
+#| msgid "{0} is an invalid date and time"
+msgctxt "Orchard.Core.Common.DateEditor.DateEditorDriver"
+msgid "{0} is an invalid date and time"
+msgstr "{0} является неверной датой и временем"
+
+#: Orchard.Core.Common.DateEditor.DateEditorDriver
+#| msgid "Both the date and time need to be specified."
+msgctxt "Orchard.Core.Common.DateEditor.DateEditorDriver"
+msgid "Both the date and time need to be specified."
+msgstr "Оба значения даты и время должны быть заданы."
+
+#: Orchard.Core.Common.OwnerEditor.OwnerEditorDriver
+#| msgid "Invalid user name"
+msgctxt "Orchard.Core.Common.OwnerEditor.OwnerEditorDriver"
+msgid "Invalid user name"
+msgstr "Неверное имя пользователя"
+
+#: ~/Core/Common/Views/Parts.Common.Date.Edit.cshtml
+#| msgid "Created On"
+msgctxt "~/Core/Common/Views/Parts.Common.Date.Edit.cshtml"
+msgid "Created On"
+msgstr "Создан"
+
+#: ~/Core/Common/Views/Parts.Common.Date.Edit.cshtml
+#| msgid "Date"
+msgctxt "~/Core/Common/Views/Parts.Common.Date.Edit.cshtml"
+msgid "Date"
+msgstr "Дата"
+
+#: ~/Core/Common/Views/Parts.Common.Date.Edit.cshtml
+#| msgid "Time"
+msgctxt "~/Core/Common/Views/Parts.Common.Date.Edit.cshtml"
+msgid "Time"
+msgstr "Время"
+
+#: ~/Core/Common/Views/Parts.Common.Owner.Edit.cshtml
+#| msgid "Owner"
+msgctxt "~/Core/Common/Views/Parts.Common.Owner.Edit.cshtml"
+msgid "Owner"
+msgstr "Владелец"
+
+#: ~/Core/Common/Views/DefinitionTemplates/DateEditorSettings.cshtml
+#| msgid "Show editor for creation date time"
+msgctxt "~/Core/Common/Views/DefinitionTemplates/DateEditorSettings.cshtml"
+msgid "Show editor for creation date time"
+msgstr "Отображать редактор времени создания"
+
+#: ~/Core/Common/Views/DefinitionTemplates/OwnerEditorSettings.cshtml
+#| msgid "Show editor for owner"
+msgctxt "~/Core/Common/Views/DefinitionTemplates/OwnerEditorSettings.cshtml"
+msgid "Show editor for owner"
+msgstr "Отображать редактор владельца"
+
+#: ~/Core/Dashboard/Views/Admin/Index.cshtml
+#| msgid "Get up and running"
+msgctxt "~/Core/Dashboard/Views/Admin/Index.cshtml"
+msgid "Get up and running"
+msgstr "Устанавливайте и работайте"
+
+#: ~/Core/Dashboard/Views/Admin/Index.cshtml
+#| msgid "Get more goodies"
+msgctxt "~/Core/Dashboard/Views/Admin/Index.cshtml"
+msgid "Get more goodies"
+msgstr "Получайте больше вкусностей"
+
+#: ~/Core/Dashboard/Views/Admin/Index.cshtml
+#| msgid "Read the Docs"
+msgctxt "~/Core/Dashboard/Views/Admin/Index.cshtml"
+msgid "Read the Docs"
+msgstr "Читайте документацию"
+
+#: ~/Core/Dashboard/Views/Admin/Index.cshtml
+#| msgid "Make friends"
+msgctxt "~/Core/Dashboard/Views/Admin/Index.cshtml"
+msgid "Make friends"
+msgstr "Заводите друзей"
+
+#: ~/Core/Dashboard/Views/Admin/Index.cshtml
+#| msgid "Contribute back"
+msgctxt "~/Core/Dashboard/Views/Admin/Index.cshtml"
+msgid "Contribute back"
+msgstr "Вносите свой вклад"
+
+#: ~/Core/Dashboard/Views/Admin/Index.cshtml
+#| msgid "Stay up to date"
+msgctxt "~/Core/Dashboard/Views/Admin/Index.cshtml"
+msgid "Stay up to date"
+msgstr "Используйте самую свежую версию"
+
+#: Orchard.Core.Settings.Commands.SiteSettingsCommands
+#| msgid "'BaseUrl' site setting is already set. Use the 'Force' flag to override."
+msgctxt "Orchard.Core.Settings.Commands.SiteSettingsCommands"
+msgid "'BaseUrl' site setting is already set. Use the 'Force' flag to override."
+msgstr "'BaseUrl' для сайта уже установлен. Используйте флаг 'Force' для перезаписи."
+
+#: Orchard.Core.Settings.Commands.SiteSettingsCommands
+#| msgid "No HTTP request available to determine the base url of the site"
+msgctxt "Orchard.Core.Settings.Commands.SiteSettingsCommands"
+msgid "No HTTP request available to determine the base url of the site"
+msgstr "Нет доступных HTTP–запросов для определения базового URL сайта"
+
+#: Orchard.Core.Settings.Commands.SiteSettingsCommands
+#| msgid "'BaseUrl' site setting set to '{0}'"
+msgctxt "Orchard.Core.Settings.Commands.SiteSettingsCommands"
+msgid "'BaseUrl' site setting set to '{0}'"
+msgstr "'BaseUrl' для сайта установлено в '{0}'"
+
+#: ~/Core/Common/Module.txt
+#| msgid "Name"
+msgctxt "~/Core/Common/Module.txt"
+msgid "Common"
+msgstr "Общий"
+
+#: ~/Core/Common/Views/Parts.Common.Metadata.SummaryAdmin.cshtml
+#| msgid "By {0}"
+msgctxt "~/Core/Common/Views/Parts.Common.Metadata.SummaryAdmin.cshtml"
+msgid "By {0}"
+msgstr "От {0}"
+
+#: ~/Core/Shapes/Views/User.cshtml
+#| msgid "Welcome, <strong>{0}</strong>!"
+msgctxt "~/Core/Shapes/Views/User.cshtml"
+msgid "Welcome, <strong>{0}</strong>!"
+msgstr "Добро пожаловать, <strong>{0}</strong>!"
+
+#: ~/Core/Contents/Module.txt
+#| msgid ".Name"
+msgctxt "~/Core/Contents/Module.txt"
+msgid "Contents"
+msgstr "Содержимое"
+
+#: ~/Core/Contents/Module.txt
+#| msgid ".Description"
+msgctxt "~/Core/Contents/Module.txt"
+msgid "Default custom content type definition, creation and management."
+msgstr "Определение пользовательского контентного типа по умолчанию, создание и управление."
+
+#: ~/Core/Contents/Module.txt
+#| msgid ".Category"
+msgctxt "~/Core/Contents/Module.txt"
+msgid "Core"
+msgstr "Ядро"
+
+#: ~/Core/Contents/Module.txt
+#| msgid "Contents.Rules.Name"
+msgctxt "~/Core/Contents/Module.txt"
+msgid "Contents Rules"
+msgstr "Правила для Содержимого"
+
+#: ~/Core/Contents/Module.txt
+#| msgid "Contents.Rules.Description"
+msgctxt "~/Core/Contents/Module.txt"
+msgid "Rules for the Contents modules"
+msgstr "Правила для модулей Содержимого"
+
+#: ~/Core/Contents/Module.txt
+#| msgid "Contents.Rules.Category"
+msgctxt "~/Core/Contents/Module.txt"
+msgid "Rules"
+msgstr "Правила"
+
+#: ~/Core/Title/Module.txt
+#| msgid "Name"
+msgctxt "~/Core/Title/Module.txt"
+msgid "Title"
+msgstr "Заголовок"
+
+#: ~/Core/Title/Module.txt
+#| msgid "Author"
+msgctxt "~/Core/Title/Module.txt"
+msgid "The Orchard Team"
+msgstr "Команда Orchard"
+
+#: ~/Core/Title/Module.txt
+#| msgid "Website"
+msgctxt "~/Core/Title/Module.txt"
+msgid "http://orchardproject.net"
+msgstr "http://orchardproject.net"
+
+#: ~/Core/Title/Module.txt
+#| msgid "Description"
+msgctxt "~/Core/Title/Module.txt"
+msgid "The title module enables content items to have titles."
+msgstr "Модуль заголовков позволяет добавить контентным элементам заголовок."
+
+#: ~/Core/Common/Views/CommonMetadataOwner.cshtml
+#| msgid "By {0}"
+msgctxt "~/Core/Common/Views/CommonMetadataOwner.cshtml"
+msgid "By {0}"
+msgstr "От {0}"
+
+#: ~/Core/Containers/Views/EditorTemplates/Container.cshtml
+#| msgid "Routable Title"
+msgctxt "~/Core/Containers/Views/EditorTemplates/Container.cshtml"
+msgid "Routable Title"
+msgstr "Маршрутизируемый Заголовок"
+
+#: ~/Core/Containers/Views/EditorTemplates/ContainerWidget.cshtml
+#| msgid "Routable Title"
+msgctxt "~/Core/Containers/Views/EditorTemplates/ContainerWidget.cshtml"
+msgid "Routable Title"
+msgstr "Маршрутизируемый Заголовок"
+
+#: Orchard.Core.Contents.Controllers.ItemController
+#| msgid "Cannot preview content"
+msgctxt "Orchard.Core.Contents.Controllers.ItemController"
+msgid "Cannot preview content"
+msgstr "Не возможно просмотреть контент"
+
+#: Orchard.Core.Contents.Rules.ContentEvents
+#| msgid "Content Items"
+msgctxt "Orchard.Core.Contents.Rules.ContentEvents"
+msgid "Content Items"
+msgstr "Элемент Контента"
+
+#: Orchard.Core.Contents.Rules.ContentEvents
+#| msgid "Content Created"
+msgctxt "Orchard.Core.Contents.Rules.ContentEvents"
+msgid "Content Created"
+msgstr "Контент Создан"
+
+#: Orchard.Core.Contents.Rules.ContentEvents
+#| msgid "Content is actually created."
+msgctxt "Orchard.Core.Contents.Rules.ContentEvents"
+msgid "Content is actually created."
+msgstr "Контент был создан."
+
+#: Orchard.Core.Contents.Rules.ContentEvents
+#| msgid "When content with types ({0}) is created."
+msgctxt "Orchard.Core.Contents.Rules.ContentEvents"
+msgid "When content with types ({0}) is created."
+msgstr "Когда контент с типом ({0}) был создан."
+
+#: Orchard.Core.Contents.Rules.ContentEvents
+#| msgid "Content Versioned"
+msgctxt "Orchard.Core.Contents.Rules.ContentEvents"
+msgid "Content Versioned"
+msgstr "Контенту назначена Версия"
+
+#: Orchard.Core.Contents.Rules.ContentEvents
+#| msgid "Content is actually versioned."
+msgctxt "Orchard.Core.Contents.Rules.ContentEvents"
+msgid "Content is actually versioned."
+msgstr "Контенту была назначена версия."
+
+#: Orchard.Core.Contents.Rules.ContentEvents
+#| msgid "When content with types ({0}) is versioned."
+msgctxt "Orchard.Core.Contents.Rules.ContentEvents"
+msgid "When content with types ({0}) is versioned."
+msgstr "Когда контенту с типом ({0}) была присвоена версия."
+
+#: Orchard.Core.Contents.Rules.ContentEvents
+#| msgid "Content Published"
+msgctxt "Orchard.Core.Contents.Rules.ContentEvents"
+msgid "Content Published"
+msgstr "Контент Опубликован"
+
+#: Orchard.Core.Contents.Rules.ContentEvents
+#| msgid "Content is actually published."
+msgctxt "Orchard.Core.Contents.Rules.ContentEvents"
+msgid "Content is actually published."
+msgstr "Контент был опубликован."
+
+#: Orchard.Core.Contents.Rules.ContentEvents
+#| msgid "When content with types ({0}) is published."
+msgctxt "Orchard.Core.Contents.Rules.ContentEvents"
+msgid "When content with types ({0}) is published."
+msgstr "Когда контент с типом ({0}) был опубликован."
+
+#: Orchard.Core.Contents.Rules.ContentEvents
+#| msgid "Content Removed"
+msgctxt "Orchard.Core.Contents.Rules.ContentEvents"
+msgid "Content Removed"
+msgstr "Контент Удален"
+
+#: Orchard.Core.Contents.Rules.ContentEvents
+#| msgid "Content is actually removed."
+msgctxt "Orchard.Core.Contents.Rules.ContentEvents"
+msgid "Content is actually removed."
+msgstr "Контент был удален."
+
+#: Orchard.Core.Contents.Rules.ContentEvents
+#| msgid "When content with types ({0}) is removed."
+msgctxt "Orchard.Core.Contents.Rules.ContentEvents"
+msgid "When content with types ({0}) is removed."
+msgstr "Когда контент с типом ({0}) был удален."
+
+#: Orchard.Core.Contents.Rules.ContentEvents
+#| msgid "Any"
+msgctxt "Orchard.Core.Contents.Rules.ContentEvents"
+msgid "Any"
+msgstr "Любой"
+
+#: Orchard.Core.Contents.Rules.ContentForms
+#| msgid "Content types"
+msgctxt "Orchard.Core.Contents.Rules.ContentForms"
+msgid "Content types"
+msgstr "Тип контента"
+
+#: Orchard.Core.Contents.Rules.ContentForms
+#| msgid "Select some content types."
+msgctxt "Orchard.Core.Contents.Rules.ContentForms"
+msgid "Select some content types."
+msgstr "Выбирите тип контента"
+
+#: Orchard.Core.Contents.Rules.ContentForms
+#| msgid "Any"
+msgctxt "Orchard.Core.Contents.Rules.ContentForms"
+msgid "Any"
+msgstr "Любой"
+
+#: ~/Core/Contents/Views/Parts.Contents.Publish.SummaryAdmin.cshtml
+#| msgid "Preview"
+msgctxt "~/Core/Contents/Views/Parts.Contents.Publish.SummaryAdmin.cshtml"
+msgid "Preview"
+msgstr "Предварительный просмотр"
+
+#: ~/Core/Dashboard/Views/Admin/Index.cshtml
+#| msgid "Start by exploring the menu on the left and familiarize yourself with Orchard. As for the basics, we suggest <a href=""{0}"">changing the theme</a>, <a href=""{1}"">adding some pages</a>, <a href=""{2}"">setup up a blog</a>, and <a href=""{3}"">configuring basic settings</a>."
+msgctxt "~/Core/Dashboard/Views/Admin/Index.cshtml"
+msgid "Start by exploring the menu on the left and familiarize yourself with Orchard. As for the basics, we suggest <a href=""{0}"">changing the theme</a>, <a href=""{1}"">adding some pages</a>, <a href=""{2}"">setup up a blog</a>, and <a href=""{3}"">configuring basic settings</a>."
+msgstr "Начните с изучения меню слева для ознакомления с Orchard. Для начала мы советуем <a href=""{0}"">поменять тему</a>, <a href=""{1}"">добавить несколько страниц</a>, <a href=""{2}"">поставить блог</a>, и <a href=""{3}"">настроить основные параметры</a>."
+
+#: ~/Core/Dashboard/Views/Admin/Index.cshtml
+#| msgid "Change the way your site works and looks with <a href=""{0}"">themes</a> and <a href=""{1}"">modules</a>. There’s plenty to choose from in the <a href=""http://orchardproject.net/gallery"">Orchard Gallery</a>. We’re always adding things, so be sure to check back often to see what’s new."
+msgctxt "~/Core/Dashboard/Views/Admin/Index.cshtml"
+msgid "Change the way your site works and looks with <a href=""{0}"">themes</a> and <a href=""{1}"">modules</a>. There’s plenty to choose from in the <a href=""http://orchardproject.net/gallery"">Orchard Gallery</a>. We’re always adding things, so be sure to check back often to see what’s new."
+msgstr "Меняйте работу и внешний вид вашего сайта с помощью <a href=""{0}"">тем</a> и <a href=""{1}"">модулей</a>. <a href=""http://orchardproject.net/gallery"">Галерея Orchard </a> включает множество тем и модулей. Мы всегда что-нибудь добавляем, так что приходите почаще, чтобы найти что-нибудь новое."
+
+#: ~/Core/Dashboard/Views/Admin/Index.cshtml
+#| msgid "Are you ready to go deeper and become an Orchard expert? Take a look at the <a href=""http://orchardproject.net/docs/"">Orchard Documentation Wiki</a> to learn about how everything connects together and what makes Orchard tick."
+msgctxt "~/Core/Dashboard/Views/Admin/Index.cshtml"
+msgid "Are you ready to go deeper and become an Orchard expert? Take a look at the <a href=""http://orchardproject.net/docs/"">Orchard Documentation Wiki</a> to learn about how everything connects together and what makes Orchard tick."
+msgstr "Вы готовы углубленно изучить и стать экспертом по Orchard? Взгляните на <a href=""http://orchardproject.net/docs/"">Документация Wiki Orchard</a>, чтобы узнать, как все связать вместе и почему Orchard работает, как часы."
+
+#: ~/Core/Dashboard/Views/Admin/Index.cshtml
+#| msgid "Find friends that share your interest of Orchard. There are a couple ways that you can <a href=""http://orchardproject.net/discussions"">discuss and get connected</a> to the project including mailing lists, forums and IRC."
+msgctxt "~/Core/Dashboard/Views/Admin/Index.cshtml"
+msgid "Find friends that share your interest of Orchard. There are a couple ways that you can <a href=""http://orchardproject.net/discussions"">discuss and get connected</a> to the project including mailing lists, forums and IRC."
+msgstr "Находите друзей, который разделяют Ваши интересы в Orchard.  Есть несколько способов для <a href=""http://orchardproject.net/discussions"">обсуждения и быть на связи</a> всего, что происходит с проектом, включая, почтовую рассылку, форумы и IRC."
+
+#: ~/Core/Dashboard/Views/Admin/Index.cshtml
+#| msgid "Help grow Orchard. We encourage contributions of all sorts, including code submissions, documentation, translations, feature recommendations, and more.Here are some ways to  <a href=""http://orchardproject.net/contribution"">give back to the project</a>."
+msgctxt "~/Core/Dashboard/Views/Admin/Index.cshtml"
+msgid "Help grow Orchard. We encourage contributions of all sorts, including code submissions, documentation, translations, feature recommendations, and more.Here are some ways to  <a href=""http://orchardproject.net/contribution"">give back to the project</a>."
+msgstr "Помогайте Orchard расти. Мы поощряем любое участие, включая вклады в исходные коды, документацию, перевод, рекомендацию идей и многое другое. Здесь описано несколько способов <a href=""http://orchardproject.net/contribution"">помощи проекту</a>."
+
+#: Orchard.Core.Routable.Controllers.ItemController
+#| msgid "Should not have passed path constraint"
+msgctxt "Orchard.Core.Routable.Controllers.ItemController"
+msgid "Should not have passed path constraint"
+msgstr "Не обязан удволетворять ограничениям пути"
+
+#: ~/Core/Shapes/Views/User.cshtml
+#| msgid "Dashboard"
+msgctxt "~/Core/Shapes/Views/User.cshtml"
+msgid "Dashboard"
+msgstr "Инструментальная панель"
+
+#: ~/Core/Title/Views/EditorTemplates/Parts.Title.TitlePart.cshtml
+#| msgid "Title"
+msgctxt "~/Core/Title/Views/EditorTemplates/Parts.Title.TitlePart.cshtml"
+msgid "Title"
+msgstr "Заголовок"
+
+#: 
+#| msgid "Name"
+msgctxt ""
+msgid "Common"
+msgstr "Обще"
+
+#: ~/Core/Common/Module.txt
+#| msgid "Common Description"
+msgctxt "~/Core/Common/Module.txt"
+msgid "Core content parts."
+msgstr "Части содержимого ядра."
+
+#: ~/Core/Common/Module.txt
+#| msgid "Common Category"
+msgctxt "~/Core/Common/Module.txt"
+msgid "Core"
+msgstr "Ядро"
+
+#: ~/Core/Contents/Module.txt
+#| msgid "Contents Description"
+msgctxt "~/Core/Contents/Module.txt"
+msgid "Default custom content type definition, creation and management."
+msgstr "Объявления типов содержимого по умолчанию, создание и управление."
+
+#: ~/Core/Contents/Module.txt
+#| msgid "Contents Category"
+msgctxt "~/Core/Contents/Module.txt"
+msgid "Core"
+msgstr "Ядро"
+
+#: ~/Core/Dashboard/Module.txt
+#| msgid "Dashboard Description"
+msgctxt "~/Core/Dashboard/Module.txt"
+msgid "Standard admin dashboard."
+msgstr "Стандартная панель управления администратора."
+
+#: ~/Core/Dashboard/Module.txt
+#| msgid "Dashboard Category"
+msgctxt "~/Core/Dashboard/Module.txt"
+msgid "Core"
+msgstr "Ядро"
+
+#: ~/Core/Feeds/Module.txt
+#| msgid "Feeds Description"
+msgctxt "~/Core/Feeds/Module.txt"
+msgid "RSS feeds for content items."
+msgstr "Лента RSS для пунктов содержимого."
+
+#: ~/Core/Feeds/Module.txt
+#| msgid "Feeds Category"
+msgctxt "~/Core/Feeds/Module.txt"
+msgid "Syndication"
+msgstr "Синдикация"
+
+#: ~/Core/HomePage/Module.txt
+#| msgid "HomePage Description"
+msgctxt "~/Core/HomePage/Module.txt"
+msgid "Standard site home page that allows a specified content type or container to *be* the home page."
+msgstr "Стандартная домашняя страница сайта, которая позволяет выбранному типу содержимого или контейнеру *быть* домашней страницей."
+
+#: ~/Core/HomePage/Module.txt
+#| msgid "HomePage Category"
+msgctxt "~/Core/HomePage/Module.txt"
+msgid "Core"
+msgstr "Ядро"
+
+#: ~/Core/Navigation/Module.txt
+#| msgid "Navigation Description"
+msgctxt "~/Core/Navigation/Module.txt"
+msgid "Menu management."
+msgstr "Управление меню."
+
+#: ~/Core/Navigation/Module.txt
+#| msgid "Navigation Category"
+msgctxt "~/Core/Navigation/Module.txt"
+msgid "Core"
+msgstr "Ядро"
+
+#: ~/Core/Reports/Module.txt
+#| msgid "Reports Description"
+msgctxt "~/Core/Reports/Module.txt"
+msgid "Reports management."
+msgstr "Управление отчетами."
+
+#: ~/Core/Reports/Module.txt
+#| msgid "Reports Category"
+msgctxt "~/Core/Reports/Module.txt"
+msgid "Core"
+msgstr "Ядро"
+
+#: ~/Core/Routable/Module.txt
+#| msgid "Routable Description"
+msgctxt "~/Core/Routable/Module.txt"
+msgid "Routable content part."
+msgstr "Маршрутизируемая часть содержимого."
+
+#: ~/Core/Routable/Module.txt
+#| msgid "Routable Category"
+msgctxt "~/Core/Routable/Module.txt"
+msgid "Core"
+msgstr "Ядро"
+
+#: ~/Core/Scheduling/Module.txt
+#| msgid "Scheduling Description"
+msgctxt "~/Core/Scheduling/Module.txt"
+msgid "Scheduled background tasks."
+msgstr "Запланированные фоновые задачи."
+
+#: ~/Core/Scheduling/Module.txt
+#| msgid "Scheduling Category"
+msgctxt "~/Core/Scheduling/Module.txt"
+msgid "Core"
+msgstr "Ядро"
+
+#: ~/Core/Settings/Module.txt
+#| msgid "Settings Description"
+msgctxt "~/Core/Settings/Module.txt"
+msgid "Site settings."
+msgstr "Настройки сайта."
+
+#: ~/Core/Settings/Module.txt
+#| msgid "Settings Category"
+msgctxt "~/Core/Settings/Module.txt"
+msgid "Core"
+msgstr "Ядро"
+
+#: ~/Core/Shapes/Module.txt
+#| msgid "Shapes Description"
+msgctxt "~/Core/Shapes/Module.txt"
+msgid "Core shape templates and display hooks."
+msgstr "Основные шаблоны и хуки отображения."
+
+#: ~/Core/Shapes/Module.txt
+#| msgid "Shapes Category"
+msgctxt "~/Core/Shapes/Module.txt"
+msgid "Core"
+msgstr "Ядро"
+
+#: ~/Core/XmlRpc/Module.txt
+#| msgid "XmlRpc Description"
+msgctxt "~/Core/XmlRpc/Module.txt"
+msgid "XML-RPC opt-in implementation."
+msgstr "Имплементация XML-RPC opt-in."
+
+#: ~/Core/XmlRpc/Module.txt
+#| msgid "XmlRpc Category"
+msgctxt "~/Core/XmlRpc/Module.txt"
+msgid "Content Publishing"
+msgstr "Публикация Содержимого"
+
+#: ~/Core/Common/Views/EditorTemplates/Parts/Common.Body.cshtml
+#| msgid "Body"
+msgctxt "~/Core/Common/Views/EditorTemplates/Parts/Common.Body.cshtml"
+msgid "Body"
+msgstr "Тело"
+
+#: ~/Core/Dashboard/Views/Admin/Index.cshtml
+#| msgid "This is the place where you can manage your web site, its appearance and its contents. Please take a moment to explore the different menu items on the left of the screen to familiarize yourself with the features of the application. For example, try to change the theme through the ג€Manage Themesג€ menu entry. You can also create new pages and manage existing ones through the ג€Manage Pagesג€ menu entry or create blogs through ג€Manage Blogsג€."
+msgctxt "~/Core/Dashboard/Views/Admin/Index.cshtml"
+msgid "This is the place where you can manage your web site, its appearance and its contents. Please take a moment to explore the different menu items on the left of the screen to familiarize yourself with the features of the application. For example, try to change the theme through the ג€Manage Themesג€ menu entry. You can also create new pages and manage existing ones through the ג€Manage Pagesג€ menu entry or create blogs through ג€Manage Blogsג€."
+msgstr "Это место, где вы можете управлять вашим веб сайтом, его внешним видом и содержимым. Пожалуйста, уделите внимание ознакомлению с различными пунктами меню в левой части экрана для того, чтобы быть в курсе возможностей данного приложения. Например, попробуйте изменить тему через пункт 'Управление Темами'. Вы также можете создавать новые страницы, и управлять существующими через пункт 'Управление Страницами', или создавать блоги, используя пункт 'Управление Блогами'."
+
+#: ~/Core/Navigation/Views/EditorTemplates/Parts/Navigation.Menu.Edit.cshtml
+#| msgid "Show on main menu"
+msgctxt "~/Core/Navigation/Views/EditorTemplates/Parts/Navigation.Menu.Edit.cshtml"
+msgid "Show on main menu"
+msgstr "Показывать в главном меню"
+
+#: ~/Core/Navigation/Views/EditorTemplates/Parts/Navigation.Menu.Edit.cshtml
+#| msgid "Menu text"
+msgctxt "~/Core/Navigation/Views/EditorTemplates/Parts/Navigation.Menu.Edit.cshtml"
+msgid "Menu text"
+msgstr "Текст меню"
+
+#: Orchard.Core.Routable.Drivers.RoutePartDriver
+#| msgid "Slugs in conflict. \"{0}\" is already set for a previously created {2} so now it has the slug \"{1}\""
+msgctxt "Orchard.Core.Routable.Drivers.RoutePartDriver"
+msgid "Slugs in conflict. \"{0}\" is already set for a previously created {2} so now it has the slug \"{1}\""
+msgstr "Конфликт заголовков. \"{0}\" уже установлен для ранее созданного {2}, так что он имеет заголовок \"{1}\""
+
+#: ~/Core/Settings/Views/EditorTemplates/Parts/Settings.SiteSettingsPart.cshtml
+#| msgid "Global Settings"
+msgctxt "~/Core/Settings/Views/EditorTemplates/Parts/Settings.SiteSettingsPart.cshtml"
+msgid "Global Settings"
+msgstr "Глобальные Настройки"
+
+#: ~/Core/Settings/Views/EditorTemplates/Parts/Settings.SiteSettingsPart.cshtml
+#| msgid "Site name"
+msgctxt "~/Core/Settings/Views/EditorTemplates/Parts/Settings.SiteSettingsPart.cshtml"
+msgid "Site name"
+msgstr "Название сайта"
+
+#: ~/Core/Settings/Views/EditorTemplates/Parts/Settings.SiteSettingsPart.cshtml
+#| msgid "Default Site Culture"
+msgctxt "~/Core/Settings/Views/EditorTemplates/Parts/Settings.SiteSettingsPart.cshtml"
+msgid "Default Site Culture"
+msgstr "Культура по умолчанию"
+
+#: ~/Core/Settings/Views/EditorTemplates/Parts/Settings.SiteSettingsPart.cshtml
+#| msgid "Add or remove supported cultures for the site."
+msgctxt "~/Core/Settings/Views/EditorTemplates/Parts/Settings.SiteSettingsPart.cshtml"
+msgid "Add or remove supported cultures for the site."
+msgstr "Добавить или удалить поддерживаемые культуры для сайта."
+
+#: ~/Core/Settings/Views/EditorTemplates/Parts/Settings.SiteSettingsPart.cshtml
+#| msgid "Page title separator"
+msgctxt "~/Core/Settings/Views/EditorTemplates/Parts/Settings.SiteSettingsPart.cshtml"
+msgid "Page title separator"
+msgstr "Разделитель заголовка страницы"
+
+#: ~/Core/Settings/Views/EditorTemplates/Parts/Settings.SiteSettingsPart.cshtml
+#| msgid "Super user"
+msgctxt "~/Core/Settings/Views/EditorTemplates/Parts/Settings.SiteSettingsPart.cshtml"
+msgid "Super user"
+msgstr "Суперпользователь"
+
+#: ~/Core/Settings/Views/EditorTemplates/Parts/Settings.SiteSettingsPart.cshtml
+#| msgid "Resource Debug Mode"
+msgctxt "~/Core/Settings/Views/EditorTemplates/Parts/Settings.SiteSettingsPart.cshtml"
+msgid "Resource Debug Mode"
+msgstr "Режим отладки ресурсов"
+
+#: ~/Core/Settings/Views/EditorTemplates/Parts/Settings.SiteSettingsPart.cshtml
+#| msgid "Determines whether scripts and stylesheets load in their debuggable or minified form."
+msgctxt "~/Core/Settings/Views/EditorTemplates/Parts/Settings.SiteSettingsPart.cshtml"
+msgid "Determines whether scripts and stylesheets load in their debuggable or minified form."
+msgstr "Определяет, что скрипт или таблица стилей загружаются в отладочной или минимизированной форме."
+
+#: Orchard.Core.Containers.Drivers.ContainerPartDriver
+#| msgid "(Any)"
+msgctxt "Orchard.Core.Containers.Drivers.ContainerPartDriver"
+msgid "(Any)"
+msgstr "(Любой)"
+
+#: ~/Core/Containers/Views/EditorTemplates/Container.cshtml
+#| msgid "Contains"
+msgctxt "~/Core/Containers/Views/EditorTemplates/Container.cshtml"
+msgid "Contains"
+msgstr "Содержит"
+
+#: ~/Core/Containers/Views/EditorTemplates/Container.cshtml
+#| msgid "Only types with the Containable part can be contained in a list."
+msgctxt "~/Core/Containers/Views/EditorTemplates/Container.cshtml"
+msgid "Only types with the Containable part can be contained in a list."
+msgstr "Тоолько типы с частью Containable могут содержаться в списке."
+
+#: ~/Core/Containers/Views/EditorTemplates/Container.cshtml
+#| msgid "Date Created"
+msgctxt "~/Core/Containers/Views/EditorTemplates/Container.cshtml"
+msgid "Date Created"
+msgstr "Дате создания"
+
+#: ~/Core/Containers/Views/EditorTemplates/ContainerWidget.cshtml
+#| msgid "Date Created"
+msgctxt "~/Core/Containers/Views/EditorTemplates/ContainerWidget.cshtml"
+msgid "Date Created"
+msgstr "Дате создания"
+
+#: ~/Core/Contents/Views/Content.SummaryAdmin.cshtml
+#| msgid "Delete"
+msgctxt "~/Core/Contents/Views/Content.SummaryAdmin.cshtml"
+msgid "Delete"
+msgstr "Удалить"
+
+#: ~/Core/Contents/Views/Admin/Create.cshtml
+#| msgid "New {0}"
+msgctxt "~/Core/Contents/Views/Admin/Create.cshtml"
+msgid "New {0}"
+msgstr "Новый {0}"
+
+#: ~/Core/Contents/Views/Admin/List.cshtml
+#| msgid "Delete"
+msgctxt "~/Core/Contents/Views/Admin/List.cshtml"
+msgid "Delete"
+msgstr "Удалить"
+
+#: ~/Core/Dashboard/Views/Admin/Index.cshtml
+#| msgid "changing the theme"
+msgctxt "~/Core/Dashboard/Views/Admin/Index.cshtml"
+msgid "changing the theme"
+msgstr "смена темы"
+
+#: ~/Core/Dashboard/Views/Admin/Index.cshtml
+#| msgid "adding some pages"
+msgctxt "~/Core/Dashboard/Views/Admin/Index.cshtml"
+msgid "adding some pages"
+msgstr "добавление страниц"
+
+#: ~/Core/Dashboard/Views/Admin/Index.cshtml
+#| msgid "setup up a blog"
+msgctxt "~/Core/Dashboard/Views/Admin/Index.cshtml"
+msgid "setup up a blog"
+msgstr "настройка блога"
+
+#: ~/Core/Dashboard/Views/Admin/Index.cshtml
+#| msgid "configuring basic settings"
+msgctxt "~/Core/Dashboard/Views/Admin/Index.cshtml"
+msgid "configuring basic settings"
+msgstr "конфигурирование базовых установок"
+
+#: ~/Core/Dashboard/Views/Admin/Index.cshtml
+#| msgid "themes"
+msgctxt "~/Core/Dashboard/Views/Admin/Index.cshtml"
+msgid "themes"
+msgstr "темы"
+
+#: ~/Core/Dashboard/Views/Admin/Index.cshtml
+#| msgid "modules"
+msgctxt "~/Core/Dashboard/Views/Admin/Index.cshtml"
+msgid "modules"
+msgstr "модули"
+
+#: ~/Core/Dashboard/Views/Admin/Index.cshtml
+#| msgid "Stay up to date."
+msgctxt "~/Core/Dashboard/Views/Admin/Index.cshtml"
+msgid "Stay up to date."
+msgstr "Будьте в курсе событий."
+
+#: Orchard.Core.Navigation.Commands.MenuCommands
+#| msgid "Menu item created successfully."
+msgctxt "Orchard.Core.Navigation.Commands.MenuCommands"
+msgid "Menu item created successfully."
+msgstr "Элемент меню успешно создан."
+
+#: Orchard.Core.Navigation.Drivers.AdminMenuPartDriver
+#| msgid "The AdminMenuText field is required"
+msgctxt "Orchard.Core.Navigation.Drivers.AdminMenuPartDriver"
+msgid "The AdminMenuText field is required"
+msgstr "Поле AdminMenuText обязательно"
+
+#: ~/Core/Navigation/Views/Admin/Index.cshtml
+#| msgid "Navigation"
+msgctxt "~/Core/Navigation/Views/Admin/Index.cshtml"
+msgid "Navigation"
+msgstr "Навигация"
+
+#: ~/Core/Navigation/Views/Admin/Index.cshtml
+#| msgid "Delete"
+msgctxt "~/Core/Navigation/Views/Admin/Index.cshtml"
+msgid "Delete"
+msgstr "Удалить"
+
+#: ~/Core/Navigation/Views/DefinitionTemplates/AdminMenuPartTypeSettings.cshtml
+#| msgid "Default Position"
+msgctxt "~/Core/Navigation/Views/DefinitionTemplates/AdminMenuPartTypeSettings.cshtml"
+msgid "Default Position"
+msgstr "Позиция по умолчанию"
+
+#: ~/Core/Navigation/Views/EditorTemplates/Parts.Navigation.AdminMenu.Edit.cshtml
+#| msgid "Show on admin menu"
+msgctxt "~/Core/Navigation/Views/EditorTemplates/Parts.Navigation.AdminMenu.Edit.cshtml"
+msgid "Show on admin menu"
+msgstr "Показывать в меню панели управления"
+
+#: ~/Core/Navigation/Views/EditorTemplates/Parts.Navigation.AdminMenu.Edit.cshtml
+#| msgid "Menu text"
+msgctxt "~/Core/Navigation/Views/EditorTemplates/Parts.Navigation.AdminMenu.Edit.cshtml"
+msgid "Menu text"
+msgstr "Текст меню"
+
+#: ~/Core/Navigation/Views/EditorTemplates/Parts.Navigation.AdminMenu.Edit.cshtml
+#| msgid "Position"
+msgctxt "~/Core/Navigation/Views/EditorTemplates/Parts.Navigation.AdminMenu.Edit.cshtml"
+msgid "Position"
+msgstr "Позиция"
+
+#: Orchard.Core.Reports.AdminMenu
+#| msgid "View"
+msgctxt "Orchard.Core.Reports.AdminMenu"
+msgid "View"
+msgstr "Показать"
+
+#: ~/Core/Reports/Views/Admin/Index.cshtml
+#| msgid "Reports"
+msgctxt "~/Core/Reports/Views/Admin/Index.cshtml"
+msgid "Reports"
+msgstr "Отчеты"
+
+#: Orchard.Core.Routable.Drivers.RoutePartDriver
+#| msgid "The \".\" can't be used at either end of the permalink."
+msgctxt "Orchard.Core.Routable.Drivers.RoutePartDriver"
+msgid "The \".\" can't be used at either end of the permalink."
+msgstr "Символ «.» не может быть использован в окончании прямой ссылки."
+
+#: Orchard.Core.Routable.Drivers.RoutePartDriver
+#| msgid "Please do not use any of the following characters in your permalink: \":\", \"?\", \"#\", \"[\", \"]\", \"@\", \"!\", \"$\", \"&\", \"'\", \"(\", \")\", \"*\", \"+\", \",\", \";\", \"=\", \", \"<\", \">\", \"\\\". No spaces are allowed (please use dashes or underscores instead)."
+msgctxt "Orchard.Core.Routable.Drivers.RoutePartDriver"
+msgid "Please do not use any of the following characters in your permalink: \":\", \"?\", \"#\", \"[\", \"]\", \"@\", \"!\", \"$\", \"&\", \"'\", \"(\", \")\", \"*\", \"+\", \",\", \";\", \"=\", \", \"<\", \">\", \"\\\". No spaces are allowed (please use dashes or underscores instead)."
+msgstr "Пожалуйста, не используйте следующие символы в прямой ссылке: «:», «?», «#», «[», «]», «@», «!», «$», «&», «'», «(», «)», «*», «+», «,», «;», «=», «<», «>», «». Пробелы недопустимы (пожалуйста, используйте тире или нижнюю черту взамен)."
+
+#: Orchard.Core.Routable.Handlers.RoutePartHandler
+#| msgid "Permalinks in conflict. \"{0}\" is already set for a previously created {2} so now it has the slug \"{1}\""
+msgctxt "Orchard.Core.Routable.Handlers.RoutePartHandler"
+msgid "Permalinks in conflict. \"{0}\" is already set for a previously created {2} so now it has the slug \"{1}\""
+msgstr "Конфликт прямых ссылок. «{0}» уже присвоен ранее созданному {2} и сейчас обладает ярлыком «{1}»"
+
+#: Orchard.Core.Settings.AdminMenu
+#| msgid "General"
+msgctxt "Orchard.Core.Settings.AdminMenu"
+msgid "General"
+msgstr "Общие"
+
+#: Orchard.Core.Settings.Drivers.SiteSettingsPartDriver
+#| msgid "The base url must be absolute."
+msgctxt "Orchard.Core.Settings.Drivers.SiteSettingsPartDriver"
+msgid "The base url must be absolute."
+msgstr "Базовый URL должен быть абсолютным."
+
+#: Orchard.Core.Settings.Drivers.SiteSettingsPartDriver
+#| msgid "The base url you entered could not be requested from current location."
+msgctxt "Orchard.Core.Settings.Drivers.SiteSettingsPartDriver"
+msgid "The base url you entered could not be requested from current location."
+msgstr "Заданный базовый URL невозможно запросить с текущего расположения."
+
+#: ~/Core/Settings/Views/Admin/Index.cshtml
+#| msgid "Settings"
+msgctxt "~/Core/Settings/Views/Admin/Index.cshtml"
+msgid "Settings"
+msgstr "Настройки"
+
+#: ~/Core/Settings/Views/EditorTemplates/Parts.Settings.SiteSettingsPart.cshtml
+#| msgid "General"
+msgctxt "~/Core/Settings/Views/EditorTemplates/Parts.Settings.SiteSettingsPart.cshtml"
+msgid "General"
+msgstr "Общее"
+
+#: ~/Core/Settings/Views/EditorTemplates/Parts.Settings.SiteSettingsPart.cshtml
+#| msgid "Base url "
+msgctxt "~/Core/Settings/Views/EditorTemplates/Parts.Settings.SiteSettingsPart.cshtml"
+msgid "Base url "
+msgstr "Базовый URL"
+
+#: ~/Core/Settings/Views/EditorTemplates/Parts.Settings.SiteSettingsPart.cshtml
+#| msgid "Enter the fully qualified base url of your website."
+msgctxt "~/Core/Settings/Views/EditorTemplates/Parts.Settings.SiteSettingsPart.cshtml"
+msgid "Enter the fully qualified base url of your website."
+msgstr "Укажите базовый URL вашего сайта полностью."
+
+#: ~/Core/Settings/Views/EditorTemplates/Parts.Settings.SiteSettingsPart.cshtml
+#| msgid "e.g., http://localhost:30320/orchardlocal, http://www.yourdomain.com"
+msgctxt "~/Core/Settings/Views/EditorTemplates/Parts.Settings.SiteSettingsPart.cshtml"
+msgid "e.g., http://localhost:30320/orchardlocal, http://www.yourdomain.com"
+msgstr "т.е., http://localhost:30320/orchardlocal, http://www.yourdomain.com"
+
+#: ~/Core/Common/Module.txt
+#| msgid "Author"
+msgctxt "~/Core/Common/Module.txt"
+msgid "The Orchard Team"
+msgstr "Команда Orchard"
+
+#: ~/Core/Common/Module.txt
+#| msgid "Website"
+msgctxt "~/Core/Common/Module.txt"
+msgid "http://orchardproject.net"
+msgstr "http://orchardproject.net"
+
+#: ~/Core/Common/Module.txt
+#| msgid "Description"
+msgctxt "~/Core/Common/Module.txt"
+msgid "The common module introduces content parts that are going to be used by most content types (common, body and routable)."
+msgstr "Общий модуль предоставляет части содержимого, которые могут быть использованы в большинстве типов контента (общий, тело и маршрутный)."
+
+#: ~/Core/Common/Module.txt
+#| msgid "Common.Description"
+msgctxt "~/Core/Common/Module.txt"
+msgid "Core content parts."
+msgstr "Части содержимого ядра."
+
+#: ~/Core/Common/Module.txt
+#| msgid "Common.Category"
+msgctxt "~/Core/Common/Module.txt"
+msgid "Core"
+msgstr "Ядро"
+
+#: ~/Core/Containers/Module.txt
+#| msgid "Name"
+msgctxt "~/Core/Containers/Module.txt"
+msgid "Containers"
+msgstr "Контейнеры"
+
+#: ~/Core/Containers/Module.txt
+#| msgid "Author"
+msgctxt "~/Core/Containers/Module.txt"
+msgid "The Orchard Team"
+msgstr "Команда Orchard"
+
+#: ~/Core/Containers/Module.txt
+#| msgid "Website"
+msgctxt "~/Core/Containers/Module.txt"
+msgid "http://orchardproject.net"
+msgstr "http://orchardproject.net"
+
+#: ~/Core/Containers/Module.txt
+#| msgid "Description"
+msgctxt "~/Core/Containers/Module.txt"
+msgid "The containers module introduces container and containable behaviors for content items."
+msgstr "Модуль Containers представляет собой контейнер и контейнерные поведения для элементов контента."
+
+#: ~/Core/Containers/Module.txt
+#| msgid "Containers.Description"
+msgctxt "~/Core/Containers/Module.txt"
+msgid "Container and containable parts to enable parent-child relationships between content items."
+msgstr "Контейнер и содержательные части для использования связи родитель-ребенок между пунктами."
+
+#: ~/Core/Containers/Module.txt
+#| msgid "Containers.Category"
+msgctxt "~/Core/Containers/Module.txt"
+msgid "Content"
+msgstr "Содержимое"
+
+#: ~/Core/Contents/Module.txt
+#| msgid "Name"
+msgctxt "~/Core/Contents/Module.txt"
+msgid "Contents"
+msgstr "Контент"
+
+#: ~/Core/Contents/Module.txt
+#| msgid "Author"
+msgctxt "~/Core/Contents/Module.txt"
+msgid "The Orchard Team"
+msgstr "Команда Orchard"
+
+#: ~/Core/Contents/Module.txt
+#| msgid "Website"
+msgctxt "~/Core/Contents/Module.txt"
+msgid "http://orchardproject.net"
+msgstr "http://orchardproject.net"
+
+#: ~/Core/Contents/Module.txt
+#| msgid "Description"
+msgctxt "~/Core/Contents/Module.txt"
+msgid "The contents module enables the creation of custom content types."
+msgstr "Модуль контента дает возможность создания пользовательских типов контента."
+
+#: ~/Core/Contents/Module.txt
+#| msgid "Contents.Description"
+msgctxt "~/Core/Contents/Module.txt"
+msgid "Default custom content type definition, creation and management."
+msgstr "Объявления типов содержимого по умолчанию, создание и управление."
+
+#: ~/Core/Contents/Module.txt
+#| msgid "Contents.Category"
+msgctxt "~/Core/Contents/Module.txt"
+msgid "Core"
+msgstr "Ядро"
+
+#: ~/Core/Dashboard/Module.txt
+#| msgid "Name"
+msgctxt "~/Core/Dashboard/Module.txt"
+msgid "Dashboard"
+msgstr "Панель управления"
+
+#: ~/Core/Dashboard/Module.txt
+#| msgid "Author"
+msgctxt "~/Core/Dashboard/Module.txt"
+msgid "The Orchard Team"
+msgstr "Команда Orchard"
+
+#: ~/Core/Dashboard/Module.txt
+#| msgid "Website"
+msgctxt "~/Core/Dashboard/Module.txt"
+msgid "http://orchardproject.net"
+msgstr "http://orchardproject.net"
+
+#: ~/Core/Dashboard/Module.txt
+#| msgid "Description"
+msgctxt "~/Core/Dashboard/Module.txt"
+msgid "The dashboard module is providing the dashboard screen of the admininstration UI of the application."
+msgstr "Модуль Dashboard предоставляет панель управления администрированием приложения."
+
+#: ~/Core/Dashboard/Module.txt
+#| msgid "Dashboard.Description"
+msgctxt "~/Core/Dashboard/Module.txt"
+msgid "Standard admin dashboard."
+msgstr "Стандартная панель управления администратора."
+
+#: ~/Core/Dashboard/Module.txt
+#| msgid "Dashboard.Category"
+msgctxt "~/Core/Dashboard/Module.txt"
+msgid "Core"
+msgstr "Ядро"
+
+#: ~/Core/Feeds/Module.txt
+#| msgid "Name"
+msgctxt "~/Core/Feeds/Module.txt"
+msgid "Feeds"
+msgstr "Каналы"
+
+#: ~/Core/Feeds/Module.txt
+#| msgid "Author"
+msgctxt "~/Core/Feeds/Module.txt"
+msgid "The Orchard Team"
+msgstr "Команда Orchard"
+
+#: ~/Core/Feeds/Module.txt
+#| msgid "Website"
+msgctxt "~/Core/Feeds/Module.txt"
+msgid "http://orchardproject.net"
+msgstr "http://orchardproject.net"
+
+#: ~/Core/Feeds/Module.txt
+#| msgid "Description"
+msgctxt "~/Core/Feeds/Module.txt"
+msgid "The Feeds module is providing RSS feeds to content items."
+msgstr "Модуль Feeds предоставляет RSS каналы для элементов контента."
+
+#: ~/Core/Feeds/Module.txt
+#| msgid "Feeds.Description"
+msgctxt "~/Core/Feeds/Module.txt"
+msgid "RSS feeds for content items."
+msgstr "Лента RSS для пунктов содержимого."
+
+#: ~/Core/Feeds/Module.txt
+#| msgid "Feeds.Category"
+msgctxt "~/Core/Feeds/Module.txt"
+msgid "Syndication"
+msgstr "Синдикация"
+
+#: ~/Core/HomePage/Module.txt
+#| msgid "Name"
+msgctxt "~/Core/HomePage/Module.txt"
+msgid "HomePage"
+msgstr "Домашняя страница"
+
+#: ~/Core/HomePage/Module.txt
+#| msgid "Author"
+msgctxt "~/Core/HomePage/Module.txt"
+msgid "The Orchard Team"
+msgstr "Команда Orchard"
+
+#: ~/Core/HomePage/Module.txt
+#| msgid "Website"
+msgctxt "~/Core/HomePage/Module.txt"
+msgid "http://orchardproject.net"
+msgstr "http://orchardproject.net"
+
+#: ~/Core/HomePage/Module.txt
+#| msgid "Description"
+msgctxt "~/Core/HomePage/Module.txt"
+msgid "The HomePage module enables the promotion of a content item or container to be the home page of the site."
+msgstr "Модуль Homepage позволяет управлять содержимым главной страницы сайта."
+
+#: ~/Core/HomePage/Module.txt
+#| msgid "HomePage.Description"
+msgctxt "~/Core/HomePage/Module.txt"
+msgid "Standard site home page that allows a specified content type or container to *be* the home page."
+msgstr "Стандартная домашняя страница сайта, которая позволяет выбранному типу содержимого или контейнеру *быть* домашней страницей."
+
+#: ~/Core/HomePage/Module.txt
+#| msgid "HomePage.Category"
+msgctxt "~/Core/HomePage/Module.txt"
+msgid "Core"
+msgstr "Ядро"
+
+#: ~/Core/Navigation/Module.txt
+#| msgid "Name"
+msgctxt "~/Core/Navigation/Module.txt"
+msgid "Navigation"
+msgstr "Навигация"
+
+#: ~/Core/Navigation/Module.txt
+#| msgid "Author"
+msgctxt "~/Core/Navigation/Module.txt"
+msgid "The Orchard Team"
+msgstr "Команда Orchard"
+
+#: ~/Core/Navigation/Module.txt
+#| msgid "Website"
+msgctxt "~/Core/Navigation/Module.txt"
+msgid "http://orchardproject.net"
+msgstr "http://orchardproject.net"
+
+#: ~/Core/Navigation/Module.txt
+#| msgid "Description"
+msgctxt "~/Core/Navigation/Module.txt"
+msgid "The navigation module creates and manages a simple navigation menu for the front-end of the application."
+msgstr "Модуль Navigation создает и управляет простейшим навигационным меню для витрины сайта."
+
+#: ~/Core/Navigation/Module.txt
+#| msgid "Navigation.Description"
+msgctxt "~/Core/Navigation/Module.txt"
+msgid "Menu management."
+msgstr "Управление меню."
+
+#: ~/Core/Navigation/Module.txt
+#| msgid "Navigation.Category"
+msgctxt "~/Core/Navigation/Module.txt"
+msgid "Core"
+msgstr "Ядро"
+
+#: ~/Core/Reports/Module.txt
+#| msgid "Name"
+msgctxt "~/Core/Reports/Module.txt"
+msgid "Reports"
+msgstr "Журнал"
+
+#: ~/Core/Reports/Module.txt
+#| msgid "Author"
+msgctxt "~/Core/Reports/Module.txt"
+msgid "The Orchard Team"
+msgstr "Команда Orchard"
+
+#: ~/Core/Reports/Module.txt
+#| msgid "Website"
+msgctxt "~/Core/Reports/Module.txt"
+msgid "http://orchardproject.net"
+msgstr "http://orchardproject.net"
+
+#: ~/Core/Reports/Module.txt
+#| msgid "Description"
+msgctxt "~/Core/Reports/Module.txt"
+msgid "The dashboard module is providing the reports screen of the application."
+msgstr "Модуль Dashboard предоставляет экран журнала приложения."
+
+#: ~/Core/Reports/Module.txt
+#| msgid "Reports.Description"
+msgctxt "~/Core/Reports/Module.txt"
+msgid "Reports management."
+msgstr "Управление отчетами."
+
+#: ~/Core/Reports/Module.txt
+#| msgid "Reports.Category"
+msgctxt "~/Core/Reports/Module.txt"
+msgid "Core"
+msgstr "Ядро"
+
+#: ~/Core/Routable/Module.txt
+#| msgid "Name"
+msgctxt "~/Core/Routable/Module.txt"
+msgid "Routable"
+msgstr "Маршрутный"
+
+#: ~/Core/Routable/Module.txt
+#| msgid "Author"
+msgctxt "~/Core/Routable/Module.txt"
+msgid "The Orchard Team"
+msgstr "Команда Orchard"
+
+#: ~/Core/Routable/Module.txt
+#| msgid "Website"
+msgctxt "~/Core/Routable/Module.txt"
+msgid "http://orchardproject.net"
+msgstr "http://orchardproject.net"
+
+#: ~/Core/Routable/Module.txt
+#| msgid "Description"
+msgctxt "~/Core/Routable/Module.txt"
+msgid "The routable module enables content items to be accessed through a friendly human-readable URL."
+msgstr "Модуль Routable позволяет элементам контента быть доступными по человеко-понятным URL."
+
+#: ~/Core/Routable/Module.txt
+#| msgid "Routable.Description"
+msgctxt "~/Core/Routable/Module.txt"
+msgid "Routable content part."
+msgstr "Маршрутизируемая часть содержимого."
+
+#: ~/Core/Routable/Module.txt
+#| msgid "Routable.Category"
+msgctxt "~/Core/Routable/Module.txt"
+msgid "Core"
+msgstr "Ядро"
+
+#: ~/Core/Scheduling/Module.txt
+#| msgid "Name"
+msgctxt "~/Core/Scheduling/Module.txt"
+msgid "Scheduling"
+msgstr "Расписание"
+
+#: ~/Core/Scheduling/Module.txt
+#| msgid "Author"
+msgctxt "~/Core/Scheduling/Module.txt"
+msgid "The Orchard Team"
+msgstr "Команда Orchard"
+
+#: ~/Core/Scheduling/Module.txt
+#| msgid "Website"
+msgctxt "~/Core/Scheduling/Module.txt"
+msgid "http://orchardproject.net"
+msgstr "http://orchardproject.net"
+
+#: ~/Core/Scheduling/Module.txt
+#| msgid "Description"
+msgctxt "~/Core/Scheduling/Module.txt"
+msgid "The scheduling module enables background task scheduling."
+msgstr "Модуль Scheduling позволяет выполнять задачи в фоне."
+
+#: ~/Core/Scheduling/Module.txt
+#| msgid "Scheduling.Description"
+msgctxt "~/Core/Scheduling/Module.txt"
+msgid "Scheduled background tasks."
+msgstr "Запланированные фоновые задачи."
+
+#: ~/Core/Scheduling/Module.txt
+#| msgid "Scheduling.Category"
+msgctxt "~/Core/Scheduling/Module.txt"
+msgid "Core"
+msgstr "Ядро"
+
+#: ~/Core/Settings/Module.txt
+#| msgid "Name"
+msgctxt "~/Core/Settings/Module.txt"
+msgid "Settings"
+msgstr "Настройки"
+
+#: ~/Core/Settings/Module.txt
+#| msgid "Author"
+msgctxt "~/Core/Settings/Module.txt"
+msgid "The Orchard Team"
+msgstr "Команда Orchard"
+
+#: ~/Core/Settings/Module.txt
+#| msgid "Website"
+msgctxt "~/Core/Settings/Module.txt"
+msgid "http://orchardproject.net"
+msgstr "http://orchardproject.net"
+
+#: ~/Core/Settings/Module.txt
+#| msgid "Description"
+msgctxt "~/Core/Settings/Module.txt"
+msgid "The settings module creates site settings that other modules can contribute to."
+msgstr "Модуль Settings создает настройки сайта, которые могут быть использованы другими модулями."
+
+#: ~/Core/Settings/Module.txt
+#| msgid "Settings.Description"
+msgctxt "~/Core/Settings/Module.txt"
+msgid "Site settings."
+msgstr "Настройки сайта."
+
+#: ~/Core/Settings/Module.txt
+#| msgid "Settings.Category"
+msgctxt "~/Core/Settings/Module.txt"
+msgid "Core"
+msgstr "Ядро"
+
+#: ~/Core/Shapes/Module.txt
+#| msgid "Name"
+msgctxt "~/Core/Shapes/Module.txt"
+msgid "Shapes"
+msgstr "Фигуры"
+
+#: ~/Core/Shapes/Module.txt
+#| msgid "Author"
+msgctxt "~/Core/Shapes/Module.txt"
+msgid "The Orchard Team"
+msgstr "Команда Orchard"
+
+#: ~/Core/Shapes/Module.txt
+#| msgid "Website"
+msgctxt "~/Core/Shapes/Module.txt"
+msgid "http://orchardproject.net"
+msgstr "http://orchardproject.net"
+
+#: ~/Core/Shapes/Module.txt
+#| msgid "Description"
+msgctxt "~/Core/Shapes/Module.txt"
+msgid "The shapes module contains core shape templates and display hooks."
+msgstr "Модуль Shapes содержит базовый шаблоны и ловушки отображения."
+
+#: ~/Core/Shapes/Module.txt
+#| msgid "Shapes.Description"
+msgctxt "~/Core/Shapes/Module.txt"
+msgid "Core shape templates and display hooks."
+msgstr "Основные шаблоны и хуки отображения."
+
+#: ~/Core/Shapes/Module.txt
+#| msgid "Shapes.Category"
+msgctxt "~/Core/Shapes/Module.txt"
+msgid "Core"
+msgstr "Ядро"
+
+#: ~/Core/XmlRpc/Module.txt
+#| msgid "Name"
+msgctxt "~/Core/XmlRpc/Module.txt"
+msgid "XmlRpc"
+msgstr "XmlRpc"
+
+#: ~/Core/XmlRpc/Module.txt
+#| msgid "Author"
+msgctxt "~/Core/XmlRpc/Module.txt"
+msgid "The Orchard Team"
+msgstr "Команда Orchard"
+
+#: ~/Core/XmlRpc/Module.txt
+#| msgid "Website"
+msgctxt "~/Core/XmlRpc/Module.txt"
+msgid "http://orchardproject.net"
+msgstr "http://orchardproject.net"
+
+#: ~/Core/XmlRpc/Module.txt
+#| msgid "Description"
+msgctxt "~/Core/XmlRpc/Module.txt"
+msgid "The XmlRpc module enables creation of contents from client applications such as LiveWriter."
+msgstr "Модуль XmlRpc дает возможность создания контента клиентскими приложениями подобные LiveWriter."
+
+#: ~/Core/XmlRpc/Module.txt
+#| msgid "XmlRpc.Description"
+msgctxt "~/Core/XmlRpc/Module.txt"
+msgid "XML-RPC opt-in implementation."
+msgstr "Реализаций XML-RPC opt-in."
+
+#: ~/Core/XmlRpc/Module.txt
+#| msgid "XmlRpc.Category"
+msgctxt "~/Core/XmlRpc/Module.txt"
+msgid "Content Publishing"
+msgstr "Публикация Содержимого"
+
+#: Orchard.Core.Common.Shapes
+#| msgid "Draft"
+msgctxt "Orchard.Core.Common.Shapes"
+msgid "Draft"
+msgstr "Черновик"
+
+#: Orchard.Core.Common.Shapes
+#| msgid "as a Draft"
+msgctxt "Orchard.Core.Common.Shapes"
+msgid "as a Draft"
+msgstr "как черновик"
+
+#: Orchard.Core.Common.Drivers.CommonPartDriver
+#| msgid "Invalid user name"
+msgctxt "Orchard.Core.Common.Drivers.CommonPartDriver"
+msgid "Invalid user name"
+msgstr "Недопустимое имя пользователя"
+
+#: Orchard.Core.Common.Drivers.CommonPartDriver
+#| msgid "Invalid container"
+msgctxt "Orchard.Core.Common.Drivers.CommonPartDriver"
+msgid "Invalid container"
+msgstr "Недопустимый контейнер"
+
+#: ~/Core/Common/Views/Parts.Common.Body.Summary.cshtml
+#| msgid "more"
+msgctxt "~/Core/Common/Views/Parts.Common.Body.Summary.cshtml"
+msgid "more"
+msgstr "подробнее"
+
+#: ~/Core/Common/Views/Parts.Common.Metadata.SummaryAdmin.cshtml
+#| msgid "Last modified: {0}"
+msgctxt "~/Core/Common/Views/Parts.Common.Metadata.SummaryAdmin.cshtml"
+msgid "Last modified: {0}"
+msgstr "Последнее изменение: {0}"
+
+#: ~/Core/Common/Views/DefinitionTemplates/BodyPartSettings.cshtml
+#| msgid "Default flavor"
+msgctxt "~/Core/Common/Views/DefinitionTemplates/BodyPartSettings.cshtml"
+msgid "Default flavor"
+msgstr "Аромат по умолчанию"
+
+#: ~/Core/Common/Views/DefinitionTemplates/BodyTypePartSettings.cshtml
+#| msgid "Flavor"
+msgctxt "~/Core/Common/Views/DefinitionTemplates/BodyTypePartSettings.cshtml"
+msgid "Flavor"
+msgstr "Аромат"
+
+#: ~/Core/Common/Views/EditorTemplates/Parts.Common.Body.cshtml
+#| msgid "Body"
+msgctxt "~/Core/Common/Views/EditorTemplates/Parts.Common.Body.cshtml"
+msgid "Body"
+msgstr "Тело"
+
+#: ~/Core/Common/Views/EditorTemplates/Parts.Common.Owner.cshtml
+#| msgid "Owner"
+msgctxt "~/Core/Common/Views/EditorTemplates/Parts.Common.Owner.cshtml"
+msgid "Owner"
+msgstr "Владелец"
+
+#: Orchard.Core.Containers.Drivers.ContainablePartDriver
+#| msgid "(None)"
+msgctxt "Orchard.Core.Containers.Drivers.ContainablePartDriver"
+msgid "(None)"
+msgstr "(Никуда)"
+
+#: Orchard.Core.Containers.Drivers.ContainerPartDriver
+#| msgid "There are no content types in the system with a Containable part attached. Consider adding a Containable part to some content type, existing or new, in order to relate items to this (Container enabled) item."
+msgctxt "Orchard.Core.Containers.Drivers.ContainerPartDriver"
+msgid "There are no content types in the system with a Containable part attached. Consider adding a Containable part to some content type, existing or new, in order to relate items to this (Container enabled) item."
+msgstr "В системе отсутствуют типы контента с прикрепленной частью вложения. Рассмотрите возможность добавления части вложения в некоторый тип, существующий или новый, с целью связать с этим элементом (в качестве контейнера)."
+
+#: Orchard.Core.Containers.Drivers.ContainerWidgetPartDriver
+#| msgid "(None - create container enabled items first)"
+msgctxt "Orchard.Core.Containers.Drivers.ContainerWidgetPartDriver"
+msgid "(None - create container enabled items first)"
+msgstr "(Никуда — создайте элемент контейнера для начала)"
+
+#: ~/Core/Containers/Views/Parts.Container.Contained.SummaryAdmin.cshtml
+#| msgid "Contained Items"
+msgctxt "~/Core/Containers/Views/Parts.Container.Contained.SummaryAdmin.cshtml"
+msgid "Contained Items"
+msgstr "Содержащиеся пункты"
+
+#: ~/Core/Containers/Views/Parts.Container.Contained.SummaryAdmin.cshtml
+#| msgid " | "
+msgctxt "~/Core/Containers/Views/Parts.Container.Contained.SummaryAdmin.cshtml"
+msgid " | "
+msgstr " | "
+
+#: ~/Core/Containers/Views/DefinitionTemplates/ContainerPartSettings.cshtml
+#| msgid "Default Page Size"
+msgctxt "~/Core/Containers/Views/DefinitionTemplates/ContainerPartSettings.cshtml"
+msgid "Default Page Size"
+msgstr "Размер страницы по умолчанию"
+
+#: ~/Core/Containers/Views/DefinitionTemplates/ContainerPartSettings.cshtml
+#| msgid "Show paging controls"
+msgctxt "~/Core/Containers/Views/DefinitionTemplates/ContainerPartSettings.cshtml"
+msgid "Show paging controls"
+msgstr "Показывать постраничную навигацию"
+
+#: ~/Core/Containers/Views/DefinitionTemplates/ContainerTypePartSettings.cshtml
+#| msgid "Default Page Size"
+msgctxt "~/Core/Containers/Views/DefinitionTemplates/ContainerTypePartSettings.cshtml"
+msgid "Default Page Size"
+msgstr "Размер страницы по умолчанию"
+
+#: ~/Core/Containers/Views/DefinitionTemplates/ContainerTypePartSettings.cshtml
+#| msgid "Show paging controls"
+msgctxt "~/Core/Containers/Views/DefinitionTemplates/ContainerTypePartSettings.cshtml"
+msgid "Show paging controls"
+msgstr "Показывать постраничную навигацию"
+
+#: ~/Core/Containers/Views/EditorTemplates/Containable.cshtml
+#| msgid "Add to"
+msgctxt "~/Core/Containers/Views/EditorTemplates/Containable.cshtml"
+msgid "Add to"
+msgstr "Добавить к"
+
+#: ~/Core/Containers/Views/EditorTemplates/Container.cshtml
+#| msgid "Order by"
+msgctxt "~/Core/Containers/Views/EditorTemplates/Container.cshtml"
+msgid "Order by"
+msgstr "Сортировать по"
+
+#: ~/Core/Containers/Views/EditorTemplates/Container.cshtml
+#| msgid "Date Published"
+msgctxt "~/Core/Containers/Views/EditorTemplates/Container.cshtml"
+msgid "Date Published"
+msgstr "Дате публикации"
+
+#: ~/Core/Containers/Views/EditorTemplates/Container.cshtml
+#| msgid "Title"
+msgctxt "~/Core/Containers/Views/EditorTemplates/Container.cshtml"
+msgid "Title"
+msgstr "Заголовок"
+
+#: ~/Core/Containers/Views/EditorTemplates/Container.cshtml
+#| msgid "Slug"
+msgctxt "~/Core/Containers/Views/EditorTemplates/Container.cshtml"
+msgid "Slug"
+msgstr "Ярлык"
+
+#: ~/Core/Containers/Views/EditorTemplates/Container.cshtml
+#| msgid "Custom 1"
+msgctxt "~/Core/Containers/Views/EditorTemplates/Container.cshtml"
+msgid "Custom 1"
+msgstr "Пользовательской 1"
+
+#: ~/Core/Containers/Views/EditorTemplates/Container.cshtml
+#| msgid "Custom 2"
+msgctxt "~/Core/Containers/Views/EditorTemplates/Container.cshtml"
+msgid "Custom 2"
+msgstr "Пользовательской 2"
+
+#: ~/Core/Containers/Views/EditorTemplates/Container.cshtml
+#| msgid "Custom 3"
+msgctxt "~/Core/Containers/Views/EditorTemplates/Container.cshtml"
+msgid "Custom 3"
+msgstr "Пользовательской 3"
+
+#: ~/Core/Containers/Views/EditorTemplates/Container.cshtml
+#| msgid "Ascending"
+msgctxt "~/Core/Containers/Views/EditorTemplates/Container.cshtml"
+msgid "Ascending"
+msgstr "По возростанию"
+
+#: ~/Core/Containers/Views/EditorTemplates/Container.cshtml
+#| msgid "Descending"
+msgctxt "~/Core/Containers/Views/EditorTemplates/Container.cshtml"
+msgid "Descending"
+msgstr "По убыванию"
+
+#: ~/Core/Containers/Views/EditorTemplates/Container.cshtml
+#| msgid "Page size"
+msgctxt "~/Core/Containers/Views/EditorTemplates/Container.cshtml"
+msgid "Page size"
+msgstr "Размер страницы"
+
+#: ~/Core/Containers/Views/EditorTemplates/Container.cshtml
+#| msgid "Show paging controls"
+msgctxt "~/Core/Containers/Views/EditorTemplates/Container.cshtml"
+msgid "Show paging controls"
+msgstr "Показать страничный элементы управления"
+
+#: ~/Core/Containers/Views/EditorTemplates/ContainerWidget.cshtml
+#| msgid "Show items from"
+msgctxt "~/Core/Containers/Views/EditorTemplates/ContainerWidget.cshtml"
+msgid "Show items from"
+msgstr "Показать элементы из"
+
+#: ~/Core/Containers/Views/EditorTemplates/ContainerWidget.cshtml
+#| msgid "Maximum number of items to display"
+msgctxt "~/Core/Containers/Views/EditorTemplates/ContainerWidget.cshtml"
+msgid "Maximum number of items to display"
+msgstr "Максимальное количество элементов для отображения"
+
+#: ~/Core/Containers/Views/EditorTemplates/ContainerWidget.cshtml
+#| msgid "Order by"
+msgctxt "~/Core/Containers/Views/EditorTemplates/ContainerWidget.cshtml"
+msgid "Order by"
+msgstr "Сортировка"
+
+#: ~/Core/Containers/Views/EditorTemplates/ContainerWidget.cshtml
+#| msgid "Date Published"
+msgctxt "~/Core/Containers/Views/EditorTemplates/ContainerWidget.cshtml"
+msgid "Date Published"
+msgstr "Дата публикации"
+
+#: ~/Core/Containers/Views/EditorTemplates/ContainerWidget.cshtml
+#| msgid "Title"
+msgctxt "~/Core/Containers/Views/EditorTemplates/ContainerWidget.cshtml"
+msgid "Title"
+msgstr "Заголовок"
+
+#: ~/Core/Containers/Views/EditorTemplates/ContainerWidget.cshtml
+#| msgid "Slug"
+msgctxt "~/Core/Containers/Views/EditorTemplates/ContainerWidget.cshtml"
+msgid "Slug"
+msgstr "Ярлык"
+
+#: ~/Core/Containers/Views/EditorTemplates/ContainerWidget.cshtml
+#| msgid "Custom 1"
+msgctxt "~/Core/Containers/Views/EditorTemplates/ContainerWidget.cshtml"
+msgid "Custom 1"
+msgstr "Пользовательское 1"
+
+#: ~/Core/Containers/Views/EditorTemplates/ContainerWidget.cshtml
+#| msgid "Custom 2"
+msgctxt "~/Core/Containers/Views/EditorTemplates/ContainerWidget.cshtml"
+msgid "Custom 2"
+msgstr "Пользовательское 2"
+
+#: ~/Core/Containers/Views/EditorTemplates/ContainerWidget.cshtml
+#| msgid "Custom 3"
+msgctxt "~/Core/Containers/Views/EditorTemplates/ContainerWidget.cshtml"
+msgid "Custom 3"
+msgstr "Пользовательское 3"
+
+#: ~/Core/Containers/Views/EditorTemplates/ContainerWidget.cshtml
+#| msgid "Order direction"
+msgctxt "~/Core/Containers/Views/EditorTemplates/ContainerWidget.cshtml"
+msgid "Order direction"
+msgstr "Направление сортировки"
+
+#: ~/Core/Containers/Views/EditorTemplates/ContainerWidget.cshtml
+#| msgid "Ascending"
+msgctxt "~/Core/Containers/Views/EditorTemplates/ContainerWidget.cshtml"
+msgid "Ascending"
+msgstr "По возрастанию"
+
+#: ~/Core/Containers/Views/EditorTemplates/ContainerWidget.cshtml
+#| msgid "Descending"
+msgctxt "~/Core/Containers/Views/EditorTemplates/ContainerWidget.cshtml"
+msgid "Descending"
+msgstr "По убыванию"
+
+#: ~/Core/Containers/Views/EditorTemplates/ContainerWidget.cshtml
+#| msgid "Filter items"
+msgctxt "~/Core/Containers/Views/EditorTemplates/ContainerWidget.cshtml"
+msgid "Filter items"
+msgstr "Условия фильтра"
+
+#: ~/Core/Containers/Views/EditorTemplates/ContainerWidget.cshtml
+#| msgid "Filter where"
+msgctxt "~/Core/Containers/Views/EditorTemplates/ContainerWidget.cshtml"
+msgid "Filter where"
+msgstr "Фильтр где"
+
+#: ~/Core/Containers/Views/EditorTemplates/ContainerWidget.cshtml
+#| msgid "Filter operator"
+msgctxt "~/Core/Containers/Views/EditorTemplates/ContainerWidget.cshtml"
+msgid "Filter operator"
+msgstr "Оператор фильтра"
+
+#: ~/Core/Containers/Views/EditorTemplates/ContainerWidget.cshtml
+#| msgid "is equal to"
+msgctxt "~/Core/Containers/Views/EditorTemplates/ContainerWidget.cshtml"
+msgid "is equal to"
+msgstr "равно"
+
+#: ~/Core/Containers/Views/EditorTemplates/ContainerWidget.cshtml
+#| msgid "is less than"
+msgctxt "~/Core/Containers/Views/EditorTemplates/ContainerWidget.cshtml"
+msgid "is less than"
+msgstr "меньше, чем"
+
+#: ~/Core/Containers/Views/EditorTemplates/ContainerWidget.cshtml
+#| msgid "is greater than"
+msgctxt "~/Core/Containers/Views/EditorTemplates/ContainerWidget.cshtml"
+msgid "is greater than"
+msgstr "больше, чем"
+
+#: ~/Core/Containers/Views/EditorTemplates/ContainerWidget.cshtml
+#| msgid "starts with"
+msgctxt "~/Core/Containers/Views/EditorTemplates/ContainerWidget.cshtml"
+msgid "starts with"
+msgstr "начинается с"
+
+#: ~/Core/Containers/Views/EditorTemplates/ContainerWidget.cshtml
+#| msgid "Filter value"
+msgctxt "~/Core/Containers/Views/EditorTemplates/ContainerWidget.cshtml"
+msgid "Filter value"
+msgstr "Значение фильтра"
+
+#: ~/Core/Containers/Views/EditorTemplates/CustomProperties.cshtml
+#| msgid "Custom One"
+msgctxt "~/Core/Containers/Views/EditorTemplates/CustomProperties.cshtml"
+msgid "Custom One"
+msgstr "Пользовательский Один"
+
+#: ~/Core/Containers/Views/EditorTemplates/CustomProperties.cshtml
+#| msgid "Custom Two"
+msgctxt "~/Core/Containers/Views/EditorTemplates/CustomProperties.cshtml"
+msgid "Custom Two"
+msgstr "Пользовательский Два"
+
+#: ~/Core/Containers/Views/EditorTemplates/CustomProperties.cshtml
+#| msgid "Custom Three"
+msgctxt "~/Core/Containers/Views/EditorTemplates/CustomProperties.cshtml"
+msgid "Custom Three"
+msgstr "Пользовательский Три"
+
+#: Orchard.Core.Contents.AdminMenu
+#| msgid "Content"
+msgctxt "Orchard.Core.Contents.AdminMenu"
+msgid "Content"
+msgstr "Контент"
+
+#: Orchard.Core.Contents.AdminMenu
+#| msgid "Content Items"
+msgctxt "Orchard.Core.Contents.AdminMenu"
+msgid "Content Items"
+msgstr "Элементы контента"
+
+#: Orchard.Core.Contents.AdminMenu
+#| msgid "New"
+msgctxt "Orchard.Core.Contents.AdminMenu"
+msgid "New"
+msgstr "Создать"
+
+#: Orchard.Core.Contents.Controllers.AdminController
+#| msgid "Couldn't publish selected content."
+msgctxt "Orchard.Core.Contents.Controllers.AdminController"
+msgid "Couldn't publish selected content."
+msgstr "Не удалось опубликовать выбранный контент."
+
+#: Orchard.Core.Contents.Controllers.AdminController
+#| msgid "Content successfully published."
+msgctxt "Orchard.Core.Contents.Controllers.AdminController"
+msgid "Content successfully published."
+msgstr "Контент успешно опубликован."
+
+#: Orchard.Core.Contents.Controllers.AdminController
+#| msgid "Couldn't unpublish selected content."
+msgctxt "Orchard.Core.Contents.Controllers.AdminController"
+msgid "Couldn't unpublish selected content."
+msgstr "Не удалось скрыть выбранный контент."
+
+#: Orchard.Core.Contents.Controllers.AdminController
+#| msgid "Content successfully unpublished."
+msgctxt "Orchard.Core.Contents.Controllers.AdminController"
+msgid "Content successfully unpublished."
+msgstr "Контент успешно скрыт."
+
+#: Orchard.Core.Contents.Controllers.AdminController
+#| msgid "Couldn't remove selected content."
+msgctxt "Orchard.Core.Contents.Controllers.AdminController"
+msgid "Couldn't remove selected content."
+msgstr "Не удалось удалить выбранный контент."
+
+#: Orchard.Core.Contents.Controllers.AdminController
+#| msgid "Content successfully removed."
+msgctxt "Orchard.Core.Contents.Controllers.AdminController"
+msgid "Content successfully removed."
+msgstr "Контент успешно удален."
+
+#: Orchard.Core.Contents.Controllers.AdminController
+#| msgid "Cannot create content"
+msgctxt "Orchard.Core.Contents.Controllers.AdminController"
+msgid "Cannot create content"
+msgstr "Невозможно создать контент"
+
+#: Orchard.Core.Contents.Controllers.AdminController
+#| msgid "Couldn't create content"
+msgctxt "Orchard.Core.Contents.Controllers.AdminController"
+msgid "Couldn't create content"
+msgstr "Не удалось создать контент"
+
+#: Orchard.Core.Contents.Controllers.AdminController
+#| msgid "Your content has been created."
+msgctxt "Orchard.Core.Contents.Controllers.AdminController"
+msgid "Your content has been created."
+msgstr "Ваш контент создан."
+
+#: Orchard.Core.Contents.Controllers.AdminController
+#| msgid "Your {0} has been created."
+msgctxt "Orchard.Core.Contents.Controllers.AdminController"
+msgid "Your {0} has been created."
+msgstr "Ваш {0} создан."
+
+#: Orchard.Core.Contents.Controllers.AdminController
+#| msgid "Cannot edit content"
+msgctxt "Orchard.Core.Contents.Controllers.AdminController"
+msgid "Cannot edit content"
+msgstr "Невозможно править контент"
+
+#: Orchard.Core.Contents.Controllers.AdminController
+#| msgid "Couldn't publish content"
+msgctxt "Orchard.Core.Contents.Controllers.AdminController"
+msgid "Couldn't publish content"
+msgstr "Не удалось опубликовать контент"
+
+#: Orchard.Core.Contents.Controllers.AdminController
+#| msgid "Couldn't edit content"
+msgctxt "Orchard.Core.Contents.Controllers.AdminController"
+msgid "Couldn't edit content"
+msgstr "Не удалось править контент"
+
+#: Orchard.Core.Contents.Controllers.AdminController
+#| msgid "Your content has been saved."
+msgctxt "Orchard.Core.Contents.Controllers.AdminController"
+msgid "Your content has been saved."
+msgstr "Ваш контент сохранен."
+
+#: Orchard.Core.Contents.Controllers.AdminController
+#| msgid "Your {0} has been saved."
+msgctxt "Orchard.Core.Contents.Controllers.AdminController"
+msgid "Your {0} has been saved."
+msgstr "Ваш {0} сохранен."
+
+#: Orchard.Core.Contents.Controllers.AdminController
+#| msgid "Couldn't remove content"
+msgctxt "Orchard.Core.Contents.Controllers.AdminController"
+msgid "Couldn't remove content"
+msgstr "Невозможно удалить контент"
+
+#: Orchard.Core.Contents.Controllers.AdminController
+#| msgid "That content has been removed."
+msgctxt "Orchard.Core.Contents.Controllers.AdminController"
+msgid "That content has been removed."
+msgstr "Этот контент удален."
+
+#: Orchard.Core.Contents.Controllers.AdminController
+#| msgid "That {0} has been removed."
+msgctxt "Orchard.Core.Contents.Controllers.AdminController"
+msgid "That {0} has been removed."
+msgstr "Этот {0} удален."
+
+#: Orchard.Core.Contents.Controllers.AdminController
+#| msgid "That content has been published."
+msgctxt "Orchard.Core.Contents.Controllers.AdminController"
+msgid "That content has been published."
+msgstr "Этот контент опубликован."
+
+#: Orchard.Core.Contents.Controllers.AdminController
+#| msgid "That {0} has been published."
+msgctxt "Orchard.Core.Contents.Controllers.AdminController"
+msgid "That {0} has been published."
+msgstr "Этот {0} опубликован."
+
+#: Orchard.Core.Contents.Controllers.AdminController
+#| msgid "Couldn't unpublish content"
+msgctxt "Orchard.Core.Contents.Controllers.AdminController"
+msgid "Couldn't unpublish content"
+msgstr "Не удалось скрыть контент"
+
+#: Orchard.Core.Contents.Controllers.AdminController
+#| msgid "That content has been unpublished."
+msgctxt "Orchard.Core.Contents.Controllers.AdminController"
+msgid "That content has been unpublished."
+msgstr "Этот контент скрыт."
+
+#: Orchard.Core.Contents.Controllers.AdminController
+#| msgid "That {0} has been unpublished."
+msgctxt "Orchard.Core.Contents.Controllers.AdminController"
+msgid "That {0} has been unpublished."
+msgstr "Этот {0} скрыт."
+
+#: Orchard.Core.Contents.Controllers.ItemController
+#| msgid "Cannot edit content"
+msgctxt "Orchard.Core.Contents.Controllers.ItemController"
+msgid "Cannot edit content"
+msgstr "Невозможно изменить контент"
+
+#: ~/Core/Contents/Views/Content.ControlWrapper.cshtml
+#| msgid "Edit"
+msgctxt "~/Core/Contents/Views/Content.ControlWrapper.cshtml"
+msgid "Edit"
+msgstr "Править"
+
+#: ~/Core/Contents/Views/Content.PublishButton.cshtml
+#| msgid "Publish Now"
+msgctxt "~/Core/Contents/Views/Content.PublishButton.cshtml"
+msgid "Publish Now"
+msgstr "Опубликовать"
+
+#: ~/Core/Contents/Views/Content.SaveButton.cshtml
+#| msgid "Save"
+msgctxt "~/Core/Contents/Views/Content.SaveButton.cshtml"
+msgid "Save"
+msgstr "Сохранить"
+
+#: ~/Core/Contents/Views/Content.SummaryAdmin.cshtml
+#| msgid "Edit"
+msgctxt "~/Core/Contents/Views/Content.SummaryAdmin.cshtml"
+msgid "Edit"
+msgstr "Править"
+
+#: ~/Core/Contents/Views/Content.SummaryAdmin.cshtml
+#| msgid " | "
+msgctxt "~/Core/Contents/Views/Content.SummaryAdmin.cshtml"
+msgid " | "
+msgstr " | "
+
+#: ~/Core/Contents/Views/Content.SummaryAdmin.cshtml
+#| msgid "Remove"
+msgctxt "~/Core/Contents/Views/Content.SummaryAdmin.cshtml"
+msgid "Remove"
+msgstr "Удалить"
+
+#: ~/Core/Contents/Views/Parts.Contents.Publish.SummaryAdmin.cshtml
+#| msgid "View"
+msgctxt "~/Core/Contents/Views/Parts.Contents.Publish.SummaryAdmin.cshtml"
+msgid "View"
+msgstr "Показать"
+
+#: ~/Core/Contents/Views/Parts.Contents.Publish.SummaryAdmin.cshtml
+#| msgid " | "
+msgctxt "~/Core/Contents/Views/Parts.Contents.Publish.SummaryAdmin.cshtml"
+msgid " | "
+msgstr " | "
+
+#: ~/Core/Contents/Views/Parts.Contents.Publish.SummaryAdmin.cshtml
+#| msgid "Publish Draft"
+msgctxt "~/Core/Contents/Views/Parts.Contents.Publish.SummaryAdmin.cshtml"
+msgid "Publish Draft"
+msgstr "Опубликовать черновик"
+
+#: ~/Core/Contents/Views/Parts.Contents.Publish.SummaryAdmin.cshtml
+#| msgid "Unpublish"
+msgctxt "~/Core/Contents/Views/Parts.Contents.Publish.SummaryAdmin.cshtml"
+msgid "Unpublish"
+msgstr "Скрыть"
+
+#: ~/Core/Contents/Views/Parts.Contents.Publish.SummaryAdmin.cshtml
+#| msgid "Publish"
+msgctxt "~/Core/Contents/Views/Parts.Contents.Publish.SummaryAdmin.cshtml"
+msgid "Publish"
+msgstr "Опубликовать"
+
+#: ~/Core/Contents/Views/Admin/CreatableTypeList.cshtml
+#| msgid "Create New Content"
+msgctxt "~/Core/Contents/Views/Admin/CreatableTypeList.cshtml"
+msgid "Create New Content"
+msgstr "Создать"
+
+#: ~/Core/Contents/Views/Admin/Create.cshtml
+#| msgid "Create {0}"
+msgctxt "~/Core/Contents/Views/Admin/Create.cshtml"
+msgid "Create {0}"
+msgstr "Создать {0}"
+
+#: ~/Core/Contents/Views/Admin/Edit.cshtml
+#| msgid "Edit Content"
+msgctxt "~/Core/Contents/Views/Admin/Edit.cshtml"
+msgid "Edit Content"
+msgstr "Править контент"
+
+#: ~/Core/Contents/Views/Admin/Edit.cshtml
+#| msgid "Edit {0}"
+msgctxt "~/Core/Contents/Views/Admin/Edit.cshtml"
+msgid "Edit {0}"
+msgstr "Править {0}"
+
+#: ~/Core/Contents/Views/Admin/List.cshtml
+#| msgid "Manage Content"
+msgctxt "~/Core/Contents/Views/Admin/List.cshtml"
+msgid "Manage Content"
+msgstr "Управление контентом"
+
+#: ~/Core/Contents/Views/Admin/List.cshtml
+#| msgid "Create New Content"
+msgctxt "~/Core/Contents/Views/Admin/List.cshtml"
+msgid "Create New Content"
+msgstr "Создать"
+
+#: ~/Core/Contents/Views/Admin/List.cshtml
+#| msgid "Manage {0} Content"
+msgctxt "~/Core/Contents/Views/Admin/List.cshtml"
+msgid "Manage {0} Content"
+msgstr "Управление контентом {0}"
+
+#: ~/Core/Contents/Views/Admin/List.cshtml
+#| msgid "Create New {0}"
+msgctxt "~/Core/Contents/Views/Admin/List.cshtml"
+msgid "Create New {0}"
+msgstr "Создать {0}"
+
+#: ~/Core/Contents/Views/Admin/List.cshtml
+#| msgid "Actions:"
+msgctxt "~/Core/Contents/Views/Admin/List.cshtml"
+msgid "Actions:"
+msgstr "Действие:"
+
+#: ~/Core/Contents/Views/Admin/List.cshtml
+#| msgid "Choose action..."
+msgctxt "~/Core/Contents/Views/Admin/List.cshtml"
+msgid "Choose action..."
+msgstr "Выберите..."
+
+#: ~/Core/Contents/Views/Admin/List.cshtml
+#| msgid "Publish Now"
+msgctxt "~/Core/Contents/Views/Admin/List.cshtml"
+msgid "Publish Now"
+msgstr "Опубликовать"
+
+#: ~/Core/Contents/Views/Admin/List.cshtml
+#| msgid "Unpublish"
+msgctxt "~/Core/Contents/Views/Admin/List.cshtml"
+msgid "Unpublish"
+msgstr "Скрыть"
+
+#: ~/Core/Contents/Views/Admin/List.cshtml
+#| msgid "Remove"
+msgctxt "~/Core/Contents/Views/Admin/List.cshtml"
+msgid "Remove"
+msgstr "Удалить"
+
+#: ~/Core/Contents/Views/Admin/List.cshtml
+#| msgid "Apply"
+msgctxt "~/Core/Contents/Views/Admin/List.cshtml"
+msgid "Apply"
+msgstr "Применить"
+
+#: ~/Core/Contents/Views/Admin/List.cshtml
+#| msgid "Show"
+msgctxt "~/Core/Contents/Views/Admin/List.cshtml"
+msgid "Show"
+msgstr "Показать"
+
+#: ~/Core/Contents/Views/Admin/List.cshtml
+#| msgid "any (show all)"
+msgctxt "~/Core/Contents/Views/Admin/List.cshtml"
+msgid "any (show all)"
+msgstr "Все"
+
+#: ~/Core/Contents/Views/Admin/List.cshtml
+#| msgid "Ordered by"
+msgctxt "~/Core/Contents/Views/Admin/List.cshtml"
+msgid "Ordered by"
+msgstr "Сортировка"
+
+#: ~/Core/Contents/Views/Admin/List.cshtml
+#| msgid "recently created"
+msgctxt "~/Core/Contents/Views/Admin/List.cshtml"
+msgid "recently created"
+msgstr "Дата создания"
+
+#: ~/Core/Contents/Views/Admin/List.cshtml
+#| msgid "recently modified"
+msgctxt "~/Core/Contents/Views/Admin/List.cshtml"
+msgid "recently modified"
+msgstr "Дата изменения"
+
+#: ~/Core/Contents/Views/Admin/List.cshtml
+#| msgid "recently published"
+msgctxt "~/Core/Contents/Views/Admin/List.cshtml"
+msgid "recently published"
+msgstr "Дата публикации"
+
+#: Orchard.Core.Dashboard.AdminMenu
+#| msgid "Dashboard"
+msgctxt "Orchard.Core.Dashboard.AdminMenu"
+msgid "Dashboard"
+msgstr "Панель управления"
+
+#: Orchard.Core.Dashboard.AdminMenu
+#| msgid "Orchard"
+msgctxt "Orchard.Core.Dashboard.AdminMenu"
+msgid "Orchard"
+msgstr "Orchard"
+
+#: ~/Core/Dashboard/Views/Admin/Index.cshtml
+#| msgid "Welcome to Orchard"
+msgctxt "~/Core/Dashboard/Views/Admin/Index.cshtml"
+msgid "Welcome to Orchard"
+msgstr "Добро пожаловать в Orchard"
+
+#: ~/Core/Dashboard/Views/Admin/Index.cshtml
+#| msgid "This is the place where you can manage your web site, its appearance and its contents. Please take a moment to explore the different menu items on the left of the screen to familiarize yourself with the features of the application. For example, try to change the theme through the “Manage Themes” menu entry. You can also create new pages and manage existing ones through the “Manage Pages” menu entry or create blogs through “Manage Blogs”."
+msgctxt "~/Core/Dashboard/Views/Admin/Index.cshtml"
+msgid "This is the place where you can manage your web site, its appearance and its contents. Please take a moment to explore the different menu items on the left of the screen to familiarize yourself with the features of the application. For example, try to change the theme through the “Manage Themes” menu entry. You can also create new pages and manage existing ones through the “Manage Pages” menu entry or create blogs through “Manage Blogs”."
+msgstr "Это место, где вы можете управлять вашим веб сайтом, его внешним видом и содержимым. Пожалуйста, уделите внимание ознакомлению с различными пунктами меню в левой части экрана для того, чтобы быть в курсе возможностей данного приложения. Например, попробуйте изменить тему через пункт 'Управление Темами'. Вы также можете создавать новые страницы, и управлять существующими через пункт 'Управление Страницами', или создавать блоги, используя пункт 'Управление Блогами'."
+
+#: ~/Core/Dashboard/Views/Admin/Index.cshtml
+#| msgid "Have fun!"
+msgctxt "~/Core/Dashboard/Views/Admin/Index.cshtml"
+msgid "Have fun!"
+msgstr "Веселья!"
+
+#: ~/Core/Dashboard/Views/Admin/Index.cshtml
+#| msgid "The Orchard Team"
+msgctxt "~/Core/Dashboard/Views/Admin/Index.cshtml"
+msgid "The Orchard Team"
+msgstr "Команда Orchard"
+
+#: ~/Core/Dashboard/Views/Admin/Index.cshtml
+#| msgid "Your browser does not support iframes. You can't see advisory messages."
+msgctxt "~/Core/Dashboard/Views/Admin/Index.cshtml"
+msgid "Your browser does not support iframes. You can't see advisory messages."
+msgstr "Ваш браузер не поддерживает тег iframe. Невозможно увидеть сообщения с рекомендациями."
+
+#: Orchard.Core.Navigation.AdminMenu
+#| msgid "Navigation"
+msgctxt "Orchard.Core.Navigation.AdminMenu"
+msgid "Navigation"
+msgstr "Навигация"
+
+#: Orchard.Core.Navigation.AdminMenu
+#| msgid "Main Menu"
+msgctxt "Orchard.Core.Navigation.AdminMenu"
+msgid "Main Menu"
+msgstr "Главное меню"
+
+#: Orchard.Core.Navigation.Controllers.AdminController
+#| msgid "Not allowed to manage the main menu"
+msgctxt "Orchard.Core.Navigation.Controllers.AdminController"
+msgid "Not allowed to manage the main menu"
+msgstr "Не разрешено управление главным меню."
+
+#: Orchard.Core.Navigation.Controllers.AdminController
+#| msgid "Couldn't manage the main menu"
+msgctxt "Orchard.Core.Navigation.Controllers.AdminController"
+msgid "Couldn't manage the main menu"
+msgstr "Невозможно управление главным меню"
+
+#: Orchard.Core.Navigation.Drivers.MenuPartDriver
+#| msgid "The MenuText field is required"
+msgctxt "Orchard.Core.Navigation.Drivers.MenuPartDriver"
+msgid "The MenuText field is required"
+msgstr "Поле MenuText обязательно"
+
+#: ~/Core/Navigation/Views/Admin/Index.cshtml
+#| msgid "Manage Main Menu"
+msgctxt "~/Core/Navigation/Views/Admin/Index.cshtml"
+msgid "Manage Main Menu"
+msgstr "Управление Главным Меню"
+
+#: ~/Core/Navigation/Views/Admin/Index.cshtml
+#| msgid "Text"
+msgctxt "~/Core/Navigation/Views/Admin/Index.cshtml"
+msgid "Text"
+msgstr "Текст"
+
+#: ~/Core/Navigation/Views/Admin/Index.cshtml
+#| msgid "Position"
+msgctxt "~/Core/Navigation/Views/Admin/Index.cshtml"
+msgid "Position"
+msgstr "Позиция"
+
+#: ~/Core/Navigation/Views/Admin/Index.cshtml
+#| msgid "Url"
+msgctxt "~/Core/Navigation/Views/Admin/Index.cshtml"
+msgid "Url"
+msgstr "URL"
+
+#: ~/Core/Navigation/Views/Admin/Index.cshtml
+#| msgid "Remove"
+msgctxt "~/Core/Navigation/Views/Admin/Index.cshtml"
+msgid "Remove"
+msgstr "Удалить"
+
+#: ~/Core/Navigation/Views/Admin/Index.cshtml
+#| msgid "Update All"
+msgctxt "~/Core/Navigation/Views/Admin/Index.cshtml"
+msgid "Update All"
+msgstr "Обновить все"
+
+#: ~/Core/Navigation/Views/Admin/Index.cshtml
+#| msgid "Add New Item"
+msgctxt "~/Core/Navigation/Views/Admin/Index.cshtml"
+msgid "Add New Item"
+msgstr "Добавить новую запись"
+
+#: ~/Core/Navigation/Views/Admin/Index.cshtml
+#| msgid "Add"
+msgctxt "~/Core/Navigation/Views/Admin/Index.cshtml"
+msgid "Add"
+msgstr "Добавить"
+
+#: ~/Core/Navigation/Views/EditorTemplates/Parts.Navigation.Menu.Edit.cshtml
+#| msgid "Show on main menu"
+msgctxt "~/Core/Navigation/Views/EditorTemplates/Parts.Navigation.Menu.Edit.cshtml"
+msgid "Show on main menu"
+msgstr "Показывать в главном меню"
+
+#: ~/Core/Navigation/Views/EditorTemplates/Parts.Navigation.Menu.Edit.cshtml
+#| msgid "Menu text"
+msgctxt "~/Core/Navigation/Views/EditorTemplates/Parts.Navigation.Menu.Edit.cshtml"
+msgid "Menu text"
+msgstr "Текст меню"
+
+#: Orchard.Core.Reports.AdminMenu
+#| msgid "Configuration"
+msgctxt "Orchard.Core.Reports.AdminMenu"
+msgid "Configuration"
+msgstr "Конфигурация"
+
+#: Orchard.Core.Reports.AdminMenu
+#| msgid "Reports"
+msgctxt "Orchard.Core.Reports.AdminMenu"
+msgid "Reports"
+msgstr "Отчеты"
+
+#: Orchard.Core.Reports.Controllers.AdminController
+#| msgid "Not authorized to list reports"
+msgctxt "Orchard.Core.Reports.Controllers.AdminController"
+msgid "Not authorized to list reports"
+msgstr "Не допущен к журналу"
+
+#: Orchard.Core.Reports.Controllers.AdminController
+#| msgid "Not authorized to display report"
+msgctxt "Orchard.Core.Reports.Controllers.AdminController"
+msgid "Not authorized to display report"
+msgstr "Не допущен к просмотру журнала"
+
+#: ~/Core/Reports/Views/Admin/Display.cshtml
+#| msgid "Display Report"
+msgctxt "~/Core/Reports/Views/Admin/Display.cshtml"
+msgid "Display Report"
+msgstr "Отобразить журнал"
+
+#: ~/Core/Reports/Views/Admin/Display.cshtml
+#| msgid "This is a table of the reports in your application"
+msgctxt "~/Core/Reports/Views/Admin/Display.cshtml"
+msgid "This is a table of the reports in your application"
+msgstr "Это таблица журнала вашего приложения"
+
+#: ~/Core/Reports/Views/Admin/Display.cshtml
+#| msgid "Type"
+msgctxt "~/Core/Reports/Views/Admin/Display.cshtml"
+msgid "Type"
+msgstr "Тип"
+
+#: ~/Core/Reports/Views/Admin/Display.cshtml
+#| msgid "Message"
+msgctxt "~/Core/Reports/Views/Admin/Display.cshtml"
+msgid "Message"
+msgstr "Сообщение"
+
+#: ~/Core/Reports/Views/Admin/Display.cshtml
+#| msgid "Date"
+msgctxt "~/Core/Reports/Views/Admin/Display.cshtml"
+msgid "Date"
+msgstr "Дата"
+
+#: ~/Core/Reports/Views/Admin/Index.cshtml
+#| msgid "Manage Reports"
+msgctxt "~/Core/Reports/Views/Admin/Index.cshtml"
+msgid "Manage Reports"
+msgstr "Управление Отчетами"
+
+#: ~/Core/Reports/Views/Admin/Index.cshtml
+#| msgid "This is a table of the reports in your application"
+msgctxt "~/Core/Reports/Views/Admin/Index.cshtml"
+msgid "This is a table of the reports in your application"
+msgstr "Это таблица журнала вашего приложения"
+
+#: ~/Core/Reports/Views/Admin/Index.cshtml
+#| msgid "Name"
+msgctxt "~/Core/Reports/Views/Admin/Index.cshtml"
+msgid "Name"
+msgstr "Имя"
+
+#: ~/Core/Reports/Views/Admin/Index.cshtml
+#| msgid "Title"
+msgctxt "~/Core/Reports/Views/Admin/Index.cshtml"
+msgid "Title"
+msgstr "Название"
+
+#: ~/Core/Reports/Views/Admin/Index.cshtml
+#| msgid "Date"
+msgctxt "~/Core/Reports/Views/Admin/Index.cshtml"
+msgid "Date"
+msgstr "Дата"
+
+#: Orchard.Core.Routable.Controllers.ItemController
+#| msgid "404 - should not have passed path constraint"
+msgctxt "Orchard.Core.Routable.Controllers.ItemController"
+msgid "404 - should not have passed path constraint"
+msgstr "404 — не должны были пройти через ограничения пути"
+
+#: Orchard.Core.Routable.Controllers.ItemController
+#| msgid "Ambiguous content"
+msgctxt "Orchard.Core.Routable.Controllers.ItemController"
+msgid "Ambiguous content"
+msgstr "Неоднозначный контент"
+
+#: Orchard.Core.Routable.Drivers.RoutePartDriver
+#| msgid "The \".\" can't be used around routes."
+msgctxt "Orchard.Core.Routable.Drivers.RoutePartDriver"
+msgid "The \".\" can't be used around routes."
+msgstr "\".\" не может использоваться в маршрутизаторах."
+
+#: Orchard.Core.Routable.Drivers.RoutePartDriver
+#| msgid "Please do not use any of the following characters in your slugs: \":\", \"?\", \"#\", \"[\", \"]\", \"@\", \"!\", \"$\", \"&\", \"'\", \"(\", \")\", \"*\", \"+\", \",\", \";\", \"=\", \", \"<\", \">\". No spaces are allowed (please use dashes or underscores instead)."
+msgctxt "Orchard.Core.Routable.Drivers.RoutePartDriver"
+msgid "Please do not use any of the following characters in your slugs: \":\", \"?\", \"#\", \"[\", \"]\", \"@\", \"!\", \"$\", \"&\", \"'\", \"(\", \")\", \"*\", \"+\", \",\", \";\", \"=\", \", \"<\", \">\". No spaces are allowed (please use dashes or underscores instead)."
+msgstr "Пожалуйста, не используйте следующие символы в ваших slug: \":\", \"?\", \"#\", \"[\", \"]\", \"@\", \"!\", \"$\", \"&\", \"'\", \"(\", \")\", \"*\", \"+\", \",\", \";\", \"=\", \", \"<\", \">\". Пробелы также не разрешены (используйте дефисы или символы нижнего подчеркивания)."
+
+#: Orchard.Core.Routable.Handlers.RoutePartHandler
+#| msgid "Slugs in conflict. \"{0}\" is already set for a previously created {2} so now it has the slug \"{1}\""
+msgctxt "Orchard.Core.Routable.Handlers.RoutePartHandler"
+msgid "Slugs in conflict. \"{0}\" is already set for a previously created {2} so now it has the slug \"{1}\""
+msgstr "Конфликт заголовков. \"{0}\" уже установлен для ранее созданного {2}, так что он имеет заголовок \"{1}\""
+
+#: Orchard.Core.Routable.Services.RoutableHomePageProvider
+#| msgid "Invalid home page setting value for {0}: {1}"
+msgctxt "Orchard.Core.Routable.Services.RoutableHomePageProvider"
+msgid "Invalid home page setting value for {0}: {1}"
+msgstr "Недопустимое значение установки домашней страницы для {0}: {1}"
+
+#: ~/Core/Routable/Views/EditorTemplates/Parts.Routable.RoutePart.cshtml
+#| msgid "Title"
+msgctxt "~/Core/Routable/Views/EditorTemplates/Parts.Routable.RoutePart.cshtml"
+msgid "Title"
+msgstr "Заголовок"
+
+#: ~/Core/Routable/Views/EditorTemplates/Parts.Routable.RoutePart.cshtml
+#| msgid "Permalink"
+msgctxt "~/Core/Routable/Views/EditorTemplates/Parts.Routable.RoutePart.cshtml"
+msgid "Permalink"
+msgstr "Прямая ссылка"
+
+#: ~/Core/Routable/Views/EditorTemplates/Parts.Routable.RoutePart.cshtml
+#| msgid "Set as home page"
+msgctxt "~/Core/Routable/Views/EditorTemplates/Parts.Routable.RoutePart.cshtml"
+msgid "Set as home page"
+msgstr "Установить как главную"
+
+#: Orchard.Core.Settings.AdminMenu
+#| msgid "Configuration"
+msgctxt "Orchard.Core.Settings.AdminMenu"
+msgid "Configuration"
+msgstr "Конфигурация"
+
+#: Orchard.Core.Settings.AdminMenu
+#| msgid "Settings"
+msgctxt "Orchard.Core.Settings.AdminMenu"
+msgid "Settings"
+msgstr "Установки"
+
+#: Orchard.Core.Settings.Controllers.AdminController
+#| msgid "Not authorized to manage settings"
+msgctxt "Orchard.Core.Settings.Controllers.AdminController"
+msgid "Not authorized to manage settings"
+msgstr "Не авторизован для управления установками"
+
+#: Orchard.Core.Settings.Controllers.AdminController
+#| msgid "Settings updated"
+msgctxt "Orchard.Core.Settings.Controllers.AdminController"
+msgid "Settings updated"
+msgstr "Установки обновлены"
+
+#: Orchard.Core.Settings.Descriptor.ShellDescriptorManager
+#| msgid "Invalid serial number for shell descriptor"
+msgctxt "Orchard.Core.Settings.Descriptor.ShellDescriptorManager"
+msgid "Invalid serial number for shell descriptor"
+msgstr "Недопустимый серийный номер для дескриптора оболочки"
+
+#: Orchard.Core.Settings.Drivers.SiteSettingsPartDriver
+#| msgid "The user {0} was not found"
+msgctxt "Orchard.Core.Settings.Drivers.SiteSettingsPartDriver"
+msgid "The user {0} was not found"
+msgstr "Пользователь {0} не найден"
+
+#: ~/Core/Settings/Views/Admin/Culture.cshtml
+#| msgid "Cultures"
+msgctxt "~/Core/Settings/Views/Admin/Culture.cshtml"
+msgid "Cultures"
+msgstr "Культуры"
+
+#: ~/Core/Settings/Views/Admin/Culture.cshtml
+#| msgid "Manage Settings"
+msgctxt "~/Core/Settings/Views/Admin/Culture.cshtml"
+msgid "Manage Settings"
+msgstr "Управление настройками"
+
+#: ~/Core/Settings/Views/Admin/Culture.cshtml
+#| msgid " &#62; "
+msgctxt "~/Core/Settings/Views/Admin/Culture.cshtml"
+msgid " &#62; "
+msgstr " &#62; "
+
+#: ~/Core/Settings/Views/Admin/Culture.cshtml
+#| msgid "Supported Cultures"
+msgctxt "~/Core/Settings/Views/Admin/Culture.cshtml"
+msgid "Supported Cultures"
+msgstr "Поддерживаемые культуры"
+
+#: ~/Core/Settings/Views/Admin/Culture.cshtml
+#| msgid "Available Cultures"
+msgctxt "~/Core/Settings/Views/Admin/Culture.cshtml"
+msgid "Available Cultures"
+msgstr "Доступные культуры"
+
+#: ~/Core/Settings/Views/Admin/Culture.cshtml
+#| msgid "Add a culture..."
+msgctxt "~/Core/Settings/Views/Admin/Culture.cshtml"
+msgid "Add a culture..."
+msgstr "Добавить культуру..."
+
+#: ~/Core/Settings/Views/Admin/Culture.cshtml
+#| msgid "Other"
+msgctxt "~/Core/Settings/Views/Admin/Culture.cshtml"
+msgid "Other"
+msgstr "Другое"
+
+#: ~/Core/Settings/Views/Admin/Culture.cshtml
+#| msgid "Add"
+msgctxt "~/Core/Settings/Views/Admin/Culture.cshtml"
+msgid "Add"
+msgstr "Добавить"
+
+#: ~/Core/Settings/Views/Admin/Culture.cshtml
+#| msgid "Cultures this site supports"
+msgctxt "~/Core/Settings/Views/Admin/Culture.cshtml"
+msgid "Cultures this site supports"
+msgstr "Поддерживаемые культуры сайта"
+
+#: ~/Core/Settings/Views/Admin/Index.cshtml
+#| msgid "Manage Settings"
+msgctxt "~/Core/Settings/Views/Admin/Index.cshtml"
+msgid "Manage Settings"
+msgstr "Управление Настройками"
+
+#: ~/Core/Settings/Views/Admin/Index.cshtml
+#| msgid "Save"
+msgctxt "~/Core/Settings/Views/Admin/Index.cshtml"
+msgid "Save"
+msgstr "Сохранить"
+
+#: ~/Core/Settings/Views/DisplayTemplates/RemovableCulture.cshtml
+#| msgid "Delete"
+msgctxt "~/Core/Settings/Views/DisplayTemplates/RemovableCulture.cshtml"
+msgid "Delete"
+msgstr "Удалить"
+
+#: ~/Core/Settings/Views/EditorTemplates/Parts.Settings.SiteSettingsPart.cshtml
+#| msgid "Global Settings"
+msgctxt "~/Core/Settings/Views/EditorTemplates/Parts.Settings.SiteSettingsPart.cshtml"
+msgid "Global Settings"
+msgstr "Глобальные Настройки"
+
+#: ~/Core/Settings/Views/EditorTemplates/Parts.Settings.SiteSettingsPart.cshtml
+#| msgid "Site name"
+msgctxt "~/Core/Settings/Views/EditorTemplates/Parts.Settings.SiteSettingsPart.cshtml"
+msgid "Site name"
+msgstr "Название сайта"
+
+#: ~/Core/Settings/Views/EditorTemplates/Parts.Settings.SiteSettingsPart.cshtml
+#| msgid "Default Site Culture"
+msgctxt "~/Core/Settings/Views/EditorTemplates/Parts.Settings.SiteSettingsPart.cshtml"
+msgid "Default Site Culture"
+msgstr "Культура по умолчанию"
+
+#: ~/Core/Settings/Views/EditorTemplates/Parts.Settings.SiteSettingsPart.cshtml
+#| msgid "Add or remove supported cultures for the site."
+msgctxt "~/Core/Settings/Views/EditorTemplates/Parts.Settings.SiteSettingsPart.cshtml"
+msgid "Add or remove supported cultures for the site."
+msgstr "Добавить или удалить поддерживаемые культуры сайта."
+
+#: ~/Core/Settings/Views/EditorTemplates/Parts.Settings.SiteSettingsPart.cshtml
+#| msgid "Page title separator"
+msgctxt "~/Core/Settings/Views/EditorTemplates/Parts.Settings.SiteSettingsPart.cshtml"
+msgid "Page title separator"
+msgstr "Разделитель заголовка страницы"
+
+#: ~/Core/Settings/Views/EditorTemplates/Parts.Settings.SiteSettingsPart.cshtml
+#| msgid "Super user"
+msgctxt "~/Core/Settings/Views/EditorTemplates/Parts.Settings.SiteSettingsPart.cshtml"
+msgid "Super user"
+msgstr "Суперпользователь"
+
+#: ~/Core/Settings/Views/EditorTemplates/Parts.Settings.SiteSettingsPart.cshtml
+#| msgid "Enter an existing account name, or nothing if you don't want a Super user account"
+msgctxt "~/Core/Settings/Views/EditorTemplates/Parts.Settings.SiteSettingsPart.cshtml"
+msgid "Enter an existing account name, or nothing if you don't want a Super user account"
+msgstr "Введите название существующего аккаунта, либо не вводите ничего, если вы не хотите аккаунт Суперпользователя"
+
+#: ~/Core/Settings/Views/EditorTemplates/Parts.Settings.SiteSettingsPart.cshtml
+#| msgid "Resource Debug Mode"
+msgctxt "~/Core/Settings/Views/EditorTemplates/Parts.Settings.SiteSettingsPart.cshtml"
+msgid "Resource Debug Mode"
+msgstr "Режим отладки ресурсов"
+
+#: ~/Core/Settings/Views/EditorTemplates/Parts.Settings.SiteSettingsPart.cshtml
+#| msgid "Determines whether scripts and stylesheets load in their debuggable or minified form."
+msgctxt "~/Core/Settings/Views/EditorTemplates/Parts.Settings.SiteSettingsPart.cshtml"
+msgid "Determines whether scripts and stylesheets load in their debuggable or minified form."
+msgstr "Определяет, загружаются ли скрипты и стили в отладочной или минифицированной форме"
+
+#: ~/Core/Settings/Views/EditorTemplates/Parts.Settings.SiteSettingsPart.cshtml
+#| msgid "Default number of items per page"
+msgctxt "~/Core/Settings/Views/EditorTemplates/Parts.Settings.SiteSettingsPart.cshtml"
+msgid "Default number of items per page"
+msgstr "Количество элементов на странице по умолчанию"
+
+#: ~/Core/Settings/Views/EditorTemplates/Parts.Settings.SiteSettingsPart.cshtml
+#| msgid "Determines the default number of items that are shown per page."
+msgctxt "~/Core/Settings/Views/EditorTemplates/Parts.Settings.SiteSettingsPart.cshtml"
+msgid "Determines the default number of items that are shown per page."
+msgstr "Определяет количество показываемых элементов на странице по умолчанию."
+
+#: Orchard.Core.Shapes.DateTimeShapes
+#| msgid "'on' MMM d yyyy 'at' h:mm tt"
+msgctxt "Orchard.Core.Shapes.DateTimeShapes"
+msgid "'on' MMM d yyyy 'at' h:mm tt"
+msgstr "d MMM yyyy 'в' h:mm tt"
+
+#: Orchard.Core.Shapes.DateTimeShapes
+#| msgid "a moment ago"
+msgctxt "Orchard.Core.Shapes.DateTimeShapes"
+msgid "a moment ago"
+msgstr "недавно"
+
+#: ~/Core/Shapes/Views/NotFound.cshtml
+#| msgid "Not found"
+msgctxt "~/Core/Shapes/Views/NotFound.cshtml"
+msgid "Not found"
+msgstr "Не найдено"
+
+#: ~/Core/Shapes/Views/NotFound.cshtml
+#| msgid "The page you are looking for does not exist."
+msgctxt "~/Core/Shapes/Views/NotFound.cshtml"
+msgid "The page you are looking for does not exist."
+msgstr "Искомая страница не существует."
+
+#: ~/Core/Shapes/Views/Pager.cshtml
+#| msgid "Older"
+msgctxt "~/Core/Shapes/Views/Pager.cshtml"
+msgid "Older"
+msgstr "Старше"
+
+#: ~/Core/Shapes/Views/Pager.cshtml
+#| msgid "Newer"
+msgctxt "~/Core/Shapes/Views/Pager.cshtml"
+msgid "Newer"
+msgstr "Новее"
+
+#: ~/Core/Shapes/Views/User.cshtml
+#| msgid "Sign Out"
+msgctxt "~/Core/Shapes/Views/User.cshtml"
+msgid "Sign Out"
+msgstr "Выйти"
+
+#: ~/Core/Shapes/Views/User.cshtml
+#| msgid "Sign In"
+msgctxt "~/Core/Shapes/Views/User.cshtml"
+msgid "Sign In"
+msgstr "Войти"
+
+#: Orchard.Core.Shapes.DateTimeShapes
+#| msgid "1 day ago"
+msgctxt "Orchard.Core.Shapes.DateTimeShapes"
+msgid "1 day ago"
+msgstr "День тому назад"
+
+#: Orchard.Core.Shapes.DateTimeShapes
+#| msgid "{0} days ago"
+msgctxt "Orchard.Core.Shapes.DateTimeShapes"
+msgid "{0} days ago"
+msgstr "{0} дня назад"
+
+#: Orchard.Core.Shapes.DateTimeShapes
+#| msgid "1 hour ago"
+msgctxt "Orchard.Core.Shapes.DateTimeShapes"
+msgid "1 hour ago"
+msgstr "Час назад"
+
+#: Orchard.Core.Shapes.DateTimeShapes
+#| msgid "{0} hours ago"
+msgctxt "Orchard.Core.Shapes.DateTimeShapes"
+msgid "{0} hours ago"
+msgstr "{0} часов назад"
+
+#: Orchard.Core.Shapes.DateTimeShapes
+#| msgid "1 minute ago"
+msgctxt "Orchard.Core.Shapes.DateTimeShapes"
+msgid "1 minute ago"
+msgstr "Минуту назад"
+
+#: Orchard.Core.Shapes.DateTimeShapes
+#| msgid "{0} minutes ago"
+msgctxt "Orchard.Core.Shapes.DateTimeShapes"
+msgid "{0} minutes ago"
+msgstr "{0} минут назад"
+
+#: Orchard.Core.Shapes.DateTimeShapes
+#| msgid "1 second ago"
+msgctxt "Orchard.Core.Shapes.DateTimeShapes"
+msgid "1 second ago"
+msgstr "Секунду назад"
+
+#: Orchard.Core.Shapes.DateTimeShapes
+#| msgid "{0} seconds ago"
+msgctxt "Orchard.Core.Shapes.DateTimeShapes"
+msgid "{0} seconds ago"
+msgstr "{0} секунд назад"
+
+#: ~/Core/Contents/Module.txt
+#| msgid "Contents.ControlWrapper.Name"
+msgctxt "~/Core/Contents/Module.txt"
+msgid "Content Control Wrapper"
+msgstr "Обертка элемента содержимого"
+
+#: ~/Core/Contents/Module.txt
+#| msgid "Contents.ControlWrapper.Description"
+msgctxt "~/Core/Contents/Module.txt"
+msgid "Add an Edit button on the front-end for authenticated users"
+msgstr "Добавьте кнопку Редактировать на страницу для авторизованных пользователей"
+
+#: ~/Core/Contents/Module.txt
+#| msgid "Contents.ControlWrapper.Category"
+msgctxt "~/Core/Contents/Module.txt"
+msgid "Content"
+msgstr "Содержимое"
+
+#: Orchard.Core.Common.Drivers.TextFieldDriver
+#| msgid "The fields {0} is mandatory"
+msgctxt "Orchard.Core.Common.Drivers.TextFieldDriver"
+msgid "The fields {0} is mandatory"
+msgstr "Поле {0} обязательно"
+
+#: Orchard.Core.Common.Drivers.TextFieldDriver
+#| msgid "Value"
+msgctxt "Orchard.Core.Common.Drivers.TextFieldDriver"
+msgid "Value"
+msgstr "Значение"
+
+#: Orchard.Core.Common.Drivers.TextFieldDriver
+#| msgid "The text associated with the field."
+msgctxt "Orchard.Core.Common.Drivers.TextFieldDriver"
+msgid "The text associated with the field."
+msgstr "Текст, ассоциированный с полем."
+
+#: ~/Core/Common/Views/DefinitionTemplates/TextFieldSettingsEventsViewModel.cshtml
+#| msgid "Display options"
+msgctxt "~/Core/Common/Views/DefinitionTemplates/TextFieldSettingsEventsViewModel.cshtml"
+msgid "Display options"
+msgstr "Параметры отображения"
+
+#: ~/Core/Common/Views/DefinitionTemplates/TextFieldSettingsEventsViewModel.cshtml
+#| msgid "Default flavor"
+msgctxt "~/Core/Common/Views/DefinitionTemplates/TextFieldSettingsEventsViewModel.cshtml"
+msgid "Default flavor"
+msgstr "Стандартная разновидность"
+
+#: ~/Core/Common/Views/DefinitionTemplates/TextFieldSettingsEventsViewModel.cshtml
+#| msgid "Required"
+msgctxt "~/Core/Common/Views/DefinitionTemplates/TextFieldSettingsEventsViewModel.cshtml"
+msgid "Required"
+msgstr "Требуется"
+
+#: ~/Core/Common/Views/DefinitionTemplates/TextFieldSettingsEventsViewModel.cshtml
+#| msgid "Check to ensure the user enters a value in this field."
+msgctxt "~/Core/Common/Views/DefinitionTemplates/TextFieldSettingsEventsViewModel.cshtml"
+msgid "Check to ensure the user enters a value in this field."
+msgstr "Отметить для обеспечения пользователем ввода значения в поле."
+
+#: ~/Core/Common/Views/DefinitionTemplates/TextFieldSettingsEventsViewModel.cshtml
+#| msgid "Help text"
+msgctxt "~/Core/Common/Views/DefinitionTemplates/TextFieldSettingsEventsViewModel.cshtml"
+msgid "Help text"
+msgstr "Текст помощи"
+
+#: ~/Core/Common/Views/DefinitionTemplates/TextFieldSettingsEventsViewModel.cshtml
+#| msgid "The help text is written under the field when authors are editing the content item."
+msgctxt "~/Core/Common/Views/DefinitionTemplates/TextFieldSettingsEventsViewModel.cshtml"
+msgid "The help text is written under the field when authors are editing the content item."
+msgstr "Текст помощи отображается под полем, когда авторы редактируют его содержимое."
+
+#: Orchard.Core.Containers.Controllers.ItemController
+#| msgid "Container not found"
+msgctxt "Orchard.Core.Containers.Controllers.ItemController"
+msgid "Container not found"
+msgstr "Контейнер не найден"
+
+#: ~/Core/Containers/Views/EditorTemplates/Containable.cshtml
+#| msgid "Weight"
+msgctxt "~/Core/Containers/Views/EditorTemplates/Containable.cshtml"
+msgid "Weight"
+msgstr "Вес"
+
+#: ~/Core/Containers/Views/EditorTemplates/Container.cshtml
+#| msgid "Show contained items list"
+msgctxt "~/Core/Containers/Views/EditorTemplates/Container.cshtml"
+msgid "Show contained items list"
+msgstr "Показать лист содержащихся пунктов"
+
+#: ~/Core/Containers/Views/EditorTemplates/Container.cshtml
+#| msgid "Weight"
+msgctxt "~/Core/Containers/Views/EditorTemplates/Container.cshtml"
+msgid "Weight"
+msgstr "Вес"
+
+#: ~/Core/Containers/Views/EditorTemplates/Container.cshtml
+#| msgid "Title (Title Part)"
+msgctxt "~/Core/Containers/Views/EditorTemplates/Container.cshtml"
+msgid "Title (Title Part)"
+msgstr "Заголовок (Часть заголовка)"
+
+#: ~/Core/Containers/Views/EditorTemplates/ContainerWidget.cshtml
+#| msgid "Title (Title Part)"
+msgctxt "~/Core/Containers/Views/EditorTemplates/ContainerWidget.cshtml"
+msgid "Title (Title Part)"
+msgstr "Заголовок (Часть заголовка)"
+
+#: ~/Core/Settings/Views/EditorTemplates/Parts.Settings.SiteSettingsPart.cshtml
+#| msgid "Default Time Zone"
+msgctxt "~/Core/Settings/Views/EditorTemplates/Parts.Settings.SiteSettingsPart.cshtml"
+msgid "Default Time Zone"
+msgstr "Временная зона по умолчанию"
+
+#: ~/Core/Settings/Views/EditorTemplates/Parts.Settings.SiteSettingsPart.cshtml
+#| msgid "Local to server"
+msgctxt "~/Core/Settings/Views/EditorTemplates/Parts.Settings.SiteSettingsPart.cshtml"
+msgid "Local to server"
+msgstr "Локально к серверу"
+
+#: ~/Core/Settings/Views/EditorTemplates/Parts.Settings.SiteSettingsPart.cshtml
+#| msgid "Determines the default time zone which will should be used to display date and times."
+msgctxt "~/Core/Settings/Views/EditorTemplates/Parts.Settings.SiteSettingsPart.cshtml"
+msgid "Determines the default time zone which will should be used to display date and times."
+msgstr "Определят временную зону по умолчанию, которая будет использоваться для отображение даты и времени."
+
+#: Orchard.Core.Shapes.CoreShapes
+#| msgid "<<"
+msgctxt "Orchard.Core.Shapes.CoreShapes"
+msgid "<<"
+msgstr "<<"
+
+#: Orchard.Core.Shapes.CoreShapes
+#| msgid "<"
+msgctxt "Orchard.Core.Shapes.CoreShapes"
+msgid "<"
+msgstr "<"
+
+#: Orchard.Core.Shapes.CoreShapes
+#| msgid ">"
+msgctxt "Orchard.Core.Shapes.CoreShapes"
+msgid ">"
+msgstr ">"
+
+#: Orchard.Core.Shapes.CoreShapes
+#| msgid ">>"
+msgctxt "Orchard.Core.Shapes.CoreShapes"
+msgid ">>"
+msgstr ">>"
+
+#: Orchard.Core.Shapes.CoreShapes
+#| msgid "..."
+msgctxt "Orchard.Core.Shapes.CoreShapes"
+msgid "..."
+msgstr "..."
+
+#: Orchard.Core.Shapes.Localization.DateTimeLocalization
+#| msgid "January, February, March, April, May, June, July, August, September, October, November, December"
+msgctxt "Orchard.Core.Shapes.Localization.DateTimeLocalization"
+msgid "January, February, March, April, May, June, July, August, September, October, November, December"
+msgstr "Январь, Февраль, Март, Апрель, Май, Июнь, Июль, Август, Сентябрь, Октябрь, Ноябрь, Декабрь"
+
+#: Orchard.Core.Shapes.Localization.DateTimeLocalization
+#| msgid "Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec"
+msgctxt "Orchard.Core.Shapes.Localization.DateTimeLocalization"
+msgid "Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec"
+msgstr "Янв, Фев, Мар, Апр, Май, Июн, Июл, Авг, Сен, Окт, Ноя, Дек"
+
+#: Orchard.Core.Shapes.Localization.DateTimeLocalization
+#| msgid "Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday"
+msgctxt "Orchard.Core.Shapes.Localization.DateTimeLocalization"
+msgid "Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday"
+msgstr "Понедельник, Вторник, Среда, Четверг, Пятница, Суббота, Воскресенье"
+
+#: Orchard.Core.Shapes.Localization.DateTimeLocalization
+#| msgid "Sun, Mon, Tue, Wed, Thu, Fri, Sat"
+msgctxt "Orchard.Core.Shapes.Localization.DateTimeLocalization"
+msgid "Sun, Mon, Tue, Wed, Thu, Fri, Sat"
+msgstr "Пон, Втр, Срд, Чтв, Птн, Сбт, Вск"
+
+#: Orchard.Core.Shapes.Localization.DateTimeLocalization
+#| msgid "Su, Mo, Tu, We, Th, Fr, Sa"
+msgctxt "Orchard.Core.Shapes.Localization.DateTimeLocalization"
+msgid "Su, Mo, Tu, We, Th, Fr, Sa"
+msgstr "По, Вт, Ср, Чт, Пт, Сб, Вс"
+
+#: Orchard.Core.Shapes.Localization.DateTimeLocalization
+#| msgid "M/d/yyyy"
+msgctxt "Orchard.Core.Shapes.Localization.DateTimeLocalization"
+msgid "M/d/yyyy"
+msgstr "M/d/yyyy"
+
+#: Orchard.Core.Shapes.Localization.DateTimeLocalization
+#| msgid "h:mm tt"
+msgctxt "Orchard.Core.Shapes.Localization.DateTimeLocalization"
+msgid "h:mm tt"
+msgstr "h:mm tt"
+
+#: Orchard.Core.Shapes.Localization.DateTimeLocalization
+#| msgid "MMM d yyyy h:mm tt"
+msgctxt "Orchard.Core.Shapes.Localization.DateTimeLocalization"
+msgid "MMM d yyyy h:mm tt"
+msgstr "MMM d yyyy h:mm tt"
+
+#: Orchard.Core.Shapes.Localization.DateTimeLocalization
+#| msgid "firstDay: 1"
+msgctxt "Orchard.Core.Shapes.Localization.DateTimeLocalization"
+msgid "firstDay: 1"
+msgstr "первый день: 1"
+
+#: Orchard.Core.Shapes.Localization.DateTimeLocalization
+#| msgid "isRTL: false"
+msgctxt "Orchard.Core.Shapes.Localization.DateTimeLocalization"
+msgid "isRTL: false"
+msgstr "Справа налево: нет"
+
+#: Orchard.Core.Shapes.Localization.DateTimeLocalization
+#| msgid "showMonthAfterYear: false"
+msgctxt "Orchard.Core.Shapes.Localization.DateTimeLocalization"
+msgid "showMonthAfterYear: false"
+msgstr "Показывать месяц после года: нет"
+
+#: Orchard.Core.Shapes.Localization.DateTimeLocalization
+#| msgid "yearSuffix: "
+msgctxt "Orchard.Core.Shapes.Localization.DateTimeLocalization"
+msgid "yearSuffix: "
+msgstr "Год суффикс: "
+
+#: ~/Core/Shapes/Views/ErrorPage.cshtml
+#| msgid "Oops. Something went wrong ... sorry"
+msgctxt "~/Core/Shapes/Views/ErrorPage.cshtml"
+msgid "Oops. Something went wrong ... sorry"
+msgstr "Упс...Что-то пошло не так...Извините"
+
+#: ~/Core/Shapes/Views/ErrorPage.cshtml
+#| msgid "An unhandled exception has occurred and the request was terminated. Please refresh the page. If the error persists, go back"
+msgctxt "~/Core/Shapes/Views/ErrorPage.cshtml"
+msgid "An unhandled exception has occurred and the request was terminated. Please refresh the page. If the error persists, go back"
+msgstr "Возникло необработанное исключение и запрос был прерван. Пожалуйста, обновите страницу. Если проблема повторяется, то перейдите назад"
+
+#: ~/Core/Title/Views/EditorTemplates/Parts.Title.TitlePart.cshtml
+#| msgid "You must provide a unique title for this content item"
+msgctxt "~/Core/Title/Views/EditorTemplates/Parts.Title.TitlePart.cshtml"
+msgid "You must provide a unique title for this content item"
+msgstr "Вы должны указать уникальный заголовок для этой части содержимого"
+

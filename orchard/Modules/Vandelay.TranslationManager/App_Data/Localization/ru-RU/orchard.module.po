@@ -1,0 +1,41 @@
+# Orchard resource strings - ru-RU
+# Copyright (c) 2010 Outercurve Foundation
+# All rights reserved
+# This file is distributed under the BSD license
+
+#: ~/Modules/Vandelay.TranslationManager/Module.txt
+#| msgid "Author"
+msgctxt "~/Modules/Vandelay.TranslationManager/Module.txt"
+msgid "Bertrand Le Roy"
+msgstr "Bertrand Le Roy"
+
+#: ~/Modules/Vandelay.TranslationManager/Module.txt
+#| msgid "Website"
+msgctxt "~/Modules/Vandelay.TranslationManager/Module.txt"
+msgid "http://weblogs.asp.net/bleroy"
+msgstr "http://weblogs.asp.net/bleroy"
+
+#: ~/Modules/Vandelay.TranslationManager/Module.txt
+#| msgid "Description"
+msgctxt "~/Modules/Vandelay.TranslationManager/Module.txt"
+msgid "Translation management without leaving the Orchard admin UI"
+msgstr "Управление переводами не выходя из пользовательского интерфейса администратора"
+
+#: ~/Modules/Vandelay.TranslationManager/Module.txt
+#| msgid "Vandelay.TranslationManager.Description"
+msgctxt "~/Modules/Vandelay.TranslationManager/Module.txt"
+msgid "Translation management without leaving the Orchard admin UI"
+msgstr "Управление переводами не выходя из пользовательского интерфейса администратора"
+
+#: ~/Modules/Vandelay.TranslationManager/Module.txt
+#| msgid "Vandelay.TranslationManager.Category"
+msgctxt "~/Modules/Vandelay.TranslationManager/Module.txt"
+msgid "Content"
+msgstr "Контент"
+
+#: ~/Modules/Vandelay.TranslationManager/Module.txt
+#| msgid "Name"
+msgctxt "~/Modules/Vandelay.TranslationManager/Module.txt"
+msgid "Vandelay.TranslationManager"
+msgstr "Vandelay.TranslationManager"
+

@@ -1,0 +1,95 @@
+# Orchard resource strings - ru-RU
+# Copyright (c) 2010 Outercurve Foundation
+# All rights reserved
+# This file is distributed under the BSD license
+
+#: ~/Themes/TheThemeMachine/Views/Pager.cshtml
+#| msgid "Newer"
+msgctxt "~/Themes/TheThemeMachine/Views/Pager.cshtml"
+msgid "Newer"
+msgstr "Новее"
+
+#: ~/Themes/TheThemeMachine/Views/Pager.cshtml
+#| msgid "Older"
+msgctxt "~/Themes/TheThemeMachine/Views/Pager.cshtml"
+msgid "Older"
+msgstr "Старше"
+
+#: ~/Themes/TheThemeMachine/Theme.txt
+#| msgid "Author"
+msgctxt "~/Themes/TheThemeMachine/Theme.txt"
+msgid "jowall, mibach, loudej, heskew"
+msgstr "jowall, mibach, loudej, heskew"
+
+#: ~/Themes/TheThemeMachine/Theme.txt
+#| msgid "Description"
+msgctxt "~/Themes/TheThemeMachine/Theme.txt"
+msgid "Orchard Theme Machine is a flexible multi-zone theme that provides a solid foundation to build your site. It features 20 collapsible widget zones and is flexible enough to cover a wide range of layouts."
+msgstr "The Theme Machine — это гибкая многозонная тема предоставляющая твердую основу для создания вашего сайта. Она обладает 20-ю свертываемыми зонами и это достаточно гибко покрывает широкий диапазон раскладок."
+
+#: ~/Themes/TheThemeMachine/Theme.txt
+#| msgid "Tags"
+msgctxt "~/Themes/TheThemeMachine/Theme.txt"
+msgid "Awesome"
+msgstr "Внушительная"
+
+#: ~/Themes/TheThemeMachine/Theme.txt
+#| msgid "Website"
+msgctxt "~/Themes/TheThemeMachine/Theme.txt"
+msgid "http://orchardproject.net"
+msgstr "http://orchardproject.net"
+
+#: ~/Themes/TheThemeMachine/Views/BadgeOfHonor.cshtml
+#| msgid "&#169; The Theme Machine 2010."
+msgctxt "~/Themes/TheThemeMachine/Views/BadgeOfHonor.cshtml"
+msgid "&#169; The Theme Machine 2010."
+msgstr "&#169; The Theme Machine 2010."
+
+#: ~/Themes/TheThemeMachine/Theme.txt
+#| msgid "Name"
+msgctxt "~/Themes/TheThemeMachine/Theme.txt"
+msgid "The Theme Machine"
+msgstr "The Theme Machine"
+
+#: ~/Themes/TheThemeMachine/Views/Orchard.Tags/Home/Search.cshtml
+#| msgid "Tags"
+msgctxt "~/Themes/TheThemeMachine/Views/Orchard.Tags/Home/Search.cshtml"
+msgid "Tags"
+msgstr "Метка"
+
+#: ~/Themes/TheThemeMachine/Views/Orchard.Tags/Home/Search.cshtml
+#| msgid "Contents tagged with {0}"
+msgctxt "~/Themes/TheThemeMachine/Views/Orchard.Tags/Home/Search.cshtml"
+msgid "Contents tagged with {0}"
+msgstr "Контент помечен меткой {0}"
+
+#: ~/Themes/TheThemeMachine/Views/Orchard.Tags/Home/Search.cshtml
+#| msgid "Contents tagged with <span>{0}</span>"
+msgctxt "~/Themes/TheThemeMachine/Views/Orchard.Tags/Home/Search.cshtml"
+msgid "Contents tagged with <span>{0}</span>"
+msgstr "Контент помечен меткой <span>{0}</span>"
+
+#: ~/Themes/TheThemeMachine/Views/BadgeOfHonor.cshtml
+#| msgid "Powered by <a href=\"{0}\" target=\"_blank\">Orchard</a>"
+msgctxt "~/Themes/TheThemeMachine/Views/BadgeOfHonor.cshtml"
+msgid "Powered by <a href=\"{0}\" target=\"_blank\">Orchard</a>"
+msgstr "Сделано <a href=\"{0}\" target=\"_blank\">Orchard</a>"
+
+#: ~/Themes/TheThemeMachine/Views/User.cshtml
+#| msgid "Welcome, <strong>{0}</strong>!"
+msgctxt "~/Themes/TheThemeMachine/Views/User.cshtml"
+msgid "Welcome, <strong>{0}</strong>!"
+msgstr "Добро пожаловать, <strong>{0}</strong>!"
+
+#: ~/Themes/TheThemeMachine/Views/User.cshtml
+#| msgid "Log Off"
+msgctxt "~/Themes/TheThemeMachine/Views/User.cshtml"
+msgid "Log Off"
+msgstr "Выйти"
+
+#: ~/Themes/TheThemeMachine/Views/User.cshtml
+#| msgid "Login"
+msgctxt "~/Themes/TheThemeMachine/Views/User.cshtml"
+msgid "Login"
+msgstr "Вход"
+

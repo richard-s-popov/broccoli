@@ -1,0 +1,347 @@
+# Orchard resource strings - ru-RU
+# Copyright (c) 2010 Outercurve Foundation
+# All rights reserved
+# This file is distributed under the BSD license
+
+#: ~/Modules/Orchard.Roles/Views/Admin/Edit.cshtml
+#| msgid "Delete"
+msgctxt "~/Modules/Orchard.Roles/Views/Admin/Edit.cshtml"
+msgid "Delete"
+msgstr "Удалить"
+
+#: ~/Modules/Orchard.Roles/Views/Admin/Index.cshtml
+#| msgid "Roles"
+msgctxt "~/Modules/Orchard.Roles/Views/Admin/Index.cshtml"
+msgid "Roles"
+msgstr "Роли"
+
+#: ~/Modules/Orchard.Roles/Views/Admin/Index.cshtml
+#| msgid "Delete"
+msgctxt "~/Modules/Orchard.Roles/Views/Admin/Index.cshtml"
+msgid "Delete"
+msgstr "Удалить"
+
+#: ~/Modules/Orchard.Roles/Module.txt
+#| msgid "Name"
+msgctxt "~/Modules/Orchard.Roles/Module.txt"
+msgid "Roles"
+msgstr "Роли"
+
+#: Orchard.Roles.Controllers.AdminController
+#| msgid "Creating Role {0} failed: Role with same name already exists"
+msgctxt "Orchard.Roles.Controllers.AdminController"
+msgid "Creating Role {0} failed: Role with same name already exists"
+msgstr "Не удалось создать роль {0}: Роль с таким именем уже существует"
+
+#: ~/Modules/Orchard.Roles/Module.txt
+#| msgid "Author"
+msgctxt "~/Modules/Orchard.Roles/Module.txt"
+msgid "The Orchard Team"
+msgstr "Команда Orchard"
+
+#: ~/Modules/Orchard.Roles/Module.txt
+#| msgid "Website"
+msgctxt "~/Modules/Orchard.Roles/Module.txt"
+msgid "http://orchardproject.net"
+msgstr "http://orchardproject.net"
+
+#: ~/Modules/Orchard.Roles/Module.txt
+#| msgid "Description"
+msgctxt "~/Modules/Orchard.Roles/Module.txt"
+msgid "The roles module is adding the ability to assign roles to users. It's also providing a set of default roles for which other modules can define default permissions."
+msgstr "Модуль «Роли» дает возможность назначать роли для пользователей. Предоставлен набор стандартных ролей, для других модулей можно определить по умолчанию."
+
+#: ~/Modules/Orchard.Roles/Module.txt
+#| msgid "Orchard.Roles.Name"
+msgctxt "~/Modules/Orchard.Roles/Module.txt"
+msgid "Roles"
+msgstr "Роли"
+
+#: ~/Modules/Orchard.Roles/Module.txt
+#| msgid "Orchard.Roles.Description"
+msgctxt "~/Modules/Orchard.Roles/Module.txt"
+msgid "Standard user roles."
+msgstr "Стандартные пользовательские роли."
+
+#: ~/Modules/Orchard.Roles/Module.txt
+#| msgid "Orchard.Roles.Category"
+msgctxt "~/Modules/Orchard.Roles/Module.txt"
+msgid "Core"
+msgstr "Ядро"
+
+#: Orchard.Roles.AdminMenu
+#| msgid "Users"
+msgctxt "Orchard.Roles.AdminMenu"
+msgid "Users"
+msgstr "Пользователи"
+
+#: Orchard.Roles.AdminMenu
+#| msgid "Roles"
+msgctxt "Orchard.Roles.AdminMenu"
+msgid "Roles"
+msgstr "Роли"
+
+#: Orchard.Roles.Controllers.AdminController
+#| msgid "Not authorized to manage roles"
+msgctxt "Orchard.Roles.Controllers.AdminController"
+msgid "Not authorized to manage roles"
+msgstr "Не допущен к управлению ролями"
+
+#: Orchard.Roles.Controllers.AdminController
+#| msgid "Deleting Role failed: {0}"
+msgctxt "Orchard.Roles.Controllers.AdminController"
+msgid "Deleting Role failed: {0}"
+msgstr "Не удалось удалить роль: {0}"
+
+#: Orchard.Roles.Controllers.AdminController
+#| msgid "Creating Role failed: {0}"
+msgctxt "Orchard.Roles.Controllers.AdminController"
+msgid "Creating Role failed: {0}"
+msgstr "Не удалось создать роль: {0}"
+
+#: Orchard.Roles.Controllers.AdminController
+#| msgid "Your Role has been saved."
+msgctxt "Orchard.Roles.Controllers.AdminController"
+msgid "Your Role has been saved."
+msgstr "Ваша роль сохранена."
+
+#: Orchard.Roles.Controllers.AdminController
+#| msgid "Editing Role failed: {0}"
+msgctxt "Orchard.Roles.Controllers.AdminController"
+msgid "Editing Role failed: {0}"
+msgstr "Не удалось править роль: {0}"
+
+#: Orchard.Roles.Controllers.AdminController
+#| msgid "Role was successfully deleted."
+msgctxt "Orchard.Roles.Controllers.AdminController"
+msgid "Role was successfully deleted."
+msgstr "Роль успешно удалена."
+
+#: Orchard.Roles.Drivers.UserRolesPartDriver
+#| msgid "Adding role {0} to user {1}"
+msgctxt "Orchard.Roles.Drivers.UserRolesPartDriver"
+msgid "Adding role {0} to user {1}"
+msgstr "Пользователю {1} добавлена роль {0}"
+
+#: Orchard.Roles.Drivers.UserRolesPartDriver
+#| msgid "Removing role {0} from user {1}"
+msgctxt "Orchard.Roles.Drivers.UserRolesPartDriver"
+msgid "Removing role {0} from user {1}"
+msgstr "У пользователя {1} удалена роль {0}"
+
+#: Orchard.Roles.Services.RolesBasedAuthorizationService
+#| msgid "A security exception occurred in the content management system."
+msgctxt "Orchard.Roles.Services.RolesBasedAuthorizationService"
+msgid "A security exception occurred in the content management system."
+msgstr "В системе управления контентом произошло исключение безопасности."
+
+#: Orchard.Roles.Services.RoleService
+#| msgid "Permission {0} was not found in any of the installed modules."
+msgctxt "Orchard.Roles.Services.RoleService"
+msgid "Permission {0} was not found in any of the installed modules."
+msgstr "Разрешение {0} не найдено ни в одном из установленных модулей."
+
+#: Orchard.Roles.Services.RoleService
+#| msgid "{0} Feature"
+msgctxt "Orchard.Roles.Services.RoleService"
+msgid "{0} Feature"
+msgstr "{0} возможность"
+
+#: ~/Modules/Orchard.Roles/Views/Admin/Create.cshtml
+#| msgid "Add Role"
+msgctxt "~/Modules/Orchard.Roles/Views/Admin/Create.cshtml"
+msgid "Add Role"
+msgstr "Добавить роль"
+
+#: ~/Modules/Orchard.Roles/Views/Admin/Create.cshtml
+#| msgid "Information"
+msgctxt "~/Modules/Orchard.Roles/Views/Admin/Create.cshtml"
+msgid "Information"
+msgstr "Информация"
+
+#: ~/Modules/Orchard.Roles/Views/Admin/Create.cshtml
+#| msgid "Role Name:"
+msgctxt "~/Modules/Orchard.Roles/Views/Admin/Create.cshtml"
+msgid "Role Name:"
+msgstr "Имя роли:"
+
+#: ~/Modules/Orchard.Roles/Views/Admin/Create.cshtml
+#| msgid "Permissions"
+msgctxt "~/Modules/Orchard.Roles/Views/Admin/Create.cshtml"
+msgid "Permissions"
+msgstr "Разрешения"
+
+#: ~/Modules/Orchard.Roles/Views/Admin/Create.cshtml
+#| msgid "{0} Module"
+msgctxt "~/Modules/Orchard.Roles/Views/Admin/Create.cshtml"
+msgid "{0} Module"
+msgstr "{0} модуль"
+
+#: ~/Modules/Orchard.Roles/Views/Admin/Create.cshtml
+#| msgid "Permission"
+msgctxt "~/Modules/Orchard.Roles/Views/Admin/Create.cshtml"
+msgid "Permission"
+msgstr "Разрешения"
+
+#: ~/Modules/Orchard.Roles/Views/Admin/Create.cshtml
+#| msgid "Allow"
+msgctxt "~/Modules/Orchard.Roles/Views/Admin/Create.cshtml"
+msgid "Allow"
+msgstr "Разрешить"
+
+#: ~/Modules/Orchard.Roles/Views/Admin/Create.cshtml
+#| msgid "Checkbox.{0}"
+msgctxt "~/Modules/Orchard.Roles/Views/Admin/Create.cshtml"
+msgid "Checkbox.{0}"
+msgstr "Чек-бокс.{0}"
+
+#: ~/Modules/Orchard.Roles/Views/Admin/Create.cshtml
+#| msgid "Save"
+msgctxt "~/Modules/Orchard.Roles/Views/Admin/Create.cshtml"
+msgid "Save"
+msgstr "Сохранить"
+
+#: ~/Modules/Orchard.Roles/Views/Admin/Edit.cshtml
+#| msgid "Edit Role"
+msgctxt "~/Modules/Orchard.Roles/Views/Admin/Edit.cshtml"
+msgid "Edit Role"
+msgstr "Редактировать роль"
+
+#: ~/Modules/Orchard.Roles/Views/Admin/Edit.cshtml
+#| msgid "Information"
+msgctxt "~/Modules/Orchard.Roles/Views/Admin/Edit.cshtml"
+msgid "Information"
+msgstr "Информация"
+
+#: ~/Modules/Orchard.Roles/Views/Admin/Edit.cshtml
+#| msgid "Role Name:"
+msgctxt "~/Modules/Orchard.Roles/Views/Admin/Edit.cshtml"
+msgid "Role Name:"
+msgstr "Имя роли:"
+
+#: ~/Modules/Orchard.Roles/Views/Admin/Edit.cshtml
+#| msgid "Permissions"
+msgctxt "~/Modules/Orchard.Roles/Views/Admin/Edit.cshtml"
+msgid "Permissions"
+msgstr "Разрешения"
+
+#: ~/Modules/Orchard.Roles/Views/Admin/Edit.cshtml
+#| msgid "Permission"
+msgctxt "~/Modules/Orchard.Roles/Views/Admin/Edit.cshtml"
+msgid "Permission"
+msgstr "Разрешения"
+
+#: ~/Modules/Orchard.Roles/Views/Admin/Edit.cshtml
+#| msgid "Allow"
+msgctxt "~/Modules/Orchard.Roles/Views/Admin/Edit.cshtml"
+msgid "Allow"
+msgstr "Разрешить"
+
+#: ~/Modules/Orchard.Roles/Views/Admin/Edit.cshtml
+#| msgid "Effective"
+msgctxt "~/Modules/Orchard.Roles/Views/Admin/Edit.cshtml"
+msgid "Effective"
+msgstr "Эффективный"
+
+#: ~/Modules/Orchard.Roles/Views/Admin/Edit.cshtml
+#| msgid "Checkbox.{0}"
+msgctxt "~/Modules/Orchard.Roles/Views/Admin/Edit.cshtml"
+msgid "Checkbox.{0}"
+msgstr "Чек-бокс.{0}"
+
+#: ~/Modules/Orchard.Roles/Views/Admin/Edit.cshtml
+#| msgid "Effective.{0}"
+msgctxt "~/Modules/Orchard.Roles/Views/Admin/Edit.cshtml"
+msgid "Effective.{0}"
+msgstr "Эффективный.{0}"
+
+#: ~/Modules/Orchard.Roles/Views/Admin/Edit.cshtml
+#| msgid "Save"
+msgctxt "~/Modules/Orchard.Roles/Views/Admin/Edit.cshtml"
+msgid "Save"
+msgstr "Сохранить"
+
+#: ~/Modules/Orchard.Roles/Views/Admin/Edit.cshtml
+#| msgid "Remove"
+msgctxt "~/Modules/Orchard.Roles/Views/Admin/Edit.cshtml"
+msgid "Remove"
+msgstr "Удалить"
+
+#: ~/Modules/Orchard.Roles/Views/Admin/Index.cshtml
+#| msgid "Manage Roles"
+msgctxt "~/Modules/Orchard.Roles/Views/Admin/Index.cshtml"
+msgid "Manage Roles"
+msgstr "Управление Ролями"
+
+#: ~/Modules/Orchard.Roles/Views/Admin/Index.cshtml
+#| msgid "Actions:"
+msgctxt "~/Modules/Orchard.Roles/Views/Admin/Index.cshtml"
+msgid "Actions:"
+msgstr "Действия:"
+
+#: ~/Modules/Orchard.Roles/Views/Admin/Index.cshtml
+#| msgid "Remove"
+msgctxt "~/Modules/Orchard.Roles/Views/Admin/Index.cshtml"
+msgid "Remove"
+msgstr "Удалить"
+
+#: ~/Modules/Orchard.Roles/Views/Admin/Index.cshtml
+#| msgid "Apply"
+msgctxt "~/Modules/Orchard.Roles/Views/Admin/Index.cshtml"
+msgid "Apply"
+msgstr "Применить"
+
+#: ~/Modules/Orchard.Roles/Views/Admin/Index.cshtml
+#| msgid "Add a role"
+msgctxt "~/Modules/Orchard.Roles/Views/Admin/Index.cshtml"
+msgid "Add a role"
+msgstr "Добавить роль"
+
+#: ~/Modules/Orchard.Roles/Views/Admin/Index.cshtml
+#| msgid "This is a table of the roles currently available for use in your application."
+msgctxt "~/Modules/Orchard.Roles/Views/Admin/Index.cshtml"
+msgid "This is a table of the roles currently available for use in your application."
+msgstr "Таблица ролей, доступная для использования в вашем приложении."
+
+#: ~/Modules/Orchard.Roles/Views/Admin/Index.cshtml
+#| msgid "Name"
+msgctxt "~/Modules/Orchard.Roles/Views/Admin/Index.cshtml"
+msgid "Name"
+msgstr "Имя"
+
+#: ~/Modules/Orchard.Roles/Views/Admin/Index.cshtml
+#| msgid "Edit"
+msgctxt "~/Modules/Orchard.Roles/Views/Admin/Index.cshtml"
+msgid "Edit"
+msgstr "Редактировать"
+
+#: ~/Modules/Orchard.Roles/Views/Admin/Index.cshtml
+#| msgid " | "
+msgctxt "~/Modules/Orchard.Roles/Views/Admin/Index.cshtml"
+msgid " | "
+msgstr " | "
+
+#: ~/Modules/Orchard.Roles/Views/EditorTemplates/Parts/Roles.UserRoles.cshtml
+#| msgid "Roles"
+msgctxt "~/Modules/Orchard.Roles/Views/EditorTemplates/Parts/Roles.UserRoles.cshtml"
+msgid "Roles"
+msgstr "Роли"
+
+#: ~/Modules/Orchard.Roles/Views/EditorTemplates/Parts/Roles.UserRoles.cshtml
+#| msgid "There are no roles."
+msgctxt "~/Modules/Orchard.Roles/Views/EditorTemplates/Parts/Roles.UserRoles.cshtml"
+msgid "There are no roles."
+msgstr "Нет ролей."
+
+#: Orchard.Roles.Controllers.AdminController
+#| msgid "Role name can't be empty"
+msgctxt "Orchard.Roles.Controllers.AdminController"
+msgid "Role name can't be empty"
+msgstr "Имя роли не может быть пустым"
+
+#: Orchard.Roles.Controllers.AdminController
+#| msgid "Role with same name already exists"
+msgctxt "Orchard.Roles.Controllers.AdminController"
+msgid "Role with same name already exists"
+msgstr "Роль с таким именем уже существует"
+

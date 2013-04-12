@@ -1,0 +1,56 @@
+2013-04-12 22:20:11,103 [21] Orchard.Recipes.Services.RecipeStepExecutor - Recipe execution 66ea2c16daee4efa9b8abcb240982e02 was cancelled because a step failed to execute
+System.InvalidOperationException: Последовательность не содержит соответствующий элемент
+   в System.Linq.Enumerable.Single[TSource](IEnumerable`1 source, Func`2 predicate)
+   в Orchard.Environment.Features.FeatureManager.<>c__DisplayClass2d.<EnableFeature>b__20(String fId) в c:\Users\sebros\My Projects\Orchard\src\Orchard\Environment\Features\FeatureManager.cs:строка 148
+   в System.Linq.Enumerable.WhereSelectListIterator`2.MoveNext()
+   в System.Linq.Enumerable.WhereEnumerableIterator`1.MoveNext()
+   в System.Linq.Enumerable.ToDictionary[TSource,TKey,TElement](IEnumerable`1 source, Func`2 keySelector, Func`2 elementSelector, IEqualityComparer`1 comparer)
+   в Orchard.Environment.Features.FeatureManager.<EnableFeature>b__1e(String currentFeatureId, IDictionary`2 featuresState) в c:\Users\sebros\My Projects\Orchard\src\Orchard\Environment\Features\FeatureManager.cs:строка 147
+   в Orchard.Environment.Features.FeatureManager.GetAffectedFeatures(String featureId, IDictionary`2 features, Func`3 getAffectedDependencies) в c:\Users\sebros\My Projects\Orchard\src\Orchard\Environment\Features\FeatureManager.cs:строка 195
+   в Orchard.Environment.Features.FeatureManager.EnableFeature(String featureId, IDictionary`2 availableFeatures, Boolean force) в c:\Users\sebros\My Projects\Orchard\src\Orchard\Environment\Features\FeatureManager.cs:строка 153
+   в Orchard.Environment.Features.FeatureManager.<>c__DisplayClass9.<EnableFeatures>b__4(String featureId) в c:\Users\sebros\My Projects\Orchard\src\Orchard\Environment\Features\FeatureManager.cs:строка 73
+   в System.Linq.Enumerable.WhereSelectListIterator`2.MoveNext()
+   в System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   в System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   в Orchard.Environment.Features.FeatureManager.EnableFeatures(IEnumerable`1 featureIds, Boolean force) в c:\Users\sebros\My Projects\Orchard\src\Orchard\Environment\Features\FeatureManager.cs:строка 72
+   в Orchard.Recipes.RecipeHandlers.FeatureRecipeHandler.ExecuteRecipeStep(RecipeContext recipeContext)
+   в Orchard.Recipes.Services.RecipeStepExecutor.ExecuteNextStep(String executionId)
+2013-04-12 22:20:11,213 [21] Orchard.Exceptions.DefaultExceptionPolicy - An unexpected exception was caught
+System.Reflection.TargetInvocationException: Адресат вызова создал исключение. ---> Orchard.OrchardCoreException: Recipe execution with id 66ea2c16daee4efa9b8abcb240982e02 was cancelled because the "Feature" step failed to execute. The following exception was thrown: Последовательность не содержит соответствующий элемент. Refer to the recipe journal for more information.
+   в Orchard.Recipes.Services.RecipeStepExecutor.ExecuteNextStep(String executionId)
+   в Orchard.Recipes.Services.RecipeScheduler.ExecuteWork(String executionId)
+   --- Конец трассировки внутреннего стека исключений ---
+   в System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   в System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   в System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   в Orchard.Events.DefaultOrchardEventBus.TryInvokeMethod(IEventHandler eventHandler, Type interfaceType, String methodName, IDictionary`2 arguments, IEnumerable& returnValue) в c:\Users\sebros\My Projects\Orchard\src\Orchard\Events\DefaultOrchardEventBus.cs:строка 80
+   в Orchard.Events.DefaultOrchardEventBus.TryInvoke(IEventHandler eventHandler, String interfaceName, String methodName, IDictionary`2 arguments, IEnumerable& returnValue) в c:\Users\sebros\My Projects\Orchard\src\Orchard\Events\DefaultOrchardEventBus.cs:строка 68
+   в Orchard.Events.DefaultOrchardEventBus.TryNotifyHandler(IEventHandler eventHandler, String messageName, String interfaceName, String methodName, IDictionary`2 eventData, IEnumerable& returnValue) в c:\Users\sebros\My Projects\Orchard\src\Orchard\Events\DefaultOrchardEventBus.cs:строка 52
+2013-04-12 23:21:17,649 [44] Orchard.Recipes.Services.RecipeStepExecutor - Recipe execution 272693108bd84db6a322ac4997cbbc08 was cancelled because a step failed to execute
+System.InvalidOperationException: Последовательность не содержит соответствующий элемент
+   в System.Linq.Enumerable.Single[TSource](IEnumerable`1 source, Func`2 predicate)
+   в Orchard.Environment.Features.FeatureManager.<>c__DisplayClass2d.<EnableFeature>b__20(String fId) в c:\Users\sebros\My Projects\Orchard\src\Orchard\Environment\Features\FeatureManager.cs:строка 148
+   в System.Linq.Enumerable.WhereSelectListIterator`2.MoveNext()
+   в System.Linq.Enumerable.WhereEnumerableIterator`1.MoveNext()
+   в System.Linq.Enumerable.ToDictionary[TSource,TKey,TElement](IEnumerable`1 source, Func`2 keySelector, Func`2 elementSelector, IEqualityComparer`1 comparer)
+   в Orchard.Environment.Features.FeatureManager.<EnableFeature>b__1e(String currentFeatureId, IDictionary`2 featuresState) в c:\Users\sebros\My Projects\Orchard\src\Orchard\Environment\Features\FeatureManager.cs:строка 147
+   в Orchard.Environment.Features.FeatureManager.GetAffectedFeatures(String featureId, IDictionary`2 features, Func`3 getAffectedDependencies) в c:\Users\sebros\My Projects\Orchard\src\Orchard\Environment\Features\FeatureManager.cs:строка 195
+   в Orchard.Environment.Features.FeatureManager.EnableFeature(String featureId, IDictionary`2 availableFeatures, Boolean force) в c:\Users\sebros\My Projects\Orchard\src\Orchard\Environment\Features\FeatureManager.cs:строка 153
+   в Orchard.Environment.Features.FeatureManager.<>c__DisplayClass9.<EnableFeatures>b__4(String featureId) в c:\Users\sebros\My Projects\Orchard\src\Orchard\Environment\Features\FeatureManager.cs:строка 73
+   в System.Linq.Enumerable.WhereSelectListIterator`2.MoveNext()
+   в System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   в System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   в Orchard.Environment.Features.FeatureManager.EnableFeatures(IEnumerable`1 featureIds, Boolean force) в c:\Users\sebros\My Projects\Orchard\src\Orchard\Environment\Features\FeatureManager.cs:строка 72
+   в Orchard.Recipes.RecipeHandlers.FeatureRecipeHandler.ExecuteRecipeStep(RecipeContext recipeContext)
+   в Orchard.Recipes.Services.RecipeStepExecutor.ExecuteNextStep(String executionId)
+2013-04-12 23:21:17,756 [44] Orchard.Exceptions.DefaultExceptionPolicy - An unexpected exception was caught
+System.Reflection.TargetInvocationException: Адресат вызова создал исключение. ---> Orchard.OrchardCoreException: Выполнение рецепта с идентификатором 272693108bd84db6a322ac4997cbbc08 отменено, потому что не удалось выполнить шаг «Feature». Было вызвано следующее исключение: Последовательность не содержит соответствующий элемент. Обратитесь к журналу рецепта для дополнительной информации.
+   в Orchard.Recipes.Services.RecipeStepExecutor.ExecuteNextStep(String executionId)
+   в Orchard.Recipes.Services.RecipeScheduler.ExecuteWork(String executionId)
+   --- Конец трассировки внутреннего стека исключений ---
+   в System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   в System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   в System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   в Orchard.Events.DefaultOrchardEventBus.TryInvokeMethod(IEventHandler eventHandler, Type interfaceType, String methodName, IDictionary`2 arguments, IEnumerable& returnValue) в c:\Users\sebros\My Projects\Orchard\src\Orchard\Events\DefaultOrchardEventBus.cs:строка 80
+   в Orchard.Events.DefaultOrchardEventBus.TryInvoke(IEventHandler eventHandler, String interfaceName, String methodName, IDictionary`2 arguments, IEnumerable& returnValue) в c:\Users\sebros\My Projects\Orchard\src\Orchard\Events\DefaultOrchardEventBus.cs:строка 68
+   в Orchard.Events.DefaultOrchardEventBus.TryNotifyHandler(IEventHandler eventHandler, String messageNam

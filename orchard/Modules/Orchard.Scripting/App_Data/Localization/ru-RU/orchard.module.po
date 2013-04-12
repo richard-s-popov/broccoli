@@ -1,0 +1,143 @@
+# Orchard resource strings - ru-RU
+# Copyright (c) 2010 Outercurve Foundation
+# All rights reserved
+# This file is distributed under the BSD license
+
+#: ~/Modules/Orchard.Scripting/Module.txt
+#| msgid "Author"
+msgctxt "~/Modules/Orchard.Scripting/Module.txt"
+msgid "The Orchard Team"
+msgstr "Команда Orchard"
+
+#: ~/Modules/Orchard.Scripting/Module.txt
+#| msgid "Website"
+msgctxt "~/Modules/Orchard.Scripting/Module.txt"
+msgid "http://orchardproject.net"
+msgstr "http://orchardproject.net"
+
+#: ~/Modules/Orchard.Scripting/Module.txt
+#| msgid "Description"
+msgctxt "~/Modules/Orchard.Scripting/Module.txt"
+msgid "The scripting module enables the possibility to execute scripts using a simple custom scripting language."
+msgstr "Модуль сценариев позволяет выполнять скрипты, используя простой язык сценариев."
+
+#: ~/Modules/Orchard.Scripting/Module.txt
+#| msgid "Orchard.Scripting.Name"
+msgctxt "~/Modules/Orchard.Scripting/Module.txt"
+msgid "Scripting"
+msgstr "Сценарий"
+
+#: ~/Modules/Orchard.Scripting/Module.txt
+#| msgid "Orchard.Scripting.Description"
+msgctxt "~/Modules/Orchard.Scripting/Module.txt"
+msgid "Scripting support."
+msgstr "Поддержка сценариев."
+
+#: ~/Modules/Orchard.Scripting/Module.txt
+#| msgid "Orchard.Scripting.Category"
+msgctxt "~/Modules/Orchard.Scripting/Module.txt"
+msgid "Scripting"
+msgstr "Сценарий"
+
+#: ~/Modules/Orchard.Scripting/Module.txt
+#| msgid "Orchard.Scripting.Lightweight.Name"
+msgctxt "~/Modules/Orchard.Scripting/Module.txt"
+msgid "Lightweight scripting"
+msgstr "Легкий сценарий"
+
+#: ~/Modules/Orchard.Scripting/Module.txt
+#| msgid "Orchard.Scripting.Lightweight.Description"
+msgctxt "~/Modules/Orchard.Scripting/Module.txt"
+msgid "Custom lightweight and simple scripting language."
+msgstr "Пользовательский легкий и простой язык сценариев."
+
+#: ~/Modules/Orchard.Scripting/Module.txt
+#| msgid "Orchard.Scripting.Lightweight.Category"
+msgctxt "~/Modules/Orchard.Scripting/Module.txt"
+msgid "Scripting"
+msgstr "Сценарии"
+
+#: Orchard.Scripting.ScriptExpressionEvaluator
+#| msgid "Syntax error: {0}"
+msgctxt "Orchard.Scripting.ScriptExpressionEvaluator"
+msgid "Syntax error: {0}"
+msgstr "Синтаксическая ошибка: {0}"
+
+#: ~/Modules/Orchard.Scripting/Module.txt
+#| msgid "Name"
+msgctxt "~/Modules/Orchard.Scripting/Module.txt"
+msgid "Scripting"
+msgstr "Сценарии"
+
+#: ~/Modules/Orchard.Scripting/Module.txt
+#| msgid "Orchard.Scripting.Rules.Name"
+msgctxt "~/Modules/Orchard.Scripting/Module.txt"
+msgid "Scripting Rules"
+msgstr "Правила сценариев"
+
+#: ~/Modules/Orchard.Scripting/Module.txt
+#| msgid "Orchard.Scripting.Rules.Description"
+msgctxt "~/Modules/Orchard.Scripting/Module.txt"
+msgid "Rules for the Scripting modules"
+msgstr "Правила для модуля сценариев"
+
+#: ~/Modules/Orchard.Scripting/Module.txt
+#| msgid "Orchard.Scripting.Rules.Category"
+msgctxt "~/Modules/Orchard.Scripting/Module.txt"
+msgid "Rules"
+msgstr "Правила"
+
+#: Orchard.Scripting.Rules.ConditionActions
+#| msgid "Conditions"
+msgctxt "Orchard.Scripting.Rules.ConditionActions"
+msgid "Conditions"
+msgstr "Условия"
+
+#: Orchard.Scripting.Rules.ConditionActions
+#| msgid "Script condition"
+msgctxt "Orchard.Scripting.Rules.ConditionActions"
+msgid "Script condition"
+msgstr "Условие скрипта"
+
+#: Orchard.Scripting.Rules.ConditionActions
+#| msgid "Evaluates a boolean using a scripting engine."
+msgctxt "Orchard.Scripting.Rules.ConditionActions"
+msgid "Evaluates a boolean using a scripting engine."
+msgstr "Оценивает логическую величину используя движок скриптов"
+
+#: Orchard.Scripting.Rules.ConditionActions
+#| msgid "There are currently no scripting engine enabled"
+msgctxt "Orchard.Scripting.Rules.ConditionActions"
+msgid "There are currently no scripting engine enabled"
+msgstr "Движок скриптов не доступен"
+
+#: Orchard.Scripting.Rules.ConditionActions
+#| msgid "Expression is not a boolean value"
+msgctxt "Orchard.Scripting.Rules.ConditionActions"
+msgid "Expression is not a boolean value"
+msgstr "Выражение не логическое значение"
+
+#: Orchard.Scripting.Rules.ConditionForms
+#| msgid "Description"
+msgctxt "Orchard.Scripting.Rules.ConditionForms"
+msgid "Description"
+msgstr "Описание"
+
+#: Orchard.Scripting.Rules.ConditionForms
+#| msgid "Message that will be displayed in the Actions list."
+msgctxt "Orchard.Scripting.Rules.ConditionForms"
+msgid "Message that will be displayed in the Actions list."
+msgstr "Сообщение, отображаемое в списке действий."
+
+#: Orchard.Scripting.Rules.ConditionForms
+#| msgid "Condition"
+msgctxt "Orchard.Scripting.Rules.ConditionForms"
+msgid "Condition"
+msgstr "Условие"
+
+#: Orchard.Scripting.Rules.ConditionForms
+#| msgid "Enter a valid boolean expression to evaluate."
+msgctxt "Orchard.Scripting.Rules.ConditionForms"
+msgid "Enter a valid boolean expression to evaluate."
+msgstr "Введите допустимое логическое выражение для вычисления."
+

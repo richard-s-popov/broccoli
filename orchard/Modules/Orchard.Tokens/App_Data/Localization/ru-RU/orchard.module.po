@@ -1,0 +1,719 @@
+# Orchard resource strings - ru-RU
+# Copyright (c) 2010 Outercurve Foundation
+# All rights reserved
+# This file is distributed under the BSD license
+
+#: Orchard.Tokens.Providers.ContentTokens
+#| msgid "Container"
+msgctxt "Orchard.Tokens.Providers.ContentTokens"
+msgid "Container"
+msgstr "Контейнер"
+
+#: Orchard.Tokens.Providers.ContentTokens
+#| msgid "The container Content Item."
+msgctxt "Orchard.Tokens.Providers.ContentTokens"
+msgid "The container Content Item."
+msgstr "Контейнер элемента содержимого."
+
+#: Orchard.Tokens.Providers.DateTokens
+#| msgid "Date/time"
+msgctxt "Orchard.Tokens.Providers.DateTokens"
+msgid "Date/time"
+msgstr "Дата/время"
+
+#: Orchard.Tokens.Providers.DateTokens
+#| msgid "Current date/time tokens"
+msgctxt "Orchard.Tokens.Providers.DateTokens"
+msgid "Current date/time tokens"
+msgstr "Метки текущих даты/времени"
+
+#: Orchard.Tokens.Providers.RequestTokens
+#| msgid "Http Request"
+msgctxt "Orchard.Tokens.Providers.RequestTokens"
+msgid "Http Request"
+msgstr "Запрос Http"
+
+#: Orchard.Tokens.Providers.RequestTokens
+#| msgid "Current Http Request tokens."
+msgctxt "Orchard.Tokens.Providers.RequestTokens"
+msgid "Current Http Request tokens."
+msgstr "Метки текущего запроса Http."
+
+#: Orchard.Tokens.Providers.RequestTokens
+#| msgid "QueryString:<element>"
+msgctxt "Orchard.Tokens.Providers.RequestTokens"
+msgid "QueryString:<element>"
+msgstr "Строка запроса:<элемент>"
+
+#: Orchard.Tokens.Providers.RequestTokens
+#| msgid "The Query String value for the specified element."
+msgctxt "Orchard.Tokens.Providers.RequestTokens"
+msgid "The Query String value for the specified element."
+msgstr "Значение из строки запроса для заданного элемента."
+
+#: Orchard.Tokens.Providers.RequestTokens
+#| msgid "Form:<element>"
+msgctxt "Orchard.Tokens.Providers.RequestTokens"
+msgid "Form:<element>"
+msgstr "Формуляр:<элемент>"
+
+#: Orchard.Tokens.Providers.RequestTokens
+#| msgid "The Form value for the specified element."
+msgctxt "Orchard.Tokens.Providers.RequestTokens"
+msgid "The Form value for the specified element."
+msgstr "Значение в формуляре для заданного элемента."
+
+#: Orchard.Tokens.Providers.TextTokens
+#| msgid "Text"
+msgctxt "Orchard.Tokens.Providers.TextTokens"
+msgid "Text"
+msgstr "Текст"
+
+#: Orchard.Tokens.Providers.TextTokens
+#| msgid "Tokens for text strings"
+msgctxt "Orchard.Tokens.Providers.TextTokens"
+msgid "Tokens for text strings"
+msgstr "Метки для строкового текста"
+
+#: Orchard.Tokens.Providers.TextTokens
+#| msgid "Limit:<text length>[,<ellipsis>]"
+msgctxt "Orchard.Tokens.Providers.TextTokens"
+msgid "Limit:<text length>[,<ellipsis>]"
+msgstr "Предел:<Длина текста>[,<ellipsis>]"
+
+#: Orchard.Tokens.Providers.TextTokens
+#| msgid "Limit text to specified length and append an optional ellipsis text."
+msgctxt "Orchard.Tokens.Providers.TextTokens"
+msgid "Limit text to specified length and append an optional ellipsis text."
+msgstr "Предел текста для заданной длины и добавление необязательного текста продолжения (многоточие)."
+
+#: Orchard.Tokens.Providers.TextTokens
+#| msgid "Format:<text format>"
+msgctxt "Orchard.Tokens.Providers.TextTokens"
+msgid "Format:<text format>"
+msgstr "Формат:<формат текста>"
+
+#: Orchard.Tokens.Providers.TextTokens
+#| msgid "Optional format specifier (e.g. foo{0}bar). See format strings at <a target=\"_blank\" href=\"http://msdn.microsoft.com/en-us/library/az4se3k1.aspx\">Standard Formats</a> and <a target=\"_blank\" href=\"http://msdn.microsoft.com/en-us/library/8kb3ddd4.aspx\">Custom Formats</a>"
+msgctxt "Orchard.Tokens.Providers.TextTokens"
+msgid "Optional format specifier (e.g. foo{0}bar). See format strings at <a target=\"_blank\" href=\"http://msdn.microsoft.com/en-us/library/az4se3k1.aspx\">Standard Formats</a> and <a target=\"_blank\" href=\"http://msdn.microsoft.com/en-us/library/8kb3ddd4.aspx\">Custom Formats</a>"
+msgstr "Необязательный спецификатор формата (например, foo{0}bar). Смотри строковые форматы на <a target=\"_blank\" href=\"http://msdn.microsoft.com/en-us/library/az4se3k1.aspx\">Стандартные форматы</a> и <a target=\"_blank\" href=\"http://msdn.microsoft.com/en-us/library/8kb3ddd4.aspx\">Пользовательские форматы</a>"
+
+#: Orchard.Tokens.Providers.TextTokens
+#| msgid "Url Encode"
+msgctxt "Orchard.Tokens.Providers.TextTokens"
+msgid "Url Encode"
+msgstr "Кодированный адрес Url"
+
+#: Orchard.Tokens.Providers.TextTokens
+#| msgid "Encodes a URL string."
+msgctxt "Orchard.Tokens.Providers.TextTokens"
+msgid "Encodes a URL string."
+msgstr "Кодированная строка Url."
+
+#: Orchard.Tokens.Providers.TextTokens
+#| msgid "Html Encode"
+msgctxt "Orchard.Tokens.Providers.TextTokens"
+msgid "Html Encode"
+msgstr "Кодированный Html"
+
+#: Orchard.Tokens.Providers.TextTokens
+#| msgid "Encodes an HTML string."
+msgctxt "Orchard.Tokens.Providers.TextTokens"
+msgid "Encodes an HTML string."
+msgstr "Кодированная строка Html."
+
+#: Orchard.Tokens.Providers.ContentTokens
+#| msgid "{0} {1}"
+msgctxt "Orchard.Tokens.Providers.ContentTokens"
+msgid "{0} {1}"
+msgstr "{0} {1}"
+
+#: Orchard.Tokens.Providers.ContentTokens
+#| msgid "The content of the {0} field."
+msgctxt "Orchard.Tokens.Providers.ContentTokens"
+msgid "The content of the {0} field."
+msgstr "Содержимое {0} прервано."
+
+#: Orchard.Tokens.Providers.DateTokens
+#| msgid "Local"
+msgctxt "Orchard.Tokens.Providers.DateTokens"
+msgid "Local"
+msgstr "Локально"
+
+#: Orchard.Tokens.Providers.DateTokens
+#| msgid "Based on the configured time zone."
+msgctxt "Orchard.Tokens.Providers.DateTokens"
+msgid "Based on the configured time zone."
+msgstr "Базируется на сконфигурированном часовом поясе."
+
+#: Orchard.Tokens.Providers.DateTokens
+#| msgid "Short Date"
+msgctxt "Orchard.Tokens.Providers.DateTokens"
+msgid "Short Date"
+msgstr "Кроткая дата"
+
+#: Orchard.Tokens.Providers.DateTokens
+#| msgid "Short date format."
+msgctxt "Orchard.Tokens.Providers.DateTokens"
+msgid "Short date format."
+msgstr "Краткий формат даты."
+
+#: Orchard.Tokens.Providers.DateTokens
+#| msgid "Short Time"
+msgctxt "Orchard.Tokens.Providers.DateTokens"
+msgid "Short Time"
+msgstr "Краткое время"
+
+#: Orchard.Tokens.Providers.DateTokens
+#| msgid "Short time format."
+msgctxt "Orchard.Tokens.Providers.DateTokens"
+msgid "Short time format."
+msgstr "Краткий формат времени."
+
+#: Orchard.Tokens.Providers.DateTokens
+#| msgid "Long Date and Time"
+msgctxt "Orchard.Tokens.Providers.DateTokens"
+msgid "Long Date and Time"
+msgstr "Длинная дата и время"
+
+#: Orchard.Tokens.Providers.DateTokens
+#| msgid "Long date and time format."
+msgctxt "Orchard.Tokens.Providers.DateTokens"
+msgid "Long date and time format."
+msgstr "Длинный формат даты и времени."
+
+#: Orchard.Tokens.Providers.TextTokens
+#| msgid "Line Encode"
+msgctxt "Orchard.Tokens.Providers.TextTokens"
+msgid "Line Encode"
+msgstr "Кодированный перевод строки"
+
+#: Orchard.Tokens.Providers.TextTokens
+#| msgid "Replaces new lines with <br /> tags."
+msgctxt "Orchard.Tokens.Providers.TextTokens"
+msgid "Replaces new lines with <br /> tags."
+msgstr "Заменяет знак новой строки тегом <br />."
+
+#: ~/Modules/Orchard.Tokens/Module.txt
+#| msgid "Name"
+msgctxt "~/Modules/Orchard.Tokens/Module.txt"
+msgid "Tokens"
+msgstr "Метки"
+
+#: ~/Modules/Orchard.Tokens/Module.txt
+#| msgid "Author"
+msgctxt "~/Modules/Orchard.Tokens/Module.txt"
+msgid "The Orchard Team"
+msgstr "Команда Orchard"
+
+#: ~/Modules/Orchard.Tokens/Module.txt
+#| msgid "Website"
+msgctxt "~/Modules/Orchard.Tokens/Module.txt"
+msgid "http://orchardtokens.codeplex.com"
+msgstr "http://orchardtokens.codeplex.com"
+
+#: ~/Modules/Orchard.Tokens/Module.txt
+#| msgid "Description"
+msgctxt "~/Modules/Orchard.Tokens/Module.txt"
+msgid "Provides a system for performing string replacements with common site values."
+msgstr "Поддерживает систему для выполнения замены строк общими для сайта значениями."
+
+#: ~/Modules/Orchard.Tokens/Module.txt
+#| msgid "Orchard.Tokens.Name"
+msgctxt "~/Modules/Orchard.Tokens/Module.txt"
+msgid "Tokens"
+msgstr "Метки"
+
+#: ~/Modules/Orchard.Tokens/Module.txt
+#| msgid "Orchard.Tokens.Description"
+msgctxt "~/Modules/Orchard.Tokens/Module.txt"
+msgid "Provides a system for performing string replacements with common site values."
+msgstr "Поддерживает систему для выполнения замены строк общими для сайта значениями."
+
+#: ~/Modules/Orchard.Tokens/Module.txt
+#| msgid "Orchard.Tokens.Category"
+msgctxt "~/Modules/Orchard.Tokens/Module.txt"
+msgid "Content"
+msgstr "Содержимое"
+
+#: Orchard.Tokens.Providers.ContentTokens
+#| msgid "Content Items"
+msgctxt "Orchard.Tokens.Providers.ContentTokens"
+msgid "Content Items"
+msgstr "Элементы содержимого"
+
+#: Orchard.Tokens.Providers.ContentTokens
+#| msgid "Content Id"
+msgctxt "Orchard.Tokens.Providers.ContentTokens"
+msgid "Content Id"
+msgstr "Идентификатор содержимого"
+
+#: Orchard.Tokens.Providers.ContentTokens
+#| msgid "Numeric primary key value of content."
+msgctxt "Orchard.Tokens.Providers.ContentTokens"
+msgid "Numeric primary key value of content."
+msgstr "Значение числового первичного ключа содержимого."
+
+#: Orchard.Tokens.Providers.ContentTokens
+#| msgid "Content Author"
+msgctxt "Orchard.Tokens.Providers.ContentTokens"
+msgid "Content Author"
+msgstr "Автор содержимого"
+
+#: Orchard.Tokens.Providers.ContentTokens
+#| msgid "Person in charge of the content."
+msgctxt "Orchard.Tokens.Providers.ContentTokens"
+msgid "Person in charge of the content."
+msgstr "Лицо, ответственное за содеримое."
+
+#: Orchard.Tokens.Providers.ContentTokens
+#| msgid "Content Date"
+msgctxt "Orchard.Tokens.Providers.ContentTokens"
+msgid "Content Date"
+msgstr "Дата содержимого"
+
+#: Orchard.Tokens.Providers.ContentTokens
+#| msgid "Date the content was created."
+msgctxt "Orchard.Tokens.Providers.ContentTokens"
+msgid "Date the content was created."
+msgstr "Дата создания содержимого."
+
+#: Orchard.Tokens.Providers.ContentTokens
+#| msgid "Identity"
+msgctxt "Orchard.Tokens.Providers.ContentTokens"
+msgid "Identity"
+msgstr "Идентичность"
+
+#: Orchard.Tokens.Providers.ContentTokens
+#| msgid "Identity of the content."
+msgctxt "Orchard.Tokens.Providers.ContentTokens"
+msgid "Identity of the content."
+msgstr "Идентичность содержимого."
+
+#: Orchard.Tokens.Providers.ContentTokens
+#| msgid "Content Type"
+msgctxt "Orchard.Tokens.Providers.ContentTokens"
+msgid "Content Type"
+msgstr "Тип содержимого"
+
+#: Orchard.Tokens.Providers.ContentTokens
+#| msgid "The name of the item Content Type."
+msgctxt "Orchard.Tokens.Providers.ContentTokens"
+msgid "The name of the item Content Type."
+msgstr "Название элемента Тип содержимого."
+
+#: Orchard.Tokens.Providers.ContentTokens
+#| msgid "Display Text"
+msgctxt "Orchard.Tokens.Providers.ContentTokens"
+msgid "Display Text"
+msgstr "Отображаемый текст"
+
+#: Orchard.Tokens.Providers.ContentTokens
+#| msgid "Title of the content."
+msgctxt "Orchard.Tokens.Providers.ContentTokens"
+msgid "Title of the content."
+msgstr "Заголовок содержимого."
+
+#: Orchard.Tokens.Providers.ContentTokens
+#| msgid "Display Url"
+msgctxt "Orchard.Tokens.Providers.ContentTokens"
+msgid "Display Url"
+msgstr "Url адрес показа"
+
+#: Orchard.Tokens.Providers.ContentTokens
+#| msgid "Url to display the content."
+msgctxt "Orchard.Tokens.Providers.ContentTokens"
+msgid "Url to display the content."
+msgstr "Адрес Url для отображения содержимого."
+
+#: Orchard.Tokens.Providers.ContentTokens
+#| msgid "Edit Url"
+msgctxt "Orchard.Tokens.Providers.ContentTokens"
+msgid "Edit Url"
+msgstr "Url адрес редактирования"
+
+#: Orchard.Tokens.Providers.ContentTokens
+#| msgid "Url to edit the content."
+msgctxt "Orchard.Tokens.Providers.ContentTokens"
+msgid "Url to edit the content."
+msgstr "Адрес Url для редактирования содержимого."
+
+#: Orchard.Tokens.Providers.ContentTokens
+#| msgid "Text Field"
+msgctxt "Orchard.Tokens.Providers.ContentTokens"
+msgid "Text Field"
+msgstr "Текстовое поле"
+
+#: Orchard.Tokens.Providers.ContentTokens
+#| msgid "Tokens for Text Fields"
+msgctxt "Orchard.Tokens.Providers.ContentTokens"
+msgid "Tokens for Text Fields"
+msgstr "Метки для текстовых полей"
+
+#: Orchard.Tokens.Providers.ContentTokens
+#| msgid "Length"
+msgctxt "Orchard.Tokens.Providers.ContentTokens"
+msgid "Length"
+msgstr "Длина"
+
+#: Orchard.Tokens.Providers.ContentTokens
+#| msgid "The length of the field."
+msgctxt "Orchard.Tokens.Providers.ContentTokens"
+msgid "The length of the field."
+msgstr "Длина поля."
+
+#: Orchard.Tokens.Providers.ContentTokens
+#| msgid "Url"
+msgctxt "Orchard.Tokens.Providers.ContentTokens"
+msgid "Url"
+msgstr "Адрес Url"
+
+#: Orchard.Tokens.Providers.ContentTokens
+#| msgid "Tokens for Urls"
+msgctxt "Orchard.Tokens.Providers.ContentTokens"
+msgid "Tokens for Urls"
+msgstr "Метки для адресов Url"
+
+#: Orchard.Tokens.Providers.ContentTokens
+#| msgid "Absolute"
+msgctxt "Orchard.Tokens.Providers.ContentTokens"
+msgid "Absolute"
+msgstr "Абсолютный"
+
+#: Orchard.Tokens.Providers.ContentTokens
+#| msgid "Absolute url."
+msgctxt "Orchard.Tokens.Providers.ContentTokens"
+msgid "Absolute url."
+msgstr "Абсолютный адрес url."
+
+#: Orchard.Tokens.Providers.ContentTokens
+#| msgid "Type Definition"
+msgctxt "Orchard.Tokens.Providers.ContentTokens"
+msgid "Type Definition"
+msgstr "Тип определения"
+
+#: Orchard.Tokens.Providers.ContentTokens
+#| msgid "Tokens for Content Types"
+msgctxt "Orchard.Tokens.Providers.ContentTokens"
+msgid "Tokens for Content Types"
+msgstr "Метки для типа содержимого"
+
+#: Orchard.Tokens.Providers.ContentTokens
+#| msgid "Name"
+msgctxt "Orchard.Tokens.Providers.ContentTokens"
+msgid "Name"
+msgstr "Имя"
+
+#: Orchard.Tokens.Providers.ContentTokens
+#| msgid "Name of the content type."
+msgctxt "Orchard.Tokens.Providers.ContentTokens"
+msgid "Name of the content type."
+msgstr "Название типа содержимого."
+
+#: Orchard.Tokens.Providers.ContentTokens
+#| msgid "Display Name"
+msgctxt "Orchard.Tokens.Providers.ContentTokens"
+msgid "Display Name"
+msgstr "Отображаемое имя"
+
+#: Orchard.Tokens.Providers.ContentTokens
+#| msgid "Display name of the content type."
+msgctxt "Orchard.Tokens.Providers.ContentTokens"
+msgid "Display name of the content type."
+msgstr "Отображаемое имя типа содержимого."
+
+#: Orchard.Tokens.Providers.ContentTokens
+#| msgid "Parts"
+msgctxt "Orchard.Tokens.Providers.ContentTokens"
+msgid "Parts"
+msgstr "Части"
+
+#: Orchard.Tokens.Providers.ContentTokens
+#| msgid "List of the attached part names."
+msgctxt "Orchard.Tokens.Providers.ContentTokens"
+msgid "List of the attached part names."
+msgstr "Список присоединенных имен части."
+
+#: Orchard.Tokens.Providers.ContentTokens
+#| msgid "Fields"
+msgctxt "Orchard.Tokens.Providers.ContentTokens"
+msgid "Fields"
+msgstr "Поля"
+
+#: Orchard.Tokens.Providers.ContentTokens
+#| msgid "Fields for each of the attached parts. For example, Fields.Page.Approved."
+msgctxt "Orchard.Tokens.Providers.ContentTokens"
+msgid "Fields for each of the attached parts. For example, Fields.Page.Approved."
+msgstr "Поля для каждой присоединенной части. Например, Fields.Page.Approved."
+
+#: Orchard.Tokens.Providers.ContentTokens
+#| msgid "Anonymous"
+msgctxt "Orchard.Tokens.Providers.ContentTokens"
+msgid "Anonymous"
+msgstr "Аноним"
+
+#: Orchard.Tokens.Providers.DateTokens
+#| msgid "Date"
+msgctxt "Orchard.Tokens.Providers.DateTokens"
+msgid "Date"
+msgstr "Дата"
+
+#: Orchard.Tokens.Providers.DateTokens
+#| msgid "Current Date tokens"
+msgctxt "Orchard.Tokens.Providers.DateTokens"
+msgid "Current Date tokens"
+msgstr "Метки текущей даты"
+
+#: Orchard.Tokens.Providers.DateTokens
+#| msgid "Since"
+msgctxt "Orchard.Tokens.Providers.DateTokens"
+msgid "Since"
+msgstr "Тому назад"
+
+#: Orchard.Tokens.Providers.DateTokens
+#| msgid "Relative to the current date/time."
+msgctxt "Orchard.Tokens.Providers.DateTokens"
+msgid "Relative to the current date/time."
+msgstr "Относительно текущих даты/времени."
+
+#: Orchard.Tokens.Providers.DateTokens
+#| msgid "Format:<date format>"
+msgctxt "Orchard.Tokens.Providers.DateTokens"
+msgid "Format:<date format>"
+msgstr "Формат:<формат даты>"
+
+#: Orchard.Tokens.Providers.DateTokens
+#| msgid "Optional format specifier (e.g. yyyy/MM/dd). See format strings at <a target=\"_blank\" href=\"http://msdn.microsoft.com/en-us/library/az4se3k1.aspx\">Standard Formats</a> and <a target=\"_blank\" href=\"http://msdn.microsoft.com/en-us/library/8kb3ddd4.aspx\">Custom Formats</a>"
+msgctxt "Orchard.Tokens.Providers.DateTokens"
+msgid "Optional format specifier (e.g. yyyy/MM/dd). See format strings at <a target=\"_blank\" href=\"http://msdn.microsoft.com/en-us/library/az4se3k1.aspx\">Standard Formats</a> and <a target=\"_blank\" href=\"http://msdn.microsoft.com/en-us/library/8kb3ddd4.aspx\">Custom Formats</a>"
+msgstr "Необязательный спецификатор формата (например yyyy/MM/dd). Смотрите строковые форматы <a target=\"_blank\" href=\"http://msdn.microsoft.com/en-us/library/az4se3k1.aspx\">Стандартные форматы</a> и <a target=\"_blank\" href=\"http://msdn.microsoft.com/en-us/library/8kb3ddd4.aspx\">Пользовательские форматы</a>"
+
+#: Orchard.Tokens.Providers.DateTokens
+#| msgid "'on' MMM d yyyy 'at' h:mm tt"
+msgctxt "Orchard.Tokens.Providers.DateTokens"
+msgid "'on' MMM d yyyy 'at' h:mm tt"
+msgstr "MMM d yyyy 'в' h:mm tt"
+
+#: Orchard.Tokens.Providers.DateTokens
+#| msgid "a moment ago"
+msgctxt "Orchard.Tokens.Providers.DateTokens"
+msgid "a moment ago"
+msgstr "момент назад"
+
+#: Orchard.Tokens.Providers.DateTokens
+#| msgid "1 day ago"
+msgctxt "Orchard.Tokens.Providers.DateTokens"
+msgid "1 day ago"
+msgstr "день назад"
+
+#: Orchard.Tokens.Providers.DateTokens
+#| msgid "{0} days ago"
+msgctxt "Orchard.Tokens.Providers.DateTokens"
+msgid "{0} days ago"
+msgstr "{0} дня/-ей назад"
+
+#: Orchard.Tokens.Providers.DateTokens
+#| msgid "1 hour ago"
+msgctxt "Orchard.Tokens.Providers.DateTokens"
+msgid "1 hour ago"
+msgstr "час назад"
+
+#: Orchard.Tokens.Providers.DateTokens
+#| msgid "{0} hours ago"
+msgctxt "Orchard.Tokens.Providers.DateTokens"
+msgid "{0} hours ago"
+msgstr "{0} часа/-ов назад"
+
+#: Orchard.Tokens.Providers.DateTokens
+#| msgid "1 minute ago"
+msgctxt "Orchard.Tokens.Providers.DateTokens"
+msgid "1 minute ago"
+msgstr "минута назад"
+
+#: Orchard.Tokens.Providers.DateTokens
+#| msgid "{0} minutes ago"
+msgctxt "Orchard.Tokens.Providers.DateTokens"
+msgid "{0} minutes ago"
+msgstr "{0} минут/-ы назад"
+
+#: Orchard.Tokens.Providers.DateTokens
+#| msgid "1 second ago"
+msgctxt "Orchard.Tokens.Providers.DateTokens"
+msgid "1 second ago"
+msgstr "секунду назад"
+
+#: Orchard.Tokens.Providers.DateTokens
+#| msgid "{0} seconds ago"
+msgctxt "Orchard.Tokens.Providers.DateTokens"
+msgid "{0} seconds ago"
+msgstr "{0} секунд/-ы назад"
+
+#: Orchard.Tokens.Providers.UserTokens
+#| msgid "User"
+msgctxt "Orchard.Tokens.Providers.UserTokens"
+msgid "User"
+msgstr "Пользователь"
+
+#: Orchard.Tokens.Providers.UserTokens
+#| msgid "User tokens"
+msgctxt "Orchard.Tokens.Providers.UserTokens"
+msgid "User tokens"
+msgstr "Метки пользователя"
+
+#: Orchard.Tokens.Providers.UserTokens
+#| msgid "Name"
+msgctxt "Orchard.Tokens.Providers.UserTokens"
+msgid "Name"
+msgstr "Имя"
+
+#: Orchard.Tokens.Providers.UserTokens
+#| msgid "Username"
+msgctxt "Orchard.Tokens.Providers.UserTokens"
+msgid "Username"
+msgstr "Имя пользователя"
+
+#: Orchard.Tokens.Providers.UserTokens
+#| msgid "Email"
+msgctxt "Orchard.Tokens.Providers.UserTokens"
+msgid "Email"
+msgstr "Адрес электронной почты"
+
+#: Orchard.Tokens.Providers.UserTokens
+#| msgid "Email Address"
+msgctxt "Orchard.Tokens.Providers.UserTokens"
+msgid "Email Address"
+msgstr "Адрес электронной почты"
+
+#: Orchard.Tokens.Providers.UserTokens
+#| msgid "Id"
+msgctxt "Orchard.Tokens.Providers.UserTokens"
+msgid "Id"
+msgstr "Идентификатор"
+
+#: Orchard.Tokens.Providers.UserTokens
+#| msgid "User Id"
+msgctxt "Orchard.Tokens.Providers.UserTokens"
+msgid "User Id"
+msgstr "Идентификатор пользователя"
+
+#: Orchard.Tokens.Providers.UserTokens
+#| msgid "Content"
+msgctxt "Orchard.Tokens.Providers.UserTokens"
+msgid "Content"
+msgstr "Содержимое"
+
+#: Orchard.Tokens.Providers.UserTokens
+#| msgid "The user's content item"
+msgctxt "Orchard.Tokens.Providers.UserTokens"
+msgid "The user's content item"
+msgstr "Элемент содержимого пользователя"
+
+#: Orchard.Tokens.Tests.TestTokenProvider
+#| msgid "Global1"
+msgctxt "Orchard.Tokens.Tests.TestTokenProvider"
+msgid "Global1"
+msgstr "Глобальная1"
+
+#: Orchard.Tokens.Tests.TestTokenProvider
+#| msgid "description of token1"
+msgctxt "Orchard.Tokens.Tests.TestTokenProvider"
+msgid "description of token1"
+msgstr "описание метки1"
+
+#: Orchard.Tokens.Tests.TestTokenProvider
+#| msgid "Global2"
+msgctxt "Orchard.Tokens.Tests.TestTokenProvider"
+msgid "Global2"
+msgstr "Глобальная2"
+
+#: Orchard.Tokens.Tests.TestTokenProvider
+#| msgid "description of token2"
+msgctxt "Orchard.Tokens.Tests.TestTokenProvider"
+msgid "description of token2"
+msgstr "описание метки2"
+
+#: Orchard.Tokens.Tests.TestTokenProvider
+#| msgid "Global3"
+msgctxt "Orchard.Tokens.Tests.TestTokenProvider"
+msgid "Global3"
+msgstr "Глобавльная3"
+
+#: Orchard.Tokens.Tests.TestTokenProvider
+#| msgid "description of token3"
+msgctxt "Orchard.Tokens.Tests.TestTokenProvider"
+msgid "description of token3"
+msgstr "описание метки3"
+
+#: Orchard.Tokens.Tests.TestTokenProvider
+#| msgid "Current User"
+msgctxt "Orchard.Tokens.Tests.TestTokenProvider"
+msgid "Current User"
+msgstr "Текущий пользователь"
+
+#: Orchard.Tokens.Tests.TestTokenProvider
+#| msgid "The current user"
+msgctxt "Orchard.Tokens.Tests.TestTokenProvider"
+msgid "The current user"
+msgstr "Текущий пользователь"
+
+#: Orchard.Tokens.Tests.TestTokenProvider
+#| msgid "Name"
+msgctxt "Orchard.Tokens.Tests.TestTokenProvider"
+msgid "Name"
+msgstr "Имя"
+
+#: Orchard.Tokens.Tests.TestTokenProvider
+#| msgid "Their user name"
+msgctxt "Orchard.Tokens.Tests.TestTokenProvider"
+msgid "Their user name"
+msgstr "Его имя пользователя"
+
+#: Orchard.Tokens.Tests.TestTokenProvider
+#| msgid "Birthdate"
+msgctxt "Orchard.Tokens.Tests.TestTokenProvider"
+msgid "Birthdate"
+msgstr "Дата рождения"
+
+#: Orchard.Tokens.Tests.TestTokenProvider
+#| msgid "Date of birth"
+msgctxt "Orchard.Tokens.Tests.TestTokenProvider"
+msgid "Date of birth"
+msgstr "Дата рождения"
+
+#: Orchard.Tokens.Tests.TestTokenProvider
+#| msgid "Now"
+msgctxt "Orchard.Tokens.Tests.TestTokenProvider"
+msgid "Now"
+msgstr "Сейчас"
+
+#: Orchard.Tokens.Tests.TestTokenProvider
+#| msgid "Current system date in short date format. You can chain a .NET DateTime format string to customize."
+msgctxt "Orchard.Tokens.Tests.TestTokenProvider"
+msgid "Current system date in short date format. You can chain a .NET DateTime format string to customize."
+msgstr "Текущая системная дата в кратком формате. Вы можете изменить формат .NET DateTime для настройки."
+
+#: ~/Modules/Orchard.Tokens/Views/TokenHelp.cshtml
+#| msgid "Name"
+msgctxt "~/Modules/Orchard.Tokens/Views/TokenHelp.cshtml"
+msgid "Name"
+msgstr "Имя"
+
+#: ~/Modules/Orchard.Tokens/Views/TokenHelp.cshtml
+#| msgid "Token"
+msgctxt "~/Modules/Orchard.Tokens/Views/TokenHelp.cshtml"
+msgid "Token"
+msgstr "Метка"
+
+#: ~/Modules/Orchard.Tokens/Views/TokenHelp.cshtml
+#| msgid "Description"
+msgctxt "~/Modules/Orchard.Tokens/Views/TokenHelp.cshtml"
+msgid "Description"
+msgstr "Описание"
+
+#: ~/Modules/Orchard.Tokens/Views/Admin/List.cshtml
+#| msgid "Available Tokens"
+msgctxt "~/Modules/Orchard.Tokens/Views/Admin/List.cshtml"
+msgid "Available Tokens"
+msgstr "Доступные метки"
+

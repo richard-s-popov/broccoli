@@ -1,0 +1,587 @@
+# Orchard resource strings - ru-RU
+# Copyright (c) 2010 Outercurve Foundation
+# All rights reserved
+# This file is distributed under the BSD license
+
+#: Orchard.Themes.Commands.ThemeCommands
+#| msgid "    State:         {0}"
+msgctxt "Orchard.Themes.Commands.ThemeCommands"
+msgid "    State:         {0}"
+msgstr "Состояние: {0}"
+
+#: Orchard.Themes.Commands.ThemeCommands
+#| msgid "    NeedsUpdate:   {0}"
+msgctxt "Orchard.Themes.Commands.ThemeCommands"
+msgid "    NeedsUpdate:   {0}"
+msgstr "ТребуютОбновления: {0}"
+
+#: Orchard.Themes.Commands.ThemeCommands
+#| msgid "    Zones:         {0}"
+msgctxt "Orchard.Themes.Commands.ThemeCommands"
+msgid "    Zones:         {0}"
+msgstr "Зоны: {0}"
+
+#: ~/Modules/Orchard.Themes/Module.txt
+#| msgid "Name"
+msgctxt "~/Modules/Orchard.Themes/Module.txt"
+msgid "Themes"
+msgstr "Темы"
+
+#: Orchard.Themes.Controllers.AdminController
+#| msgid "Theme {0} was not found"
+msgctxt "Orchard.Themes.Controllers.AdminController"
+msgid "Theme {0} was not found"
+msgstr "Тема {0} не найдена"
+
+#: Orchard.Themes.AdminMenu
+#| msgid "Installed"
+msgctxt "Orchard.Themes.AdminMenu"
+msgid "Installed"
+msgstr "Установленные"
+
+#: Orchard.Themes.Controllers.AdminController
+#| msgid "Listing themes failed: {0}"
+msgctxt "Orchard.Themes.Controllers.AdminController"
+msgid "Listing themes failed: {0}"
+msgstr "Не удалось перечислить темы: {0}"
+
+#: Orchard.Themes.Controllers.AdminController
+#| msgid "Previewing theme failed: {0}"
+msgctxt "Orchard.Themes.Controllers.AdminController"
+msgid "Previewing theme failed: {0}"
+msgstr "Не удалось просмотреть тему: {0}"
+
+#: Orchard.Themes.Controllers.AdminController
+#| msgid "Enabling theme failed: {0}"
+msgctxt "Orchard.Themes.Controllers.AdminController"
+msgid "Enabling theme failed: {0}"
+msgstr "Не удалось включить тему: {0}"
+
+#: Orchard.Themes.Controllers.AdminController
+#| msgid "Disabling theme failed: {0}"
+msgctxt "Orchard.Themes.Controllers.AdminController"
+msgid "Disabling theme failed: {0}"
+msgstr "Не удалось отключить тему: {0}"
+
+#: Orchard.Themes.Controllers.AdminController
+#| msgid "Activating theme failed: {0}"
+msgctxt "Orchard.Themes.Controllers.AdminController"
+msgid "Activating theme failed: {0}"
+msgstr "Не удалось активировать тему: {0}"
+
+#: ~/Modules/Orchard.Themes/Views/ThemeEntry.cshtml
+#| msgid "Activate"
+msgctxt "~/Modules/Orchard.Themes/Views/ThemeEntry.cshtml"
+msgid "Activate"
+msgstr "Активна"
+
+#: ~/Modules/Orchard.Themes/Views/ThemeEntry.cshtml
+#| msgid "Set Current"
+msgctxt "~/Modules/Orchard.Themes/Views/ThemeEntry.cshtml"
+msgid "Set Current"
+msgstr "Сделать текущей"
+
+#: ~/Modules/Orchard.Themes/Views/ThemeEntry.cshtml
+#| msgid "Preview"
+msgctxt "~/Modules/Orchard.Themes/Views/ThemeEntry.cshtml"
+msgid "Preview"
+msgstr "Предпросмотр"
+
+#: ~/Modules/Orchard.Themes/Views/ThemeEntry.cshtml
+#| msgid "By"
+msgctxt "~/Modules/Orchard.Themes/Views/ThemeEntry.cshtml"
+msgid "By"
+msgstr "От"
+
+#: ~/Modules/Orchard.Themes/Views/ThemeEntry.cshtml
+#| msgid "Version:"
+msgctxt "~/Modules/Orchard.Themes/Views/ThemeEntry.cshtml"
+msgid "Version:"
+msgstr "Версия:"
+
+#: ~/Modules/Orchard.Themes/Views/ThemeEntry.cshtml
+#| msgid "Disable"
+msgctxt "~/Modules/Orchard.Themes/Views/ThemeEntry.cshtml"
+msgid "Disable"
+msgstr "Отключить"
+
+#: ~/Modules/Orchard.Themes/Views/ThemeEntry.cshtml
+#| msgid "Enable"
+msgctxt "~/Modules/Orchard.Themes/Views/ThemeEntry.cshtml"
+msgid "Enable"
+msgstr "Включить"
+
+#: ~/Modules/Orchard.Themes/Views/ThemeEntry.cshtml
+#| msgid "Update"
+msgctxt "~/Modules/Orchard.Themes/Views/ThemeEntry.cshtml"
+msgid "Update"
+msgstr "Обновить"
+
+#: ~/Modules/Orchard.Themes/Views/ThemeEntry.cshtml
+#| msgid "Uninstall"
+msgctxt "~/Modules/Orchard.Themes/Views/ThemeEntry.cshtml"
+msgid "Uninstall"
+msgstr "Удалить"
+
+#: ~/Modules/Orchard.Themes/Views/ThemeEntry.Current.cshtml
+#| msgid "By"
+msgctxt "~/Modules/Orchard.Themes/Views/ThemeEntry.Current.cshtml"
+msgid "By"
+msgstr "От"
+
+#: ~/Modules/Orchard.Themes/Views/ThemeEntry.Current.cshtml
+#| msgid "Version:"
+msgctxt "~/Modules/Orchard.Themes/Views/ThemeEntry.Current.cshtml"
+msgid "Version:"
+msgstr "Версия:"
+
+#: ~/Modules/Orchard.Themes/Views/Admin/Index.cshtml
+#| msgid "Themes"
+msgctxt "~/Modules/Orchard.Themes/Views/Admin/Index.cshtml"
+msgid "Themes"
+msgstr "Темы"
+
+#: ~/Modules/Orchard.Themes/Views/Admin/Index.cshtml
+#| msgid "Available"
+msgctxt "~/Modules/Orchard.Themes/Views/Admin/Index.cshtml"
+msgid "Available"
+msgstr "Доступна"
+
+#: ~/Modules/Orchard.Themes/Views/Admin/Index.cshtml
+#| msgid "Install a theme from your computer"
+msgctxt "~/Modules/Orchard.Themes/Views/Admin/Index.cshtml"
+msgid "Install a theme from your computer"
+msgstr "Установить тему с вашего компьютера"
+
+#: ~/Modules/Orchard.Themes/Views/Admin/Index.cshtml
+#| msgid "There are no additional themes installed."
+msgctxt "~/Modules/Orchard.Themes/Views/Admin/Index.cshtml"
+msgid "There are no additional themes installed."
+msgstr "Нет установленных дополнительных тем."
+
+#: ~/Modules/Orchard.Themes/Views/Admin/Index.cshtml
+#| msgid "Install a theme"
+msgctxt "~/Modules/Orchard.Themes/Views/Admin/Index.cshtml"
+msgid "Install a theme"
+msgstr "Установить тему"
+
+#: ~/Modules/Orchard.Themes/Views/Admin/Index.cshtml
+#| msgid "Install a theme from the Gallery"
+msgctxt "~/Modules/Orchard.Themes/Views/Admin/Index.cshtml"
+msgid "Install a theme from the Gallery"
+msgstr "Установить тему из Галереи"
+
+#: ~/Modusles/Orchard.Themes/Views/ThemeEntry.cshtml
+#| msgid "By"
+msgctxt "~/Modusles/Orchard.Themes/Views/ThemeEntry.cshtml"
+msgid "By"
+msgstr "от"
+
+#: Orchard.Themes.Commands.ThemeCommands
+#| msgid "{0}"
+msgctxt "Orchard.Themes.Commands.ThemeCommands"
+msgid "{0}"
+msgstr "{0}"
+
+#: Orchard.Themes.Commands.ThemeCommands
+#| msgid "Current theme"
+msgctxt "Orchard.Themes.Commands.ThemeCommands"
+msgid "Current theme"
+msgstr "Текущая тема"
+
+#: Orchard.Themes.Commands.ThemeCommands
+#| msgid "--------------------------"
+msgctxt "Orchard.Themes.Commands.ThemeCommands"
+msgid "--------------------------"
+msgstr "--------------------------"
+
+#: Orchard.Themes.Commands.ThemeCommands
+#| msgid "List of available themes"
+msgctxt "Orchard.Themes.Commands.ThemeCommands"
+msgid "List of available themes"
+msgstr "Список доступных тем"
+
+#: Orchard.Themes.Commands.ThemeCommands
+#| msgid "  Name: {0}"
+msgctxt "Orchard.Themes.Commands.ThemeCommands"
+msgid "  Name: {0}"
+msgstr "  Имя: {0}"
+
+#: Orchard.Themes.Commands.ThemeCommands
+#| msgid "Enabled"
+msgctxt "Orchard.Themes.Commands.ThemeCommands"
+msgid "Enabled"
+msgstr "Включена"
+
+#: Orchard.Themes.Commands.ThemeCommands
+#| msgid "Disabled"
+msgctxt "Orchard.Themes.Commands.ThemeCommands"
+msgid "Disabled"
+msgstr "Выключена"
+
+#: Orchard.Themes.Commands.ThemeCommands
+#| msgid "Yes"
+msgctxt "Orchard.Themes.Commands.ThemeCommands"
+msgid "Yes"
+msgstr "Да"
+
+#: Orchard.Themes.Commands.ThemeCommands
+#| msgid "No"
+msgctxt "Orchard.Themes.Commands.ThemeCommands"
+msgid "No"
+msgstr "Нет"
+
+#: Orchard.Themes.Commands.ThemeCommands
+#| msgid "    Author:        {0}"
+msgctxt "Orchard.Themes.Commands.ThemeCommands"
+msgid "    Author:        {0}"
+msgstr "    Автор:        {0}"
+
+#: Orchard.Themes.Commands.ThemeCommands
+#| msgid "    Version:       {0}"
+msgctxt "Orchard.Themes.Commands.ThemeCommands"
+msgid "    Version:       {0}"
+msgstr "    Версия:       {0}"
+
+#: Orchard.Themes.Commands.ThemeCommands
+#| msgid "    Description:   {0}"
+msgctxt "Orchard.Themes.Commands.ThemeCommands"
+msgid "    Description:   {0}"
+msgstr "    Описание:   {0}"
+
+#: Orchard.Themes.Commands.ThemeCommands
+#| msgid "    Website:       {0}"
+msgctxt "Orchard.Themes.Commands.ThemeCommands"
+msgid "    Website:       {0}"
+msgstr "    Сайт:       {0}"
+
+#: Orchard.Themes.Commands.ThemeCommands
+#| msgid "Could not find theme {0}"
+msgctxt "Orchard.Themes.Commands.ThemeCommands"
+msgid "Could not find theme {0}"
+msgstr "Не удалось найти тему {0}"
+
+#: Orchard.Themes.Commands.ThemeCommands
+#| msgid "Enabling theme \"{0}\"..."
+msgctxt "Orchard.Themes.Commands.ThemeCommands"
+msgid "Enabling theme \"{0}\"..."
+msgstr "Включение темы  \"{0}\"..."
+
+#: Orchard.Themes.Commands.ThemeCommands
+#| msgid "Activating theme \"{0}\"..."
+msgctxt "Orchard.Themes.Commands.ThemeCommands"
+msgid "Activating theme \"{0}\"..."
+msgstr "Активация темы \"{0}\"..."
+
+#: Orchard.Themes.Commands.ThemeCommands
+#| msgid "Theme \"{0}\" activated"
+msgctxt "Orchard.Themes.Commands.ThemeCommands"
+msgid "Theme \"{0}\" activated"
+msgstr "Тема \"{0}\" активирована"
+
+#: ~/Modules/Orchard.Themes/Module.txt
+#| msgid "Orchard.Themes Description"
+msgctxt "~/Modules/Orchard.Themes/Module.txt"
+msgid "Basic theming capability."
+msgstr "Базовая совместимость тем."
+
+#: ~/Modules/Orchard.Themes/Module.txt
+#| msgid "Orchard.Themes Category"
+msgctxt "~/Modules/Orchard.Themes/Module.txt"
+msgid "Core"
+msgstr "Ядро"
+
+#: Orchard.Themes.AdminMenu
+#| msgid "Site Design"
+msgctxt "Orchard.Themes.AdminMenu"
+msgid "Site Design"
+msgstr "Дизайн сайта"
+
+#: Orchard.Themes.Controllers.AdminController
+#| msgid "Couldn't install theme"
+msgctxt "Orchard.Themes.Controllers.AdminController"
+msgid "Couldn't install theme"
+msgstr "Не удалось установить тему"
+
+#: Orchard.Themes.Controllers.AdminController
+#| msgid "Installing theme failed: "
+msgctxt "Orchard.Themes.Controllers.AdminController"
+msgid "Installing theme failed: "
+msgstr "Установка темы прервана: "
+
+#: Orchard.Themes.Controllers.AdminController
+#| msgid "Couldn't uninstall theme"
+msgctxt "Orchard.Themes.Controllers.AdminController"
+msgid "Couldn't uninstall theme"
+msgstr "Не удалось удалить тему"
+
+#: Orchard.Themes.Controllers.AdminController
+#| msgid "Uninstalling theme failed: "
+msgctxt "Orchard.Themes.Controllers.AdminController"
+msgid "Uninstalling theme failed: "
+msgstr "Удаление темы прервано: "
+
+#: Orchard.Themes.Services.ThemeService
+#| msgid "The theme \"{0}\" was already seen - looks like we're going around in circles."
+msgctxt "Orchard.Themes.Services.ThemeService"
+msgid "The theme \"{0}\" was already seen - looks like we're going around in circles."
+msgstr "Тема \"{0}\" уже была в просмотре, похоже мы ходим по кругу."
+
+#: ~/Modules/Orchard.Themes/Views/Admin/Install.cshtml
+#| msgid "Install Theme"
+msgctxt "~/Modules/Orchard.Themes/Views/Admin/Install.cshtml"
+msgid "Install Theme"
+msgstr "Установить тему"
+
+#: ~/Modules/Orchard.Themes/Views/Admin/Install.cshtml
+#| msgid "File Path to the zip file:"
+msgctxt "~/Modules/Orchard.Themes/Views/Admin/Install.cshtml"
+msgid "File Path to the zip file:"
+msgstr "Путь до ZIP файла:"
+
+#: ~/Modules/Orchard.Themes/Views/Admin/Install.cshtml
+#| msgid "Browse"
+msgctxt "~/Modules/Orchard.Themes/Views/Admin/Install.cshtml"
+msgid "Browse"
+msgstr "Обзор"
+
+#: ~/Modules/Orchard.Themes/Views/Admin/Install.cshtml
+#| msgid "Install"
+msgctxt "~/Modules/Orchard.Themes/Views/Admin/Install.cshtml"
+msgid "Install"
+msgstr "Установить"
+
+#: ~/Modules/Orchard.Themes/Module.txt
+#| msgid "Author"
+msgctxt "~/Modules/Orchard.Themes/Module.txt"
+msgid "The Orchard Team"
+msgstr "Команда Orchard"
+
+#: ~/Modules/Orchard.Themes/Module.txt
+#| msgid "Website"
+msgctxt "~/Modules/Orchard.Themes/Module.txt"
+msgid "http://orchardproject.net"
+msgstr "http://orchardproject.net"
+
+#: ~/Modules/Orchard.Themes/Module.txt
+#| msgid "Description"
+msgctxt "~/Modules/Orchard.Themes/Module.txt"
+msgid "The themes module makes it possible for Orchard applications to customize the look and feel of an Orchard web site."
+msgstr "Модуль тем позволяет приложениям Orchard настраивать внешний вид веб-сайта."
+
+#: ~/Modules/Orchard.Themes/Module.txt
+#| msgid "Orchard.Themes.Name"
+msgctxt "~/Modules/Orchard.Themes/Module.txt"
+msgid "Themes"
+msgstr "Темы"
+
+#: ~/Modules/Orchard.Themes/Module.txt
+#| msgid "Orchard.Themes.Description"
+msgctxt "~/Modules/Orchard.Themes/Module.txt"
+msgid "Basic theming capability."
+msgstr "Базовая совместимость тем."
+
+#: ~/Modules/Orchard.Themes/Module.txt
+#| msgid "Orchard.Themes.Category"
+msgctxt "~/Modules/Orchard.Themes/Module.txt"
+msgid "Core"
+msgstr "Ядро"
+
+#: Orchard.Themes.AdminMenu
+#| msgid "Themes"
+msgctxt "Orchard.Themes.AdminMenu"
+msgid "Themes"
+msgstr "Темы"
+
+#: Orchard.Themes.AdminMenu
+#| msgid "List"
+msgctxt "Orchard.Themes.AdminMenu"
+msgid "List"
+msgstr "Список"
+
+#: Orchard.Themes.Controllers.AdminController
+#| msgid "Listing themes failed: "
+msgctxt "Orchard.Themes.Controllers.AdminController"
+msgid "Listing themes failed: "
+msgstr "Перечисление тем прервано: "
+
+#: Orchard.Themes.Controllers.AdminController
+#| msgid "Couldn't preview the current theme"
+msgctxt "Orchard.Themes.Controllers.AdminController"
+msgid "Couldn't preview the current theme"
+msgstr "Не удалось просмотреть текущую тему"
+
+#: Orchard.Themes.Controllers.AdminController
+#| msgid "Previewing theme failed: "
+msgctxt "Orchard.Themes.Controllers.AdminController"
+msgid "Previewing theme failed: "
+msgstr "Предпросмотр темы прерван: "
+
+#: Orchard.Themes.Controllers.AdminController
+#| msgid "Couldn't enable the theme"
+msgctxt "Orchard.Themes.Controllers.AdminController"
+msgid "Couldn't enable the theme"
+msgstr "Не удалось активировать тему"
+
+#: Orchard.Themes.Controllers.AdminController
+#| msgid "Enabling theme failed: "
+msgctxt "Orchard.Themes.Controllers.AdminController"
+msgid "Enabling theme failed: "
+msgstr "Включение темы провалилось:"
+
+#: Orchard.Themes.Controllers.AdminController
+#| msgid "Couldn't disable the current theme"
+msgctxt "Orchard.Themes.Controllers.AdminController"
+msgid "Couldn't disable the current theme"
+msgstr "Не возможно отключить текущую тему"
+
+#: Orchard.Themes.Controllers.AdminController
+#| msgid "Disabling theme failed: "
+msgctxt "Orchard.Themes.Controllers.AdminController"
+msgid "Disabling theme failed: "
+msgstr "Не удалось отключить тему:"
+
+#: Orchard.Themes.Controllers.AdminController
+#| msgid "Couldn't set the current theme"
+msgctxt "Orchard.Themes.Controllers.AdminController"
+msgid "Couldn't set the current theme"
+msgstr "Не удалось установить текущую тему"
+
+#: Orchard.Themes.Controllers.AdminController
+#| msgid "Activating theme failed: "
+msgctxt "Orchard.Themes.Controllers.AdminController"
+msgid "Activating theme failed: "
+msgstr "Активация темы провалилась:"
+
+#: Orchard.Themes.Controllers.AdminController
+#| msgid "Couldn't update theme"
+msgctxt "Orchard.Themes.Controllers.AdminController"
+msgid "Couldn't update theme"
+msgstr "Не удалось обновить тему"
+
+#: Orchard.Themes.Controllers.AdminController
+#| msgid "The theme {0} was updated succesfuly"
+msgctxt "Orchard.Themes.Controllers.AdminController"
+msgid "The theme {0} was updated succesfuly"
+msgstr "Тема {0} была успешно обновлена"
+
+#: Orchard.Themes.Controllers.AdminController
+#| msgid "An error occured while updating the theme {0}: {1}"
+msgctxt "Orchard.Themes.Controllers.AdminController"
+msgid "An error occured while updating the theme {0}: {1}"
+msgstr "Произошла ошибка при обновлении темы  {0}: {1}"
+
+#: Orchard.Themes.Services.ThemeService
+#| msgid "The theme \"{0}\" is already in the stack of themes that need features disabled."
+msgctxt "Orchard.Themes.Services.ThemeService"
+msgid "The theme \"{0}\" is already in the stack of themes that need features disabled."
+msgstr "Тема «{0}» уже состоит в стеке тем на включение."
+
+#: Orchard.Themes.Services.ThemeService
+#| msgid "The theme \"{0}\" is already in the stack of themes that need features enabled."
+msgctxt "Orchard.Themes.Services.ThemeService"
+msgid "The theme \"{0}\" is already in the stack of themes that need features enabled."
+msgstr "Тема «{0}» уже состоит в стеке тем на включение."
+
+#: ~/Modules/Orchard.Themes/Views/ThemePreview.cshtml
+#| msgid "You are previewing: "
+msgctxt "~/Modules/Orchard.Themes/Views/ThemePreview.cshtml"
+msgid "You are previewing: "
+msgstr "Вы просматриваете: "
+
+#: ~/Modules/Orchard.Themes/Views/ThemePreview.cshtml
+#| msgid "Preview"
+msgctxt "~/Modules/Orchard.Themes/Views/ThemePreview.cshtml"
+msgid "Preview"
+msgstr "Предварительный просмотр"
+
+#: ~/Modules/Orchard.Themes/Views/ThemePreview.cshtml
+#| msgid "Apply"
+msgctxt "~/Modules/Orchard.Themes/Views/ThemePreview.cshtml"
+msgid "Apply"
+msgstr "Применить"
+
+#: ~/Modules/Orchard.Themes/Views/ThemePreview.cshtml
+#| msgid "Apply this theme"
+msgctxt "~/Modules/Orchard.Themes/Views/ThemePreview.cshtml"
+msgid "Apply this theme"
+msgstr "Применить текущую тему"
+
+#: ~/Modules/Orchard.Themes/Views/ThemePreview.cshtml
+#| msgid "Cancel"
+msgctxt "~/Modules/Orchard.Themes/Views/ThemePreview.cshtml"
+msgid "Cancel"
+msgstr "Отменить"
+
+#: ~/Modules/Orchard.Themes/Views/Admin/Index.cshtml
+#| msgid "Manage Themes"
+msgctxt "~/Modules/Orchard.Themes/Views/Admin/Index.cshtml"
+msgid "Manage Themes"
+msgstr "Управление темами"
+
+#: ~/Modules/Orchard.Themes/Views/Admin/Index.cshtml
+#| msgid "There is no current theme in the application. The built-in theme will be used."
+msgctxt "~/Modules/Orchard.Themes/Views/Admin/Index.cshtml"
+msgid "There is no current theme in the application. The built-in theme will be used."
+msgstr "Указанной темы нет в приложении. Будет использована встроенная тема."
+
+#: ~/Modules/Orchard.Themes/Views/Admin/Index.cshtml
+#| msgid "Install a new Theme"
+msgctxt "~/Modules/Orchard.Themes/Views/Admin/Index.cshtml"
+msgid "Install a new Theme"
+msgstr "Установить новую тему"
+
+#: ~/Modules/Orchard.Themes/Views/Admin/Index.cshtml
+#| msgid "Current Theme"
+msgctxt "~/Modules/Orchard.Themes/Views/Admin/Index.cshtml"
+msgid "Current Theme"
+msgstr "Текущая тема"
+
+#: ~/Modules/Orchard.Themes/Views/Admin/Index.cshtml
+#| msgid "By"
+msgctxt "~/Modules/Orchard.Themes/Views/Admin/Index.cshtml"
+msgid "By"
+msgstr "от"
+
+#: ~/Modules/Orchard.Themes/Views/Admin/Index.cshtml
+#| msgid "Version:"
+msgctxt "~/Modules/Orchard.Themes/Views/Admin/Index.cshtml"
+msgid "Version:"
+msgstr "Версия:"
+
+#: ~/Modules/Orchard.Themes/Views/Admin/Index.cshtml
+#| msgid "Available Themes"
+msgctxt "~/Modules/Orchard.Themes/Views/Admin/Index.cshtml"
+msgid "Available Themes"
+msgstr "Доступные темы"
+
+#: ~/Modules/Orchard.Themes/Views/Admin/Index.cshtml
+#| msgid "Activate"
+msgctxt "~/Modules/Orchard.Themes/Views/Admin/Index.cshtml"
+msgid "Activate"
+msgstr "Активировать"
+
+#: ~/Modules/Orchard.Themes/Views/Admin/Index.cshtml
+#| msgid "Set Current"
+msgctxt "~/Modules/Orchard.Themes/Views/Admin/Index.cshtml"
+msgid "Set Current"
+msgstr "Установить текущей"
+
+#: ~/Modules/Orchard.Themes/Views/Admin/Index.cshtml
+#| msgid "Preview"
+msgctxt "~/Modules/Orchard.Themes/Views/Admin/Index.cshtml"
+msgid "Preview"
+msgstr "Предпросмотр"
+
+#: ~/Modules/Orchard.Themes/Views/Admin/Index.cshtml
+#| msgid "Update"
+msgctxt "~/Modules/Orchard.Themes/Views/Admin/Index.cshtml"
+msgid "Update"
+msgstr "Обновить"
+
+#: ~/Modules/Orchard.Themes/Views/Admin/Index.cshtml
+#| msgid "Uninstall"
+msgctxt "~/Modules/Orchard.Themes/Views/Admin/Index.cshtml"
+msgid "Uninstall"
+msgstr "Удалить"
+

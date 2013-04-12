@@ -1,0 +1,41 @@
+# Orchard resource strings - ru-RU
+# Copyright (c) 2010 Outercurve Foundation
+# All rights reserved
+# This file is distributed under the BSD license
+
+#: ~/Themes/SafeMode/Theme.txt
+#| msgid "Name"
+msgctxt "~/Themes/SafeMode/Theme.txt"
+msgid "SafeMode"
+msgstr "Безопасный режим"
+
+#: ~/Themes/SafeMode/Theme.txt
+#| msgid "Author"
+msgctxt "~/Themes/SafeMode/Theme.txt"
+msgid "Jonathan Wall"
+msgstr "Jonathan Wall"
+
+#: ~/Themes/SafeMode/Theme.txt
+#| msgid "Description"
+msgctxt "~/Themes/SafeMode/Theme.txt"
+msgid "The Orchard Theme for setup and failure conditions."
+msgstr "Тема Орчард для установки и неблагоприятных условий"
+
+#: ~/Themes/SafeMode/Theme.txt
+#| msgid "Tags"
+msgctxt "~/Themes/SafeMode/Theme.txt"
+msgid "hidden"
+msgstr "Скрытые"
+
+#: ~/Themes/SafeMode/Theme.txt
+#| msgid "Website"
+msgctxt "~/Themes/SafeMode/Theme.txt"
+msgid "http://www.orchardproject.net"
+msgstr "http://www.orchardproject.net"
+
+#: ~/Themes/SafeMode/Views/Layout.cshtml
+#| msgid "Welcome to Orchard"
+msgctxt "~/Themes/SafeMode/Views/Layout.cshtml"
+msgid "Welcome to Orchard"
+msgstr "Добро пожаловать"
+

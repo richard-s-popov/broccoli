@@ -1,0 +1,47 @@
+# Orchard resource strings - ru-RU
+# Copyright (c) 2010 Outercurve Foundation
+# All rights reserved
+# This file is distributed under the BSD license
+
+#: ~/Modules/Orchard.Forms/Module.txt
+#| msgid "Name"
+msgctxt "~/Modules/Orchard.Forms/Module.txt"
+msgid "Forms"
+msgstr "Формы"
+
+#: ~/Modules/Orchard.Forms/Module.txt
+#| msgid "Author"
+msgctxt "~/Modules/Orchard.Forms/Module.txt"
+msgid "The Orchard Team"
+msgstr "Команда Orchard"
+
+#: ~/Modules/Orchard.Forms/Module.txt
+#| msgid "Website"
+msgctxt "~/Modules/Orchard.Forms/Module.txt"
+msgid "http://orchardforms.codeplex.com"
+msgstr "http://orchardforms.codeplex.com"
+
+#: ~/Modules/Orchard.Forms/Module.txt
+#| msgid "Description"
+msgctxt "~/Modules/Orchard.Forms/Module.txt"
+msgid "Provides a system to publish and alter html forms."
+msgstr "Предоставляет систему для редактирования и редактирования форм HTML."
+
+#: ~/Modules/Orchard.Forms/Module.txt
+#| msgid "Orchard.Forms.Name"
+msgctxt "~/Modules/Orchard.Forms/Module.txt"
+msgid "Forms"
+msgstr "Формы"
+
+#: ~/Modules/Orchard.Forms/Module.txt
+#| msgid "Orchard.Forms.Description"
+msgctxt "~/Modules/Orchard.Forms/Module.txt"
+msgid "Provides a system to publish and alter html forms."
+msgstr "Предоставляет систему для редактирования и редактирования форм HTML."
+
+#: ~/Modules/Orchard.Forms/Module.txt
+#| msgid "Orchard.Forms.Category"
+msgctxt "~/Modules/Orchard.Forms/Module.txt"
+msgid "Developer"
+msgstr "Разработчик"
+

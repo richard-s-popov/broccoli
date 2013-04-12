@@ -1,0 +1,335 @@
+# Orchard resource strings - ru-RU
+# Copyright (c) 2010 Outercurve Foundation
+# All rights reserved
+# This file is distributed under the BSD license
+
+#: ~/Modules/Orchard.Tags/Module.txt
+#| msgid "Name"
+msgctxt "~/Modules/Orchard.Tags/Module.txt"
+msgid "Tags"
+msgstr "Теги"
+
+#: ~/Modules/Orchard.Tags/Views/Admin/Index.cshtml
+#| msgid "Tags"
+msgctxt "~/Modules/Orchard.Tags/Views/Admin/Index.cshtml"
+msgid "Tags"
+msgstr "Теги"
+
+#: ~/Modules/Orchard.Tags/Views/Admin/Index.cshtml
+#| msgid "Delete"
+msgctxt "~/Modules/Orchard.Tags/Views/Admin/Index.cshtml"
+msgid "Delete"
+msgstr "Удалить"
+
+#: Orchard.Tags.Projections.TagsFilterForms
+#| msgid "Is one of"
+msgctxt "Orchard.Tags.Projections.TagsFilterForms"
+msgid "Is one of"
+msgstr "Один из"
+
+#: Orchard.Tags.Projections.TagsFilterForms
+#| msgid "Is all of"
+msgctxt "Orchard.Tags.Projections.TagsFilterForms"
+msgid "Is all of"
+msgstr "Все из"
+
+#: Orchard.Tags.Controllers.AdminController
+#| msgid "Can't manage tags"
+msgctxt "Orchard.Tags.Controllers.AdminController"
+msgid "Can't manage tags"
+msgstr "Невозможно управлять тегами"
+
+#: Orchard.Tags.Controllers.AdminController
+#| msgid "Couldn't create tag"
+msgctxt "Orchard.Tags.Controllers.AdminController"
+msgid "Couldn't create tag"
+msgstr "Не удалось создать тег"
+
+#: ~/Modules/Orchard.Tags/Views/EditorTemplates/Parts/Tags.cshtml
+#| msgid "Separate multiple tags with commas"
+msgctxt "~/Modules/Orchard.Tags/Views/EditorTemplates/Parts/Tags.cshtml"
+msgid "Separate multiple tags with commas"
+msgstr "Разделите несколько тегов запятыми"
+
+#: ~/Modules/Orchard.Tags/Module.txt
+#| msgid "Author"
+msgctxt "~/Modules/Orchard.Tags/Module.txt"
+msgid "The Orchard Team"
+msgstr "Команда Orchard"
+
+#: ~/Modules/Orchard.Tags/Module.txt
+#| msgid "Website"
+msgctxt "~/Modules/Orchard.Tags/Module.txt"
+msgid "http://orchardproject.net"
+msgstr "http://orchardproject.net"
+
+#: ~/Modules/Orchard.Tags/Module.txt
+#| msgid "Description"
+msgctxt "~/Modules/Orchard.Tags/Module.txt"
+msgid "The tags module is providing basic tagging for arbitrary content types."
+msgstr "Модуль тегов обеспечивает метки для всех типов содержимого."
+
+#: ~/Modules/Orchard.Tags/Module.txt
+#| msgid "Orchard.Tags.Name"
+msgctxt "~/Modules/Orchard.Tags/Module.txt"
+msgid "Tags"
+msgstr "Теги"
+
+#: ~/Modules/Orchard.Tags/Module.txt
+#| msgid "Orchard.Tags.Description"
+msgctxt "~/Modules/Orchard.Tags/Module.txt"
+msgid "Tag a content item."
+msgstr "Тег элемента содержимого"
+
+#: ~/Modules/Orchard.Tags/Module.txt
+#| msgid "Orchard.Tags.Category"
+msgctxt "~/Modules/Orchard.Tags/Module.txt"
+msgid "Navigation"
+msgstr "Навигация"
+
+#: Orchard.Tags.AdminMenu
+#| msgid "Tags"
+msgctxt "Orchard.Tags.AdminMenu"
+msgid "Tags"
+msgstr "Теги"
+
+#: Orchard.Tags.AdminMenu
+#| msgid "List"
+msgctxt "Orchard.Tags.AdminMenu"
+msgid "List"
+msgstr "Списки"
+
+#: Orchard.Tags.Controllers.AdminController
+#| msgid "Couldn't delete tag"
+msgctxt "Orchard.Tags.Controllers.AdminController"
+msgid "Couldn't delete tag"
+msgstr "Не удалось удалить тег"
+
+#: Orchard.Tags.Controllers.AdminController
+#| msgid "Couldn't edit tag"
+msgctxt "Orchard.Tags.Controllers.AdminController"
+msgid "Couldn't edit tag"
+msgstr "Не удалось изменить тег"
+
+#: Orchard.Tags.Controllers.AdminController
+#| msgid "Couldn't remove tag"
+msgctxt "Orchard.Tags.Controllers.AdminController"
+msgid "Couldn't remove tag"
+msgstr "Не удалось удалить тег"
+
+#: Orchard.Tags.Services.TagService
+#| msgid "Couldn't rename tag: name was empty"
+msgctxt "Orchard.Tags.Services.TagService"
+msgid "Couldn't rename tag: name was empty"
+msgstr "Не удалось переименовать тег: пустое имя"
+
+#: Orchard.Tags.Services.TagService
+#| msgid "Error removing tag to content item: the content item has not been created yet."
+msgctxt "Orchard.Tags.Services.TagService"
+msgid "Error removing tag to content item: the content item has not been created yet."
+msgstr "Ошибка при удалении меток элемента: элемент еще не создан."
+
+#: Orchard.Tags.Services.TagService
+#| msgid "Error adding tag to content item: the content item has not been created yet."
+msgctxt "Orchard.Tags.Services.TagService"
+msgid "Error adding tag to content item: the content item has not been created yet."
+msgstr "Ошибка при добавлении меток элементу: элемент еще не создан."
+
+#: ~/Modules/Orchard.Tags/Views/Admin/Edit.cshtml
+#| msgid "Manage tag: {0}"
+msgctxt "~/Modules/Orchard.Tags/Views/Admin/Edit.cshtml"
+msgid "Manage tag: {0}"
+msgstr "Управление тегом: {0}"
+
+#: ~/Modules/Orchard.Tags/Views/Admin/Edit.cshtml
+#| msgid "Tag Name"
+msgctxt "~/Modules/Orchard.Tags/Views/Admin/Edit.cshtml"
+msgid "Tag Name"
+msgstr "Имя тега"
+
+#: ~/Modules/Orchard.Tags/Views/Admin/Edit.cshtml
+#| msgid "Save"
+msgctxt "~/Modules/Orchard.Tags/Views/Admin/Edit.cshtml"
+msgid "Save"
+msgstr "Сохранить"
+
+#: ~/Modules/Orchard.Tags/Views/Admin/Edit.cshtml
+#| msgid "Content items tagged with {0}"
+msgctxt "~/Modules/Orchard.Tags/Views/Admin/Edit.cshtml"
+msgid "Content items tagged with {0}"
+msgstr "Элементы с тегом {0}"
+
+#: ~/Modules/Orchard.Tags/Views/Admin/Edit.cshtml
+#| msgid "There is nothing tagged with {0}"
+msgctxt "~/Modules/Orchard.Tags/Views/Admin/Edit.cshtml"
+msgid "There is nothing tagged with {0}"
+msgstr "Нет элементов с тегом {0}"
+
+#: ~/Modules/Orchard.Tags/Views/Admin/Edit.cshtml
+#| msgid "Content Type"
+msgctxt "~/Modules/Orchard.Tags/Views/Admin/Edit.cshtml"
+msgid "Content Type"
+msgstr "Типы контента"
+
+#: ~/Modules/Orchard.Tags/Views/Admin/Edit.cshtml
+#| msgid "Name"
+msgctxt "~/Modules/Orchard.Tags/Views/Admin/Edit.cshtml"
+msgid "Name"
+msgstr "Имя"
+
+#: ~/Modules/Orchard.Tags/Views/Admin/Index.cshtml
+#| msgid "Manage Tags"
+msgctxt "~/Modules/Orchard.Tags/Views/Admin/Index.cshtml"
+msgid "Manage Tags"
+msgstr "Управление тегами"
+
+#: ~/Modules/Orchard.Tags/Views/Admin/Index.cshtml
+#| msgid "Actions:"
+msgctxt "~/Modules/Orchard.Tags/Views/Admin/Index.cshtml"
+msgid "Actions:"
+msgstr "Действие:"
+
+#: ~/Modules/Orchard.Tags/Views/Admin/Index.cshtml
+#| msgid "Choose action..."
+msgctxt "~/Modules/Orchard.Tags/Views/Admin/Index.cshtml"
+msgid "Choose action..."
+msgstr "Выберите..."
+
+#: ~/Modules/Orchard.Tags/Views/Admin/Index.cshtml
+#| msgid "Remove"
+msgctxt "~/Modules/Orchard.Tags/Views/Admin/Index.cshtml"
+msgid "Remove"
+msgstr "Удалить"
+
+#: ~/Modules/Orchard.Tags/Views/Admin/Index.cshtml
+#| msgid "Apply"
+msgctxt "~/Modules/Orchard.Tags/Views/Admin/Index.cshtml"
+msgid "Apply"
+msgstr "Применить"
+
+#: ~/Modules/Orchard.Tags/Views/Admin/Index.cshtml
+#| msgid "This is a table of the tags in your application"
+msgctxt "~/Modules/Orchard.Tags/Views/Admin/Index.cshtml"
+msgid "This is a table of the tags in your application"
+msgstr "Таблица меток в вашем приложении"
+
+#: ~/Modules/Orchard.Tags/Views/Admin/Index.cshtml
+#| msgid "Name"
+msgctxt "~/Modules/Orchard.Tags/Views/Admin/Index.cshtml"
+msgid "Name"
+msgstr "Имя"
+
+#: ~/Modules/Orchard.Tags/Views/Admin/Index.cshtml
+#| msgid "Edit"
+msgctxt "~/Modules/Orchard.Tags/Views/Admin/Index.cshtml"
+msgid "Edit"
+msgstr "Править"
+
+#: ~/Modules/Orchard.Tags/Views/Admin/Index.cshtml
+#| msgid " | "
+msgctxt "~/Modules/Orchard.Tags/Views/Admin/Index.cshtml"
+msgid " | "
+msgstr " | "
+
+#: ~/Modules/Orchard.Tags/Views/EditorTemplates/Parts/CreateTag.cshtml
+#| msgid "New Tag Name"
+msgctxt "~/Modules/Orchard.Tags/Views/EditorTemplates/Parts/CreateTag.cshtml"
+msgid "New Tag Name"
+msgstr "Новое имя тега"
+
+#: ~/Modules/Orchard.Tags/Views/EditorTemplates/Parts/CreateTag.cshtml
+#| msgid "Add Tag"
+msgctxt "~/Modules/Orchard.Tags/Views/EditorTemplates/Parts/CreateTag.cshtml"
+msgid "Add Tag"
+msgstr "Добавить тег"
+
+#: ~/Modules/Orchard.Tags/Views/EditorTemplates/Parts/Tags.cshtml
+#| msgid "Tags"
+msgctxt "~/Modules/Orchard.Tags/Views/EditorTemplates/Parts/Tags.cshtml"
+msgid "Tags"
+msgstr "Теги"
+
+#: ~/Modules/Orchard.Tags/Views/Home/Index.cshtml
+#| msgid "Tags"
+msgctxt "~/Modules/Orchard.Tags/Views/Home/Index.cshtml"
+msgid "Tags"
+msgstr "Теги"
+
+#: ~/Modules/Orchard.Tags/Views/Home/Search.cshtml
+#| msgid "Tags"
+msgctxt "~/Modules/Orchard.Tags/Views/Home/Search.cshtml"
+msgid "Tags"
+msgstr "Теги"
+
+#: ~/Modules/Orchard.Tags/Views/Home/Search.cshtml
+#| msgid "Contents tagged with {0}"
+msgctxt "~/Modules/Orchard.Tags/Views/Home/Search.cshtml"
+msgid "Contents tagged with {0}"
+msgstr "Контент с тегом {0}"
+
+#: ~/Modules/Orchard.Tags/Views/Home/Search.cshtml
+#| msgid "Contents tagged with <span>{0}</span>"
+msgctxt "~/Modules/Orchard.Tags/Views/Home/Search.cshtml"
+msgid "Contents tagged with <span>{0}</span>"
+msgstr "Контент с тегом <span>{0}</span>"
+
+#: ~/Modules/Orchard.Tags/Views/Parts/Tags.ShowTags.cshtml
+#| msgid "Tags:"
+msgctxt "~/Modules/Orchard.Tags/Views/Parts/Tags.ShowTags.cshtml"
+msgid "Tags:"
+msgstr "Теги:"
+
+#: Orchard.Tags.Controllers.AdminController
+#| msgid "Not authorized to fetch tags"
+msgctxt "Orchard.Tags.Controllers.AdminController"
+msgid "Not authorized to fetch tags"
+msgstr "Не допущен к выборке тегов"
+
+#: Orchard.Tags.Drivers.TagsPartDriver
+#| msgid "The tags \"{0}\" could not be added because they contain forbidden chars: {1}"
+msgctxt "Orchard.Tags.Drivers.TagsPartDriver"
+msgid "The tags \"{0}\" could not be added because they contain forbidden chars: {1}"
+msgstr "Тег \"{0}\" не может быть добавлен, потому что содержит запрещенные символы: {1}"
+
+#: Orchard.Tags.Projections.TagsFilter
+#| msgid "Tags"
+msgctxt "Orchard.Tags.Projections.TagsFilter"
+msgid "Tags"
+msgstr "Теги"
+
+#: Orchard.Tags.Projections.TagsFilter
+#| msgid "Has Tags"
+msgctxt "Orchard.Tags.Projections.TagsFilter"
+msgid "Has Tags"
+msgstr "Имеет теги"
+
+#: Orchard.Tags.Projections.TagsFilter
+#| msgid "Tagged content items"
+msgctxt "Orchard.Tags.Projections.TagsFilter"
+msgid "Tagged content items"
+msgstr "Элементы содердимого с тегами"
+
+#: Orchard.Tags.Projections.TagsFilter
+#| msgid "Any tag"
+msgctxt "Orchard.Tags.Projections.TagsFilter"
+msgid "Any tag"
+msgstr "Любой тег"
+
+#: Orchard.Tags.Projections.TagsFilter
+#| msgid "Tagged with {0}"
+msgctxt "Orchard.Tags.Projections.TagsFilter"
+msgid "Tagged with {0}"
+msgstr "С тегом {0}"
+
+#: Orchard.Tags.Projections.TagsFilterForms
+#| msgid "Tags"
+msgctxt "Orchard.Tags.Projections.TagsFilterForms"
+msgid "Tags"
+msgstr "Теги"
+
+#: Orchard.Tags.Projections.TagsFilterForms
+#| msgid "Select some tags."
+msgctxt "Orchard.Tags.Projections.TagsFilterForms"
+msgid "Select some tags."
+msgstr "Выберите какой-нибудь тег."
+
