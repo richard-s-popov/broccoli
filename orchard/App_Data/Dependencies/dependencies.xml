@@ -1,6 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Dependencies>
   <Dependency>
+    <ModuleName>Orchard.Themes</ModuleName>
+    <VirtualPath>~/Modules/Orchard.Themes/bin/Orchard.Themes.dll</VirtualPath>
+    <LoaderName>PrecompiledExtensionLoader</LoaderName>
+    <References />
+  </Dependency>
+  <Dependency>
+    <ModuleName>CKEditor</ModuleName>
+    <VirtualPath>~/Modules/CKEditor/CKEditor.csproj</VirtualPath>
+    <LoaderName>DynamicExtensionLoader</LoaderName>
+    <References>
+      <Reference>
+        <Name>Orchard.Themes</Name>
+        <LoaderName>PrecompiledExtensionLoader</LoaderName>
+        <VirtualPath>~/Modules/Orchard.Themes/bin/Orchard.Themes.dll</VirtualPath>
+      </Reference>
+    </References>
+  </Dependency>
+  <Dependency>
     <ModuleName>Common</ModuleName>
     <VirtualPath>~/Core/Common</VirtualPath>
     <LoaderName>CoreExtensionLoader</LoaderName>
@@ -108,12 +126,6 @@
     <References />
   </Dependency>
   <Dependency>
-    <ModuleName>Orchard.Themes</ModuleName>
-    <VirtualPath>~/Modules/Orchard.Themes/bin/Orchard.Themes.dll</VirtualPath>
-    <LoaderName>PrecompiledExtensionLoader</LoaderName>
-    <References />
-  </Dependency>
-  <Dependency>
     <ModuleName>Orchard.ContentTypes</ModuleName>
     <VirtualPath>~/Modules/Orchard.ContentTypes/bin/Orchard.ContentTypes.dll</VirtualPath>
     <LoaderName>PrecompiledExtensionLoader</LoaderName>
@@ -124,6 +136,12 @@
         <VirtualPath>~/Modules/Orchard.Themes/bin/Orchard.Themes.dll</VirtualPath>
       </Reference>
     </References>
+  </Dependency>
+  <Dependency>
+    <ModuleName>Orchard.Email</ModuleName>
+    <VirtualPath>~/Modules/Orchard.Email/Orchard.Email.csproj</VirtualPath>
+    <LoaderName>DynamicExtensionLoader</LoaderName>
+    <References />
   </Dependency>
   <Dependency>
     <ModuleName>Orchard.Media</ModuleName>
