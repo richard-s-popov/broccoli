@@ -100,7 +100,7 @@ namespace BroccoliTrade.Logics.Impl.Account
                 foreach (var AccountPool in accounts)
                 {
                     var myHttpWebRequest = (HttpWebRequest)WebRequest
-                        .Create(string.Format("https://my.forexinn.ru/agente-api/check-involved-account/broccoli/jcmbogje9b5uxs/{0}", AccountPool.AccountNumber));
+                        .Create(string.Format("https://my.forexinn.ru/agent-api/check-involved-account/broccoli/jcmbogje9b5uxs/{0}", AccountPool.AccountNumber));
 
                     var myHttpWebResponse = (HttpWebResponse)myHttpWebRequest.GetResponse();
 
@@ -135,8 +135,13 @@ namespace BroccoliTrade.Logics.Impl.Account
                         switch ((int)json["reason"])
                         {
                             case 1:
+                                account.Reason = "Счет не существует. Проверьте правильность указанного счета.";
                                 break;
                             case 2:
+                                account.Reason = "Счет создан без нашего партнерского кода \"broccoli\". Создайте счет у брокера с нашим партнерским кодом, либо воспользуйтесь кнопкой \"открыть счет\" у нас на сайте";
+                                break;
+                            case 8:
+                                account.Reason = "Неверно указан наш партнерский код.";
                                 break;
                             default:
                                 account.Reason = null;
@@ -146,7 +151,7 @@ namespace BroccoliTrade.Logics.Impl.Account
                         var em = new EmailMessage
                         {
                             Subject = string.Format("Счет {0} отклонен", account.AccountNumber),
-                            Message = string.Format("Здравствуйте, {0}. Счет {1} отклонен.", account.Users.Name, account.AccountNumber),
+                            Message = string.Format("Здравствуйте, {0}. Счет {1} отклонен.<br/><b>{2}</b>", account.Users.Name, account.AccountNumber, account.Reason),
                             From = "support@broccoli-trade.ru",
                             DisplayNameFrom = "Broccoli Trade",
                             To = account.Users.Email
