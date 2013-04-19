@@ -90,6 +90,7 @@
     <Property Name="ModifiedDate" Type="datetime" />
     <Property Name="CreateDate" Type="datetime" Nullable="false" />
     <Property Name="IsNew" Type="bit" Nullable="false" />
+    <Property Name="Reason" Type="nvarchar" MaxLength="255" />
   </EntityType>
   <EntityType Name="Comment">
     <Key>

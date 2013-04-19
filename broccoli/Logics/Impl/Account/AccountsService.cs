@@ -92,15 +92,15 @@ namespace BroccoliTrade.Logics.Impl.Account
         {
             try
             {
-                var time = DateTime.Now.AddMinutes(-1 * GetRandomMinutes(5));
-                var accounts = db.AccountPool.Where(x => x.ApplicationDate < time);
+                // var time = DateTime.Now.AddMinutes(-1 * GetRandomMinutes(5));
+                var accounts = db.AccountPool.Select(x => x);
 
                 ServicePointManager.CertificatePolicy = new TrustAllCertificatePolicy();
 
                 foreach (var AccountPool in accounts)
                 {
                     var myHttpWebRequest = (HttpWebRequest)WebRequest
-                        .Create(string.Format("https://my.forexinn.ru/agent-api/check-involved-account/broccoli/jcmbogje9b5uxs/{0}", AccountPool.AccountNumber));
+                        .Create(string.Format("https://my.forexinn.ru/agente-api/check-involved-account/broccoli/jcmbogje9b5uxs/{0}", AccountPool.AccountNumber));
 
                     var myHttpWebResponse = (HttpWebResponse)myHttpWebRequest.GetResponse();
 
@@ -131,6 +131,17 @@ namespace BroccoliTrade.Logics.Impl.Account
                         var account = this.GetById(AccountPool.AccountId);
                         account.StatusId = 3;
                         account.IsNew = true;
+
+                        switch ((int)json["reason"])
+                        {
+                            case 1:
+                                break;
+                            case 2:
+                                break;
+                            default:
+                                account.Reason = null;
+                                break;
+                        }
 
                         var em = new EmailMessage
                         {

@@ -29,6 +29,7 @@ namespace BroccoliTrade.Domain
         public Nullable<System.DateTime> ModifiedDate { get; set; }
         public System.DateTime CreateDate { get; set; }
         public bool IsNew { get; set; }
+        public string Reason { get; set; }
     
         public virtual Users Users { get; set; }
         public virtual Status Status { get; set; }

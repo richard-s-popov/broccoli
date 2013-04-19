@@ -26,6 +26,7 @@
     <EntitySetMapping Name="Accounts">
       <EntityTypeMapping TypeName="BroccoliModel.Accounts">
         <MappingFragment StoreEntitySet="Accounts">
+          <ScalarProperty Name="Reason" ColumnName="Reason" />
           <ScalarProperty Name="IsNew" ColumnName="IsNew" />
           <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
           <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />

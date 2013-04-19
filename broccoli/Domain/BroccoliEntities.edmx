@@ -95,6 +95,7 @@
           <Property Name="ModifiedDate" Type="datetime" />
           <Property Name="CreateDate" Type="datetime" Nullable="false" />
           <Property Name="IsNew" Type="bit" Nullable="false" />
+          <Property Name="Reason" Type="nvarchar" MaxLength="255" />
         </EntityType>
         <EntityType Name="Comment">
           <Key>
@@ -474,6 +475,7 @@
           <NavigationProperty Name="TradingSystemPool" Relationship="BroccoliModel.FK_TradingSystemPool_Accounts" FromRole="Accounts" ToRole="TradingSystemPool" />
           <NavigationProperty Name="TradingSystems" Relationship="BroccoliModel.FK_TradingSystems_Accounts" FromRole="Accounts" ToRole="TradingSystems" />
           <Property Type="Boolean" Name="IsNew" Nullable="false" />
+          <Property Type="String" Name="Reason" MaxLength="255" FixedLength="false" Unicode="true" />
         </EntityType>
         <Association Name="FK_Accounts_Users">
           <End Type="BroccoliModel.Users" Role="Users" Multiplicity="1" />
@@ -769,6 +771,7 @@
           <EntitySetMapping Name="Accounts">
             <EntityTypeMapping TypeName="BroccoliModel.Accounts">
               <MappingFragment StoreEntitySet="Accounts">
+                <ScalarProperty Name="Reason" ColumnName="Reason" />
                 <ScalarProperty Name="IsNew" ColumnName="IsNew" />
                 <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
                 <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
