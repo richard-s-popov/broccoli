@@ -25,6 +25,7 @@
                     <th>Номер счета</th>        
                     <th>Брокер</th>
                     <th>Статус</th>
+                    <th>Причина</th>
                 </tr>
             </thead>
             @foreach (var account in Model.accounts)
@@ -37,10 +38,11 @@
                         </div>
                         ForexInn
                     </td>
-                    <td style="width: 40%;">
+                    <td style="width: 30%;">
                         <span class="status">@account.Status</span>
                         <span style="float: right; margin-right: 30px;"><a val="@account.Number" class="delete-link" href="#">Удалить</a></span>
                     </td>
+                    <td title="@account.Reason" style="width: 30%;">@account.Reason</td>
                 </tr>
             } 
         </table>

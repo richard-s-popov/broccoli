@@ -5,3 +5,4 @@ C:\work\broccoli\broccoli\Domain\bin\Debug\EntityFramework.dll
 C:\work\broccoli\broccoli\Domain\bin\Debug\EntityFramework.xml
 C:\work\broccoli\broccoli\Domain\obj\Debug\BroccoliTrade.Domain.dll
 C:\work\broccoli\broccoli\Domain\obj\Debug\BroccoliTrade.Domain.pdb
+C:\work\broccoli\broccoli\Domain\obj\Debug\Domain.csprojResolveAssemblyReference.cache

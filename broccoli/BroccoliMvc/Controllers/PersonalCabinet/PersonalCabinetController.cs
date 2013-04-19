@@ -109,7 +109,8 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.PersonalCabinet
                         {
                             Number = entity.AccountNumber,
                             Status = entity.Status.Name,
-                            StatusId = entity.StatusId
+                            StatusId = entity.StatusId,
+                            Reason = entity.Reason
                         })
                 };
 

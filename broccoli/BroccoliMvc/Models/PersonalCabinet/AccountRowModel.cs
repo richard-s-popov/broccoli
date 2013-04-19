@@ -12,5 +12,7 @@ namespace BroccoliTrade.Web.BroccoliMvc.Models.PersonalCabinet
         public string Status { get; set; }
 
         public int StatusId { get; set; }
+
+        public string Reason { get; set; }
     }
 }
