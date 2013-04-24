@@ -16,7 +16,7 @@
     @foreach (var comment in Model.CommentList)
     {
         <div class="comment">
-            <span class="user-name">@comment.UserName.Split(' ').First()&nbsp;@(comment.UserName.Split(' ').Last() != null ? @comment.UserName.Split(' ').Last()[0] : string.Empty).</span>
+            <span class="user-name">@comment.UserName.Split(' ').First()&nbsp;@(comment.UserName.Split(' ').Last() != null ? @comment.UserName.Split(' ').Last()[0] : ' ').</span>
             <span class="date">@comment.Date.ToShortDateString()</span>
             <div class="body">@Html.Raw(comment.Body)</div>
         </div>
