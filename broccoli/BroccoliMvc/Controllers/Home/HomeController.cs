@@ -121,7 +121,7 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.Home
                 {
                     CommentList = comments.Select(x => new CommentModel
                         {
-                            UserName = x.Users.Name,
+                            UserName = x.Users.Name.Trim(),
                             Body = x.Body,
                             Date = x.Date
                         })
