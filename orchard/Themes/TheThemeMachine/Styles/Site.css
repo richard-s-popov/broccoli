@@ -505,7 +505,7 @@ nav ul.breadcrumb
 
 /* If zone 2 is on */
 .aside-2 #layout-content { float: left; width: 600px; }
-.aside-2 .aside-second { float: right; width: 360px; }
+.aside-2 .aside-second { float: right;width: 235px; }
 
 /* If zones 1, 2 are on */
 .aside-12 #layout-content { width: 600px; }
