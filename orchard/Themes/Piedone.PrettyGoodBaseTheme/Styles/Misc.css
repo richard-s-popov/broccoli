@@ -1,0 +1,88 @@
+﻿.small
+{
+    font-size: 0.615em;
+    margin-bottom: 1.875em;
+    line-height: 1.875em;
+}
+.large
+{
+    font-size: 1.231em;
+    line-height: 2.231em;
+    margin-bottom: 1.25em;
+}
+.hide
+{
+    display: none;
+}
+
+.quiet
+{
+    color: #666;
+}
+.loud
+{
+    color: #000;
+}
+.highlight
+{
+    background: #ff0;
+}
+.added
+{
+    background: #060;
+    color: #fff;
+}
+.removed
+{
+    background: #900;
+    color: #fff;
+}
+
+.first
+{
+    margin-left: 0;
+    padding-left: 0;
+}
+.last
+{
+    margin-right: 0;
+    padding-right: 0;
+}
+.top
+{
+    margin-top: 0;
+    padding-top: 0;
+}
+.bottom
+{
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.credits
+{
+    float: left;
+}
+.user-display
+{
+    float: left;
+    padding: 0 12px;
+}
+.user-display .welcome
+{
+}
+.user-display .user-actions
+{
+}
+
+.login-form
+{
+    margin: 24px 0 0 0;
+}
+
+.hidden-text
+{
+    text-indent: -3000px;
+    font-size: 0px;
+    text-decoration: none !important;
+}

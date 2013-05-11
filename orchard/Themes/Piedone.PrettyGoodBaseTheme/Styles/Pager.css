@@ -1,0 +1,33 @@
+﻿.pager
+{
+    list-style: none;
+    padding: 0;
+    margin: 12px 0 0 0;
+}
+
+.pager li
+{
+    float: left;
+    padding: 0 12px 0 0;
+    margin: 0;
+}
+
+.pager a, .pager span
+{
+    font-size: 1.077em;
+    display: block;
+    background-color: #dbdbdb;
+    padding: 6px 6px;
+    color: #434343;
+}
+
+.pager a:hover
+{
+    background-color: #434343;
+    color: #fff;
+}
+
+.pager span
+{
+    background-color: inherit;
+}

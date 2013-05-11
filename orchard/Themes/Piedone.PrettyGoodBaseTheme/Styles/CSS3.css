@@ -1,0 +1,20 @@
+﻿input[type="submit"], input[type="button"], button, .button, .button:link, .button:visited
+{
+    color: #333;
+    background: #F5F5F5;
+    background: -webkit-gradient(linear, left top, left bottom, from(#F5F5F5), to(#cbcbcb));
+    background: -moz-linear-gradient(top , #F5F5F5, #cbcbcb);
+    border: 1px solid #999;
+    cursor: pointer;
+    margin: .2em 0 2em 0;
+    padding: .3em 1.8em;
+    text-align: center;
+}
+
+input[type="submit"]:hover, input[type="button"]:hover, input[type="submit"]:active, input[type="button"]:active, input[type="submit"]:focus, input[type="button"]:focus, button:hover, .button:hover, button:active, .button:active, button:focus, .button:focus
+{
+    text-decoration: none;
+    background: #ebebeb;
+    background: -webkit-gradient(linear, left top, left bottom, from(#e1e1e1), to(#ebebeb));
+    background: -moz-linear-gradient(top , #e1e1e1, #ebebeb);
+}
