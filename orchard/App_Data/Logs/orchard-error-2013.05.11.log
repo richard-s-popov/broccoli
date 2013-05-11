@@ -11,3 +11,67 @@ Orchard.OrchardException: ¬ыберите файл дл€ загрузки.
    в System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation)
    в System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass13.<>c__DisplayClass15.<InvokeActionMethodWithFilters>b__12()
    в System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation)
+2013-05-11 21:15:10,764 [44] NHibernate.AdoNet.AbstractBatcher - Could not execute query: select themesetti0_.Id as Id21_, themesetti0_.AccentCss as AccentCss21_, themesetti0_.BackgroundCss as Backgrou3_21_, themesetti0_.Tagline as Tagline21_, themesetti0_.UseBranding as UseBrand5_21_, themesetti0_.UseCustomCss as UseCusto6_21_ from TheMetroTheme_ThemeSettingsRecord themesetti0_
+System.Data.SqlServerCe.SqlCeException (0x80004005): ”казанна€ таблица не существует. [ TheMetroTheme_ThemeSettingsRecord ]
+   в System.Data.SqlServerCe.SqlCeCommand.ProcessResults(Int32 hr)
+   в System.Data.SqlServerCe.SqlCeCommand.CompileQueryPlan()
+   в System.Data.SqlServerCe.SqlCeCommand.ExecuteCommand(CommandBehavior behavior, String method, ResultSetOptions options)
+   в System.Data.SqlServerCe.SqlCeCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   в System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader()
+   в NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
+2013-05-11 21:15:10,784 [44] NHibernate.Util.ADOExceptionReporter - ”казанна€ таблица не существует. [ TheMetroTheme_ThemeSettingsRecord ]
+2013-05-11 21:15:10,787 [44] NHibernate.Util.ADOExceptionReporter - ”казанна€ таблица не существует. [ TheMetroTheme_ThemeSettingsRecord ]
+2013-05-11 21:15:10,787 [44] NHibernate.Util.ADOExceptionReporter - ”казанна€ таблица не существует. [ TheMetroTheme_ThemeSettingsRecord ]
+2013-05-11 21:15:11,098 [38] NHibernate.AdoNet.AbstractBatcher - Could not execute query: select themesetti0_.Id as Id21_, themesetti0_.AccentCss as AccentCss21_, themesetti0_.BackgroundCss as Backgrou3_21_, themesetti0_.Tagline as Tagline21_, themesetti0_.UseBranding as UseBrand5_21_, themesetti0_.UseCustomCss as UseCusto6_21_ from TheMetroTheme_ThemeSettingsRecord themesetti0_
+System.Data.SqlServerCe.SqlCeException (0x80004005): ”казанна€ таблица не существует. [ TheMetroTheme_ThemeSettingsRecord ]
+   в System.Data.SqlServerCe.SqlCeCommand.ProcessResults(Int32 hr)
+   в System.Data.SqlServerCe.SqlCeCommand.CompileQueryPlan()
+   в System.Data.SqlServerCe.SqlCeCommand.ExecuteCommand(CommandBehavior behavior, String method, ResultSetOptions options)
+   в System.Data.SqlServerCe.SqlCeCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   в System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader()
+   в NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
+2013-05-11 21:15:11,099 [38] NHibernate.Util.ADOExceptionReporter - ”казанна€ таблица не существует. [ TheMetroTheme_ThemeSettingsRecord ]
+2013-05-11 21:15:11,099 [38] NHibernate.Util.ADOExceptionReporter - ”казанна€ таблица не существует. [ TheMetroTheme_ThemeSettingsRecord ]
+2013-05-11 21:15:11,099 [38] NHibernate.Util.ADOExceptionReporter - ”казанна€ таблица не существует. [ TheMetroTheme_ThemeSettingsRecord ]
+2013-05-11 21:15:30,243 [43] NHibernate.AdoNet.AbstractBatcher - Could not execute query: select themesetti0_.Id as Id21_, themesetti0_.AccentCss as AccentCss21_, themesetti0_.BackgroundCss as Backgrou3_21_, themesetti0_.Tagline as Tagline21_, themesetti0_.UseBranding as UseBrand5_21_, themesetti0_.UseCustomCss as UseCusto6_21_ from TheMetroTheme_ThemeSettingsRecord themesetti0_
+System.Data.SqlServerCe.SqlCeException (0x80004005): ”казанна€ таблица не существует. [ TheMetroTheme_ThemeSettingsRecord ]
+   в System.Data.SqlServerCe.SqlCeCommand.ProcessResults(Int32 hr)
+   в System.Data.SqlServerCe.SqlCeCommand.CompileQueryPlan()
+   в System.Data.SqlServerCe.SqlCeCommand.ExecuteCommand(CommandBehavior behavior, String method, ResultSetOptions options)
+   в System.Data.SqlServerCe.SqlCeCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   в System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader()
+   в NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
+2013-05-11 21:15:30,243 [43] NHibernate.Util.ADOExceptionReporter - ”казанна€ таблица не существует. [ TheMetroTheme_ThemeSettingsRecord ]
+2013-05-11 21:15:30,244 [43] NHibernate.Util.ADOExceptionReporter - ”казанна€ таблица не существует. [ TheMetroTheme_ThemeSettingsRecord ]
+2013-05-11 21:15:30,244 [43] NHibernate.Util.ADOExceptionReporter - ”казанна€ таблица не существует. [ TheMetroTheme_ThemeSettingsRecord ]
+2013-05-11 21:15:30,421 [45] NHibernate.AdoNet.AbstractBatcher - Could not execute query: select themesetti0_.Id as Id21_, themesetti0_.AccentCss as AccentCss21_, themesetti0_.BackgroundCss as Backgrou3_21_, themesetti0_.Tagline as Tagline21_, themesetti0_.UseBranding as UseBrand5_21_, themesetti0_.UseCustomCss as UseCusto6_21_ from TheMetroTheme_ThemeSettingsRecord themesetti0_
+System.Data.SqlServerCe.SqlCeException (0x80004005): ”казанна€ таблица не существует. [ TheMetroTheme_ThemeSettingsRecord ]
+   в System.Data.SqlServerCe.SqlCeCommand.ProcessResults(Int32 hr)
+   в System.Data.SqlServerCe.SqlCeCommand.CompileQueryPlan()
+   в System.Data.SqlServerCe.SqlCeCommand.ExecuteCommand(CommandBehavior behavior, String method, ResultSetOptions options)
+   в System.Data.SqlServerCe.SqlCeCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   в System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader()
+   в NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
+2013-05-11 21:15:30,422 [45] NHibernate.Util.ADOExceptionReporter - ”казанна€ таблица не существует. [ TheMetroTheme_ThemeSettingsRecord ]
+2013-05-11 21:15:30,422 [45] NHibernate.Util.ADOExceptionReporter - ”казанна€ таблица не существует. [ TheMetroTheme_ThemeSettingsRecord ]
+2013-05-11 21:15:30,423 [45] NHibernate.Util.ADOExceptionReporter - ”казанна€ таблица не существует. [ TheMetroTheme_ThemeSettingsRecord ]
+2013-05-11 21:15:34,222 [44] NHibernate.AdoNet.AbstractBatcher - Could not execute query: select themesetti0_.Id as Id21_, themesetti0_.AccentCss as AccentCss21_, themesetti0_.BackgroundCss as Backgrou3_21_, themesetti0_.Tagline as Tagline21_, themesetti0_.UseBranding as UseBrand5_21_, themesetti0_.UseCustomCss as UseCusto6_21_ from TheMetroTheme_ThemeSettingsRecord themesetti0_
+System.Data.SqlServerCe.SqlCeException (0x80004005): ”казанна€ таблица не существует. [ TheMetroTheme_ThemeSettingsRecord ]
+   в System.Data.SqlServerCe.SqlCeCommand.ProcessResults(Int32 hr)
+   в System.Data.SqlServerCe.SqlCeCommand.CompileQueryPlan()
+   в System.Data.SqlServerCe.SqlCeCommand.ExecuteCommand(CommandBehavior behavior, String method, ResultSetOptions options)
+   в System.Data.SqlServerCe.SqlCeCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   в System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader()
+   в NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
+2013-05-11 21:15:34,222 [44] NHibernate.Util.ADOExceptionReporter - ”казанна€ таблица не существует. [ TheMetroTheme_ThemeSettingsRecord ]
+2013-05-11 21:15:34,223 [44] NHibernate.Util.ADOExceptionReporter - ”казанна€ таблица не существует. [ TheMetroTheme_ThemeSettingsRecord ]
+2013-05-11 21:15:34,223 [44] NHibernate.Util.ADOExceptionReporter - ”казанна€ таблица не существует. [ TheMetroTheme_ThemeSettingsRecord ]
+2013-05-11 21:15:34,399 [43] NHibernate.AdoNet.AbstractBatcher - Could not execute query: select themesetti0_.Id as Id21_, themesetti0_.AccentCss as AccentCss21_, themesetti0_.BackgroundCss as Backgrou3_21_, themesetti0_.Tagline as Tagline21_, themesetti0_.UseBranding as UseBrand5_21_, themesetti0_.UseCustomCss as UseCusto6_21_ from TheMetroTheme_ThemeSettingsRecord themesetti0_
+System.Data.SqlServerCe.SqlCeException (0x80004005): ”казанна€ таблица не существует. [ TheMetroTheme_ThemeSettingsRecord ]
+   в System.Data.SqlServerCe.SqlCeCommand.ProcessResults(Int32 hr)
+   в System.Data.SqlServerCe.SqlCeCommand.CompileQueryPlan()
+   в System.Data.SqlServerCe.SqlCeCommand.ExecuteCommand(CommandBehavior behavior, String method, ResultSetOptions options)
+   в System.Data.SqlServerCe.SqlCeCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   в System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader()
+   в NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
+2013-05-11 21:15:34,399 [43] NHibernate.Util.ADOExceptionReporter - ”казанна€ таблица не существует. [ TheMetroTheme

@@ -7,10 +7,22 @@
     <Hash>cf6aa5e01c1b44fd</Hash>
   </Dependency>
   <Dependency>
+    <ExtensionId>Contoso</ExtensionId>
+    <LoaderName>DynamicExtensionLoader</LoaderName>
+    <VirtualPath>~/Themes/Contoso/Contoso.csproj</VirtualPath>
+    <Hash>a2e5887c9c25cad3</Hash>
+  </Dependency>
+  <Dependency>
     <ExtensionId>CyberStride.Contacts</ExtensionId>
     <LoaderName>DynamicExtensionLoader</LoaderName>
     <VirtualPath>~/Modules/CyberStride.Contacts/CyberStride.Contacts.csproj</VirtualPath>
     <Hash>f950d75b03740107</Hash>
+  </Dependency>
+  <Dependency>
+    <ExtensionId>Mango</ExtensionId>
+    <LoaderName>DynamicExtensionLoader</LoaderName>
+    <VirtualPath>~/Themes/Mango/Mango.csproj</VirtualPath>
+    <Hash>48e0ac7bc90153e2</Hash>
   </Dependency>
   <Dependency>
     <ExtensionId>Markdown</ExtensionId>
@@ -187,10 +199,22 @@
     <Hash>dbab1db6b12805ac</Hash>
   </Dependency>
   <Dependency>
+    <ExtensionId>Piedone.PrettyGoodBaseTheme</ExtensionId>
+    <LoaderName>DynamicExtensionLoader</LoaderName>
+    <VirtualPath>~/Themes/Piedone.PrettyGoodBaseTheme/Piedone.PrettyGoodBaseTheme.csproj</VirtualPath>
+    <Hash>65e8279446b1fff3</Hash>
+  </Dependency>
+  <Dependency>
     <ExtensionId>SysCache</ExtensionId>
     <LoaderName>PrecompiledExtensionLoader</LoaderName>
     <VirtualPath>~/Modules/SysCache/bin/SysCache.dll</VirtualPath>
     <Hash>92611556796df552</Hash>
+  </Dependency>
+  <Dependency>
+    <ExtensionId>TheMetroTheme</ExtensionId>
+    <LoaderName>DynamicExtensionLoader</LoaderName>
+    <VirtualPath>~/Themes/TheMetroTheme/TheMetroTheme.csproj</VirtualPath>
+    <Hash>cf7ccc9c7618e355</Hash>
   </Dependency>
   <Dependency>
     <ExtensionId>TinyMce</ExtensionId>

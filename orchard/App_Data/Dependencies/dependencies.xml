@@ -37,42 +37,6 @@
     <References />
   </Dependency>
   <Dependency>
-    <ModuleName>CyberStride.Contacts</ModuleName>
-    <VirtualPath>~/Modules/CyberStride.Contacts/CyberStride.Contacts.csproj</VirtualPath>
-    <LoaderName>DynamicExtensionLoader</LoaderName>
-    <References />
-  </Dependency>
-  <Dependency>
-    <ModuleName>Dashboard</ModuleName>
-    <VirtualPath>~/Core/Dashboard</VirtualPath>
-    <LoaderName>CoreExtensionLoader</LoaderName>
-    <References />
-  </Dependency>
-  <Dependency>
-    <ModuleName>Feeds</ModuleName>
-    <VirtualPath>~/Core/Feeds</VirtualPath>
-    <LoaderName>CoreExtensionLoader</LoaderName>
-    <References />
-  </Dependency>
-  <Dependency>
-    <ModuleName>Markdown</ModuleName>
-    <VirtualPath>~/Modules/Markdown/bin/Markdown.dll</VirtualPath>
-    <LoaderName>PrecompiledExtensionLoader</LoaderName>
-    <References>
-      <Reference>
-        <Name>MarkdownSharp</Name>
-        <LoaderName>PrecompiledExtensionLoader</LoaderName>
-        <VirtualPath>~/Modules/Markdown/bin/MarkdownSharp.dll</VirtualPath>
-      </Reference>
-    </References>
-  </Dependency>
-  <Dependency>
-    <ModuleName>Navigation</ModuleName>
-    <VirtualPath>~/Core/Navigation</VirtualPath>
-    <LoaderName>CoreExtensionLoader</LoaderName>
-    <References />
-  </Dependency>
-  <Dependency>
     <ModuleName>Orchard.Alias</ModuleName>
     <VirtualPath>~/Modules/Orchard.Alias/bin/Orchard.Alias.dll</VirtualPath>
     <LoaderName>PrecompiledExtensionLoader</LoaderName>
@@ -100,6 +64,60 @@
         <VirtualPath>~/Modules/Orchard.Tokens/bin/Orchard.Tokens.dll</VirtualPath>
       </Reference>
     </References>
+  </Dependency>
+  <Dependency>
+    <ModuleName>Contoso</ModuleName>
+    <VirtualPath>~/Themes/Contoso/Contoso.csproj</VirtualPath>
+    <LoaderName>DynamicExtensionLoader</LoaderName>
+    <References>
+      <Reference>
+        <Name>Orchard.Autoroute</Name>
+        <LoaderName>PrecompiledExtensionLoader</LoaderName>
+        <VirtualPath>~/Modules/Orchard.Autoroute/bin/Orchard.Autoroute.dll</VirtualPath>
+      </Reference>
+    </References>
+  </Dependency>
+  <Dependency>
+    <ModuleName>CyberStride.Contacts</ModuleName>
+    <VirtualPath>~/Modules/CyberStride.Contacts/CyberStride.Contacts.csproj</VirtualPath>
+    <LoaderName>DynamicExtensionLoader</LoaderName>
+    <References />
+  </Dependency>
+  <Dependency>
+    <ModuleName>Dashboard</ModuleName>
+    <VirtualPath>~/Core/Dashboard</VirtualPath>
+    <LoaderName>CoreExtensionLoader</LoaderName>
+    <References />
+  </Dependency>
+  <Dependency>
+    <ModuleName>Feeds</ModuleName>
+    <VirtualPath>~/Core/Feeds</VirtualPath>
+    <LoaderName>CoreExtensionLoader</LoaderName>
+    <References />
+  </Dependency>
+  <Dependency>
+    <ModuleName>Mango</ModuleName>
+    <VirtualPath>~/Themes/Mango/Mango.csproj</VirtualPath>
+    <LoaderName>DynamicExtensionLoader</LoaderName>
+    <References />
+  </Dependency>
+  <Dependency>
+    <ModuleName>Markdown</ModuleName>
+    <VirtualPath>~/Modules/Markdown/bin/Markdown.dll</VirtualPath>
+    <LoaderName>PrecompiledExtensionLoader</LoaderName>
+    <References>
+      <Reference>
+        <Name>MarkdownSharp</Name>
+        <LoaderName>PrecompiledExtensionLoader</LoaderName>
+        <VirtualPath>~/Modules/Markdown/bin/MarkdownSharp.dll</VirtualPath>
+      </Reference>
+    </References>
+  </Dependency>
+  <Dependency>
+    <ModuleName>Navigation</ModuleName>
+    <VirtualPath>~/Core/Navigation</VirtualPath>
+    <LoaderName>CoreExtensionLoader</LoaderName>
+    <References />
   </Dependency>
   <Dependency>
     <ModuleName>Orchard.Blogs</ModuleName>
@@ -367,6 +385,18 @@
     </References>
   </Dependency>
   <Dependency>
+    <ModuleName>Piedone.PrettyGoodBaseTheme</ModuleName>
+    <VirtualPath>~/Themes/Piedone.PrettyGoodBaseTheme/Piedone.PrettyGoodBaseTheme.csproj</VirtualPath>
+    <LoaderName>DynamicExtensionLoader</LoaderName>
+    <References>
+      <Reference>
+        <Name>Orchard.Themes</Name>
+        <LoaderName>PrecompiledExtensionLoader</LoaderName>
+        <VirtualPath>~/Modules/Orchard.Themes/bin/Orchard.Themes.dll</VirtualPath>
+      </Reference>
+    </References>
+  </Dependency>
+  <Dependency>
     <ModuleName>Reports</ModuleName>
     <VirtualPath>~/Core/Reports</VirtualPath>
     <LoaderName>CoreExtensionLoader</LoaderName>
@@ -413,6 +443,18 @@
     <VirtualPath>~/Theme/TheAdmin</VirtualPath>
     <LoaderName>RawThemeExtensionLoader</LoaderName>
     <References />
+  </Dependency>
+  <Dependency>
+    <ModuleName>TheMetroTheme</ModuleName>
+    <VirtualPath>~/Themes/TheMetroTheme/TheMetroTheme.csproj</VirtualPath>
+    <LoaderName>DynamicExtensionLoader</LoaderName>
+    <References>
+      <Reference>
+        <Name>Orchard.Themes</Name>
+        <LoaderName>PrecompiledExtensionLoader</LoaderName>
+        <VirtualPath>~/Modules/Orchard.Themes/bin/Orchard.Themes.dll</VirtualPath>
+      </Reference>
+    </References>
   </Dependency>
   <Dependency>
     <ModuleName>TheOtherSide</ModuleName>
