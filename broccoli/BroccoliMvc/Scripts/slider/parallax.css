@@ -132,7 +132,7 @@
 	text-align: center;
 	left: 0px;
 	bottom: 20px;
-	z-index: 2000;
+	z-index: 20;
 	-moz-user-select: none;
 	-webkit-user-select: none;
 }
