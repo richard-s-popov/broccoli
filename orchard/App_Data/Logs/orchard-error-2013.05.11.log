@@ -74,4 +74,6 @@ System.Data.SqlServerCe.SqlCeException (0x80004005): ”казанна€ таблица не сущест
    в System.Data.SqlServerCe.SqlCeCommand.ExecuteDbDataReader(CommandBehavior behavior)
    в System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader()
    в NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
-2013-05-11 21:15:34,399 [43] NHibernate.Util.ADOExceptionReporter - ”казанна€ таблица не существует. [ TheMetroTheme
+2013-05-11 21:15:34,399 [43] NHibernate.Util.ADOExceptionReporter - ”казанна€ таблица не существует. [ TheMetroTheme_ThemeSettingsRecord ]
+2013-05-11 21:15:34,400 [43] NHibernate.Util.ADOExceptionReporter - ”казанна€ таблица не существует. [ TheMetroTheme_ThemeSettingsRecord ]
+2013-05-11 21:15:34,400 [43] NHibernate.Util.ADOExceptionReporter - ”казанна€ таблица не существует. [ TheMetroTheme_ThemeSettingsRecord ]

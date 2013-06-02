@@ -1653,8 +1653,56 @@ footer#main{
 
 .center-content .about-forex {
     padding-top: 30px;
-    padding-bottom: 50px;
     position: relative;
+}
+
+.center-content .about-forex .comment {
+    background-color: #f5f5f5;
+    padding: 25px;
+    margin-top: 30px;
+    width: 675px;
+    position: relative;
+}
+
+.center-content .about-forex .to-right {
+    margin-left: 180px;
+}
+
+.center-content .about-forex .comment p {
+    width: 550px;
+    line-height: 23px;
+    color: rgb(77, 77, 77);
+}
+
+.center-content .about-forex .comment .photo {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 110px;
+}
+
+.center-content .about-forex .screen {
+    width: 100%;
+    margin-top: 30px;
+    -moz-box-shadow: 0 0 10px rgba(160, 160, 160, 0.5);
+    -webkit-box-shadow: 0 0 10px rgba(160, 160, 160, 0.5);
+    box-shadow: 0 0 10px rgba(160, 160, 160, 0.5);
+}
+
+.center-content .about-forex .garanted {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 220px;
+}
+
+.center-content .about-forex h4 {
+    font-size: 28px;
+    margin-top: 20px;
+}
+
+.center-content .about-forex iframe {
+    margin: 30px;
 }
 
 .center-content .about-forex .about-forex-text {
@@ -1670,10 +1718,10 @@ footer#main{
 }
 
 .center-content .about-forex  .first-img {
-    width: 266px;
+    width: 430px;
     position: absolute;
     right: 10px;
-    top: 53px;
+    top: 55px;
 }
 
 .advisor-page {

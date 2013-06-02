@@ -33,4 +33,16 @@
         autoplay: true,
         bgincrement: 50
     });
+    
+    $('#countdown_dashboard').countDown({
+        targetOffset: {
+            'day': 0,
+            'month': 0,
+            'year': 0,
+            'hour': 0,
+            'min': 15,
+            'sec': 00
+        },
+        format: 'odHM'
+    });
 });

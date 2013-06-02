@@ -6,12 +6,16 @@
 
 @section head {
     <link href="@Url.Content("~/Scripts/slider/parallax.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/flexslider.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/dark.css")" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="@Url.Content("~/Scripts/slider/modernizr.custom.28468.js")"></script>
     <script type="text/javascript" src="@Url.Content("~/Scripts/slider/jquery.cslider.js")"></script>
     <script type="text/javascript" src="@Url.Content("~/Scripts/Main/index.js")"></script>
     <script type="text/javascript" src="@Url.Content("~/Scripts/slider/coda-slider.1.1.1.pack.js")"></script>
     <script type="text/javascript" src="@Url.Content("~/Scripts/slider/jquery-easing-compatibility.1.2.pack.js")"></script>
     <script type="text/javascript" src="@Url.Content("~/Scripts/slider/jquery-easing.1.2.pack.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/jquery.flexslider-min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/jquery.lwtCountdown-0.9.5.js")"></script>
 }
 
 <div id="da-slider" class="da-slider slider">
@@ -68,6 +72,87 @@
 <div class="main">
     <div class="center-content">
         <div class="panel about-forex">
+            <h4>Хотите зарабатывать от 51 000 $ в месяц инвестируя всего 10% от своего дохода через 5 лет?</h4>
+            <h4>Хотите преумножать свой капитал в 2 раза за год и тратить на это 1 час в неделю?</h4>
+            <iframe width="854" height="510" src="http://www.youtube.com/embed/x_hWObWCxsA?feature=player_detailpage&vq=large" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="panel about-forex">
+            <h3>Что Вам это даст?</h3>
+            <p class="about-forex-text">Допустим, Вы вложили 10 000 долларов на год, через год Ваш капитал будет равен 25 000, при риске 1.05% или 105$<br />Итак: Риск 105$ - прибыль 15000 долларов или 1250$ в месяц, Вам интересен такой доход?<br />Регистрируйтесь и начинайте прямо сейчас.</p>
+            <h4>Почему это выгодно?</h4>
+            <p class="about-forex-text">
+                Потому что Вам не нужно принимать  решение самому.<br/>
+                Потому что Вы можете выставить риск такой, какой Вам нужен.<br/>
+                Потому что 20% сделок советника будут приносить 80% дохода.<br/>
+                Потому что мы работаем с надёжными брокерами, документы которых наши юристы тщательно проверили.<br/>
+                Потому что торговля ведётся круглосуточно, 6 дней в неделю.<br/>
+            </p>
+            <img class="first-img" src="@Url.Content("~/Content/img/invest-dream.png")"/>
+            <span class="button">
+                <a href="@Url.Action("RegisterForm", "Account")" target="_blank"><input id="regLink" class="large" type="button" value="Регистрация" /></a>
+            </span>
+        </div>
+        <div class="panel about-forex">
+            <h3>Ищете доказательство?</h3>
+            <h4>Посмотрите на отзывы:</h4>
+            <div class="comment to-right">
+                <p><strong>Григорий Муравьёв. Красноярск</strong></p>
+                <p>Установил в конце января Макс-трэйд, пополнил счёт на 100 000 рублей, получилось 3310,54$ (порадоволо что зачислили по ЦБ без комиссий) выставил риск на 10% за 4 месяца получил 107,3% чистыми! Забрал 100 000р, оставил проценты, капитал продолжает расти, а у меня на руках появились свободные 100 000р, а на счету осталось 3718$ что больше чем 107,3% если считать в рублях. Доллар подрос и я ещё дополнительно заработал.</p>
+                <img class="photo" src="@Url.Content("~/Content/img/bloWsKLnSpc.jpg")"/>
+            </div>
+            <div class="comment">
+                <p><strong>Владимир Тычинский</strong></p>
+                <p>Торгую на бирже уже давно, установил советник 2 месяца назад, и честно говоря я в шоке, за последний месяц поднял 18,11%!!!<br />До этого был опыт в трейдерстве но ни разу не видел такой стабильности и в таком количестве. Хочу сказать СПАСИБО Брокколи трэйд, поставил себе новую планку о которой пока что не скажу =)</p>
+                <img class="photo" src="@Url.Content("~/Content/img/wvLHzTX0ygo.jpg")"/>
+            </div>
+            <h4>Посмотрите на реальную историю,<br/>советник был запущен на ПАММ-счёте:</h4>
+            <img class="screen" src="@Url.Content("~/Content/img/121.jpg")"/>
+        </div>
+        <div class="panel about-forex">
+            <div id="countdown_dashboard">
+                <div class="dash months_dash">
+                    <span class="dash_title">месяцев</span>
+                    <div class="digit">0</div>
+                    <div class="digit">0</div>
+                </div>
+
+                <div class="dash days_dash">
+                    <span class="dash_title">дней</span>
+                    <div class="digit">0</div>
+                    <div class="digit">0</div>
+                </div>
+
+                <div class="dash hours_dash">
+                    <span class="dash_title">часов</span>
+                    <div class="digit">0</div>
+                    <div class="digit">0</div>
+                </div>
+
+                <div class="dash minutes_dash">
+                    <span class="dash_title">минут</span>
+                    <div class="digit">0</div>
+                    <div class="digit">0</div>
+                </div>
+
+                <div class="dash seconds_dash">
+                    <span class="dash_title">секунд</span>
+                    <div class="digit">0</div>
+                    <div class="digit">0</div>
+                </div>
+            </div>
+            <h4>Зарегистрируйтесь и откройте счёт в течении 15 минут и получите советник макс трейд прямо сейчас БЕСПЛАТНО.</h4>
+            <span class="button">
+                <a href="@Url.Action("RegisterForm", "Account")" target="_blank"><input id="regLink" class="large" type="button" value="Регистрация" /></a>
+            </span>
+        </div>
+        <div class="panel about-forex" style="height: 300px;">
+            <img class="garanted" src="@Url.Content("~/Content/img/TwoGuarantees.png")"/>
+            <p class="about-forex-text" style="margin-left: 315px;width: 565px;margin-top: 65px;">
+                Сумма окупится в миллионы раз, потому что Вы ничего не вкладываете (советник бесплатный) и даже если он принесет вам 10 долларов, то вы можете посчитать окупаемость <strong>10/0 = бесконечность</strong>.<br/>
+                <strong>Гарантия 2.</strong> Мы гарантируем полную удовлетворённость советниками. Если какой-то советник Вам не понравится, Вы можете <strong>ЗАКАЧАТЬ ЕГО ОБРАТНО</strong>, отправив к нам на почту
+            </p>
+        </div>
+        @*<div class="panel about-forex">
             <h3>Торговля на рынке Форекс</h3>
             <p class="about-forex-text">Торговля на форекс – это вариант заработка в Интернете, который давно привлёк к себе внимание со стороны желающих получать достойный доход, при этом используя все плюсы удалённой работы. Всё что нужно для начала торговли - это <a href="http://www.forexinn.ru/register/a/broccoli">открыть счёт у форекс брокера</a> и ежедневно отслеживать ситуацию на рынке, с целью продавать валюту, когда она дорожает, и соответственно покупать, когда её цена падает, то есть заниматься абсолютно законными спекулятивными операциями.</p>
             <img class="first-img" src="@Url.Content("~/Content/img/depositphotos_13564193-Stock-market-and-mobile-banking-on-digital-devices.png")"/>
@@ -160,12 +245,12 @@
                 <a class="various fancybox.iframe" title="Шаг №7. Открытие демо-счета" href="http://www.youtube.com/embed/StVH_JTqi7k?fs=1&amp;vq=hd720;autoplay=1;rel=0"><img src="@Url.Content("~/Content/img/for-video/7.jpg")"></a>
                 <a class="various fancybox.iframe" title="Шаг №8. Заказ советника для демо-счета" href="http://www.youtube.com/embed/xy-VBXeMW-w?fs=1&amp;vq=hd720;autoplay=1;rel=0"><img src="@Url.Content("~/Content/img/for-video/8.jpg")"></a>
                 <a class="various fancybox.iframe" title="Шаг №9. Заказ и использование VPS сервера" href="http://www.youtube.com/embed/J75OLtizYag?fs=1&amp;vq=hd720;autoplay=1;rel=0"><img src="@Url.Content("~/Content/img/for-video/10.jpg")"></a>
-                @*<a class="various fancybox.iframe" title="The Falltape" href="http://www.youtube.com/embed/4tS88S6em8Y?fs=1&amp;vq=hd720;autoplay=1;rel=0"><img src="@Url.Content("~/Content/img/for-video/10.jpg")"></a>*@
+                $1$<a class="various fancybox.iframe" title="The Falltape" href="http://www.youtube.com/embed/4tS88S6em8Y?fs=1&amp;vq=hd720;autoplay=1;rel=0"><img src="@Url.Content("~/Content/img/for-video/10.jpg")"></a>#1#
             </div>
             <span class="button">
                 <a href="@Url.Action("RegisterForm", "Account")" target="_blank"><input id="regLink" class="large" type="button" value="Регистрация" /></a>
             </span>
-        </div>
+        </div>*@
         @*<div class="steps">
             <span id="tab1" class="step">1. Зарегистрируйтесь</span>
             <span id="tab2" class="step">2. Откройте свой счет</span>
