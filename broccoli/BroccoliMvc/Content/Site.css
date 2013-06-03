@@ -2280,6 +2280,11 @@ footer#main{
 }
 
 /* --------------- */	
+#pricing-table {
+    text-align: center;
+    width: 835px;
+    margin: 50px auto;
+}
 
 #pricing-table .plan {
 	font: 13px 'Lucida Sans', 'trebuchet MS', Arial, Helvetica;     

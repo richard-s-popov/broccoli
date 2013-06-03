@@ -234,6 +234,47 @@
         <span class="button">
             <a href="@Url.Action("RegisterForm", "Account")" target="_blank"><input id="regLink" class="large" type="button" value="Регистрация" /></a>
         </span>
+        <div id="pricing-table">
+            <div class="plan plan1">
+                <div class="price-header">Money +</div>
+                <div class="price">4,9% - 192,8%</div>  
+                <div class="monthly">В год</div>      
+                <ul>
+                    <li>Выставление риска <strong>Нет</strong></li>
+                    <li>Минимальный депозит<br/><strong>Нет требований</strong></li>
+                    <li>Рекомендуемый депозит<br/><strong>Нет рекомендаций</strong></li>
+                    <li><strong>ТФ-H1</strong></li>
+                    <li>Рекомендуемые<br/> валютные пары<br/><strong>EURUSD, GBPUSD</strong></li>
+                </ul>
+                <a class="signup" href="@Url.Action("TradingSystemOrder", "PersonalCabinet", new { id = 1 })">Подробнее</a>         
+            </div >
+            <div class="plan plan2">
+                <div class="price-header two-line">Garanted Profit</div>
+                <div class="price">33,7% - 196,4%</div>
+                <div class="monthly">В год</div>  
+                <ul>
+                    <li>Выставление риска <strong>Есть</strong></li>
+                    <li>Минимальный депозит<br/><strong>100$</strong></li>
+                    <li>Рекомендуемый депозит<br/><strong>10.000$</strong></li>
+                    <li><strong>ТФ-М15</strong></li>
+                    <li>Рекомендуемые<br/> валютные пары<br/><strong>EURUSD, GBPUSD</strong></li>
+                </ul>
+                <a class="signup" href="@Url.Action("GarantedProfit", "Home")">Подробнее</a>            
+            </div>
+            <div class="plan plan3 popular-plan">
+                <div class="price-header">Max trade</div>
+                <div class="price">48,9% - 1008,5%</div>
+                <div class="monthly">В год</div>
+                <ul>
+                    <li>Выставление риска <strong>Есть</strong></li>
+                    <li>Минимальный депозит<br/><strong>1000$</strong></li>
+                    <li>Рекомендуемый депозит<br/><strong>10.000$</strong></li>
+                    <li><strong>ТФ-М15</strong></li>
+                    <li>Рекомендуемые<br/> валютные пары<br/><strong>EURUSD, GBPUSD, AUDUSD, USDCAD, USDCHF</strong></li>
+                </ul>
+                <a class="signup" href="@Url.Action("MaxTrade", "Home")">Подробнее</a>        
+            </div>	
+        </div>
     </div>
 </div>
 <script type="text/javascript" src="@Url.Content("~/Scripts/Main/broccoli.offer.js")"></script>
