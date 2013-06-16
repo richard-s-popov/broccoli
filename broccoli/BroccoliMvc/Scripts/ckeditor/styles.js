@@ -39,8 +39,7 @@ CKEDITOR.stylesSet.add( 'default', [
 		styles: {
 			padding: '5px 10px',
 			background: '#eee',
-			border: '1px solid #ccc',
-			display: 'block'
+			border: '1px solid #ccc'
 		}
 	},
 
@@ -58,8 +57,7 @@ CKEDITOR.stylesSet.add( 'default', [
 	{ name: 'Superscript',		element: 'sup' },
 	*/
 
-	{ name: 'Marker: Yellow',	element: 'span', styles: { 'background-color': 'Yellow' } },
-	{ name: 'Marker: Green',	element: 'span', styles: { 'background-color': 'Lime' } },
+	{ name: 'Marker',			element: 'span', attributes: { 'class': 'marker' } },
 
 	{ name: 'Big',				element: 'big' },
 	{ name: 'Small',			element: 'small' },
