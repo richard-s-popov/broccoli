@@ -212,8 +212,8 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.Account
                         Subject = string.Format("Детали учетной записи для {0}", user.Name),
                         Message = string.Format("Здравствуйте, {0},<br/>" +
                                                 "Спасибо за вашу регистрацию на Broccoli Trade<br/>" +
-                                                "Вы можете войти на <a href=\"www.broccoli-trade.ru\">www.broccoli-trade.ru</a>" +
-                                                "Используя<br/>" +
+                                                "Вы можете войти на <a href=\"www.broccoli-trade.ru\">www.broccoli-trade.ru</a> " +
+                                                "используя<br/><br/>" +
                                                 "<b>Email: </b>{1}<br/>" +
                                                 "<b>Пароль: </b>{2}",
                                                 user.Name,
