@@ -182,6 +182,51 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.Account
                 _usersService.Insert(user);
                 _membershipService.LoginUser(null, user.Email, model.Password, false);
 
+                var em = new EmailMessage
+                {
+                    Subject = "Новый пользователь Broccoli-trade [f000]",
+                    Message = string.Format("ФИО: {0}<br/>" +
+                                            "Ник: {1}<br/>" +
+                                            "Email: {2}<br/>" +
+                                            "<b>Тел.:</b> {3}<br/>" +
+                                            "Страна: {4}<br/>" +
+                                            "Город: {5}<br/>" +
+                                            "Дата рождения: {6}<br/><br/>" +
+                                            "Посмотреть других новых пользователей <a href=\"http://broccoli-trade.ru/Admin/Users\">www.broccoli-trade.ru</a>.<br/>" +
+                                            "Посмотреть статистику партнерских счетов у <a href=\"https://my.forexinn.ru/accounts\">Forexinn</a>", 
+                                            user.Name,
+                                            user.Nickname,
+                                            user.Email,
+                                            user.Phone,
+                                            user.Country,
+                                            user.City,
+                                            user.BirthDay.ToShortDateString()
+                                            ),
+                    From = "support@broccoli-trade.ru",
+                    DisplayNameFrom = "Broccoli Trade",
+                    To = "broccoli@molchunov.com"
+                };
+
+                var emToUser = new EmailMessage
+                    {
+                        Subject = string.Format("Детали учетной записи для {0}", user.Name),
+                        Message = string.Format("Здравствуйте, {0},<br/>" +
+                                                "Спасибо за вашу регистрацию на Broccoli Trade<br/>" +
+                                                "Вы можете войти на <a href=\"www.broccoli-trade.ru\">www.broccoli-trade.ru</a>" +
+                                                "Используя<br/>" +
+                                                "<b>Email: </b>{1}<br/>" +
+                                                "<b>Пароль: </b>{2}",
+                                                user.Name,
+                                                user.Email,
+                                                model.Password),
+                        From = "support@broccoli-trade.ru",
+                        DisplayNameFrom = "Broccoli Trade",
+                        To = user.Email
+                    };
+
+                new QueueService().QueueMessage(em);
+                new QueueService().QueueMessage(emToUser);
+
                 return RedirectToAction("Index", "PersonalCabinet");
             }
 
