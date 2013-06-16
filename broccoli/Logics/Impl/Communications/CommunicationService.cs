@@ -42,6 +42,31 @@ namespace BroccoliTrade.Logics.Impl.Communications
             db.SaveChanges();
         }
 
+        public IEnumerable<UserGroups> GetAllGroups()
+        {
+            return db.UserGroups.Include("Mails");
+        }
+
+        public UserGroups GetGroupById(int id)
+        {
+            return db.UserGroups.FirstOrDefault(x => x.Id == id);
+        }
+
+        public Mails GetMailById(int id)
+        {
+            return db.Mails.FirstOrDefault(x => x.Id == id);
+        }
+
+        public int GetNextNumberInGroup(int groupId)
+        {
+            return db.Mails.Where(x => x.GroupId == groupId && !x.IsDeleted).Max(x => x.MailNumber) + 1;
+        }
+
+        public void SaveMail(Mails entity)
+        {
+            db.Mails.Add(entity);
+        }
+
         public void SaveChanges()
         {
             db.SaveChanges();

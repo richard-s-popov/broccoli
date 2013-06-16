@@ -17,6 +17,18 @@
     $('.ui-spinner-input').keyup(CalcProfit);
 
     CalcProfit();
+
+    $(".various").fancybox({
+        maxWidth: 1000,
+        maxHeight: 900,
+        fitToView: false,
+        width: '100%',
+        height: '80%',
+        autoSize: true,
+        closeClick: false,
+        openEffect: 'elastic',
+        closeEffect: 'none'
+    });
 });
 
 function CalcProfit(parameters) {

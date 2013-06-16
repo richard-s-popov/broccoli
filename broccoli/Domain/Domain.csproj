@@ -70,6 +70,9 @@
     <Compile Include="Comment.cs">
       <DependentUpon>BroccoliEntities.tt</DependentUpon>
     </Compile>
+    <Compile Include="Mails.cs">
+      <DependentUpon>BroccoliEntities.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\EmailMessage.cs" />
     <Compile Include="Models\Status.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -89,6 +92,9 @@
       <DependentUpon>BroccoliEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="TradingSystems.cs">
+      <DependentUpon>BroccoliEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserGroups.cs">
       <DependentUpon>BroccoliEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Users.cs">

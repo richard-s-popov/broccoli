@@ -35,6 +35,38 @@ namespace BroccoliTrade.Logics.Interfaces.Communications
         void AddComment(Comment entity);
 
         /// <summary>
+        /// Возвращает группы
+        /// </summary>
+        /// <returns></returns>
+        IEnumerable<UserGroups> GetAllGroups();
+
+        /// <summary>
+        /// Возвращает группу по Id
+        /// </summary>
+        /// <returns></returns>
+        UserGroups GetGroupById(int id);
+
+        /// <summary>
+        /// Возвращает письмо по id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        Mails GetMailById(int id);
+
+        /// <summary>
+        /// Возвращает номер для следующего письма в группе
+        /// </summary>
+        /// <param name="groupId"></param>
+        /// <returns></returns>
+        int GetNextNumberInGroup(int groupId);
+
+        /// <summary>
+        /// Сохранить письмо
+        /// </summary>
+        /// <param name="entity"></param>
+        void SaveMail(Mails entity);
+
+        /// <summary>
         /// Сохранение
         /// </summary>
         void SaveChanges();

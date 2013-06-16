@@ -4,6 +4,8 @@
     <EntitySetMapping Name="Users">
       <EntityTypeMapping TypeName="BroccoliModel.Users">
         <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="MailNumber" ColumnName="MailNumber" />
+          <ScalarProperty Name="GroupId" ColumnName="GroupId" />
           <ScalarProperty Name="FromBanner" ColumnName="FromBanner" />
           <ScalarProperty Name="RoleId" ColumnName="RoleId" />
           <ScalarProperty Name="UsedPoints" ColumnName="UsedPoints" />
@@ -121,6 +123,26 @@
       <EntityTypeMapping TypeName="BroccoliModel.Roles">
         <MappingFragment StoreEntitySet="Roles">
           <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserGroups">
+      <EntityTypeMapping TypeName="BroccoliModel.UserGroups">
+        <MappingFragment StoreEntitySet="UserGroups">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Mails">
+      <EntityTypeMapping TypeName="BroccoliModel.Mails">
+        <MappingFragment StoreEntitySet="Mails">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="GroupId" ColumnName="GroupId" />
+          <ScalarProperty Name="MailBody" ColumnName="MailBody" />
+          <ScalarProperty Name="MailName" ColumnName="MailName" />
+          <ScalarProperty Name="MailNumber" ColumnName="MailNumber" />
           <ScalarProperty Name="Id" ColumnName="Id" />
         </MappingFragment>
       </EntityTypeMapping>

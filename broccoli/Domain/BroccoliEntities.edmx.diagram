@@ -30,6 +30,10 @@
         <AssociationConnector Association="BroccoliModel.FK_Comment_Users" />
         <EntityTypeShape EntityType="BroccoliModel.Roles" Width="1.5" PointX="6.875" PointY="12.625" />
         <AssociationConnector Association="BroccoliModel.FK_Users_Roles" />
+        <EntityTypeShape EntityType="BroccoliModel.UserGroups" Width="1.5" PointX="9.125" PointY="11" />
+        <AssociationConnector Association="BroccoliModel.FK_Users_UserGroups" />
+        <EntityTypeShape EntityType="BroccoliModel.Mails" Width="1.5" PointX="9.125" PointY="14.5" />
+        <AssociationConnector Association="BroccoliModel.FK_Mails_UserGroups" />
         </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

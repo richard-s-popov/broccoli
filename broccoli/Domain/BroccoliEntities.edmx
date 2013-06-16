@@ -9,12 +9,14 @@
           <EntitySet Name="AccountPool" EntityType="BroccoliModel.Store.AccountPool" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Accounts" EntityType="BroccoliModel.Store.Accounts" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Comment" EntityType="BroccoliModel.Store.Comment" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Mails" EntityType="BroccoliModel.Store.Mails" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Referrer" EntityType="BroccoliModel.Store.Referrer" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Roles" EntityType="BroccoliModel.Store.Roles" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Status" EntityType="BroccoliModel.Store.Status" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Systems" EntityType="BroccoliModel.Store.Systems" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="TradingSystemPool" EntityType="BroccoliModel.Store.TradingSystemPool" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="TradingSystems" EntityType="BroccoliModel.Store.TradingSystems" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="UserGroups" EntityType="BroccoliModel.Store.UserGroups" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Users" EntityType="BroccoliModel.Store.Users" store:Type="Tables" Schema="dbo" />
           <AssociationSet Name="FK_AccountApplication_Accounts" Association="BroccoliModel.Store.FK_AccountApplication_Accounts">
             <End Role="Accounts" EntitySet="Accounts" />
@@ -35,6 +37,10 @@
           <AssociationSet Name="FK_Comment_Users" Association="BroccoliModel.Store.FK_Comment_Users">
             <End Role="Users" EntitySet="Users" />
             <End Role="Comment" EntitySet="Comment" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Mails_UserGroups" Association="BroccoliModel.Store.FK_Mails_UserGroups">
+            <End Role="UserGroups" EntitySet="UserGroups" />
+            <End Role="Mails" EntitySet="Mails" />
           </AssociationSet>
           <AssociationSet Name="FK_Referrer_Users" Association="BroccoliModel.Store.FK_Referrer_Users">
             <End Role="Users" EntitySet="Users" />
@@ -72,6 +78,10 @@
             <End Role="Roles" EntitySet="Roles" />
             <End Role="Users" EntitySet="Users" />
           </AssociationSet>
+          <AssociationSet Name="FK_Users_UserGroups" Association="BroccoliModel.Store.FK_Users_UserGroups">
+            <End Role="UserGroups" EntitySet="UserGroups" />
+            <End Role="Users" EntitySet="Users" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="AccountPool">
           <Key>
@@ -107,6 +117,17 @@
           <Property Name="Date" Type="datetime" Nullable="false" />
           <Property Name="IsDeleted" Type="bit" Nullable="false" />
           <Property Name="UserId" Type="bigint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Mails">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MailNumber" Type="int" Nullable="false" />
+          <Property Name="MailName" Type="nvarchar" MaxLength="255" />
+          <Property Name="MailBody" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="GroupId" Type="int" Nullable="false" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
         </EntityType>
         <EntityType Name="Referrer">
           <Key>
@@ -166,6 +187,13 @@
           <Property Name="IsDeleted" Type="bit" Nullable="false" />
           <Property Name="IsNew" Type="bit" Nullable="false" />
         </EntityType>
+        <EntityType Name="UserGroups">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="255" />
+        </EntityType>
         <EntityType Name="Users">
           <Key>
             <PropertyRef Name="Id" />
@@ -186,6 +214,8 @@
           <Property Name="UsedPoints" Type="int" Nullable="false" />
           <Property Name="RoleId" Type="int" Nullable="false" />
           <Property Name="FromBanner" Type="int" />
+          <Property Name="GroupId" Type="int" Nullable="false" />
+          <Property Name="MailNumber" Type="int" Nullable="false" />
         </EntityType>
         <Association Name="FK_AccountApplication_Accounts">
           <End Role="Accounts" Type="BroccoliModel.Store.Accounts" Multiplicity="1" />
@@ -244,6 +274,18 @@
             </Principal>
             <Dependent Role="Comment">
               <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Mails_UserGroups">
+          <End Role="UserGroups" Type="BroccoliModel.Store.UserGroups" Multiplicity="1" />
+          <End Role="Mails" Type="BroccoliModel.Store.Mails" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserGroups">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Mails">
+              <PropertyRef Name="GroupId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -355,6 +397,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_Users_UserGroups">
+          <End Role="UserGroups" Type="BroccoliModel.Store.UserGroups" Multiplicity="1" />
+          <End Role="Users" Type="BroccoliModel.Store.Users" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserGroups">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Users">
+              <PropertyRef Name="GroupId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Function Name="MD5" ReturnType="varchar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="value" Type="varchar" Mode="In" />
         </Function>
@@ -429,6 +483,16 @@
             <End Role="Roles" EntitySet="Roles" />
             <End Role="Users" EntitySet="Users" />
           </AssociationSet>
+          <EntitySet Name="UserGroups" EntityType="BroccoliModel.UserGroups" />
+          <AssociationSet Name="FK_Users_UserGroups" Association="BroccoliModel.FK_Users_UserGroups">
+            <End Role="UserGroups" EntitySet="UserGroups" />
+            <End Role="Users" EntitySet="Users" />
+          </AssociationSet>
+          <EntitySet Name="Mails" EntityType="BroccoliModel.Mails" />
+          <AssociationSet Name="FK_Mails_UserGroups" Association="BroccoliModel.FK_Mails_UserGroups">
+            <End Role="UserGroups" EntitySet="UserGroups" />
+            <End Role="Mails" EntitySet="Mails" />
+          </AssociationSet>
           </EntityContainer>
         <EntityType Name="Users">
           <Key>
@@ -457,6 +521,9 @@
           <Property Type="Int32" Name="RoleId" Nullable="false" />
           <NavigationProperty Name="Roles" Relationship="BroccoliModel.FK_Users_Roles" FromRole="Users" ToRole="Roles" />
           <Property Type="Int32" Name="FromBanner" />
+          <Property Type="Int32" Name="GroupId" Nullable="false" />
+          <NavigationProperty Name="UserGroups" Relationship="BroccoliModel.FK_Users_UserGroups" FromRole="Users" ToRole="UserGroups" />
+          <Property Type="Int32" Name="MailNumber" Nullable="false" />
         </EntityType>
         <EntityType Name="Accounts">
           <Key>
@@ -740,6 +807,51 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="UserGroups">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Users" Relationship="BroccoliModel.FK_Users_UserGroups" FromRole="UserGroups" ToRole="Users" />
+          <NavigationProperty Name="Mails" Relationship="BroccoliModel.FK_Mails_UserGroups" FromRole="UserGroups" ToRole="Mails" />
+        </EntityType>
+        <Association Name="FK_Users_UserGroups">
+          <End Type="BroccoliModel.UserGroups" Role="UserGroups" Multiplicity="1" />
+          <End Type="BroccoliModel.Users" Role="Users" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserGroups">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Users">
+              <PropertyRef Name="GroupId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Mails">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="MailNumber" Nullable="false" />
+          <Property Type="String" Name="MailName" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MailBody" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="GroupId" Nullable="false" />
+          <NavigationProperty Name="UserGroups" Relationship="BroccoliModel.FK_Mails_UserGroups" FromRole="Mails" ToRole="UserGroups" />
+          <Property Type="Boolean" Name="IsDeleted" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Mails_UserGroups">
+          <End Type="BroccoliModel.UserGroups" Role="UserGroups" Multiplicity="1" />
+          <End Type="BroccoliModel.Mails" Role="Mails" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserGroups">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Mails">
+              <PropertyRef Name="GroupId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -749,6 +861,8 @@
           <EntitySetMapping Name="Users">
             <EntityTypeMapping TypeName="BroccoliModel.Users">
               <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="MailNumber" ColumnName="MailNumber" />
+                <ScalarProperty Name="GroupId" ColumnName="GroupId" />
                 <ScalarProperty Name="FromBanner" ColumnName="FromBanner" />
                 <ScalarProperty Name="RoleId" ColumnName="RoleId" />
                 <ScalarProperty Name="UsedPoints" ColumnName="UsedPoints" />
@@ -866,6 +980,26 @@
             <EntityTypeMapping TypeName="BroccoliModel.Roles">
               <MappingFragment StoreEntitySet="Roles">
                 <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserGroups">
+            <EntityTypeMapping TypeName="BroccoliModel.UserGroups">
+              <MappingFragment StoreEntitySet="UserGroups">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Mails">
+            <EntityTypeMapping TypeName="BroccoliModel.Mails">
+              <MappingFragment StoreEntitySet="Mails">
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="GroupId" ColumnName="GroupId" />
+                <ScalarProperty Name="MailBody" ColumnName="MailBody" />
+                <ScalarProperty Name="MailName" ColumnName="MailName" />
+                <ScalarProperty Name="MailNumber" ColumnName="MailNumber" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>

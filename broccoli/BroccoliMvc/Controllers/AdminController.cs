@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using BroccoliTrade.Domain;
 using BroccoliTrade.Logics.Interfaces.Communications;
 using BroccoliTrade.Logics.Interfaces.Membership;
 using BroccoliTrade.Web.BroccoliMvc.Infrastructure.Attributes;
@@ -106,6 +107,118 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers
                 };
 
             return View(model);
+        }
+
+        [Secure]
+        [Role(Role = "Admin")]
+        public ActionResult SendEmails()
+        {
+            var mailGroups = _communicationService.GetAllGroups().ToList();
+
+            var model = new MailGroupsListModel
+                {
+                    GroupList = mailGroups.Select(g => new MailGroup
+                        {
+                            GroupName = g.Name,
+                            Id = g.Id,
+                            MailList = g.Mails.Where(x => !x.IsDeleted).Select(m => new Mail
+                                {
+                                    Id = m.Id,
+                                    MailBody = m.MailBody.Substring(0, m.MailBody.Length > 100 ? 100 : m.MailBody.Length),
+                                    MailNumber = m.MailNumber,
+                                    MailName = m.MailName
+                                })
+                        })
+                };
+
+            return View("SendEmailsPanel", model);
+        }
+
+        [Secure]
+        [Role(Role = "Admin")]
+        public ActionResult NewMail(int groupId)
+        {
+            var group = _communicationService.GetGroupById(groupId);
+            
+            ViewBag.GroupName = group.Name;
+            ViewBag.GroupId = group.Id;
+
+            return View();
+        }
+
+        [Secure]
+        [Role(Role = "Admin")]
+        [ValidateInput(false)]
+        [HttpPost]
+        public JsonResult SaveMail(int? id, string subject, string body, int groupId)
+        {
+            var entity = new Mails();
+
+            if (id.HasValue)
+            {
+                entity = _communicationService.GetMailById(id.Value);
+
+                entity.MailName = subject;
+                entity.MailBody = body;
+                entity.IsDeleted = false;
+            }
+            else
+            {
+                var maxNumber = _communicationService.GetNextNumberInGroup(groupId);
+
+                entity = new Mails
+                {
+                    GroupId = groupId,
+                    MailBody = body,
+                    MailName = subject,
+                    MailNumber = maxNumber
+                };
+
+                _communicationService.SaveMail(entity);
+            }
+
+            _communicationService.SaveChanges();
+
+            return Json(new {result = true, mailId = entity.Id});
+        }
+
+        [Secure]
+        [Role(Role = "Admin")]
+        public ActionResult EditMail(int mailId)
+        {
+            var mail = _communicationService.GetMailById(mailId);
+            var group = _communicationService.GetGroupById(mail.GroupId);
+
+            ViewBag.GroupName = group.Name;
+            ViewBag.GroupId = group.Id;
+
+            return View(new Mail
+                {
+                    Id = mail.Id,
+                    MailName = mail.MailName,
+                    MailBody = mail.MailBody,
+                    MailNumber = mail.MailNumber
+                });
+        }
+
+        [Secure]
+        [Role(Role = "Admin")]
+        public ActionResult DeleteMail(int mailId)
+        {
+            var entity = _communicationService.GetMailById(mailId);
+
+            try
+            {
+                entity.IsDeleted = true;
+
+                _communicationService.SaveChanges();
+
+                return Json(new {result = true}, JsonRequestBehavior.AllowGet);
+            }
+            catch (Exception)
+            {
+                return Json(new { result = false }, JsonRequestBehavior.AllowGet);
+            }
         }
 
         protected override void Dispose(bool disposing)

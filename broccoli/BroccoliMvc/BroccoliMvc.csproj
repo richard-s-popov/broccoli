@@ -138,6 +138,7 @@
     <Compile Include="Infrastructure\Unity\Bootstrapper.cs" />
     <Compile Include="Infrastructure\UserHelper\UserHelper.cs" />
     <Compile Include="Models\Account\UserProfilePoco.cs" />
+    <Compile Include="Models\Admin\MailGroupsListModel.cs" />
     <Compile Include="Models\Admin\UsersListModel.cs" />
     <Compile Include="Models\Communications\CommentModel.cs" />
     <Compile Include="Models\Communications\CommentsListModel.cs" />
@@ -164,18 +165,31 @@
     <Content Include="Content\advisors\MaxTrade\Max-Trade_5years_3percent.gif" />
     <Content Include="Content\advisors\MaxTrade\Max-Trade_5years_3percent.htm" />
     <Content Include="Content\advisors\MaxTrade\temp.htm" />
+    <Content Include="Content\dark.css" />
+    <Content Include="Content\flexslider.css" />
+    <Content Include="Content\img\121.jpg" />
+    <Content Include="Content\img\1371392218_menu-24.png" />
+    <Content Include="Content\img\1371392231_cross-24.png" />
+    <Content Include="Content\img\1371392849_edit.png" />
+    <Content Include="Content\img\1371392867_delete.png" />
+    <Content Include="Content\img\1371393526_add2-.png" />
+    <Content Include="Content\img\bloWsKLnSpc.jpg" />
     <Content Include="Content\img\broccoli.png" />
     <Content Include="Content\img\broker-logo.png" />
     <Content Include="Content\img\btn2-new.png" />
     <Content Include="Content\img\button_ok_7852.png" />
     <Content Include="Content\img\calc1.png" />
     <Content Include="Content\img\cross_2615.png" />
+    <Content Include="Content\img\dark_dash.png" />
+    <Content Include="Content\img\dataviz-head.png" />
     <Content Include="Content\img\dataviz-homepage-headbanner.png" />
     <Content Include="Content\img\demo.png" />
+    <Content Include="Content\img\demo_origin.png" />
     <Content Include="Content\img\depositphotos_1066825-Pineapple.jpg" />
     <Content Include="Content\img\depositphotos_1158059-Young-sunflower-sprout.jpg" />
     <Content Include="Content\img\depositphotos_13564193-Stock-market-and-mobile-banking-on-digital-devices.png" />
     <Content Include="Content\img\depositphotos_13564193-Stock-market-and-mobile-banking-on-digital-devices1.png" />
+    <Content Include="Content\img\depositphotos_13564193-Stock-market-and-mobile-banking-on-digital-devices_origin.png" />
     <Content Include="Content\img\depositphotos_1374386-A-vegetarian-construction-isolated.jpg" />
     <Content Include="Content\img\depositphotos_15565199-Lime-stack %281%29.jpg" />
     <Content Include="Content\img\depositphotos_15705219-Brassica-Oleracea--Romanesco-broccoli--Roman-cauliflower.jpg" />
@@ -188,6 +202,7 @@
     <Content Include="Content\img\depositphotos_5140805-Black-screen.jpg" />
     <Content Include="Content\img\dep_5856564-Green-Profit-Icon.jpg" />
     <Content Include="Content\img\dep_6188998-Printed-forex-chart-with-pen---uncertainty-of-future.jpg" />
+    <Content Include="Content\img\dep_6188998-Printed-forex-chart-with-pen---uncertainty-of-future_orgin.jpg" />
     <Content Include="Content\img\fancybox\blank.gif" />
     <Content Include="Content\img\fancybox\fancybox_buttons.png" />
     <Content Include="Content\img\fancybox\fancybox_loading.gif" />
@@ -196,6 +211,7 @@
     <Content Include="Content\img\footer.png" />
     <Content Include="Content\img\for-video\1.jpg" />
     <Content Include="Content\img\for-video\10.jpg" />
+    <Content Include="Content\img\for-video\10_slider.jpg" />
     <Content Include="Content\img\for-video\2.jpg" />
     <Content Include="Content\img\for-video\3.jpg" />
     <Content Include="Content\img\for-video\4.jpg" />
@@ -210,15 +226,20 @@
     <Content Include="Content\img\ic_sh.png" />
     <Content Include="Content\img\img1s.jpg" />
     <Content Include="Content\img\img2s.jpg" />
+    <Content Include="Content\img\invest-dream.jpg" />
+    <Content Include="Content\img\invest-dream.png" />
     <Content Include="Content\img\logo-flag.png" />
     <Content Include="Content\img\play.png" />
     <Content Include="Content\img\slider-background.png" />
     <Content Include="Content\img\temp_logo.png" />
     <Content Include="Content\img\tiangle-top.png" />
+    <Content Include="Content\img\TwoGuarantees.png" />
     <Content Include="Content\img\ui-s1085f21318.png" />
     <Content Include="Content\img\vk_logo.png" />
     <Content Include="Content\img\vk_up_back.gif" />
+    <Content Include="Content\img\wvLHzTX0ygo.jpg" />
     <Content Include="Content\img\_slider-background.png" />
+    <Content Include="Content\img\Без имени-1.bmp" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\support\green.css" />
     <Content Include="Content\support\index.css" />
@@ -299,6 +320,7 @@
     <Content Include="Content\themes\jquery-ui\jquery-ui-1.9.2.custom.min.css" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\Admin\comments.js" />
+    <Content Include="Scripts\Admin\emailsender.js" />
     <Content Include="Scripts\amcharts\amcharts.js" />
     <Content Include="Scripts\amcharts\images\dragIcon.gif" />
     <Content Include="Scripts\amcharts\images\dragIconH.gif" />
@@ -371,6 +393,8 @@
     <Content Include="Scripts\jquery-1.7.1.min.js" />
     <Content Include="Scripts\jquery-ui-1.8.20.js" />
     <Content Include="Scripts\jquery-ui-1.8.20.min.js" />
+    <Content Include="Scripts\jquery.flexslider-min.js" />
+    <Content Include="Scripts\jquery.lwtCountdown-0.9.5.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
@@ -479,6 +503,9 @@
     <Content Include="Views\Admin\Users.cshtml" />
     <Content Include="Views\Home\Advisors\MaxTrade.cshtml" />
     <Content Include="Views\Home\Advisors\GarantedProfit.cshtml" />
+    <Content Include="Views\Admin\SendEmailsPanel.cshtml" />
+    <Content Include="Views\Admin\NewMail.cshtml" />
+    <Content Include="Views\Admin\EditMail.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

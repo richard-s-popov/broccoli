@@ -2560,6 +2560,71 @@ footer#main{
     top: -20px;
     right: 40px;
 }
+
+#email-send-table {
+    margin: 30px 30px 0 30px;
+    width: 97%;
+}
+
+#email-send-table .number {
+    width: 20px;
+}
+
+#email-send-table table .name {
+    font-weight: bold;
+}
+
+#email-send-table .controls {
+    position: relative;
+    width: 90px;
+}
+
+#email-send-table .controls .edit {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    width: 24px;
+    height: 24px;
+    background-image: url(../Content/img/1371392849_edit.png);
+    cursor: pointer;
+}
+
+#email-send-table .controls .delete {
+    position: absolute;
+    left: 67px;
+    width: 24px;
+    height: 24px;
+    background-image: url(../Content/img/1371392867_delete.png);
+    cursor: pointer;
+}
+
+#email-send-table .add-mail {
+    background-image: url(../Content/img/1371393526_add2-.png);
+    height: 25px;
+    display: inline-block;
+    background-position: right;
+    background-repeat: no-repeat;
+    width: 85px;
+    padding-top: 12px;
+    float: right;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+
+.send-emails h2 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-size: 29px;
+}
+
+.send-emails .subject {
+    width: 98%;
+    margin-bottom: 10px;
+}
+
+.send-emails #cke_ckeditor {
+    margin-top: 5px;
+}
 	
 /* --------------- */
 

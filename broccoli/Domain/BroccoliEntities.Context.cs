@@ -35,5 +35,7 @@ namespace BroccoliTrade.Domain
         public DbSet<Referrer> Referrer { get; set; }
         public DbSet<Comment> Comment { get; set; }
         public DbSet<Roles> Roles { get; set; }
+        public DbSet<UserGroups> UserGroups { get; set; }
+        public DbSet<Mails> Mails { get; set; }
     }
 }

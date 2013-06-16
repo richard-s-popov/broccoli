@@ -40,6 +40,8 @@ namespace BroccoliTrade.Domain
         public int UsedPoints { get; set; }
         public int RoleId { get; set; }
         public Nullable<int> FromBanner { get; set; }
+        public int GroupId { get; set; }
+        public int MailNumber { get; set; }
     
         public virtual ICollection<Accounts> Accounts { get; set; }
         public virtual ICollection<AccountPool> AccountPool { get; set; }
@@ -48,5 +50,6 @@ namespace BroccoliTrade.Domain
         public virtual ICollection<Referrer> Referrer { get; set; }
         public virtual ICollection<Comment> Comment { get; set; }
         public virtual Roles Roles { get; set; }
+        public virtual UserGroups UserGroups { get; set; }
     }
 }

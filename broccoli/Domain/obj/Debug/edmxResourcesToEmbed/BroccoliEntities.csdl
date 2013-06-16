@@ -67,6 +67,16 @@
       <End Role="Roles" EntitySet="Roles" />
       <End Role="Users" EntitySet="Users" />
     </AssociationSet>
+    <EntitySet Name="UserGroups" EntityType="BroccoliModel.UserGroups" />
+    <AssociationSet Name="FK_Users_UserGroups" Association="BroccoliModel.FK_Users_UserGroups">
+      <End Role="UserGroups" EntitySet="UserGroups" />
+      <End Role="Users" EntitySet="Users" />
+    </AssociationSet>
+    <EntitySet Name="Mails" EntityType="BroccoliModel.Mails" />
+    <AssociationSet Name="FK_Mails_UserGroups" Association="BroccoliModel.FK_Mails_UserGroups">
+      <End Role="UserGroups" EntitySet="UserGroups" />
+      <End Role="Mails" EntitySet="Mails" />
+    </AssociationSet>
   </EntityContainer>
   <EntityType Name="Users">
     <Key>
@@ -95,6 +105,9 @@
     <Property Type="Int32" Name="RoleId" Nullable="false" />
     <NavigationProperty Name="Roles" Relationship="BroccoliModel.FK_Users_Roles" FromRole="Users" ToRole="Roles" />
     <Property Type="Int32" Name="FromBanner" />
+    <Property Type="Int32" Name="GroupId" Nullable="false" />
+    <NavigationProperty Name="UserGroups" Relationship="BroccoliModel.FK_Users_UserGroups" FromRole="Users" ToRole="UserGroups" />
+    <Property Type="Int32" Name="MailNumber" Nullable="false" />
   </EntityType>
   <EntityType Name="Accounts">
     <Key>
@@ -375,6 +388,51 @@
       </Principal>
       <Dependent Role="Users">
         <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="UserGroups">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Users" Relationship="BroccoliModel.FK_Users_UserGroups" FromRole="UserGroups" ToRole="Users" />
+    <NavigationProperty Name="Mails" Relationship="BroccoliModel.FK_Mails_UserGroups" FromRole="UserGroups" ToRole="Mails" />
+  </EntityType>
+  <Association Name="FK_Users_UserGroups">
+    <End Type="BroccoliModel.UserGroups" Role="UserGroups" Multiplicity="1" />
+    <End Type="BroccoliModel.Users" Role="Users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserGroups">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Users">
+        <PropertyRef Name="GroupId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Mails">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="MailNumber" Nullable="false" />
+    <Property Type="String" Name="MailName" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="MailBody" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="GroupId" Nullable="false" />
+    <NavigationProperty Name="UserGroups" Relationship="BroccoliModel.FK_Mails_UserGroups" FromRole="Mails" ToRole="UserGroups" />
+    <Property Type="Boolean" Name="IsDeleted" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Mails_UserGroups">
+    <End Type="BroccoliModel.UserGroups" Role="UserGroups" Multiplicity="1" />
+    <End Type="BroccoliModel.Mails" Role="Mails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserGroups">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Mails">
+        <PropertyRef Name="GroupId" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
