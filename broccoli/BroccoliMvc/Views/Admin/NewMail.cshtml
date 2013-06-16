@@ -1,0 +1,48 @@
+﻿@{
+    ViewBag.Title = "Новое письмо";
+    Layout = "~/Views/Shared/_LayoutMin.cshtml";
+}
+
+<script  type="text/javascript" src="@Url.Content("~/Scripts/ckeditor/ckeditor.js")"></script>
+
+<div class="banner small">
+    <div class="action">
+        <font>Новое письмо.</font>
+    </div>
+</div>
+
+<div class="center-content send-emails">
+    <h2>Группа @ViewBag.GroupName</h2>
+    <input class="subject" type="text"/>
+    <p><strong>%ИМЯ%</strong> - плейсхолдер для имени</p>
+    <textarea class="ckeditor" name="ckeditor"></textarea>
+    <span id="saveMail" class="button save-mail">
+        <a href="javascript:void(0);"><input class="large" type="button" value="Создать" style="margin-top: 10px;" /></a>
+    </span>
+</div>
+<script type="text/javascript"> document.SaveMail = '@Url.Action("SaveMail", "Admin")'</script>
+<script type="text/javascript">
+    jQuery(document).ready(function () {
+        CKEDITOR.replace('ckeditor', {});
+
+        $('#saveMail').click(function () {
+            if (CKEDITOR.instances.ckeditor.getData() != "") {
+                $.ajax({
+                    url: document.SaveMail,
+                    type: 'POST',
+                    data: {
+                        subject: $('.subject').val(),
+                        body: CKEDITOR.instances.ckeditor.getData(),
+                        groupId: @ViewBag.GroupId
+                    },
+                    success: function(data) {
+                        if (data.result) {
+                            alert("Успех! Не иначе:)");
+                            window.location = '@Url.Action("EditMail")?mailId=' + data.mailId;
+                        }
+                    }
+                });
+            }
+        });
+    });
+</script>
