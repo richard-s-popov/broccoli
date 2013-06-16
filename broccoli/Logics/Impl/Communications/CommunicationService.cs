@@ -60,11 +60,11 @@ namespace BroccoliTrade.Logics.Impl.Communications
         public int GetNextNumberInGroup(int groupId)
         {
             var count = db.Mails
-                .Where(x => x.GroupId == groupId && !x.IsDeleted)
-                .DefaultIfEmpty()
-                .Max(x => x.MailNumber);
+                          .Where(x => x.GroupId == groupId && !x.IsDeleted)
+                          .OrderByDescending(x => x.MailNumber)
+                          .FirstOrDefault();
 
-            return count + 1;
+            return count != null ? count.MailNumber + 1 : 1;
         }
 
         public void SaveMail(Mails entity)
