@@ -41,7 +41,7 @@ namespace BroccoliTrade.Web.BroccoliMvc.App_Start
 
             routes.MapRoute(
                 "BrokerInfo", // Route name
-                "forexinn", // URL with parameters
+                "brokers", // URL with parameters
                 new { controller = "Home", action = "BrokerInfo" } // Parameter defaults
             );
 
