@@ -1,11 +1,11 @@
 ﻿@{
-    ViewBag.Title = "Брокер ForexInn";
+    ViewBag.Title = "Брокеры";
     Layout = "~/Views/Shared/_LayoutMin.cshtml";
 }
 
 <div class="banner small">
     <div class="action">
-        <font>Брокер ForexInn</font>
+        <font>Брокеры</font>
     </div>
 </div>
 
@@ -31,7 +31,7 @@
         </ul>
         <img src="@Url.Content("~/Content/img/depositphotos_1950636-Various-vegetables-isolated.png")"/>
     </div>
-    <div class="hr-shadow trading-terms-container">
+    <div class="trading-terms-container">
         <h4>Торговые условия:</h4>
         <ul class="trading-terms">
             <li>Типы счетов: Cent, Classic, PAMM</li>
@@ -46,12 +46,27 @@
         </ul>
         <img src="@Url.Content("~/Content/img/depositphotos_1374386-A-vegetarian-construction-isolated.jpg")"/>
     </div>
-    <div class="broker">
-        <img src="@Url.Content("~/Content/img/broker-logo.png")"/>
-        <span class="button">
-            <a href="http://www.forexinn.ru/register/a/broccoli" target="_blank"><input class="large" type="button" value="Открыть счет у Брокера" /></a>
-        </span>
-        <span>Партнерский код: <font>broccoli</font></span>
+    <div class="hr-shadow" style="margin-top: 100px; margin-bottom: 100px;">
+        <div class="broker" style="margin-top: 100px;">
+            <img src="@Url.Content("~/Content/img/instalogo.png")" style="margin-left: 125px; margin-top: 23px;"/>
+            <span class="button">
+                <a href="https://secure.instaforex.com/open-account.aspx?lang=ru&x=broccoli" target="_blank"><input class="large" type="button" value="Открыть счет у Брокера" /></a>
+            </span>
+            <span>Партнерский код: <font>broccoli</font></span>
+        </div>
+        <div class="about-broker-container">
+            <h4>Преимущества Instaforex:</h4>
+            <ul class="about-broker">
+                <li>1. Никаких ограничений на размер счета и объем сделок.</li>
+                <li>2. Более 300 торговых символов.</li>
+                <li>3. FOREX, акции, фьючерсы и индексы.</li>
+                <li>4. Исполнение всех сделок за 1 секунду.</li>
+                <li>5. Плечо от 1:1 до 1:1000.</li>
+                <li>6. Возможность открытия Forex счетов без свопов.</li>
+                <li>7. Качественная техническая и консультационная поддержка 24/5.</li>
+            </ul>
+            <img src="@Url.Content("~/Content/img/depositphotos_5453471-Fruit-and-vegetable-alphabet.png")" style="right: 70px; top: -5px; width: initial;"/>
+        </div>
     </div>
     <br/>
     <br/>

@@ -5,4 +5,11 @@ C:\work\broccoli\broccoli\Domain\bin\Debug\EntityFramework.dll
 C:\work\broccoli\broccoli\Domain\bin\Debug\EntityFramework.xml
 C:\work\broccoli\broccoli\Domain\obj\Debug\BroccoliTrade.Domain.dll
 C:\work\broccoli\broccoli\Domain\obj\Debug\BroccoliTrade.Domain.pdb
-C:\work\broccoli\broccoli\Domain\obj\Debug\Domain.csprojResolveAssemblyReference.cache
+C:\work\broccoli\broccoli\Domain\bin\Debug\Newtonsoft.Json.dll
+C:\work\broccoli\broccoli\Domain\bin\Debug\System.Net.Http.dll
+C:\work\broccoli\broccoli\Domain\bin\Debug\System.Net.Http.Formatting.dll
+C:\work\broccoli\broccoli\Domain\bin\Debug\System.Net.Http.WebRequest.dll
+C:\work\broccoli\broccoli\Domain\bin\Debug\Newtonsoft.Json.xml
+C:\work\broccoli\broccoli\Domain\bin\Debug\System.Net.Http.xml
+C:\work\broccoli\broccoli\Domain\bin\Debug\System.Net.Http.Formatting.xml
+C:\work\broccoli\broccoli\Domain\bin\Debug\System.Net.Http.WebRequest.xml

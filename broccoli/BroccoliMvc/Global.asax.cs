@@ -3,6 +3,7 @@ using System.Threading;
 using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Routing;
+using BroccoliTrade.Logics.Core;
 using BroccoliTrade.Logics.Impl.Account;
 using BroccoliTrade.Logics.Impl.TradingSystem;
 using BroccoliTrade.Logics.Interfaces.Account;
@@ -25,17 +26,38 @@ namespace BroccoliTrade.Web.BroccoliMvc
 
             Bootstrapper.Initialise();
 
-            Thread thread = new Thread(new ThreadStart(Function));
-            thread.IsBackground = true;
-            thread.Name = "Function";
+            //InstaforexAPI.TestMethod();
+
+            var thread = new Thread(FunctionCheckTimer)
+                {
+                    IsBackground = true, 
+                    Name = "FunctionCheckTimer"
+                };
             thread.Start();
+
+            var compilationThread = new Thread(FunctionCompileTimer)
+                {
+                    IsBackground = true,
+                    Name = "FunctionCompileTimer"
+                };
+            compilationThread.Start();
         }
 
-        protected void Function()
+        protected void FunctionCheckTimer()
         {
             var timer = new System.Timers.Timer();
             timer.Elapsed += TimerEvent;
-            timer.Interval = 60000; // 5 минут
+            timer.Interval = 60000; // 1 минут
+            timer.Enabled = true;
+            timer.AutoReset = true;
+            timer.Start();
+        }
+
+        protected void FunctionCompileTimer()
+        {
+            var timer = new System.Timers.Timer();
+            timer.Elapsed += CompileTimerEvent;
+            timer.Interval = 60000; // 1 минут
             timer.Enabled = true;
             timer.AutoReset = true;
             timer.Start();
@@ -45,6 +67,11 @@ namespace BroccoliTrade.Web.BroccoliMvc
         {
             new AccountsService().CheckAccountsInPool();
             new TradingSystemService().CheckTradingSystemInPool();
+        }
+
+        protected void CompileTimerEvent(object sender, System.Timers.ElapsedEventArgs e)
+        {
+            
         }
     }
 }

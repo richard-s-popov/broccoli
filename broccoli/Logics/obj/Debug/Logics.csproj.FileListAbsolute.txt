@@ -16,3 +16,6 @@ C:\work\broccoli\broccoli\Logics\bin\Debug\Newtonsoft.Json.xml
 C:\work\broccoli\broccoli\Logics\obj\Debug\Logics.csprojResolveAssemblyReference.cache
 C:\work\broccoli\broccoli\Logics\obj\Debug\BroccoliTrade.Logics.dll
 C:\work\broccoli\broccoli\Logics\obj\Debug\BroccoliTrade.Logics.pdb
+C:\work\broccoli\broccoli\Logics\bin\Debug\System.Net.Http.Formatting.dll
+C:\work\broccoli\broccoli\Logics\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+C:\work\broccoli\broccoli\Logics\bin\Debug\System.Net.Http.Formatting.xml

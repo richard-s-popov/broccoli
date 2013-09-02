@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -112,13 +113,15 @@ namespace BroccoliTrade.Logics.Impl.TradingSystem
 
                 if (((bool)json["result"] && this.CanTakeTradingSystem(tradingSystem.Systems.Id, (int)json["count"])) || tradingSystemPool.ByInvite)
                 {
-                    tradingSystem.StatusId = 2;
+                    tradingSystem.StatusId = 4;
                     tradingSystem.IsNew = true;
+
+                    // this.Compile(tradingSystem.Accounts.AccountNumber, tradingSystem.StatusId, tradingSystem.Users);
 
                     var em = new EmailMessage
                     {
                         Subject = string.Format("{0} активирован", tradingSystem.Systems.Name),
-                        Message = string.Format("Здравствуйте, {0}. {1} активирован.", tradingSystem.Users.Name, tradingSystem.Systems.Name),
+                        Message = string.Format("Здравствуйте, {0}. {1} активирован и доступен для загрузки.", tradingSystem.Users.Name, tradingSystem.Systems.Name),
                         From = "support@broccoli-trade.ru",
                         DisplayNameFrom = "Broccoli Trade",
                         To = tradingSystem.Users.Email
@@ -172,6 +175,66 @@ namespace BroccoliTrade.Logics.Impl.TradingSystem
             var random = new Random();
 
             return random.Next(range);
+        }
+
+        private void Compile(string account, int systemId, Users user)
+        {
+            File.Copy(this.GetTemplatePath(systemId), this.GetCompilePath(systemId, user));
+
+            var file = File.ReadAllText(this.GetCompilePath(systemId, user));
+            file.Replace("##account_number", account);
+            File.WriteAllText(this.GetCompilePath(systemId, user), file);
+
+            Process.Start(@"C:\Program Files (x86)\MetaTrader ForexInn Ltd\metalang.exe",
+                          this.GetCompilePath(systemId, user));
+
+            while (!File.Exists(Path.GetFileNameWithoutExtension(this.GetCompilePath(systemId, user)) + ".ex4"))
+            {
+                
+            }
+        }
+
+        private string GetCompilePath(int systemId, Users user)
+        {
+            if (systemId == 1)
+            {
+                return Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Files", "TradingSystems", "Compile",
+                                    "Money+eurusd_" + user.Id + ".mq4");
+            }
+
+            if (systemId == 2)
+            {
+                return Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Files", "TradingSystems", "Compile",
+                                    "GarantedProfit_" + user.Id + ".mq4");
+            }
+
+            if (systemId == 3)
+            {
+                return Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Files", "TradingSystems", "Compile",
+                                    "MaxTrade_" + user.Id + ".mq4");
+            }
+
+            return null;
+        }
+
+        private string GetTemplatePath(int systemId)
+        {
+            if (systemId == 1)
+            {
+                return Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Files", "TradingSystems", "Templates", "Money+eurusd.mq4");
+            }
+
+            if (systemId == 2)
+            {
+                return Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Files", "TradingSystems", "Templates", "GarantedProfit.mq4");
+            }
+
+            if (systemId == 3)
+            {
+                return Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Files", "TradingSystems", "Templates", "MaxTrade.mq4");
+            }
+
+            return null;
         }
     }
 }
