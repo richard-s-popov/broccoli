@@ -30,6 +30,7 @@ namespace BroccoliTrade.Domain
         public System.DateTime CreateDate { get; set; }
         public bool IsNew { get; set; }
         public string Reason { get; set; }
+        public int Broker { get; set; }
     
         public virtual Users Users { get; set; }
         public virtual Status Status { get; set; }

@@ -64,9 +64,14 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.PersonalCabinet
         }
 
         [Secure]
-        public ActionResult ActivateAccountFinish(string account)
+        public ActionResult ActivateAccountFinish(string account, int broker)
         {
             var currentUser = _usersService.GetUserByLogin(HttpContext.User.Identity.Name);
+
+            if (broker < 1 || broker > 2)
+            {
+                return RedirectToAction("ActivateAccount");
+            }
 
             var accountEntity = new Accounts
                 {
@@ -75,7 +80,8 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.PersonalCabinet
                     StatusId = 1,
                     UserId = currentUser.Id,
                     IsDeleted = false,
-                    IsNew = false
+                    IsNew = false,
+                    Broker = broker
                 };
 
             _accountsService.CreateAccount(accountEntity);
@@ -112,7 +118,8 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.PersonalCabinet
                             Number = entity.AccountNumber,
                             Status = entity.Status.Name,
                             StatusId = entity.StatusId,
-                            Reason = entity.Reason
+                            Reason = entity.Reason,
+                            Broker = entity.Broker
                         })
                 };
 
@@ -683,6 +690,8 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.PersonalCabinet
                 ClearFolder(di.FullName);
                 di.Delete();
             }
+
+            Directory.Delete(FolderName);
         }
 
         protected override void Dispose(bool disposing)

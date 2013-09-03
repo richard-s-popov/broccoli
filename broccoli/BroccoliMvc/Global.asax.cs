@@ -26,8 +26,6 @@ namespace BroccoliTrade.Web.BroccoliMvc
 
             Bootstrapper.Initialise();
 
-            //InstaforexAPI.TestMethod();
-
             var thread = new Thread(FunctionCheckTimer)
                 {
                     IsBackground = true, 

@@ -6,6 +6,7 @@ using System.Net;
 using System.Text;
 using BroccoliTrade.Domain;
 using BroccoliTrade.Domain.Models;
+using BroccoliTrade.Logics.Core;
 using BroccoliTrade.Logics.Infrastructure.Certificates;
 using BroccoliTrade.Logics.Interfaces.Account;
 using BroccoliTrade.Logics.MSMQ;
@@ -99,68 +100,124 @@ namespace BroccoliTrade.Logics.Impl.Account
 
                 foreach (var AccountPool in accounts)
                 {
-                    var myHttpWebRequest = (HttpWebRequest)WebRequest
-                        .Create(string.Format("https://my.forexinn.ru/agent-api/check-involved-account/broccoli/jcmbogje9b5uxs/{0}", AccountPool.AccountNumber));
-
-                    var myHttpWebResponse = (HttpWebResponse)myHttpWebRequest.GetResponse();
-
-                    var myStreamReader = new StreamReader(myHttpWebResponse.GetResponseStream(), Encoding.UTF8);
-
-                    var response = myStreamReader.ReadToEnd();
-                    dynamic json = JToken.Parse(response);
-
-                    if ((bool)json["result"])
+                    if (AccountPool.Accounts.Broker == 1)
                     {
-                        var account = this.GetById(AccountPool.AccountId);
-                        account.StatusId = 2;
-                        account.IsNew = true;
+                        var myHttpWebRequest = (HttpWebRequest) WebRequest
+                                                                    .Create(
+                                                                        string.Format(
+                                                                            "https://my.forexinn.ru/agent-api/check-involved-account/broccoli/jcmbogje9b5uxs/{0}",
+                                                                            AccountPool.AccountNumber));
 
-                        var em = new EmailMessage
+                        var myHttpWebResponse = (HttpWebResponse) myHttpWebRequest.GetResponse();
+
+                        var myStreamReader = new StreamReader(myHttpWebResponse.GetResponseStream(), Encoding.UTF8);
+
+                        var response = myStreamReader.ReadToEnd();
+                        dynamic json = JToken.Parse(response);
+
+                        if ((bool) json["result"])
                         {
-                            Subject = string.Format("Счет {0} активирован", account.AccountNumber),
-                            Message = string.Format("Здравствуйте, {0}. Счет {1} активирован.", account.Users.Name, account.AccountNumber),
-                            From = "support@broccoli-trade.ru",
-                            DisplayNameFrom = "Broccoli Trade",
-                            To = account.Users.Email
-                        };
+                            var account = this.GetById(AccountPool.AccountId);
+                            account.StatusId = 2;
+                            account.IsNew = true;
 
-                        new QueueService().QueueMessage(em);
-                    }
-                    else
-                    {
-                        var account = this.GetById(AccountPool.AccountId);
-                        account.StatusId = 3;
-                        account.IsNew = true;
+                            var em = new EmailMessage
+                                {
+                                    Subject = string.Format("Счет {0} активирован", account.AccountNumber),
+                                    Message =
+                                        string.Format(
+                                            "Здравствуйте, {0}. Счет {1} брокера Forexinn успешно активирован.",
+                                            account.Users.Name, account.AccountNumber),
+                                    From = "support@broccoli-trade.ru",
+                                    DisplayNameFrom = "Broccoli Trade",
+                                    To = account.Users.Email
+                                };
 
-                        switch ((int)json["reason"])
+                            new QueueService().QueueMessage(em);
+                        }
+                        else
                         {
-                            case 1:
-                                account.Reason = "Счет не существует. Проверьте правильность указанного счета.";
-                                break;
-                            case 2:
-                                account.Reason = "Счет создан без нашего партнерского кода \"broccoli\". Создайте счет у брокера с нашим партнерским кодом, либо воспользуйтесь кнопкой \"открыть счет\" у нас на сайте";
-                                break;
-                            case 8:
-                                account.Reason = "Неверно указан наш партнерский код.";
-                                break;
-                            default:
-                                account.Reason = null;
-                                break;
+                            var account = this.GetById(AccountPool.AccountId);
+                            account.StatusId = 3;
+                            account.IsNew = true;
+
+                            switch ((int) json["reason"])
+                            {
+                                case 1:
+                                    account.Reason = "Счет не существует. Проверьте правильность указанного счета.";
+                                    break;
+                                case 2:
+                                    account.Reason =
+                                        "Счет создан без нашего партнерского кода \"broccoli\". Создайте счет у брокера с нашим партнерским кодом, либо воспользуйтесь кнопкой \"открыть счет\" у нас на сайте";
+                                    break;
+                                case 8:
+                                    account.Reason = "Неверно указан наш партнерский код.";
+                                    break;
+                                default:
+                                    account.Reason = null;
+                                    break;
+                            }
+
+                            var em = new EmailMessage
+                                {
+                                    Subject = string.Format("Счет {0} отклонен", account.AccountNumber),
+                                    Message =
+                                        string.Format("Здравствуйте, {0}. Счет {1} отклонен.<br/><b>{2}</b>",
+                                                      account.Users.Name, account.AccountNumber, account.Reason),
+                                    From = "support@broccoli-trade.ru",
+                                    DisplayNameFrom = "Broccoli Trade",
+                                    To = account.Users.Email
+                                };
+
+                            new QueueService().QueueMessage(em);
                         }
 
-                        var em = new EmailMessage
-                        {
-                            Subject = string.Format("Счет {0} отклонен", account.AccountNumber),
-                            Message = string.Format("Здравствуйте, {0}. Счет {1} отклонен.<br/><b>{2}</b>", account.Users.Name, account.AccountNumber, account.Reason),
-                            From = "support@broccoli-trade.ru",
-                            DisplayNameFrom = "Broccoli Trade",
-                            To = account.Users.Email
-                        };
-
-                        new QueueService().QueueMessage(em);
+                        db.AccountPool.Remove(AccountPool);
                     }
 
-                    db.AccountPool.Remove(AccountPool);
+                    if (AccountPool.Accounts.Broker == 2)
+                    {
+                        var instaforexAccounts = InstaforexAPI.GetAccounts();
+                            
+                        if (instaforexAccounts.Any(x => x.ToString() == AccountPool.AccountNumber))
+                        {
+                            var account = this.GetById(AccountPool.AccountId);
+                            account.StatusId = 2;
+                            account.IsNew = true;
+
+                            var em = new EmailMessage
+                            {
+                                Subject = string.Format("Счет {0} активирован", account.AccountNumber),
+                                Message = string.Format("Здравствуйте, {0}. Счет {1} брокера Instaforex успешно активирован.", account.Users.Name, account.AccountNumber),
+                                From = "support@broccoli-trade.ru",
+                                DisplayNameFrom = "Broccoli Trade",
+                                To = account.Users.Email
+                            };
+
+                            new QueueService().QueueMessage(em);
+                        }
+                        else
+                        {
+                            var account = this.GetById(AccountPool.AccountId);
+                            account.StatusId = 3;
+                            account.IsNew = true;
+
+                            account.Reason = "Счет не зарегистрирован у брокера или зарегистрирован не по нашему партнерскому коду \"broccoli\"";
+
+                            var em = new EmailMessage
+                            {
+                                Subject = string.Format("Счет {0} отклонен", account.AccountNumber),
+                                Message = string.Format("Здравствуйте, {0}. Счет {1} отклонен.<br/><b>{2}</b>", account.Users.Name, account.AccountNumber, account.Reason),
+                                From = "support@broccoli-trade.ru",
+                                DisplayNameFrom = "Broccoli Trade",
+                                To = account.Users.Email
+                            };
+
+                            new QueueService().QueueMessage(em);
+                        }
+
+                        db.AccountPool.Remove(AccountPool);
+                    }
                 }
 
                 db.SaveChanges();

@@ -101,6 +101,7 @@
     <Property Name="CreateDate" Type="datetime" Nullable="false" />
     <Property Name="IsNew" Type="bit" Nullable="false" />
     <Property Name="Reason" Type="nvarchar" MaxLength="255" />
+    <Property Name="Broker" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Comment">
     <Key>

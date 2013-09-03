@@ -127,6 +127,7 @@
     <NavigationProperty Name="TradingSystems" Relationship="BroccoliModel.FK_TradingSystems_Accounts" FromRole="Accounts" ToRole="TradingSystems" />
     <Property Type="Boolean" Name="IsNew" Nullable="false" />
     <Property Type="String" Name="Reason" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Broker" Nullable="false" />
   </EntityType>
   <Association Name="FK_Accounts_Users">
     <End Type="BroccoliModel.Users" Role="Users" Multiplicity="1" />

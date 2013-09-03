@@ -33,10 +33,21 @@
                 <tr>
                     <td>@account.Number</td>        
                     <td class="broker">
-                        <div class="logo-container">
-                            <img class="broker-logo" src="@Url.Content("~/Content/img/forexinn_logo.jpg")"/>
-                        </div>
-                        ForexInn
+                        @if (account.Broker == 1)
+                        {
+                            <div class="logo-container">
+                                <img class="broker-logo" src="@Url.Content("~/Content/img/forexinn_logo.jpg")"/>
+                            </div>
+                            <text>ForexInn</text>
+                        }
+
+                        @if (account.Broker == 2)
+                        {
+                            <div class="logo-container">
+                                <img class="broker-logo" src="@Url.Content("~/Content/img/instalogo-min.png")"/>
+                            </div>
+                            <text>Instaforex</text>
+                        }
                     </td>
                     <td style="width: 30%;">
                         <span class="status">@account.Status</span>

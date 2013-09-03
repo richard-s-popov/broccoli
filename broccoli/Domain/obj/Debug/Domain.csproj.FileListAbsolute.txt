@@ -13,3 +13,4 @@ C:\work\broccoli\broccoli\Domain\bin\Debug\Newtonsoft.Json.xml
 C:\work\broccoli\broccoli\Domain\bin\Debug\System.Net.Http.xml
 C:\work\broccoli\broccoli\Domain\bin\Debug\System.Net.Http.Formatting.xml
 C:\work\broccoli\broccoli\Domain\bin\Debug\System.Net.Http.WebRequest.xml
+C:\work\broccoli\broccoli\Domain\obj\Debug\Domain.csprojResolveAssemblyReference.cache
