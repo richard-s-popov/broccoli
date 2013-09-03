@@ -72,5 +72,13 @@ namespace BroccoliTrade.Logics.Interfaces.TradingSystem
         /// Проверка заявок на торговые системы в пуле
         /// </summary>
         void CheckTradingSystemInPool();
+
+        /// <summary>
+        /// Путь скомпилированного файла
+        /// </summary>
+        /// <param name="systemId"></param>
+        /// <param name="user"></param>
+        /// <returns></returns>
+        string GetCompiledPath(int systemId, Users user);
     }
 }

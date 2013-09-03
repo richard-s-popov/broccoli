@@ -2,6 +2,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Globalization;
+using System.IO;
+using System.IO.Compression;
 using System.Linq;
 using System.Net;
 using System.Web.Mvc;
@@ -290,30 +292,84 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.PersonalCabinet
 
             if (string.Format("{0}{1}", currentUser.Id, 1).Md5() == token)
             {
-                var file = Server.MapPath("~/Files/TradingSystems/Money+.rar");
+                var file = _tradingSystemService.GetCompiledPath(1, currentUser);
+                var rootDir = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Files", "TradingSystems", "temp",
+                                           currentUser.Id.ToString(CultureInfo.InvariantCulture));
+                var archiveDir = Path.Combine(rootDir, "arch");
+                var instruction = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Files", "TradingSystems", "Instructions",
+                                               "Money+.pdf");
 
-                if (System.IO.File.Exists(file))
+                if (Directory.Exists(rootDir))
                 {
-                    return File("~/Files/TradingSystems/Money+.rar", "application/pdf", "Money+.rar");
+                    this.ClearFolder(rootDir);
                 }
+                
+                Directory.CreateDirectory(rootDir);
+                Directory.CreateDirectory(archiveDir);
+                System.IO.File.Copy(file, Path.Combine(archiveDir, "Money+.ex4"));
+                System.IO.File.Copy(instruction, Path.Combine(archiveDir, Path.GetFileName(instruction)));
+
+                ZipFile.CreateFromDirectory(archiveDir, Path.Combine(rootDir, "zip.zip"));
+
+                var bytes = System.IO.File.ReadAllBytes(Path.Combine(rootDir, "zip.zip"));
+
+                this.ClearFolder(rootDir);
+
+                return File(bytes, "application/zip", "Money+.zip");
             }
             if (string.Format("{0}{1}", currentUser.Id, 2).Md5() == token)
             {
-                var file = Server.MapPath("~/Files/TradingSystems/GarantedProfit.rar");
+                var file = _tradingSystemService.GetCompiledPath(2, currentUser);
+                var rootDir = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Files", "TradingSystems", "temp",
+                                            currentUser.Id.ToString(CultureInfo.InvariantCulture));
+                var archiveDir = Path.Combine(rootDir, "arch");
+                var instruction = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Files", "TradingSystems", "Instructions",
+                                               "GarantedProfit.pdf");
 
-                if (System.IO.File.Exists(file))
+                if (Directory.Exists(rootDir))
                 {
-                    return File("~/Files/TradingSystems/GarantedProfit.rar", "application/pdf", "GarantedProfit.rar");
+                    this.ClearFolder(rootDir);
                 }
+
+                Directory.CreateDirectory(rootDir);
+                Directory.CreateDirectory(archiveDir);
+                System.IO.File.Copy(file, Path.Combine(archiveDir, "GarantedProfit.ex4"));
+                System.IO.File.Copy(instruction, Path.Combine(archiveDir, Path.GetFileName(instruction)));
+
+                ZipFile.CreateFromDirectory(archiveDir, Path.Combine(rootDir, "zip.zip"));
+
+                var bytes = System.IO.File.ReadAllBytes(Path.Combine(rootDir, "zip.zip"));
+
+                this.ClearFolder(rootDir);
+
+                return File(bytes, "application/zip", "GarantedProfit.zip");
             }
             if (string.Format("{0}{1}", currentUser.Id, 3).Md5() == token)
             {
-                var file = Server.MapPath("~/Files/TradingSystems/Max Trade.rar");
+                var file = _tradingSystemService.GetCompiledPath(1, currentUser);
+                var rootDir = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Files", "TradingSystems", "temp",
+                                            currentUser.Id.ToString(CultureInfo.InvariantCulture));
+                var archiveDir = Path.Combine(rootDir, "arch");
+                var instruction = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Files", "TradingSystems", "Instructions",
+                                               "MaxTrade.pdf");
 
-                if (System.IO.File.Exists(file))
+                if (Directory.Exists(rootDir))
                 {
-                    return File("~/Files/TradingSystems/Max Trade.rar", "application/pdf", "Max Trade.rar");
+                    this.ClearFolder(rootDir);
                 }
+
+                Directory.CreateDirectory(rootDir);
+                Directory.CreateDirectory(archiveDir);
+                System.IO.File.Copy(file, Path.Combine(archiveDir, "MaxTrade.ex4"));
+                System.IO.File.Copy(instruction, Path.Combine(archiveDir, Path.GetFileName(instruction)));
+
+                ZipFile.CreateFromDirectory(archiveDir, Path.Combine(rootDir, "zip.zip"));
+
+                var bytes = System.IO.File.ReadAllBytes(Path.Combine(rootDir, "zip.zip"));
+
+                this.ClearFolder(rootDir);
+
+                return File(bytes, "application/zip", "MaxTrade.zip");
             }
 
             return new EmptyResult();
@@ -610,6 +666,23 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.PersonalCabinet
         private string ToJSGenDate(DateTime date)
         {
             return string.Format("new Date({0}, {1}, {2})", date.Year, date.Month - 1, date.Day);
+        }
+
+        private void ClearFolder(string FolderName)
+        {
+            var dir = new DirectoryInfo(FolderName);
+
+            foreach (var fi in dir.GetFiles())
+            {
+                fi.IsReadOnly = false;
+                fi.Delete();
+            }
+
+            foreach (var di in dir.GetDirectories())
+            {
+                ClearFolder(di.FullName);
+                di.Delete();
+            }
         }
 
         protected override void Dispose(bool disposing)

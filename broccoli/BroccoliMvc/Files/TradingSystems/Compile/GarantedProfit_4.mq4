@@ -123,7 +123,7 @@ double gd_420 = 0.0001;
 double gd_unused_428 = 0.1;
 int g_datetime_436 = 0;
 double gd_unused_440 = 1.0;
-int account_number=##account_number;
+int account_number=15160;
 void init() {
    gi_372 = TRUE;
    gi_356 = -1;
@@ -160,10 +160,10 @@ int start() {
    double ld_64 = 0;
    double ld_72 = 0;
    double ld_80 = 1;
-   //проверка логина
+   //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
    if (AccountNumber()!=account_number)
    {
-   Alert("Неверный счет... советник не работает");
+   Alert("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ... пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
    return(0);
    }
    if (DayOfWeek() == 1 && iVolume(NULL, PERIOD_D1, 0) < 5.0) return (0);

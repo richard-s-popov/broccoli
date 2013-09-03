@@ -32,7 +32,7 @@ bool gi_220;
 int gi_unused_224;
 double gda_228[100];
 double gda_232[100];
-
+int account_number=##account_number;
 int init() {
    if (IsTesting() && !IsVisualMode()) gi_unused_212 = FALSE;
    if (!gi_196) return (0);
@@ -56,6 +56,11 @@ int deinit() {
 }
 
 int start() {
+if (AccountNumber()!=account_number)
+   {
+   Alert("Неверный счет... советник не работает");
+   return(0);
+   }
    if (!gi_196) return (0);
    if (!gi_196) return (0);
    gd_204 = MarketInfo(Symbol(), MODE_STOPLEVEL) * Point / gd_152;

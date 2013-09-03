@@ -22,7 +22,7 @@ string HedgeMode = "";
 double Kfocus = 3.0;
 double acccuracy;
 double lot_size;
-
+int account_number=##account_number;
 void init() {
    
    acccuracy = Point;
@@ -59,6 +59,12 @@ void f0_0(string as_0) {
 }
 
 void start() {
+//проверка логина
+   if (AccountNumber()!=account_number)
+   {
+   Alert("Неверный счет... советник не работает");
+   return(0);
+   }
    double lda_0[240];
    double reg_signal;
    double result_correction;

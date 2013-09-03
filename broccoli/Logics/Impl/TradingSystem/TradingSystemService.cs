@@ -116,16 +116,34 @@ namespace BroccoliTrade.Logics.Impl.TradingSystem
                     tradingSystem.StatusId = 4;
                     tradingSystem.IsNew = true;
 
-                    // this.Compile(tradingSystem.Accounts.AccountNumber, tradingSystem.StatusId, tradingSystem.Users);
+                    EmailMessage em;
 
-                    var em = new EmailMessage
+                    if (this.Compile(tradingSystem.Accounts.AccountNumber, tradingSystem.SystemId, tradingSystem.Users))
                     {
-                        Subject = string.Format("{0} активирован", tradingSystem.Systems.Name),
-                        Message = string.Format("Здравствуйте, {0}. {1} активирован и доступен для загрузки.", tradingSystem.Users.Name, tradingSystem.Systems.Name),
-                        From = "support@broccoli-trade.ru",
-                        DisplayNameFrom = "Broccoli Trade",
-                        To = tradingSystem.Users.Email
-                    };
+                        tradingSystem.StatusId = 2;
+
+                        em = new EmailMessage
+                        {
+                            Subject = string.Format("{0} активирован", tradingSystem.Systems.Name),
+                            Message = string.Format("Здравствуйте, {0}. {1} активирован и доступен для загрузки.", tradingSystem.Users.Name, tradingSystem.Systems.Name),
+                            From = "support@broccoli-trade.ru",
+                            DisplayNameFrom = "Broccoli Trade",
+                            To = tradingSystem.Users.Email
+                        };
+                    }
+                    else
+                    {
+                        tradingSystem.StatusId = 5;
+
+                        em = new EmailMessage
+                        {
+                            Subject = string.Format("Произошла ошибка активации {0}", tradingSystem.Systems.Name),
+                            Message = string.Format("Здравствуйте, {0}. {1} не активирован, произошла ошибка, обратитесь в службу поддержки.", tradingSystem.Users.Name, tradingSystem.Systems.Name),
+                            From = "support@broccoli-trade.ru",
+                            DisplayNameFrom = "Broccoli Trade",
+                            To = tradingSystem.Users.Email
+                        };
+                    }
 
                     new QueueService().QueueMessage(em);
                 }
@@ -150,6 +168,29 @@ namespace BroccoliTrade.Logics.Impl.TradingSystem
             }
 
             db.SaveChanges();
+        }
+
+        public string GetCompiledPath(int systemId, Users user)
+        {
+            if (systemId == 1)
+            {
+                return Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Files", "TradingSystems", "Compile",
+                                    "Money+eurusd_" + user.Id + ".ex4");
+            }
+
+            if (systemId == 2)
+            {
+                return Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Files", "TradingSystems", "Compile",
+                                    "GarantedProfit_" + user.Id + ".ex4");
+            }
+
+            if (systemId == 3)
+            {
+                return Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Files", "TradingSystems", "Compile",
+                                    "MaxTrade_" + user.Id + ".ex4");
+            }
+
+            return null;
         }
 
         private bool CanTakeTradingSystem(int systemId, int count)
@@ -177,20 +218,42 @@ namespace BroccoliTrade.Logics.Impl.TradingSystem
             return random.Next(range);
         }
 
-        private void Compile(string account, int systemId, Users user)
+        private bool Compile(string account, int systemId, Users user)
         {
+            this.DeleteOldFilesFromCompileDir(systemId, user);
             File.Copy(this.GetTemplatePath(systemId), this.GetCompilePath(systemId, user));
 
             var file = File.ReadAllText(this.GetCompilePath(systemId, user));
-            file.Replace("##account_number", account);
+            file = file.Replace("##account_number", account);
             File.WriteAllText(this.GetCompilePath(systemId, user), file);
 
             Process.Start(@"C:\Program Files (x86)\MetaTrader ForexInn Ltd\metalang.exe",
                           this.GetCompilePath(systemId, user));
 
-            while (!File.Exists(Path.GetFileNameWithoutExtension(this.GetCompilePath(systemId, user)) + ".ex4"))
+            while (!File.Exists(this.GetCompilePath(systemId, user).Replace(".mq4", string.Empty) + ".ex4"))
             {
-                
+                if (File.Exists(this.GetCompilePath(systemId, user).Replace(".mq4", string.Empty) + ".log"))
+                    return false;
+            }
+
+            return true;
+        }
+
+        private void DeleteOldFilesFromCompileDir(int systemId, Users user)
+        {
+            if (File.Exists(this.GetCompilePath(systemId, user).Replace(".mq4", string.Empty) + ".ex4"))
+            {
+                File.Delete(this.GetCompilePath(systemId, user).Replace(".mq4", string.Empty) + ".ex4");
+            }
+
+            if (File.Exists(this.GetCompilePath(systemId, user)))
+            {
+                File.Delete(this.GetCompilePath(systemId, user));
+            }
+
+            if (File.Exists(this.GetCompilePath(systemId, user).Replace(".mq4", string.Empty) + ".log"))
+            {
+                File.Delete(this.GetCompilePath(systemId, user).Replace(".mq4", string.Empty) + ".log");
             }
         }
 
