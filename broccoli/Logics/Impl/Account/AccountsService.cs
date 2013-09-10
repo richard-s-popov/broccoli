@@ -133,6 +133,9 @@ namespace BroccoliTrade.Logics.Impl.Account
                                     To = account.Users.Email
                                 };
 
+                            db.AccountPool.Remove(AccountPool);
+                            db.SaveChanges();
+
                             new QueueService().QueueMessage(em);
                         }
                         else
@@ -169,10 +172,11 @@ namespace BroccoliTrade.Logics.Impl.Account
                                     To = account.Users.Email
                                 };
 
+                            db.AccountPool.Remove(AccountPool);
+                            db.SaveChanges();
+
                             new QueueService().QueueMessage(em);
                         }
-
-                        db.AccountPool.Remove(AccountPool);
                     }
 
                     if (AccountPool.Accounts.Broker == 2)
@@ -194,6 +198,9 @@ namespace BroccoliTrade.Logics.Impl.Account
                                 To = account.Users.Email
                             };
 
+                            db.AccountPool.Remove(AccountPool);
+                            db.SaveChanges();
+
                             new QueueService().QueueMessage(em);
                         }
                         else
@@ -213,14 +220,13 @@ namespace BroccoliTrade.Logics.Impl.Account
                                 To = account.Users.Email
                             };
 
+                            db.AccountPool.Remove(AccountPool);
+                            db.SaveChanges();
+
                             new QueueService().QueueMessage(em);
                         }
-
-                        db.AccountPool.Remove(AccountPool);
                     }
                 }
-
-                db.SaveChanges();
             }
             catch (Exception ex)
             {
