@@ -173,6 +173,7 @@ namespace BroccoliTrade.Logics.Impl.Account
                         }
 
                         db.AccountPool.Remove(AccountPool);
+                        continue;
                     }
 
                     if (AccountPool.Accounts.Broker == 2)
@@ -217,6 +218,7 @@ namespace BroccoliTrade.Logics.Impl.Account
                         }
 
                         db.AccountPool.Remove(AccountPool);
+                        continue;
                     }
                 }
 
