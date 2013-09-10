@@ -94,7 +94,7 @@ namespace BroccoliTrade.Logics.Impl.Account
             try
             {
                 // var time = DateTime.Now.AddMinutes(-1 * GetRandomMinutes(5));
-                var accounts = db.AccountPool.Select(x => x);
+                var accounts = db.AccountPool.Select(x => x).ToList();
 
                 ServicePointManager.CertificatePolicy = new TrustAllCertificatePolicy();
 
@@ -133,9 +133,6 @@ namespace BroccoliTrade.Logics.Impl.Account
                                     To = account.Users.Email
                                 };
 
-                            db.AccountPool.Remove(AccountPool);
-                            db.SaveChanges();
-
                             new QueueService().QueueMessage(em);
                         }
                         else
@@ -172,11 +169,10 @@ namespace BroccoliTrade.Logics.Impl.Account
                                     To = account.Users.Email
                                 };
 
-                            db.AccountPool.Remove(AccountPool);
-                            db.SaveChanges();
-
                             new QueueService().QueueMessage(em);
                         }
+
+                        db.AccountPool.Remove(AccountPool);
                     }
 
                     if (AccountPool.Accounts.Broker == 2)
@@ -198,9 +194,6 @@ namespace BroccoliTrade.Logics.Impl.Account
                                 To = account.Users.Email
                             };
 
-                            db.AccountPool.Remove(AccountPool);
-                            db.SaveChanges();
-
                             new QueueService().QueueMessage(em);
                         }
                         else
@@ -220,13 +213,14 @@ namespace BroccoliTrade.Logics.Impl.Account
                                 To = account.Users.Email
                             };
 
-                            db.AccountPool.Remove(AccountPool);
-                            db.SaveChanges();
-
                             new QueueService().QueueMessage(em);
                         }
+
+                        db.AccountPool.Remove(AccountPool);
                     }
                 }
+
+                db.SaveChanges();
             }
             catch (Exception ex)
             {
