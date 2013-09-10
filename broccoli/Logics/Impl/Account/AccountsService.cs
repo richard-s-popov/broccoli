@@ -173,6 +173,7 @@ namespace BroccoliTrade.Logics.Impl.Account
                         }
 
                         db.AccountPool.Remove(AccountPool);
+                        db.SaveChanges();
                         continue;
                     }
 
@@ -218,11 +219,10 @@ namespace BroccoliTrade.Logics.Impl.Account
                         }
 
                         db.AccountPool.Remove(AccountPool);
+                        db.SaveChanges();
                         continue;
                     }
                 }
-
-                db.SaveChanges();
             }
             catch (Exception ex)
             {
