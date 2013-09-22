@@ -321,6 +321,7 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.PersonalCabinet
                 var bytes = System.IO.File.ReadAllBytes(Path.Combine(rootDir, "zip.zip"));
 
                 this.ClearFolder(rootDir);
+                Directory.Delete(rootDir);
 
                 return File(bytes, "application/zip", "Money+.zip");
             }
@@ -348,6 +349,7 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.PersonalCabinet
                 var bytes = System.IO.File.ReadAllBytes(Path.Combine(rootDir, "zip.zip"));
 
                 this.ClearFolder(rootDir);
+                Directory.Delete(rootDir);
 
                 return File(bytes, "application/zip", "GarantedProfit.zip");
             }
@@ -375,6 +377,7 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.PersonalCabinet
                 var bytes = System.IO.File.ReadAllBytes(Path.Combine(rootDir, "zip.zip"));
 
                 this.ClearFolder(rootDir);
+                Directory.Delete(rootDir);
 
                 return File(bytes, "application/zip", "MaxTrade.zip");
             }
@@ -690,8 +693,6 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.PersonalCabinet
                 ClearFolder(di.FullName);
                 di.Delete();
             }
-
-            Directory.Delete(FolderName);
         }
 
         protected override void Dispose(bool disposing)

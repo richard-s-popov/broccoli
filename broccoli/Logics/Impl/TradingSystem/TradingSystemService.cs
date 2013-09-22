@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
+using System.Threading;
 using BroccoliTrade.Domain;
 using BroccoliTrade.Domain.Models;
 using BroccoliTrade.Logics.Infrastructure.Certificates;
@@ -232,6 +233,7 @@ namespace BroccoliTrade.Logics.Impl.TradingSystem
 
             while (!File.Exists(this.GetCompilePath(systemId, user).Replace(".mq4", string.Empty) + ".ex4"))
             {
+                Thread.Sleep(1000);
                 if (File.Exists(this.GetCompilePath(systemId, user).Replace(".mq4", string.Empty) + ".log"))
                     return false;
             }
