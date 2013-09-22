@@ -170,12 +170,17 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.Home
                 {
                     Subject = model.Subject,
                     Message = string.Format("{0}\n{1}\n{2}", model.Message, model.Name, model.Email),
-                    From = "support@broccoli-trade.ru",
+                    From = "broccoli2@molchunov.com",
                     DisplayNameFrom = "Обратная связь",
                     To = "support@broccoli-trade.ru"
                 };
 
-                new QueueService().QueueMessage(em);   
+                new EmailService().SendMessage(em,
+                    "broccoli2@molchunov.com",
+                    "123456aaa111",
+                    "smtp.yandex.ru",
+                    587,
+                    true);  
             }
 
             return View("ContactUs");
