@@ -172,7 +172,7 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.Home
                     Message = string.Format("{0}\n{1}\n{2}", model.Message, model.Name, model.Email),
                     From = "broccoli2@molchunov.com",
                     DisplayNameFrom = "Обратная связь",
-                    To = "support@broccoli-trade.ru"
+                    To = "broccoli@molchunov.com"
                 };
 
                 new EmailService().SendMessage(em,
