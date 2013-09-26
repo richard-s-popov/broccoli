@@ -148,5 +148,13 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="Settings">
+      <EntityTypeMapping TypeName="BroccoliModel.Settings">
+        <MappingFragment StoreEntitySet="Settings">
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

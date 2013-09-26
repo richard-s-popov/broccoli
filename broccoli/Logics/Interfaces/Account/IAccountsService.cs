@@ -87,5 +87,10 @@ namespace BroccoliTrade.Logics.Interfaces.Account
         /// <param name="userId"></param>
         /// <returns></returns>
         int GetNewNotoficationsCountByUserId(long userId);
+
+        /// <summary>
+        /// Обработчик на пополненные счета
+        /// </summary>
+        void AccountCountWorker();
     }
 }

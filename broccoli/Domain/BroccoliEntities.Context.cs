@@ -37,5 +37,6 @@ namespace BroccoliTrade.Domain
         public DbSet<Roles> Roles { get; set; }
         public DbSet<UserGroups> UserGroups { get; set; }
         public DbSet<Mails> Mails { get; set; }
+        public DbSet<Settings> Settings { get; set; }
     }
 }

@@ -47,6 +47,13 @@ namespace BroccoliTrade.Web.BroccoliMvc
                     Name = "FunctionMailSernderTimer"
                 };
             mailSenderThread.Start();
+
+            var accountCountWorkerThread = new Thread(FunctionAccountCountWorkerTimer)
+            {
+                IsBackground = true,
+                Name = "FunctionAccountCountWorkerTimer"
+            };
+            accountCountWorkerThread.Start();
         }
 
         protected void FunctionCheckTimer()
@@ -79,6 +86,16 @@ namespace BroccoliTrade.Web.BroccoliMvc
             timer.Start();
         }
 
+        protected void FunctionAccountCountWorkerTimer()
+        {
+            var timer = new System.Timers.Timer();
+            timer.Elapsed += AccountCountWorkerTimerEvent;
+            timer.Interval = 3600000; // 1 час
+            timer.Enabled = true;
+            timer.AutoReset = true;
+            timer.Start();
+        }
+
         protected void TimerEvent(object sender, System.Timers.ElapsedEventArgs e)
         {
             new AccountsService().CheckAccountsInPool();
@@ -94,8 +111,34 @@ namespace BroccoliTrade.Web.BroccoliMvc
         {
             if (DateTime.Now.Hour == 13)
             {
-                new CommunicationService().RunSendMails();
+                var service = new CommunicationService();
+
+                switch (service.GetMailDay())
+                {
+                    case "5":
+                        service.SetMailDay(1);
+                        break;
+                    case "4":
+                        service.SetMailDay(5);
+                        break;
+                    case "3":
+                        service.RunSendMails();
+                        service.SetMailDay(4);
+                        break;
+                    case "2":
+                        service.SetMailDay(3);
+                        break;
+                    case "1":
+                        service.RunSendMails();
+                        service.SetMailDay(2);
+                        break;
+                }
             }
+        }
+
+        protected void AccountCountWorkerTimerEvent(object sender, System.Timers.ElapsedEventArgs e)
+        {
+            new AccountsService().AccountCountWorker();
         }
     }
 }

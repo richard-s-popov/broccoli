@@ -77,6 +77,7 @@
       <End Role="UserGroups" EntitySet="UserGroups" />
       <End Role="Mails" EntitySet="Mails" />
     </AssociationSet>
+    <EntitySet Name="Settings" EntityType="BroccoliModel.Settings" />
   </EntityContainer>
   <EntityType Name="Users">
     <Key>
@@ -437,4 +438,12 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <EntityType Name="Settings">
+    <Key>
+      <PropertyRef Name="Name" />
+      <PropertyRef Name="Value" />
+    </Key>
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Value" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
 </Schema>

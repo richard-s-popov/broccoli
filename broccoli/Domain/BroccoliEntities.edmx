@@ -12,6 +12,12 @@
           <EntitySet Name="Mails" EntityType="BroccoliModel.Store.Mails" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Referrer" EntityType="BroccoliModel.Store.Referrer" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Roles" EntityType="BroccoliModel.Store.Roles" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Settings" EntityType="BroccoliModel.Store.Settings" store:Type="Tables" store:Schema="dbo" store:Name="Settings">
+            <DefiningQuery>SELECT 
+      [Settings].[Name] AS [Name], 
+      [Settings].[Value] AS [Value]
+      FROM [dbo].[Settings] AS [Settings]</DefiningQuery>
+          </EntitySet>
           <EntitySet Name="Status" EntityType="BroccoliModel.Store.Status" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Systems" EntityType="BroccoliModel.Store.Systems" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="TradingSystemPool" EntityType="BroccoliModel.Store.TradingSystemPool" store:Type="Tables" Schema="dbo" />
@@ -148,6 +154,17 @@
           </Key>
           <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="RoleName" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <!--Ошибки, обнаруженные при создании:
+      предупреждение 6002: В таблице или представлении "Broccoli.dbo.Settings" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.
+      -->
+        <EntityType Name="Settings">
+          <Key>
+            <PropertyRef Name="Name" />
+            <PropertyRef Name="Value" />
+          </Key>
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="255" />
+          <Property Name="Value" Type="nvarchar" Nullable="false" MaxLength="255" />
         </EntityType>
         <EntityType Name="Status">
           <Key>
@@ -494,6 +511,7 @@
             <End Role="UserGroups" EntitySet="UserGroups" />
             <End Role="Mails" EntitySet="Mails" />
           </AssociationSet>
+          <EntitySet Name="Settings" EntityType="BroccoliModel.Settings" />
           </EntityContainer>
         <EntityType Name="Users">
           <Key>
@@ -854,6 +872,14 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="Settings">
+          <Key>
+            <PropertyRef Name="Name" />
+            <PropertyRef Name="Value" />
+          </Key>
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Value" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1004,6 +1030,14 @@
                 <ScalarProperty Name="MailName" ColumnName="MailName" />
                 <ScalarProperty Name="MailNumber" ColumnName="MailNumber" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Settings">
+            <EntityTypeMapping TypeName="BroccoliModel.Settings">
+              <MappingFragment StoreEntitySet="Settings">
+                <ScalarProperty Name="Value" ColumnName="Value" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

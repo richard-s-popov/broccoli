@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using BroccoliTrade.Domain;
 using BroccoliTrade.Domain.Models;
+using BroccoliTrade.Logics.Core;
 using BroccoliTrade.Logics.Impl.Membership;
 using BroccoliTrade.Logics.Interfaces.Communications;
 using BroccoliTrade.Logics.MSMQ;
@@ -81,22 +82,53 @@ namespace BroccoliTrade.Logics.Impl.Communications
 
             foreach (var user in users)
             {
-                var mail = this.GetMailByGroupAndNumber(user.GroupId, user.MailNumber);
-
-                var em = new EmailMessage
+                try
                 {
-                    Subject = mail.MailName,
-                    Message = mail.MailBody.Replace("%ИМЯ%", user.Name),
-                    From = "support@broccoli-trade.ru",
-                    DisplayNameFrom = "Broccoli Trade",
-                    To = user.Email
-                };
+                    var mail = this.GetMailByGroupAndNumber(user.GroupId, user.MailNumber);
 
-                new QueueService().QueueMessage(em);
+                    var em = new EmailMessage
+                    {
+                        Subject = mail.MailName.Replace("%ИМЯ%", user.Name),
+                        Message = mail.MailBody.Replace("%ИМЯ%", user.Name),
+                        From = "support@broccoli-trade.ru",
+                        DisplayNameFrom = "Broccoli Trade",
+                        To = user.Email
+                    };
 
-                user.MailNumber = user.MailNumber + 1;
-                this.SaveChanges();
+                    new QueueService().QueueMessage(em);
+
+                    user.MailNumber = user.MailNumber + 1;
+                    this.SaveChanges();
+                }
+                catch (Exception exception)
+                {
+                    Logger.Log(exception);
+                }
             }
+        }
+
+        public string GetSetting(string settingName)
+        {
+            return db.Settings.FirstOrDefault(x => x.Name == settingName).Value;
+        }
+
+        public void SetSetting(string settingName, string setttingValue)
+        {
+            var setting = db.Settings.FirstOrDefault(x => x.Name == settingName);
+            setting.Value = setttingValue;
+            this.SaveChanges();
+        }
+
+        public string GetMailDay()
+        {
+            return db.Settings.FirstOrDefault(x => x.Name == "MailDay").Value;
+        }
+
+        public void SetMailDay(int day)
+        {
+            var setting = db.Settings.FirstOrDefault(x => x.Name == "MailDay");
+            setting.Value = day.ToString();
+            this.SaveChanges();
         }
 
         public void SaveChanges()

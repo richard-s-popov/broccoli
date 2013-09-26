@@ -89,6 +89,67 @@ namespace BroccoliTrade.Logics.Impl.Account
             db.SaveChanges();
         }
 
+        public void AccountCountWorker()
+        {
+            try
+            {
+                var accounts = db.Accounts.Where(x => x.StatusId == 2 && x.Broker == 1).ToList();
+
+                ServicePointManager.CertificatePolicy = new TrustAllCertificatePolicy();
+
+                foreach (var userAccount in accounts)
+                {
+                    try
+                    {
+                        var myHttpWebRequest = (HttpWebRequest) WebRequest
+                                                                    .Create(
+                                                                        string.Format(
+                                                                            "https://my.forexinn.ru/agent-api/check-involved-account/broccoli/jcmbogje9b5uxs/{0}",
+                                                                            userAccount.AccountNumber));
+
+                        var myHttpWebResponse = (HttpWebResponse) myHttpWebRequest.GetResponse();
+
+                        var myStreamReader = new StreamReader(myHttpWebResponse.GetResponseStream(), Encoding.UTF8);
+
+                        var response = myStreamReader.ReadToEnd();
+                        dynamic json = JToken.Parse(response);
+
+                        if ((bool) json["result"] && !(bool) json["demo"])
+                        {
+                            var account = this.GetById(userAccount.Id);
+                            account.StatusId = 2;
+                            account.IsNew = true;
+
+                            // Если пользователь пополнил при этом счет больше 1000, то переносим ему в группу
+                            if ((double) json["count"] > 1000 && userAccount.Users.GroupId < 4)
+                            {
+                                account.Users.GroupId = 4;
+                            }
+                            else if ((double) json["count"] < 1000 && (double) json["count"] > 0 &&
+                                     userAccount.Users.GroupId < 3)
+                            {
+                                account.Users.GroupId = 3;
+                            }
+                            else if (userAccount.Users.GroupId == 1)
+                            {
+                                account.Users.GroupId = 2;
+                            }
+                        }
+
+                        db.SaveChanges();
+                    }
+                    catch (Exception)
+                    {
+                        
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
         public void CheckAccountsInPool()
         {
             try
@@ -121,6 +182,23 @@ namespace BroccoliTrade.Logics.Impl.Account
                             account.StatusId = 2;
                             account.IsNew = true;
 
+                            if (!(bool) json["demo"])
+                            {
+                                // Если пользователь пополнил при этом счет больше 1000, то переносим ему в группу
+                                if ((double)json["count"] > 1000)
+                                {
+                                    account.Users.GroupId = 4;
+                                }
+                                else if ((double)json["count"] < 1000 && (double)json["count"] > 0)
+                                {
+                                    account.Users.GroupId = 3;
+                                }
+                                else
+                                {
+                                    account.Users.GroupId = 2;
+                                }
+                            }
+                            
                             var em = new EmailMessage
                                 {
                                     Subject = string.Format("Счет {0} активирован", account.AccountNumber),

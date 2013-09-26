@@ -142,7 +142,9 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.Account
                         City = model.City,
                         BirthDay = model.BirthDay,
                         Password = model.Password,
-                        RoleId = 2
+                        RoleId = 2,
+                        GroupId = 1,
+                        MailNumber = 1
                     };
 
                 if (Request.Cookies["owner"] != null)

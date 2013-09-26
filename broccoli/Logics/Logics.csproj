@@ -74,6 +74,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Core\InstaforexAPI.cs" />
+    <Compile Include="Core\Logger.cs" />
     <Compile Include="Impl\Account\AccountsService.cs" />
     <Compile Include="Impl\Communications\CommunicationService.cs" />
     <Compile Include="Impl\Membership\MembershipService.cs" />

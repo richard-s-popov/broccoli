@@ -72,6 +72,29 @@ namespace BroccoliTrade.Logics.Interfaces.Communications
         void RunSendMails();
 
         /// <summary>
+        /// Вернуть настройку
+        /// </summary>
+        /// <param name="settingName"></param>
+        string GetSetting(string settingName);
+
+        /// <summary>
+        /// Установить настройку
+        /// </summary>
+        /// <param name="settingName"></param>
+        /// <param name="setttingValue"></param>
+        void SetSetting(string settingName, string setttingValue);
+
+        /// <summary>
+        /// Возвращает день
+        /// </summary>
+        string GetMailDay();
+
+        /// <summary>
+        /// Установить день
+        /// </summary>
+        void SetMailDay(int day);
+
+        /// <summary>
         /// Сохранение
         /// </summary>
         void SaveChanges();
