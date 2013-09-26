@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using BroccoliTrade.Domain;
+using BroccoliTrade.Domain.Models;
+using BroccoliTrade.Logics.Impl.Membership;
 using BroccoliTrade.Logics.Interfaces.Communications;
+using BroccoliTrade.Logics.MSMQ;
 
 namespace BroccoliTrade.Logics.Impl.Communications
 {
@@ -72,9 +75,38 @@ namespace BroccoliTrade.Logics.Impl.Communications
             db.Mails.Add(entity);
         }
 
+        public void RunSendMails()
+        {
+            var users = db.Users.Where(x => x.MailNumber <= 30).ToList();
+
+            foreach (var user in users)
+            {
+                var mail = this.GetMailByGroupAndNumber(user.GroupId, user.MailNumber);
+
+                var em = new EmailMessage
+                {
+                    Subject = mail.MailName,
+                    Message = mail.MailBody.Replace("%ИМЯ%", user.Name),
+                    From = "support@broccoli-trade.ru",
+                    DisplayNameFrom = "Broccoli Trade",
+                    To = user.Email
+                };
+
+                new QueueService().QueueMessage(em);
+
+                user.MailNumber = user.MailNumber + 1;
+                this.SaveChanges();
+            }
+        }
+
         public void SaveChanges()
         {
             db.SaveChanges();
+        }
+
+        private Mails GetMailByGroupAndNumber(int groupId, int number)
+        {
+            return db.Mails.FirstOrDefault(x => x.GroupId == groupId && x.MailNumber == number);
         }
     }
 }

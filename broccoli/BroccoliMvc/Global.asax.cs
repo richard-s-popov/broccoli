@@ -5,6 +5,7 @@ using System.Web.Mvc;
 using System.Web.Routing;
 using BroccoliTrade.Logics.Core;
 using BroccoliTrade.Logics.Impl.Account;
+using BroccoliTrade.Logics.Impl.Communications;
 using BroccoliTrade.Logics.Impl.TradingSystem;
 using BroccoliTrade.Logics.Interfaces.Account;
 using BroccoliTrade.Web.BroccoliMvc.App_Start;
@@ -39,6 +40,13 @@ namespace BroccoliTrade.Web.BroccoliMvc
                     Name = "FunctionCompileTimer"
                 };
             compilationThread.Start();
+
+            var mailSenderThread = new Thread(FunctionMailSernderTimer)
+                {
+                    IsBackground = true,
+                    Name = "FunctionMailSernderTimer"
+                };
+            mailSenderThread.Start();
         }
 
         protected void FunctionCheckTimer()
@@ -61,6 +69,16 @@ namespace BroccoliTrade.Web.BroccoliMvc
             timer.Start();
         }
 
+        protected void FunctionMailSernderTimer()
+        {
+            var timer = new System.Timers.Timer();
+            timer.Elapsed += MailSenderTimerEvent;
+            timer.Interval = 3600000; // 1 час
+            timer.Enabled = true;
+            timer.AutoReset = true;
+            timer.Start();
+        }
+
         protected void TimerEvent(object sender, System.Timers.ElapsedEventArgs e)
         {
             new AccountsService().CheckAccountsInPool();
@@ -70,6 +88,14 @@ namespace BroccoliTrade.Web.BroccoliMvc
         protected void CompileTimerEvent(object sender, System.Timers.ElapsedEventArgs e)
         {
             
+        }
+
+        protected void MailSenderTimerEvent(object sender, System.Timers.ElapsedEventArgs e)
+        {
+            if (DateTime.Now.Hour == 13)
+            {
+                new CommunicationService().RunSendMails();
+            }
         }
     }
 }

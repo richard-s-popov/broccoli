@@ -67,6 +67,11 @@ namespace BroccoliTrade.Logics.Interfaces.Communications
         void SaveMail(Mails entity);
 
         /// <summary>
+        /// Начать рассылку
+        /// </summary>
+        void RunSendMails();
+
+        /// <summary>
         /// Сохранение
         /// </summary>
         void SaveChanges();
