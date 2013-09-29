@@ -109,25 +109,25 @@ namespace BroccoliTrade.Logics.Impl.Communications
 
         public string GetSetting(string settingName)
         {
-            return db.Settings.FirstOrDefault(x => x.Name == settingName).Value;
+            return db.Settings.FirstOrDefault(x => x.Name == settingName).SettingValue;
         }
 
         public void SetSetting(string settingName, string setttingValue)
         {
             var setting = db.Settings.FirstOrDefault(x => x.Name == settingName);
-            setting.Value = setttingValue;
+            setting.SettingValue = setttingValue;
             this.SaveChanges();
         }
 
         public string GetMailDay()
         {
-            return db.Settings.FirstOrDefault(x => x.Name == "MailDay").Value;
+            return db.Settings.FirstOrDefault(x => x.Name == "MailDay").SettingValue;
         }
 
         public void SetMailDay(int day)
         {
             var setting = db.Settings.FirstOrDefault(x => x.Name == "MailDay");
-            setting.Value = day.ToString();
+            setting.SettingValue = day.ToString();
             this.SaveChanges();
         }
 

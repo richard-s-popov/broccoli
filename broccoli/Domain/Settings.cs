@@ -15,6 +15,6 @@ namespace BroccoliTrade.Domain
     public partial class Settings
     {
         public string Name { get; set; }
-        public string Value { get; set; }
+        public string SettingValue { get; set; }
     }
 }

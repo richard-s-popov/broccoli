@@ -2611,6 +2611,20 @@ footer#main{
     margin-top: 5px;
 }
 
+.send-mail .groups {
+    margin: 15px 0;
+}
+
+.send-mail .groups table td {
+    padding: 5px 0;
+}
+
+.send-mail .groups table td label {
+    font-size: 13px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
 .send-emails h2 {
     margin-top: 30px;
     margin-bottom: 10px;

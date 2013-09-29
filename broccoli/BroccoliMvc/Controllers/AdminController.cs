@@ -4,8 +4,10 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using BroccoliTrade.Domain;
+using BroccoliTrade.Domain.Models;
 using BroccoliTrade.Logics.Interfaces.Communications;
 using BroccoliTrade.Logics.Interfaces.Membership;
+using BroccoliTrade.Logics.MSMQ;
 using BroccoliTrade.Web.BroccoliMvc.Infrastructure.Attributes;
 using BroccoliTrade.Web.BroccoliMvc.Models.Account;
 using BroccoliTrade.Web.BroccoliMvc.Models.Admin;
@@ -219,6 +221,54 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers
             {
                 return Json(new { result = false }, JsonRequestBehavior.AllowGet);
             }
+        }
+
+        [Secure]
+        [Role(Role = "Admin")]
+        public ActionResult WriteMailForm()
+        {
+            var groups = this._communicationService.GetAllGroups();
+            var model = new MailGroupsListModel
+                {
+                    GroupList = groups.Select(x => new MailGroup
+                        {
+                            GroupName = x.Name,
+                            Id = x.Id
+                        })
+                };
+
+            return View("WriteMail", model);
+        }
+
+        [Secure]
+        [Role(Role = "Admin")]
+        [ValidateInput(false)]
+        [HttpPost]
+        public ActionResult WriteMailFinish(string subject, string body, string groups)
+        {
+            var groupIds = groups.Split(';');
+
+            foreach (var groupId in groupIds)
+            {
+                var group = this._communicationService.GetGroupById(Convert.ToInt32(groupId));
+                var users = group.Users.ToList();
+                
+                foreach (var user in users)
+                {
+                    var em = new EmailMessage
+                    {
+                        Subject = subject.Replace("%ИМЯ%", user.Name),
+                        Message = body.Replace("%ИМЯ%", user.Name),
+                        From = "support@broccoli-trade.ru",
+                        DisplayNameFrom = "Broccoli Trade",
+                        To = user.Email
+                    };
+
+                    new QueueService().QueueMessage(em);
+                }
+            }
+
+            return RedirectToAction("SendEmails");
         }
 
         protected override void Dispose(bool disposing)

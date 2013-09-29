@@ -510,6 +510,7 @@
     <Content Include="Views\Admin\SendEmailsPanel.cshtml" />
     <Content Include="Views\Admin\NewMail.cshtml" />
     <Content Include="Views\Admin\EditMail.cshtml" />
+    <Content Include="Views\Admin\WriteMail.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

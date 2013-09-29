@@ -1,0 +1,107 @@
+﻿@{
+    ViewBag.Title = "Разовая рассылка";
+    Layout = "~/Views/Shared/_LayoutMin.cshtml";
+}
+@model BroccoliTrade.Web.BroccoliMvc.Models.Admin.MailGroupsListModel
+
+<script  type="text/javascript" src="@Url.Content("~/Scripts/ckeditor/ckeditor.js")"></script>
+
+<div class="banner small">
+    <div class="action">
+        <font>Разовая рассылка</font>
+    </div>
+</div>
+
+<div class="center-content send-mail send-emails">
+    <h2>Создание сообщения</h2>
+    <div class="groups">
+        <table>
+            @foreach (var group in Model.GroupList)
+            {
+                <tr>
+                    <td>
+                        <input id="@group.Id" name="@group.Id" class="group" type="checkbox"/>
+                    </td>
+                    <td>
+                        <label for="@group.Id">@group.GroupName</label>
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+    <input class="subject" type="text"/>
+    <p><strong>%ИМЯ%</strong> - плейсхолдер для имени</p>
+    <textarea class="ckeditor" name="ckeditor"></textarea>
+    <span id="WriteMail" class="button save-mail">
+        <a href="javascript:void(0);"><input class="large" type="button" value="Отправить" style="margin-top: 10px;" /></a>
+    </span>
+</div>
+
+<script type="text/javascript"> document.WriteMailFinish = '@Url.Action("WriteMailFinish", "Admin")'</script>
+<script type="text/javascript">
+    jQuery(document).ready(function () {
+        CKEDITOR.replace('ckeditor', {
+            height: '500px'
+        });
+        
+        CKEDITOR.editorConfig = function( config ) {
+            // Define changes to default configuration here.
+            // For the complete reference:
+            // http://docs.ckeditor.com/#!/api/CKEDITOR.config
+
+            // The toolbar groups arrangement, optimized for two toolbar rows.
+            config.toolbarGroups = [
+                { name: 'clipboard',   groups: [ 'clipboard', 'undo' ] },
+                { name: 'editing',     groups: [ 'find', 'selection', 'spellchecker' ] },
+                { name: 'links' },
+                { name: 'insert' },
+                { name: 'forms' },
+                { name: 'tools' },
+                { name: 'document',	   groups: [ 'mode', 'document', 'doctools' ] },
+                { name: 'others' },
+                '/',
+                { name: 'basicstyles', groups: [ 'basicstyles', 'cleanup' ] },
+                { name: 'paragraph',   groups: [ 'list', 'indent', 'blocks', 'align', 'bidi' ] },
+                { name: 'styles' },
+                { name: 'colors' },
+                { name: 'about' }
+            ];
+
+            // Remove some buttons, provided by the standard plugins, which we don't
+            // need to have in the Standard(s) toolbar.
+            config.removeButtons = 'Underline,Subscript,Superscript';
+
+            // Se the most common block elements.
+            config.format_tags = 'p;h1;h2;h3;pre';
+
+            // Make dialogs simpler.
+            config.removeDialogTabs = 'image:advanced;link:advanced';
+        };
+
+        $('#WriteMail').click(function () {
+            if (CKEDITOR.instances.ckeditor.getData() != "") {
+                var selectedGroups = '';
+
+                $.each($('.group').filter(':checked'), function () {
+                    selectedGroups = selectedGroups + ';' + $(this).attr('name');
+                });
+
+                $.ajax({
+                    url: document.WriteMailFinish,
+                    type: 'POST',
+                    data: {
+                        subject: $('.subject').val(),
+                        body: CKEDITOR.instances.ckeditor.getData(),
+                        groups: selectedGroups
+                    },
+                    success: function(data) {
+                        if (data.result) {
+                            alert("Успех! Не иначе:)");
+                            window.location = '@Url.Action("EditMail")?mailId=' + data.mailId;
+                        }
+                    }
+                });
+            }
+        });
+    });
+</script>
