@@ -109,7 +109,7 @@ namespace BroccoliTrade.Web.BroccoliMvc
 
         protected void MailSenderTimerEvent(object sender, System.Timers.ElapsedEventArgs e)
         {
-            if (DateTime.Now.Hour == 13)
+            if (DateTime.Now.Hour == 21)
             {
                 var service = new CommunicationService();
 

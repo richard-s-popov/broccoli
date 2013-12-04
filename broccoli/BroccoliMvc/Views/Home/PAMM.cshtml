@@ -1,0 +1,125 @@
+﻿@{
+    ViewBag.Title = "ПАММ";
+    Layout = "~/Views/Shared/_LayoutMin.cshtml";
+}
+
+<div class="banner small">
+    <div class="action">
+        <font>ПАММ счета</font>
+    </div>
+</div>
+
+<div class="center-content pamm">
+    <div class="panel about-forex">
+        <h4>Заголовок азазаза</h4>
+        <h4>еще место для заголовка азазаза! как ты любишь гесендерштадские</h4>
+        <img style="width: 450px; margin-top: 30px; margin-left: 200px;" src="@Url.Content("~/Content/img/afbd307d72fb.jpg")" />
+    </div>
+    <div class="panel about-forex">
+        <h3>Что это такое?</h3>
+        <p class="about-forex-text">Допустим, Вы вложили 10 000 долларов на год, через год Ваш капитал будет равен 25 000, при риске 1.05% или 105$<br />Итак: Риск 105$ - прибыль 15000 долларов или 1250$ в месяц, Вам интересен такой доход?<br />Регистрируйтесь и начинайте прямо сейчас.</p>
+        <h4>Почему это выгодно?</h4>
+        <p class="about-forex-text">
+            Потому что Вам не нужно принимать  решение самому.<br/>
+            Потому что Вы можете выставить риск такой, какой Вам нужен.<br/>
+            Потому что 20% сделок советника будут приносить 80% дохода.<br/>
+            Потому что мы работаем с надёжными брокерами, документы которых наши юристы тщательно проверили.<br/>
+            Потому что торговля ведётся круглосуточно, 6 дней в неделю.<br/>
+        </p>
+        <img class="first-img" src="@Url.Content("~/Content/img/pamm2.png")"/>
+         @if (!HttpContext.Current.User.Identity.IsAuthenticated)
+        {
+            <span class="button">
+                <a href="@Url.Action("RegisterForm", "Account")" target="_blank"><input id="regLink" class="large" type="button" value="Регистрация" /></a>
+            </span>
+        }
+    </div>
+    <div class="panel about-forex">
+        <h3>Ищете доказательство?</h3>
+        <p id="proof" class="about-forex-text">
+            Потому что Вам не нужно принимать  решение самому.<br/>
+            Потому что Вы можете выставить риск такой, какой Вам нужен.<br/>
+            Потому что 20% сделок советника будут приносить 80% дохода.<br/>
+            Потому что мы работаем с надёжными брокерами, документы которых наши юристы тщательно проверили.<br/>
+            Потому что торговля ведётся круглосуточно, 6 дней в неделю.<br/>
+        </p>
+        <img id="proof-img" src="@Url.Content("~/Content/img/1347782203_zernovye-treydery.png")"/>
+        @*<h4>Посмотрите на отзывы:</h4>
+        <div class="comment to-right">
+            <p><strong>Григорий Муравьёв. Красноярск</strong></p>
+            <p>Установил в конце января Макс-трэйд, пополнил счёт на 100 000 рублей, получилось 3310,54$ (порадоволо что зачислили по ЦБ без комиссий) выставил риск на 10% за 4 месяца получил 107,3% чистыми! Забрал 100 000р, оставил проценты, капитал продолжает расти, а у меня на руках появились свободные 100 000р, а на счету осталось 3718$ что больше чем 107,3% если считать в рублях. Доллар подрос и я ещё дополнительно заработал.</p>
+            <img class="photo" src="@Url.Content("~/Content/img/bloWsKLnSpc.jpg")"/>
+        </div>
+        <div class="comment">
+            <p><strong>Владимир Тычинский</strong></p>
+            <p>Торгую на бирже уже давно, установил советник 2 месяца назад, и честно говоря я в шоке, за последний месяц поднял 18,11%!!!<br />До этого был опыт в трейдерстве но ни разу не видел такой стабильности и в таком количестве. Хочу сказать СПАСИБО Брокколи трэйд, поставил себе новую планку о которой пока что не скажу =)</p>
+            <img class="photo" src="@Url.Content("~/Content/img/wvLHzTX0ygo.jpg")"/>
+        </div>
+        <h4>Посмотрите на реальную историю,<br/>советник был запущен на ПАММ-счёте:</h4>
+        <img class="screen" src="@Url.Content("~/Content/img/121.jpg")"/>*@
+    </div>
+    <div class="panel about-forex">
+        @*<div id="countdown_dashboard">
+            <div class="dash months_dash">
+                <span class="dash_title">месяцев</span>
+                <div class="digit">0</div>
+                <div class="digit">0</div>
+            </div>
+
+            <div class="dash days_dash">
+                <span class="dash_title">дней</span>
+                <div class="digit">0</div>
+                <div class="digit">0</div>
+            </div>
+
+            <div class="dash hours_dash">
+                <span class="dash_title">часов</span>
+                <div class="digit">0</div>
+                <div class="digit">0</div>
+            </div>
+
+            <div class="dash minutes_dash">
+                <span class="dash_title">минут</span>
+                <div class="digit">0</div>
+                <div class="digit">0</div>
+            </div>
+
+            <div class="dash seconds_dash">
+                <span class="dash_title">секунд</span>
+                <div class="digit">0</div>
+                <div class="digit">0</div>
+            </div>
+        </div>
+        <h4>Зарегистрируйтесь и откройте счёт в течении 15 минут и получите советник макс трейд прямо сейчас БЕСПЛАТНО.</h4>*@
+        @if (!HttpContext.Current.User.Identity.IsAuthenticated)
+        {
+            <span class="button">
+                <a href="@Url.Action("RegisterForm", "Account")" target="_blank"><input id="regLink" class="large" type="button" value="Регистрация" /></a>
+            </span>
+        }
+    </div>
+    <div class="panel about-forex broker-info">
+        <h3>ПАММ счета у брокеров:</h3>
+        <div class="broker">
+            <img src="@Url.Content("~/Content/img/broker-logo.png")"/>
+            <span class="button">
+                <a href="http://www.forexinn.ru/register/a/broccoli" target="_blank"><input class="large" type="button" value="Открыть ПАММ-счет" /></a>
+            </span>
+            <span>Партнерский код: <font>broccoli</font></span>
+        </div>
+        <div class="broker" style="margin-top: 10px;">
+            <img src="@Url.Content("~/Content/img/instalogo.png")" style="margin-left: 125px; margin-top: 23px;"/>
+            <span class="button">
+                <a href="https://secure.instaforex.com/open-account.aspx?lang=ru&x=broccoli" target="_blank"><input class="large" type="button" value="Открыть ПАММ-счет" /></a>
+            </span>
+            <span>Партнерский код: <font>broccoli</font></span>
+        </div>
+    </div>
+    @*<div class="panel about-forex" style="height: 300px;">
+        <img class="garanted" src="@Url.Content("~/Content/img/TwoGuarantees.png")"/>
+        <p class="about-forex-text" style="margin-left: 315px;width: 565px;margin-top: 65px;">
+            Сумма окупится в миллионы раз, потому что Вы ничего не вкладываете (советник бесплатный) и даже если он принесет вам 10 долларов, то вы можете посчитать окупаемость <strong>10/0 = бесконечность</strong>.<br/>
+            <strong>Гарантия 2.</strong> Мы гарантируем полную удовлетворённость советниками. Если какой-то советник Вам не понравится, Вы можете <strong>ЗАКАЧАТЬ ЕГО ОБРАТНО</strong>, отправив к нам на почту
+        </p>
+    </div>*@
+</div>

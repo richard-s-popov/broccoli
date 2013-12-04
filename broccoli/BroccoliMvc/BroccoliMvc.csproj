@@ -172,11 +172,15 @@
     <Content Include="Content\dark.css" />
     <Content Include="Content\flexslider.css" />
     <Content Include="Content\img\121.jpg" />
+    <Content Include="Content\img\1347782203_zernovye-treydery.jpg" />
+    <Content Include="Content\img\1347782203_zernovye-treydery.png" />
     <Content Include="Content\img\1371392218_menu-24.png" />
     <Content Include="Content\img\1371392231_cross-24.png" />
     <Content Include="Content\img\1371392849_edit.png" />
     <Content Include="Content\img\1371392867_delete.png" />
     <Content Include="Content\img\1371393526_add2-.png" />
+    <Content Include="Content\img\afbd307d72fb.jpg" />
+    <Content Include="Content\img\afbd307d72fb.png" />
     <Content Include="Content\img\bloWsKLnSpc.jpg" />
     <Content Include="Content\img\broccoli.png" />
     <Content Include="Content\img\broker-logo.png" />
@@ -226,6 +230,7 @@
     <Content Include="Content\img\for-video\8.jpg" />
     <Content Include="Content\img\for-video\9.jpg" />
     <Content Include="Content\img\forexinn_logo.jpg" />
+    <Content Include="Content\img\gen10.jpg" />
     <Content Include="Content\img\generic-button-green-bg.png" />
     <Content Include="Content\img\hr-shadow.jpg" />
     <Content Include="Content\img\ic_sh.png" />
@@ -236,6 +241,8 @@
     <Content Include="Content\img\invest-dream.jpg" />
     <Content Include="Content\img\invest-dream.png" />
     <Content Include="Content\img\logo-flag.png" />
+    <Content Include="Content\img\pamm2.jpg" />
+    <Content Include="Content\img\pamm2.png" />
     <Content Include="Content\img\play.png" />
     <Content Include="Content\img\slider-background.png" />
     <Content Include="Content\img\temp_logo.png" />
@@ -511,6 +518,7 @@
     <Content Include="Views\Admin\NewMail.cshtml" />
     <Content Include="Views\Admin\EditMail.cshtml" />
     <Content Include="Views\Admin\WriteMail.cshtml" />
+    <Content Include="Views\Home\PAMM.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

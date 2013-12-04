@@ -186,6 +186,11 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.Home
             return View("ContactUs");
         }
 
+        public ActionResult PAMM()
+        {
+            return View();
+        }
+
         public ActionResult BrokerInfo()
         {
             return View();
