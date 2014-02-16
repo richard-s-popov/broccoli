@@ -42,3 +42,4 @@ C:\work\broccoli\broccoli\BroccoliMvc\obj\Debug\BroccoliMvc.csprojResolveAssembl
 C:\work\broccoli\broccoli\BroccoliMvc\obj\Debug\BroccoliTrade.Web.BroccoliMvc.dll
 C:\work\broccoli\broccoli\BroccoliMvc\obj\Debug\BroccoliTrade.Web.BroccoliMvc.pdb
 C:\work\broccoli\broccoli\BroccoliMvc\bin\Microsoft.Practices.ServiceLocation.pdb
+C:\work\broccoli\broccoli\BroccoliMvc\bin\BroccoliTrade.Web.BroccoliMvc.dll.config
