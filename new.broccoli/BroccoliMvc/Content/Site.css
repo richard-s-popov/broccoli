@@ -1691,6 +1691,7 @@ footer#main{
 .center-content .social-comments .social-container {
     width:450px;
     display:inline-block;
+    vertical-align: top;
 }
 
 .center-content .about-forex .comment .photo {
