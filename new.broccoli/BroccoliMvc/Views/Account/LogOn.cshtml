@@ -1,0 +1,38 @@
+﻿@{
+    ViewBag.Title = "Вход";
+    Layout = "~/Views/Shared/_LayoutMin.cshtml";
+}
+
+@section head
+{
+    <script type="text/javascript" src="@Url.Content("~/Scripts/Main/main.js")"></script>
+}
+
+
+<div class="banner small">
+    <div class="action">
+        <font>Вход</font>
+    </div>
+</div>
+<div class="center-content">
+    <div>
+        @using (Html.BeginForm("Login", "Account", FormMethod.Post, new { @id = "loginForm", @class = "box login" }))
+            {
+                <fieldset class="boxBody">
+	                <label>Логин</label>
+	                <input id="login" name="login" type="text" placeholder="Ваш email">
+	                <label><a href="@Url.Action("ForgotPassword", "Account")" class="rLink">Забыли пароль?</a>Пароль</label>
+	                <input id="pass" name="pass" type="password">
+                    @Html.Hidden("isLoginPage", true)
+	            </fieldset>
+	            <footer>
+	                <label>@Html.CheckBox("rememberMe", false)Запомнить меня</label>
+	                <button class="green-button btnLogin">Вход</button>
+	            </footer>
+            }
+    </div>
+</div>
+
+<script type="text/javascript">
+    document.LogOnUrl = "@Url.Action("Login", "Account")";
+</script>

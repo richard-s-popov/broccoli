@@ -1,0 +1,445 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BroccoliModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="BroccoliEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Accounts" EntityType="BroccoliModel.Accounts" />
+    <EntitySet Name="Status" EntityType="BroccoliModel.Status" />
+    <AssociationSet Name="FK_Accounts_Status" Association="BroccoliModel.FK_Accounts_Status">
+      <End Role="Status" EntitySet="Status" />
+      <End Role="Accounts" EntitySet="Accounts" />
+    </AssociationSet>
+    <EntitySet Name="AccountPool" EntityType="BroccoliModel.AccountPool" />
+    <AssociationSet Name="FK_AccountApplication_Accounts" Association="BroccoliModel.FK_AccountApplication_Accounts">
+      <End Role="Accounts" EntitySet="Accounts" />
+      <End Role="AccountPool" EntitySet="AccountPool" />
+    </AssociationSet>
+    <EntitySet Name="Systems" EntityType="BroccoliModel.Systems" />
+    <EntitySet Name="TradingSystemPool" EntityType="BroccoliModel.TradingSystemPool" />
+    <EntitySet Name="TradingSystems" EntityType="BroccoliModel.TradingSystems" />
+    <AssociationSet Name="FK_TradingSystemPool_Accounts" Association="BroccoliModel.FK_TradingSystemPool_Accounts">
+      <End Role="Accounts" EntitySet="Accounts" />
+      <End Role="TradingSystemPool" EntitySet="TradingSystemPool" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TradingSystems_Accounts" Association="BroccoliModel.FK_TradingSystems_Accounts">
+      <End Role="Accounts" EntitySet="Accounts" />
+      <End Role="TradingSystems" EntitySet="TradingSystems" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TradingSystems_Status" Association="BroccoliModel.FK_TradingSystems_Status">
+      <End Role="Status" EntitySet="Status" />
+      <End Role="TradingSystems" EntitySet="TradingSystems" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TradingSystems_Systems" Association="BroccoliModel.FK_TradingSystems_Systems">
+      <End Role="Systems" EntitySet="Systems" />
+      <End Role="TradingSystems" EntitySet="TradingSystems" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TradingSystemPool_TradingSystems" Association="BroccoliModel.FK_TradingSystemPool_TradingSystems">
+      <End Role="TradingSystems" EntitySet="TradingSystems" />
+      <End Role="TradingSystemPool" EntitySet="TradingSystemPool" />
+    </AssociationSet>
+    <EntitySet Name="Referrer" EntityType="BroccoliModel.Referrer" />
+    <EntitySet Name="Comment" EntityType="BroccoliModel.Comment" />
+    <EntitySet Name="Roles" EntityType="BroccoliModel.Roles" />
+    <EntitySet Name="UserGroups" EntityType="BroccoliModel.UserGroups" />
+    <EntitySet Name="Mails" EntityType="BroccoliModel.Mails" />
+    <AssociationSet Name="FK_Mails_UserGroups" Association="BroccoliModel.FK_Mails_UserGroups">
+      <End Role="UserGroups" EntitySet="UserGroups" />
+      <End Role="Mails" EntitySet="Mails" />
+    </AssociationSet>
+    <EntitySet Name="Settings" EntityType="BroccoliModel.Settings" />
+    <EntitySet Name="Users" EntityType="BroccoliModel.Users" />
+    <AssociationSet Name="FK_AccountApplication_Users" Association="BroccoliModel.FK_AccountApplication_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="AccountPool" EntitySet="AccountPool" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Accounts_Users" Association="BroccoliModel.FK_Accounts_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Accounts" EntitySet="Accounts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Comment_Users" Association="BroccoliModel.FK_Comment_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Comment" EntitySet="Comment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Referrer_Users" Association="BroccoliModel.FK_Referrer_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Referrer" EntitySet="Referrer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Users_Roles" Association="BroccoliModel.FK_Users_Roles">
+      <End Role="Roles" EntitySet="Roles" />
+      <End Role="Users" EntitySet="Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TradingSystemPool_Users" Association="BroccoliModel.FK_TradingSystemPool_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="TradingSystemPool" EntitySet="TradingSystemPool" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TradingSystems_Users" Association="BroccoliModel.FK_TradingSystems_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="TradingSystems" EntitySet="TradingSystems" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Users_UserGroups" Association="BroccoliModel.FK_Users_UserGroups">
+      <End Role="UserGroups" EntitySet="UserGroups" />
+      <End Role="Users" EntitySet="Users" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Accounts">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="AccountNumber" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int64" Name="UserId" Nullable="false" />
+    <Property Type="Int32" Name="StatusId" Nullable="false" />
+    <Property Type="Boolean" Name="IsDeleted" Nullable="false" />
+    <Property Type="DateTime" Name="ModifiedDate" Precision="3" />
+    <Property Type="DateTime" Name="CreateDate" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Status" Relationship="BroccoliModel.FK_Accounts_Status" FromRole="Accounts" ToRole="Status" />
+    <NavigationProperty Name="AccountPool" Relationship="BroccoliModel.FK_AccountApplication_Accounts" FromRole="Accounts" ToRole="AccountPool" />
+    <NavigationProperty Name="TradingSystemPool" Relationship="BroccoliModel.FK_TradingSystemPool_Accounts" FromRole="Accounts" ToRole="TradingSystemPool" />
+    <NavigationProperty Name="TradingSystems" Relationship="BroccoliModel.FK_TradingSystems_Accounts" FromRole="Accounts" ToRole="TradingSystems" />
+    <Property Type="Boolean" Name="IsNew" Nullable="false" />
+    <Property Type="String" Name="Reason" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Broker" />
+    <NavigationProperty Name="Users" Relationship="BroccoliModel.FK_Accounts_Users" FromRole="Accounts" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="Status">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Accounts" Relationship="BroccoliModel.FK_Accounts_Status" FromRole="Status" ToRole="Accounts" />
+    <NavigationProperty Name="TradingSystems" Relationship="BroccoliModel.FK_TradingSystems_Status" FromRole="Status" ToRole="TradingSystems" />
+  </EntityType>
+  <Association Name="FK_Accounts_Status">
+    <End Type="BroccoliModel.Status" Role="Status" Multiplicity="1" />
+    <End Type="BroccoliModel.Accounts" Role="Accounts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Status">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Accounts">
+        <PropertyRef Name="StatusId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="AccountPool">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="UserId" Nullable="false" />
+    <Property Type="DateTime" Name="ApplicationDate" Nullable="false" Precision="3" />
+    <Property Type="String" Name="AccountNumber" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="AccountId" Nullable="false" />
+    <NavigationProperty Name="Accounts" Relationship="BroccoliModel.FK_AccountApplication_Accounts" FromRole="AccountPool" ToRole="Accounts" />
+    <NavigationProperty Name="Users" Relationship="BroccoliModel.FK_AccountApplication_Users" FromRole="AccountPool" ToRole="Users" />
+  </EntityType>
+  <Association Name="FK_AccountApplication_Accounts">
+    <End Type="BroccoliModel.Accounts" Role="Accounts" Multiplicity="1" />
+    <End Type="BroccoliModel.AccountPool" Role="AccountPool" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Accounts">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AccountPool">
+        <PropertyRef Name="AccountId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Systems">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="TradingSystems" Relationship="BroccoliModel.FK_TradingSystems_Systems" FromRole="Systems" ToRole="TradingSystems" />
+  </EntityType>
+  <EntityType Name="TradingSystemPool">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="Int64" Name="UserId" Nullable="false" />
+    <Property Type="DateTime" Name="ApplicationDate" Nullable="false" Precision="3" />
+    <Property Type="Int32" Name="AccountId" Nullable="false" />
+    <NavigationProperty Name="Accounts" Relationship="BroccoliModel.FK_TradingSystemPool_Accounts" FromRole="TradingSystemPool" ToRole="Accounts" />
+    <Property Type="Int32" Name="TradingSystemId" Nullable="false" />
+    <NavigationProperty Name="TradingSystems" Relationship="BroccoliModel.FK_TradingSystemPool_TradingSystems" FromRole="TradingSystemPool" ToRole="TradingSystems" />
+    <Property Type="Boolean" Name="ByInvite" Nullable="false" />
+    <NavigationProperty Name="Users" Relationship="BroccoliModel.FK_TradingSystemPool_Users" FromRole="TradingSystemPool" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="TradingSystems">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="SystemId" Nullable="false" />
+    <Property Type="Int64" Name="UserId" Nullable="false" />
+    <Property Type="Int32" Name="StatusId" Nullable="false" />
+    <Property Type="Int32" Name="AccountId" Nullable="false" />
+    <Property Type="DateTime" Name="CreateDate" Nullable="false" Precision="3" />
+    <Property Type="DateTime" Name="ModificationDate" Precision="3" />
+    <Property Type="Boolean" Name="IsDeleted" Nullable="false" />
+    <NavigationProperty Name="Accounts" Relationship="BroccoliModel.FK_TradingSystems_Accounts" FromRole="TradingSystems" ToRole="Accounts" />
+    <NavigationProperty Name="Status" Relationship="BroccoliModel.FK_TradingSystems_Status" FromRole="TradingSystems" ToRole="Status" />
+    <NavigationProperty Name="Systems" Relationship="BroccoliModel.FK_TradingSystems_Systems" FromRole="TradingSystems" ToRole="Systems" />
+    <NavigationProperty Name="TradingSystemPool" Relationship="BroccoliModel.FK_TradingSystemPool_TradingSystems" FromRole="TradingSystems" ToRole="TradingSystemPool" />
+    <Property Type="Boolean" Name="IsNew" Nullable="false" />
+    <NavigationProperty Name="Users" Relationship="BroccoliModel.FK_TradingSystems_Users" FromRole="TradingSystems" ToRole="Users" />
+  </EntityType>
+  <Association Name="FK_TradingSystemPool_Accounts">
+    <End Type="BroccoliModel.Accounts" Role="Accounts" Multiplicity="1" />
+    <End Type="BroccoliModel.TradingSystemPool" Role="TradingSystemPool" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Accounts">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TradingSystemPool">
+        <PropertyRef Name="AccountId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TradingSystems_Accounts">
+    <End Type="BroccoliModel.Accounts" Role="Accounts" Multiplicity="1" />
+    <End Type="BroccoliModel.TradingSystems" Role="TradingSystems" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Accounts">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TradingSystems">
+        <PropertyRef Name="AccountId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TradingSystems_Status">
+    <End Type="BroccoliModel.Status" Role="Status" Multiplicity="1" />
+    <End Type="BroccoliModel.TradingSystems" Role="TradingSystems" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Status">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TradingSystems">
+        <PropertyRef Name="StatusId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TradingSystems_Systems">
+    <End Type="BroccoliModel.Systems" Role="Systems" Multiplicity="1" />
+    <End Type="BroccoliModel.TradingSystems" Role="TradingSystems" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Systems">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TradingSystems">
+        <PropertyRef Name="SystemId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TradingSystemPool_TradingSystems">
+    <End Type="BroccoliModel.TradingSystems" Role="TradingSystems" Multiplicity="1" />
+    <End Type="BroccoliModel.TradingSystemPool" Role="TradingSystemPool" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TradingSystems">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TradingSystemPool">
+        <PropertyRef Name="TradingSystemId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Referrer">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Host" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="Int64" Name="OwnerId" Nullable="false" />
+    <Property Type="Boolean" Name="IsDeleted" Nullable="false" />
+    <Property Type="String" Name="FullReferrerUrl" Nullable="false" MaxLength="2047" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="Date" Nullable="false" Precision="3" />
+    <Property Type="Boolean" Name="Registered" Nullable="false" />
+    <NavigationProperty Name="Users" Relationship="BroccoliModel.FK_Referrer_Users" FromRole="Referrer" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="Comment">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Body" Nullable="false" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="IsConfirmed" Nullable="false" />
+    <Property Type="DateTime" Name="Date" Nullable="false" Precision="3" />
+    <Property Type="Boolean" Name="IsDeleted" Nullable="false" />
+    <Property Type="Int64" Name="UserId" Nullable="false" />
+    <NavigationProperty Name="Users" Relationship="BroccoliModel.FK_Comment_Users" FromRole="Comment" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="Roles">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="RoleName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Users" Relationship="BroccoliModel.FK_Users_Roles" FromRole="Roles" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="UserGroups">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Mails" Relationship="BroccoliModel.FK_Mails_UserGroups" FromRole="UserGroups" ToRole="Mails" />
+    <NavigationProperty Name="Users" Relationship="BroccoliModel.FK_Users_UserGroups" FromRole="UserGroups" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="Mails">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="MailNumber" Nullable="false" />
+    <Property Type="String" Name="MailName" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="MailBody" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="GroupId" Nullable="false" />
+    <NavigationProperty Name="UserGroups" Relationship="BroccoliModel.FK_Mails_UserGroups" FromRole="Mails" ToRole="UserGroups" />
+    <Property Type="Boolean" Name="IsDeleted" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Mails_UserGroups">
+    <End Type="BroccoliModel.UserGroups" Role="UserGroups" Multiplicity="1" />
+    <End Type="BroccoliModel.Mails" Role="Mails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserGroups">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Mails">
+        <PropertyRef Name="GroupId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Settings">
+    <Key>
+      <PropertyRef Name="Name" />
+    </Key>
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SettingValue" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EmailHash" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="RegisterDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="OwnerId" Type="Int64" />
+    <Property Name="UsedPoints" Type="Int32" Nullable="false" />
+    <Property Name="RoleId" Type="Int32" Nullable="false" />
+    <Property Name="FromBanner" Type="Int32" />
+    <Property Name="GroupId" Type="Int32" Nullable="false" />
+    <Property Name="MailNumber" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="AccountPool" Relationship="BroccoliModel.FK_AccountApplication_Users" FromRole="Users" ToRole="AccountPool" />
+    <NavigationProperty Name="Accounts" Relationship="BroccoliModel.FK_Accounts_Users" FromRole="Users" ToRole="Accounts" />
+    <NavigationProperty Name="Comment" Relationship="BroccoliModel.FK_Comment_Users" FromRole="Users" ToRole="Comment" />
+    <NavigationProperty Name="Referrer" Relationship="BroccoliModel.FK_Referrer_Users" FromRole="Users" ToRole="Referrer" />
+    <NavigationProperty Name="Roles" Relationship="BroccoliModel.FK_Users_Roles" FromRole="Users" ToRole="Roles" />
+    <NavigationProperty Name="TradingSystemPool" Relationship="BroccoliModel.FK_TradingSystemPool_Users" FromRole="Users" ToRole="TradingSystemPool" />
+    <NavigationProperty Name="TradingSystems" Relationship="BroccoliModel.FK_TradingSystems_Users" FromRole="Users" ToRole="TradingSystems" />
+    <NavigationProperty Name="UserGroups" Relationship="BroccoliModel.FK_Users_UserGroups" FromRole="Users" ToRole="UserGroups" />
+  </EntityType>
+  <Association Name="FK_AccountApplication_Users">
+    <End Type="BroccoliModel.Users" Role="Users" Multiplicity="1" />
+    <End Type="BroccoliModel.AccountPool" Role="AccountPool" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AccountPool">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Accounts_Users">
+    <End Type="BroccoliModel.Users" Role="Users" Multiplicity="1" />
+    <End Type="BroccoliModel.Accounts" Role="Accounts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Accounts">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Comment_Users">
+    <End Type="BroccoliModel.Users" Role="Users" Multiplicity="1" />
+    <End Type="BroccoliModel.Comment" Role="Comment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Comment">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Referrer_Users">
+    <End Type="BroccoliModel.Users" Role="Users" Multiplicity="1" />
+    <End Type="BroccoliModel.Referrer" Role="Referrer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Referrer">
+        <PropertyRef Name="OwnerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Users_Roles">
+    <End Type="BroccoliModel.Roles" Role="Roles" Multiplicity="1" />
+    <End Type="BroccoliModel.Users" Role="Users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Roles">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Users">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TradingSystemPool_Users">
+    <End Type="BroccoliModel.Users" Role="Users" Multiplicity="1" />
+    <End Type="BroccoliModel.TradingSystemPool" Role="TradingSystemPool" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TradingSystemPool">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TradingSystems_Users">
+    <End Type="BroccoliModel.Users" Role="Users" Multiplicity="1" />
+    <End Type="BroccoliModel.TradingSystems" Role="TradingSystems" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TradingSystems">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Users_UserGroups">
+    <End Type="BroccoliModel.UserGroups" Role="UserGroups" Multiplicity="1" />
+    <End Type="BroccoliModel.Users" Role="Users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserGroups">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Users">
+        <PropertyRef Name="GroupId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

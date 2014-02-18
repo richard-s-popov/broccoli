@@ -1,0 +1,35 @@
+﻿@{
+    ViewBag.Title = "Support";
+    Layout = "~/Views/Shared/_LayoutMin.cshtml";
+}
+@section head {
+    <link rel="stylesheet" href="@Url.Content("~/Content/themes/jquery-ui/jquery-ui-1.9.2.custom.css")" />
+    <script type="text/javascript" src="@Url.Content("~/Scripts/tablesorter/stupidtable.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/PersonalCabinet/statistics.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/amcharts/amcharts.js")"></script>
+}
+
+<div class="banner small">
+    <div class="action">
+        <font>Личный кабинет. Поддержка.</font>
+    </div>
+</div>
+<div class="center-content">
+    @Html.Partial("CabinetMenu")
+    <div class="cabinet-main" style="height: 400px;">
+        <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000"
+            codebase="https://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,0,0"
+            width="100%" height="100%" id="main" align="middle">
+                <param name="allowScriptAccess" value="sameDomain" />
+                <param name="allowFullScreen" value="false" />
+                <param name="movie" value="support.swf" />
+                <param name="quality" value="high" />
+                <param name="bgcolor" value="#FFFFFF" />
+                <param name="flashvars" value="filter=broccoli&language=ru&style_head=@Url.Content("~/Content/support/logo.png")&style_head_x=15&style_head_y=10&url=http://teamwox.forexinn.ru" />
+                <embed src="~/Content/support/support.swf" flashvars="filter=broccoli&language=ru&style_head=@Url.Content("~/Content/support/logo.png")&style_head_x=15&style_head_y=10&url=http://teamwox.forexinn.ru" width="100%"
+                    height="100%" quality="high" bgcolor="#FFFFFF" name="main" align="middle"
+                    allowScriptAccess="sameDomain" allowFullScreen="false" type="application/x-shockwave-flash"
+                    pluginspage="http://www.macromedia.com/go/getflashplayer" />
+       </object>
+    </div>
+</div>

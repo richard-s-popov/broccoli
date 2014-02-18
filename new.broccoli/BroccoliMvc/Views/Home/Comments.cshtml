@@ -1,0 +1,60 @@
+﻿@{
+    ViewBag.Title = "Отзывы";
+    Layout = "~/Views/Shared/_LayoutMin.cshtml";
+}
+@model BroccoliTrade.Web.BroccoliMvc.Models.Communications.CommentsListModel
+
+<script  type="text/javascript" src="@Url.Content("~/Scripts/ckeditor/ckeditor.js")"></script>
+
+<div class="banner small">
+    <div class="action">
+        <font>Отзывы</font>
+    </div>
+</div>
+
+<div class="center-content comments">
+    @foreach (var comment in Model.CommentList)
+    {
+        <div class="comment">
+            <span class="user-name">@comment.UserName.Split(' ').First()&nbsp;@(comment.UserName.Split(' ').Count() > 1 ? string.Format("{0}.", comment.UserName.Split(' ').Last()[0]) : string.Empty)</span>
+            <span class="date">@comment.Date.ToShortDateString()</span>
+            <div class="body">@Html.Raw(comment.Body)</div>
+        </div>
+    }
+    @if (HttpContext.Current.User.Identity.IsAuthenticated)
+    {
+        <div class="message" style="display: none;"></div>
+        <div class="add-comment-title">Добавить отзыв:</div>
+        <textarea class="ckeditor" name="ckeditor"></textarea>    
+        <span id="sendComment" class="button send-comment">
+            <a href="javascript:void(0);"><input class="large" type="button" value="Отправить" /></a>
+        </span>
+    }
+</div>
+
+<script type="text/javascript"> document.SendCommentUrl = '@Url.Action("AddComment", "Home")'</script>
+<script type="text/javascript"> document.CommentsUrl = '@Url.Action("Comments", "Home")'</script>
+<script type="text/javascript">
+    jQuery(document).ready(function () {
+        $('#commentsPage').hide();
+        CKEDITOR.replace('ckeditor', {});
+
+        $('#sendComment').click(function () {
+            if (CKEDITOR.instances.ckeditor.getData() != "") {
+                $.ajax({
+                    url: document.SendCommentUrl,
+                    data: {
+                        comment: CKEDITOR.instances.ckeditor.getData()
+                    },
+                    success: function(data) {
+                        if (data.result) {
+                            $('.message').html('Ваш отзыв отправлен на модерацию. В ближайшее время он будет опубликован.');
+                            $('.message').show();
+                            CKEDITOR.instances.ckeditor.setData('');
+                        }
+                    }
+                });
+            }
+        });
+    });
+</script>

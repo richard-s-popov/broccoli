@@ -1,0 +1,73 @@
+﻿@{
+    ViewBag.Title = "Личный кабинет";
+    Layout = "~/Views/Shared/_LayoutMin.cshtml";
+}
+
+@section head {
+    <script type="text/javascript" src="@Url.Content("~/Scripts/PersonalCabinet/cabinet.js")"></script>
+}
+
+<div class="banner small">
+    <div class="action">
+        <font>Личный кабинет</font>
+    </div>
+</div>
+<div class="center-content">
+    @Html.Partial("CabinetMenu", ViewData)
+    <div class="cabinet-main">
+        <h3 class="mrg-top-bottom20 wellcome">Добро пожаловать, <strong>@ViewBag.User.Name</strong>, в Ваш персональный кабинет компании Broccoli Trade!</h3>
+        <div id="pricing-table">
+            <div class="plan plan1">
+                <div class="price-header">Money +</div>
+                <div class="price">4,9% - 192,8%</div>  
+                <div class="monthly">В год</div>      
+                <ul>
+                    <li>Выставление риска <strong>Нет</strong></li>
+                    <li>Минимальный депозит<br/><strong>Нет требований</strong></li>
+                    <li>Рекомендуемый депозит<br/><strong>Нет рекомендаций</strong></li>
+                    <li><strong>ТФ-H1</strong></li>
+                    <li>Рекомендуемые<br/> валютные пары<br/><strong>EURUSD, GBPUSD</strong></li>
+                </ul>
+                <a class="signup" href="@Url.Action("TradingSystemOrder", "PersonalCabinet", new { id = 1 })">Выбрать</a>         
+            </div >
+            <div class="plan plan2">
+                <div class="price-header two-line">Garanted Profit</div>
+                <div class="price">33,7% - 196,4%</div>
+                <div class="monthly">В год</div>  
+                <ul>
+                    <li>Выставление риска <strong>Есть</strong></li>
+                    <li>Минимальный депозит<br/><strong>100$</strong></li>
+                    <li>Рекомендуемый депозит<br/><strong>10.000$</strong></li>
+                    <li><strong>ТФ-М15</strong></li>
+                    <li>Рекомендуемые<br/> валютные пары<br/><strong>EURUSD, GBPUSD</strong></li>
+                </ul>
+                <a class="signup" href="@Url.Action("TradingSystemOrder", "PersonalCabinet", new { id = 2 })">Выбрать</a>            
+            </div>
+            <div class="plan plan3 popular-plan">
+                <div class="price-header">Max trade</div>
+                <div class="price">48,9% - 1008,5%</div>
+                <div class="monthly">В год</div>
+                <ul>
+                    <li>Выставление риска <strong>Есть</strong></li>
+                    <li>Минимальный депозит<br/><strong>1000$</strong></li>
+                    <li>Рекомендуемый депозит<br/><strong>10.000$</strong></li>
+                    <li><strong>ТФ-М15</strong></li>
+                    <li>Рекомендуемые<br/> валютные пары<br/><strong>EURUSD, GBPUSD, AUDUSD, USDCAD, USDCHF</strong></li>
+                </ul>
+                <a class="signup" href="@Url.Action("TradingSystemOrder", "PersonalCabinet", new { id = 3 })">Выбрать</a>        
+            </div>	
+        </div>
+        <p>Внимание! Вы можете заказать советник только после открытия и активации счёта на сайте Broccoli-Trade.</p>
+        <br/>
+        <div class="instructions">
+            <ul>
+                <li>1. Инструкция к установке и настройке <strong>Money+</strong>. <a href="@Url.Action("GetInstruction", "PersonalCabinet", new { tradingSystem = "Money+" })" target="_blank">Открыть</a></li>
+                <li>2. Инструкция к установке и настройке <strong>Garanted</strong>. <a href="@Url.Action("GetInstruction", "PersonalCabinet", new { tradingSystem = "Garanted" })" target="_blank">Открыть</a></li>
+                <li>3. Инструкция к установке и настройке <strong>Max Trade</strong>. <a href="@Url.Action("GetInstruction", "PersonalCabinet", new { tradingSystem = "MaxTrade" })" target="_blank">Открыть</a></li>
+            </ul>
+        </div>
+        <br/>
+        <hr/>
+        @Html.Partial("AlternativeWay")
+    </div>
+</div>

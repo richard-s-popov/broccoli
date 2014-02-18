@@ -1,0 +1,50 @@
+﻿@{
+    ViewBag.Title = "Активация счета";
+    Layout = "~/Views/Shared/_LayoutMin.cshtml";
+}
+
+
+@section head {
+    <script type="text/javascript" src="@Url.Content("~/Scripts/PersonalCabinet/cabinet.js")"></script>
+}
+
+<div class="banner small">
+    <div class="action">
+        <font>Личный кабинет</font>
+    </div>
+</div>
+<img id="srcBtnOk" src="@Url.Content("~/Content/img/button_ok_7852.png")" style="display: none;" />
+<div class="center-content">    
+    @Html.Partial("CabinetMenu")
+    <div class="cabinet-main">
+        <h3 class="mrg-top-bottom20">Активация нового счета</h3>
+        @using (Html.BeginForm("ActivateAccountFinish", "PersonalCabinet", FormMethod.Post, new { @id = "activateForm" }))
+        {
+            <table>
+                <tr>
+                    <td class="labels">
+                        <label>Номер торгового счета:</label>
+                    </td>
+                    <td class="inputs">
+                        @Html.TextBox("account")
+                    </td>
+                    <td class="labels" style="text-align: right; width: 100px; padding-right: 20px;">
+                        <label>Брокер:</label>
+                    </td>
+                    <td class="inputs">
+                        <select id="broker" name="broker" style="height: 36px;">
+                            <option value="1">Forexinn</option>
+                            <option value="2">Instaforex</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="inputs">
+                        <button id="activate" type="button" class="green-button">Отправить заявку</button>
+                    </td>
+                </tr>
+            </table>
+        }
+    </div>
+</div>

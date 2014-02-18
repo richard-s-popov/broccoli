@@ -1,0 +1,58 @@
+#countdown_dashboard {
+	height: 60px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-left: 260px;
+}
+
+.dash {
+	width: 70px;
+	height: 60px;
+	background: transparent url('img/dash.png') 0 0 no-repeat;
+	float: left;
+	margin-left: 2px;
+	padding-left: 7px;
+    padding-top: 2px;
+	position: relative;
+	color: #333;
+}
+
+.months_dash {
+	background: transparent url('img/dark_dash.png') 0 0 no-repeat;
+}
+
+.weeks_dash {
+	background: transparent url('img/dark_dash.png') 0 0 no-repeat;
+}
+
+.days_dash {
+	background: transparent url('img/dark_dash.png') 0 0 no-repeat;
+}
+
+.hours_dash {
+	background: transparent url('img/dark_dash.png') 0 0 no-repeat;
+}
+
+.minutes_dash {
+	background: transparent url('img/dark_dash.png') 0 0 no-repeat;
+}
+
+.seconds_dash {
+	background: transparent url('img/dark_dash.png') 0 0 no-repeat;
+}
+
+.dash .digit {
+	font: bold 33pt Verdana;
+	font-weight: bold;
+	float: left;
+	width: 31px;
+	text-align: center;
+	position: relative;
+}
+
+.dash_title {
+    position: absolute;
+    top: -19px;
+    left: 3px;
+    font-weight: bold;
+}

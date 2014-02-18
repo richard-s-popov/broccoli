@@ -1,0 +1,32 @@
+﻿@{
+    ViewBag.Title = "CommentPanel";
+    Layout = "~/Views/Shared/_LayoutMin.cshtml";
+}
+@model BroccoliTrade.Web.BroccoliMvc.Models.Communications.CommentsListModel
+
+<script type="text/javascript" src="@Url.Content("~/Scripts/Admin/comments.js")"></script>
+
+<div class="banner small">
+    <div class="action">
+        <font>Модерация отзывов</font>
+    </div>
+</div>
+
+<div class="center-content comments">
+    @if (!Model.CommentList.Any())
+    {
+        <div class="message">Нет отзывов для модерации</div>
+    }
+    @foreach (var comment in Model.CommentList)
+    {
+        <div id="comment-@comment.Id" class="comment">
+            <div class="user-name">@comment.UserName</div>
+            <div class="body">@Html.Raw(comment.Body)</div>
+            <button class="green-button approve-comment" onclick="ApproveComment(@comment.Id)">Одобрить</button>
+            <a class="decline" onclick="DeclineComment(@comment.Id)">Отклонить</a>
+        </div>
+    }
+</div>
+
+<script type="text/javascript">document.ApproveCommentUrl = '@Url.Action("ApproveComment", "Admin")';</script>
+<script type="text/javascript">document.DeclineCommentUrl = '@Url.Action("DeclineComment", "Admin")';</script>

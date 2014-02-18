@@ -1,0 +1,89 @@
+﻿@using BroccoliTrade.Logics.Infrastructure.Extensions
+@using BroccoliTrade.Web.BroccoliMvc.Infrastructure.UserHelper
+<script type="text/javascript" src="@Url.Content("~/Scripts/ckeditor/ckeditor.js")"></script>
+<script type="text/javascript" src="@Url.Content("~/Scripts/PersonalCabinet/alternative.way.js")"></script>
+
+<h3>Другой способ получения</h3>
+<br>
+<a href="javascript:void(0)" id="showAltWayContainer">Показать...</a>
+
+<div class="container">
+    <div class="alt-way-container">
+        <div>Ваша партнерская ссылка:</div>
+        <div><strong>http://broccoli-trade.ru/?token=@HttpContext.Current.User.Identity.Name.Md5()</strong></div>
+        <p>Вы можете отправлять данную ссылку любым удобным для Вас способом.</p>
+        <p>Внимание, не пытайтесь отправлять письма на свои электронные ящики и регистрироваться с них на нашем сайте — сервис учитывает только настоящих людей. Нарушители будут заблокированы.</p>
+        <p>Введите имя и email друга или друзей, чтобы отправить им следующее сообщение.</p>
+        <img id="srcCross" src="@Url.Content("~/Content/img/cross_2615.png")" style="display: none;" />
+        <table id="assignedUsers" class="invite-list">
+            <tr>
+                <th></th>
+                <th>Имя друга</th>
+                <th>E-mail</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td class="inputs">
+                    @Html.TextBox("nameAssignedUser", null, new { @class = "nameAssignedUser" })
+                </td>
+                <td class="inputs">
+                    @Html.TextBox("emailAssignedUser", null, new { @class = "emailAssignedUser" })
+                </td>
+                <td class="inputs">
+                    <div class="for-img">
+                        <img class="clearAssignedUserBtn" src="@Url.Content("~/Content/img/cross_2615.png")" />
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <a href="javascript:void(0)" id="addUser">Добавить еще...</a>
+        @Html.TextBox("subject", null, new { @class = "subject", @placeholder = "Заголовок" })
+        <div class="placeholder-description"><strong>%ИМЯ%</strong> - сюда будет подставлено имя вашего друга, которое вы указали с email-ом</div>
+        <textarea id="inviteMessage" class="inviteMessage" name="inviteMessage">Приветствую %ИМЯ%, это @UserHelper.GetUserName(), узнал про систему торговую Брокколи Трейд, позволяющую с выставлением риска инвестировать на рынок форекс. Если тебе в принципе интересны инструменты инвестиций, позволяющие зарабатывать от 5 до 100 % за месяц, пройди по ссылке <a href="http://broccoli-trade.ru/?token=@HttpContext.Current.User.Identity.Name.Md5()">www.broccoli-trade.ru</a>!</textarea>
+        <div id="lessSymbols"></div>
+        <button id="sendInvites" type="button" class="green-button">Сделать рассылку</button>
+        <p>После отправки писем, Вы можете посмотреть статистику зарегистрировавшихся и перешедших по ссылке людей во вкладке <a href="@Url.Action("Statistics", "PersonalCabinet")">"Статистика"</a>.</p>
+        <div class="social-networks">
+            <div style="margin-bottom: 10px;">Рассказать в соц. сетях</div>
+            <div class="buttons">
+                <table>
+                    <tr>
+                        <td class="buttons">
+                            <!-- Put this script tag to the <head> of your page -->
+                            <script type="text/javascript" src="http://vk.com/js/api/share.js?11" charset="windows-1251"></script>
+
+                            <!-- Put this script tag to the place, where the Share button will be -->
+                            <script type="text/javascript">
+                                document.write(VK.Share.button({ url: "http://broccoli-trade.ru/?token=@HttpContext.Current.User.Identity.Name.Md5()" }, { type: "custom", text: "<img src=\"@Url.Content("~/Content/img/vk_logo.png")\" />" }));
+                            </script>
+                        </td>
+                        <td class="name-network">
+                            <h4>Вконтакте</h4>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a target="_blank" class="mrc__plugin_uber_like_button" href="http://broccoli-trade.ru/?token=@HttpContext.Current.User.Identity.Name.Md5()" data-mrc-config="{'nc' : '1', 'nt' : '1', 'cm' : '2', 'ck' : '2', 'sz' : '45', 'st' : '2', 'tp' : 'ok'}">Нравится</a>
+                        </td>
+                        <td class="name-network">
+                            <h4>Одноклассники</h4>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a target="_blank" class="mrc__plugin_uber_like_button" href="http://broccoli-trade.ru/?token=@HttpContext.Current.User.Identity.Name.Md5()" data-mrc-config="{'nc' : '1', 'nt' : '1', 'cm' : '2', 'ck' : '2', 'sz' : '45', 'st' : '2', 'tp' : 'mm'}">Нравится</a>
+                            <script src="http://cdn.connect.mail.ru/js/loader.js" type="text/javascript" charset="UTF-8"></script>
+                        </td>
+                        <td class="name-network">
+                            <h4>Мой мир</h4>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    document.SendInvitesList = "@Url.Action("SendInvites","PersonalCabinet")";
+</script>

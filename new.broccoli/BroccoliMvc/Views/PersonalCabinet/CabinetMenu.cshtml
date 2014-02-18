@@ -1,0 +1,58 @@
+﻿<div id="container">
+    <ul id="menu">
+        <li><a href="@Url.Action("Index", "PersonalCabinet")">Кабинет</a>
+        </li>
+        <li><a href="#">Счета</a>
+            <ul>
+                <li><a href="http://www.forexinn.ru/register/a/broccoli">Открыть счет Forexinn</a></li>
+                <li><a href="https://secure.instaforex.com/open-account.aspx?lang=ru&x=broccoli">Открыть счет Instaforex</a></li>
+                <li><a href="@Url.Action("ActivateAccount", "PersonalCabinet")">Активировать счет</a></li>
+                <li><a href="@Url.Action("AccountStatus", "PersonalCabinet")">Статус счетов</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Торговые системы</a>
+            <ul>
+                <li><a href="@Url.Action("TradingSystemOrder", "PersonalCabinet", new { id = 1 })">Money+</a></li>
+                <li><a href="@Url.Action("TradingSystemOrder", "PersonalCabinet", new { id = 2 })">Garanted</a></li>
+                <li><a href="@Url.Action("TradingSystemOrder", "PersonalCabinet", new { id = 3 })">Max trade</a></li>
+                <li><a href="@Url.Action("OrderStatus", "PersonalCabinet")">Статус заказов</a></li>
+            </ul>
+        </li>
+        <li><a href="@Url.Action("Statistics", "PersonalCabinet")">Статистика</a>
+        </li>
+        <li><a href="@Url.Action("Support", "PersonalCabinet")">Служба поддержки</a></li>
+    </ul>
+</div>
+
+
+@*<td class="cabinet-menu">
+    <h5 onclick="window.location = '@Url.Action("Index", "PersonalCabinet")'">Личный кабинет</h5>
+    <h5 onclick="window.location = '@Url.Action("Statistics", "PersonalCabinet")'">Статистика</h5>
+    <h4>Счета</h4>
+    <h5 onclick="window.location = 'http://www.forexinn.ru/register/a/broccoli'">Открыть счет</h5>
+        <h5 onclick="window.location = '@Url.Action("ActivateAccount", "PersonalCabinet")'">Активировать счет</h5>
+        <h5 onclick="window.location = '@Url.Action("AccountStatus", "PersonalCabinet")'">
+            Статус счетов 
+            @if (ViewData["AccountNotificationsCount"] != null && ViewData["AccountNotificationsCount"] as int? > 0)
+            {
+                var count = string.Format("({0})", ViewData["AccountNotificationsCount"]);
+                <div class="notifications-count">@count</div>
+            }
+        </h5>
+    <h4>Торговые системы</h4>
+        <h5 onclick="window.location = '@Url.Action("TradingSystemOrder", "PersonalCabinet", new { id = 1 })'">Советник 1.0</h5>
+        <h5 onclick="window.location = '@Url.Action("TradingSystemOrder", "PersonalCabinet", new { id = 2 })'">Советник 2.0</h5>
+        <h5 onclick="window.location = '@Url.Action("TradingSystemOrder", "PersonalCabinet", new { id = 3 })'">Советник 3.0</h5>
+        <h5 onclick="window.location = '@Url.Action("OrderStatus", "PersonalCabinet")'">
+            Статус заказов
+            @if (ViewData["TradingSystemNotificationsCount"] != null && ViewData["TradingSystemNotificationsCount"] as int? > 0)
+            {
+                var count = string.Format("({0})", ViewData["TradingSystemNotificationsCount"]);
+                <div class="notifications-count">@count</div>
+            }
+        </h5>
+    <h4>Служба поддержки</h4>
+        <h5>Мои письма</h5>
+        <h5>Написать</h5>
+        <h5>Рекомендации</h5>
+</td>*@

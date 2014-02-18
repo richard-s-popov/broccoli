@@ -1,0 +1,86 @@
+﻿@{
+    ViewBag.Title = "Заказ";
+    Layout = "~/Views/Shared/_LayoutMin.cshtml";
+}
+@model BroccoliTrade.Web.BroccoliMvc.Models.PersonalCabinet.TradingSystemOrderPoco
+
+@section head {
+    <script type="text/javascript" src="@Url.Content("~/Scripts/PersonalCabinet/order.js")"></script>
+}
+
+<div class="banner small">
+    <div class="action">
+        <font>Личный кабинет</font>
+    </div>
+</div>
+<div class="center-content">
+    @Html.Partial("CabinetMenu")
+    <div class="cabinet-main">
+        @if (ViewBag.ErrorMessage != null)
+        {
+            <div class="error-message order">@ViewBag.ErrorMessage</div>
+        }
+        <h3 class="mrg-top-bottom20">Заказ торговой системы "@ViewBag.SystemName"</h3>
+        @using (Html.BeginForm("OrderFinish", "PersonalCabinet", FormMethod.Post, new { id = "activateForm" }))
+        {
+            @Html.HiddenFor(m => m.TradingSystemId)
+            <table>
+                <tr>
+                    <td class="labels">
+                        <label>Торговый счет:</label>
+                    </td>
+                    <td class="inputs">
+                        @Html.DropDownListFor(m => m.AccountId, Model.Accounts, "Выберите счет...")
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="inputs">
+                        <button id="order" type="button" class="green-button">Заказать</button>
+                    </td>
+                </tr>
+            </table>
+        }
+        <div class="how-to">
+            <h3>Чтобы получить советник и начать торговать:</h3>
+            <ul class="steps-for-advisor">
+                <li>
+                    <p>1.&nbsp;&nbsp;<a href="http://www.forexinn.ru/register/a/broccoli" target="_blank">Откройте счет</a> у брокера <strong>ForexInn</strong>.</p>
+                    @if (Model.TradingSystemId == 3)
+                    {
+                        <p class="description">Для того чтобы получить советник необходимо иметь на счете у брокера не менее $1000.<br/>Это необходимо для торговли на рынке Форекс.<br/>Также Вы можете воспользоваться советником <a href="@Url.Action("TradingSystemOrder", "PersonalCabinet", new { id = 1 })">Money+</a> и, не рискуя своим капиталом, опробовать свои силы на <a href="https://my.forexinn.ru/register-demo" target="_blank">демо-счете</a>.</p>
+                    }
+                    @if (Model.TradingSystemId == 2)
+                    {
+                        <p class="description">Для того чтобы получить советник необходимо иметь на счете у брокера не менее $100.<br/>Это необходимо для торговли на рынке Форекс.<br/>Также Вы можете воспользоваться советником <a href="@Url.Action("TradingSystemOrder", "PersonalCabinet", new { id = 1 })">Money+</a> и, не рискуя своим капиталом, опробовать свои силы на <a href="https://my.forexinn.ru/register-demo" target="_blank">демо-счете</a>.</p>
+                    }
+                    @if (Model.TradingSystemId == 1)
+                    {
+                        <p class="description">Вы можете проверить работу советника на <a href="https://my.forexinn.ru/register-demo" target="_blank">демо-счете</a>.</p>
+                    }
+                </li>
+                <li>2.&nbsp;&nbsp;Затем <a href="@Url.Action("ActivateAccount", "PersonalCabinet")">активируйте этот счет</a> на нашем сайте у себя в личном кабинете.</li>
+                <li>
+                    <p>3.&nbsp;&nbsp;Выберите на этой странице счет и нажмите кнопку <strong>заказать</strong>.</p>
+                    <p class="description">Не более чем через 5 минут Ваш советник будет <a href="@Url.Action("OrderStatus", "PersonalCabinet")">доступен для скачивания</a>.</p>
+                </li>
+            </ul>
+        </div>
+        <div class="broker-info">
+            <div class="broker">
+                <img src="@Url.Content("~/Content/img/broker-logo.png")"/>
+                <span class="button">
+                    <a href="http://www.forexinn.ru/register/a/broccoli" target="_blank"><input class="large" type="button" value="Открыть счет у Брокера" /></a>
+                </span>
+                <span>Партнерский код: <font>broccoli</font></span>
+            </div>
+        </div>
+        <br/>
+        <br/>
+        <hr/>
+        @Html.Partial("AlternativeWay")
+    </div>
+</div>
+<script type="text/javascript">
+    document.deleteUrl = "@Url.Action("DeleteAccount", "PersonalCabinet")";
+</script>

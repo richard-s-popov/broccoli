@@ -1,0 +1,305 @@
+﻿@{
+    ViewBag.Title = "Предложение Брокколи";
+    Layout = "~/Views/Shared/_LayoutMin.cshtml";
+}
+
+@section head {
+    <!-- FancyBox -->
+	<script src="@Url.Content("~/Scripts/fancybox/jquery.fancybox.js")"></script>
+	<script src="@Url.Content("~/Scripts/fancybox/jquery.fancybox-buttons.js")"></script>
+	<script src="@Url.Content("~/Scripts/fancybox/jquery.fancybox-thumbs.js")"></script>
+    <script src="@Url.Content("~/Scripts/fancybox/jquery.easing-1.3.pack.js")"></script>
+    <script src="@Url.Content("~/Scripts/fancybox/jquery.mousewheel-3.0.6.pack.js")"></script>
+    <script src="@Url.Content("~/Scripts/vk_up_button/button.js")"></script>
+}
+
+<div class="banner small">
+    <div class="action">
+        <font>Предложение Брокколи</font>
+    </div>
+</div>
+
+<div class="center-content broccoli-offer">
+    <div class="offer-discribe">
+        <img style="height: 200px;" src="@Url.Content("~/Content/img/depositphotos_1066825-Pineapple.jpg")"/>
+        <div class="offer-title segoe-ui-light">Зарабатывайте</div>
+        <div class="offer-text">Возможность зарабатывать от 5% до 20% от депозита в месяц.</div>
+    </div>
+    <div class="offer-discribe">
+        <img style="height: 200px;" src="@Url.Content("~/Content/img/depositphotos_15565199-Lime-stack (1).jpg")"/>
+        <div class="offer-title segoe-ui-light">Управление</div>
+        <div class="offer-text">Пошаговые инструкции для настройки советников  и торговой платформы помогут Вам без труда ориентироваться в управлении Вашими финансами.</div>
+    </div>
+    <div class="offer-discribe">
+        <img style="height: 200px;margin-left: 60px;" src="@Url.Content("~/Content/img/depositphotos_1158059-Young-sunflower-sprout.jpg")"/>
+        <div class="offer-title segoe-ui-light">Риск</div>
+        <div class="offer-text">Торгуйте при помощи наших советников с возможностью выставления риска.</div>
+    </div>
+    <div class="hr-shadow calculator-container">
+        <h4>Наращивайте капитал. Калькулятор</h4>
+        <table id="calculator" class="calculator grid">
+            <thead>
+                <th>Введите сумму начальной инвестиции, $</th>
+                <th style="border-left: none;"><input id="startSum" class="money" value="1000" type="text"/></th>
+                <th>Предполагаемый процент в месяц, %</th>
+                <th style="border-left: none;"><input id="percent" class="percent" value="15" type="text"/></th>
+                <th>Сумма ежемесячного пополнения, $</th>
+                <th style="border-left: none;"><input id="transfer" class="money" value="100" type="text"/></th>
+            </thead>
+            <tbody>
+                <tr id="month-1" class="month">
+                    <td class="month-name"></td>
+                    <td class="month-sum"></td>
+                    <td></td>
+                    <td class="month-percent"></td>
+                    <td></td>
+                    <td class="month-transfer"></td>
+                </tr>
+                <tr id="month-2" class="month">
+                    <td class="month-name"></td>
+                    <td class="month-sum"></td>
+                    <td></td>
+                    <td class="month-percent"></td>
+                    <td></td>
+                    <td class="month-transfer"></td>
+                </tr>
+                <tr id="month-3" class="month">
+                    <td class="month-name"></td>
+                    <td class="month-sum"></td>
+                    <td></td>
+                    <td class="month-percent"></td>
+                    <td></td>
+                    <td class="month-transfer"></td>
+                </tr>
+                <tr id="month-4" class="month">
+                    <td class="month-name"></td>
+                    <td class="month-sum"></td>
+                    <td></td>
+                    <td class="month-percent"></td>
+                    <td></td>
+                    <td class="month-transfer"></td>
+                </tr>
+                <tr id="month-5" class="month">
+                    <td class="month-name"></td>
+                    <td class="month-sum"></td>
+                    <td></td>
+                    <td class="month-percent"></td>
+                    <td></td>
+                    <td class="month-transfer"></td>
+                </tr>
+                <tr id="month-6" class="month">
+                    <td class="month-name"></td>
+                    <td class="month-sum"></td>
+                    <td></td>
+                    <td class="month-percent"></td>
+                    <td></td>
+                    <td class="month-transfer"></td>
+                </tr>
+                <tr id="month-7" class="month">
+                    <td class="month-name"></td>
+                    <td class="month-sum"></td>
+                    <td></td>
+                    <td class="month-percent"></td>
+                    <td></td>
+                    <td class="month-transfer"></td>
+                </tr>
+                <tr id="month-8" class="month">
+                    <td class="month-name"></td>
+                    <td class="month-sum"></td>
+                    <td></td>
+                    <td class="month-percent"></td>
+                    <td></td>
+                    <td class="month-transfer"></td>
+                </tr>
+                <tr id="month-9" class="month">
+                    <td class="month-name"></td>
+                    <td class="month-sum"></td>
+                    <td></td>
+                    <td class="month-percent"></td>
+                    <td></td>
+                    <td class="month-transfer"></td>
+                </tr>
+                <tr id="month-10" class="month">
+                    <td class="month-name"></td>
+                    <td class="month-sum"></td>
+                    <td></td>
+                    <td class="month-percent"></td>
+                    <td></td>
+                    <td class="month-transfer"></td>
+                </tr>
+                <tr id="month-11" class="month">
+                    <td class="month-name"></td>
+                    <td class="month-sum"></td>
+                    <td></td>
+                    <td class="month-percent"></td>
+                    <td></td>
+                    <td class="month-transfer"></td>
+                </tr>
+                <tr id="month-12" class="month">
+                    <td class="month-name"></td>
+                    <td class="month-sum"></td>
+                    <td></td>
+                    <td class="month-percent"></td>
+                    <td></td>
+                    <td class="month-transfer"></td>
+                </tr>
+                <tr id="month-13" class="month">
+                    <td class="month-name"></td>
+                    <td class="month-sum"></td>
+                    <td></td>
+                    <td class="month-percent"></td>
+                    <td></td>
+                    <td class="month-transfer"></td>
+                </tr>
+                <tr id="month-14" class="month">
+                    <td class="month-name"></td>
+                    <td class="month-sum"></td>
+                    <td></td>
+                    <td class="month-percent"></td>
+                    <td></td>
+                    <td class="month-transfer"></td>
+                </tr>
+                <tr id="month-15" class="month">
+                    <td class="month-name"></td>
+                    <td class="month-sum"></td>
+                    <td></td>
+                    <td class="month-percent"></td>
+                    <td></td>
+                    <td class="month-transfer"></td>
+                </tr>
+                <tr id="month-16" class="month">
+                    <td class="month-name"></td>
+                    <td class="month-sum"></td>
+                    <td></td>
+                    <td class="month-percent"></td>
+                    <td></td>
+                    <td class="month-transfer"></td>
+                </tr>
+                <tr id="month-17" class="month">
+                    <td class="month-name"></td>
+                    <td class="month-sum"></td>
+                    <td></td>
+                    <td class="month-percent"></td>
+                    <td></td>
+                    <td class="month-transfer"></td>
+                </tr>
+                <tr id="month-18" class="month">
+                    <td class="month-name"></td>
+                    <td class="month-sum"></td>
+                    <td></td>
+                    <td class="month-percent"></td>
+                    <td></td>
+                    <td class="month-transfer"></td>
+                </tr>
+                <tr id="month-19" class="month">
+                    <td class="month-name"></td>
+                    <td class="month-sum"></td>
+                    <td></td>
+                    <td class="month-percent"></td>
+                    <td></td>
+                    <td class="month-transfer"></td>
+                </tr>
+                <tr id="month-20" class="month">
+                    <td class="month-name"></td>
+                    <td class="month-sum"></td>
+                    <td></td>
+                    <td class="month-percent"></td>
+                    <td></td>
+                    <td class="month-transfer"></td>
+                </tr>
+                <tr id="month-21" class="month">
+                    <td class="month-name"></td>
+                    <td class="month-sum"></td>
+                    <td></td>
+                    <td class="month-percent"></td>
+                    <td></td>
+                    <td class="month-transfer"></td>
+                </tr>
+                <tr id="month-22" class="month">
+                    <td class="month-name"></td>
+                    <td class="month-sum"></td>
+                    <td></td>
+                    <td class="month-percent"></td>
+                    <td></td>
+                    <td class="month-transfer"></td>
+                </tr>
+                <tr id="month-23" class="month">
+                    <td class="month-name"></td>
+                    <td class="month-sum"></td>
+                    <td></td>
+                    <td class="month-percent"></td>
+                    <td></td>
+                    <td class="month-transfer"></td>
+                </tr>
+                <tr id="month-24" class="month">
+                    <td class="month-name"></td>
+                    <td class="month-sum"></td>
+                    <td></td>
+                    <td class="month-percent"></td>
+                    <td></td>
+                    <td class="month-transfer"></td>
+                </tr>
+            </tbody>
+        </table>
+        <span class="button">
+            <a href="@Url.Action("RegisterForm", "Account")" target="_blank"><input id="regLink" class="large" type="button" value="Регистрация" /></a>
+        </span>
+        <div id="pricing-table">
+            <div class="plan plan1">
+                <div class="price-header">Money +</div>
+                <div class="price">4,9% - 192,8%</div>  
+                <div class="monthly">В год</div>      
+                <ul>
+                    <li>Выставление риска <strong>Нет</strong></li>
+                    <li>Минимальный депозит<br/><strong>Нет требований</strong></li>
+                    <li>Рекомендуемый депозит<br/><strong>Нет рекомендаций</strong></li>
+                    <li><strong>ТФ-H1</strong></li>
+                    <li>Рекомендуемые<br/> валютные пары<br/><strong>EURUSD, GBPUSD</strong></li>
+                </ul>
+                <a class="signup" href="@Url.Action("TradingSystemOrder", "PersonalCabinet", new { id = 1 })">Подробнее</a>         
+            </div >
+            <div class="plan plan2">
+                <div class="price-header two-line">Garanted Profit</div>
+                <div class="price">33,7% - 196,4%</div>
+                <div class="monthly">В год</div>  
+                <ul>
+                    <li>Выставление риска <strong>Есть</strong></li>
+                    <li>Минимальный депозит<br/><strong>100$</strong></li>
+                    <li>Рекомендуемый депозит<br/><strong>10.000$</strong></li>
+                    <li><strong>ТФ-М15</strong></li>
+                    <li>Рекомендуемые<br/> валютные пары<br/><strong>EURUSD, GBPUSD</strong></li>
+                </ul>
+                <a class="signup" href="@Url.Action("GarantedProfit", "Home")">Подробнее</a>            
+            </div>
+            <div class="plan plan3 popular-plan">
+                <div class="price-header">Max trade</div>
+                <div class="price">48,9% - 1008,5%</div>
+                <div class="monthly">В год</div>
+                <ul>
+                    <li>Выставление риска <strong>Есть</strong></li>
+                    <li>Минимальный депозит<br/><strong>1000$</strong></li>
+                    <li>Рекомендуемый депозит<br/><strong>10.000$</strong></li>
+                    <li><strong>ТФ-М15</strong></li>
+                    <li>Рекомендуемые<br/> валютные пары<br/><strong>EURUSD, GBPUSD, AUDUSD, USDCAD, USDCHF</strong></li>
+                </ul>
+                <a class="signup" href="@Url.Action("MaxTrade", "Home")">Подробнее</a>        
+            </div>	
+        </div>
+        <h3>Схема работы. Видео инструкция:</h3>
+            <div class="gal">
+                <a class="various fancybox.iframe" title="Шаг №1. Регистрация на Broccoli-Trade" href="http://www.youtube.com/embed/bivoKhBFAs0?fs=1&amp;vq=hd720;autoplay=1;rel=0"><img src="@Url.Content("~/Content/img/for-video/1.jpg")"></a>
+                <a class="various fancybox.iframe" title="Шаг №2. Открытие счета на ForexInn" href="http://www.youtube.com/embed/G956oyXPvTw?fs=1&amp;vq=hd720;autoplay=1;rel=0"><img src="@Url.Content("~/Content/img/for-video/2.jpg")"></a>
+                <a class="various fancybox.iframe" title="Шаг №3. Активация счета на Broccoli-Trade" href="http://www.youtube.com/embed/9vaRA195G-o?fs=1&amp;vq=hd720;autoplay=1;rel=0"><img src="@Url.Content("~/Content/img/for-video/3.jpg")"></a>
+                <a class="various fancybox.iframe" title="Шан №4. Заказ советника для торгового счета" href="http://www.youtube.com/embed/_KAU61fomhs?fs=1&amp;vq=hd720;autoplay=1;rel=0"><img src="@Url.Content("~/Content/img/for-video/4.jpg")"></a>
+                <a class="various fancybox.iframe" title="Шаг №5. Установка терминала MetaTrader" href="http://www.youtube.com/embed/y0s_AXZlXQg?fs=1&amp;vq=hd720;autoplay=1;rel=0"><img src="@Url.Content("~/Content/img/for-video/5.jpg")"></a>
+                <a class="various fancybox.iframe" title="Шаг №6. Установка и запуск советника" href="http://www.youtube.com/embed/v4i2j1WcsNo?fs=1&amp;vq=hd720;autoplay=1;rel=0"><img src="@Url.Content("~/Content/img/for-video/6.jpg")"></a>
+                <a class="various fancybox.iframe" title="Шаг №7. Открытие демо-счета" href="http://www.youtube.com/embed/StVH_JTqi7k?fs=1&amp;vq=hd720;autoplay=1;rel=0"><img src="@Url.Content("~/Content/img/for-video/7.jpg")"></a>
+                <a class="various fancybox.iframe" title="Шаг №8. Заказ советника для демо-счета" href="http://www.youtube.com/embed/xy-VBXeMW-w?fs=1&amp;vq=hd720;autoplay=1;rel=0"><img src="@Url.Content("~/Content/img/for-video/8.jpg")"></a>
+                <a class="various fancybox.iframe" title="Шаг №9. Заказ и использование VPS сервера" href="http://www.youtube.com/embed/J75OLtizYag?fs=1&amp;vq=hd720;autoplay=1;rel=0"><img src="@Url.Content("~/Content/img/for-video/10.jpg")"></a>
+            </div>
+            <span class="button">
+                <a href="@Url.Action("RegisterForm", "Account")" target="_blank"><input id="regLink" class="large" type="button" value="Регистрация" /></a>
+            </span>
+    </div>
+</div>
+<script type="text/javascript" src="@Url.Content("~/Scripts/Main/broccoli.offer.js")"></script>

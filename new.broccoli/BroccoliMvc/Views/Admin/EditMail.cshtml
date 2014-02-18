@@ -1,0 +1,86 @@
+﻿@{
+    ViewBag.Title = "Редактирование письма";
+    Layout = "~/Views/Shared/_LayoutMin.cshtml";
+}
+@model BroccoliTrade.Web.BroccoliMvc.Models.Admin.Mail
+
+<script  type="text/javascript" src="@Url.Content("~/Scripts/ckeditor/ckeditor.js")"></script>
+
+<div class="banner small">
+    <div class="action">
+        <font>Редактирование письма.</font>
+    </div>
+</div>
+
+<div class="center-content send-emails">
+    <h2>Группа @ViewBag.GroupName</h2>
+    <input class="subject" type="text" value="@Model.MailName"/>
+    <p><strong>%ИМЯ%</strong> - плейсхолдер для имени</p>
+    <textarea class="ckeditor" name="ckeditor">@Model.MailBody</textarea>
+    <span id="saveMail" class="button save-mail">
+        <a href="javascript:void(0);"><input class="large" type="button" value="Сохранить" style="margin-top: 10px;" /></a>
+    </span>
+</div>
+<script type="text/javascript"> document.SaveMail = '@Url.Action("SaveMail", "Admin")'</script>
+<script type="text/javascript">
+    jQuery(document).ready(function () {
+        CKEDITOR.replace('ckeditor', {
+            height: '500px'
+        });
+        
+        CKEDITOR.editorConfig = function( config ) {
+            // Define changes to default configuration here.
+            // For the complete reference:
+            // http://docs.ckeditor.com/#!/api/CKEDITOR.config
+
+            // The toolbar groups arrangement, optimized for two toolbar rows.
+            config.toolbarGroups = [
+                { name: 'clipboard',   groups: [ 'clipboard', 'undo' ] },
+                { name: 'editing',     groups: [ 'find', 'selection', 'spellchecker' ] },
+                { name: 'links' },
+                { name: 'insert' },
+                { name: 'forms' },
+                { name: 'tools' },
+                { name: 'document',	   groups: [ 'mode', 'document', 'doctools' ] },
+                { name: 'others' },
+                '/',
+                { name: 'basicstyles', groups: [ 'basicstyles', 'cleanup' ] },
+                { name: 'paragraph',   groups: [ 'list', 'indent', 'blocks', 'align', 'bidi' ] },
+                { name: 'styles' },
+                { name: 'colors' },
+                { name: 'about' }
+            ];
+
+            // Remove some buttons, provided by the standard plugins, which we don't
+            // need to have in the Standard(s) toolbar.
+            config.removeButtons = 'Underline,Subscript,Superscript';
+
+            // Se the most common block elements.
+            config.format_tags = 'p;h1;h2;h3;pre';
+
+            // Make dialogs simpler.
+            config.removeDialogTabs = 'image:advanced;link:advanced';
+        };
+
+        $('#saveMail').click(function () {
+            if (CKEDITOR.instances.ckeditor.getData() != "") {
+                $.ajax({
+                    url: document.SaveMail,
+                    type: 'POST',
+                    data: {
+                        id: @Model.Id,
+                        subject: $('.subject').val(),
+                        body: CKEDITOR.instances.ckeditor.getData(),
+                        groupId: @ViewBag.GroupId
+                    },
+                    success: function(data) {
+                        if (data.result) {
+                            window.location = '@Url.Action("EditMail")?mailId=' + data.mailId;
+                            alert("Успех! Не иначе:)");
+                        }
+                    }
+                });
+            }
+        });
+    });
+</script>

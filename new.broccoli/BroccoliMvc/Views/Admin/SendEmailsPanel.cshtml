@@ -1,0 +1,68 @@
+﻿@{
+    ViewBag.Title = "Рассылка писем";
+}
+
+@model BroccoliTrade.Web.BroccoliMvc.Models.Admin.MailGroupsListModel
+
+<script  type="text/javascript" src="@Url.Content("~/Scripts/Admin/emailsender.js")"></script>
+
+<div class="banner small">
+    <div class="action">
+        <font>Настройка рассылки писем</font>
+    </div>
+</div>
+
+<div class="center-content send-emails">
+    <table id="email-send-table" class="grid">
+        <thead>
+            <tr id="sort">
+                <th class="number">№</th>
+                <th class="theader">Группа пользователей</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var group in Model.GroupList)
+            {
+                <tr>
+                    <td>@group.Id</td>
+                    <td class="group">
+                        <span>&nbsp;&nbsp;&nbsp;</span>
+                        <a onclick="$(this).parent().parent().next().toggle()" class="non-selectable">@group.GroupName</a>
+                    </td>
+                </tr>
+                <tr class="snon-hovered subgrid" style="display: none;">
+                    <td colspan="2">
+                        <table class="grid">
+                            <thead>
+                                <tr>
+                                    <th class="theader">№</th>
+                                    <th class="theader">Тема</th>
+                                    <th class="body-part theader">Содержание</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var mail in group.MailList)
+                                {
+                                    <tr>
+                                        <td class="number">@mail.MailNumber</td>
+                                        <td class="name">@mail.MailName</td>
+                                        <td class="body-part">@Html.Raw(mail.MailBody)@(mail.MailBody.Length == 100 ? "..." : string.Empty)</td>
+                                        <td class="controls">
+                                            <a class="edit" href="@Url.Action("EditMail", new { mailId = mail.Id })" target="_blank" title="Редактировать"></a>
+                                            <a class="delete" onclick="deleteMail(@mail.Id, $(this));" title="Удалить"></a>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                        <a class="add-mail" href="@Url.Action("NewMail", "Admin", new { groupId = group.Id })" target="_blank" title="Добавить новое письмо">Добавить</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <span id="writeMail" class="button write-mail">
+        <a href="@Url.Action("WriteMailForm", "Admin")"><input class="large" type="button" value="Написать письмо" style="margin-top: 30px;margin-left: 30px;" /></a>
+    </span>
+</div>

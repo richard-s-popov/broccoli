@@ -1,0 +1,148 @@
+﻿@{
+    ViewBag.Title = "Broccoli Trade - Брокколи Трейд. Торговые системы. Торговые роботы. Обучение форекс. Интернет торговля. Биржи. Форекс. Форекс биржи.";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    
+}
+
+@section head {
+    <link href="@Url.Content("~/Scripts/slider/parallax.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/flexslider.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/dark.css")" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="@Url.Content("~/Scripts/slider/modernizr.custom.28468.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/slider/jquery.cslider.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/Main/index.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/slider/coda-slider.1.1.1.pack.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/slider/jquery-easing-compatibility.1.2.pack.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/slider/jquery-easing.1.2.pack.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/jquery.flexslider-min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/jquery.lwtCountdown-0.9.5.js")"></script>
+}
+
+<div id="fb-root"></div>
+<script>
+(function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/ru_RU/all.js#xfbml=1";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div id="da-slider" class="da-slider slider">
+    <div class="da-slide">
+        <div class="text">
+            <div class="da-img">
+                <img class="broccoli" src="@Url.Content("~/Content/img/broccoli.png")"/>
+            </div>
+            <h2>Здоровые инвестиции от 5 до 100% в месяц!</h2>
+            <p>
+                Выберите риск. Подходит для консервативных, уменеренных и дерзких инвесторов.
+                <br/><br/>
+                <a class="various fancybox.iframe btn" title="The Falltape" href="http://www.youtube.com/embed/J75OLtizYag?fs=1&amp;vq=hd720;autoplay=1">
+                    <span>Подробнее</span>
+                </a>
+            </p>
+        </div>
+    </div>
+	<div class="da-slide second">
+	    <div class="text">
+	        <div class="da-img">
+                <img class="broccoli" src="@Url.Content("~/Content/img/for-video/10.jpg")" onclick="$('#presentationVideo').click();"/>
+            </div>
+	        <h2>Автоматизированные торговые системы для рынка форекс.</h2>
+	        <p>
+	            Уже через год успешной торговли все ваши мечты исполнятся!
+	            <br/>
+	            <a id="presentationVideo" class="various fancybox.iframe btn" title="Презентация" href="http://www.youtube.com/embed/x_hWObWCxsA?fs=1&amp;vq=hd720;autoplay=1">
+	                <span>Подробнее</span>
+	            </a>
+	        </p>
+	    </div>
+	</div>
+	<div class="da-slide third">
+	    <div class="text">
+	        <div class="da-img">
+                <img class="broccoli" src="@Url.Content("~/Content/img/demo.png")"/>
+            </div>
+	        <h2>Демо-счет.</h2>
+	        <p>
+	            Воспользуйтесь нашим предложением, и попробуйте свои силы на демо счете не рискуая своим капиталом.
+	            <br/>
+	            <a class="btn" title="Открыть демо-счет" href="https://my.forexinn.ru/register-demo">
+	                <span>Открыть демо-счет</span>
+	            </a>
+	        </p>
+	    </div>
+	</div>
+	<nav class="da-arrows">
+		<span class="da-arrows-prev"></span>
+		<span class="da-arrows-next"></span>
+	</nav>
+</div>
+<div class="main">
+    <div class="center-content pamm">
+        <div class="panel about-forex">
+            <h4>Хотите зарабатывать от 3000$ в месяц через 3 года, инвестируя всего 10% от своего дохода?</h4>
+            <h4>Хотите умножать свой капитал в 2 раза за год и тратить на это 1 час в неделю?</h4>
+            <img style="width: 450px; margin-top: 30px; margin-left: 200px;" src="@Url.Content("~/Content/img/afbd307d72fb.jpg")" />
+        </div>
+        <div class="panel about-forex">
+            <h3>А может быть Вы уже пробовали инвестировать...</h3>
+            <p class="about-forex-text">А может быть Вы уже пробовали инвестировать и получили 20% за год вместо 120% ожидаемых? Инвестировали в форекс и терпели убытки? Это хорошо! Вы не одни! Мы тоже сталкивались с такими проблемами.<br />Вы не виноваты, к нам присылают много примеров, да Вы и сами могли сталкиваться с ними на форумах.</p>
+            <div class="comment" style="width: 480px;">
+                <strong>Владимир Зотов</strong><br /><br />
+                <p>Инвестировал в структурный продукт компании Альпари, прошло 4 месяца, продукт показал на графике 64%, когда я вкладывался было 39%, по факту на руки я получил ту же сумму с приростом 0.54% за вычетом всех комиссий.</p>
+            </div>
+            <div class="success-trader-container">
+                <h4>Но есть и успешные инвесторы</h4>
+                <div class="comment" style="width: 480px;">
+                    <strong>Анастасия Романова</strong><br /><br />
+                    <p>За 2013 год мой доход составил 89% инвестируя в памм счета, это конечно меньше чем в 2012, в котором доходность была 128.9%, но я довольна:)</p>
+                    <a href="http://vk.com/nastyarom" target="_blank">Анастасия</a>
+                </div>
+            </div>
+            <img class="first-img" src="@Url.Content("~/Content/img/3162127-empty-purse-last-coins-change.png")" />
+            @if (!HttpContext.Current.User.Identity.IsAuthenticated)
+            {
+                <span class="button">
+                    <a href="@Url.Action("RegisterForm", "Account")" target="_blank"><input id="regLink" class="large" type="button" value="Регистрация" /></a>
+                </span>
+            }
+        </div>
+        <div class="panel about-forex">
+            <h3>Что Вы получите после регистрации?</h3>
+            <p id="proof" class="about-forex-text">
+                1. Мы дадим <strong>инструменты</strong> отобранные и протестированные нашими специалистами и клиентами.<br /><br />
+                2. Мы покажем как <strong>минимизировать риски</strong> даже самые значительные как банкротство инвестиционных компаний.<br /><br />
+                3. Мы расскажем как <strong>минимизировать затраты на комиссии</strong><br />
+            </p>
+            <img id="proof-img" src="@Url.Content("~/Content/img/pamm2.png")" />
+            @if (!HttpContext.Current.User.Identity.IsAuthenticated)
+            {
+                <span class="button">
+                    <a href="@Url.Action("RegisterForm", "Account")" target="_blank"><input id="regLink" class="large" type="button" value="Регистрация" /></a>
+                </span>
+            }
+        </div>
+        <div class="panel about-forex social-comments">
+            <h3>Напишите, что вы думете:</h3>
+            <div class="social-container">
+                <!-- Put this script tag to the <head> of your page -->
+                <script type="text/javascript" src="//vk.com/js/api/openapi.js?105"></script>
+
+                <script type="text/javascript">
+                    VK.init({ apiId: 4196712, onlyWidgets: true });
+                </script>
+
+                <!-- Put this div tag to the place, where the Comments block will be -->
+                <div id="vk_comments"></div>
+                <script type="text/javascript">
+                    VK.Widgets.Comments("vk_comments", { limit: 10, width: "400", attach: false });
+                </script>
+            </div>
+            <div class="social-container">
+                <div class="fb-comments" data-href="http://broccoli-trade.ru" data-width="400" data-numposts="10" data-colorscheme="light"></div>
+            </div>
+        </div>
+    </div>
+</div>
