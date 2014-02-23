@@ -116,7 +116,9 @@
             <p id="proof" class="about-forex-text">
                 1. Мы дадим <strong>инструменты</strong> отобранные и протестированные нашими специалистами и клиентами.<br /><br />
                 2. Мы покажем как <strong>минимизировать риски</strong> даже самые значительные как банкротство инвестиционных компаний.<br /><br />
-                3. Мы расскажем как <strong>минимизировать затраты на комиссии</strong><br />
+                3. Мы расскажем как <strong>минимизировать затраты на комиссии</strong><br /><br />
+                Это реально лично для Вас, вы можете написать нам в поддержку и мы проконсультируем Вас онлайн по всем интересующим Вас вопросам.<br /><br />
+                Регистрируйтесь и узнайте как можно получать до 150% годовых при риске около 5%.<br /><br />
             </p>
             <img id="proof-img" src="@Url.Content("~/Content/img/pamm2.png")" />
             @if (!HttpContext.Current.User.Identity.IsAuthenticated)
@@ -125,6 +127,47 @@
                     <a href="@Url.Action("RegisterForm", "Account")" target="_blank"><input id="regLink" class="large" type="button" value="Регистрация" /></a>
                 </span>
             }
+        </div>
+        <div class="panel about-forex" style="height: 300px;">
+            <img class="garanted" src="@Url.Content("~/Content/img/TwoGuarantees.png")" />
+            <h4 style="margin-left: 315px;width: 565px;margin-top: 75px;">Мы гарантируем что Вы в первый месяц заработаете хотя бы по одному из инструментов минимум 2.9%.</h4>
+        </div>
+        <div class="panel about-forex">
+            <h4>Если Вы зарегистрируетесь прямо сейчас то бесплатно узнаете ещё 2 бонусных инвестиционных инструмента</h4>
+            <div id="countdown_dashboard">
+                <div class="dash months_dash">
+                    <span class="dash_title">месяцев</span>
+                    <div class="digit">0</div>
+                    <div class="digit">0</div>
+                </div>
+
+                <div class="dash days_dash">
+                    <span class="dash_title">дней</span>
+                    <div class="digit">0</div>
+                    <div class="digit">0</div>
+                </div>
+
+                <div class="dash hours_dash">
+                    <span class="dash_title">часов</span>
+                    <div class="digit">0</div>
+                    <div class="digit">0</div>
+                </div>
+
+                <div class="dash minutes_dash">
+                    <span class="dash_title">минут</span>
+                    <div class="digit">0</div>
+                    <div class="digit">0</div>
+                </div>
+
+                <div class="dash seconds_dash">
+                    <span class="dash_title">секунд</span>
+                    <div class="digit">0</div>
+                    <div class="digit">0</div>
+                </div>
+            </div>
+            <span class="button">
+                <a href="@Url.Action("RegisterForm", "Account")" target="_blank"><input id="regLink" class="large" type="button" value="Регистрация" /></a>
+            </span>
         </div>
         <div class="panel about-forex social-comments">
             <h3>Напишите, что вы думете:</h3>
