@@ -412,19 +412,12 @@ hr {
 
 .content .slider .second img {
     width: 350px;
-    margin-top: 55px;
+    margin-top: 45px;
     margin-left: 40px;
 }
 
 .content .slider .second p {
     margin-top: 30px;
-}
-
-.content .slider .second img:hover {
-    box-shadow: 0px 0px 5px rgb(133, 133, 133);
-    -webkit-box-shadow: 0px 0px 5px rgb(133, 133, 133);
-    -moz-box-shadow: 0px 0px 5px rgb(133, 133, 133);
-    cursor: pointer;
 }
 
 .content .slider .third img {

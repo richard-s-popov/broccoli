@@ -36,11 +36,11 @@
             <div class="da-img">
                 <img class="broccoli" src="@Url.Content("~/Content/img/broccoli.png")"/>
             </div>
-            <h2>Здоровые инвестиции от 5 до 100% в месяц!</h2>
+            <h2>Здоровые инвестиции от 5 до 25% в месяц!</h2>
             <p>
                 Выберите риск. Подходит для консервативных, уменеренных и дерзких инвесторов.
                 <br/><br/>
-                <a class="various fancybox.iframe btn" title="The Falltape" href="http://www.youtube.com/embed/J75OLtizYag?fs=1&amp;vq=hd720;autoplay=1">
+                <a class="various fancybox.iframe btn" title="" href="@Url.Action("RegisterForm", "Account")">
                     <span>Подробнее</span>
                 </a>
             </p>
@@ -49,15 +49,15 @@
 	<div class="da-slide second">
 	    <div class="text">
 	        <div class="da-img">
-                <img class="broccoli" src="@Url.Content("~/Content/img/for-video/10.jpg")" onclick="$('#presentationVideo').click();"/>
+                <img class="broccoli" src="@Url.Content("~/Content/img/pamm2.png")"/>
             </div>
-	        <h2>Автоматизированные торговые системы для рынка форекс.</h2>
+	        <h2>Риски сведены к минимуму.</h2>
 	        <p>
-	            Уже через год успешной торговли все ваши мечты исполнятся!
-	            <br/>
-	            <a id="presentationVideo" class="various fancybox.iframe btn" title="Презентация" href="http://www.youtube.com/embed/x_hWObWCxsA?fs=1&amp;vq=hd720;autoplay=1">
-	                <span>Подробнее</span>
-	            </a>
+                Мы даём пошаговую стратегию диверсификации!
+	            <br/><br />
+                <a id="presentationVideo" class="various fancybox.iframe btn" title="" href="@Url.Action("RegisterForm", "Account")">
+                    <span>Подробнее</span>
+                </a>
 	        </p>
 	    </div>
 	</div>
@@ -68,10 +68,10 @@
             </div>
 	        <h2>Демо-счет.</h2>
 	        <p>
-	            Воспользуйтесь нашим предложением, и попробуйте свои силы на демо счете не рискуая своим капиталом.
+	            Воспользуйтесь нашим предложением и попробуйте свои силы на демо счете, не рискуая своим капиталом.
 	            <br/>
-	            <a class="btn" title="Открыть демо-счет" href="https://my.forexinn.ru/register-demo">
-	                <span>Открыть демо-счет</span>
+	            <a class="btn" title="Открыть демо-счет" href="">
+	                <span>Подробнее</span>
 	            </a>
 	        </p>
 	    </div>
@@ -107,7 +107,7 @@
             @if (!HttpContext.Current.User.Identity.IsAuthenticated)
             {
                 <span class="button">
-                    <a href="@Url.Action("RegisterForm", "Account")" target="_blank"><input id="regLink" class="large" type="button" value="Регистрация" /></a>
+                    <a href="@Url.Action("RegisterForm", "Account")"><input id="regLink" class="large" type="button" value="Регистрация" /></a>
                 </span>
             }
         </div>
@@ -124,7 +124,7 @@
             @if (!HttpContext.Current.User.Identity.IsAuthenticated)
             {
                 <span class="button">
-                    <a href="@Url.Action("RegisterForm", "Account")" target="_blank"><input id="regLink" class="large" type="button" value="Регистрация" /></a>
+                    <a href="@Url.Action("RegisterForm", "Account")"><input id="regLink" class="large" type="button" value="Регистрация" /></a>
                 </span>
             }
         </div>
@@ -166,7 +166,7 @@
                 </div>
             </div>
             <span class="button">
-                <a href="@Url.Action("RegisterForm", "Account")" target="_blank"><input id="regLink" class="large" type="button" value="Регистрация" /></a>
+                <a href="@Url.Action("RegisterForm", "Account")"><input id="regLink" class="large" type="button" value="Регистрация" /></a>
             </span>
         </div>
         <div class="panel about-forex social-comments">

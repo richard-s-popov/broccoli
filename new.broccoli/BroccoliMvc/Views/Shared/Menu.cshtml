@@ -6,13 +6,9 @@
         {
             <td id="adminPage" class="item" onclick="window.location = '@Url.Action("Index", "Admin")'">Администрирование</td>
         }
-        <td id="commentsPage" class="item" onclick="window.location = '@Url.Action("Comments", "Home")'">Отзывы</td>
+        @*<td id="commentsPage" class="item" onclick="window.location = '@Url.Action("Comments", "Home")'">Отзывы</td>*@
         @if (HttpContext.Current.User.Identity.IsAuthenticated)
         {
-            if (HttpContext.Current.User.IsUserInRole("Admin"))
-            {
-                <td id="pamm" class="item" onclick="window.location = '@Url.Action("PAMM", "Home")'">ПАММы</td>
-            }
             <td id="personalCabinetPage" class="item" onclick="window.location = '@Url.Action("Index", "PersonalCabinet")'">Личный кабинет</td>
             <td class="item last" onclick="window.location = '@Url.Action("Logout", "Account")'">Выход</td>
         }
