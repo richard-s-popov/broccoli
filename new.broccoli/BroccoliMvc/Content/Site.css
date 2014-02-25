@@ -98,7 +98,7 @@ h6 {
 }
 
 p {
-    font-size: 13px;
+    font-size: 15px;
 }
 
 body a  {color: #272727; cursor: pointer; text-decoration:underline;font-size:13px;}
@@ -1720,7 +1720,7 @@ footer#main{
 
 .center-content .about-forex .about-forex-text {
     margin-top: 20px;
-    line-height: 1.5;
+    line-height: 1.4;
     width: 500px;
     text-align: justify;
     color: rgb(77, 77, 77);
@@ -2827,4 +2827,123 @@ footer#main{
 .mrg-top-bottom20 {
     margin-top: 20px;
     margin-bottom: 20px;
+}
+
+.about-brokers > div {
+    width: 430px; 
+    display: inline-block;
+    padding-top: 30px;
+    vertical-align: top;
+}
+
+.about-brokers .left {
+    margin-right: 30px;
+}
+
+.about-brokers div p {
+    line-height: 1.4;
+    color: rgb(77, 77, 77);
+    margin-top: 10px;
+}
+
+.pamm-offer {
+    margin-top: 70px;
+    margin-bottom: 50px;
+}
+
+.pamm-offer-table {
+    width: 100%;
+}
+
+.pamm-offer-table thead td {
+    text-align: center;
+    padding: 8px;
+}
+
+.pamm-offer-table thead td .name {
+    font-family: 'Open Sans',Arial,Helvetica,sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #363D47;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.pamm-offer-table thead td .description {
+    font-size: 14px;
+    color: #363D47;
+    margin-top: 3px;    
+    margin-bottom: 20px;
+}
+
+.pamm-offer-table thead td .help-description {
+    font-size: 12px;
+    color: #363D47;
+}
+
+.pamm-offer-table thead td .ui-spinner {
+    width: 120px;
+    display: block;
+    margin: 5px auto;
+}
+
+.pamm-offer-table tbody td {
+    height: 100px;
+    padding: 10px;
+    background-color: #F4F5F7;
+    border: 2px solid white;
+    text-align:center;
+    /*border-left: 15px solid white;
+    border-right: 15px solid white;*/
+}
+
+.pamm-offer-table tbody td .summ {
+    text-align: center;
+    font-size: 18px;
+}
+
+.pamm-offer-table tbody td .summ .percent {
+    color: rgb(151, 151, 151);
+}
+
+.pamm-offer-table tbody td .help-description {
+    font-size: 12px;
+    color: #363D47;
+    text-align:center;
+    margin-bottom: 5px;
+}
+
+.pamm-offer-table tbody td .description {
+    font-size: 12px;
+    color: #363D47;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.pamm-offer-table td {
+    /*border: 1px dashed black;*/
+    width: 25%;
+}
+
+.pamm-offer-table tr td.broker-column {
+    width: 20%;
+    background-color: #FFFFFF;
+    border: none;
+}
+
+.pamm-offer-table tr td.broker-column img {
+    width: 135px;
+    margin: 10px auto;
+    display: block;
+}
+
+.pamm-offer-table tr td.broker-column a {
+    text-align: center;
+    width: 100%;
+    display: block;
+}
+
+.pamm-offer-table .money {
+    border: none;
+    width: 160px;
 }
