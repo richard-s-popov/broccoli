@@ -29,7 +29,7 @@
             <div class="left">
                 <h3>Существует несколько типов риска.</h3>
                 <p>1. <strong>Риск просадки</strong> - когда один трейдер или инвестиционный инструмент получает отрицательную доходность, доход других инструментов перекрывает его и в в целом за расчётный период Вы получаете положительную доходность.</p>
-                <p>2. Риск того что <strong>компания обонкротится</strong> и не вернёт деньги на счетах. Мы рекомендуем инвестировать в одну компанию не более 25% от всех Ваших денег, таким образом Вы за 2-4 месяца полностью покроете такой риск за счёт диверсификации, если такой случай наступит.</p>
+                <p>2. Риск того что <strong>компания обонкротится</strong> и не вернёт деньги на счетах. Мы рекомендуем инвестировать в одну компанию не более 25% от всех Ваших денег, таким образом Вы за 2-4 месяца полностью покроете этот риск за счёт диверсификации, если такой случай наступит.</p>
                 <p>3. <strong>Валютный риск</strong> курс доллара постоянно меняется и как показали последние несколько лет в долгосрочной перспективе он растёт. Команда Broccoli-trade рекомендует инвестировать средства минимум на 3 месяца.</p>
             </div>
             <div>
@@ -49,19 +49,19 @@
                             <div class="name">Small</div>
                             <div class="description">от 100$ до 1500$</div>
                             <input id="small" class="money" value="1000" type="text" />
-                            <div class="help-description">Введите сумму, которую Вы хотите инвестировать</div>
+                            <div class="help-description">Введите сумму в $, которую Вы хотите инвестировать</div>
                         </td>
                         <td class="medium-container">
                             <div class="name">Medium</div>
                             <div class="description">от 1500$ до 3000$</div>
                             <input id="medium" class="money" value="2000" type="text" />
-                            <div class="help-description">Введите сумму, которую Вы хотите инвестировать</div>
+                            <div class="help-description">Введите сумму в $, которую Вы хотите инвестировать</div>
                         </td>
                         <td class="large-container">
                             <div class="name">Large</div>
                             <div class="description">от 3000$</div>
                             <input id="large" class="money" value="5000" type="text" />
-                            <div class="help-description">Введите сумму, которую Вы хотите инвестировать</div>
+                            <div class="help-description">Введите сумму в $, которую Вы хотите инвестировать</div>
                         </td>
                     </tr>
                 </thead>
@@ -69,85 +69,128 @@
                     <tr>
                         <td class="broker-column">
                             <img src="@Url.Content("~/Content/img/broker-logo.png")" />
-                            <a href="http://www.forexinn.ru/register/a/broccoli">Открыть ПАММ-счет</a>
+                            <a target="_blank" href="http://www.forexinn.ru/register/a/broccoli">Открыть счет</a>
                         </td>
                         <td>
                             <div class="help-description">Рекомендуем инвестировать:</div>
                             <div id="small-forexinn" class="summ"></div>
+                            <div class="trader-summ">
+                                <a href="http://www.forexinn.ru/register/a/broccoli" target="_blank" class="trader">Накопительный</a>
+                                <span id="small-forexinn-1"></span>
+                            </div>
                         </td>
                         <td>
                             <div class="help-description">Рекомендуем инвестировать:</div>
                             <div id="medium-forexinn" class="summ"></div>
+                            <div class="trader-summ">
+                                <a href="http://www.forexinn.ru/register/a/broccoli" target="_blank" class="trader">Накопительный</a>
+                                <span id="medium-forexinn-1"></span>
+                            </div>
                         </td>
                         <td>
                             <div class="help-description">Рекомендуем инвестировать:</div>
                             <div id="large-forexinn" class="summ"></div>
+                            <div class="trader-summ">
+                                <a href="http://www.forexinn.ru/register/a/broccoli" target="_blank" class="trader">Накопительный</a>
+                                <span id="large-forexinn-1"></span>
+                            </div>
                         </td>
                     </tr>
                     <tr>
                         <td class="broker-column">
                             <img src="@Url.Content("~/Content/img/2_30.jpg")" />
-                            <a href="http://fx-trend.com/new/home?agent=588607">Открыть ПАММ-счет</a>
+                            <a target="_blank" href="http://fx-trend.com/new/home?agent=588607">Открыть счет</a>
                         </td>
                         <td>
-                            @*<div class="help-description">Рекомендуем инвестировать:</div>*@
+                            <div class="help-description">Рекомендуем инвестировать:</div>
                             <div id="small-fxtrend" class="summ"></div>
+                            <div class="trader-summ">
+                                <a href="http://fx-trend.com/pamm/520050?agent=588607" target="_blank" class="trader">votfx</a>
+                                <span id="small-fxtrend-1"></span>
+                            </div>
                         </td>
                         <td>
                             <div class="help-description">Рекомендуем инвестировать:</div>
                             <div id="medium-fxtrend" class="summ"></div>
-                            <div class="description">
-                                Sven - минимум 200$<br />
-                                Votfx - минимум 100$
+                            <div class="trader-summ">
+                                <a href="http://fx-trend.com/pamm/7031?agent=588607" target="_blank" class="trader">Sven</a>
+                                <span id="medium-fxtrend-1"></span>
+                            </div>
+                            <div class="trader-summ">
+                                <a href="http://fx-trend.com/pamm/520050?agent=588607" target="_blank" class="trader">votfx</a>
+                                <span id="medium-fxtrend-2"></span>
                             </div>
                         </td>
                         <td>
                             <div class="help-description">Рекомендуем инвестировать:</div>
                             <div id="large-fxtrend" class="summ"></div>
+                            <div class="trader-summ">
+                                <a href="http://fx-trend.com/pamm/7031?agent=588607" target="_blank" class="trader">Sven</a>
+                                <span id="large-fxtrend-1"></span>
+                            </div>
+                            <div class="trader-summ">
+                                <a href="http://fx-trend.com/pamm/520050?agent=588607" target="_blank" class="trader">votfx</a>
+                                <span id="large-fxtrend-2"></span>
+                            </div>
                         </td>
                     </tr>
                     <tr>
                         <td class="broker-column">
                             <img src="@Url.Content("~/Content/img/mmcis-logo.png")" />
-                            <a href="https://ru.forex-mmcis.com/index_top_promo.html?ref=118253">Открыть ПАММ-счет</a>
+                            <a target="_blank" href="https://ru.forex-mmcis.com/index_top_promo.html?ref=118253">Открыть счет</a>
                         </td>
                         <td>
                             <div class="help-description">Рекомендуем инвестировать:</div>
                             <div id="small-mmcis" class="summ"></div>
+                            <div class="trader-summ">
+                                <a href="https://ru.forex-mmcis.com/index_top_promo.html?ref=118253" target="_blank" class="trader">Index top 20</a>
+                                <span id="small-mmcis-1"></span>
+                            </div>
                         </td>
                         <td>
                             <div class="help-description">Рекомендуем инвестировать:</div>
                             <div id="medium-mmcis" class="summ"></div>
+                            <div class="trader-summ">
+                                <a href="https://ru.forex-mmcis.com/index_top_promo.html?ref=118253" target="_blank" class="trader">Index top 20</a>
+                                <span id="medium-mmcis-1"></span>
+                            </div>
                         </td>
                         <td>
                             <div class="help-description">Рекомендуем инвестировать:</div>
                             <div id="large-mmcis" class="summ"></div>
+                            <div class="trader-summ">
+                                <a href="https://ru.forex-mmcis.com/index_top_promo.html?ref=118253" target="_blank" class="trader">Index top 20</a>
+                                <span id="large-mmcis-1"></span>
+                            </div>
                         </td>
                     </tr>
                     <tr>
                         <td class="broker-column">
                             <img src="@Url.Content("~/Content/img/panteon_logo.jpg")" />
-                            <a href="http://panteon-finance.com/newMember/7138.html">Открыть ПАММ-счет</a>
+                            <a target="_blank" href="http://panteon-finance.com/newMember/7138.html">Открыть ПАММ-счет</a>
                         </td>
                         <td>
                             <div class="help-description">Рекомендуем инвестировать:</div>
                             <div id="small-panteon" class="summ"></div>
-                            <div class="description">
-                                Stable
+                            <div class="trader-summ">
+                                <a href="http://panteon-finance.com/fundsTo/to2_119.html" target="_blank" class="trader">Stable 30</a>
+                                <span id="small-panteon-1"></span>
                             </div>
                         </td>
                         <td>
                             <div class="help-description">Рекомендуем инвестировать:</div>
                             <div id="medium-panteon" class="summ"></div>
-                            <div class="description">
-                                Stable
+                            <div class="trader-summ">
+                                <a href="http://panteon-finance.com/fundsTo/to2_119.html" target="_blank" class="trader">Stable 30</a>
+                                <span id="medium-panteon-1"></span>
                             </div>
                         </td>
                         <td>
                             <div class="help-description">Рекомендуем инвестировать:</div>
                             <div id="large-panteon" class="summ"></div>
-                            <div class="description">
-                                Stable
+                            <div class="trader-summ">
+                                <a href="http://panteon-finance.com/fundsTo/to2_119.html" target="_blank" class="trader">Stable 30</a>
+                                <span id="large-panteon-1"></span>
                             </div>
                         </td>
                     </tr>
@@ -155,7 +198,7 @@
             </table>
         </div>
 
-        <h4>Если Вы планируете проинвестировать от 1 миллиона рублей, пожалуйста, свяжитесь с нами через службу поддержки или форму обратной связи и мы предоставим Вам особые условия инвестирования.</h4>
+        <h4>Если Вы планируете проинвестировать от 20 000$, пожалуйста, свяжитесь с нами через службу поддержки или форму обратной связи и мы предоставим Вам особые условия инвестирования.</h4>
     </div>
 </div>
 
@@ -240,26 +283,50 @@
     {
         var value = $('#small').spinner('value');
 
-        $('#small-forexinn').html(Math.round(value * 0.33) + '$ <span class="percent">(33%)</span>');
-        $('#small-mmcis').html(Math.round(value * 0.33) + '$ <span class="percent">(33%)</span>');
-        $('#small-panteon').html(Math.round(value * 0.33) + '$ <span class="percent">(33%)</span>');
+        $('#small-forexinn').html(Math.round(value * 0.25) + '$');
+        $('#small-forexinn-1').html(Math.round(value * 0.25) + '$ <span class="percent">(25%)</span>');
+
+        $('#small-fxtrend').html(Math.round(value * 0.25) + '$');
+        $('#small-fxtrend-1').html(Math.round(value * 0.25) + '$ <span class="percent">(25%)</span>');
+
+        $('#small-mmcis').html(Math.round(value * 0.25) + '$');
+        $('#small-mmcis-1').html(Math.round(value * 0.25) + '$ <span class="percent">(25%)</span>');
+
+        $('#small-panteon').html(Math.round(value * 0.25) + '$');
+        $('#small-panteon-1').html(Math.round(value * 0.25) + '$ <span class="percent">(25%)</span>');
     }
 
     function CalcMedium() {
         var value = $('#medium').spinner('value');
 
-        $('#medium-forexinn').html(Math.round(value * 0.25) + '$ <span class="percent">(25%)</span>');
-        $('#medium-fxtrend').html(Math.round(value * 0.25) + '$ <span class="percent">(25%)</span>');
-        $('#medium-mmcis').html(Math.round(value * 0.25) + '$ <span class="percent">(25%)</span>');
-        $('#medium-panteon').html(Math.round(value * 0.25) + '$ <span class="percent">(25%)</span>');
+        $('#medium-forexinn').html(Math.round(value * 0.25) + '$');
+        $('#medium-forexinn-1').html(Math.round(value * 0.25) + '$ <span class="percent">(25%)</span>');
+
+        $('#medium-fxtrend').html(Math.round(value * 0.25) + '$');
+        $('#medium-fxtrend-1').html(Math.round(value * 0.125) + '$ <span class="percent">(12.5%)</span>');
+        $('#medium-fxtrend-2').html(Math.round(value * 0.125) + '$ <span class="percent">(12.5%)</span>');
+
+        $('#medium-mmcis').html(Math.round(value * 0.25) + '$');
+        $('#medium-mmcis-1').html(Math.round(value * 0.25) + '$ <span class="percent">(25%)</span>');
+
+        $('#medium-panteon').html(Math.round(value * 0.25) + '$');
+        $('#medium-panteon-1').html(Math.round(value * 0.25) + '$ <span class="percent">(25%)</span>');
     }
 
     function CalcLarge() {
         var value = $('#large').spinner('value');
 
-        $('#large-forexinn').html(Math.round(value * 0.25) + '$ <span class="percent">(25%)</span>');
-        $('#large-fxtrend').html(Math.round(value * 0.35) + '$ <span class="percent">(35%)</span>');
-        $('#large-mmcis').html(Math.round(value * 0.15) + '$ <span class="percent">(15%)</span>');
-        $('#large-panteon').html(Math.round(value * 0.25) + '$ <span class="percent">(25%)</span>');
+        $('#large-forexinn').html(Math.round(value * 0.25) + '$');
+        $('#large-forexinn-1').html(Math.round(value * 0.25) + '$ <span class="percent">(25%)</span>');
+
+        $('#large-fxtrend').html(Math.round(value * 0.35) + '$');
+        $('#large-fxtrend-1').html(Math.round(value * 0.175) + '$ <span class="percent">(17.5%)</span>');
+        $('#large-fxtrend-2').html(Math.round(value * 0.175) + '$ <span class="percent">(17.5%)</span>');
+
+        $('#large-mmcis').html(Math.round(value * 0.15) + '$');
+        $('#large-mmcis-1').html(Math.round(value * 0.15) + '$ <span class="percent">(15%)</span>');
+
+        $('#large-panteon').html(Math.round(value * 0.25) + '$');
+        $('#large-panteon-1').html(Math.round(value * 0.25) + '$ <span class="percent">(25%)</span>');
     }
 </script>
