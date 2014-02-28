@@ -41,12 +41,12 @@ namespace BroccoliTrade.Web.BroccoliMvc
                 };
             compilationThread.Start();
 
-            var mailSenderThread = new Thread(FunctionMailSernderTimer)
-                {
-                    IsBackground = true,
-                    Name = "FunctionMailSernderTimer"
-                };
-            mailSenderThread.Start();
+            //var mailSenderThread = new Thread(FunctionMailSernderTimer)
+            //    {
+            //        IsBackground = true,
+            //        Name = "FunctionMailSernderTimer"
+            //    };
+            //mailSenderThread.Start();
 
             var accountCountWorkerThread = new Thread(FunctionAccountCountWorkerTimer)
             {
