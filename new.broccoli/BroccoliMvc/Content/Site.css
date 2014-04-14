@@ -1645,8 +1645,39 @@ footer#main{
 }
 
 .center-content .about-forex {
-    padding-top: 40px;
+    padding-top: 20px;
     position: relative;
+}
+
+.center-content .about-forex .column-text {
+    width: 100%;
+}
+
+.center-content .about-forex .column-text .devider {
+    width: 2%;
+}
+
+.center-content .about-forex .list {
+    line-height: 1.4;
+    color: rgb(77, 77, 77);
+    padding-top: 10px;
+    font-size: 15px;
+}
+
+.center-content .about-forex p {
+    line-height: 1.4;
+    color: rgb(77, 77, 77);
+    padding-top: 10px;
+    font-size: 15px;
+}
+
+.center-content .about-forex .column-text td {
+    width: 49%;
+    line-height: 1.4;
+    color: rgb(77, 77, 77);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 15px;
 }
 
 .center-content .about-forex .comment {
