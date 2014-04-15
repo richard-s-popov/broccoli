@@ -2171,6 +2171,12 @@ footer#main{
     margin-right: auto;
 }
 
+.broker-description {
+    line-height: 1.4;
+    color: rgb(77, 77, 77);
+    font-size: 15px;
+}
+
 .broker-info .broker img {
     position: absolute;
     margin-left: 100px;
