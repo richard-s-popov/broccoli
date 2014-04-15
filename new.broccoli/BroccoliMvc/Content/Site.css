@@ -2205,7 +2205,7 @@ footer#main{
 .broker-info .about-broker-container img {
     position: absolute;
     right: 0;
-    top: 60px;
+    top: 50px;
     width: 400px;
 }
 
@@ -2215,7 +2215,7 @@ footer#main{
 }
 
 .broker-info .about-broker {
-    font-size: 16px;
+    font-size: 15px;
     width: 450px;
 }
 
