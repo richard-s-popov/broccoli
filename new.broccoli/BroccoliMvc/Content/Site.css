@@ -629,6 +629,7 @@ hr {
 .footer .footer-content {
     width: 917px;
     margin: 30px auto;
+    margin-bottom: 0;
 }
 
 .footer .footer-content .links-container li {
