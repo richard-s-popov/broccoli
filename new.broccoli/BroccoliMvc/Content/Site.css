@@ -2925,13 +2925,16 @@ footer#main{
 }
 
 .pamm-offer-table tbody td {
-    height: 100px;
+    height: 60px;
     padding: 10px;
     background-color: #F4F5F7;
     border: 2px solid white;
     text-align:center;
     /*border-left: 15px solid white;
     border-right: 15px solid white;*/
+    vertical-align: top;
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 
 .pamm-offer-table tbody td .summ {
@@ -2972,6 +2975,7 @@ footer#main{
     width: 20%;
     background-color: #FFFFFF;
     border: none;
+    padding: 10px;
 }
 
 .pamm-offer-table tr td.broker-column img {
