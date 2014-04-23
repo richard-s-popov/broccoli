@@ -734,19 +734,166 @@
     }
 
     function CalcLarge() {
+        var jborn = 0;
+        var leventa = 0;
+        var hozyin = 0;
+        var votfx = 0;
+        var indextop20 = 0;
+        var stable30 = 0;
+        var investobolin = 0;
+        var sven = 0;
+        var otmar = 0;
+        var nakopitelny = 0;
+
         var value = $('#large').spinner('value');
 
-        $('#large-forexinn').html(Math.round(value * 0.25) + '$');
-        $('#large-forexinn-1').html(Math.round(value * 0.25) + '$ <span class="percent">(25%)</span>');
+        if (value >= 3000 && value < 4000) {
+            otmar = 16.6;
+            indextop20 = 12.7;
+            votfx = 12.7;
+            hozyin = 12.7;
+            stable30 = 12.7;
+            jborn = 12.7;
+            sven = 6.6;
+            investobolin = 12.7;
+        }
 
-        $('#large-fxtrend').html(Math.round(value * 0.35) + '$');
-        $('#large-fxtrend-1').html(Math.round(value * 0.175) + '$ <span class="percent">(17.5%)</span>');
-        $('#large-fxtrend-2').html(Math.round(value * 0.175) + '$ <span class="percent">(17.5%)</span>');
+        if (value >= 4000 && value < 10000) {
+            nakopitelny = 5;
+            sven = 5;
+            otmar = 12.5;
+            votfx = 11.0714;
+            hozyin = 11.0714;
+            jborn = 11.0714;
+            investobolin = 11.0714;
+            leventa = 11.0714;
+            indextop20 = 11.0714;
+            stable30 = 11.0714;
+        }
 
-        $('#large-mmcis').html(Math.round(value * 0.15) + '$');
-        $('#large-mmcis-1').html(Math.round(value * 0.15) + '$ <span class="percent">(15%)</span>');
+        if (value >= 10000) {
+            nakopitelny = 10;
+            sven = 10;
+            otmar = 10;
+            votfx = 10;
+            hozyin = 10;
+            jborn = 10;
+            investobolin = 10;
+            leventa = 10;
+            indextop20 = 10;
+            stable30 = 10;
+        }
 
-        $('#large-panteon').html(Math.round(value * 0.25) + '$');
-        $('#large-panteon-1').html(Math.round(value * 0.25) + '$ <span class="percent">(25%)</span>');
+        // fxtrend
+        if (jborn + leventa + hozyin + votfx + investobolin + sven + otmar > 0) {
+            $('#large-fxtrend').html(Math.round(value * (jborn + leventa + hozyin + votfx + investobolin + sven + otmar) * 0.01) + '$');
+        }
+        else {
+            $('#large-fxtrend').html('—');
+        }
+
+        if (jborn != 0) {
+            $('#large-fxtrend-1').html(Math.round(value * jborn * 0.01) + '$ <span class="percent">(' + jborn.toFixed(2) + '%)</span>');
+            $('#large-fxtrend-1').parent().show();
+        }
+        else {
+            $('#large-fxtrend-1').parent().hide();
+        }
+
+        if (leventa != 0) {
+            $('#large-fxtrend-2').html(Math.round(value * leventa * 0.01) + '$ <span class="percent">(' + leventa.toFixed(2) + '%)</span>');
+            $('#large-fxtrend-2').parent().show();
+        }
+        else {
+            $('#large-fxtrend-2').parent().hide();
+        }
+
+        if (hozyin != 0) {
+            $('#large-fxtrend-3').html(Math.round(value * hozyin * 0.01) + '$ <span class="percent">(' + hozyin.toFixed(2) + '%)</span>');
+            $('#large-fxtrend-3').parent().show();
+        }
+        else {
+            $('#large-fxtrend-3').parent().hide();
+        }
+
+        if (votfx != 0) {
+            $('#large-fxtrend-4').html(Math.round(value * votfx * 0.01) + '$ <span class="percent">(' + votfx.toFixed(2) + '%)</span>');
+            $('#large-fxtrend-4').parent().show();
+        }
+        else {
+            $('#large-fxtrend-4').parent().hide();
+        }
+
+        if (investobolin != 0) {
+            $('#large-fxtrend-5').html(Math.round(value * investobolin * 0.01) + '$ <span class="percent">(' + investobolin.toFixed(2) + '%)</span>');
+            $('#large-fxtrend-5').parent().show();
+        }
+        else {
+            $('#large-fxtrend-5').parent().hide();
+        }
+
+        if (sven != 0) {
+            $('#large-fxtrend-6').html(Math.round(value * sven * 0.01) + '$ <span class="percent">(' + sven.toFixed(2) + '%)</span>');
+            $('#large-fxtrend-6').parent().show();
+        }
+        else {
+            $('#large-fxtrend-6').parent().hide();
+        }
+
+        if (otmar != 0) {
+            $('#large-fxtrend-7').html(Math.round(value * otmar * 0.01) + '$ <span class="percent">(' + otmar.toFixed(2) + '%)</span>');
+            $('#large-fxtrend-7').parent().show();
+        }
+        else {
+            $('#large-fxtrend-7').parent().hide();
+        }
+
+        // mmcis 
+        if (indextop20 > 0) {
+            $('#large-mmcis').html(Math.round(value * indextop20 * 0.01) + '$');
+        }
+        else {
+            $('#large-mmcis').html('—');
+        }
+
+        if (indextop20 != 0) {
+            $('#large-mmcis-1').html(Math.round(value * indextop20 * 0.01) + '$ <span class="percent">(' + indextop20.toFixed(2) + '%)</span>');
+            $('#large-mmcis-1').parent().show();
+        }
+        else {
+            $('#large-mmcis-1').parent().hide();
+        }
+
+        // panteon
+        if (stable30 > 0) {
+            $('#large-panteon').html(Math.round(value * stable30 * 0.01) + '$');
+        }
+        else {
+            $('#large-panteon').html('—');
+        }
+
+        if (stable30 != 0) {
+            $('#large-panteon-1').html(Math.round(value * stable30 * 0.01) + '$ <span class="percent">(' + stable30.toFixed(2) + '%)</span>');
+            $('#large-panteon-1').parent().show();
+        }
+        else {
+            $('#large-panteon-1').parent().hide();
+        }
+
+        // forexinn
+        if (nakopitelny > 0) {
+            $('#large-forexinn').html(Math.round(value * nakopitelny * 0.01) + '$');
+        }
+        else {
+            $('#large-forexinn').html('—');
+        }
+
+        if (nakopitelny != 0) {
+            $('#large-forexinn-1').html(Math.round(value * nakopitelny * 0.01) + '$ <span class="percent">(' + nakopitelny.toFixed(2) + '%)</span>');
+            $('#large-forexinn-1').parent().show();
+        }
+        else {
+            $('#large-forexinn-1').parent().hide();
+        }
     }
 </script>
