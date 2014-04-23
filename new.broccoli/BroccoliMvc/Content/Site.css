@@ -2948,6 +2948,12 @@ footer#main{
     font-size: 12px;
 }
 
+.pamm-offer-table tbody td .trader-remark {
+    margin-top: 10px;
+    font-size: 11px;
+    color: rgb(134, 134, 134);
+}
+
 .pamm-offer-table tbody td .summ .percent {
     color: rgb(151, 151, 151);
 }
