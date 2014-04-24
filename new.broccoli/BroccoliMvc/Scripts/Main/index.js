@@ -13,17 +13,17 @@
     
     $('#indexPage').hide();
     
-    $(".various").fancybox({
-        maxWidth: 1000,
-        maxHeight: 900,
-        fitToView: false,
-        width: '100%',
-        height: '80%',
-        autoSize: true,
-        closeClick: false,
-        openEffect: 'elastic',
-        closeEffect: 'none'
-    });
+    //$(".various").fancybox({
+    //    maxWidth: 1000,
+    //    maxHeight: 900,
+    //    fitToView: false,
+    //    width: '100%',
+    //    height: '80%',
+    //    autoSize: true,
+    //    closeClick: false,
+    //    openEffect: 'elastic',
+    //    closeEffect: 'none'
+    //});
 
     //setInterval(function () {
     //    if (!$('.banner').is(':hover')) {
