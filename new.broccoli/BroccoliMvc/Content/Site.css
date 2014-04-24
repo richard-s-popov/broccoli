@@ -2903,7 +2903,7 @@ footer#main{
     margin-bottom: 50px;
 }
 
-.pamm-offer h3 {
+.pamm-offer > h3 {
     margin-bottom: 20px;
     text-align: center;
     margin-left: 195px;
@@ -2921,6 +2921,11 @@ footer#main{
 
 .pamm-offer h3 a:hover {
     border-bottom: 1px dashed #fff;
+}
+
+.pamm-offer .instruction-container {
+    margin-left: 193px;
+    margin-top: 20px;
 }
 
 .pamm-offer-table {
