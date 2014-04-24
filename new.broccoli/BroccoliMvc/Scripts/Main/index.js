@@ -51,11 +51,6 @@
 
 function PammTable()
 {
-    $('.blur').blurjs({
-        source: 'body',
-        radius: 10
-    });
-
     $('#small').spinner({
         step: 10,
         min: 10,

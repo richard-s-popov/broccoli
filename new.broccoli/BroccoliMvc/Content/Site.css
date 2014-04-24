@@ -2933,6 +2933,11 @@ footer#main{
     position: relative;
 }
 
+.blur {
+    filter: url(filter.svg#blur); /* FF, IE10 & Opera */
+    -webkit-filter: blur(2px);
+}
+
 .pamm-offer-table thead td {
     text-align: center;
     padding: 8px;
