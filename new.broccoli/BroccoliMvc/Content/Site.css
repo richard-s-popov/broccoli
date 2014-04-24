@@ -200,14 +200,14 @@ hr {
 
 .header .green-line .logo-container img {
     position: absolute;
-    top: 25px;
+    top: 15px;
     left: 35px;
 }
 
 .header .green-line .logo-container .logo-text {
     position: absolute;
     margin-left: 132px;
-    margin-top: 32px;
+    margin-top: 20px;
     z-index: 2;
     font-family: 'GeoSlb712CMdBTBold'!important;
     color: #363636;
@@ -216,6 +216,20 @@ hr {
     z-index: 101;
     text-align: left;
     text-decoration: none;
+    line-height: 21px;
+}
+
+.header .green-line .logo-container .switch-site {
+    position: absolute;
+    top: 92px;
+    left: 37px;
+}
+
+.header .green-line .logo-container span {
+    position: absolute;
+    margin-left: 132px;
+    margin-top: 63px;
+    font-size: 14px
 }
 
 .header .gray-line {
