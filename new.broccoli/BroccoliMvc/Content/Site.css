@@ -2930,6 +2930,7 @@ footer#main{
 
 .pamm-offer-table {
     width: 100%;
+    position: relative;
 }
 
 .pamm-offer-table thead td {

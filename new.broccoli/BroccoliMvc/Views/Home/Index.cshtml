@@ -1,85 +1,90 @@
 ﻿@{
     ViewBag.Title = "Broccoli Trade - Брокколи Трейд. Торговые системы. Торговые роботы. Обучение форекс. Интернет торговля. Биржи. Форекс. Форекс биржи.";
     Layout = "~/Views/Shared/_Layout.cshtml";
-    
+
 }
 
 @section head {
-    <link href="@Url.Content("~/Scripts/slider/parallax.css")" rel="stylesheet" type="text/css" />
-    <link href="@Url.Content("~/Content/flexslider.css")" rel="stylesheet" type="text/css" />
-    <link href="@Url.Content("~/Content/dark.css")" rel="stylesheet" type="text/css" />
-    <script type="text/javascript" src="@Url.Content("~/Scripts/slider/modernizr.custom.28468.js")"></script>
-    <script type="text/javascript" src="@Url.Content("~/Scripts/slider/jquery.cslider.js")"></script>
-    <script type="text/javascript" src="@Url.Content("~/Scripts/Main/index.js")"></script>
-    <script type="text/javascript" src="@Url.Content("~/Scripts/slider/coda-slider.1.1.1.pack.js")"></script>
-    <script type="text/javascript" src="@Url.Content("~/Scripts/slider/jquery-easing-compatibility.1.2.pack.js")"></script>
-    <script type="text/javascript" src="@Url.Content("~/Scripts/slider/jquery-easing.1.2.pack.js")"></script>
-    <script type="text/javascript" src="@Url.Content("~/Scripts/jquery.flexslider-min.js")"></script>
-    <script type="text/javascript" src="@Url.Content("~/Scripts/jquery.lwtCountdown-0.9.5.js")"></script>
-    <meta property="fb:admins" content="100002476403510" />
-    <meta property="fb:admins" content="100001451163492" />
+<link href="@Url.Content("~/Scripts/slider/parallax.css")" rel="stylesheet" type="text/css" />
+<link href="@Url.Content("~/Content/flexslider.css")" rel="stylesheet" type="text/css" />
+<link href="@Url.Content("~/Content/dark.css")" rel="stylesheet" type="text/css" />
+<link href="@Url.Content("~/Content/themes/jquery-ui/jquery-ui-1.9.2.custom.css")" rel="stylesheet" />
+<script src="@Url.Content("~/Scripts/jquery-1.7.1.min.js")" type="text/javascript"></script>
+<script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
+<script type="text/javascript" src="@Url.Content("~/Scripts/Main/calc.pamm.small.js")"></script>
+<script type="text/javascript" src="@Url.Content("~/Scripts/slider/modernizr.custom.28468.js")"></script>
+<script type="text/javascript" src="@Url.Content("~/Scripts/slider/jquery.cslider.js")"></script>
+<script type="text/javascript" src="@Url.Content("~/Scripts/Main/index.js")"></script>
+<script type="text/javascript" src="@Url.Content("~/Scripts/slider/coda-slider.1.1.1.pack.js")"></script>
+<script type="text/javascript" src="@Url.Content("~/Scripts/slider/jquery-easing-compatibility.1.2.pack.js")"></script>
+<script type="text/javascript" src="@Url.Content("~/Scripts/slider/jquery-easing.1.2.pack.js")"></script>
+<script type="text/javascript" src="@Url.Content("~/Scripts/jquery.flexslider-min.js")"></script>
+<script type="text/javascript" src="@Url.Content("~/Scripts/jquery.lwtCountdown-0.9.5.js")"></script>
+<script type="text/javascript" src="@Url.Content("~/Scripts/blur.min.js")"></script>
+<meta property="fb:admins" content="100002476403510" />
+<meta property="fb:admins" content="100001451163492" />
 }
 
 <div id="fb-root"></div>
 <script>
-(function (d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = "//connect.facebook.net/ru_RU/all.js#xfbml=1";
-    fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/ru_RU/all.js#xfbml=1";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
 
 <div id="da-slider" class="da-slider slider">
     <div class="da-slide">
         <div class="text">
             <div class="da-img">
-                <img class="broccoli" src="@Url.Content("~/Content/img/broccoli.png")"/>
+                <img class="broccoli" src="@Url.Content("~/Content/img/broccoli.png")" />
             </div>
             <h2>Здоровые инвестиции от 5 до 25% в месяц!</h2>
             <p>
                 Выберите риск. Подходит для консервативных, уменеренных и дерзких инвесторов.
-                <br/><br/>
+                <br /><br />
                 <a class="various fancybox.iframe btn" title="" href="@Url.Action("RegisterForm", "Account")">
                     <span>Подробнее</span>
                 </a>
             </p>
         </div>
     </div>
-	<div class="da-slide second">
-	    <div class="text">
-	        <div class="da-img">
-                <img class="broccoli" src="@Url.Content("~/Content/img/pamm2.png")"/>
+    <div class="da-slide second">
+        <div class="text">
+            <div class="da-img">
+                <img class="broccoli" src="@Url.Content("~/Content/img/pamm2.png")" />
             </div>
-	        <h2>Риски сведены к минимуму.</h2>
-	        <p>
+            <h2>Риски сведены к минимуму.</h2>
+            <p>
                 Мы даём пошаговую стратегию диверсификации!
-	            <br/><br />
+                <br /><br />
                 <a id="presentationVideo" class="various fancybox.iframe btn" title="" href="@Url.Action("RegisterForm", "Account")">
                     <span>Подробнее</span>
                 </a>
-	        </p>
-	    </div>
-	</div>
-	<div class="da-slide third">
-	    <div class="text">
-	        <div class="da-img">
-                <img class="broccoli" src="@Url.Content("~/Content/img/demo.png")"/>
+            </p>
+        </div>
+    </div>
+    <div class="da-slide third">
+        <div class="text">
+            <div class="da-img">
+                <img class="broccoli" src="@Url.Content("~/Content/img/demo.png")" />
             </div>
-	        <h2>Демо-счет.</h2>
-	        <p>
-	            Воспользуйтесь нашим предложением и попробуйте свои силы на демо счете, не рискуая своим капиталом.
-	            <br/>
-	            <a class="btn" title="Открыть демо-счет" href="">
-	                <span>Подробнее</span>
-	            </a>
-	        </p>
-	    </div>
-	</div>
-	<nav class="da-arrows">
-		<span class="da-arrows-prev"></span>
-		<span class="da-arrows-next"></span>
-	</nav>
+            <h2>Демо-счет.</h2>
+            <p>
+                Воспользуйтесь нашим предложением и попробуйте свои силы на демо счете, не рискуая своим капиталом.
+                <br />
+                <a class="btn" title="Открыть демо-счет" href="">
+                    <span>Подробнее</span>
+                </a>
+            </p>
+        </div>
+    </div>
+    <nav class="da-arrows">
+        <span class="da-arrows-prev"></span>
+        <span class="da-arrows-next"></span>
+    </nav>
 </div>
 <div class="main">
     <div class="center-content pamm">
@@ -95,9 +100,9 @@
 
             @if (!HttpContext.Current.User.Identity.IsAuthenticated)
             {
-                <span class="button">
-                    <a href="@Url.Action("RegisterForm", "Account")"><input id="regLink" class="large" type="button" value="Регистрация" /></a>
-                </span>
+            <span class="button">
+                <a href="@Url.Action("RegisterForm", "Account")"><input id="regLink" class="large" type="button" value="Регистрация" /></a>
+            </span>
             }
         </div>
         <div class="panel about-forex">
@@ -117,13 +122,13 @@
                     </td>
                 </tr>
             </table>
-            
+
 
             @if (!HttpContext.Current.User.Identity.IsAuthenticated)
             {
-                <span class="button">
-                    <a href="@Url.Action("RegisterForm", "Account")"><input id="regLink" class="large" type="button" value="Регистрация" /></a>
-                </span>
+            <span class="button">
+                <a href="@Url.Action("RegisterForm", "Account")"><input id="regLink" class="large" type="button" value="Регистрация" /></a>
+            </span>
             }
         </div>
         <div class="panel about-forex">
@@ -131,15 +136,15 @@
             <table class="column-text">
                 <tr>
                     <td>
-                        &emsp;&emsp;&emsp;В последние несколько лет мы применяем очень широкую диверсификацию в своих инвестициях. 
-                        Общая прибыль за последние 6 месяцев  по нашему портфелю составила 57%. Обращаем Ваше внимание: это 
-                        за 6 месяцев, при риске потере капитала в 5%. Вот что значит грамотное управление рисками и умение 
+                        &emsp;&emsp;&emsp;В последние несколько лет мы применяем очень широкую диверсификацию в своих инвестициях.
+                        Общая прибыль за последние 6 месяцев  по нашему портфелю составила 57%. Обращаем Ваше внимание: это
+                        за 6 месяцев, при риске потере капитала в 5%. Вот что значит грамотное управление рисками и умение
                         практически на ровном месте делать большую прибыль.<br />
-                        &emsp;&emsp;&emsp;Мы показываем эти результаты не для того, чтобы похвастаться, а для того, чтобы 
-                        наглядно показать тот факт, что человек, находясь в такой же ситуации, что и вы, может получить очень 
+                        &emsp;&emsp;&emsp;Мы показываем эти результаты не для того, чтобы похвастаться, а для того, чтобы
+                        наглядно показать тот факт, что человек, находясь в такой же ситуации, что и вы, может получить очень
                         хорошие результаты, достичь полной финансовой свободы и, что самое главное, сделать это быстро.<br />
                         Сейчас перед вами есть выбор из двух вариантов:<br />
-                        <strong>1.	Самостоятельно искать «иголки в стоге сена».</strong> «Иголки» – это те фишки, которые действительно работают, 
+                        <strong>1.	Самостоятельно искать «иголки в стоге сена».</strong> «Иголки» – это те фишки, которые действительно работают,
                         чтобы быстро
                     </td>
                     <td class="devider"></td>
@@ -148,7 +153,7 @@
                         <strong>2.	Второй выбор – это взять целую коллекцию «иголок» у команды профессионалов,</strong> которая уже
                         нашла их за вас, т.е. те фишки, которые действительно работают и приносят великолепные результаты
                         на практике.<br />
-                        &emsp;&emsp;&emsp;Если вы выбираете второй вариант, то представляем вам эксклюзивную возможность сформировать свой 
+                        &emsp;&emsp;&emsp;Если вы выбираете второй вариант, то представляем вам эксклюзивную возможность сформировать свой
                         первый портфель прямо сейчас.
                     </td>
                 </tr>
@@ -156,9 +161,9 @@
 
             @if (!HttpContext.Current.User.Identity.IsAuthenticated)
             {
-                <span class="button">
-                    <a href="@Url.Action("RegisterForm", "Account")"><input id="regLink" class="large" type="button" value="Регистрация" /></a>
-                </span>
+            <span class="button">
+                <a href="@Url.Action("RegisterForm", "Account")"><input id="regLink" class="large" type="button" value="Регистрация" /></a>
+            </span>
             }
         </div>
         <div class="panel about-forex">
@@ -180,70 +185,70 @@
                 этой области деятельности. На выходе вы получите четкие практически рекомендации и систему действий.<br />
                 — <strong>Также мы расскажем Вам про инвестиционные фонды:</strong> каких видов они бывают, и что
                 они могут вам дать, и как с ними нужно работать.<br />
-                — <strong>Вы получите четкие установки по работе с компаниями</strong> по управлению активами и институтами совместного 
-                инвестирования, хедж-фондами. Вы узнаете критерии выбора таких компаний, определение профессионализма 
+                — <strong>Вы получите четкие установки по работе с компаниями</strong> по управлению активами и институтами совместного
+                инвестирования, хедж-фондами. Вы узнаете критерии выбора таких компаний, определение профессионализма
                 управляющих и прогнозирование прибыли.<br />
-                — <strong>Вы узнаете очень много скрытых моментов в доверительном управлении на фондовой и валютной бирже</strong>, 
-                благодаря чему сможете значительно сократить издержки при инвестировании в этот актив, а то, что вы сэкономили, 
+                — <strong>Вы узнаете очень много скрытых моментов в доверительном управлении на фондовой и валютной бирже</strong>,
+                благодаря чему сможете значительно сократить издержки при инвестировании в этот актив, а то, что вы сэкономили,
                 вы смело можете приравнять к своему доходу.<br />
-                — <strong>Быть совладельцем или владельцем бизнеса очень модно – а еще и прибыльно</strong>. Вы осознаете, как можно 
-                развить свой крупный международный бизнес, исходя из ваших собственных интересов, руководствуясь всего лишь 
-                одним принципом. Потенциал от бизнеса всегда очень высокий. Один наш клиент только в этом направлении ежегодно 
-                зарабатывает более 1000% годовых. И это не ошибка в цифре. Это действительно так. В этом модуле будет очень 
+                — <strong>Быть совладельцем или владельцем бизнеса очень модно – а еще и прибыльно</strong>. Вы осознаете, как можно
+                развить свой крупный международный бизнес, исходя из ваших собственных интересов, руководствуясь всего лишь
+                одним принципом. Потенциал от бизнеса всегда очень высокий. Один наш клиент только в этом направлении ежегодно
+                зарабатывает более 1000% годовых. И это не ошибка в цифре. Это действительно так. В этом модуле будет очень
                 много принципов и техник, которые Вы можете применить на практике и получить большие результаты.<br />
-                — <strong>Отдельное внимание заслуживают драгоценные металлы и камни</strong>. Оказывается, не нужно быть экспертом, 
-                чтобы поднимать в этой сфере деятельности большие деньги. Именно в этом мы расскажем Вам, как Вы можете 
+                — <strong>Отдельное внимание заслуживают драгоценные металлы и камни</strong>. Оказывается, не нужно быть экспертом,
+                чтобы поднимать в этой сфере деятельности большие деньги. Именно в этом мы расскажем Вам, как Вы можете
                 достичь колоссальных высот практически на ровном месте.<br />
-                — <strong>Также мы поговорим о самостоятельной торговле на биржах</strong>. Благодаря этому способу инвестирования своих 
-                денег вы сможете сами управлять своим капиталом и контролировать риски, что очень немаловажно. Как следствие, 
+                — <strong>Также мы поговорим о самостоятельной торговле на биржах</strong>. Благодаря этому способу инвестирования своих
+                денег вы сможете сами управлять своим капиталом и контролировать риски, что очень немаловажно. Как следствие,
                 сможете получать высокие прибыли, не выходя из дома.<br />
-                — <strong>На недвижимости, оказывается, тоже можно делать 120% годовых прибыли</strong>. В одноименном разделе мы подробно 
+                — <strong>На недвижимости, оказывается, тоже можно делать 120% годовых прибыли</strong>. В одноименном разделе мы подробно
                 поговорим об этом.<br />
-                — <strong>Отдельное внимание заслуживают HYIP-фонды</strong>. Очень высокий риск всегда очень сопряжен с высокими доходами. 
-                Мы также будем рассматривать этот финансовый инструмент и инвестировать в него очень осторожно, основываясь на 
-                определенных методиках. У нас есть клиент, который на этом зарабатывает 10% в день и делает это с завидной 
+                — <strong>Отдельное внимание заслуживают HYIP-фонды</strong>. Очень высокий риск всегда очень сопряжен с высокими доходами.
+                Мы также будем рассматривать этот финансовый инструмент и инвестировать в него очень осторожно, основываясь на
+                определенных методиках. У нас есть клиент, который на этом зарабатывает 10% в день и делает это с завидной
                 регулярностью.<br />
-                — <strong>Наука</strong> – почему бы не инвестировать в нее в долгосрочной основе? В рассылке мы привели реальный пример 
-                вклада средств в разработку лекарственного препарата, и, как следствие, инвестор получил процент прибыли 
+                — <strong>Наука</strong> – почему бы не инвестировать в нее в долгосрочной основе? В рассылке мы привели реальный пример
+                вклада средств в разработку лекарственного препарата, и, как следствие, инвестор получил процент прибыли
                 фармкомпании от продажи данного препарата, а прибыль там идет на миллиарды.<br />
-                — <strong>В благотворительность также можно инвестировать</strong> с получением реальной прибыли. Совсем немногие люди знают 
-                эти секреты, и они ими очень активно пользуются, благодаря чему из года в год в несколько раз увеличивают 
+                — <strong>В благотворительность также можно инвестировать</strong> с получением реальной прибыли. Совсем немногие люди знают
+                эти секреты, и они ими очень активно пользуются, благодаря чему из года в год в несколько раз увеличивают
                 свои капиталы.
             </p>
 
             @if (!HttpContext.Current.User.Identity.IsAuthenticated)
             {
-                <span class="button">
-                    <a href="@Url.Action("RegisterForm", "Account")"><input id="regLink" class="large" type="button" value="Регистрация" /></a>
-                </span>
+            <span class="button">
+                <a href="@Url.Action("RegisterForm", "Account")"><input id="regLink" class="large" type="button" value="Регистрация" /></a>
+            </span>
             }
         </div>
         <div class="panel about-forex">
             <h4>С помощью регулярного чтения наших писем Вы сможете:</h4>
             <p>
-                • Собрать воедино все эти направления для инвестирования собственных средств в своем портфеле. В этом случае 
-                вы сможете инвестировать в более чем 150 объектов, с доходностью 70-80% годовых при риске всего лишь в 5-10%. 
+                • Собрать воедино все эти направления для инвестирования собственных средств в своем портфеле. В этом случае
+                вы сможете инвестировать в более чем 150 объектов, с доходностью 70-80% годовых при риске всего лишь в 5-10%.
                 Это уже очень серьезные показатели, которые характеризуют инвестора как большого профессионала.<br />
                 • Получить шанс наконец-то перестать терять деньги и встать на тропу стабильного успешного инвестора.<br />
-                • Забыть о стрессах и депрессиях, связанных с финансами. Вы просто будете постоянно в плюсах, даже несмотря 
+                • Забыть о стрессах и депрессиях, связанных с финансами. Вы просто будете постоянно в плюсах, даже несмотря
                 на единичные убыточные сделки в своем портфеле.<br />
-                • Быть успешным примером для близких вам людей, друзей и родственников. Отныне они будут прислушиваться к 
-                вашим советам, т.к. вы будете для них авторитетом. Также наступит момент, когда вы поймете, что можете брать 
+                • Быть успешным примером для близких вам людей, друзей и родственников. Отныне они будут прислушиваться к
+                вашим советам, т.к. вы будете для них авторитетом. Также наступит момент, когда вы поймете, что можете брать
                 за это деньги. Это будет дополнительным источником дохода для вас.<br />
-                • Контролировать абсолютно все ваши риски. Теперь вы никогда не потеряете весь ваш капитал за 1 день. 
+                • Контролировать абсолютно все ваши риски. Теперь вы никогда не потеряете весь ваш капитал за 1 день.
                 Вы сможете предугадать будущие убытки и вовремя выйти из проблемной ситуации.<br />
-                • В кризис вы сможете поднимать больше прибыли, чем в период экономической стабильности. Вы этому очень сильно 
+                • В кризис вы сможете поднимать больше прибыли, чем в период экономической стабильности. Вы этому очень сильно
                 удивитесь, когда осознаете данный момент.<br />
-                • Научиться распределять финансовые инструменты в своем портфеле, исходя из своего уровня инвестора, стратегии, 
-                целей и рисков, на которые вы готовы пойти. Обращаю ваше внимание, что на каждом уровне используются разные 
+                • Научиться распределять финансовые инструменты в своем портфеле, исходя из своего уровня инвестора, стратегии,
+                целей и рисков, на которые вы готовы пойти. Обращаю ваше внимание, что на каждом уровне используются разные
                 инструменты и их процентное соотношение.<br />
             </p>
 
             @if (!HttpContext.Current.User.Identity.IsAuthenticated)
             {
-                <span class="button">
-                    <a href="@Url.Action("RegisterForm", "Account")"><input id="regLink" class="large" type="button" value="Регистрация" /></a>
-                </span>
+            <span class="button">
+                <a href="@Url.Action("RegisterForm", "Account")"><input id="regLink" class="large" type="button" value="Регистрация" /></a>
+            </span>
             }
         </div>
         <div class="panel about-forex">
@@ -251,14 +256,14 @@
             <table class="column-text">
                 <tr>
                     <td>
-                        &emsp;&emsp;&emsp;Подумайте, сколько времени, нервов, сил, денег вам сэкономит эта информация. Многие 
-                        люди тратят тысячи долларов на курсы по инвестированию, которые не приносят никакого эффекта. Многие 
-                        люди проводят в интернете гигантское количество часов, так и не находя того, что решило бы их наболевшую 
-                        проблему просто и эффективно. Поэтому нет никаких сомнений в том, что бесплатная регистрация на нашем 
-                        сайте и бесплатная рассылка  – это именно то, что вам нужно в нынешней ситуации, а основную работу по 
-                        нахождению, тестированию, практическому применению действительно работающих методик мы уже сделали 
+                        &emsp;&emsp;&emsp;Подумайте, сколько времени, нервов, сил, денег вам сэкономит эта информация. Многие
+                        люди тратят тысячи долларов на курсы по инвестированию, которые не приносят никакого эффекта. Многие
+                        люди проводят в интернете гигантское количество часов, так и не находя того, что решило бы их наболевшую
+                        проблему просто и эффективно. Поэтому нет никаких сомнений в том, что бесплатная регистрация на нашем
+                        сайте и бесплатная рассылка  – это именно то, что вам нужно в нынешней ситуации, а основную работу по
+                        нахождению, тестированию, практическому применению действительно работающих методик мы уже сделали
                         за Вас. Ваша задача – взять их и получить с их помощью такие же классные результаты.<br />
-                        &emsp;&emsp;&emsp;Регистрация на нашем сайте и получение доступа ко всей этой информации пока бесплатна, 
+                        &emsp;&emsp;&emsp;Регистрация на нашем сайте и получение доступа ко всей этой информации пока бесплатна,
                         Вы спросите зачем нам отдавать её за просто так?<br />
                         &emsp;&emsp;&emsp;Мы будем выдавать Вам партнёрские ссылки на те инструменты, в которых мы будем получать от управляющих
                         процент от Вашей прибыли, видите мы напрямую заинтересованы в Вашем успехе! Так же, в каждом письме Вы
@@ -266,11 +271,11 @@
                     </td>
                     <td class="devider"></td>
                     <td>
-                        покажется наша информация ценной, если она действительно изменит Вашу жизнь – Вы 
-                        можете нам заплатить за эту ценность <strong>ЛЮБУЮ</strong> сумму, чтобы не нарушать 
+                        покажется наша информация ценной, если она действительно изменит Вашу жизнь – Вы
+                        можете нам заплатить за эту ценность <strong>ЛЮБУЮ</strong> сумму, чтобы не нарушать
                         поток ценности. Таким образом Вы ничем не рискуете, все риски лежат  на нас!<br />
                         &emsp;&emsp;&emsp;Действуйте прямо сейчас, коллега! Кликните по кнопке «Регистрация»!<br />
-                        &emsp;&emsp;&emsp;И добро пожаловать в мир людей, чьё время не продаётся за деньги, а деньги 
+                        &emsp;&emsp;&emsp;И добро пожаловать в мир людей, чьё время не продаётся за деньги, а деньги
                         создают ещё больше денег!
                         <img src="@Url.Content("~/Content/img/kubok.jpg")" style="margin-left: 130px; margin-top: 20px;" />
                     </td>
@@ -279,10 +284,238 @@
 
             @if (!HttpContext.Current.User.Identity.IsAuthenticated)
             {
-                <span class="button">
-                    <a href="@Url.Action("RegisterForm", "Account")"><input id="regLink" class="large" type="button" value="Регистрация" /></a>
-                </span>
+            <span class="button">
+                <a href="@Url.Action("RegisterForm", "Account")"><input id="regLink" class="large" type="button" value="Регистрация" /></a>
+            </span>
             }
+        </div>
+        <div class="panel about-forex">
+            <h4>Протестируйте нашу услугу бесплатно и без регистрации</h4>
+            <p>
+                Ниже приведена таблица распределения Ваших денег в соответствие с нашей стратегией 
+                диверификации и риск менеджмента. А именно:<br />
+                Вам представлены 8 инструментов в каждом из которых будет находиться не более 
+                11.11% от Вашего капитала. Даже если какой-то инструмент будет давать отрицательную 
+                доходность или полностью уйдёт в убыток до -99%, остальные 7 инструментов принесут прибыль и 
+                Вы восстановите Ваш капитал за месяц или 2 месяца.
+            </p>
+        </div>
+        <div class="pamm-offer">
+            <table class="pamm-offer-table">
+                <thead>
+                    <tr>
+                        <td class="broker-column"></td>
+                        <td class="small-container">
+                            <div class="name">Small</div>
+                            <div class="description">от 10$ до 1500$</div>
+                            <input id="small" class="money" value="1000" type="text" />
+                            <div class="help-description">Введите сумму в $, которую Вы хотите инвестировать</div>
+                        </td>
+                        <td class="medium-container">
+                            <div class="name">Medium</div>
+                            <div class="description">от 1500$ до 3000$</div>
+                            <input id="medium" class="money" value="2000" type="text" />
+                            <div class="help-description">Введите сумму в $, которую Вы хотите инвестировать</div>
+                        </td>
+                        <td class="large-container">
+                            <div class="name">Large</div>
+                            <div class="description">от 3000$</div>
+                            <input id="large" class="money" value="5000" type="text" />
+                            <div class="help-description">Введите сумму в $, которую Вы хотите инвестировать</div>
+                        </td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="broker-column">
+                            <img src="@Url.Content("~/Content/img/2_30.jpg")" />
+                            <a target="_blank" href="http://fx-trend.com/new/home?agent=588607">Открыть счет</a>
+                        </td>
+                        <td>
+                            <div class="help-description">Рекомендуем инвестировать:</div>
+                            <div id="small-fxtrend" class="summ"></div>
+                            <div class="trader-summ">
+                                <a href="http://fx-trend.com/pamm/518906?agent=588607" target="_blank" class="trader">Jborn</a>
+                                <span id="small-fxtrend-1"></span>
+                            </div>
+                            <div class="trader-summ">
+                                <a href="http://fx-trend.com/pamm/523719?agent=588607" target="_blank" class="trader">Leventa</a>
+                                <span id="small-fxtrend-2"></span>
+                            </div>
+                            <div class="trader-summ">
+                                <a href="http://fx-trend.com/pamm/534457?agent=588607" target="_blank" class="trader">Hozyin</a>
+                                <span id="small-fxtrend-3"></span>
+                            </div>
+                            <div class="trader-summ">
+                                <a href="http://fx-trend.com/pamm/520050?agent=588607" target="_blank" class="trader">votfx</a>
+                                <span id="small-fxtrend-4"></span>
+                            </div>
+                            <div class="trader-summ">
+                                <a href="http://fx-trend.com/pamm/10253?agent=588607" target="_blank" class="trader">investobolin</a>
+                                <span id="small-fxtrend-5"></span>
+                            </div>
+                            <div class="trader-summ">
+                                <a href="http://fx-trend.com/pamm/7031?agent=588607" target="_blank" class="trader">Sven</a>
+                                <span id="small-fxtrend-6"></span>
+                            </div>
+                            <div class="trader-summ">
+                                <a href="http://fx-trend.com/pamm/11695?agent=588607" target="_blank" class="trader">Otmar</a>
+                                <span id="small-fxtrend-7"></span>
+                            </div>
+                            <div class="trader-remark">% - доля инвестирования в инструмент</div>
+                        </td>
+                        <td class="blur">
+                            <div class="help-description">Рекомендуем инвестировать:</div>
+                            <div id="medium-fxtrend" class="summ">1500$</div>
+                            <div class="trader-summ">
+                                <a href="http://fx-trend.com/pamm/518906?agent=588607" target="_blank" class="trader">Jborn</a>
+                                <span id="medium-fxtrend-1">250$ (12.50%)</span>
+                            </div>
+                            <div class="trader-summ">
+                                <a href="http://fx-trend.com/pamm/534457?agent=588607" target="_blank" class="trader">Hozyin</a>
+                                <span id="medium-fxtrend-3">300$ (15.00%)</span>
+                            </div>
+                            <div class="trader-summ">
+                                <a href="http://fx-trend.com/pamm/520050?agent=588607" target="_blank" class="trader">votfx</a>
+                                <span id="medium-fxtrend-4">250$ (12.50%)</span>
+                            </div>
+                            <div class="trader-summ">
+                                <a href="http://fx-trend.com/pamm/7031?agent=588607" target="_blank" class="trader">Sven</a>
+                                <span id="medium-fxtrend-6">200$ (10.00%)</span>
+                            </div>
+                            <div class="trader-summ">
+                                <a href="http://fx-trend.com/pamm/11695?agent=588607" target="_blank" class="trader">Otmar</a>
+                                <span id="medium-fxtrend-7">500$ (25.00%)</span>
+                            </div>
+                            <div class="trader-remark">% - доля инвестирования в инструмент</div>
+                        </td>
+                        <td class="blur">
+                            <div class="help-description">Рекомендуем инвестировать:</div>
+                            <div id="large-fxtrend" class="summ">3643$</div>
+                            <div class="trader-summ">
+                                <a href="http://fx-trend.com/pamm/518906?agent=588607" target="_blank" class="trader">Jborn</a>
+                                <span id="large-fxtrend-1">554$ (11.07%)</span>
+                            </div>
+                            <div class="trader-summ">
+                                <a href="http://fx-trend.com/pamm/523719?agent=588607" target="_blank" class="trader">Leventa</a>
+                                <span id="large-fxtrend-2">554$ (11.07%)</span>
+                            </div>
+                            <div class="trader-summ">
+                                <a href="http://fx-trend.com/pamm/534457?agent=588607" target="_blank" class="trader">Hozyin</a>
+                                <span id="large-fxtrend-3">554$ (11.07%)</span>
+                            </div>
+                            <div class="trader-summ">
+                                <a href="http://fx-trend.com/pamm/520050?agent=588607" target="_blank" class="trader">votfx</a>
+                                <span id="large-fxtrend-4">554$ (11.07%)</span>
+                            </div>
+                            <div class="trader-summ">
+                                <a href="http://fx-trend.com/pamm/10253?agent=588607" target="_blank" class="trader">investobolin</a>
+                                <span id="large-fxtrend-5">554$ (11.07%)</span>
+                            </div>
+                            <div class="trader-summ">
+                                <a href="http://fx-trend.com/pamm/7031?agent=588607" target="_blank" class="trader">Sven</a>
+                                <span id="large-fxtrend-6">250$ (5.00%)</span>
+                            </div>
+                            <div class="trader-summ">
+                                <a href="http://fx-trend.com/pamm/11695?agent=588607" target="_blank" class="trader">Otmar</a>
+                                <span id="large-fxtrend-7">625$ (12.50%)</span>
+                            </div>
+                            <div class="trader-remark">% - доля инвестирования в инструмент</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="broker-column">
+                            <img src="@Url.Content("~/Content/img/mmcis-logo.png")" />
+                            <a target="_blank" href="https://ru.forex-mmcis.com/index_top_promo.html?ref=118253">Открыть счет</a>
+                        </td>
+                        <td>
+                            <div class="help-description">Рекомендуем инвестировать:</div>
+                            <div id="small-mmcis" class="summ"></div>
+                            <div class="trader-summ">
+                                <a href="https://ru.forex-mmcis.com/index_top_promo.html?ref=118253" target="_blank" class="trader">Index top 20</a>
+                                <span id="small-mmcis-1"></span>
+                            </div>
+                            <div class="trader-remark">% - доля инвестирования в инструмент</div>
+                        </td>
+                        <td class="blur">
+                            <div class="help-description">Рекомендуем инвестировать:</div>
+                            <div id="medium-mmcis" class="summ">500$</div>
+                            <div class="trader-summ">
+                                <a href="https://ru.forex-mmcis.com/index_top_promo.html?ref=118253" target="_blank" class="trader">Index top 20</a>
+                                <span id="medium-mmcis-1">500$ (25.00%)</span>
+                            </div>
+                            <div class="trader-remark">% - доля инвестирования в инструмент</div>
+                        </td>
+                        <td class="blur">
+                            <div class="help-description">Рекомендуем инвестировать:</div>
+                            <div id="large-mmcis" class="summ">554$</div>
+                            <div class="trader-summ">
+                                <a href="https://ru.forex-mmcis.com/index_top_promo.html?ref=118253" target="_blank" class="trader">Index top 20</a>
+                                <span id="large-mmcis-1">554$ (11.07%)</span>
+                            </div>
+                            <div class="trader-remark">% - доля инвестирования в инструмент</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="broker-column">
+                            <img src="@Url.Content("~/Content/img/panteon_logo.jpg")" />
+                            <a target="_blank" href="http://panteon-finance.com/newMember/7138.html">Открыть счет</a>
+                        </td>
+                        <td>
+                            <div class="help-description">Рекомендуем инвестировать:</div>
+                            <div id="small-panteon" class="summ"></div>
+                            <div class="trader-summ">
+                                <a href="http://panteon-finance.com/fundsTo/to2_119.html" target="_blank" class="trader">Stable 30</a>
+                                <span id="small-panteon-1"></span>
+                            </div>
+                            <div class="trader-remark">% - доля инвестирования в инструмент</div>
+                        </td>
+                        <td class="blur">
+                            <div class="help-description">Рекомендуем инвестировать:</div>
+                            <div id="medium-panteon" class="summ">—</div>
+                            <div class="trader-remark">% - доля инвестирования в инструмент</div>
+                        </td>
+                        <td class="blur">
+                            <div class="help-description">Рекомендуем инвестировать:</div>
+                            <div id="large-panteon" class="summ">554$</div>
+                            <div class="trader-summ">
+                                <a href="http://panteon-finance.com/fundsTo/to2_119.html" target="_blank" class="trader">Stable 30</a>
+                                <span id="large-panteon-1">554$ (11.07%)</span>
+                            </div>
+                            <div class="trader-remark">% - доля инвестирования в инструмент</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="broker-column">
+                            <img src="@Url.Content("~/Content/img/broker-logo.png")" />
+                            <a target="_blank" href="http://www.forexinn.ru/register/a/broccoli">Открыть счет</a>
+                        </td>
+                        <td>
+                            <div class="help-description">Рекомендуем инвестировать:</div>
+                            <div id="small-forexinn" class="summ"></div>
+                            <div class="trader-summ">
+                                <a href="https://my.forexinn.ru/trader/19214/a/broccoli" target="_blank" class="trader">Накопительный</a>
+                                <span id="small-forexinn-1"></span>
+                            </div>
+                            <div class="trader-remark">% - доля инвестирования в инструмент</div>
+                        </td>
+                        <td class="blur">
+                            <div class="help-description">Рекомендуем инвестировать:</div>
+                            <div id="medium-forexinn" class="summ">—</div>
+                            <div class="trader-remark">% - доля инвестирования в инструмент</div>
+                        </td>
+                        <td class="blur">
+                            <div class="help-description">Рекомендуем инвестировать:</div>
+                            <div id="large-forexinn" class="summ">250$</div>
+                            <div class="trader-summ">
+                                <a href="http://www.forexinn.ru/register/a/broccoli" target="_blank" class="trader">Накопительный</a>
+                                <span id="large-forexinn-1">250$ (5.00%)</span>
+                            </div>
+                            <div class="trader-remark">% - доля инвестирования в инструмент</div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
         <div class="panel about-forex social-comments">
             <h4>Напишите, что вы думаете:</h4>
