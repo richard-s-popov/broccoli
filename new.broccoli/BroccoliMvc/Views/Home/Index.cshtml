@@ -264,6 +264,12 @@
                     </tr>
                 </tbody>
             </table>
+            @if (!HttpContext.Current.User.Identity.IsAuthenticated)
+            {
+                <span class="button">
+                    <a href="@Url.Action("RegisterForm", "Account")"><input id="regLink" class="large" type="button" value="Регистрация" /></a>
+                </span>
+            }
         </div>
         <div class="panel about-forex">
             <h4>Возможно, из-за отсутствия нужных знаний вы уже успели потерять часть своего капитала</h4>
