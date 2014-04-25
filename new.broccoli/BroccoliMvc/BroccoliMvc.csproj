@@ -346,6 +346,7 @@
     <Content Include="Scripts\amcharts\images\dragIcon.gif" />
     <Content Include="Scripts\amcharts\images\dragIconH.gif" />
     <Content Include="Scripts\amcharts\images\lens.png" />
+    <Content Include="Scripts\blur.min.js" />
     <Content Include="Scripts\ckeditor\build-config.js" />
     <Content Include="Scripts\ckeditor\ckeditor.js" />
     <Content Include="Scripts\ckeditor\config.js" />
@@ -526,6 +527,9 @@
     <Content Include="Views\Admin\EditMail.cshtml" />
     <Content Include="Views\Admin\WriteMail.cshtml" />
     <Content Include="Views\Home\PAMM.cshtml" />
+    <Content Include="Scripts\Main\calc.pamm.small.js" />
+    <Content Include="Views\Home\Coaching.cshtml" />
+    <Content Include="Views\Home\ContactSuccess.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

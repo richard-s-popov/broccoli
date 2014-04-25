@@ -1,0 +1,76 @@
+﻿@{
+    ViewBag.Title = "Успехи наших клиентов";
+    Layout = "~/Views/Shared/_LayoutMin.cshtml";
+}
+
+<div class="banner small">
+    <div class="action">
+        <font>Успехи наших клиентов</font>
+    </div>
+</div>
+
+<div class="center-content coaching">
+    <table class="video-container">
+        <thead>
+            <tr>
+                <th>
+                    <h3>До:</h3>
+                </th>
+                <th>
+                    <h3>После:</h3>
+                </th>
+            </tr>
+        </thead>
+        <tr>
+            <td>
+                <iframe width="430" height="295" src="http://www.youtube.com/embed/DNxxS1GveHU?feature=player_detailpage&vq=hd720&rel=0" frameborder="0" allowfullscreen></iframe>
+            </td>
+            <td>
+                <iframe width="430" height="295" src="http://www.youtube.com/embed/J9MWAfR89w0?feature=player_detailpage&vq=hd720&rel=0" frameborder="0" allowfullscreen></iframe>
+            </td>
+        </tr>
+    </table>
+    <div class="form-container hr-shadow">
+        <div class="form">
+            <div class="contact-form">
+                @using (Html.BeginForm("CoachingSendForm", "Home", FormMethod.Post, new { @id = "contactForm" }))
+                {
+                    <div class="row">
+                        <span class="labels">
+                            @Html.Label("ФИО")
+                        </span>
+                        <span>
+                            @Html.TextBox("Name")
+                        </span>
+                    </div>
+                    <div class="row">
+                        <span class="labels">
+                            @Html.Label("Телефон")
+                        </span>
+                        <span>
+                            @Html.TextBox("Phone")
+                        </span>
+                    </div>
+                    <div class="row">
+                        <span class="labels">
+                            @Html.Label("Город")
+                        </span>
+                        <span>
+                            @Html.TextBox("City")
+                        </span>
+                    </div>
+                    <div class="row">
+                        <span class="button">
+                            <a href="#"><input class="large" type="button" value="Отправить" onclick="$('#contactForm').submit()" /></a>
+                        </span>
+                    </div>
+                }
+            </div>
+        </div>
+        <div class="text">
+            <p>
+                Получите персонального менеджера, который доведёт Вас за руку по шагам до результата 5-7% в месяц, Ваши результаты будут публичными и мы будем использовать их в рекламных целях. Если Вас устраивают такие условия, заполните форму обратной связи и ждите звонка
+            </p>
+        </div>
+    </div>
+</div>

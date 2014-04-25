@@ -435,7 +435,7 @@ hr {
 }
 
 .content .slider .third img {
-    width: 260px;
+    width: 340px;
     margin-top: 45px;
     margin-left: 70px;
 }
@@ -3045,4 +3045,60 @@ footer#main{
 .pamm-offer-table .money {
     border: none;
     width: 160px;
+}
+
+.coaching .video-container {
+    margin-top: 30px;
+}
+
+.coaching .video-container td {
+    padding-left: 30px;
+}
+
+.coaching .video-container th {
+    padding-left: 30px;
+}
+
+.coaching .video-container th h3 {
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.coaching .form-container {
+    margin-top: 40px;
+    padding-left: 30px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.coaching .form-container .text {
+    display: inline-block;
+    width: 470px;
+    line-height: 1.4;
+    color: rgb(77, 77, 77);
+    font-family: Arial, Tahoma, sans-serif;
+    vertical-align: top;
+}
+
+.coaching .form-container .form {
+    display: inline-block;
+    width: 400px;
+}
+
+.contact-success {
+    position: relative;
+}
+
+.contact-success h3 {
+    width: 500px;
+    margin-top: 100px;
+    display: inline-block;
+    text-align: center;
+}
+
+.contact-success img {
+    position: absolute;
+    top: 0px;
+    right: 5px;
+    width: 300px;
 }

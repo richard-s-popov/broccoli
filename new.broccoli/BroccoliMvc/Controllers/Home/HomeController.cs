@@ -183,7 +183,12 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.Home
                     true);  
             }
 
-            return View("ContactUs");
+            return RedirectToAction("ContactSuccess");
+        }
+
+        public ActionResult ContactSuccess()
+        {
+            return View();
         }
 
         public ActionResult PAMM()
@@ -204,6 +209,32 @@ namespace BroccoliTrade.Web.BroccoliMvc.Controllers.Home
         public ActionResult Partners()
         {
             return View();
+        }
+
+        public ActionResult Coaching()
+        {
+            return View();
+        }
+
+        public ActionResult CoachingSendForm(string Name, string Phone, string City)
+        {
+            var em = new EmailMessage
+            {
+                Subject = "Заявка на персональный коучинг по инвестициям",
+                Message = string.Format("{0}\n{1}\n{2}", Name, Phone, City),
+                From = "broccoli2@molchunov.com",
+                DisplayNameFrom = "Broccoli Trade",
+                To = "broccoli@molchunov.com"
+            };
+
+            new EmailService().SendMessage(em,
+                "broccoli2@molchunov.com",
+                "123456aaa111",
+                "smtp.yandex.ru",
+                587,
+                true);
+
+            return RedirectToAction("ContactSuccess");
         }
 
         public ActionResult Partner(int id)

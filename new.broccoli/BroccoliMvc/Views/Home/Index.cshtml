@@ -10,14 +10,14 @@
 <link href="@Url.Content("~/Content/dark.css")" rel="stylesheet" type="text/css" />
 <link href="@Url.Content("~/Content/themes/jquery-ui/jquery-ui-1.9.2.custom.css")" rel="stylesheet" />
 <script type="text/javascript" src="@Url.Content("~/Scripts/Main/calc.pamm.small.js")"></script>
-@*<script type="text/javascript" src="@Url.Content("~/Scripts/slider/modernizr.custom.28468.js")"></script>*@
+<script type="text/javascript" src="@Url.Content("~/Scripts/slider/modernizr.custom.28468.js")"></script>
 <script type="text/javascript" src="@Url.Content("~/Scripts/slider/jquery.cslider.js")"></script>
 <script type="text/javascript" src="@Url.Content("~/Scripts/Main/index.js")"></script>
-@*<script type="text/javascript" src="@Url.Content("~/Scripts/slider/coda-slider.1.1.1.pack.js")"></script>
-    <script type="text/javascript" src="@Url.Content("~/Scripts/slider/jquery-easing-compatibility.1.2.pack.js")"></script>
-        <script type="text/javascript" src="@Url.Content("~/Scripts/slider/jquery-easing.1.2.pack.js")"></script>
-        <script type="text/javascript" src="@Url.Content("~/Scripts/jquery.flexslider-min.js")"></script>
-        <script type="text/javascript" src="@Url.Content("~/Scripts/jquery.lwtCountdown-0.9.5.js")"></script>*@
+<script type="text/javascript" src="@Url.Content("~/Scripts/slider/coda-slider.1.1.1.pack.js")"></script>
+<script type="text/javascript" src="@Url.Content("~/Scripts/slider/jquery-easing-compatibility.1.2.pack.js")"></script>
+<script type="text/javascript" src="@Url.Content("~/Scripts/slider/jquery-easing.1.2.pack.js")"></script>
+<script type="text/javascript" src="@Url.Content("~/Scripts/jquery.flexslider-min.js")"></script>
+        @*<script type="text/javascript" src="@Url.Content("~/Scripts/jquery.lwtCountdown-0.9.5.js")"></script>*@
 <meta property="fb:admins" content="100002476403510" />
 <meta property="fb:admins" content="100001451163492" />
 }
@@ -42,9 +42,6 @@
             <p>
                 Выберите риск. Подходит для консервативных, уменеренных и дерзких инвесторов.
                 <br /><br />
-                <a class="various fancybox.iframe btn" title="" href="@Url.Action("RegisterForm", "Account")">
-                    <span>Подробнее</span>
-                </a>
             </p>
         </div>
     </div>
@@ -57,7 +54,7 @@
             <p>
                 Мы даём пошаговую стратегию диверсификации!
                 <br /><br />
-                <a id="presentationVideo" class="various fancybox.iframe btn" title="" href="@Url.Action("RegisterForm", "Account")">
+                <a id="presentationVideo" class="btn" title="" href="#calcPammDemo">
                     <span>Подробнее</span>
                 </a>
             </p>
@@ -66,13 +63,15 @@
     <div class="da-slide third">
         <div class="text">
             <div class="da-img">
-                <img class="broccoli" src="@Url.Content("~/Content/img/demo.png")" />
+                <a href="@Url.Action("Coaching", "Home")" style="text-decoration: none;">
+                    <img class="broccoli" src="@Url.Content("~/Content/img/demo_origin.png")" />
+                </a>
             </div>
-            <h2>Демо-счет.</h2>
-            <p>
-                Воспользуйтесь нашим предложением и попробуйте свои силы на демо счете, не рискуая своим капиталом.
+            <h2>Успехи клиентов:</h2>
+            <p style="top: 110px;">
+                Получите персонального менеджера, который доведёт Вас за руку по шагам до результата 5-7% в месяц, Ваши результаты будут публичными и мы будем использовать их в рекламных целях. Если Вас устраивают такие условия, заполните форму обратной связи и ждите звонка.
                 <br />
-                <a class="btn" title="Открыть демо-счет" href="">
+                <a class="btn" title="Подробнее" href="@Url.Action("Coaching", "Home")">
                     <span>Подробнее</span>
                 </a>
             </p>
@@ -286,14 +285,14 @@
             </span>
             }
         </div>
-        <div class="panel about-forex">
+        <div class="panel about-forex" id="calcPammDemo">
             <h4>Протестируйте нашу услугу бесплатно и без регистрации</h4>
             <p>
-                Ниже приведена таблица распределения Ваших денег в соответствие с нашей стратегией 
+                Ниже приведена таблица распределения Ваших денег в соответствие с нашей стратегией
                 диверификации и риск менеджмента. А именно:<br />
-                Вам представлены 8 инструментов в каждом из которых будет находиться не более 
-                11.11% от Вашего капитала. Даже если какой-то инструмент будет давать отрицательную 
-                доходность или полностью уйдёт в убыток до -99%, остальные 7 инструментов принесут прибыль и 
+                Вам представлены 8 инструментов в каждом из которых будет находиться не более
+                11.11% от Вашего капитала. Даже если какой-то инструмент будет давать отрицательную
+                доходность или полностью уйдёт в убыток до -99%, остальные 7 инструментов принесут прибыль и
                 Вы восстановите Ваш капитал за месяц или 2 месяца.
             </p>
         </div>
